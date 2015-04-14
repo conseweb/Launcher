@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.nd.hilauncherdev.launcher.screens.preview.PreviewCellView android:id="@+id/preview_cell"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"  >
+	<FrameLayout android:id="@+id/screen_bg" android:layout_width="fill_parent"
+    	android:layout_height="fill_parent" android:layout_margin="@dimen/celllayout_preview_margin"
+    	android:layout_gravity="center" >
+		<com.nd.hilauncherdev.core.view.PreviewImageView
+			android:id="@+id/screen_preview" android:layout_width="fill_parent"
+	    	android:layout_height="fill_parent" android:layout_gravity="center"
+			android:scaleType="fitXY" />
+		<ImageView
+			android:id="@+id/screen_add" android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" android:layout_gravity="center"
+			android:scaleType="fitCenter" />
+		<ImageButton android:id="@+id/home_btn" android:background="#00000000"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_gravity="left|bottom" />
+		<ImageButton android:id="@+id/del_btn" android:background="#00000000"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_gravity="right|bottom"
+			/>
+	</FrameLayout>
+</com.nd.hilauncherdev.launcher.screens.preview.PreviewCellView>

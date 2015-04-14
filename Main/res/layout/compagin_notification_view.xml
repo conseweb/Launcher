@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#181818"
+    android:orientation="horizontal" >
+
+
+        <ImageView
+            android:id="@+id/item_icon"
+            android:layout_width="60dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/notification_splite_line"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/item_icon"
+            android:background="@drawable/net_traffic_notify_hr" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:paddingLeft="10dip" 
+        android:layout_toRightOf="@+id/notification_splite_line"
+        android:background="#181818"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:gravity="left|bottom" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="3dip"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_weight="1" 
+            android:gravity="left|top" />
+    </LinearLayout>
+
+</RelativeLayout>

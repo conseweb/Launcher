@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/folder_switch_fullscreen_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <LinearLayout
+        android:id="@+id/bg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ani_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/reference_view"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp" />
+
+        <com.nd.hilauncherdev.folder.view.FolderView
+            android:id="@+id/folder_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dp" >
+
+                <!-- <TextView
+                    android:id="@+id/add_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/folder_add_more_selector"
+                    android:clickable="true"
+                    android:visibility="gone" /> -->
+
+                <TextView
+                    android:id="@+id/folder_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="32dip"
+                    android:layout_marginRight="32dip"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:inputType="none"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/edit_folder_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="32dip"
+                    android:layout_marginRight="32dip"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:maxLength="16"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:visibility="gone" />
+
+                <!-- <TextView
+                    android:id="@+id/folder_encript"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/fullscreen_folder_encript_selector"
+                    android:clickable="true" /> -->
+
+                <TextView
+                    android:id="@+id/folder_rename_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/folder_rename_confirm"
+                    android:clickable="true"
+                    android:padding="3dip"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/line_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_layout"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="3dip"
+                android:layout_marginLeft="30dip"
+                android:layout_marginRight="30dip"
+                android:layout_marginTop="3dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/battery_widget_hr_mode" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line_layout" >
+
+                <com.nd.hilauncherdev.framework.view.commonsliding.CommonLightbar
+                    android:id="@+id/light_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center" />
+
+                <com.nd.hilauncherdev.folder.view.FolderSlidingView
+                    android:id="@+id/folder_scroll_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/light_bar"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="20dip" />
+            </RelativeLayout>
+        </com.nd.hilauncherdev.folder.view.FolderView>
+    </LinearLayout>
+
+</FrameLayout>

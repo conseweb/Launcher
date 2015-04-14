@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nd.hilauncherdev.launcher.appslist.view.AppListItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent" android:paddingLeft="2dip" android:paddingRight="15dip"
+    android:paddingTop="8dip"
+      >
+    <com.nd.hilauncherdev.launcher.appslist.view.AlphalBetLabel
+         android:id="@+id/alphalLabel"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0" 
+        />
+  <com.nd.hilauncherdev.launcher.appslist.view.BubbleTextView
+        android:id="@+id/item1"
+       android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:layout_marginRight="5dp"/>
+   <com.nd.hilauncherdev.launcher.appslist.view.BubbleTextView
+        android:id="@+id/item2"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:layout_marginRight="5dp"/>
+    <com.nd.hilauncherdev.launcher.appslist.view.BubbleTextView
+       
+        android:id="@+id/item3"
+       android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:layout_marginRight="5dp"/>
+     <com.nd.hilauncherdev.launcher.appslist.view.BubbleTextView
+       
+        android:id="@+id/item4"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:layout_marginRight="5dp"/>
+</com.nd.hilauncherdev.launcher.appslist.view.AppListItemView>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- viewpagertab 默认字体大小 -->
+    <dimen name="frame_viewpager_tab_textsize">15sp</dimen>
+    
+    <!-- viewpagertab 默认字体大小 -->
+    <dimen name="frame_viewpager_tab_selected_textsize">17sp</dimen>
+    
+    <!-- 自定义TextView图标与文字间隔 -->
+	<dimen name="text_drawpadding">3dip</dimen>
+	
+	<!-- 图标尺寸 -->
+    <dimen name="app_icon_size">48dip</dimen>
+   <!-- 大图标尺寸 -->
+    <dimen name="app_icon_bigsize">52dip</dimen>
+    
+    <!-- 图标背景尺寸 -->
+	<dimen name="app_background_size">57dip</dimen>
+	
+	<dimen name="myfile_photo_height">100dip</dimen>
+    <dimen name="myfile_photo_width">130dip</dimen>
+    <!-- 我的手机 统一提示View MarginTop -->
+    <dimen name="myphone_info_view_margin_top">60dip</dimen>
+    
+    <dimen name="title_texture_width">120px</dimen>
+    
+    <!-- 最小1dip的padding -->
+	<dimen name="min_padding">1dip</dimen>
+	<!-- 桌面view默认的文字大小 -->
+	<dimen name="default_launcher_icon_text_size">12sp</dimen>
+	
+	<!-- 文件夹图标外边距 -->
+	<dimen name="folder_icon_margin">5dip</dimen>
+	
+	<!-- 文件夹图标外边距 -->
+	<dimen name="android_folder_icon_margin">3dip</dimen>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<favorites xmlns:launcher="http://schemas.android.com/apk/res/com.bitants.launcher">
+    <!-- 电话 -->
+	<dock_shortcut
+    	launcher:screen="1"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:title="@string/dockbar_dock_dial"
+        launcher:uri="#Intent;action=android.intent.action.DIAL;launchFlags=0x10000000;component=com.simon.android.pandahome2/com.nd.hilauncherdev.app.AppResolverSelectActivity;B.is_always_select=false;end" />
+    <!-- 短信 -->
+    <dock_shortcut
+    	launcher:screen="1"
+        launcher:x="1"
+        launcher:y="0"
+        launcher:title="@string/dockbar_dock_sms"
+        launcher:uri="content://mms-sms/#Intent;action=android.intent.action.MAIN;launchFlags=0x10000000;component=com.simon.android.pandahome2/com.nd.hilauncherdev.app.AppResolverSelectActivity;B.is_always_select=false;end" /> 
+    <!-- 联系人 -->
+    <dock_shortcut
+    	launcher:screen="1"
+        launcher:x="2"
+        launcher:y="0"
+        launcher:title="@string/dockbar_dock_contacts"
+        launcher:uri="content://com.android.contacts/contacts#Intent;action=android.intent.action.VIEW;launchFlags=0x10000000;component=com.simon.android.pandahome2/com.nd.hilauncherdev.app.AppResolverSelectActivity;B.is_always_select=false;end"/> 
+    <!-- 浏览器 -->
+    <dock_shortcut
+    	launcher:screen="1"
+        launcher:x="3"
+        launcher:y="0"
+        launcher:title="@string/dockbar_dock_browser"
+        launcher:uri="http://www.google.com#Intent;action=android.intent.action.VIEW;launchFlags=0x10000000;component=com.simon.android.pandahome2/com.nd.hilauncherdev.app.AppResolverSelectActivity;B.is_always_select=false;end"/>
+</favorites>

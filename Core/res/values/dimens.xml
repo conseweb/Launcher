@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- delete_zone_size_full - button_bar_height_portrait -->
+	<dimen name="delete_zone_padding">10dip</dimen>
+	
+	<!-- dockbar设置-->
+	<dimen name="maindock_max_cell_size">57dip</dimen>
+	<!-- 需要比图标尺寸大 -->
+	<dimen name="maindock_min_cell_size">57dip</dimen>
+	<!-- dockbar设置结束 -->
+	
+	<!-- spring模式指示灯 -->
+	<dimen name="workspace_spring_lightbar_toppadding">35dip</dimen>
+	
+	<!-- spring模式指示灯-->
+	<dimen name="workspace_spring_lightbar_height">50dip</dimen>
+	
+	<dimen name="dialog_top_layout_height_40">40dip</dimen>
+    <dimen name="dialog_bottom_layout_height_40">40dip</dimen>
+    
+    <!-- celllayout预览图内间距-->
+	<dimen name="celllayout_preview_margin">3dip</dimen> 
+	
+	<!-- 底部菜单高度 -->
+	<dimen name="bottommenu_height">180dip</dimen>
+	
+	
+	<!-- 长按图标菜单高度 -->
+	<dimen name="popshortcut_menu_height">93dip</dimen>
+	
+	<!-- 长按图标菜单 单个图标宽度 -->
+	<dimen name="popshortcut_menu_width">56dip</dimen>
+	
+	<!-- 图标长按菜单偏离屏幕边缘的宽带 -->
+	<dimen name="shortcutmenu_offset_screen">21dip</dimen>
+	<!-- 标准图标大小 -->
+	<dimen name="normal_app_icon_size">48dip</dimen>
+	
+</resources>

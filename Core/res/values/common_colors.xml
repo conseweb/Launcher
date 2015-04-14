@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="window_background">#FF191919</color>
+    
+    <color name="delete_color_filter">#A5FF0000</color>
+    
+    <!-- 弹出框标题颜色 -->
+    <color name="dialog_title_color">#1e83de</color>
+    <color name="dialog_content_color">#757675</color>
+    
+    <color name="black">#000000</color>
+    <color name="white">#ffffffff</color>
+    
+    <color name="appwidget_error_color">#FCCC</color>
+    <!-- 桌面view默认的文字颜色 -->
+    <color name="default_launcher_icon_text_color">#ffffffff</color>
+    
+    <!-- 匣子图标多选时文件夹的滤镜颜色 -->
+	<color name="icon_color_filter_for_drawer_folder">#a5333333</color>
+	
+	<!-- 图标移动至边界时的滤镜颜色 -->
+	<color name="icon_color_filter_in_move_bar">#a500e3ff</color>
+</resources>

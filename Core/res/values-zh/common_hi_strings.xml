@@ -1,0 +1,144 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <item type="id" name="common_view_holder"></item>
+    <item type="id" name="drager_controller_on_drag_exit_in_action_move"></item>
+    
+    <!-- 通用按钮 -->
+    <string name="common_button_confirm">确定</string>
+    <string name="common_button_cancel">取消</string>
+    <string name="common_button_apply">应用</string>
+    <string name="common_button_return">返回</string>
+    <string name="common_button_preview">预览</string>
+    <string name="common_button_download_more">下载更多</string>
+    <string name="common_button_download_skin">下载皮肤</string>
+    <string name="common_button_download">下载</string>
+    <string name="common_button_downloading">下载中</string>
+    <string name="common_button_save">保存</string>
+    <string name="common_button_discard">丢弃</string>
+    <string name="common_button_back_to_home">主页</string>
+    <string name="common_button_default">默认</string>
+    <string name="common_button_share">分享</string>
+    <string name="common_button_search">搜索</string>
+    <string name="common_button_view_detail">详情</string>
+    <string name="common_button_commit">提交</string>
+    <string name="common_button_add">新增</string>
+    <string name="common_button_addto">添加</string>
+    <string name="common_button_edit">修改</string>
+    <string name="common_button_delete">删除</string>
+    <string name="common_button_modify">更改</string>
+    <string name="common_button_set">设置</string>
+    <string name="common_button_update">更新</string>
+    <string name="common_button_uninstall">卸载</string>
+    <string name="common_button_install">安装</string>
+    <string name="common_button_redownload">重新下载</string>
+    <string name="common_button_refresh">刷新</string>
+    <string name="common_button_manager">管理</string>
+    <string name="common_button_enabled">开启</string>
+    <string name="common_button_closed">关闭</string>
+    <string name="common_button_close">关闭</string>
+    <string name="common_checkbox_not_alert">不再提醒</string>
+    <string name="common_button_i_know">我知道了</string>
+    <string name="common_button_continue">继续</string>
+    <string name="common_button_recover">恢复</string>
+    <string name="common_button_complate">完成</string>
+    <string name="common_button_editable">编辑</string>
+    <string name="common_button_clear">清除</string>
+    <string name="common_tip">提示</string>
+    <string name="common_alert">警告</string>
+    <string name="common_download_success">下载成功</string>
+    <string name="common_download_ended">下载完成</string>
+    <string name="common_download_failed">下载失败</string>
+    <string name="common_uninstalled">未安装</string>
+    <string name="common_downloading">正在下载..</string>
+    <string name="common_loading">加载中...</string>
+    <string name="common_install_now">立即安装</string>
+    <string name="common_download_now">立即下载</string>
+    <string name="common_refresh">刷　　新</string>
+    <string name="common_installed">已安装</string>
+    <string name="common_refresh_failed">更新失败</string>
+	<string name="common_button_enter">进入</string>
+	<string name="common_button_open_now">立即开启</string>
+	<string name="common_button_use_now">立即使用</string>
+	<string name="common_button_restart_now">立即重启</string>
+	<string name="common_button_open">打开</string>
+	<string name="common_button_use">启用</string>
+	<string name="common_button_used">已启用</string>
+	<string name="common_button_ignore">忽略</string>
+	
+	
+	<string name="main_dock_notification_disable_hint">通知栏已关闭，请先打开通知栏</string>
+	
+	<string name="out_of_space" msgid="8365249326091984698">"此屏幕上空间不足 (91桌面)"</string>
+	<string name="shortcut_installed" msgid="7071557296331322355">
+		"已创建"
+		<xliff:g id="NAME">%s</xliff:g>
+		"快捷方式。"
+	</string>
+	<string name="shortcut_uninstalled" msgid="2129499669449749995">
+		"已删除"
+		<xliff:g id="NAME">%s</xliff:g>
+		"快捷方式。"
+	</string>
+	<string name="shortcut_duplicate" msgid="4757756326465060694">
+		""
+		<xliff:g id="NAME">%s</xliff:g>
+		"快捷方式已存在。"
+	</string>
+	<string name="activity_not_found" msgid="3571057450431950427">"您的手机上未安装应用程序。"</string>
+	<string name="shortcut_toolong">非法字符，无法添加</string>
+	
+	<string name="spring_add_app_from_drawer_reset">无法移动到该位置</string>
+	<string name="message_preview_delete_screen">删除屏幕及屏幕上的所有内容?</string>
+	<string name="message_preview_delete_screen_not_allow">屏幕上有\"应用列表\"图标，无法删除</string>
+	<string name="settings_about_no_market_title">您的手机未安装电子市场</string>
+	<string name="dockbar_null_intent">数据异常</string>
+	
+	<string name="folder_drag_out_error">屏幕空间不足,请到其他屏幕添加</string>
+	
+	<!-- root提示 -->
+	<string name="myphone_root_fail_title">获取ROOT权限失败</string>
+	<string name="myphone_root_fail_desc">91桌面无法获取ROOT权限，请在SuperUser KingUser等授权管理软件中允许ROOT权限</string>
+	
+	<string name="frame_viewfacotry_err_info_text">出错啦!</string>
+    <string name="frame_viewfacotry_data_load_text">正在很努力地很努力地加载中</string>
+    <string name="frame_viewfacotry_search_null">没有搜索到相关内容,请试试别的吧</string>
+    <string name="frame_viewfacotry_download_null">没有搜索到你的下载记录</string>
+    <string name="frame_viewfacotry_net_slowly_text">网络不给力,先休息下,稍后再试</string>
+    <string name="frame_viewfacotry_net_break_text">网络连接不成功,请检查网络是否已断开</string>
+    <string name="frame_viewfacotry_net_break_btn">网络设置</string>
+    <string name="frame_viewfacotry_show_netsetting_err">打开网络设置失败</string>
+    <string name="frame_viewfacotry_net_slowly_reflesh_btn">刷新</string>
+    <string name="frame_viewfactory_dialog_title">91桌面提示</string>
+    <string name="frame_viewfactory_err_title">出错啦！</string>
+    <string name="frame_viewfactory_err_content_text">不好意思，出错啦！我们需要您的反馈来帮助我们尽快修复这个问题，请放心，我们只采集出错信息，不收集您的个人信息。</string>
+    <string name="frame_viewfactory_tell_us">告诉我们</string>
+    <string name="frame_viewfactory_cancle">取消操作</string>
+    <string name="frame_viewfactory_send_failed">抱歉，您的手机未绑定Gmail账号，无法发送</string>
+    <string name="frame_viewfactory_del_error_widget_1">对不起，因桌面出现严重问题，可能影响您的正常使用，给您带来的不便，敬请谅解！现在您可以尝试选择恢复初始化来修复这一问题，是否立即恢复初始？</string>
+    <string name="frame_viewfactory_del_error_widget_2">使用恢复初始后，将会删除您桌面上的小部件，确保您能正常使用桌面。确定恢复初始吗？</string>
+    <string name="frame_viewfactory_restore">恢复初始</string>
+    <string name="frame_viewfactory_err_content_text_widget">不好意思，小部件“%1$s”有点小问题，我们会把它从屏幕上移除后重启桌面，若您需要再次使用，可进入应用列表-小部件页面找到。</string>
+    <string name="frame_viewfactory_err_content_downgrade">不好意思，由于您的手机不支持APP降级使用，需要重置桌面数据来修复此问题。</string>
+    <string name="frame_viewfactory_upgrade_now">马上升级</string>
+    <string name="frame_viewfactory_next_time">下次再说</string>
+    <string name="frame_viewfactory_err_content_upgrade">啊哦！桌面运行出了点小问题！机智的程序小哥说升级到最新版本可以解决，快去试试吧！</string>
+    
+    <string name="uninstallapp_no_this_appinfo">无此应用信息，卸载失败</string>
+    <string name="gadget_error_text" msgid="8359351016167075858">"载入窗口小部件时出现问题"</string>
+    
+    <!-- 屏幕预览 -->
+    <string name="message_preview_cannot_delete_screen">不能删除最后一个屏幕</string>
+    <string name="message_preview_set_default_screen">设为默认屏幕</string>
+    <string name="message_preview_out_of_screen">屏幕空间不足，请选择其他屏幕</string>
+    <string name="message_preview_fail_drag_to_screen">图标移动失败</string>
+    
+    <string name="edit_lock_toast_lock">编辑功能已锁定</string>
+    
+    <!-- Dock栏图标名称 -->
+    <string name="dockbar_dock_dial">拨号</string>
+	<string name="dockbar_dock_contacts">联系人</string>
+	<string name="dockbar_dock_browser">浏览器</string>
+	<string name="dockbar_dock_sms">信息</string>
+	<string name="dockbar_allow">无法放入底部托盘</string>
+	
+	<string name="hint_sdcard_available">SD程序加载成功，将立即重新刷新桌面图标</string>
+</resources>

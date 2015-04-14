@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    步骤  
+    1.用aapt生成R.java  
+    2.JAVAC编译JAVA文件  
+    3.批处理生成classes.dex  
+    4.aapt打包资源  
+    5.apkbuilder包资源和类文件为APK文件  
+    6.jarsinger 对APK进行签名  
+-->
+<project basedir="." default="proguard2" >
+
+    <!-- 根据实际情况修改以下倣 -->
+    <property
+        name="workspace"
+        value="D:\HiLauncherEX" />
+
+    <property
+        name="SDK"
+        value="E:\androidsdk\android-sdks-r21" />
+
+    <property
+        name="DIR_LAUNCHER"
+        location="${workspace}/HiLauncherCore" />
+    
+    <property
+        name="proguard-home"
+        location="${SDK}/tools/proguard" />
+    
+    <property
+        name="VERSION"
+        value="android-8" />
+
+    <property
+        name="LIB_ANNOTATION"
+        location="${SDK}\tools\support\annotations.jar" />
+
+    <property
+        name="android-framework2.2"
+        value="E:/framework_2_2_classes.jar" />
+
+
+    <property
+        name="android-jar"
+        value="${SDK}/platforms/${VERSION}/android.jar" />
+
+    <!-- 定义自己的输出目录 -->
+    <property
+        name="outdir"
+        value="${basedir}/build" />
+
+    <property
+        name="outdir-classes"
+        value="${outdir}/classes" />
+
+    
+	<!--   初始化  -->
+    <target name="init" >
+        <echo>初始化 ...</echo>
+        <delete dir="${outdir}" />
+        <delete dir="${outdir-classes}" />
+        <mkdir dir="${outdir}" />
+        <mkdir dir="${outdir-classes}" />
+    </target>
+
+
+    <!-- CommonLibrary 中要使用的四个库 -->
+    <path id="framework2.2.lib" >
+        <pathelement location="${android-framework2.2}" />
+    </path>
+    
+    <path id="Android2.2.lib" >
+        <pathelement location="${android-jar}" />
+    </path>
+    
+    <path id="CommonLibrary.classpath" >
+        <path refid="framework2.2.lib" />
+        <path refid="Android2.2.lib" />
+    </path>
+
+    <target
+        name="compile3" depends="init">
+        <echo>编译...</echo>
+        <!-- 生成的class文件全部保存到bin/classes目录下 -->
+        <javac
+            destdir="${outdir-classes}" encoding="UTF-8" >
+            <src path="${basedir}/src" />
+            <classpath refid="CommonLibrary.classpath" />
+        </javac>
+    </target>
+	
+	<target name="proguard1" depends="compile3">  
+	    <echo>混淆1:打包混淆文件...</echo>
+        <jar basedir="${outdir-classes}" destfile="temp.jar" />  
+    </target>
+    
+	<target name="proguard2" depends="proguard1">  
+	    <echo>混淆2:混淆...</echo>
+        <taskdef file="${proguard-home}/ant/task.properties" classpath="${proguard-home}\lib\proguard.jar" />
+		<proguard configuration="${basedir}/proguard.cfg" /> 
+    </target>
+</project>

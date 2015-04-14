@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     /* //device/apps/common/assets/res/any/colors.xml ** ** Copyright 2008, 
+	The Android Open Source Project ** ** Licensed under the Apache License, 
+	Version 2.0 (the "License"); ** you may not use this file except in compliance 
+	with the License. ** You may obtain a copy of the License at ** ** http://www.apache.org/licenses/LICENSE-2.0 
+	** ** Unless required by applicable law or agreed to in writing, software 
+	** distributed under the License is distributed on an "AS IS" BASIS, ** WITHOUT 
+	WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. ** See the 
+	License for the specific language governing permissions and ** limitations 
+	under the License. */
+-->
+<resources>
+
+    <color name="window_background">#FF191919</color>
+    <color name="grid_dark_background">#EB191919</color>
+    <color name="bubble_dark_background">#B2191919</color>
+    <color name="snag_callout_color">#F444</color>
+    <color name="gesture_color">#ff0563c1</color>
+    <color name="uncertain_gesture_color">#ff848484</color>
+    <color name="transparent">#00ffffff</color>
+
+    <drawable name="red">#7f00</drawable>
+    <drawable name="blue">#770000ff</drawable>
+    <drawable name="green">#7700ff00</drawable>
+    <drawable name="yellow">#77ffff00</drawable>
+    <drawable name="screen_background_black">#ff000000</drawable>
+    <drawable name="translucent_background">#e0000000</drawable>
+    <drawable name="transparent_background">#00000000</drawable>
+
+    <color name="solid_red">#f00</color>
+    <color name="solid_blue">#0000ff</color>
+    <color name="solid_green">#f0f0</color>
+    <color name="solid_yellow">#ffffff00</color>
+    <color name="input_red">#ff8000</color>
+    <!-- 我的手机主内容文字颜色 -->
+    <color name="myphone_item_text_color">#000000</color>
+    <!-- 我的手机辅助内容(说明性,按钮等)文字颜色 -->
+    <color name="myphone_item_little_text_color">#000000</color>
+
+    <!-- 浅色背景下标题颜色 -->
+    <color name="myphone_common_title_color">#7a7a7a</color>
+    <!-- 蓝色背景下标题颜色 -->
+    <color name="myphone_common_title_color1">#cdf2ff</color>
+    <!-- 统一背景色 -->
+    <color name="myphone_common_bg_color">#f2f2f2</color>
+    <!-- 内容颜色 -->
+    <color name="myphone_common_text_color">#303030</color>
+    <!-- 说明文字颜色与ViewPagerTab未选中颜色 -->
+    <color name="myphone_common_little_text_color">#8f8f8f</color>
+    <!-- 单独用于HeadSwitchView -->
+    <color name="myphone_common_little_text_color_news">#6052D6</color>
+    <!-- ViewPagerTab选中颜色 -->
+    <color name="myphone_common_dialog_text_color">#1e82dc</color><!-- 5eb9f2 -->
+  
+
+    <drawable name="myphone_bg_color">#f9fafb</drawable>
+    <drawable name="blackTransparent">#CC000000</drawable>
+    <drawable name="white">#FFFFFFFF</drawable>
+    <drawable name="silver">#00ffffff</drawable>
+    <drawable name="gray_drawable">#7d7d7d</drawable>
+    <drawable name="darkgray">#808080FF</drawable>
+
+    <color name="cblackTransparent">#FFFFFF</color>
+
+    <!-- searchbox 弹出框标题字颜色 -->
+    <color name="searchbox_title_text_color">#32B5E5</color>
+	
+    <!-- 我的手机底部黑色背景时的字体颜色 -->
+	<color name="myphone_bottom_black_bg_text_color">#d3d3d3</color>
+	<!-- 我的手机底部蓝色背景时的字体颜色 -->
+	<color name="myphone_bottom_blue_bg_text_color">#cdf2ff</color>
+    
+    <!-- 通知信息背景色 -->
+    <color name="notification_background_color">#555555</color>
+    <!-- 通知信息文字颜色 -->
+    <color name="notification_text_color">#d3d3d3</color>
+    
+    <!-- 橘黄色 #FB6318 -->
+    <color name="croci_color">#FB6318</color>
+    
+     <!-- 我的隐私空间向导字体着色 -->
+    <color name="pz_guide_text_color">#1c7bdb</color>
+    
+	<!-- 与新主题相关的文字颜色 -->
+    <color name="theme_relative">#1e83de</color>
+    
+    <color name="common_text_color">#FF333333</color>
+    <color name="common_little_text_color">#FF919191</color>
+    <color name="common_title_little_text_color">#6053d6</color>
+    <color name="common_btn_text_color">#FF5F5F5F</color>
+    <color name="common_remind_gray">#ff5b5b5b</color>
+    <color name="common_remind_gray_bg">#ffebebeb</color>
+    <color name="common_remind_orange">#fff78a41</color>
+</resources>

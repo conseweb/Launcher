@@ -1,0 +1,68 @@
+<resources>
+    <!-- 是否为91桌面 ，非91桌面必须置为0-->
+    <integer name="is_91Launcher">0</integer>
+    
+    <!-- ContentProvider前缀 -->
+    <string name="pkg_content_uri_authority">com.simon.android.launcher2.settings</string>
+    <string name="pkg_content_uri_authority_sub">com.simon.hilauncherdev</string>
+    <!-- SD卡根目录 -->
+    <string name="pkg_base_dir">ExplorerLauncher</string>
+    <!-- 是否有程序匣子 -->
+    <integer name="has_drawer">0</integer>
+    
+    <!-- workspace配置：最大屏数、默认屏数、默认屏 -->
+    <integer name="workspace_max_screens">9</integer>
+    <integer name="workspace_default_screen_count">5</integer>
+    <integer name="workspace_default_screen">2</integer>
+    
+    <!-- dock栏配置：最大屏数、默认屏、每屏可放置图标数 -->
+    <integer name="dockbar_max_screens">3</integer>
+    <integer name="dockbar_default_main_screen">1</integer>
+    <integer name="dockbar_cell_counts">4</integer>
+    
+    <!-- 主题配置：主题常量引用到包名前缀、应用选择Activity -->
+    <string name="theme_comp_pkg">com.simon.android.pandahome2</string>
+    <string name="theme_app_select_activity">com.nd.hilauncherdev.app.AppResolverSelectActivity</string>
+    
+    
+    
+    <!-- 主题广播配置 -->
+    <!-- 当前主题信息广播 -->
+    <string name="INTENT_CURRENT_THEME_INFO">com.nd.android.pandahome.THEME_INFO</string>
+    <!-- 询问当前主题广播 -->
+    <string name="ACTION_ASK_THEME">com.nd.android.pandahome.ASK_THEME</string>
+    <!-- 百宝箱请求安装应用主题广播 -->
+    <string name="INTENT_PANDASPACE_INSTALL_THEME">com.nd.android.pandadesktop2.install_theme</string>
+    
+    <!-- 通用广播配置 -->
+    <!-- 当前主题信息广播 -->
+    <string name="ACTION_CHANGE_FOLDER_STYLE">nd.panda.action.internal.change.folder.style</string>
+    <!-- 桌面搬家请求广播 -->
+    <string name="MOVE_HOME_ACTION">com.nd.pandahome.internal.move.home</string>
+    <!-- 桌面应用旧主题请求广播 -->
+    <string name="APPLY_OLD_THEME_ACTION">com.nd.pandahome.internal.apply.oldtheme</string>
+    <!-- 软件升级广播 -->
+    <string name="SOFT_UPGRADE_ACTION">com.nd.pandahome.internal.soft.upgrade</string>
+    <!-- 刷新搜索小部件UI广播 -->
+    <string name="ACTION_REFRESH_SEARCH_WIDGET_UI">com.nd.pandahome.internal.refresh.search.widget</string>
+    <!-- 桌面内部创建快捷方式至桌面的广播 -->
+    <string name="ACTION_INTERNAL_INSTALL_SHORTCUT">com.nd.pandahome.install_shortcut</string>
+    <!-- 刷新动态图标广播Action -->
+    <string name="ACTION_REFRESH_DYNAMIC_ICON">nd.panda.action.internal.refresh.dynamic.icon</string>
+    <!-- 一键换壁纸结束widget动画广播Action -->
+    <string name="ACTION_STOP_FLASH_SWAP_WALLPAPER">nd.panda.action.internal.stopflash.swap.wallpaper</string>
+    <!-- 每日新鲜事hot图标变化广播Action -->
+    <string name="ACTION_DAILY_HOT_NEWS_CHANGE">com.nd.pandahome.dailyhotnews.change</string>
+    
+    <!-- 应用程序提示信息，未接电话，未读短信数量广播 -->
+    <string name="APP_HINT_FILTER">hilauncherdev.application.hint</string>
+    <!-- 图标刷新广播 -->
+    <string name="REFRESH_ICON_ACTION">com.nd.pandahome.internal.refresh.icon</string>
+    <!-- 应用主题后，通知桌面UI刷新广播 -->
+    <string name="LAUNCHER_UI_REFRESH_ACTION">nd.pandahome.internal.launcher.refreshUI</string>
+    <!-- 通知主题管理列表刷新广播 -->
+    <string name="INTENT_THEME_LIST_REFRESH">nd.panda.theme.list.refresh</string>
+    <!-- 提示应用商店检测出的可升级软件数量广播 -->
+    <string name="APP_STORE_HINT_FILTER">com.wireless.assistant.mobile.market.business.getUpdateBean</string>
+    
+</resources>

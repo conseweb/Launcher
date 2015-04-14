@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 编辑模式选中Tab文字颜色 -->
+	<color name="edit_mode_tab_checked_color">#248ce8</color>
+	
+	<!-- 内容颜色 -->
+    <color name="myphone_common_text_color">#303030</color>
+    
+    <!-- 说明文字颜色与ViewPagerTab未选中颜色 -->
+    <color name="myphone_common_little_text_color">#8f8f8f</color>
+    
+    <drawable name="myphone_bg_color">#f9fafb</drawable>
+    
+    <!-- 与新主题相关的文字颜色 -->
+    <color name="theme_relative">#1e83de</color>
+    
+    <color name="common_text_color">#FF333333</color>
+    <color name="common_little_text_color">#FF919191</color>
+    <color name="common_title_little_text_color">#6053d6</color>
+    <color name="common_btn_text_color">#FF5F5F5F</color>
+    <color name="common_remind_gray">#ff5b5b5b</color>
+    <color name="common_remind_gray_bg">#ffebebeb</color>
+    <color name="common_remind_orange">#fff78a41</color>
+    <color name="transparent_background">#96000000</color> 
+    
+    <color name="gray">#999</color>
+	<color name="green">#696</color>
+	<color name="red">#c66</color>
+	<color name="blue">#369</color>
+	<color name="brown">#c96</color>
+	<color name="purple">#969</color>
+	<color name="orange">#ffa500</color>
+	<color name="pink">#ff3399</color>
+	<color name="yellow">#ffff00</color>
+	<color name="none">#00000000</color>
+</resources>

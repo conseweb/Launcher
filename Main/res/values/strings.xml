@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="application_name" msgid="8424725141379931883">Mobo Launcher</string>
+    <string name="app_name">EL</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+
+    <string name="folder_name">Folder</string>
+    
+    <!-- 底部编辑视图  -->
+    <string name="launcher_edit_add">Add</string>
+    <string name="launcher_edit_individal">Customize</string>
+    <string name="launcher_edit_add_system_widget">System widget</string>
+    <string name="launcher_appslist_appstore_text">去应用市场看更多</string>
+    <string name="action_settings">Settings</string>
+    
+    <!-- 菜单 -->
+    <string name="menu_add">飞骐2添加小部件</string>
+	<string name="menu_theme">飞骐2美化手机</string>
+	<string name="menu_effect">飞骐2特效选择</string>
+	<string name="menu_sys_setting">飞骐2系统设置</string>
+	<string name="menu_custom_setting">飞骐2桌面设置</string>
+	<string name="menu_share">飞骐分享</string>
+	
+	<!-- 快捷 -->
+	<string name="dockbar_dock_drawer">全部应用</string>
+</resources>

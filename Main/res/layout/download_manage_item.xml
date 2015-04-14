@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nd.hilauncherdev.webconnect.downloadmanage.view.DownloadItemView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:background="@drawable/myphone_click_item_blue">
+
+	<RelativeLayout 
+		android:id="@+id/app_running_midle_view"
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+		android:paddingTop="@dimen/myphone_item_padding"
+		android:paddingBottom="@dimen/myphone_item_padding">
+		<ImageView android:id="@+id/app_item_image"
+			android:scaleType="fitCenter" android:layout_centerVertical="true"
+			android:layout_width="@dimen/myphone_item_icon"
+			android:layout_height="@dimen/myphone_item_icon" android:layout_alignParentLeft="true"
+			android:layout_marginLeft="@dimen/myphone_margin_left" />
+			
+		<!-- 功能按钮 -->
+		<FrameLayout
+		    android:id="@+id/app_item_fun_layout"
+            android:layout_alignParentRight="true" 
+            android:layout_centerVertical="true"
+            android:layout_width="90dip" 
+            android:layout_height="40dip" >
+            <TextView
+                android:id="@+id/app_item_fun_btn"
+                android:layout_width="match_parent" 
+                android:layout_height="match_parent"
+                android:textSize="@dimen/myphone_item_text_size" 
+                android:gravity="center"
+                android:textColor="@color/myphone_common_text_color"
+                android:background="@drawable/myphone_click_item_blue"
+                android:text="@string/myphone_download_parse" />
+            <ImageView
+                android:id="@+id/app_item_fun_btn_image"
+                android:scaleType="center"
+                android:visibility="gone"
+                android:layout_width="match_parent" 
+                android:layout_height="match_parent" />
+		</FrameLayout>
+		
+		<!-- 垂直分割线 -->
+		<ImageView android:id="@+id/ver_splite_line"
+			android:layout_width="wrap_content" android:layout_height="40dip"
+			android:layout_toLeftOf="@+id/app_item_fun_layout"
+			android:layout_centerVertical="true" android:background="@drawable/myphone_ver_split_line" />
+			
+		<LinearLayout android:id="@+id/app_item_text_layout"
+			android:layout_width="wrap_content" android:layout_height="fill_parent"
+			android:orientation="vertical" android:layout_toRightOf="@+id/app_item_image"
+			android:layout_toLeftOf="@+id/ver_splite_line"
+			android:layout_centerVertical="true" android:layout_marginLeft="@dimen/myphone_margin_left"
+			android:paddingRight="5dp">
+			<TextView android:id="@+id/app_item_name"
+				android:textColor="@color/myphone_common_text_color"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:maxWidth="200dip" android:textSize="@dimen/myphone_item_text_size"
+				android:singleLine="true" android:ellipsize="end" />
+			<RelativeLayout
+				android:id="@+id/desc_layout"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_vertical"
+				>
+				<TextView android:id="@+id/app_item_progress_desc"
+					android:textColor="@color/myphone_common_little_text_color"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:textSize="@dimen/myphone_item_little_text_size"
+					android:singleLine="true" android:ellipsize="end" 
+					android:layout_alignParentLeft="true"/>
+					
+				<TextView android:id="@+id/app_item_state"
+					android:textColor="@color/myphone_common_little_text_color"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:textSize="@dimen/myphone_item_little_text_size"
+					android:singleLine="true" android:ellipsize="end" 
+					android:layout_alignParentRight="true"/>
+			</RelativeLayout>
+			<ProgressBar
+				android:id="@+id/download_progress"
+				android:max="100"
+				android:layout_width="match_parent"
+				android:layout_height="3dp"
+				android:visibility="gone"
+				style="?android:attr/progressBarStyleHorizontal"
+				/>
+		</LinearLayout>
+			
+	</RelativeLayout>
+</com.nd.hilauncherdev.webconnect.downloadmanage.view.DownloadItemView>

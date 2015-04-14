@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nd.hilauncherdev.framework.view.commonsliding.CommonLightbar
+    	xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/spring_lightbar"
+		android:layout_width="match_parent" 
+		android:paddingTop="@dimen/workspace_spring_lightbar_toppadding"
+		android:layout_height="@dimen/workspace_spring_lightbar_height"
+		android:layout_gravity="top|right"
+		android:gravity="center"
+		android:visibility="gone" />

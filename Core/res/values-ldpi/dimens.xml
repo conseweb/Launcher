@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- workspace -->
+	<dimen name="workspaceEndPadding">70dip</dimen>
+	<dimen name="workspaceStartPadding">25dip</dimen>
+	
+	<!-- 文字大小 -->
+	<dimen name="text_size">13sp</dimen>
+	
+	<dimen name="myphone_info_view_image_size">100dip</dimen>
+	<!-- 我的手机  统一提示View MarginTop -->
+    <dimen name="myphone_info_view_margin_top">30dip</dimen>
+</resources>

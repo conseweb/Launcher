@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="dialog_top_layout_height">45dip</dimen>
+	
+	<dimen name="delete_zone_size">70dip</dimen>
+	
+	<!-- 我的手机标题 -->
+    <dimen name="myphone_title_text_size">20sp</dimen>
+    
+    
+    <!-- 底部编辑视图高度 -->
+	<dimen name="launcher_edit_view_height">153dip</dimen>
+	<!-- 底部编辑视图顶部Tab栏高度 -->
+	<dimen name="launcher_edit_view_top_layout_height">38dip</dimen>
+	<!-- 底部编辑视图顶部Tab栏文字大小 -->
+	<dimen name="launcher_edit_view_top_layout_text_size">16dip</dimen>
+</resources>

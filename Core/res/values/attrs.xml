@@ -1,0 +1,22 @@
+<resources>
+    <!-- Orientation of a widget. -->
+    <attr name="direction">
+        <!-- Vertical widget. -->
+        <enum name="vertical" value="0" />
+        <!-- Horizontal widget. -->
+        <enum name="horizontal" value="1" />
+    </attr>
+    
+ 	<!-- DeleteZone specific attributes. These attributes are used to customize
+         a DeleteZone view in XML files. -->
+    <declare-styleable name="DeleteZone">
+        <!-- Orientation of the delete zone. -->
+        <attr name="direction" />
+    </declare-styleable>
+    
+    <declare-styleable name="LauncherIconView">
+        <!-- Orientation of the delete zone. -->
+        <attr name="custom_text_color" format="color" />
+		<attr name="custom_shadow_color" format="color" />
+    </declare-styleable>
+</resources>
