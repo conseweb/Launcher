@@ -10,7 +10,7 @@ import android.view.Window;
 import android.widget.TextView;
 
 import com.nd.hilauncherdev.launcher.config.preference.SettingsConstants;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 卡片屏设置

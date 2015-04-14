@@ -26,7 +26,7 @@ import com.nd.hilauncherdev.launcher.screens.dockbar.MagicDockbarRelativeLayout;
 import com.nd.hilauncherdev.launcher.screens.preview.PreviewEditAdvancedController;
 import com.nd.hilauncherdev.launcher.touch.DragScroller;
 import com.nd.hilauncherdev.launcher.touch.DropTarget;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class Workspace extends ScreenViewGroup implements DragScroller, OnFolderDragOutCallback{
 	

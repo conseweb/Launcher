@@ -41,7 +41,7 @@ import com.nd.hilauncherdev.launcher.appslist.utils.CellLayoutItemSortByLabelHan
 import com.nd.hilauncherdev.launcher.info.ApplicationInfo;
 import com.nd.hilauncherdev.launcher.view.icon.ui.impl.AppMaskTextView;
 import com.nd.hilauncherdev.util.ActivityActionUtil;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class AllappsListview extends RelativeLayout implements OnScrollListener {
 	private ListView mAppsList;

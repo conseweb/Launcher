@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.nd.hilauncherdev.framework.view.MyPhoneViewPager;
 import com.nd.hilauncherdev.framework.view.MyPhoneViewPagerTab;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 我的手机统一布局

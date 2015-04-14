@@ -19,7 +19,7 @@ import android.text.TextUtils;
 import android.util.DisplayMetrics;
 
 import com.nd.hilauncherdev.framework.ViewFactory;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * APK包工具 类

@@ -11,7 +11,7 @@ import com.nd.hilauncherdev.webconnect.downloadmanage.model.DownloadManager;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.filetype.FileType;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.filetype.IFileTypeHelper;
 import com.nd.hilauncherdev.webconnect.downloadmanage.util.DownloadState;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /** 
  * 已下载但未安装状态

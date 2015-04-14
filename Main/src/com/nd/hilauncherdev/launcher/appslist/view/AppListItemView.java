@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class AppListItemView extends LinearLayout {
 	private String mSectionText = null;

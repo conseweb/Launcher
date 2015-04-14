@@ -20,7 +20,7 @@ import com.nd.hilauncherdev.launcher.info.FolderInfo;
 import com.nd.hilauncherdev.launcher.support.BaseLauncherViewHelper;
 import com.nd.hilauncherdev.launcher.touch.DragSource;
 import com.nd.hilauncherdev.launcher.view.DragView;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class IntegrateFolderPage extends ViewGroup {
 	protected static final String TAG = "IntegrateFolderPage";

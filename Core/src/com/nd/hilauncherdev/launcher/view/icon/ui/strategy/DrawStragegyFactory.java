@@ -16,7 +16,7 @@ import com.nd.hilauncherdev.launcher.view.icon.ui.strategy.impl.TextDrawStrategy
 
 /**
  * 绘画策略工厂
- * @author dingdj
+ * @author Michael
  * @createtime 2013-8-7
  */
 public class DrawStragegyFactory {
@@ -39,7 +39,7 @@ public class DrawStragegyFactory {
 	
 	/**
 	 * 画的顺序
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-7-31
 	 */
 	public enum DrawPriority {
@@ -81,7 +81,7 @@ public class DrawStragegyFactory {
 	
 	/**
 	 * 根据关键字创建对应的绘画策略
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-7-31 
 	 * @param priority
 	 * @param context

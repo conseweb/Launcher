@@ -239,7 +239,7 @@ public class BaseConfig {
 	}
 
 	/**
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-3-19下午4:47:24
 	 *  @return
 	 */
@@ -276,7 +276,7 @@ public class BaseConfig {
 
 	/**
 	 * 获取IconCache接口
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-3-21下午2:02:22
 	 *  @return
 	 */

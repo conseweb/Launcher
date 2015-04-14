@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 
 /**

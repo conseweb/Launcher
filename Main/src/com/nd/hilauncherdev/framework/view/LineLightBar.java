@@ -10,7 +10,7 @@ import com.nd.hilauncherdev.theme.ThemeManagerFactory;
 import com.nd.hilauncherdev.theme.assit.ThemeUIRefreshAssit;
 import com.nd.hilauncherdev.theme.assit.ThemeUIRefreshListener;
 import com.nd.hilauncherdev.theme.data.BaseThemeData;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 /**
  * 仅适用于主屏幕指示灯
  */

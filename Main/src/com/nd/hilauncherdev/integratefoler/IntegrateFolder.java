@@ -31,7 +31,7 @@ import com.nd.hilauncherdev.launcher.screens.DragLayer;
 import com.nd.hilauncherdev.launcher.touch.DragSource;
 import com.nd.hilauncherdev.launcher.touch.DropTarget;
 import com.nd.hilauncherdev.launcher.view.DragView;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class IntegrateFolder extends RelativeLayout implements DropTarget, DragSource, View.OnClickListener, View.OnLongClickListener, OnKeyDownListenner {
 

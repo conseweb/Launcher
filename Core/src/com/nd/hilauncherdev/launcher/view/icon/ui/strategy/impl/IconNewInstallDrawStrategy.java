@@ -12,7 +12,7 @@ import com.nd.hilauncherdev.launcher.view.icon.ui.strategy.DrawStrategy;
 
 /**
  * 
- * @author dingdj
+ * @author Michael
  * Date:2013-8-26下午3:49:03
  *
  */

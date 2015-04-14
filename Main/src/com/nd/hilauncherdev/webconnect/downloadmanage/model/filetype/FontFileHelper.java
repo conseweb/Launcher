@@ -7,7 +7,7 @@ import android.content.Intent;
 import com.nd.hilauncherdev.datamodel.CommonGlobal;
 import com.nd.hilauncherdev.webconnect.downloadmanage.activity.DownloadManageAdapter.ViewHolder;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.BaseDownloadInfo;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class FontFileHelper implements IFileTypeHelper {
 

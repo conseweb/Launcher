@@ -4,7 +4,7 @@ import com.nd.hilauncherdev.launcher.view.icon.ui.folder.BaseFolderReceiver;
 import com.nd.hilauncherdev.launcher.view.icon.ui.util.IconTypeFactoryManager.FolderReceiverFactory;
 
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-3-26下午5:13:22
  *
  */

@@ -17,7 +17,7 @@ import com.nd.hilauncherdev.launcher.touch.WorkspaceDragAndDropImpl;
 import com.nd.hilauncherdev.launcher.view.DragView;
 import com.nd.hilauncherdev.launcher.view.icon.ui.folder.FolderIconTextView;
 import com.nd.hilauncherdev.launcher.view.icon.ui.impl.IconMaskTextView;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * Description: 处理默认桌面上Workspace的拖放

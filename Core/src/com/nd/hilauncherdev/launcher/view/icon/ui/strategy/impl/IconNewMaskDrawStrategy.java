@@ -11,7 +11,7 @@ import com.nd.hilauncherdev.launcher.view.icon.ui.strategy.DrawStragegyFactory.D
 import com.nd.hilauncherdev.launcher.view.icon.ui.strategy.DrawStrategy;
 
 /**
- * @author dingdj
+ * @author Michael
  * @createtime 2013-7-31
  */
 public class IconNewMaskDrawStrategy extends DrawStrategy{

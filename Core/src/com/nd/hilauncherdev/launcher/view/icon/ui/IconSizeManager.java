@@ -8,7 +8,7 @@ import com.nd.hilauncherdev.launcher.config.preference.BaseSettingsPreference;
 
 /**
  * 桌面图标大小管理类
- * @author dingdj
+ * @author Michael
  * Date:2014-2-24下午2:13:26
  *
  */
@@ -35,7 +35,7 @@ public class IconSizeManager {
 	
 	/**
 	 * 获取图标的值
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-2-24下午2:30:36
 	 *  @return
 	 */
@@ -82,7 +82,7 @@ public class IconSizeManager {
 	
 	/**
 	 * 设置IconSize
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-2-24下午2:45:34
 	 *  @param type
 	 */

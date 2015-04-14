@@ -2,7 +2,7 @@ package com.nd.hilauncherdev.analysis;
 
 /**
  * description: <br/>
- * author: dingdj<br/>
+ * author: Michael<br/>
  * data: 2014/8/28<br/>
  */
 public class AppAnalysisConstant {

@@ -43,7 +43,7 @@ import com.nd.hilauncherdev.launcher.touch.DropTarget;
 import com.nd.hilauncherdev.launcher.view.DragView;
 import com.nd.hilauncherdev.launcher.view.icon.ui.folder.FolderIconTextView;
 import com.nd.hilauncherdev.util.ActivityActionUtil;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 文件夹显示视图，包括文件夹名字输入框，添加app按钮，横向滑屏的app列表
@@ -668,7 +668,7 @@ public class FolderView extends RelativeLayout implements
 	
 	/**
 	 * 显示长按菜单
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-7-17
 	 */
 	public void showShortcutMenu(){

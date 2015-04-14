@@ -487,7 +487,7 @@ public class BaseIconCache{
 	
 	/**
 	 * 获取图标接口适配4.1以上
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-4-2下午4:24:47
 	 *  @param info
 	 *  @return
@@ -517,7 +517,7 @@ public class BaseIconCache{
 
 	/**
 	 * 
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-4-2下午4:25:21
 	 *  @param resources
 	 *  @param iconId
@@ -541,7 +541,7 @@ public class BaseIconCache{
 
 	/**
 	 * 获取屏幕dpi
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-4-2下午4:25:36
 	 *  @param mContext
 	 *  @return
@@ -595,7 +595,7 @@ public class BaseIconCache{
 
 	/**
 	 * 获取主题名称
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-5-26上午8:53:45
 	 *  @return
 	 */
@@ -619,7 +619,7 @@ public class BaseIconCache{
 
     /**
      * 换主题时对IconCache做清除动作
-     * @author dingdj
+     * @author Michael
      * @date 2014-7-21
      */
     public void clearIconCache() {

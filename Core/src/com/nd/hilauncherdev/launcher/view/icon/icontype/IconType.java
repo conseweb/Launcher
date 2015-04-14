@@ -17,7 +17,7 @@ import com.nd.hilauncherdev.launcher.view.icon.ui.impl.DockbarCell;
 import com.nd.hilauncherdev.launcher.view.icon.ui.impl.IconMaskTextView;
 
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-3-20上午10:28:33
  *
  */
@@ -27,7 +27,7 @@ public class IconType {
 
 	/**
 	 * 注册广播的action
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-3-20上午11:53:34
 	 *  @param launcherIconView
 	 *  @return
@@ -51,7 +51,7 @@ public class IconType {
 	
 	/**
 	 * 处理广播的消息 返回是否处理成功 处理成功不再处理
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-3-20上午11:53:18
 	 *  @param launcherIconView
 	 */
@@ -87,7 +87,7 @@ public class IconType {
 	
 	/**
 	 * 适用于无匣子桌面新安装app的new提示和两个热门类型的判断
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-3-24下午3:35:59
 	 *  @param info
 	 *  @param config
@@ -98,7 +98,7 @@ public class IconType {
 	
 	/**
 	 * 提供一个画布接口供扩展
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-3-24下午3:59:49
 	 *  @param context
 	 *  @param info

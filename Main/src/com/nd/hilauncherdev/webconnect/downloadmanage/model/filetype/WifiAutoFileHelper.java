@@ -14,7 +14,7 @@ import com.nd.hilauncherdev.webconnect.downloadmanage.activity.DownloadManageAda
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.BaseDownloadInfo;
 
 /**
- * @author dingdj Date:2014-3-12下午5:54:15
+ * @author Michael Date:2014-3-12下午5:54:15
  * 
  */
 public class WifiAutoFileHelper implements IFileTypeHelper {

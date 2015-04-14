@@ -1,10 +1,10 @@
 # view res/layout/user_folder_integrate.xml #generated:30
 -keep class android.support.v4.view.ViewPager { <init>(...); }
 
-# view AndroidManifest.xml #generated:60
+# view AndroidManifest.xml #generated:59
 -keep class com.baidu.dx.personalize.theme.LocalThemeService { <init>(...); }
 
-# view AndroidManifest.xml #generated:119
+# view AndroidManifest.xml #generated:118
 -keep class com.nd.hilauncherdev.app.AppResolverSelectActivity { <init>(...); }
 
 # view res/layout/preview_cell_item.xml #generated:8
@@ -49,20 +49,20 @@
 # view res/layout/user_folder_promotion_layout.xml #generated:2
 -keep class com.nd.hilauncherdev.integratefoler.PromotionLayout { <init>(...); }
 
-# view AndroidManifest.xml #generated:93
+# view AndroidManifest.xml #generated:92
 -keep class com.nd.hilauncherdev.launcher.ApplicationChangeReceiver { <init>(...); }
 
 # view res/layout/launcher_delete_zone.xml #generated:14
 # view res/layout/launcher_delete_zone.xml #generated:9
 -keep class com.nd.hilauncherdev.launcher.DeleteZoneTextView { <init>(...); }
 
-# view AndroidManifest.xml #generated:39
+# view AndroidManifest.xml #generated:38
 -keep class com.nd.hilauncherdev.launcher.Launcher { <init>(...); }
 
-# view AndroidManifest.xml #generated:35
+# view AndroidManifest.xml #generated:34
 -keep class com.nd.hilauncherdev.launcher.LauncherApplication { <init>(...); }
 
-# view AndroidManifest.xml #generated:56
+# view AndroidManifest.xml #generated:55
 -keep class com.nd.hilauncherdev.launcher.LauncherProvider { <init>(...); }
 
 # view land/res/layout-land/launcher.xml #generated:53
@@ -73,7 +73,7 @@
 # view port/res/layout-port/launcher.xml #generated:23
 -keep class com.nd.hilauncherdev.launcher.Workspace { <init>(...); }
 
-# view AndroidManifest.xml #generated:114
+# view AndroidManifest.xml #generated:113
 -keep class com.nd.hilauncherdev.launcher.appslist.AppslistActivity { <init>(...); }
 
 # view res/layout/dx_appslist_content.xml #generated:2
@@ -97,10 +97,10 @@
 # view res/layout/dx_alphalbet_view.xml #generated:4
 -keep class com.nd.hilauncherdev.launcher.appslist.view.ScrollAlphalbetView { <init>(...); }
 
-# view AndroidManifest.xml #generated:77
+# view AndroidManifest.xml #generated:76
 -keep class com.nd.hilauncherdev.launcher.broadcast.InstallShortcutReceiver { <init>(...); }
 
-# view AndroidManifest.xml #generated:86
+# view AndroidManifest.xml #generated:85
 -keep class com.nd.hilauncherdev.launcher.broadcast.UninstallShortcutReceiver { <init>(...); }
 
 # view res/layout/launcher_edit_view.xml #generated:97
@@ -137,43 +137,43 @@
 # view port/res/layout-port/folder_icon.xml #generated:17
 -keep class com.nd.hilauncherdev.launcher.view.icon.ui.folder.FolderIconTextView { <init>(...); }
 
-# view AndroidManifest.xml #generated:102
+# view AndroidManifest.xml #generated:101
 -keep class com.nd.hilauncherdev.menu.personal.AllDownloadManagerActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:124
+# view AndroidManifest.xml #generated:123
 -keep class com.nd.hilauncherdev.push.PushMsgRedirectActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:154
+# view AndroidManifest.xml #generated:153
 -keep class com.nd.hilauncherdev.settings.AboutLauncherActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:138
+# view AndroidManifest.xml #generated:137
 -keep class com.nd.hilauncherdev.settings.CardScreenSettingsActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:142
+# view AndroidManifest.xml #generated:141
 -keep class com.nd.hilauncherdev.settings.DynamicSettingsActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:134
+# view AndroidManifest.xml #generated:133
 -keep class com.nd.hilauncherdev.settings.GestureSettingsActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:130
+# view AndroidManifest.xml #generated:129
 -keep class com.nd.hilauncherdev.settings.HomeSettingsActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:146
+# view AndroidManifest.xml #generated:145
 -keep class com.nd.hilauncherdev.settings.MoreSettingsActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:158
+# view AndroidManifest.xml #generated:157
 -keep class com.nd.hilauncherdev.settings.SettingsItemSelectActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:150
+# view AndroidManifest.xml #generated:149
 -keep class com.nd.hilauncherdev.settings.ShareLauncherActivity { <init>(...); }
 
 # view res/layout/launcher_menu_item.xml #generated:8
 -keep class com.nd.hilauncherdev.view.FontableTextView { <init>(...); }
 
-# view AndroidManifest.xml #generated:63
+# view AndroidManifest.xml #generated:62
 -keep class com.nd.hilauncherdev.webconnect.downloadmanage.model.DownloadServerService { <init>(...); }
 
-# view AndroidManifest.xml #generated:66
+# view AndroidManifest.xml #generated:65
 -keep class com.nd.hilauncherdev.webconnect.downloadmanage.model.PluginDownloadForwardService { <init>(...); }
 
 # view res/layout/download_manage_item.xml #generated:2

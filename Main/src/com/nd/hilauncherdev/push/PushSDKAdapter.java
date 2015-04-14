@@ -28,7 +28,7 @@ import com.nd.hilauncherdev.push.model.NotifyPushInfo;
 import com.nd.hilauncherdev.push.model.ServerConfigInfo;
 import com.nd.hilauncherdev.uri.UriActions;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.filetype.FileType;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 推送SDK时的适配

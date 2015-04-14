@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<favorites xmlns:launcher="http://schemas.android.com/apk/res/com.simon.android.pandahome2">
+<favorites xmlns:launcher="http://schemas.android.com/apk/res/com.bitants.launcher">
     <!-- 电话 -->
 	<dock_shortcut
     	launcher:screen="1"

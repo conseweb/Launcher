@@ -6,7 +6,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.nd.hilauncherdev.launcher.config.BaseConfig;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 下载管理页面适配器

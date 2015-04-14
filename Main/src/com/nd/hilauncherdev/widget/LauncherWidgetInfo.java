@@ -5,7 +5,7 @@ import android.graphics.drawable.Drawable;
 
 import com.nd.hilauncherdev.datamodel.Global;
 import com.nd.hilauncherdev.launcher.LauncherSettings;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 非标小部件信息
@@ -371,7 +371,7 @@ public class LauncherWidgetInfo extends LauncherItemInfo {
 	
 	/**
 	 * 是否是内置动态插件
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2013-12-20上午8:44:35
 	 * @return
 	 */
@@ -397,7 +397,7 @@ public class LauncherWidgetInfo extends LauncherItemInfo {
 	
 	/**
 	 * 是否是可安装插件
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-1-26上午9:34:41
 	 *  @param widgetInfo
 	 */
@@ -410,7 +410,7 @@ public class LauncherWidgetInfo extends LauncherItemInfo {
 	
 	/**
 	 * 是否91插件如百度插件等
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-1-26上午9:38:29
 	 *  @param widgetInfo
 	 *  @return
@@ -424,7 +424,7 @@ public class LauncherWidgetInfo extends LauncherItemInfo {
 	
 	/**
 	 * 是否通过安装插件或是天气类型
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-1-26上午9:38:29
 	 *  @param widgetInfo
 	 *  @return
@@ -438,7 +438,7 @@ public class LauncherWidgetInfo extends LauncherItemInfo {
 	
 	/**
 	 * 是否动态桌面内置插件(放置在SD卡上)
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-1-26上午9:38:29
 	 *  @param widgetInfo
 	 *  @return

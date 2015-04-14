@@ -11,7 +11,7 @@ import com.nd.hilauncherdev.kitset.util.AndroidPackageUtils;
 import com.nd.hilauncherdev.kitset.util.SystemUtil;
 import com.nd.hilauncherdev.launcher.info.ApplicationInfo;
 import com.nd.hilauncherdev.launcher.model.BaseLauncherModel;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 桌面相关打开应用处理器

@@ -25,7 +25,7 @@ import com.nd.hilauncherdev.launcher.info.ApplicationInfo;
 import com.nd.hilauncherdev.launcher.model.BaseLauncherModel;
 import com.nd.hilauncherdev.theme.adaption.ThemeIconIntentAdaptation;
 import com.nd.hilauncherdev.theme.assit.BaseThemeAssit;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class AppslistActivity extends Activity {
 	private AllappsListview appLinearLayout;

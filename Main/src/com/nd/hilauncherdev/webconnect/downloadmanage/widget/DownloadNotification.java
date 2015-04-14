@@ -15,7 +15,7 @@ import com.nd.hilauncherdev.kitset.util.TelephoneUtil;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.BaseDownloadInfo;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.DownloadServerServiceConnection;
 import com.nd.hilauncherdev.webconnect.downloadmanage.util.DownloadState;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 

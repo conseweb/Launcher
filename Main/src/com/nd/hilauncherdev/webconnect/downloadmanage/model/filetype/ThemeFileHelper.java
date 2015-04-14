@@ -9,7 +9,7 @@ import com.nd.hilauncherdev.kitset.util.StringUtil;
 import com.nd.hilauncherdev.theme.ThemeManagerFactory;
 import com.nd.hilauncherdev.webconnect.downloadmanage.activity.DownloadManageAdapter.ViewHolder;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.BaseDownloadInfo;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 主题操作

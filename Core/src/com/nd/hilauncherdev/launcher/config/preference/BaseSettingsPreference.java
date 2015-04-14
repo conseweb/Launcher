@@ -569,7 +569,7 @@ public class BaseSettingsPreference {
 	
 	/**
 	 * 获取应用图标名称
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-2-17下午3:02:35
 	 *  @return
 	 */
@@ -579,7 +579,7 @@ public class BaseSettingsPreference {
 	
 	/**
 	 * 设置应用图标名称
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-2-17下午3:02:35
 	 *  @return
 	 */
@@ -589,7 +589,7 @@ public class BaseSettingsPreference {
 	
 	/**
 	 * 获取应用图标大小类型
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-2-17下午3:02:35
 	 *  @return
 	 */
@@ -599,7 +599,7 @@ public class BaseSettingsPreference {
 	
 	/**
 	 * 设置应用图标大小类型
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-2-17下午3:02:35
 	 *  @return
 	 */

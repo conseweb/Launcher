@@ -26,7 +26,7 @@ import com.nd.hilauncherdev.launcher.model.BaseLauncherModel;
 import com.nd.hilauncherdev.launcher.screens.CellLayout;
 import com.nd.hilauncherdev.launcher.screens.dockbar.BaseMagicDockbar;
 import com.nd.hilauncherdev.launcher.view.icon.ui.folder.FolderIconTextView;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 桌面打开文件夹逻辑类

@@ -5,7 +5,7 @@ import android.widget.Toast;
 import com.nd.hilauncherdev.launcher.info.ItemInfo;
 import com.nd.hilauncherdev.launcher.screens.CellLayout;
 import com.nd.hilauncherdev.launcher.support.BaseCellLayoutHelper;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * Description: 

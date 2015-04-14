@@ -51,7 +51,7 @@ public class DockbarCell extends LauncherIconView{
 	
 	/**
 	 * 初始化参数
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-7-30
 	 */
 	@Override
@@ -62,7 +62,7 @@ public class DockbarCell extends LauncherIconView{
 	
 	/**
 	 * 改变数据 并重新设置各个绘画策略所需数据
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-8-7 
 	 * @param w
 	 * @param h
@@ -108,7 +108,7 @@ public class DockbarCell extends LauncherIconView{
 	
 	/**
 	 * 标题
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-7-31 
 	 * @param text
 	 */

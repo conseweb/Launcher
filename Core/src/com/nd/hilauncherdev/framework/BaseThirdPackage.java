@@ -1,12 +1,12 @@
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-3-20下午1:34:37
  *
  */
 package com.nd.hilauncherdev.framework;
 
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-3-20下午1:34:37
  *
  */

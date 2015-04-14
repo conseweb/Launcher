@@ -44,7 +44,7 @@ import com.nd.hilauncherdev.launcher.screens.ScreenViewGroup;
 import com.nd.hilauncherdev.settings.SettingsPreference;
 import com.nd.hilauncherdev.theme.adaption.ThemeIconIntentAdaptation;
 import com.nd.hilauncherdev.theme.data.BaseThemeData;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class LauncherProviderHelper {
 	private static final String TAG = "LauncherProviderHelper";

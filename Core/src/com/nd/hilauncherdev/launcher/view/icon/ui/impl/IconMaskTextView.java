@@ -86,7 +86,7 @@ public class IconMaskTextView extends LauncherIconView implements OnDragEventCal
 
 	/**
 	 * 初始化参数
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-7-30
 	 */
 	protected void initParams(AttributeSet attrs) {
@@ -99,7 +99,7 @@ public class IconMaskTextView extends LauncherIconView implements OnDragEventCal
 	/**
 	 * 改变数据 并重新设置各个绘画策略所需数据
 	 * 
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-8-7
 	 * @param w
 	 * @param h

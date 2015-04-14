@@ -1,5 +1,5 @@
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-3-19下午1:45:11
  *
  */
@@ -20,7 +20,7 @@ import com.nd.hilauncherdev.launcher.config.BaseConfig;
 import com.nd.hilauncherdev.launcher.config.preference.BaseSettingsPreference;
 
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-3-19下午1:45:11
  *
  */
@@ -113,7 +113,7 @@ public class LauncherIconDataCache {
 	
 	/**
 	 * 获取默认的文字高度
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-3-19下午3:22:39
 	 *  @param context
 	 *  @return
@@ -157,7 +157,7 @@ public class LauncherIconDataCache {
 	
 	/**
 	 * 
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-3-19下午2:26:11
 	 *  @param measureW
 	 *  @param measureH
@@ -191,7 +191,7 @@ public class LauncherIconDataCache {
 	
 	/**
 	 * 
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-3-19下午2:26:11
 	 *  @param originalW
 	 *  @param originalH
@@ -278,7 +278,7 @@ public class LauncherIconDataCache {
 	
 	/**
 	 * 
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-3-19下午2:26:11
 	 *  @param measureW
 	 *  @param measureH
@@ -300,7 +300,7 @@ public class LauncherIconDataCache {
 	
 	/**
 	 * 
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-3-19下午2:26:11
 	 *  @param measureW
 	 *  @param measureH

@@ -22,7 +22,7 @@ import com.nd.hilauncherdev.launcher.edit.data.LauncherEditThemeItemInfo;
 import com.nd.hilauncherdev.launcher.edit.data.LauncherEditWallpaperItemInfo;
 import com.nd.hilauncherdev.widget.LauncherWidgetInfo;
 import com.nd.hilauncherdev.widget.LauncherWidgetInfoManager;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 编辑模式添加数据集数据
@@ -176,7 +176,7 @@ public class LauncherEditDataFactory {
 	
 	/**
 	 * 获取壁纸
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-1-28下午2:54:59
 	 * @param path
 	 * @param context

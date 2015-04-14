@@ -1,6 +1,6 @@
 package com.nd.hilauncherdev.settings;
 
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 import android.content.Context;
 import android.preference.PreferenceCategory;

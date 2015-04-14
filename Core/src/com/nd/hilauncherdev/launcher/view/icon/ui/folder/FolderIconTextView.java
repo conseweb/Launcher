@@ -1,5 +1,5 @@
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-3-27下午1:44:29
  *
  */
@@ -370,7 +370,7 @@ public class FolderIconTextView extends EditableIconView implements OnDragEventC
 	
 	/**
 	 * 通过宽度和长度来设置值
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2013-11-6上午9:43:29
 	 *  @param widthSize
 	 *  @param heightSize
@@ -1091,7 +1091,7 @@ public class FolderIconTextView extends EditableIconView implements OnDragEventC
 	
 	/**
 	 * 批量添加ApplicationInfo
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-6-13 
 	 * @param items
 	 */
@@ -1459,7 +1459,7 @@ public class FolderIconTextView extends EditableIconView implements OnDragEventC
 	
 	/**
 	 * 根据componentName查找文件夹中的ApplicationInfo
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2013-9-24下午12:06:21
 	 *  @param componentName
 	 *  @return

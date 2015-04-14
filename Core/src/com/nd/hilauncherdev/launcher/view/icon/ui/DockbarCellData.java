@@ -61,7 +61,7 @@ public class DockbarCellData extends LauncherIconData {
 
 	/**
 	 * 获取图标的大小
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-3-24上午8:38:18
 	 *  @return
 	 */
@@ -95,7 +95,7 @@ public class DockbarCellData extends LauncherIconData {
 	
 	/**
 	 * 获取蒙板的rect大小
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-3-24上午8:38:18
 	 *  @return
 	 */
@@ -127,7 +127,7 @@ public class DockbarCellData extends LauncherIconData {
 	
 	/**
 	 * 获取缩放比例
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-3-25上午11:09:54
 	 *  @param config
 	 *  @return

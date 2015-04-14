@@ -18,7 +18,7 @@ import com.nd.hilauncherdev.launcher.Workspace;
 import com.nd.hilauncherdev.launcher.edit.LauncherEditView;
 import com.nd.hilauncherdev.launcher.screens.BaseLauncherMenu;
 import com.nd.hilauncherdev.settings.HomeSettingsActivity;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class LauncherMenu extends BaseLauncherMenu{
 	private MenuAdapter firScreenAdapter;

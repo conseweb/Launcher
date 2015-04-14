@@ -29,7 +29,7 @@ import com.nd.hilauncherdev.webconnect.downloadmanage.model.filetype.IFileTypeHe
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.state.IDownloadStateHelper;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.state.StateHelper;
 import com.nd.hilauncherdev.webconnect.downloadmanage.util.DownloadState;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class BaseDownloadAdapter extends BaseAdapter {
 

@@ -15,7 +15,7 @@ import com.nd.hilauncherdev.net.ThemeHttpCommon;
 
 /**
  * description: 应用分发统计接口<br/>
- * author: dingdj<br/>
+ * author: Michael<br/>
  * date: 2014/10/8<br/>
  */
 public class AppDistributeUtil {

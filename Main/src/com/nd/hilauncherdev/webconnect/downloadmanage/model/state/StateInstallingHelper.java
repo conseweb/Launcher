@@ -6,7 +6,7 @@ import android.view.View;
 import com.nd.hilauncherdev.webconnect.downloadmanage.activity.DownloadManageAdapter.ViewHolder;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.BaseDownloadInfo;
 import com.nd.hilauncherdev.webconnect.downloadmanage.util.DownloadState;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 正在安装状态，应用于静默安装

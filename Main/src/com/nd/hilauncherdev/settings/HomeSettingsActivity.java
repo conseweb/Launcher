@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 桌面设置主界面

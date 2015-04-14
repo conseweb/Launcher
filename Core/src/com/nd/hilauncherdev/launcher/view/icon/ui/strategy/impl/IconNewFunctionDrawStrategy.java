@@ -1,5 +1,5 @@
 /**
- * @author dingdj
+ * @author Michael
  * Date:2013-9-9下午4:20:19
  *
  */
@@ -17,7 +17,7 @@ import com.nd.hilauncherdev.launcher.view.icon.ui.strategy.DrawStrategy;
 
 
 /**
- * @author dingdj
+ * @author Michael
  * Date:2013-9-9下午4:20:19
  */
 public class IconNewFunctionDrawStrategy extends DrawStrategy{

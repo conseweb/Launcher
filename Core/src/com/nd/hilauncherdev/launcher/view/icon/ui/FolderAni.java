@@ -13,7 +13,7 @@ import com.nd.hilauncherdev.launcher.view.icon.ui.folder.FolderIconTextView;
 
 /**
  * 文件夹合并类
- * @author dingdj
+ * @author Michael
  * @createtime 2013-8-8
  */
 public class FolderAni {
@@ -74,7 +74,7 @@ public class FolderAni {
 	
 	/**
 	 * 判断是否返回
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-8-9 
 	 * @return
 	 */
@@ -119,7 +119,7 @@ public class FolderAni {
 
 	/**
 	 * 是否处于合并状态
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-8-8 
 	 * @return
 	 */

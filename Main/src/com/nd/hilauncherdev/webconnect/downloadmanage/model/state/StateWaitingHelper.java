@@ -7,7 +7,7 @@ import com.nd.hilauncherdev.webconnect.downloadmanage.activity.DownloadManageAda
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.BaseDownloadInfo;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.DownloadManager;
 import com.nd.hilauncherdev.webconnect.downloadmanage.util.DownloadState;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /** 
  * 等待状态 

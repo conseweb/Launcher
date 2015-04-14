@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.nd.hilauncherdev.theme.data.ThemeGlobal;
 import com.nd.hilauncherdev.theme.data.ThemeType;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 编辑模式主题数据集类型

@@ -2,7 +2,7 @@ package com.nd.hilauncherdev.launcher.edit.data;
 
 import android.content.Context;
 
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 
 

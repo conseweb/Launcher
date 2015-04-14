@@ -734,7 +734,7 @@ public class WorkspaceDragAndDropImpl implements WorkspaceDragAndDrop{
 	
 	/**
 	 * Description: 处理在其他地方(非Workspace，如文件夹、匣子、预览区)批量拖动图标到桌面
-	 * Author: dingdj
+	 * Author: Michael
 	 * Date: 2013-5-24 下午5:03:56
 	 */
 	public void onDropExternal(int x, int y, Object dragInfo, CellLayout cellLayout, DragView dragView, ArrayList<ApplicationInfo> appList) {

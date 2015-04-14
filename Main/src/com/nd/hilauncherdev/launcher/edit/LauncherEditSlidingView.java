@@ -35,7 +35,7 @@ import com.nd.hilauncherdev.theme.data.ThemeFormart;
 import com.nd.hilauncherdev.theme.data.ThemeGlobal;
 import com.nd.hilauncherdev.theme.pref.ThemeSharePref;
 import com.nd.hilauncherdev.widget.LauncherWidgetInfo;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class LauncherEditSlidingView extends CommonSlidingView {
 

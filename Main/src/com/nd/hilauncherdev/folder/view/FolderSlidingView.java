@@ -31,7 +31,7 @@ import com.nd.hilauncherdev.launcher.touch.DragSource;
 import com.nd.hilauncherdev.launcher.view.DragView;
 import com.nd.hilauncherdev.launcher.view.icon.ui.folder.FolderIconTextView;
 import com.nd.hilauncherdev.launcher.view.icon.ui.impl.AppMaskTextView;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * represent folder's apps view

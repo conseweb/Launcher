@@ -21,7 +21,7 @@ import com.nd.hilauncherdev.launcher.Workspace;
 import com.nd.hilauncherdev.launcher.config.preference.BaseSettingsPreference;
 import com.nd.hilauncherdev.launcher.info.FolderInfo;
 import com.nd.hilauncherdev.launcher.view.icon.ui.folder.FolderIconTextView;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * <p>文件夹逻辑控制器<p>

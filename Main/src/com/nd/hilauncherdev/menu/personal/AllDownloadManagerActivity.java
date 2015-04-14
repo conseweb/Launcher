@@ -46,7 +46,7 @@ import com.nd.hilauncherdev.webconnect.downloadmanage.model.CommonCallBack;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.DownloadServerService;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.DownloadServerServiceConnection;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.filetype.FileType;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * Title:所有下载的统合 包括软件和主题 <br>

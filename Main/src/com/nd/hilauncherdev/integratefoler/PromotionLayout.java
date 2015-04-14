@@ -18,7 +18,7 @@ import android.widget.TextView;
 
 import com.nd.hilauncherdev.integratefoler.model.PromotionAppInfo;
 import com.nd.hilauncherdev.launcher.info.ApplicationInfo;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class PromotionLayout extends ViewGroup {
 

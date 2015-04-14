@@ -29,7 +29,7 @@ import com.nineoldandroids.animation.Animator;
 import com.nineoldandroids.animation.AnimatorListenerAdapter;
 import com.nineoldandroids.animation.AnimatorSet;
 import com.nineoldandroids.animation.ObjectAnimator;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class IntegrateFolderGridView extends ViewGroup implements DragSource, DropTarget {
 

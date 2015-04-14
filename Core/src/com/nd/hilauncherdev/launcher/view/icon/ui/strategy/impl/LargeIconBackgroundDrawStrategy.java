@@ -13,7 +13,7 @@ import com.nd.hilauncherdev.launcher.view.icon.ui.strategy.DrawStrategy;
 /**
  * 画大图标
  * 
- * @author dingdj
+ * @author Michael
  * @createtime 2013-7-31
  */
 public class LargeIconBackgroundDrawStrategy extends DrawStrategy {

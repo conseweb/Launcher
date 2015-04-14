@@ -15,7 +15,7 @@ import com.nd.hilauncherdev.kitset.util.ThreadUtil;
 import com.nd.hilauncherdev.launcher.config.BaseConfig;
 import com.nd.hilauncherdev.webconnect.downloadmanage.activity.DownloadManageAdapter.ViewHolder;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.BaseDownloadInfo;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class RingFileHelper implements IFileTypeHelper {
 

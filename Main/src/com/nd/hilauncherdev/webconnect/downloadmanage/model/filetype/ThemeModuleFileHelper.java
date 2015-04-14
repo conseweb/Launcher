@@ -8,7 +8,7 @@ import com.nd.hilauncherdev.datamodel.CommonGlobal;
 import com.nd.hilauncherdev.theme.module.ModuleConstant;
 import com.nd.hilauncherdev.webconnect.downloadmanage.activity.DownloadManageAdapter.ViewHolder;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.BaseDownloadInfo;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class ThemeModuleFileHelper implements IFileTypeHelper{
 	

@@ -15,7 +15,7 @@ import com.nd.hilauncherdev.launcher.config.CellLayoutConfig;
 import com.nd.hilauncherdev.launcher.config.preference.BaseConfigPreferences;
 import com.nd.hilauncherdev.launcher.screens.CellLayout;
 import com.nd.hilauncherdev.launcher.support.BaseLauncherViewHelper;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 扩展处理显示到桌面的视图

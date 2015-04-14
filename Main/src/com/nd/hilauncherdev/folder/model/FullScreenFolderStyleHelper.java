@@ -25,7 +25,7 @@ import com.nineoldandroids.animation.Animator;
 import com.nineoldandroids.animation.AnimatorSet;
 import com.nineoldandroids.animation.ObjectAnimator;
 import com.nineoldandroids.animation.Animator.AnimatorListener;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class FullScreenFolderStyleHelper extends AbstractFolderStyleHelper {
 

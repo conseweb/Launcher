@@ -1,5 +1,5 @@
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-3-21下午6:02:58
  *
  */
@@ -19,7 +19,7 @@ import com.nd.hilauncherdev.theme.data.ThemeData;
 
 /**
  * 匣子图标
- * @author dingdj
+ * @author Michael
  * Date:2014-3-21下午6:02:58
  *
  */

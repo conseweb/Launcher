@@ -13,7 +13,7 @@ import com.nd.hilauncherdev.theme.adaption.ThemeIconIntentAdaptation;
 
 /**
  * IconMask帮助类
- * @author dingdj
+ * @author Michael
  * @createtime 2013-7-26
  */
 public class IconTypeFactoryManager {
@@ -21,7 +21,7 @@ public class IconTypeFactoryManager {
 	
 	/**
 	 * 子类继承来实现对不同类型图标的适配
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-3-21下午3:36:40
 	 *
 	 */
@@ -81,7 +81,7 @@ public class IconTypeFactoryManager {
 	
 	/**
 	 * 是否需要接受hint广播
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2013-10-14下午5:20:52
 	 *  @param appInfo
 	 *  @return
@@ -98,7 +98,7 @@ public class IconTypeFactoryManager {
 	
 	/**
 	 * 是否dock栏四图标
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-3-21下午5:21:01
 	 *  @param mAppInfo
 	 *  @return
@@ -118,7 +118,7 @@ public class IconTypeFactoryManager {
 	
 	/**
 	 * 根据图标类型获取不同的behavior来进行图标刷新
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2013-10-28下午3:36:07
 	 *  @param o
 	 *  @return
@@ -129,7 +129,7 @@ public class IconTypeFactoryManager {
 
 	/**
 	 * 判断info是否需要画蒙板
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-3-7下午4:49:36
 	 *  @param info
 	 *  @return

@@ -12,7 +12,7 @@ import android.view.ViewTreeObserver.OnPreDrawListener;
 
 import com.nd.hilauncherdev.kitset.util.StringUtil;
 import com.nd.hilauncherdev.launcher.appslist.AppslistActivity;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class BubbleTextView extends View {
 	private Paint paint;

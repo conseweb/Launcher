@@ -23,7 +23,7 @@ import android.widget.TextView;
 import com.nd.hilauncherdev.datamodel.CommonGlobal;
 import com.nd.hilauncherdev.kitset.util.ColorUtil;
 import com.nd.hilauncherdev.kitset.util.ScreenUtil;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 与MyPhoneViewPager联动的Tab

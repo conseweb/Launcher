@@ -1,5 +1,5 @@
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-5-19上午10:22:49
  *
  */
@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * 根据主题名称分为不同的文件夹
  *
- * @author dingdj Date:2014-5-19上午10:22:49
+ * @author Michael Date:2014-5-19上午10:22:49
  *
  */
 public class DiskCacheSchemaB {
@@ -74,7 +74,7 @@ public class DiskCacheSchemaB {
     }
 
     /**
-     * author dingdj Date:2014-4-25下午1:48:42
+     * author Michael Date:2014-4-25下午1:48:42
      * @return instance
      */
     public static DiskCacheSchemaB getInstance() {
@@ -87,7 +87,7 @@ public class DiskCacheSchemaB {
     /**
      * 从disk缓存中获取图标
      *
-     * author dingdj Date:2014-4-25下午1:58:30
+     * author Michael Date:2014-4-25下午1:58:30
      * @param iconType 图标类型
      * @param key key
      * @param themeId 主题ID
@@ -377,7 +377,7 @@ public class DiskCacheSchemaB {
     /**
      * 根据主题名称删除cache 耗时操作，不要在UI线程中使用
      *
-     * author dingdj Date:2014-5-22下午2:31:26
+     * author Michael Date:2014-5-22下午2:31:26
      * @param themeId 主题ID
      * @return 是否删除成功
      */

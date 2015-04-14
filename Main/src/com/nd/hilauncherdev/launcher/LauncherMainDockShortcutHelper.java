@@ -11,7 +11,7 @@ import com.nd.hilauncherdev.launcher.LauncherSettings.Favorites;
 import com.nd.hilauncherdev.launcher.config.CellLayoutConfig;
 import com.nd.hilauncherdev.launcher.info.ApplicationInfo;
 import com.nd.hilauncherdev.theme.data.ThemeData;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 界面管理快捷方式辅助类
@@ -96,7 +96,7 @@ public class LauncherMainDockShortcutHelper {
 	
 	/**
 	 * 获取快捷对应的key
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-1-7下午3:19:58
 	 *  @param ctx
 	 *  @param title
@@ -114,7 +114,7 @@ public class LauncherMainDockShortcutHelper {
 	
 	/**
 	 * 获取快捷对应的key
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-1-7下午3:19:58
 	 *  @param ctx
 	 *  @param title

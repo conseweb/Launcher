@@ -1490,7 +1490,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 	@Override
 	public void dispatchDraw(Canvas canvas) {
 		super.dispatchDraw(canvas);
-		//硬件加速缓存若关闭则开启 解决自绘壁纸时出现的切割蒙板显示问题 by dingdj 2013.11.11
+		//硬件加速缓存若关闭则开启 解决自绘壁纸时出现的切割蒙板显示问题 by Michael 2013.11.11
 		if(GpuControler.isOpenGpu(this) && GpuControler.hasDestroyHardwareLayers(this)
 				&& BaseConfig.isDrawWallPaper){
 			GpuControler.enableHardwareLayers(this);

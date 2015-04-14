@@ -15,7 +15,7 @@ import com.nd.hilauncherdev.folder.view.FolderSlidingView;
 import com.nd.hilauncherdev.launcher.Launcher;
 import com.nd.hilauncherdev.launcher.info.FolderInfo;
 import com.nd.hilauncherdev.launcher.view.icon.ui.folder.FolderIconTextView;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /** 
  * 文件操作基类

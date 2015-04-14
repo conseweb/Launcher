@@ -1,5 +1,5 @@
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-3-20上午8:15:32
  *
  */
@@ -11,7 +11,7 @@ import android.content.IntentFilter;
 import android.view.View;
 
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-3-20上午8:15:32
  *
  */
@@ -19,7 +19,7 @@ public class DefaultReceiverManager {
 	
 	/**
 	 * 注销广播
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-7-25
 	 * @param iconMaskTextView
 	 */
@@ -33,7 +33,7 @@ public class DefaultReceiverManager {
 	
 	/**
 	 * 注册广播
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-3-20上午8:16:46
 	 *  @param mContext
 	 *  @param tag

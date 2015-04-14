@@ -262,7 +262,7 @@ public class CellLayoutConfig{
 	
 	/**
 	 * 小部件所需空间计算
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2013-10-8上午9:17:14
 	 *  @param context
 	 *  @param component
@@ -282,7 +282,7 @@ public class CellLayoutConfig{
 	
 	/**
 	 * 反射调用minResizeWidth值
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2013-11-13下午5:16:52
 	 *  @param appWidgetProviderInfo
 	 *  @return
@@ -298,7 +298,7 @@ public class CellLayoutConfig{
 	
 	/**
 	 * 反射调用minResizeHeight值
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2013-11-13下午5:16:52
 	 *  @param appWidgetProviderInfo
 	 *  @return

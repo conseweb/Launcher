@@ -52,7 +52,7 @@ import com.nd.hilauncherdev.push.PushManager;
 import com.nd.hilauncherdev.push.PushSDKAdapter;
 import com.nd.hilauncherdev.theme.adaption.ThemeIconIntentAdaptation;
 import com.nd.hilauncherdev.util.ActivityActionUtil;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class Launcher extends BaseLauncher {
 

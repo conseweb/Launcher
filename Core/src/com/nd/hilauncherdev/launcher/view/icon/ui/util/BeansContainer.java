@@ -1,5 +1,5 @@
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-3-26下午2:43:29
  *
  */
@@ -11,7 +11,7 @@ import com.nd.hilauncherdev.launcher.view.icon.ui.util.IconTypeFactoryManager.Ic
 /**
  * 
  * 从外部注入的bean的统一管理
- * @author dingdj
+ * @author Michael
  * Date:2014-3-26下午2:43:29
  *
  */

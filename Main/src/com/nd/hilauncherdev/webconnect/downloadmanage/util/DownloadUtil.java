@@ -9,7 +9,7 @@ import com.nd.hilauncherdev.webconnect.downloadmanage.model.AppDownloadItem;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.BaseDownloadInfo;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.DownloadServerServiceConnection;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.filetype.FileType;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class DownloadUtil {
 

@@ -540,7 +540,7 @@ public class WorkspaceSpring {
 	/**
 	 * 
 	 * @description 设置编辑模式下的页面间距和左右显示出来的页面大小
-	 * @author dingdj
+	 * @author Michael
 	 * @date 2013-05-28 上午8:19:00
 	 */
 	private void setPageSplitAndSpaceGap(int pageSplit, int pageGap){
@@ -563,7 +563,7 @@ public class WorkspaceSpring {
 	/**
 	 * 
 	 * @description 设置无editor的编辑模式下的页面间距和左右显示出来的页面默认大小
-	 * @author dingdj
+	 * @author Michael
 	 * @date 2013-05-28 上午8:19:00
 	 */
 	public void setPageSplitAndSpaceGapDefault(){
@@ -572,7 +572,7 @@ public class WorkspaceSpring {
 	
 	/**
 	 * @description 进入到编辑模式 修改编辑模式下的参数
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-6-5
 	 */
 	public void change2SpringModeWithEditor(){
@@ -613,7 +613,7 @@ public class WorkspaceSpring {
 	
 	/**
 	 * 计算LauncherEditorView的高度
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-6-25 
 	 * @return
 	 */
@@ -633,7 +633,7 @@ public class WorkspaceSpring {
 	
 	/**
 	 * @description  恢复进入到编辑模式前的状态
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-6-5
 	 */
 	private void resolve2NormalSpringMode(){

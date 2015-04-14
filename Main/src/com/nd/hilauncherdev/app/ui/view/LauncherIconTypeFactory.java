@@ -1,5 +1,5 @@
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-3-21下午3:40:54
  *
  */
@@ -15,7 +15,7 @@ import com.nd.hilauncherdev.launcher.view.icon.ui.util.IconTypeFactoryManager.Ic
 
 /**
  * 桌面图标的类型工厂
- * @author dingdj
+ * @author Michael
  * Date:2014-3-21下午3:40:54
  *
  */

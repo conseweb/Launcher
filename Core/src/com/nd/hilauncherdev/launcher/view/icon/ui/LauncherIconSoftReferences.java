@@ -1,5 +1,5 @@
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-3-19下午4:27:17
  *
  */
@@ -23,7 +23,7 @@ import com.nd.hilauncherdev.theme.data.BaseThemeData;
 
 
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-3-19下午4:27:17
  *
  */
@@ -134,7 +134,7 @@ public class LauncherIconSoftReferences {
 	
 	/**
 	 * 获取匣子中新安装图标
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2013-9-9下午4:42:58
 	 * @param mContext
 	 * @return
@@ -155,7 +155,7 @@ public class LauncherIconSoftReferences {
 
 	/**
 	 * 获取匣子中新功能图标
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2013-9-9下午4:43:16
 	 * @return
 	 */

@@ -12,7 +12,7 @@ import com.nd.hilauncherdev.launcher.view.icon.ui.strategy.DrawStrategy;
 
 /**
  * 
- * @author dingdj
+ * @author Michael
  * @createtime 2013-7-30
  */
 public class LauncherIconViewConfig{

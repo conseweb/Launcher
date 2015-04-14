@@ -13,7 +13,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class MoreAppsLabel extends View {
   private Paint paint;

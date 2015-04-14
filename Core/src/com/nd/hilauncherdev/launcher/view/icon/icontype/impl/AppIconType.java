@@ -1,5 +1,5 @@
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-3-20上午10:30:19
  *
  */
@@ -21,7 +21,7 @@ import com.nd.hilauncherdev.launcher.view.icon.icontype.IconType;
 import com.nd.hilauncherdev.launcher.view.icon.ui.LauncherIconViewConfig;
 
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-3-20上午10:30:19
  *
  */

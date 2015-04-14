@@ -15,7 +15,7 @@ import com.nd.hilauncherdev.kitset.util.SystemUtil;
 import com.nd.hilauncherdev.kitset.util.TelephoneUtil;
 import com.nd.hilauncherdev.launcher.Launcher;
 import com.nd.hilauncherdev.launcher.config.preference.SettingsConstants;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 关于桌面

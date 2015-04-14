@@ -110,7 +110,7 @@ public class BaseCellLayoutHelper {
 	}
 	
 	/**
-	 * author:dingdj
+	 * author:Michael
 	 * date:2013-5-6
 	 * 修改计算空cell的顺序为从下到上，从左到右
 	 * @param vacant
@@ -528,7 +528,7 @@ public class BaseCellLayoutHelper {
 	
 	/**
 	 * Description: 按从上到下，从左到右找出CellLayout上可以摆放该部件的所有位置
-	 * Author: dingdj
+	 * Author: Michael
 	 * Date: 2013-4-26 下午17:17:53
 	 */
 	public static ArrayList<int[]> findAllVacantCellFromBottom(boolean[][] mOccupied, int spanX, int spanY){
@@ -713,7 +713,7 @@ public class BaseCellLayoutHelper {
 	 *  ......4.........
 	 *  ...2..cell...1..
 	 *  .....3..........
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-5-28 
 	 * @param VacantCells 未被占用的cell
 	 * @param currentXCell 目标cell的横坐标

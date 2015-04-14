@@ -277,7 +277,7 @@ public class BaseLauncherModel extends BroadcastReceiver{
 	
 	/**
 	 * 批量增加Items
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-6-13 
 	 * @param context
 	 * @param items
@@ -323,7 +323,7 @@ public class BaseLauncherModel extends BroadcastReceiver{
 	
 	/**
 	 * 批量修改Items
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-6-13 
 	 * @param context
 	 * @param items
@@ -359,7 +359,7 @@ public class BaseLauncherModel extends BroadcastReceiver{
 	
 	/**
 	 * 批量删除
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-6-13 
 	 * @param context
 	 * @param items

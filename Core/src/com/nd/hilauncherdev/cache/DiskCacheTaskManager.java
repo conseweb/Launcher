@@ -1,5 +1,5 @@
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-4-30下午4:12:50
  *
  */
@@ -17,7 +17,7 @@ import android.os.Process;
 import com.nd.hilauncherdev.launcher.config.BaseConfig;
 
 /**
- * @author dingdj Date:2014-4-30下午4:12:50
+ * @author Michael Date:2014-4-30下午4:12:50
  * 
  */
 public class DiskCacheTaskManager {
@@ -74,7 +74,7 @@ public class DiskCacheTaskManager {
 	/**
 	 * 加入写文件任务
 	 * 
-	 * @author dingdj Date:2014-5-16下午4:12:22
+	 * @author Michael Date:2014-5-16下午4:12:22
 	 * @param key
 	 * @param runnable
 	 */
@@ -93,7 +93,7 @@ public class DiskCacheTaskManager {
 	/**
 	 * 加入判断文件是否被卸载任务
 	 * 
-	 * @author dingdj Date:2014-5-16下午4:12:36
+	 * @author Michael Date:2014-5-16下午4:12:36
 	 * @param fileName
 	 * @param runnable
 	 */

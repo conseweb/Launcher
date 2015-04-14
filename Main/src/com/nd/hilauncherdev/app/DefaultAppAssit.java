@@ -8,7 +8,7 @@ import com.nd.hilauncherdev.launcher.config.db.DefaultLauncherTable;
 
 public class DefaultAppAssit {
 
-	public static final String COMPONENT_STR = "com.simon.android.pandahome2/com.nd.hilauncherdev.app.AppResolverSelectActivity";
+	public static final String COMPONENT_STR = "com.bitants.mirrorlauncher/com.nd.hilauncherdev.app.AppResolverSelectActivity";
 	/**
 	 * 拨号Uri
 	 */

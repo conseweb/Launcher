@@ -14,7 +14,7 @@ import com.nd.hilauncherdev.framework.view.dialog.CommonDialog;
 import com.nd.hilauncherdev.launcher.config.BaseConfig;
 import com.nd.hilauncherdev.launcher.config.preference.SettingsConstants;
 import com.nd.hilauncherdev.webconnect.downloadmanage.model.DownloadServerServiceConnection;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * apk包安装应用工具类

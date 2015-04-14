@@ -1062,7 +1062,7 @@ public class BaseBitmapUtils {
 	
 	/**
 	 * 
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-4-22下午4:23:39
 	 *  @param bitmap
 	 *  @param context
@@ -1127,7 +1127,7 @@ public class BaseBitmapUtils {
 	
 	/**
 	 * 
-	 * @author dingdj
+	 * @author Michael
 	 * Date:2014-4-22下午4:23:39
 	 *  @param bitmap
 	 *  @param context
@@ -1228,7 +1228,7 @@ public class BaseBitmapUtils {
      * @param bitmap2
      * @param context
      * @return
-     * @author dingdj
+     * @author Michael
      * Date:2014-4-22下午4:23:39
      */
     public static Bitmap composeBitmap(Bitmap bitmap1, Bitmap bitmap2, Context context) {

@@ -3,7 +3,7 @@ package com.nd.hilauncherdev.menu;
 import java.util.List;
 
 import com.nd.hilauncherdev.view.FontableTextView;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 import android.content.Context;
 import android.view.LayoutInflater;

@@ -20,7 +20,7 @@ import com.nd.hilauncherdev.webconnect.downloadmanage.model.filetype.IFileTypeHe
 import com.nd.hilauncherdev.webconnect.downloadmanage.util.DownloadBroadcastExtra;
 import com.nd.hilauncherdev.webconnect.downloadmanage.util.DownloadState;
 import com.nd.hilauncherdev.webconnect.downloadmanage.util.DxDownloadBroadcastExtra;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 下载项view

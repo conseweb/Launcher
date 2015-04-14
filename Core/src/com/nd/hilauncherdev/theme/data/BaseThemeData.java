@@ -1,5 +1,5 @@
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-3-20上午9:47:36
  *
  */
@@ -10,7 +10,7 @@ import java.util.HashMap;
 import com.nd.hilauncherdev.theme.module.ModuleConstant;
 
 /**
- * @author dingdj
+ * @author Michael
  * Date:2014-3-20上午9:47:36
  *
  */

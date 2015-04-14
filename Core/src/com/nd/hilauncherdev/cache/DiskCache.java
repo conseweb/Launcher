@@ -25,7 +25,7 @@ import com.nd.hilauncherdev.theme.ThemeManagerFactory;
 /**
  * 所有主题都放在一个文件夹中根据文件名称来区分不同的主题
  * 
- * @author dingdj Date:2014-4-24下午4:51:47
+ * @author Michael Date:2014-4-24下午4:51:47
  * 
  */
 public class DiskCache {
@@ -51,7 +51,7 @@ public class DiskCache {
 	private ConcurrentHashMap<String, DiskInfo> cacheDataInfo = new ConcurrentHashMap<String, DiskInfo>();
 
 	/**
-	 * @author dingdj Date:2014-4-25下午1:48:42
+	 * @author Michael Date:2014-4-25
 	 * @return
 	 */
 	public static DiskCache getInstance() {
@@ -71,7 +71,7 @@ public class DiskCache {
 	/**
 	 * 从disk缓存中获取图标
 	 * 
-	 * @author dingdj Date:2014-4-25下午1:58:30
+	 * @author Michael Date:2014-4-25
 	 * @param iconType
 	 * @param key
 	 * @param themeName
@@ -90,7 +90,7 @@ public class DiskCache {
 	/**
 	 * 从diskcache中获取图标: 快捷、我的手机、推荐等图标类型
 	 * 
-	 * @author dingdj Date:2014-4-25下午2:47:20
+	 * @author Michael Date:2014-4-25
 	 * @param key
 	 * @param themeName
 	 * @return
@@ -157,7 +157,7 @@ public class DiskCache {
 	/**
 	 * 从diskcache中获取图标: apk图标类型
 	 * 
-	 * @author dingdj Date:2014-4-25下午2:47:20
+	 * @author Michael Date:2014-4-25下午2:47:20
 	 * @param key
 	 * @param themeName
 	 * @return
@@ -228,7 +228,7 @@ public class DiskCache {
 	/**
 	 * 缓存文件中的记录的apk安装时间与实际的apk安装时间进行比对 符合返回true
 	 * 
-	 * @author dingdj Date:2014-4-25下午3:00:11
+	 * @author Michael Date:2014-4-25
 	 * @param cacheFileRecordLastModifedTime
 	 * @return
 	 */
@@ -244,7 +244,7 @@ public class DiskCache {
 	/**
 	 * 缓存文件中的记录的apk安装时间与实际的apk安装时间进行比对 符合返回true
 	 * 
-	 * @author dingdj Date:2014-4-25下午3:00:11
+	 * @author Michael Date:2014-4-25下午3:00:11
 	 * @param cacheFileRecordLastModifedTime
 	 * @return
 	 */
@@ -260,7 +260,7 @@ public class DiskCache {
 	/**
 	 * 获取apk安装时间
 	 * 
-	 * @author dingdj Date:2014-4-25下午3:40:29
+	 * @author Michael Date:2014-4-25下午3:40:29
 	 * @param resolveInfo
 	 * @return
 	 */
@@ -296,7 +296,7 @@ public class DiskCache {
 	/**
 	 * 创建缓存文件名
 	 * 
-	 * @author dingdj Date:2014-4-25下午2:27:45
+	 * @author Michael Date:2014-4-25下午2:27:45
 	 * @param iconType
 	 * @param key
 	 * @param themeName
@@ -309,7 +309,7 @@ public class DiskCache {
 	/**
 	 * 创建Apk缓存文件名
 	 * 
-	 * @author dingdj Date:2014-4-25下午2:27:45
+	 * @author Michael Date:2014-4-25
 	 * @param iconType
 	 * @param key
 	 * @param themeName
@@ -324,7 +324,7 @@ public class DiskCache {
 	}
 
 	/**
-	 * @author dingdj Date:2014-4-24下午4:54:14
+	 * @author Michael Date:2014-4-24
 	 * @param componentName
 	 * @return
 	 */
@@ -339,7 +339,7 @@ public class DiskCache {
 	/**
 	 * 初始化cacheInfo信息
 	 * 
-	 * @author dingdj Date:2014-4-24下午5:44:45
+	 * @author Michael Date:2014-4-24
 	 */
 	private void initCacheDataInfo() {
 		try {
@@ -370,7 +370,7 @@ public class DiskCache {
 	/**
 	 * 判断是否是有效的缓存文件 如果不是则删除
 	 * 
-	 * @author dingdj Date:2014-4-25上午11:19:22
+	 * @author Michael Date:2014-4-25
 	 * @param file
 	 * @return
 	 */
@@ -432,7 +432,7 @@ public class DiskCache {
 	/**
 	 * 0:icontype 1:filename 2:lastmodifiedTime 3:themename 是否是有效的缓存文件名称
 	 * 
-	 * @author dingdj Date:2014-4-25上午11:23:47
+	 * @author Michael Date:2014-4-25上午11:23:47
 	 * @param name
 	 * @return
 	 */

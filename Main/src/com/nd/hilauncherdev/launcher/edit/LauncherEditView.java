@@ -15,7 +15,7 @@ import com.nd.hilauncherdev.launcher.edit.data.LauncherEditAddItemInfo;
 import com.nd.hilauncherdev.launcher.edit.data.LauncherEditItemInfo;
 import com.nd.hilauncherdev.launcher.screens.dockbar.BaseMagicDockbar;
 import com.nd.hilauncherdev.launcher.support.BaseCellLayoutHelper;
-import com.simon.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 import android.appwidget.AppWidgetManager;
 import android.content.Context;
@@ -297,7 +297,7 @@ public class LauncherEditView extends RelativeLayout implements OnCommonSlidingV
 	
 	/**
 	 * 立即布局
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-8-20 
 	 * @param slidingView
 	 */
@@ -310,7 +310,7 @@ public class LauncherEditView extends RelativeLayout implements OnCommonSlidingV
 	
 	/**
 	 * 立即布局
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-8-20 
 	 * @param slidingView
 	 */
@@ -442,7 +442,7 @@ public class LauncherEditView extends RelativeLayout implements OnCommonSlidingV
 	
 	/**
 	 * 退出编辑模式 清除无用数据
-	 * @author dingdj
+	 * @author Michael
 	 * @createtime 2013-7-15
 	 */
 	private void clear(){
