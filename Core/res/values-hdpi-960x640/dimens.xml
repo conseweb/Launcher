@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- 文字大小 -->
-	<dimen name="text_size">13sp</dimen>
-</resources>

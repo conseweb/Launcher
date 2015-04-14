@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="folder_rename">重命名</string>
-    <string name="folder_sort_by_alpha_beta">按字母排序</string>
-    <string name="folder_sort_by_frequency">按频度排序</string>
-</resources>
