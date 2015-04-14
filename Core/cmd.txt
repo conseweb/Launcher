@@ -1,0 +1,1 @@
+java -jar E:\androidsdk\android-sdks-r21\tools\proguard\lib\proguard.jar @proguard.cfg

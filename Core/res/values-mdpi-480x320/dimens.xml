@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_bar_height">65dip</dimen>
+    <dimen name="launcher_linelight_light_height">20dip</dimen>
+	<dimen name="launcher_linelight_and_dockbar_height">85dip</dimen>
+</resources>

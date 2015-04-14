@@ -1,0 +1,107 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="panda_widget_confirm_install">是否安装%1$s?</string>
+    <string name="settings_advanced_silent_install">静默安装</string>
+    <string name="settings_advanced_silent_install_open_now">立即开启</string>
+    <string name="settings_advanced_silent_install_request">软件下载完成后，可以省去手动安装步骤，为您自动安装。是否立即开启？开启后若想关闭此功能，可以在桌面设置-高级设置中找到</string>
+    <string name="settings_advanced_silent_install_open_failed">开启失败，请确认您的手机是否已获取root权限了</string>
+    
+    <!-- 下载管理 -->
+    <string name="download_manage">下载管理</string>
+    <string name="download_manage_clear">清除所有下载任务</string>
+    <string name="download_finished">已完成下载</string>
+    <string name="download_delete_title">清除提示</string>
+    <string name="download_delete_msg">确定清除\"%1$s\"的下载任务(同时删除缓存文件)</string>
+    <string name="download_task_clear">确认清除所有的下载任务(同时删除缓存文件)</string>
+    <string name="download_install_error">找不到安装包,请重新下载！</string>
+    <string name="download_waiting">等待</string>
+    <string name="download_notify_start">开始下载</string>
+    <string name="download_notify_stop">停止下载</string>
+    <string name="download_notify_failed">下载失败</string>
+    <string name="download_notify_failed_sdcard_noexist">下载失败，SD卡不存在</string>
+    <string name="download_notify_finish">下载完成</string>
+    <string name="download_notify_installed">安装完成</string>
+    <string name="download_notify_task">下载任务：</string>
+    <string name="download_notify_in_queue">进行中%1$s个，</string>
+    <string name="download_notify_error">出错%1$s个，</string>
+    <string name="download_notify_finished">已完成%1$s个，</string>
+    <string name="download_notify_click_and_look">点击查看</string>
+    <string name="downloadmanager_apply">应用</string>
+    <string name="myphone_download_parse">暂停</string>
+    <string name="app_market_installing">安装中...</string>
+    
+    <!-- 个人中心 下载管理-->
+	<string name="personal_downloadmanager_title">下载管理</string>
+	<string name="personal_downloadmanager_soft_tab_title">软件</string>
+	<string name="personal_downloadmanager_theme_tab_title">主题</string>
+    <string name="personal_downloadmanager_ring_tab_title">铃声</string>
+    <string name="personal_downloadmanager_lock_tab_title">锁屏</string>
+    <string name="personal_downloadmanager_wallpaper_tab_title">壁纸</string>
+	
+	<string name="plugin_activated">我要启用 </string>
+	<string name="plugin_activating">启用中…</string>
+	<string name="plugin_updating">更新插件中…</string>
+	<string name="plugin_fixing">修复插件中…</string>
+	<string name="plugin_transfer_error">安装或启动过程中出现问题, 请稍候重试. </string>
+	
+	<string name="theme_shop_v2_manage_downtasks_theme_version_txt">版本%1$s.0</string>
+	<string name="theme_shop_v2_manage_downstate_downing">暂停下载</string>
+	<string name="theme_shop_v2_manage_downstate_finish">应用主题</string>
+	<string name="theme_shop_v2_manage_downstate_delete">删除任务</string>
+	<string name="alert_dialog_confim_del">确定删除该主题？</string>
+	
+	<!--桌面设置-->
+    <string name="launcher_settings">桌面设置</string>
+    <string name="launcher_settings_normal">设置</string>
+    <string name="launcher_settings_other">其他</string>
+    <string name="launcher_settings_default">设置为默认桌面</string>
+    <string name="launcher_settings_lock_screen">开启锁屏</string>
+    <string name="launcher_settings_gesture">手势设置</string>
+    <string name="launcher_settings_privacy">隐私设置</string>
+    <string name="launcher_settings_card">卡片屏设置</string>
+    <string name="launcher_settings_dynamic">动态</string>
+    <string name="launcher_settings_more">更多</string>
+    <string name="launcher_settings_score">给我们评分</string>
+    <string name="launcher_settings_restartLauncher">重启桌面</string>
+    <string name="launcher_settings_shareLauncher">分享桌面</string>
+    <string name="launcher_settings_aboutLauncher">关于桌面</string>
+    <string name="launcher_settings_gesture_up_title">上滑</string>
+    <string name="launcher_settings_gesture_up_summary">打开快速搜索</string>
+    <string name="launcher_settings_gesture_down_title">下滑</string>
+    <string name="launcher_settings_gesture_down_summary">打开快捷开关</string>
+    <string name="launcher_settings_gesture_double_finger_out_title">双指外扩</string>
+    <string name="launcher_settings_gesture_double_finger_out_summary">打开隐藏文件夹</string>
+    <string name="launcher_settings_gesture_double_click_title">双击</string>
+    <string name="launcher_settings_gesture_double_click_none">无</string>
+    <string name="launcher_settings_gesture_double_click_screen_lock">锁屏</string>
+    <string name="launcher_settings_gesture_double_click_screen_fill_wall">全屏欣赏壁纸</string>
+    <string name="launcher_settings_card_screen_title">卡片屏</string>
+    <string name="launcher_settings_navigation_title">网址导航</string>
+    <string name="launcher_settings_card_news_title">新闻卡片</string>
+    <string name="launcher_settings_dynamic_wallpaper_title">开启动态壁纸效果</string>
+    <string name="launcher_settings_dynamic_weather_title">开启壁纸天气动画设置</string>
+    <string name="launcher_settings_folder_inner_recommend_title">文件夹内应用推荐</string>
+    <string name="launcher_share_google_plus">分享到Google+</string>
+    <string name="launcher_share_facebook">分享到Facebook</string>
+    <string name="launcher_share_twitter">分享到Twitter</string>
+    <string name="launcher_share_instagram">分享到Instagram</string>
+    <string name="launcher_about_mobo_site_title">官方网站</string>
+    <string name="launcher_about_mobo_site_summary">www.mobo-launcher.com</string>
+    <string name="launcher_about_mobo_facebook_title">facebook</string>
+    <string name="launcher_about_mobo_facebook_summary">mobo launcher</string>
+    <string name="launcher_about_mobo_google_plus_title">Google+</string>
+    <string name="launcher_about_mobo_google_plus_summary">mobo launcher</string>
+    <string name="launcher_about_mobo_email_title">电子邮件</string>
+    <string name="launcher_about_mobo_email_summary">mobolauncher@gmail.com</string>
+    <string name="launcher_about_mobo_version_title">版本信息</string>
+    <string name="launcher_about_mobo_restart_title">重启桌面</string>
+    <string name="launcher_about_mobo_upgrade_check_title">检查更新</string>
+    
+    <!--桌面编辑模式-->
+    <string name="launcher_edit_mode_widget_sys">系统小部件</string>
+    <string name="launcher_edit_mode_theme_online">在线主题</string>
+    <string name="launcher_edit_mode_theme_default">默认</string>
+    <string name="launcher_edit_mode_wallpaper_scroll">壁纸滚动</string>
+    <string name="launcher_edit_mode_wallpaper_online">在线壁纸</string>
+    <string name="launcher_edit_mode_wallpaper_photo">相册</string>
+</resources>

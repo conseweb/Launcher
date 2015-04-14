@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     /* * Copyright (C) 2008 The Android Open Source Project * * Licensed 
+	under the Apache License, Version 2.0 (the "License"); * you may not use 
+	this file except in compliance with the License. * You may obtain a copy 
+	of the License at * * http://www.apache.org/licenses/LICENSE-2.0 * * Unless 
+	required by applicable law or agreed to in writing, software * distributed 
+	under the License is distributed on an "AS IS" BASIS, * WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. * See the License for 
+	the specific language governing permissions and * limitations under the License. 
+	*/
+-->
+
+<resources>
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    
+    <style name="menuAnimation" parent="@android:style/Animation.Dialog" >
+        <item name="android:windowEnterAnimation">@anim/popupmenu_in</item>   
+        <item name="android:windowExitAnimation">@anim/popupmenu_out</item>   
+    </style>
+    
+    <!-- 自定义的TextView -->
+	<style name="WorkspaceIconMaskTextView">
+		<item name="android:layout_marginLeft">3dip</item>
+		<item name="android:layout_marginRight">3dip</item>
+		<item name="android:layout_marginTop">5dip</item>
+		<item name="android:layout_marginBottom">5dip</item>
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">match_parent</item>
+		<item name="android:paddingLeft">2dip</item>
+		<item name="android:paddingRight">2dip</item>
+	</style>
+    
+	<style name="ShortCutMenuGrowFromBottom" parent="android:Animation"
+		mce_bogus="1">
+		<item name="android:windowEnterAnimation">@anim/popshortcutmenu_grow_from_bottom</item>
+		<item name="android:windowExitAnimation">@anim/popshortcutmenu_shrink_from_top</item>
+	</style>
+
+	<style name="ShortCutMenuGrowFromBottomLeftToTopRight" parent="android:Animation"
+		mce_bogus="1">
+		<item name="android:windowEnterAnimation">@anim/popshortcutmenu_grow_from_bottomleft_to_topright
+		</item>
+		<item name="android:windowExitAnimation">@anim/popshortcutmenu_shrink_from_topright_to_bottomleft
+		</item>
+	</style>
+
+	<style name="ShortCutMenuGrowFromBottomRightToTopLeft" parent="android:Animation"
+		mce_bogus="1">
+		<item name="android:windowEnterAnimation">@anim/popshortcutmenu_grow_from_bottomright_to_topleft
+		</item>
+		<item name="android:windowExitAnimation">@anim/popshortcutmenu_shrink_from_topleft_to_bottomright
+		</item>
+	</style>
+
+	<style name="ShortCutMenuGrowFromTop" parent="android:Animation"
+		mce_bogus="1">
+		<item name="android:windowEnterAnimation">@anim/popshortcutmenu_grow_from_top</item>
+		<item name="android:windowExitAnimation">@anim/popshortcutmenu_shrink_from_bottom</item>
+	</style>
+
+	<style name="ShortCutMenuGrowFromTopLeftToBottomRight" parent="android:Animation"
+		mce_bogus="1">
+		<item name="android:windowEnterAnimation">@anim/popshortcutmenu_grow_from_topleft_to_bottomright
+		</item>
+		<item name="android:windowExitAnimation">@anim/popshortcutmenu_shrink_from_bottomright_to_topleft
+		</item>
+	</style>
+
+	<style name="ShortCutMenuGrowFromTopRightToBottomLeft" parent="android:Animation"
+		mce_bogus="1">
+		<item name="android:windowEnterAnimation">@anim/popshortcutmenu_grow_from_topright_to_bottomleft
+		</item>
+		<item name="android:windowExitAnimation">@anim/popshortcutmenu_shrink_from_bottomleft_to_topright
+		</item>
+	</style>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_gravity="center" android:gravity="center"
+	android:paddingLeft="10dip" android:paddingRight="10dip">
+	<ImageView android:id="@+id/framework_viewfactory_err_img"
+		android:layout_width="@dimen/myphone_info_view_image_size"
+		android:layout_height="@dimen/myphone_info_view_image_size" />
+	<com.nd.hilauncherdev.framework.view.WarningInfoTextView
+		android:id="@+id/framework_viewfactory_err_textview"
+		android:paddingTop="5dip" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:gravity="center"
+		android:textColor="#8d8d8d" android:textSize="14.7dip"
+		android:layout_marginBottom="20dip" />
+	<Button android:id="@+id/framework_viewfactory_err_btn"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="@string/frame_viewfacotry_net_break_btn"
+		android:background="@drawable/app_running_close_btn_bg"
+		android:visibility="gone" />
+</LinearLayout>

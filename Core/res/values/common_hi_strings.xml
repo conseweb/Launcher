@@ -1,0 +1,133 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <item type="id" name="common_view_holder"></item>
+    <item type="id" name="drager_controller_on_drag_exit_in_action_move"></item>
+    
+    <!-- 通用按钮 -->
+    <string name="common_button_confirm">OK</string>
+    <string name="common_button_cancel">Cancel</string>
+    <string name="common_button_apply">Apply</string>
+    <string name="common_button_return">Back</string>
+    <string name="common_button_preview">Preview</string>
+    <string name="common_button_download_more">More</string>
+    <string name="common_button_download_skin">More theme</string>
+    <string name="common_button_download">Download</string>
+    <string name="common_button_downloading">Downloading</string>
+    <string name="common_button_save">Save</string>
+    <string name="common_button_discard">Discard</string>
+    <string name="common_button_back_to_home">Home</string>
+    <string name="common_button_default">Default</string>
+    <string name="common_button_share">Share</string>
+    <string name="common_button_search">Search</string>
+    <string name="common_button_view_detail">Details</string>
+    <string name="common_button_commit">Submit</string>
+    <string name="common_button_add">New</string>
+    <string name="common_button_addto">Add</string>
+    <string name="common_button_edit">Edit</string>
+    <string name="common_button_delete">Delete</string>
+    <string name="common_button_modify">Modify</string>
+    <string name="common_button_set">Settings</string>
+    <string name="common_button_update">Update</string>
+    <string name="common_button_uninstall">Uninstall</string>
+    <string name="common_button_install">Install</string>
+    <string name="common_button_redownload">Redownload</string>
+    <string name="common_button_refresh">Refresh</string>
+    <string name="common_button_manager">Manage</string>
+    <string name="common_button_enabled">Enable</string>
+    <string name="common_button_closed">Close</string>
+    <string name="common_button_close">Close</string>
+    <string name="common_checkbox_not_alert">Don\'t ask me again!</string>
+    <string name="common_button_i_know">I know</string>
+    <string name="common_button_continue">Continue</string>
+    <string name="common_button_recover">Recover</string>
+    <string name="common_button_complate">Done</string>
+    <string name="common_button_editable">Edit</string>
+    <string name="common_button_clear">Clear</string>
+    <string name="common_tip">Notification</string>
+    <string name="common_alert">Notification</string>
+    <string name="common_download_success">Download successfully</string>
+    <string name="common_download_ended">Download completed</string>
+    <string name="common_download_failed">Download failed</string>
+    <string name="common_uninstalled">Uninstalled</string>
+    <string name="common_downloading">Downloading..</string>
+    <string name="common_loading">Loading...</string>
+    <string name="common_install_now">Install now</string>
+    <string name="common_download_now">Download now</string>
+    <string name="common_refresh">Refresh</string>
+    <string name="common_installed">Installed</string>
+    <string name="common_refresh_failed">Refresh failed</string>
+    <string name="common_button_enter">Enter</string>
+    <string name="common_button_open_now">Open Now</string>
+    <string name="common_button_use_now">Use Now</string>
+    <string name="common_button_restart_now">Restart Now</string>
+    <string name="common_button_open">Open</string>
+    <string name="common_button_use">启用</string>
+	<string name="common_button_used">已启用</string>
+	<string name="common_button_ignore">Ignore</string>
+	
+	<string name="main_dock_notification_disable_hint">The status bar is closed, please open it first</string>
+	
+	<string name="out_of_space" msgid="8365249326091984698">"No more room on your Home screens"</string>
+	<string name="shortcut_installed" msgid="7071557296331322355">"“<xliff:g id="NAME">%s</xliff:g>” created"</string>
+	<string name="shortcut_uninstalled" msgid="2129499669449749995">"“<xliff:g id="NAME">%s</xliff:g>”was removed"</string>
+	<string name="shortcut_duplicate" msgid="4757756326465060694">"“<xliff:g id="NAME">%s</xliff:g>” already exists"</string>
+	<string name="shortcut_toolong">非法字符，无法添加</string>
+	
+	<string name="activity_not_found" msgid="3571057450431950427">"Application is not installed on your phone."</string>
+	<string name="spring_add_app_from_drawer_reset">Can\'t move to here</string>
+	<string name="message_preview_delete_screen">Do you want to delete screen and all the contents?</string>
+	<string name="message_preview_delete_screen_not_allow">屏幕上有\"应用列表\"图标，无法删除</string>
+	<string name="settings_about_no_market_title">You haven\'t installed Android market.</string>
+	<string name="dockbar_null_intent">Data error</string>
+	
+	<string name="folder_drag_out_error">Space is insufficient,please add to another screen</string>
+	
+	<!-- root提示-->
+	<string name="myphone_root_fail_title">获取ROOT权限失败</string>
+	<string name="myphone_root_fail_desc">91桌面无法获取ROOT权限，请在SuperUser KingUser等授权管理软件中允许ROOT权限</string>
+	
+	<string name="frame_viewfacotry_err_info_text">Error</string>
+    <string name="frame_viewfacotry_data_load_text">Loading</string>
+    <string name="frame_viewfacotry_search_null">No data found, enter a keyword</string>
+    <string name="frame_viewfacotry_download_null">No downloaded resources</string>
+    <string name="frame_viewfacotry_net_slowly_text">Network is unavailable, please try again later</string>
+    <string name="frame_viewfacotry_net_break_text">Network connection error, please check your network connection.</string>
+    <string name="frame_viewfacotry_net_break_btn">Network settings</string>
+    <string name="frame_viewfacotry_show_netsetting_err">Failed to set network </string>
+    <string name="frame_viewfactory_dialog_title">Charging status</string>
+    <string name="frame_viewfacotry_net_slowly_reflesh_btn">Refresh</string>
+    <string name="frame_viewfactory_err_title">Sorry</string>
+    <string name="frame_viewfactory_err_content_text">An unexpected error causes the program crashed. We need your feedback to help us fix the issue. Please be assured that we only collect error information, not your personal information.</string>
+    <string name="frame_viewfactory_tell_us">Send Email</string>
+    <string name="frame_viewfactory_cancle">No, thanks</string>
+    <string name="frame_viewfactory_send_failed">Failed to send feedback. As you don\'t have an apps for sending email.</string>
+    <string name="frame_viewfactory_del_error_widget_1">An unexpected error occurred. We suggest you to restore Mobo Live.</string>
+    <string name="frame_viewfactory_del_error_widget_2">Please note that the previously added widgets will be removed after restore.</string>
+    <string name="frame_viewfactory_restore">Notification</string>
+    <string name="frame_viewfactory_err_content_text_widget">An error occurred in `%1$s`. We\`ll remove it from the screen and restart the desktop. You can still find it under \`Widgets\` on Apps list.</string>
+    <string name="frame_viewfactory_err_content_downgrade">Sorry, you need to reset desktop to fix the problem.</string>
+    <string name="frame_viewfactory_upgrade_now">马上升级</string>
+    <string name="frame_viewfactory_next_time">下次再说</string>
+    <string name="frame_viewfactory_err_content_upgrade">啊哦！桌面运行出了点小问题！机智的程序小哥说升级到最新版本可以解决，快去试试吧！</string>
+    
+    <string name="uninstallapp_no_this_appinfo">Without the application of information,Uninstall failed</string>
+    
+    <!-- Text to show user in place of a gadget when we can't display it properly -->
+    <string name="gadget_error_text">Problem loading widget</string>
+    
+    <!-- 屏幕预览 -->
+    <string name="message_preview_cannot_delete_screen">Not able to delete last screen</string>
+    <string name="message_preview_set_default_screen">Set as default screen</string>
+    <string name="message_preview_out_of_screen">Space is insufficient,please choose other screens</string>
+    <string name="message_preview_fail_drag_to_screen">Failed to move the icon</string>
+    
+    <string name="edit_lock_toast_lock">Screen edit locked</string>
+    
+    <!-- Dock栏图标名称 -->
+    <string name="dockbar_dock_dial">Phone</string>
+	<string name="dockbar_dock_contacts">Contacts</string>
+	<string name="dockbar_dock_browser">Browser</string>
+	<string name="dockbar_dock_sms">Message</string>
+	<string name="dockbar_allow">Only application and folder icon are allowed</string>
+	
+	<string name="hint_sdcard_available">SD card loaded, refreshing now</string>
+</resources>

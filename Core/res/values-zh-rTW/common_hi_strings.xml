@@ -1,0 +1,104 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- 通用按鈕 -->
+    <string name="common_button_confirm">確定</string>
+    <string name="common_button_cancel">取消</string>
+    <string name="common_button_apply">應用</string>
+    <string name="common_button_return">返回</string>
+    <string name="common_button_preview">預覽</string>
+    <string name="common_button_download_more">下載更多</string>
+    <string name="common_button_download_skin">下載面板</string>
+    <string name="common_button_download">下載</string>
+    <string name="common_button_downloading">下載中</string>
+    <string name="common_button_save">儲存</string>
+    <string name="common_button_discard">丟棄</string>
+    <string name="common_button_back_to_home">主頁</string>
+    <string name="common_button_default">預設</string>
+    <string name="common_button_share">分享</string>
+    <string name="common_button_search">搜尋</string>
+    <string name="common_button_view_detail">詳情</string>
+    <string name="common_button_commit">提交</string>
+    <string name="common_button_add">新增</string>
+    <string name="common_button_addto">增加</string>
+    <string name="common_button_edit">修改</string>
+    <string name="common_button_delete">刪除</string>
+    <string name="common_button_modify">更改</string>
+    <string name="common_button_set">設定</string>
+    <string name="common_button_update">更新</string>
+    <string name="common_button_uninstall">移除</string>
+    <string name="common_button_install">安裝</string>
+    <string name="common_button_redownload">重新下載</string>
+    <string name="common_button_refresh">重整</string>
+    <string name="common_button_manager">管理</string>
+    <string name="common_button_enabled">開啟</string>
+    <string name="common_button_closed">關閉</string>
+    <string name="common_button_close">關閉</string>
+    <string name="common_checkbox_not_alert">不再提醒</string>
+    <string name="common_button_i_know">我知道了</string>
+    <string name="common_button_continue">繼續</string>
+    <string name="common_button_recover">恢復</string>
+    <string name="common_button_complate">完成</string>
+    <string name="common_button_editable">編輯</string>
+    <string name="common_button_clear">清除</string>
+    <string name="common_tip">提示</string>
+    <string name="common_alert">警告</string>
+    <string name="common_download_success">下載成功</string>
+    <string name="common_download_ended">下載完成</string>
+    <string name="common_download_failed">下載失敗</string>
+    <string name="common_uninstalled">未安裝</string>
+    <string name="common_downloading">正在下載..</string>
+    <string name="common_loading">載入中...</string>
+    <string name="common_install_now">立即安裝</string>
+    <string name="common_download_now">立即下載</string>
+    <string name="common_refresh">重　　整</string>
+    <string name="common_installed">已安裝</string>
+    <string name="common_refresh_failed">更新失败</string>
+    <string name="common_button_enter">進入</string>
+    <string name="common_button_open_now">立即開啟</string>
+    <string name="common_button_use_now">立即使用</string>
+    <string name="common_button_restart_now">立即重啟</string>
+    <string name="common_button_open">打開</string>
+    <string name="common_button_use">启用</string>
+	<string name="common_button_used">已启用</string>
+    <string name="common_button_ignore">忽略</string>
+	
+	<string name="activity_not_found" msgid="3571057450431950427">"您的手機上未安裝應用程式。"</string>
+	<string name="dockbar_null_intent">數據異常</string>
+	
+	<!-- root提示 -->
+	<string name="myphone_root_fail_title">获取ROOT权限失败</string>
+	<string name="myphone_root_fail_desc">91桌面无法获取ROOT权限，请在SuperUser KingUser等授权管理软件中允许ROOT权限</string>
+	
+	<string name="frame_viewfacotry_err_info_text">出錯啦!</string>
+    <string name="frame_viewfacotry_data_load_text">正在很努力地很努力地載入中</string>
+    <string name="frame_viewfacotry_search_null">沒有搜索到相關內容,請試試別的吧</string>
+    <string name="frame_viewfacotry_download_null">沒有搜索到你的下載記錄</string>
+    <string name="frame_viewfacotry_net_slowly_text">網路無法連線,先休息下,稍後再試</string>
+    <string name="frame_viewfacotry_net_break_text">網路連接不成功,請檢查網路是否已斷開</string>
+    <string name="frame_viewfacotry_net_break_btn">網路設定</string>
+    <string name="frame_viewfacotry_show_netsetting_err">打開網路設定失敗</string>
+    <string name="frame_viewfacotry_net_slowly_reflesh_btn">更新</string>
+    <string name="frame_viewfactory_dialog_title">91桌面提示</string>
+    <string name="frame_viewfactory_err_title">出錯啦！</string>
+    <string name="frame_viewfactory_err_content_text">不好意思，出錯了。我們需要您的反饋來幫助我們盡快修復這個問題，請放心，我們只採集出錯信息，不收集您的個人信息</string>
+    <string name="frame_viewfactory_tell_us">告訴我們</string>
+    <string name="frame_viewfactory_cancle">取消操作</string>
+    <string name="frame_viewfactory_send_failed">抱歉，您的手機未綁定Gmail賬號，無法發送</string>
+    <string name="frame_viewfactory_del_error_widget_1">對不起，因桌面出現嚴重問題，可能影響您的正常使用，給您帶來的不便，敬請諒解！現在您可以嘗試選擇恢復初始化來修復這一問題，是否立即恢復初始？</string>
+    <string name="frame_viewfactory_del_error_widget_2">使用恢復初始後，將會刪除您桌面上的小部件，確保您能正常使用桌面。確定恢復初始嗎？</string>
+    <string name="frame_viewfactory_restore">恢復初始</string>
+    <string name="frame_viewfactory_err_content_text_widget">不好意思，小部件“%1$s”有点小问题，我们会把它从屏幕上移除后重启桌面，若您需要再次使用，可进入应用列表-小部件页面找到。</string>
+    <string name="frame_viewfactory_err_content_downgrade">不好意思，由于您的手机不支持APP降级使用，需要重置桌面数据来修复此问题。</string>
+    <string name="frame_viewfactory_upgrade_now">马上升级</string>
+    <string name="frame_viewfactory_next_time">下次再说</string>
+    <string name="frame_viewfactory_err_content_upgrade">啊哦！桌面运行出了点小问题！机智的程序小哥说升级到最新版本可以解决，快去试试吧！</string>
+    
+    <string name="uninstallapp_no_this_appinfo">无此应用信息，卸载失败</string>
+    
+    <!-- Dock栏图标名称 -->
+    <string name="dockbar_dock_dial">撥號</string>
+	<string name="dockbar_dock_contacts">連絡人</string>
+	<string name="dockbar_dock_browser">流覽器</string>
+	<string name="dockbar_dock_sms">簡訊</string>
+    
+    
+</resources>

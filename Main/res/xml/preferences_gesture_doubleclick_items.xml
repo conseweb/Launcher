@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+     <Preference
+         android:key="setting_gesture_double_click_none"
+         android:layout="@layout/preference_normal_layout"
+         android:title="@string/launcher_settings_gesture_double_click_none"/>
+     <Preference
+         android:key="setting_gesture_double_click_screen_lock"
+         android:layout="@layout/preference_normal_layout"
+         android:title="@string/launcher_settings_gesture_double_click_screen_lock"/>
+     <Preference
+         android:key="setting_gesture_double_click_screen_fill_wall"
+         android:layout="@layout/preference_normal_layout"
+         android:title="@string/launcher_settings_gesture_double_click_screen_fill_wall"/>
+</PreferenceScreen>
