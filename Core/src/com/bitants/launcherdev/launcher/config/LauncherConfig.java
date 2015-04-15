@@ -6,7 +6,7 @@ import com.bitants.launcherdev.launcher.broadcast.HiBroadcastReceiver;
 import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
 import com.bitants.launcherdev.launcher.screens.dockbar.DockbarCellLayoutConfig;
 import com.bitants.launcherdev.theme.data.BaseThemeData;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.kitset.util.ScreenUtil;
 import com.bitants.launcherdev.launcher.BaseLauncher;
 import com.bitants.launcherdev.launcher.broadcast.HiBroadcastReceiver;

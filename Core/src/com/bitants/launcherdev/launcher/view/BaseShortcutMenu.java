@@ -14,7 +14,7 @@ import com.bitants.launcherdev.launcher.info.ApplicationInfo;
 import com.bitants.launcherdev.launcher.info.ItemInfo;
 import com.bitants.launcherdev.launcher.screens.CellLayout;
 import com.bitants.launcherdev.launcher.touch.DropTarget;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonViewHolder;
 import com.bitants.launcherdev.kitset.util.ScreenUtil;
 import com.bitants.launcherdev.launcher.BaseLauncher;

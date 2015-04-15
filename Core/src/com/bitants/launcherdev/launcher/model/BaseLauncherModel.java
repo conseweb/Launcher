@@ -33,7 +33,7 @@ import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.launcher.info.*;
 import com.bitants.launcherdev.launcher.support.BaseIconCache;
 import com.bitants.launcherdev.launcher.support.BitmapWeakReferences;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.app.BaseAppDataFactory;
 import com.bitants.launcherdev.kitset.util.BaseBitmapUtils;
 import com.bitants.launcherdev.kitset.util.IconUtils;

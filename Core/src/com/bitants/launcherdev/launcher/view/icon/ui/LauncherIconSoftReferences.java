@@ -18,7 +18,7 @@ import android.util.SparseArray;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.theme.ThemeManagerFactory;
 import com.bitants.launcherdev.theme.data.BaseThemeData;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.kitset.util.BaseBitmapUtils;
 import com.bitants.launcherdev.kitset.util.BaseBitmapUtils;
 import com.bitants.launcherdev.launcher.config.BaseConfig;

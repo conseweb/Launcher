@@ -148,7 +148,7 @@ public class LauncherSettings {
         /**
          * 熊猫桌面2.x最近安装和实时文件夹URI add by caizp 2012-8-28
          */
-//        public final static String LIVEFOLDER_AUTHORITY = "com.nd.android.pandahome2.livefolder.CustomLiveFolderProvider";
+//        public final static String LIVEFOLDER_AUTHORITY = "com.bitants.launcher.livefolder.CustomLiveFolderProvider";
 //        public static final Uri LATEST_INSTALL_APP_URI = 
 //			Uri.parse("content://"+LIVEFOLDER_AUTHORITY+"/latest_install_app");
 //        public static final Uri OFTEN_USED_APP_URI = 

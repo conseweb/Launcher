@@ -20,7 +20,7 @@ import android.content.SharedPreferences.Editor;
 import android.os.Environment;
 import android.util.Log;
 
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.ViewFactory;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 

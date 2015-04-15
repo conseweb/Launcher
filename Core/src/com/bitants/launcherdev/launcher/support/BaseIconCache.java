@@ -36,7 +36,7 @@ import android.util.DisplayMetrics;
 
 import com.bitants.launcherdev.kitset.util.StringUtil;
 import com.bitants.launcherdev.theme.data.BaseThemeData;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.cache.DiskCache;
 import com.bitants.launcherdev.cache.DiskCacheSchemaB;
 import com.bitants.launcherdev.kitset.util.AndroidPackageUtils;

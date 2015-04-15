@@ -13,7 +13,7 @@ import android.widget.TextView;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonLayout;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonViewHolder;
 import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonData;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonLayout;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonViewHolder;
 import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonData;

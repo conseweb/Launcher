@@ -18,7 +18,7 @@ import com.bitants.launcherdev.framework.view.WarningInfoTextView;
 import com.bitants.launcherdev.framework.view.dialog.CommonDialog;
 import com.bitants.launcherdev.kitset.util.ScreenUtil;
 import com.bitants.launcherdev.kitset.util.SystemUtil;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.view.WarningInfoTextView;
 import com.bitants.launcherdev.framework.view.dialog.CommonDialog;
 import com.bitants.launcherdev.kitset.util.ScreenUtil;

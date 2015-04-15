@@ -18,7 +18,7 @@ import com.bitants.launcherdev.kitset.util.ScreenUtil;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.launcher.config.preference.BaseConfigPreferences;
 import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.ViewFactory;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonLightbar;
 import com.bitants.launcherdev.kitset.util.ScreenUtil;

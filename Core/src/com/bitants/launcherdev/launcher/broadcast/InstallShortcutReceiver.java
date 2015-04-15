@@ -26,7 +26,7 @@ import com.bitants.launcherdev.kitset.util.StringUtil;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.launcher.info.ApplicationInfo;
 import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.kitset.util.StringUtil;
 import com.bitants.launcherdev.launcher.BaseLauncher;
 import com.bitants.launcherdev.launcher.BaseLauncherApplication;

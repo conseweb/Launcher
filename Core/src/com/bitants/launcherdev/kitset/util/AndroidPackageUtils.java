@@ -18,7 +18,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.widget.Toast;
 
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 //import com.nd.hilauncherdev.kitset.util.Utilities;
 
 /**

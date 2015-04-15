@@ -9,7 +9,7 @@ import android.widget.Toast;
 import com.bitants.launcherdev.kitset.util.TelephoneUtil;
 import com.bitants.launcherdev.launcher.config.preference.BaseConfigPreferences;
 import com.bitants.launcherdev.launcher.support.BaseIconCache;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.kitset.util.TelephoneUtil;
 import com.bitants.launcherdev.launcher.BaseLauncher;
 import com.bitants.launcherdev.launcher.BaseLauncherApplication;

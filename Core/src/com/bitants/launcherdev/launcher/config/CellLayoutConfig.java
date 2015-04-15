@@ -13,7 +13,7 @@ import com.bitants.launcherdev.kitset.util.ReflectUtil;
 import com.bitants.launcherdev.kitset.util.ScreenUtil;
 import com.bitants.launcherdev.kitset.util.StatusBarUtil;
 import com.bitants.launcherdev.launcher.config.preference.BaseConfigPreferences;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.kitset.util.ReflectUtil;
 import com.bitants.launcherdev.kitset.util.ScreenUtil;
 import com.bitants.launcherdev.kitset.util.StatusBarUtil;

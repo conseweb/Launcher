@@ -14,7 +14,7 @@ import com.bitants.launcherdev.launcher.broadcast.HiBroadcastReceiver;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.launcher.view.icon.ui.IconSizeManager;
 import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.effect.EffectsType;
 import com.bitants.launcherdev.kitset.util.ScreenUtil;
 import com.bitants.launcherdev.kitset.util.TelephoneUtil;

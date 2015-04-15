@@ -5,7 +5,7 @@ import com.bitants.launcherdev.launcher.screens.DeleteZone;
 import com.bitants.launcherdev.launcher.touch.BaseDragController;
 import com.bitants.launcherdev.launcher.touch.DragSource;
 import com.bitants.launcherdev.launcher.touch.DropTarget;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.launcher.BaseLauncher;
 import com.bitants.launcherdev.launcher.screens.DeleteZone;
 import com.bitants.launcherdev.launcher.touch.BaseDragController;

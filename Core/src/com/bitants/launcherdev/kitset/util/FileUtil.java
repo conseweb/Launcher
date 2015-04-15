@@ -28,7 +28,7 @@ import android.graphics.BitmapFactory;
 import android.media.ThumbnailUtils;
 import android.util.Log;
 
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 文件相关的工具类

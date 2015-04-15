@@ -14,7 +14,7 @@ import android.view.View;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonLayout;
 import com.bitants.launcherdev.launcher.info.WidgetInfo;
 import com.bitants.launcherdev.launcher.support.BitmapWeakReferences;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 //import com.nd.hilauncherdev.datamodel.ApplicationWeakReferences;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonLayout;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonSlidingView;
@@ -540,7 +540,7 @@ public class DrawerEffects {
 			matrix.postTranslate(screenWidth+screen*screenWidth+loopShift-shiftingX, screenHeight / 2 + getTop(workspace, canvas));
 			canvas.concat(matrix);
 			// Drawable drawable =
-			// workspace.getResources().getDrawable(com.nd.android.pandahome2.R.drawable.edit_screen_bg);
+			// workspace.getResources().getDrawable(com.bitants.launcher.R.drawable.edit_screen_bg);
 			Drawable drawable = BitmapWeakReferences.getInstance().getDrapeInsideBg(view.getResources());
 			drawable.setBounds(screen * screenWidth, view.getTop(), screen * screenWidth + screenWidth, view.getBottom());
 			drawAlpha = (int) (255 * (shiftingX > 0 ? shiftingX : -shiftingX) / (screenWidth / 2f));
@@ -562,7 +562,7 @@ public class DrawerEffects {
 			matrix.postTranslate(screen*screenWidth+loopShift-shiftingX, screenHeight / 2 + getTop(workspace, canvas));
 			canvas.concat(matrix);
 			// Drawable drawable =
-			// workspace.getResources().getDrawable(com.nd.android.pandahome2.R.drawable.edit_screen_bg);
+			// workspace.getResources().getDrawable(com.bitants.launcher.R.drawable.edit_screen_bg);
 			Drawable drawable = BitmapWeakReferences.getInstance().getDrapeInsideBg(view.getResources());
 			drawable.setBounds(screen * screenWidth, view.getTop(), screen * screenWidth + screenWidth, view.getBottom());
 			drawAlpha = (int) (255 * (shiftingX > 0 ? shiftingX : -shiftingX) / (screenWidth / 2f));

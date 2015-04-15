@@ -24,7 +24,7 @@ import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDat
 import com.bitants.launcherdev.framework.view.draggersliding.DrawerLayout;
 import com.bitants.launcherdev.kitset.GpuControler;
 import com.bitants.launcherdev.launcher.config.preference.BaseSettingsPreference;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.effect.DrawerEffects;
 import com.bitants.launcherdev.framework.effect.EffectsType;
 import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonData;

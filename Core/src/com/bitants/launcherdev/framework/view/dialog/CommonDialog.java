@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import com.bitants.launcherdev.kitset.util.ScreenUtil;
 import com.bitants.launcherdev.kitset.util.TelephoneUtil;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.kitset.util.ScreenUtil;
 import com.bitants.launcherdev.kitset.util.TelephoneUtil;
 import com.bitants.launcherdev.kitset.util.ScreenUtil;

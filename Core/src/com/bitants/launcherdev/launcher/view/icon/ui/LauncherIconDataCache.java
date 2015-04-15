@@ -15,7 +15,7 @@ import android.graphics.RectF;
 
 import com.bitants.launcherdev.kitset.util.ScreenUtil;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.kitset.util.ColorUtil;
 import com.bitants.launcherdev.kitset.util.ColorUtil;
 import com.bitants.launcherdev.kitset.util.ScreenUtil;

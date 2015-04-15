@@ -11,7 +11,7 @@ import com.bitants.launcherdev.launcher.info.FolderInfo;
 import com.bitants.launcherdev.launcher.info.ItemInfo;
 import com.bitants.launcherdev.launcher.screens.CellLayout;
 import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.AnyCallbacks.OnDragEventCallback;
 import com.bitants.launcherdev.kitset.util.MessageUtils;
 import com.bitants.launcherdev.launcher.BaseLauncher;

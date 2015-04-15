@@ -267,7 +267,7 @@ public final class LauncherWidgetInfoManager {
 		ingoreInstalledWidgetMap.put("com.xtouch.android.launcher", "");// 91桌面海外定制包的黄历天气
 		ingoreInstalledWidgetMap.put("com.nd.android.ilauncher", "");// 91爱桌面的黄历天气
 		ingoreInstalledWidgetMap.put("com.baidu.android.launcher", "");// 百度桌面的黄历天气
-		ingoreInstalledWidgetMap.put("com.nd.android.pandahome2", "");// 91桌面的黄历天气
+		ingoreInstalledWidgetMap.put("com.bitants.launcher", "");// 91桌面的黄历天气
 	}
 
 	

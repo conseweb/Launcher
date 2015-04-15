@@ -23,7 +23,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * {@inheritDoc}

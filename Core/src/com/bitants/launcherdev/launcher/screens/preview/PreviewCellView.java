@@ -23,7 +23,7 @@ import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
 import com.bitants.launcherdev.launcher.touch.DragSource;
 import com.bitants.launcherdev.launcher.touch.DropTarget;
 import com.bitants.launcherdev.launcher.view.DragView;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.core.view.PreviewImageView;
 import com.bitants.launcherdev.kitset.GpuControler;
 import com.bitants.launcherdev.launcher.config.BaseConfig;

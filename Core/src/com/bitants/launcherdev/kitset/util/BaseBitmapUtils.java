@@ -35,7 +35,7 @@ import com.bitants.launcherdev.launcher.view.icon.ui.LauncherIconDataCache;
 import com.bitants.launcherdev.launcher.view.icon.ui.LauncherIconSoftReferences;
 import com.bitants.launcherdev.theme.data.ThemeGlobal;
 import com.bitants.launcherdev.theme.parse.EncodeTools;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 图片处理相关内容

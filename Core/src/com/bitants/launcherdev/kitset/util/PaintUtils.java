@@ -7,7 +7,7 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.graphics.PorterDuffXfermode;
 
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 画笔工厂类

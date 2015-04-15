@@ -23,7 +23,7 @@ import android.text.TextPaint;
 import android.util.DisplayMetrics;
 
 import com.bitants.launcherdev.launcher.support.FastBitmapDrawable;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 /**
  * 生成Launcher下icon图标工具类

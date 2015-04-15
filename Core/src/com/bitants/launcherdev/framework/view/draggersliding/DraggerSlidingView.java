@@ -14,7 +14,7 @@ import com.bitants.launcherdev.launcher.touch.DragScroller;
 import com.bitants.launcherdev.launcher.touch.DragSource;
 import com.bitants.launcherdev.launcher.touch.DropTarget;
 import com.bitants.launcherdev.launcher.view.DragView;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonSlidingView;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonViewHolder;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonViewHolder;

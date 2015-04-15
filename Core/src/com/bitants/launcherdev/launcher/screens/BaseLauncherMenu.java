@@ -15,7 +15,7 @@ import com.bitants.launcherdev.launcher.BaseLauncher;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.theme.assit.ThemeUIRefreshAssit;
 import com.bitants.launcherdev.theme.assit.ThemeUIRefreshListener;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.launcher.BaseLauncher;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.theme.assit.ThemeUIRefreshAssit;

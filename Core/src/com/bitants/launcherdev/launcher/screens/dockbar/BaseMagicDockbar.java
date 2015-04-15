@@ -22,7 +22,7 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.AnyCallbacks.OnDragEventCallback;
 import com.bitants.launcherdev.kitset.GpuControler;
 import com.bitants.launcherdev.launcher.BaseLauncher;

@@ -26,7 +26,7 @@ import com.bitants.launcherdev.launcher.screens.CellLayout;
 import com.bitants.launcherdev.launcher.screens.ScreenViewGroup;
 import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
 import com.bitants.launcherdev.launcher.touch.DropTarget;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.kitset.util.AndroidPackageUtils;
 import com.bitants.launcherdev.kitset.util.StringUtil;
 import com.bitants.launcherdev.launcher.BaseLauncher;

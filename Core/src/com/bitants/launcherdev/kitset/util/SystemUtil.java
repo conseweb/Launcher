@@ -27,7 +27,7 @@ import android.view.View.OnTouchListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.ViewFactory;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 

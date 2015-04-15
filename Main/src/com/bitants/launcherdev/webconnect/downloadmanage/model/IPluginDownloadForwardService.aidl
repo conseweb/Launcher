@@ -1,4 +1,4 @@
-package com.nd.hilauncherdev.webconnect.downloadmanage.model ;
+package com.bitants.launcherdev.webconnect.downloadmanage.model ;
 
 interface IPluginDownloadForwardService {
 

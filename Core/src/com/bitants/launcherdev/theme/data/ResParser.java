@@ -20,7 +20,7 @@ import com.bitants.launcherdev.kitset.util.ScreenUtil;
 import com.bitants.launcherdev.kitset.util.StringUtil;
 import com.bitants.launcherdev.theme.module.ModuleConstant;
 import com.bitants.launcherdev.theme.parse.EncodeTools;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.kitset.util.BaseBitmapUtils;
 
 /**

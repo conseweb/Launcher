@@ -11,7 +11,7 @@ import com.bitants.launcherdev.launcher.screens.CellLayout;
 import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
 import com.bitants.launcherdev.launcher.screens.preview.PreviewEditAdvancedController;
 import com.bitants.launcherdev.launcher.view.DragView;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.OnKeyDownListenner;
 import com.bitants.launcherdev.framework.view.draggersliding.DraggerChooseItem;
 import com.bitants.launcherdev.kitset.GpuControler;

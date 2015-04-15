@@ -75,7 +75,7 @@ public final class ThemeIntentMetaData {
 		/**
 		 * 应用商店
 		 */
-		{BaseThemeData.ICON_APP_STORE, "com.nd.android.pandahome2", "com.nd.hilauncherdev.appstore.AppStoreSwitchActivity",Intent.ACTION_VIEW, Uri.EMPTY, "", false },
+		{BaseThemeData.ICON_APP_STORE, "com.bitants.launcher", "com.nd.hilauncherdev.appstore.AppStoreSwitchActivity",Intent.ACTION_VIEW, Uri.EMPTY, "", false },
 		/**
 		 * 设置
 		 */

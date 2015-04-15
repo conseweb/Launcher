@@ -21,7 +21,7 @@ import com.bitants.launcherdev.launcher.info.ApplicationInfo;
 import com.bitants.launcherdev.launcher.info.FolderInfo;
 import com.bitants.launcherdev.launcher.info.ItemInfo;
 import com.bitants.launcherdev.launcher.touch.BaseDragController;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.kitset.util.AndroidPackageUtils;
 import com.bitants.launcherdev.kitset.util.ScreenUtil;
 import com.bitants.launcherdev.kitset.util.StatusBarUtil;

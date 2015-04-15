@@ -15,7 +15,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.TextView;
 
 import com.bitants.launcherdev.kitset.util.ScreenUtil;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.OnKeyDownListenner;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonSlidingView.OnCommonSlidingViewClickListener;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonSlidingView.OnCommonSlidingViewLongClickListener;

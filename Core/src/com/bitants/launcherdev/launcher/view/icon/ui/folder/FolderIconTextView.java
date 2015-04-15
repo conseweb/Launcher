@@ -54,7 +54,7 @@ import com.bitants.launcherdev.launcher.view.icon.ui.LauncherIconSoftReferences;
 import com.bitants.launcherdev.launcher.view.icon.ui.util.BeansContainer;
 import com.bitants.launcherdev.theme.assit.ThemeUIRefreshAssit;
 import com.bitants.launcherdev.theme.assit.ThemeUIRefreshListener;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.AnyCallbacks.OnDragEventCallback;
 import com.bitants.launcherdev.kitset.util.BaseBitmapUtils;
 import com.bitants.launcherdev.kitset.util.ColorUtil;

@@ -2,7 +2,7 @@ package com.bitants.launcherdev.launcher.view.icon.ui;
 
 import android.content.Context;
 
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.launcher.config.preference.BaseSettingsPreference;
 

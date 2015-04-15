@@ -56,7 +56,7 @@ import com.bitants.launcherdev.launcher.touch.*;
 import com.bitants.launcherdev.launcher.touch.outline.DragHelper;
 import com.bitants.launcherdev.launcher.view.DragView;
 import com.bitants.launcherdev.launcher.view.icon.ui.impl.IconMaskTextView;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.core.view.HiViewGroup;
 import com.bitants.launcherdev.framework.effect.EffectsType;
 import com.bitants.launcherdev.framework.effect.ScreenEffects;

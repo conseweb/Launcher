@@ -28,7 +28,7 @@ import android.widget.Toast;
 
 import com.bitants.launcherdev.launcher.BaseLauncher;
 import com.bitants.launcherdev.launcher.model.BaseLauncherSettings;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 
 public class UninstallShortcutReceiver extends HiBroadcastStaticReceiver {
 	private static final String ACTION_UNINSTALL_SHORTCUT = "com.android.launcher.action.UNINSTALL_SHORTCUT";

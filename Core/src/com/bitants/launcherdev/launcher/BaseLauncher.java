@@ -47,7 +47,7 @@ import com.bitants.launcherdev.launcher.screens.dockbar.MagicDockbarRelativeLayo
 import com.bitants.launcherdev.launcher.screens.preview.PreviewEditAdvancedController;
 import com.bitants.launcherdev.launcher.support.*;
 import com.bitants.launcherdev.launcher.touch.BaseDragController;
-import com.nd.android.pandahome2.R;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.core.widget.PandaWidgetViewContainer;
 import com.bitants.launcherdev.framework.OnKeyDownListenner;
 import com.bitants.launcherdev.framework.view.BaseLineLightBar;

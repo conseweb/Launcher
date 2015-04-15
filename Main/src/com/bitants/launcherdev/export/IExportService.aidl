@@ -1,4 +1,4 @@
-package com.nd.hilauncherdev.export;
+package com.bitants.launcherdev.export;
 
 interface IExportService{
 	int getPreferenceByKey(String key);
