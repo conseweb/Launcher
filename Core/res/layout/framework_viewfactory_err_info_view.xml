@@ -7,7 +7,7 @@
 	<ImageView android:id="@+id/framework_viewfactory_err_img"
 		android:layout_width="@dimen/myphone_info_view_image_size"
 		android:layout_height="@dimen/myphone_info_view_image_size" />
-	<com.nd.hilauncherdev.framework.view.WarningInfoTextView
+	<com.nd.launcherdev.framework.view.WarningInfoTextView
 		android:id="@+id/framework_viewfactory_err_textview"
 		android:paddingTop="5dip" android:layout_width="wrap_content"
 		android:layout_height="wrap_content" android:gravity="center"

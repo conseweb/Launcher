@@ -31,11 +31,11 @@
 
     <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="10"/>
 
-    <application android:name="com.nd.hilauncherdev.launcher.LauncherApplication"
+    <application android:name="com.nd.launcherdev.launcher.LauncherApplication"
         android:icon="@drawable/ic_launcher"
-        android:label="EL" >
+        android:label="MirrorLauncher" >
         
-        <activity android:name="com.nd.hilauncherdev.launcher.Launcher"
+        <activity android:name="com.nd.launcherdev.launcher.Launcher"
 		    android:label="@string/app_name"
 			android:launchMode="singleTask" android:clearTaskOnLaunch="true"
 			android:stateNotNeeded="true" android:theme="@style/Fullscreen"
@@ -52,7 +52,7 @@
 		</activity>
         
         <!-- The settings provider contains Home's data, like the workspace favorites -->
-		<provider android:name="com.nd.hilauncherdev.launcher.LauncherProvider"
+		<provider android:name="com.nd.launcherdev.launcher.LauncherProvider"
 			android:authorities="com.bitants.launcher.settings" />
 		
 		
@@ -63,7 +63,7 @@
             android:name="com.nd.hilauncherdev.webconnect.downloadmanage.model.DownloadServerService"
             android:exported="false" />
         <service
-            android:name="com.nd.hilauncherdev.webconnect.downloadmanage.model.PluginDownloadForwardService"
+            android:name="com.nd.launcherdev.webconnect.downloadmanage.model.PluginDownloadForwardService"
             android:exported="false" >
             <intent-filter>
                 <action android:name="com.mobo.launcher.FORWARD_SERVICE" />
@@ -73,7 +73,7 @@
         <!-- 应用下载，下载管理   End -->
 		
 		<!-- Intent received used to install shortcuts from other applications -->
-		<receiver android:name="com.nd.hilauncherdev.launcher.broadcast.InstallShortcutReceiver"
+		<receiver android:name="com.nd.launcherdev.launcher.broadcast.InstallShortcutReceiver"
 			android:permission="com.android.launcher.permission.INSTALL_SHORTCUT">
 			<intent-filter>
 				<action android:name="com.android.launcher.action.INSTALL_SHORTCUT" />
@@ -82,14 +82,14 @@
 		</receiver>
 
 		<!-- Intent received used to uninstall shortcuts from other applications -->
-		<receiver android:name="com.nd.hilauncherdev.launcher.broadcast.UninstallShortcutReceiver"
+		<receiver android:name="com.nd.launcherdev.launcher.broadcast.UninstallShortcutReceiver"
 			android:permission="com.android.launcher.permission.UNINSTALL_SHORTCUT">
 			<intent-filter>
 				<action android:name="com.android.launcher.action.UNINSTALL_SHORTCUT" />
 			</intent-filter>
 		</receiver>
 		
-		<receiver android:name="com.nd.hilauncherdev.launcher.ApplicationChangeReceiver">
+		<receiver android:name="com.nd.launcherdev.launcher.ApplicationChangeReceiver">
 			<intent-filter>
 				<action android:name="android.intent.action.PACKAGE_ADDED" />
 				<action android:name="android.intent.action.PACKAGE_REMOVED" />
@@ -99,7 +99,7 @@
 		</receiver>
 		
 		<activity
-            android:name="com.nd.hilauncherdev.menu.personal.AllDownloadManagerActivity"
+            android:name="com.nd.launcherdev.menu.personal.AllDownloadManagerActivity"
             android:screenOrientation="portrait" android:launchMode="singleInstance" 
             android:theme="@android:style/Theme.NoTitleBar"
             android:process=":hilauncherex_shopv2_process">
@@ -111,12 +111,12 @@
           
 		<!-- 应用列表 -->
 		<activity
-			android:name="com.nd.hilauncherdev.launcher.appslist.AppslistActivity"
+			android:name="com.nd.launcherdev.launcher.appslist.AppslistActivity"
 			android:screenOrientation="portrait" android:theme="@style/Transparent" />
 		
 		<!-- 程序打开选择框 -->
 		<activity
-			android:name="com.nd.hilauncherdev.app.AppResolverSelectActivity"
+			android:name="com.nd.launcherdev.app.AppResolverSelectActivity"
 			android:screenOrientation="portrait" android:theme="@style/TipDialog" />
 		
 		<!-- 推送消息跳转处理 -->
@@ -127,35 +127,35 @@
         
         <!-- 桌面设置入口 -->
         <activity
-            android:name="com.nd.hilauncherdev.settings.HomeSettingsActivity"
+            android:name="com.nd.launcherdev.settings.HomeSettingsActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" />
         <activity
-            android:name="com.nd.hilauncherdev.settings.GestureSettingsActivity"
+            android:name="com.nd.launcherdev.settings.GestureSettingsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SettingCustomStyle" />
          <activity
-            android:name="com.nd.hilauncherdev.settings.CardScreenSettingsActivity"
+            android:name="com.nd.launcherdev.settings.CardScreenSettingsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SettingCustomStyle" />
          <activity
-            android:name="com.nd.hilauncherdev.settings.DynamicSettingsActivity"
+            android:name="com.nd.launcherdev.settings.DynamicSettingsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SettingCustomStyle" />
 		<activity
-            android:name="com.nd.hilauncherdev.settings.MoreSettingsActivity"
+            android:name="com.nd.launcherdev.settings.MoreSettingsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SettingCustomStyle" />
 		<activity
-            android:name="com.nd.hilauncherdev.settings.ShareLauncherActivity"
+            android:name="com.nd.launcherdev.settings.ShareLauncherActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SettingCustomStyle" />
 		<activity
-            android:name="com.nd.hilauncherdev.settings.AboutLauncherActivity"
+            android:name="com.nd.launcherdev.settings.AboutLauncherActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SettingCustomStyle" />
 		<activity
-            android:name="com.nd.hilauncherdev.settings.SettingsItemSelectActivity"
+            android:name="com.nd.launcherdev.settings.SettingsItemSelectActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SettingCustomStyle" />	
     </application>

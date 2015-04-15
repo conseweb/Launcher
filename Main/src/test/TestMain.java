@@ -1,7 +1,7 @@
 package test;
 
-import com.nd.hilauncherdev.integratefoler.IntegrateFolder;
-import com.nd.hilauncherdev.launcher.Launcher;
+import com.nd.launcherdev.integratefoler.IntegrateFolder;
+import com.nd.launcherdev.launcher.Launcher;
 
 public class TestMain {
 

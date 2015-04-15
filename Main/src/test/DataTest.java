@@ -8,10 +8,10 @@ import java.util.List;
 import android.util.Log;
 import android.view.View;
 
-import com.nd.hilauncherdev.launcher.Workspace;
-import com.nd.hilauncherdev.launcher.info.FolderInfo;
-import com.nd.hilauncherdev.launcher.screens.CellLayout;
-import com.nd.hilauncherdev.launcher.view.icon.ui.folder.FolderIconTextView;
+import com.nd.launcherdev.launcher.Workspace;
+import com.nd.launcherdev.launcher.info.FolderInfo;
+import com.nd.launcherdev.launcher.screens.CellLayout;
+import com.nd.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
 
 
 
