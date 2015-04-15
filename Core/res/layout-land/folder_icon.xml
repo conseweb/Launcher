@@ -14,5 +14,5 @@
      limitations under the License.
 -->
 
-<com.nd.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView xmlns:android="http://schemas.android.com/apk/res/android"
  	style="@style/WorkspaceIconMaskTextView" />

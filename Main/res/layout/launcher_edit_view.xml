@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.nd.launcherdev.launcher.edit.LauncherEditView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.bitants.launcherdev.launcher.edit.LauncherEditView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/launcher_editor"
     android:layout_width="match_parent"
     android:layout_height="@dimen/launcher_edit_view_height"
@@ -85,7 +85,7 @@
         android:layout_below="@id/launcher_edit_top_layout"
         android:background="@drawable/launcher_edit_view_bg" >
 
-        <com.nd.launcherdev.framework.view.commonsliding.CommonLightbar
+        <com.bitants.launcherdev.framework.view.commonsliding.CommonLightbar
             android:id="@+id/launcher_edit_lightbar"
             android:layout_width="match_parent"
             android:layout_height="15dip"
@@ -94,11 +94,11 @@
 
         <!-- 每个Tab 下面的view 集合 -->
 
-        <com.nd.launcherdev.launcher.edit.LauncherEditSlidingView
+        <com.bitants.launcherdev.launcher.edit.LauncherEditSlidingView
             android:id="@+id/launcher_edit_sliding_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@id/launcher_edit_lightbar" />
         
     </RelativeLayout>
-</com.nd.launcherdev.launcher.edit.LauncherEditView>
+</com.bitants.launcherdev.launcher.edit.LauncherEditView>

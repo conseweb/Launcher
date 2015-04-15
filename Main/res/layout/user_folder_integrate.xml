@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.nd.launcherdev.integratefoler.IntegrateFolder xmlns:android="http://schemas.android.com/apk/res/android"
+<com.bitants.launcherdev.integratefoler.IntegrateFolder xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <LinearLayout
@@ -9,7 +9,7 @@
         android:layout_marginTop="25dip" 
         android:orientation="horizontal"
         android:background="#f00">
-        <com.nd.launcherdev.integratefoler.IntegrateFolderTitleStrip
+        <com.bitants.launcherdev.integratefoler.IntegrateFolderTitleStrip
             android:id="@+id/folder_pager_strip"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -36,4 +36,4 @@
     </android.support.v4.view.ViewPager>
 
 
-</com.nd.launcherdev.integratefoler.IntegrateFolder>
+</com.bitants.launcherdev.integratefoler.IntegrateFolder>

@@ -7,7 +7,7 @@
 	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
 	the specific language governing permissions and limitations under the License. -->
 
-<com.nd.launcherdev.launcher.screens.DragLayer
+<com.bitants.launcherdev.launcher.screens.DragLayer
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:id="@+id/drag_layer" android:layout_width="match_parent"
 	android:layout_height="match_parent">
@@ -17,14 +17,14 @@
     	android:layout_width="match_parent"
     	android:layout_height="match_parent" /> -->
 
-	<com.nd.launcherdev.launcher.screens.WorkspaceLayer
+	<com.bitants.launcherdev.launcher.screens.WorkspaceLayer
             android:id="@+id/workspace_layer"
 			android:layout_height="match_parent"
 			android:layout_width="match_parent">
 		<com.nd.hilauncherdev.launcher.Workspace
 			android:id="@+id/workspace" android:layout_width="match_parent"
 			android:layout_height="match_parent"/>
-	</com.nd.launcherdev.launcher.screens.WorkspaceLayer>
+	</com.bitants.launcherdev.launcher.screens.WorkspaceLayer>
 	
 	
 	<!-- <ViewStub android:id="@+id/delete_zone_stub" 
@@ -37,7 +37,7 @@
     	android:layout="@layout/launcher_spring_lightbar" 
     	android:layout_width="match_parent"
     	android:layout_height="@dimen/workspace_spring_lightbar_height" /> -->
-	<com.nd.launcherdev.launcher.screens.dockbar.MagicDockbarRelativeLayout
+	<com.bitants.launcherdev.launcher.screens.dockbar.MagicDockbarRelativeLayout
 	    android:id="@+id/lightbar_container"
 		android:layout_width="match_parent"
         android:layout_height="@dimen/launcher_linelight_and_dockbar_height"
@@ -58,7 +58,7 @@
         	android:layout_gravity="bottom|center_horizontal"
         	android:layout_alignParentBottom="true" />
 		
-	</com.nd.launcherdev.launcher.screens.dockbar.MagicDockbarRelativeLayout>
+	</com.bitants.launcherdev.launcher.screens.dockbar.MagicDockbarRelativeLayout>
         
     <!-- 编辑模式下各功能-->
     <!-- <ViewStub android:id="@+id/launcher_editor_stub" 
@@ -78,4 +78,4 @@
     	android:layout_width="match_parent"
     	android:layout_height="match_parent" /> -->
    
-</com.nd.launcherdev.launcher.screens.DragLayer>
+</com.bitants.launcherdev.launcher.screens.DragLayer>

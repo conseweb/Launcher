@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.nd.launcherdev.webconnect.downloadmanage.view.DownloadItemView
+<com.bitants.launcherdev.webconnect.downloadmanage.view.DownloadItemView
     xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical" 
 	android:layout_width="fill_parent"
@@ -91,4 +91,4 @@
 		</LinearLayout>
 			
 	</RelativeLayout>
-</com.nd.launcherdev.webconnect.downloadmanage.view.DownloadItemView>
+</com.bitants.launcherdev.webconnect.downloadmanage.view.DownloadItemView>

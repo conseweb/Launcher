@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.nd.launcherdev.framework.view.commonsliding.CommonLightbar
+<com.bitants.launcherdev.framework.view.commonsliding.CommonLightbar
     	xmlns:android="http://schemas.android.com/apk/res/android"
 		android:id="@+id/spring_lightbar"
 		android:layout_width="match_parent" 

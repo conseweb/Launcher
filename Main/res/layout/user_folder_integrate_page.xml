@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.nd.launcherdev.integratefoler.IntegrateFolderPage xmlns:android="http://schemas.android.com/apk/res/android"
+<com.bitants.launcherdev.integratefoler.IntegrateFolderPage xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:paddingLeft="5dip"
     android:paddingRight="5dip"
     android:paddingTop="5dip" >
 
-    <com.nd.launcherdev.integratefoler.IntegrateFolderGridView
+    <com.bitants.launcherdev.integratefoler.IntegrateFolderGridView
         android:id="@+id/folder_content_grid"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#f00" />
 
-</com.nd.launcherdev.integratefoler.IntegrateFolderPage>
+</com.bitants.launcherdev.integratefoler.IntegrateFolderPage>

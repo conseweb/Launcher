@@ -24,7 +24,7 @@
             android:layout_width="fill_parent"
             android:layout_height="0dp" />
 
-        <com.nd.launcherdev.folder.view.FolderView
+        <com.bitants.launcherdev.folder.view.FolderView
             android:id="@+id/folder_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -117,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/line_layout" >
 
-                <com.nd.launcherdev.framework.view.commonsliding.CommonLightbar
+                <com.bitants.launcherdev.framework.view.commonsliding.CommonLightbar
                     android:id="@+id/light_bar"
                     android:layout_width="wrap_content"
                     android:layout_height="15dp"
@@ -125,7 +125,7 @@
                     android:layout_centerHorizontal="true"
                     android:gravity="center" />
 
-                <com.nd.launcherdev.folder.view.FolderSlidingView
+                <com.bitants.launcherdev.folder.view.FolderSlidingView
                     android:id="@+id/folder_scroll_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -133,7 +133,7 @@
                     android:layout_marginLeft="20dip"
                     android:layout_marginRight="20dip" />
             </RelativeLayout>
-        </com.nd.launcherdev.folder.view.FolderView>
+        </com.bitants.launcherdev.folder.view.FolderView>
     </LinearLayout>
 
 </FrameLayout>

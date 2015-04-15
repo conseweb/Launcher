@@ -1,7 +1,7 @@
 package test;
 
-import com.nd.launcherdev.integratefoler.IntegrateFolder;
-import com.nd.launcherdev.launcher.Launcher;
+import com.bitants.launcherdev.integratefoler.IntegrateFolder;
+import com.bitants.launcherdev.launcher.Launcher;
 
 public class TestMain {
 
