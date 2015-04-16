@@ -7,7 +7,6 @@ Core/bin/*
 *.apk
 *.ap_
 
-# files for the dex VM
 *.dex
 
 # Java class files
@@ -16,6 +15,11 @@ Core/bin/*
 # generated files
 bin/  
 gen/
+
+# Gradle files
+.gradle/
+build/
+/*/build/
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -55,14 +59,13 @@ local.properties
 .settings/
 .loadpath
 
-# External tool builders
 .externalToolBuilders/
-
+proguard/
 # Locally stored "Eclipse launch configurations"
 *.launch
-
+# Log Files
 # CDT-specific
 .cproject
-
+*.log
 # PDT-specific
 .buildpath
