@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.bitants.launcherdev.core.model.AbstractDataBase;
-import com.nd.hilauncherdev.webconnect.downloadmanage.model.DownloadLogTable;
+//import com.bitants.launcherdev.webconnect.downloadmanage.model.DownloadLogTable;
 
 /**
  * 数据库工具类
@@ -31,14 +31,14 @@ public class MyPhoneDB extends AbstractDataBase {
 
 	@Override
 	public void onDataBaseCreate(SQLiteDatabase db) {
-		db.execSQL(CREATE_LOCK_TABLE);
-		// 下载记录表
-		db.execSQL(DownloadLogTable.CREATE_TABLE);
-		db.execSQL(CREATE_CONFIG_TABLE);
-		//572采用通用下载sdk,新字段为兼容历史版本,572后续版本不得采用该字段，
-		//若需要为某下载记录定制个性化值时可考虑用addition_info,通用sdk中已有很好的支持。
-		//wanggm 2015.02.03
-        db.execSQL("alter table log_download add column 'extra' VARCHAR(32)");
+//		db.execSQL(CREATE_LOCK_TABLE);
+//		// 下载记录表
+//		db.execSQL(DownloadLogTable.CREATE_TABLE);
+//		db.execSQL(CREATE_CONFIG_TABLE);
+//		//572采用通用下载sdk,新字段为兼容历史版本,572后续版本不得采用该字段，
+//		//若需要为某下载记录定制个性化值时可考虑用addition_info,通用sdk中已有很好的支持。
+//		//wanggm 2015.02.03
+//        db.execSQL("alter table log_download add column 'extra' VARCHAR(32)");
 	}
 
 	@Override

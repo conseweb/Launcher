@@ -13,7 +13,7 @@ import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.launcher.config.preference.BaseConfigPreferences;
 import com.bitants.launcherdev.launcher.screens.CellLayout;
 import com.bitants.launcherdev.launcher.support.BaseLauncherViewHelper;
-import com.nd.hilauncherdev.framework.view.bubble.LauncherBubbleView;
+import com.bitants.launcherdev.framework.view.bubble.LauncherBubbleView;
 import com.bitants.launcherdev.kitset.util.ScreenUtil;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.launcher.config.CellLayoutConfig;

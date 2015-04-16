@@ -24,7 +24,7 @@ import com.bitants.launcherdev.launcher.touch.DragScroller;
 import com.bitants.launcherdev.launcher.touch.DropTarget;
 import com.bitants.launcherdev.folder.model.FolderHelper;
 import com.bitants.launcherdev.framework.AnyCallbacks.OnFolderDragOutCallback;
-import com.nd.hilauncherdev.framework.view.bubble.LauncherBubbleManager;
+import com.bitants.launcherdev.framework.view.bubble.LauncherBubbleManager;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonLightbar;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.launcher.config.ConfigFactory;

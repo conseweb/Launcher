@@ -108,7 +108,7 @@ public class BaseLauncherSettings {
 		/**
 		 * 该值从config.xml读取，不可直接赋给静态变量使用！
 		 */
-		public static String AUTHORITY_SUB = "com.nd.hilauncherdev";
+		public static String AUTHORITY_SUB = "com.bitants.launcherdev";
 		
 		public static String TABLE_FAVORITES = "favorites";
 		public static final String PARAMETER_NOTIFY = "notify";

@@ -35,7 +35,7 @@ public class LauncherBroadcastControl {
 	 * 快点交互
 	 */
 	private static void sendBrocdcastToWhiteDot(Context ctx, boolean state) {
-		Intent stopShortCutAssist = new Intent("com.nd.hilauncherdev.launcher.display_state");
+		Intent stopShortCutAssist = new Intent("com.bitants.launcherdev.launcher.display_state");
 		stopShortCutAssist.putExtra("is_launcher_display", state);
 		ctx.sendBroadcast(stopShortCutAssist);
 	}

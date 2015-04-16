@@ -8,15 +8,15 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 
-import com.bitants.launcherdev.webconnect.downloadmanage.model.DownloadServerServiceConnection;
+//import com.bitants.launcherdev.webconnect.downloadmanage.model.DownloadServerServiceConnection;
 import com.bitants.launcherdev.datamodel.db.MyPhoneDB;
 import com.bitants.launcherdev.framework.ViewFactory;
 import com.bitants.launcherdev.framework.view.dialog.CommonDialog;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
-import com.bitants.launcherdev.webconnect.downloadmanage.model.DownloadServerServiceConnection;
+//import com.bitants.launcherdev.webconnect.downloadmanage.model.DownloadServerServiceConnection;
 import com.bitants.launcher.R;
-import com.bitants.launcherdev.webconnect.downloadmanage.model.DownloadServerServiceConnection;
+//import com.bitants.launcherdev.webconnect.downloadmanage.model.DownloadServerServiceConnection;
 
 /**
  * apk包安装应用工具类
@@ -84,9 +84,9 @@ public class ApkInstaller {
 	}// end installApplicationShoudSilent
 
 	private static void installAppInThread(Context context, File apkFile) {
-		DownloadServerServiceConnection mConnection = new DownloadServerServiceConnection(context);
-		mConnection.installAppSilent(apkFile);
-		mConnection = null;
+//		DownloadServerServiceConnection mConnection = new DownloadServerServiceConnection(context);
+//		mConnection.installAppSilent(apkFile);
+//		mConnection = null;
 	}
 
 	/**
@@ -148,10 +148,11 @@ public class ApkInstaller {
 	 * @return boolean
 	 */
 	public static synchronized boolean isApkInstalling(Context context, String packageName) {
-		DownloadServerServiceConnection mConnection = new DownloadServerServiceConnection(context);
-		boolean isInstalling = mConnection.isApkInstalling(packageName);
-		mConnection = null;
-		return isInstalling;
+//		DownloadServerServiceConnection mConnection = new DownloadServerServiceConnection(context);
+//		boolean isInstalling = mConnection.isApkInstalling(packageName);
+//		mConnection = null;
+//		return isInstalling;
+		return false;
 	}
 
 	/**

@@ -91,7 +91,7 @@ public class ThemeIconIntentAdaptation {
 					else if (appKey.equals(BaseThemeData.ICON_MMS)) 
 						mapComponentCache.put(new ComponentName(cursor.getString(iPackageName), cursor.getString(iClsName)), APP_HINT_TYPE_MMS);
 					else if (appKey.equals(BaseThemeData.ICON_APP_STORE)) 
-						mapComponentCache.put(new ComponentName("com.bitants.launcher", "com.nd.hilauncherdev.appstore.AppStoreSwitchActivity"), APP_HINT_TYPE_UPDATE_APP);
+						mapComponentCache.put(new ComponentName("com.bitants.launcher", "com.bitants.launcherdev.appstore.AppStoreSwitchActivity"), APP_HINT_TYPE_UPDATE_APP);
 				}
 			}
 		} catch (Exception e) {

@@ -19,7 +19,7 @@ import android.os.Build;
 import android.widget.Toast;
 
 import com.bitants.launcher.R;
-//import com.nd.hilauncherdev.kitset.util.Utilities;
+//import com.bitants.launcherdev.kitset.util.Utilities;
 
 /**
  * 与app包相关的工具类

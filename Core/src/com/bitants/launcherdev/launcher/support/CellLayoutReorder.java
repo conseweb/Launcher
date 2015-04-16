@@ -40,7 +40,7 @@ import com.bitants.launcherdev.launcher.view.icon.ui.IconSizeManager;
 import com.bitants.launcherdev.framework.AnyCallbacks.OnDragEventCallback;
 import com.bitants.launcherdev.kitset.GpuControler;
 import com.bitants.launcherdev.kitset.util.ThreadUtil;
-//import com.nd.hilauncherdev.notification.LauncherNotificationHelper;
+//import com.bitants.launcherdev.notification.LauncherNotificationHelper;
 import com.bitants.launcherdev.framework.AnyCallbacks;
 import com.bitants.launcherdev.kitset.GpuControler;
 import com.bitants.launcherdev.kitset.util.ThreadUtil;

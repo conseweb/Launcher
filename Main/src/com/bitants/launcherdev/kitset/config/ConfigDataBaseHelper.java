@@ -4,7 +4,7 @@ package com.bitants.launcherdev.kitset.config;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.bitants.launcherdev.launcher.support.DBHelperFactory;
-import com.nd.hilauncherdev.push.PushMsgHandler;
+import com.bitants.launcherdev.push.PushMsgHandler;
 
 /**
  * 桌面配置数据库

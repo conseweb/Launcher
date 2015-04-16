@@ -16,17 +16,17 @@ import com.bitants.launcherdev.theme.module.ModuleConstant;
  */
 public class BaseThemeData {
 	public static String THEME_COMP_PKG = "com.bitants.launcher";
-	public static String THEME_APP_SELECT_ACTIVITY = "com.nd.hilauncherdev.app.activity.AppResolverSelectActivity";
+	public static String THEME_APP_SELECT_ACTIVITY = "com.bitants.launcherdev.app.activity.AppResolverSelectActivity";
 	
 	//=======================下列属性是可配置的config.xml========================//
 	/** 默认的浏览器Intent */
-	public static String INTENT_BROWSER = "http://www.google.com#Intent;action=android.intent.action.VIEW;launchFlags=0x10000000;component=com.bitants.launcher/com.nd.hilauncherdev.app.activity.AppResolverSelectActivity;B.is_always_select=false;end";
+	public static String INTENT_BROWSER = "http://www.google.com#Intent;action=android.intent.action.VIEW;launchFlags=0x10000000;component=com.bitants.launcher/com.bitants.launcherdev.app.activity.AppResolverSelectActivity;B.is_always_select=false;end";
 	/** 默认的电话Intent*/
-	public static String INTENT_PHONE = "#Intent;action=android.intent.action.DIAL;launchFlags=0x10000000;component=com.bitants.launcher/com.nd.hilauncherdev.app.activity.AppResolverSelectActivity;B.is_always_select=false;end";
+	public static String INTENT_PHONE = "#Intent;action=android.intent.action.DIAL;launchFlags=0x10000000;component=com.bitants.launcher/com.bitants.launcherdev.app.activity.AppResolverSelectActivity;B.is_always_select=false;end";
 	/** 默认的联系人Intent */
-	public static String INTENT_CONTACTS = "content://com.android.contacts/contacts#Intent;action=android.intent.action.VIEW;launchFlags=0x10000000;component=com.bitants.launcher/com.nd.hilauncherdev.app.activity.AppResolverSelectActivity;B.is_always_select=false;end";
+	public static String INTENT_CONTACTS = "content://com.android.contacts/contacts#Intent;action=android.intent.action.VIEW;launchFlags=0x10000000;component=com.bitants.launcher/com.bitants.launcherdev.app.activity.AppResolverSelectActivity;B.is_always_select=false;end";
 	/** 默认的短信Intent */
-	public static String INTENT_MMS = "content://mms-sms/#Intent;action=android.intent.action.MAIN;launchFlags=0x10000000;component=com.bitants.launcher/com.nd.hilauncherdev.app.activity.AppResolverSelectActivity;B.is_always_select=false;end";
+	public static String INTENT_MMS = "content://mms-sms/#Intent;action=android.intent.action.MAIN;launchFlags=0x10000000;component=com.bitants.launcher/com.bitants.launcherdev.app.activity.AppResolverSelectActivity;B.is_always_select=false;end";
 	
 	public static void init(){
 		String THEME_COMP_APP_SELECT_ACTIVITY = THEME_COMP_PKG + "/" + THEME_APP_SELECT_ACTIVITY;
@@ -105,7 +105,7 @@ public class BaseThemeData {
 	/** Skype */
 	public static final String ICON_SKYPE = "com.skype.rover|com.skype.rover.main";
 	/** 应用商店 */
-	public static final String ICON_APP_STORE = "com.bitants.launcher|com.nd.hilauncherdev.appstore.AppStoreSwitchActivity";
+	public static final String ICON_APP_STORE = "com.bitants.launcher|com.bitants.launcherdev.appstore.AppStoreSwitchActivity";
 	
 	/** 图标蒙板前景 */
 	public static final String PANDA_ICON_FOREGROUND_MASK = "panda_icon_foreground_mask";

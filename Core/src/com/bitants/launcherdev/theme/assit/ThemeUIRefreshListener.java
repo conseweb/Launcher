@@ -1,6 +1,6 @@
 package com.bitants.launcherdev.theme.assit;
 
-//import com.nd.hilauncherdev.theme.ThemeManager;
+//import com.bitants.launcherdev.theme.ThemeManager;
 
 /**
  * <br>Title: 主题应用UI刷新接口

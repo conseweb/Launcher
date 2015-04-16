@@ -9,7 +9,7 @@ import com.bitants.launcherdev.kitset.util.TelephoneUtil;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.launcher.info.ApplicationInfo;
 import com.bitants.launcherdev.uri.UriActions;
-import com.nd.hilauncherdev.push.PushSDKAdapterInterface;
+import com.bitants.launcherdev.push.PushSDKAdapterInterface;
 import com.bitants.launcherdev.kitset.Analytics.AnalyticsConstant;
 import com.bitants.launcherdev.kitset.Analytics.HiAnalytics;
 import com.bitants.launcherdev.kitset.util.CUIDUtil;
@@ -28,7 +28,7 @@ import android.view.View;
 import android.widget.RemoteViews;
 
 import com.bitants.launcherdev.framework.httplib.GZipHttpUtil;
-import com.nd.hilauncherdev.framework.view.bubble.LauncherBubbleView;
+import com.bitants.launcherdev.framework.view.bubble.LauncherBubbleView;
 import com.bitants.launcherdev.kitset.Analytics.AnalyticsConstant;
 import com.bitants.launcherdev.kitset.Analytics.HiAnalytics;
 import com.bitants.launcherdev.kitset.config.ConfigPreferences;
@@ -39,11 +39,11 @@ import com.bitants.launcherdev.launcher.LauncherViewHelper;
 import com.bitants.launcherdev.launcher.WorkspaceHelper;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.nd.hilauncherdev.push.model.CompaigPushInfo;
-import com.nd.hilauncherdev.push.model.NotifyPushInfo;
-import com.nd.hilauncherdev.push.model.ServerConfigInfo;
+import com.bitants.launcherdev.push.model.CompaigPushInfo;
+import com.bitants.launcherdev.push.model.NotifyPushInfo;
+import com.bitants.launcherdev.push.model.ServerConfigInfo;
 import com.bitants.launcherdev.uri.UriActions;
-import com.bitants.launcherdev.webconnect.downloadmanage.model.filetype.FileType;
+//import com.bitants.launcherdev.webconnect.downloadmanage.model.filetype.FileType;
 import com.bitants.launcher.R;
 
 /**
@@ -249,8 +249,8 @@ public class PushSDKAdapter extends PushSDKAdapterInterface {
 	 */
 	@Override
 	public void redirectToDownloadManager(String title, String name, String pkgName, String downloadUrl, String iconPath, int sp) {
-		UriActions.downloadManagerAction(FileType.FILE_APK.getId(), downloadUrl, title, BaseConfig.WIFI_DOWNLOAD_PATH, name, iconPath,
-                pkgName, sp);
+//		UriActions.downloadManagerAction(FileType.FILE_APK.getId(), downloadUrl, title, BaseConfig.WIFI_DOWNLOAD_PATH, name, iconPath,
+//                pkgName, sp);
 	}
 
 	/**

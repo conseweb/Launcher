@@ -15,7 +15,7 @@ import com.bitants.launcherdev.framework.view.commonsliding.CommonLayout;
 import com.bitants.launcherdev.launcher.info.WidgetInfo;
 import com.bitants.launcherdev.launcher.support.BitmapWeakReferences;
 import com.bitants.launcher.R;
-//import com.nd.hilauncherdev.datamodel.ApplicationWeakReferences;
+//import com.bitants.launcherdev.datamodel.ApplicationWeakReferences;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonLayout;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonSlidingView;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonViewHolder;

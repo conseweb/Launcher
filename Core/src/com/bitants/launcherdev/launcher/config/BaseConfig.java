@@ -24,7 +24,7 @@ import com.bitants.launcherdev.launcher.config.preference.BaseConfigPreferences;
 import com.bitants.launcherdev.launcher.support.BaseIconCache;
 
 public class BaseConfig {
-	public static final String TAG = "com.nd.hilauncherdev";
+	public static final String TAG = "com.bitants.launcherdev";
 
 	public static final int NO_DATA = -1;
 	public static final float NO_DATA_FLOAT = -1.0f;

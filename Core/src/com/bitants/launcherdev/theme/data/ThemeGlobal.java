@@ -164,7 +164,7 @@ public class ThemeGlobal {
     /**
      * 保存在assets目录下的主题商城包名
      */
-    public final static String THEME_SHOP_PCK_NAME = "com.nd.hilauncherdev.shop3";
+    public final static String THEME_SHOP_PCK_NAME = "com.bitants.launcherdev.shop3";
     
     /**
      * 保存在apk中assets目录下的apt主题包(检测标识)
