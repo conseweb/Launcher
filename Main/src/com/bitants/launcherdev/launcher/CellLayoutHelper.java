@@ -43,7 +43,7 @@ public class CellLayoutHelper extends BaseCellLayoutHelper{
 	/**
 	 * Description: 在当前屏为添加Widget找位置
 	 * Author: guojy
-	 * Date: 2013-7-30 下午4:14:03
+	 * Date: 2014-7-30 下午3:15
 	 */
 	public static int[] findWidgetPositionCellXY(Launcher mLauncher, int spanX, int spanY, ItemInfo item){
 		CellLayout cl =  mLauncher.mWorkspace.getCurrentCellLayout();

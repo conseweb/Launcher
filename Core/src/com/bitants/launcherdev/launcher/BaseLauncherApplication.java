@@ -237,11 +237,13 @@ public class BaseLauncherApplication extends Application {
 	public BaseIconCache createIconCache(Context mContext) {
 		return new BaseIconCache(mContext);
 	}
-	
+
 	/**
 	 * 初始化异常捕获
 	 */
-	public void initCrashHandler(){
+	@Override
+	public void initCrashHandler() {
+
 	}
 	
 	/**

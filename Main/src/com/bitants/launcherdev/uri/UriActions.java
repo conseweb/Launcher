@@ -15,7 +15,7 @@ import com.bitants.launcherdev.kitset.util.StringUtil;
 /**
  * 桌面动作响应调用
  *
- * @author guojianyun
+ * @author michael
  */
 public class UriActions {
 

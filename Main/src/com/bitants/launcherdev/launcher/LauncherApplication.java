@@ -11,9 +11,12 @@ import com.bitants.launcherdev.launcher.model.load.LauncherLoaderHelper;
 import com.bitants.launcherdev.launcher.support.DBHelperFactory;
 import com.bitants.launcherdev.kitset.config.ConfigDataBaseHelper;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
+import org.acra.CrashReportingLibrary;
 
 public class LauncherApplication extends BaseLauncherApplication {
-	
+
+	private CrashReportingLibrary mCrashReporter = null;
+
 	/**
 	 * 初始化数据库辅助类
 	 */
@@ -57,15 +60,14 @@ public class LauncherApplication extends BaseLauncherApplication {
 	 */
 	@Override
 	public void initCrashHandler(){
-//		CrashHandler crashHandler = CrashHandler.getInstance();
-//		crashHandler.init(this);
+		mCrashReporter = new CrashReportingLibrary(this);
 	}
 	
 	/**
 	 * 初始化基础目录
 	 */
 	@Override
-	public void createDefaultDir(){
+	public void createDefaultDir() {
 		final String baseDir = BaseConfig.getBaseDir();
 		File dir = new File(baseDir);
 		if (!dir.isDirectory()) {
@@ -97,6 +99,10 @@ public class LauncherApplication extends BaseLauncherApplication {
 		super.loadThemeIntentData();
 //		new ThemeData().buildThemeData();
 //		ThemeManagerFactory.getInstance().setThemeManagerHelper(new LauncherThemeManagerHelper());
+	}
+
+	public CrashReportingLibrary getCrashReporter() {
+		return mCrashReporter;
 	}
 	
 }

@@ -56,20 +56,20 @@
 			android:authorities="com.bitants.launcher.settings" />
 		
 		
-		<service android:name="com.baidu.dx.personalize.theme.LocalThemeService" />
+		<!--<service android:name="com.baidu.dx.personalize.theme.LocalThemeService" />-->
         
         <!-- 应用下载，下载管理 -->
-        <service
-            android:name="com.nd.hilauncherdev.webconnect.downloadmanage.model.DownloadServerService"
-            android:exported="false" />
-        <service
-            android:name="com.bitants.launcherdev.webconnect.downloadmanage.model.PluginDownloadForwardService"
-            android:exported="false" >
-            <intent-filter>
-                <action android:name="com.mobo.launcher.FORWARD_SERVICE" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </service>
+        <!--<service-->
+            <!--android:name="com.nd.hilauncherdev.webconnect.downloadmanage.model.DownloadServerService"-->
+            <!--android:exported="false" />-->
+        <!--<service-->
+            <!--android:name="com.bitants.launcherdev.webconnect.downloadmanage.model.PluginDownloadForwardService"-->
+            <!--android:exported="false" >-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.mobo.launcher.FORWARD_SERVICE" />-->
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--</intent-filter>-->
+        <!--</service>-->
         <!-- 应用下载，下载管理   End -->
 		
 		<!-- Intent received used to install shortcuts from other applications -->
@@ -98,16 +98,16 @@
 			</intent-filter>
 		</receiver>
 		
-		<activity
-            android:name="com.bitants.launcherdev.menu.personal.AllDownloadManagerActivity"
-            android:screenOrientation="portrait" android:launchMode="singleInstance" 
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:process=":hilauncherex_shopv2_process">
-            <intent-filter>
-                <action android:name="com.mobo.launcher.downloadmanager.SHOW" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-          </activity>
+		<!--<activity-->
+            <!--android:name="com.bitants.launcherdev.menu.personal.AllDownloadManagerActivity"-->
+            <!--android:screenOrientation="portrait" android:launchMode="singleInstance" -->
+            <!--android:theme="@android:style/Theme.NoTitleBar"-->
+            <!--android:process=":hilauncherex_shopv2_process">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.mobo.launcher.downloadmanager.SHOW" />-->
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--</intent-filter>-->
+          <!--</activity>-->
           
 		<!-- 应用列表 -->
 		<activity
@@ -121,7 +121,7 @@
 		
 		<!-- 推送消息跳转处理 -->
         <activity
-            android:name="com.nd.hilauncherdev.push.PushMsgRedirectActivity"
+            android:name="com.bitants.launcherdev.push.PushMsgRedirectActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" />
         
