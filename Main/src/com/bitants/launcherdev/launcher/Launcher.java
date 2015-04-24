@@ -19,6 +19,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
+import com.avos.avoscloud.AVAnalytics;
 import com.bitants.launcherdev.theme.adaption.ThemeIconIntentAdaptation;
 import com.bitants.launcherdev.app.AppInfoIntentCommandAdapter;
 import com.bitants.launcherdev.app.CustomIntentSwitcherController;
@@ -82,6 +83,8 @@ public class Launcher extends BaseLauncher {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		// 跟踪统计应用的打开情况
+		AVAnalytics.trackAppOpened(getIntent());
 		BeansContainer.getInstance().setFolderReceiverFactory(new LauncherFolderReceiverFactory());
 	}
 

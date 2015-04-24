@@ -11,11 +11,11 @@ import com.bitants.launcherdev.launcher.model.load.LauncherLoaderHelper;
 import com.bitants.launcherdev.launcher.support.DBHelperFactory;
 import com.bitants.launcherdev.kitset.config.ConfigDataBaseHelper;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
-import org.acra.CrashReportingLibrary;
+//import org.acra.CrashReportingLibrary;
 
 public class LauncherApplication extends BaseLauncherApplication {
 
-	private CrashReportingLibrary mCrashReporter = null;
+//	private CrashReportingLibrary mCrashReporter = null;
 
 	/**
 	 * 初始化数据库辅助类
@@ -60,7 +60,7 @@ public class LauncherApplication extends BaseLauncherApplication {
 	 */
 	@Override
 	public void initCrashHandler(){
-		mCrashReporter = new CrashReportingLibrary(this);
+//		mCrashReporter = new CrashReportingLibrary(this);
 	}
 	
 	/**
@@ -101,8 +101,8 @@ public class LauncherApplication extends BaseLauncherApplication {
 //		ThemeManagerFactory.getInstance().setThemeManagerHelper(new LauncherThemeManagerHelper());
 	}
 
-	public CrashReportingLibrary getCrashReporter() {
-		return mCrashReporter;
-	}
+//	public CrashReportingLibrary getCrashReporter() {
+//		return mCrashReporter;
+//	}
 	
 }
