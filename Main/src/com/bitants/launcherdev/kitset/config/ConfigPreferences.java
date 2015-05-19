@@ -1,9 +1,6 @@
 package com.bitants.launcherdev.kitset.config;
 
 import android.content.SharedPreferences;
-
-import com.bitants.launcherdev.launcher.config.preference.BaseConfigPreferences;
-import com.bitants.launcherdev.launcher.config.preference.BaseConfigPreferences;
 import com.bitants.launcherdev.launcher.config.preference.BaseConfigPreferences;
 
 /**

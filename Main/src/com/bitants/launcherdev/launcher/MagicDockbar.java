@@ -1,41 +1,10 @@
 package com.bitants.launcherdev.launcher;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeMap;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Toast;
-
-import com.bitants.launcherdev.datamodel.Global;
-import com.bitants.launcherdev.folder.view.FolderBoxedViewGroup;
-import com.bitants.launcherdev.folder.view.FolderSlidingView;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.launcher.config.LauncherConfig;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
-import com.bitants.launcherdev.launcher.screens.dockbar.DockbarCellLayout;
-import com.bitants.launcherdev.launcher.touch.DragSource;
-import com.bitants.launcherdev.launcher.view.DragView;
-import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
-import com.bitants.launcherdev.launcher.view.icon.ui.impl.AppMaskTextView;
-import com.bitants.launcherdev.datamodel.Global;
-import com.bitants.launcherdev.folder.view.FolderBoxedViewGroup;
-import com.bitants.launcherdev.folder.view.FolderSlidingView;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.launcher.config.LauncherConfig;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
-import com.bitants.launcherdev.launcher.screens.dockbar.DockbarCellLayout;
-import com.bitants.launcherdev.launcher.touch.DragSource;
-import com.bitants.launcherdev.launcher.view.DragView;
-import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
-import com.bitants.launcherdev.launcher.view.icon.ui.impl.AppMaskTextView;
 import com.bitants.launcher.R;
 import com.bitants.launcherdev.datamodel.Global;
 import com.bitants.launcherdev.folder.view.FolderBoxedViewGroup;
@@ -49,6 +18,8 @@ import com.bitants.launcherdev.launcher.touch.DragSource;
 import com.bitants.launcherdev.launcher.view.DragView;
 import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
 import com.bitants.launcherdev.launcher.view.icon.ui.impl.AppMaskTextView;
+
+import java.util.*;
 
 
 public class MagicDockbar extends BaseMagicDockbar {
@@ -69,6 +40,7 @@ public class MagicDockbar extends BaseMagicDockbar {
 	@Override
 	public boolean acceptDrop(DragSource source, int x, int y, int xOffset, int yOffset, DragView dragView, Object dragInfo) {
 		//从匣子或文件夹拖出判断
+		Context mContext = getContext();
 		if(source instanceof FolderSlidingView){
 			View v = dragView.getDragingView();
 			if(!(v instanceof FolderBoxedViewGroup
@@ -82,6 +54,7 @@ public class MagicDockbar extends BaseMagicDockbar {
 		return super.acceptDrop(source, x, y, xOffset, yOffset, dragView, dragInfo);
 	}
 	public void setDockBarNum(int num){
+		Context mContext = getContext();
 		int childnum  = this.getChildCount();
 		if (num <= 0) {
 			return;

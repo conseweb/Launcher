@@ -1,26 +1,17 @@
 package com.bitants.launcherdev.framework.httplib;
 
-import java.io.IOException;
-import java.net.URLEncoder;
-
-import javax.xml.parsers.FactoryConfigurationError;
-import javax.xml.parsers.ParserConfigurationException;
-
-import com.bitants.launcherdev.kitset.util.DocumentHelper;
-import com.bitants.launcherdev.kitset.util.StringUtil;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
+import android.content.Context;
+import com.bitants.launcherdev.kitset.Analytics.HiAnalytics;
 import com.bitants.launcherdev.kitset.util.DocumentHelper;
 import com.bitants.launcherdev.kitset.util.StringUtil;
 import com.bitants.launcherdev.kitset.util.TelephoneUtil;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
-import android.content.Context;
-
-import com.bitants.launcherdev.kitset.Analytics.HiAnalytics;
-import com.bitants.launcherdev.kitset.util.DocumentHelper;
-import com.bitants.launcherdev.kitset.util.StringUtil;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
+import javax.xml.parsers.FactoryConfigurationError;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
+import java.net.URLEncoder;
 
 /**
  * 服务端接口交互类 </br>

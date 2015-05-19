@@ -1,13 +1,12 @@
 package com.bitants.launcherdev.app;
 
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.util.Log;
-
 import com.bitants.launcherdev.kitset.util.StringUtil;
 import com.bitants.launcherdev.launcher.LauncherSettings.Favorites;
 import com.bitants.launcherdev.launcher.info.ApplicationInfo;
+
+import java.util.ArrayList;
 
 /**
  * 自定义快捷方式开关控制器 负责自定义快捷方式的跳转

@@ -2,9 +2,6 @@ package com.bitants.launcherdev.basecontent;
 
 import android.app.Activity;
 import android.os.Bundle;
-
-import com.bitants.launcherdev.kitset.Analytics.HiAnalytics;
-import com.bitants.launcherdev.kitset.Analytics.HiAnalytics;
 import com.bitants.launcherdev.kitset.Analytics.HiAnalytics;
 
 /**

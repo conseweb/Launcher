@@ -1,20 +1,14 @@
 package com.bitants.launcherdev.launcher.appslist.utils;
 
-import java.util.Locale;
-
 import android.graphics.drawable.Drawable;
 import android.view.View;
-
-import com.bitants.launcherdev.launcher.appslist.search.MatchType;
-import com.bitants.launcherdev.launcher.appslist.search.StringUtil;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
 import com.bitants.launcherdev.launcher.appslist.search.MatchType;
 import com.bitants.launcherdev.launcher.appslist.search.PyEntity;
 import com.bitants.launcherdev.launcher.appslist.search.StringUtil;
 import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.appslist.search.MatchType;
-import com.bitants.launcherdev.launcher.appslist.search.StringUtil;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
+
+import java.util.Locale;
+
 
 public class CellLayoutItem {
 	public String shortPy; // 姓名简拼

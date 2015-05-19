@@ -1,27 +1,17 @@
 package com.bitants.launcherdev.folder.model;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.List;
-
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.view.View;
-
-import com.bitants.launcherdev.kitset.GpuControler;
-import com.bitants.launcherdev.kitset.util.*;
-import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
-import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.app.SerializableAppInfo;
 import com.bitants.launcherdev.framework.view.BaseLineLightBar;
 import com.bitants.launcherdev.kitset.GpuControler;
+import com.bitants.launcherdev.kitset.util.AndroidPackageUtils;
+import com.bitants.launcherdev.kitset.util.BaseBitmapUtils;
+import com.bitants.launcherdev.kitset.util.ScreenUtil;
+import com.bitants.launcherdev.kitset.util.ThreadUtil;
 import com.bitants.launcherdev.launcher.Launcher;
 import com.bitants.launcherdev.launcher.LauncherSettings.Favorites;
 import com.bitants.launcherdev.launcher.info.ApplicationInfo;
@@ -30,15 +20,8 @@ import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
 import com.bitants.launcherdev.launcher.screens.CellLayout;
 import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
 import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
-import com.bitants.launcher.R;
-import com.bitants.launcherdev.kitset.GpuControler;
-import com.bitants.launcherdev.kitset.util.ScreenUtil;
-import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
-import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
+
+import java.util.*;
 
 /**
  * 桌面打开文件夹逻辑类

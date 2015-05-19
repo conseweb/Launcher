@@ -2,7 +2,6 @@ package com.bitants.launcherdev.datamodel.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-
 import com.bitants.launcherdev.core.model.AbstractDataBase;
 //import com.bitants.launcherdev.webconnect.downloadmanage.model.DownloadLogTable;
 

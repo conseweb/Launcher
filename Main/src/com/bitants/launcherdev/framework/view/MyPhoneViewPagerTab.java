@@ -1,10 +1,5 @@
 package com.bitants.launcherdev.framework.view;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Canvas;
@@ -19,13 +14,15 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-
-import com.bitants.launcherdev.kitset.util.ScreenUtil;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.datamodel.CommonGlobal;
 import com.bitants.launcherdev.kitset.util.ColorUtil;
 import com.bitants.launcherdev.kitset.util.ScreenUtil;
-import com.bitants.launcher.R;
-import com.bitants.launcherdev.kitset.util.ScreenUtil;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 与MyPhoneViewPager联动的Tab

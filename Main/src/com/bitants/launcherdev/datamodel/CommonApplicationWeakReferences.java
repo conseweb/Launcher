@@ -1,11 +1,10 @@
 package com.bitants.launcherdev.datamodel;
 
-import java.lang.ref.WeakReference;
-
 import android.content.res.Resources;
 import android.graphics.Bitmap;
-
 import com.bitants.launcherdev.kitset.util.BitmapUtils;
+
+import java.lang.ref.WeakReference;
 
 /**
  * 全局图片缓存 <br>

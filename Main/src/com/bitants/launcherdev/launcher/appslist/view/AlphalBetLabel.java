@@ -1,8 +1,5 @@
 package com.bitants.launcherdev.launcher.appslist.view;
 
-import com.bitants.launcherdev.launcher.appslist.AppslistActivity;
-import com.bitants.launcherdev.launcher.appslist.AppslistActivity;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;

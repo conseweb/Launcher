@@ -1,20 +1,15 @@
 package com.bitants.launcherdev.launcher;
 
 import android.widget.Toast;
-
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.bitants.launcherdev.launcher.support.BaseCellLayoutHelper;
 import com.bitants.launcher.R;
 import com.bitants.launcherdev.launcher.info.ItemInfo;
 import com.bitants.launcherdev.launcher.screens.CellLayout;
+import com.bitants.launcherdev.launcher.support.BaseCellLayoutHelper;
 
 /**
  * Description: 
- * Author: guojy
- * Date: 2012-7-16 下午03:51:00
+ * Author: Michael
+ * Date: 2014-8-26 
  */
 public class CellLayoutHelper extends BaseCellLayoutHelper{
 
@@ -23,8 +18,8 @@ public class CellLayoutHelper extends BaseCellLayoutHelper{
 	
 	/**
 	 * Description: 在当前屏为添加app找位置
-	 * Author: guojy
-	 * Date: 2013-7-30 下午4:14:03
+	 * Author: Michael
+	 * Date: 2013-7-30
 	 */
 	public static int[] findPositionCellXY(Launcher mLauncher){
 		CellLayout cl =  mLauncher.mWorkspace.getCurrentCellLayout();
@@ -42,8 +37,8 @@ public class CellLayoutHelper extends BaseCellLayoutHelper{
 	
 	/**
 	 * Description: 在当前屏为添加Widget找位置
-	 * Author: guojy
-	 * Date: 2014-7-30 下午3:15
+	 * Author: Michael
+	 * Date: 2014-7-23 
 	 */
 	public static int[] findWidgetPositionCellXY(Launcher mLauncher, int spanX, int spanY, ItemInfo item){
 		CellLayout cl =  mLauncher.mWorkspace.getCurrentCellLayout();

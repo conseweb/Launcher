@@ -6,14 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.view.View;
-
-import com.bitants.launcherdev.kitset.util.SystemUtil;
-import com.bitants.launcherdev.kitset.util.AndroidPackageUtils;
-import com.bitants.launcherdev.kitset.util.AndroidPackageUtils;
-import com.bitants.launcherdev.kitset.util.SystemUtil;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
 import com.bitants.launcher.R;
+import com.bitants.launcherdev.kitset.util.AndroidPackageUtils;
 import com.bitants.launcherdev.kitset.util.SystemUtil;
 import com.bitants.launcherdev.launcher.info.ApplicationInfo;
 import com.bitants.launcherdev.launcher.model.BaseLauncherModel;

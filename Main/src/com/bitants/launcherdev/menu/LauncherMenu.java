@@ -1,9 +1,5 @@
 package com.bitants.launcherdev.menu;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.WeakHashMap;
-
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -12,15 +8,16 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
-
-import com.bitants.launcherdev.launcher.Launcher;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.launcher.Launcher;
 import com.bitants.launcherdev.launcher.Workspace;
 import com.bitants.launcherdev.launcher.edit.LauncherEditView;
 import com.bitants.launcherdev.launcher.screens.BaseLauncherMenu;
 import com.bitants.launcherdev.settings.HomeSettingsActivity;
-import com.bitants.launcher.R;
-import com.bitants.launcherdev.launcher.Launcher;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.WeakHashMap;
 
 public class LauncherMenu extends BaseLauncherMenu{
 	private MenuAdapter firScreenAdapter;

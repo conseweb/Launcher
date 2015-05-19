@@ -1,40 +1,23 @@
 package com.bitants.launcherdev.launcher.edit;
 
+import android.content.Context;
+import android.content.res.Resources;
+import android.os.Environment;
+import com.bitants.launcher.R;
+import com.bitants.launcherdev.framework.effect.EffectConfig;
+import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
+import com.bitants.launcherdev.kitset.util.FileUtil;
+import com.bitants.launcherdev.kitset.util.TelephoneUtil;
+import com.bitants.launcherdev.launcher.edit.data.*;
+import com.bitants.launcherdev.widget.LauncherWidgetInfo;
+import com.bitants.launcherdev.widget.LauncherWidgetInfoManager;
+
 import java.io.File;
 import java.io.FilenameFilter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
-import android.content.Context;
-import android.content.res.Resources;
-import android.os.Environment;
-
-import com.bitants.launcherdev.framework.effect.EffectConfig;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditEffectItemInfo;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditIndividalItemInfo;
-import com.bitants.launcherdev.widget.LauncherWidgetInfo;
-import com.bitants.launcherdev.framework.effect.EffectConfig;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
-import com.bitants.launcherdev.kitset.util.FileUtil;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditAddItemInfo;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditEffectItemInfo;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditIndividalItemInfo;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditThemeItemInfo;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditWallpaperItemInfo;
-import com.bitants.launcherdev.widget.LauncherWidgetInfo;
-import com.bitants.launcherdev.widget.LauncherWidgetInfoManager;
-import com.bitants.launcher.R;
-import com.bitants.launcherdev.framework.effect.EffectConfig;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditEffectItemInfo;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditIndividalItemInfo;
-import com.bitants.launcherdev.widget.LauncherWidgetInfo;
 
 /**
  * 编辑模式添加数据集数据

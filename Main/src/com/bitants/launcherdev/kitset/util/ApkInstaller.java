@@ -1,21 +1,21 @@
 package com.bitants.launcherdev.kitset.util;
 
-import java.io.File;
-
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
-
-//import com.bitants.launcherdev.webconnect.downloadmanage.model.DownloadServerServiceConnection;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.datamodel.db.MyPhoneDB;
 import com.bitants.launcherdev.framework.ViewFactory;
 import com.bitants.launcherdev.framework.view.dialog.CommonDialog;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
+
+import java.io.File;
+
 //import com.bitants.launcherdev.webconnect.downloadmanage.model.DownloadServerServiceConnection;
-import com.bitants.launcher.R;
+//import com.bitants.launcherdev.webconnect.downloadmanage.model.DownloadServerServiceConnection;
 //import com.bitants.launcherdev.webconnect.downloadmanage.model.DownloadServerServiceConnection;
 
 /**

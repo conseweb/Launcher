@@ -1,29 +1,12 @@
 package com.bitants.launcherdev.launcher;
 
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.bitants.launcherdev.framework.AnyCallbacks;
-import com.bitants.launcherdev.framework.view.commonsliding.CommonLightbar;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.launcher.config.ConfigFactory;
-import com.bitants.launcherdev.launcher.config.preference.BaseConfigPreferences;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.info.PandaWidgetInfo;
-import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.bitants.launcherdev.launcher.screens.dockbar.LightBarInterface;
-import com.bitants.launcherdev.launcher.screens.dockbar.MagicDockbarRelativeLayout;
-import com.bitants.launcherdev.launcher.screens.preview.PreviewEditAdvancedController;
-import com.bitants.launcherdev.launcher.touch.DragScroller;
-import com.bitants.launcherdev.launcher.touch.DropTarget;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.folder.model.FolderHelper;
-import com.bitants.launcherdev.framework.AnyCallbacks.OnFolderDragOutCallback;
+import com.bitants.launcherdev.framework.AnyCallbacks;
 import com.bitants.launcherdev.framework.view.bubble.LauncherBubbleManager;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonLightbar;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
@@ -41,22 +24,8 @@ import com.bitants.launcherdev.launcher.screens.dockbar.MagicDockbarRelativeLayo
 import com.bitants.launcherdev.launcher.screens.preview.PreviewEditAdvancedController;
 import com.bitants.launcherdev.launcher.touch.DragScroller;
 import com.bitants.launcherdev.launcher.touch.DropTarget;
-import com.bitants.launcher.R;
-import com.bitants.launcherdev.framework.AnyCallbacks;
-import com.bitants.launcherdev.framework.view.commonsliding.CommonLightbar;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.launcher.config.ConfigFactory;
-import com.bitants.launcherdev.launcher.config.preference.BaseConfigPreferences;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.info.PandaWidgetInfo;
-import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.bitants.launcherdev.launcher.screens.dockbar.LightBarInterface;
-import com.bitants.launcherdev.launcher.screens.dockbar.MagicDockbarRelativeLayout;
-import com.bitants.launcherdev.launcher.screens.preview.PreviewEditAdvancedController;
-import com.bitants.launcherdev.launcher.touch.DragScroller;
-import com.bitants.launcherdev.launcher.touch.DropTarget;
+
+import java.util.ArrayList;
 
 public class Workspace extends ScreenViewGroup implements DragScroller, AnyCallbacks.OnFolderDragOutCallback {
 	
@@ -69,7 +38,8 @@ public class Workspace extends ScreenViewGroup implements DragScroller, AnyCallb
 
 	public Workspace(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
-		
+
+		Context mContext = getContext();
 		
 		mDefaultScreen = BaseConfigPreferences.getInstance().getDefaultScreen(ScreenViewGroup.DEFAULT_SCREEN);
 		int count = ConfigFactory.getScreenCount(mContext);
@@ -200,6 +170,7 @@ public class Workspace extends ScreenViewGroup implements DragScroller, AnyCallb
 	
 	@Override
 	public void inflateSpringLightbar() {
+        Context mContext = getContext();
 		if (springLightbar != null) {
 			return;
 		}

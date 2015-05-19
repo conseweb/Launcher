@@ -1,24 +1,19 @@
 package com.bitants.launcherdev.integratefoler;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
+import android.widget.*;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.integratefoler.model.PromotionAppInfo;
 import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcher.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PromotionLayout extends ViewGroup {
 

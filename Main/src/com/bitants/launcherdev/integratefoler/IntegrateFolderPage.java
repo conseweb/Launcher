@@ -1,18 +1,11 @@
 package com.bitants.launcherdev.integratefoler;
 
-import java.util.List;
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.MotionEvent;
-import android.view.VelocityTracker;
-import android.view.View;
-import android.view.ViewConfiguration;
-import android.view.ViewGroup;
+import android.view.*;
 import android.widget.Scroller;
-
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.launcher.DragController;
 import com.bitants.launcherdev.launcher.Launcher;
 import com.bitants.launcherdev.launcher.info.ApplicationInfo;
@@ -20,7 +13,8 @@ import com.bitants.launcherdev.launcher.info.FolderInfo;
 import com.bitants.launcherdev.launcher.support.BaseLauncherViewHelper;
 import com.bitants.launcherdev.launcher.touch.DragSource;
 import com.bitants.launcherdev.launcher.view.DragView;
-import com.bitants.launcher.R;
+
+import java.util.List;
 
 public class IntegrateFolderPage extends ViewGroup {
 	protected static final String TAG = "IntegrateFolderPage";

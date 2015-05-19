@@ -1,8 +1,5 @@
 package com.bitants.launcherdev.launcher;
 
-import java.io.File;
-import java.util.List;
-
 import android.app.NotificationManager;
 import android.app.Service;
 import android.app.WallpaperManager;
@@ -18,9 +15,8 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-
 import com.avos.avoscloud.AVAnalytics;
-import com.bitants.launcherdev.theme.adaption.ThemeIconIntentAdaptation;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.app.AppInfoIntentCommandAdapter;
 import com.bitants.launcherdev.app.CustomIntentSwitcherController;
 import com.bitants.launcherdev.app.IntentCommand;
@@ -54,8 +50,9 @@ import com.bitants.launcherdev.push.PushManager;
 import com.bitants.launcherdev.push.PushSDKAdapter;
 import com.bitants.launcherdev.theme.adaption.ThemeIconIntentAdaptation;
 import com.bitants.launcherdev.util.ActivityActionUtil;
-import com.bitants.launcher.R;
-import com.bitants.launcherdev.theme.adaption.ThemeIconIntentAdaptation;
+
+import java.io.File;
+import java.util.List;
 
 public class Launcher extends BaseLauncher {
 
@@ -173,8 +170,8 @@ public class Launcher extends BaseLauncher {
 	
 	/**
 	 * 新建文件夹 <br>
-	 * Author:ryan <br>
-	 * Date:2012-5-21下午07:58:35
+	 * Author: Michael <br>
+	 * Date:2013-3-12 
 	 */
 	public FolderIconTextView addFolder(CellLayout layout, long container, final int screen, int cellX, int cellY, String folderTitle) {
 		int[] cellXY = new int[]{cellX, cellY};
@@ -244,7 +241,7 @@ public class Launcher extends BaseLauncher {
 				if (mWorkspace.isOnSpringMode()) {
 					handleBack = true;
 					/**
-					 * add by cxt 编辑情况下，返回键特殊处理
+					 *  编辑情况下，返回键特殊处理
 					 */
 //					if (editor != null && editor.getLauncherEditWidgetTopLayout().getVisibility() == View.VISIBLE) {
 //						if(editor != null){
@@ -626,7 +623,7 @@ public class Launcher extends BaseLauncher {
 		}
 		startActivity(intent);
 		//杀死进程
-		NotificationManager nManager = (NotificationManager) this.getSystemService(NOTIFICATION_SERVICE);
+		NotificationManager nManager = (NotificationManager) this.getSystemService(Service.NOTIFICATION_SERVICE);
 		nManager.cancelAll();
 		android.os.Process.killProcess(android.os.Process.myPid());
 	}

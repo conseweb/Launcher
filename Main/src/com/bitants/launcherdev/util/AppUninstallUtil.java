@@ -1,8 +1,6 @@
 package com.bitants.launcherdev.util;
 
-import com.bitants.launcherdev.launcher.Launcher;
 import com.bitants.launcherdev.kitset.util.AndroidPackageUtils;
-import com.bitants.launcherdev.launcher.Launcher;
 import com.bitants.launcherdev.launcher.Launcher;
 
 

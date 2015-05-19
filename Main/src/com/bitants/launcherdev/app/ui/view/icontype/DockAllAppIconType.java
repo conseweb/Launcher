@@ -8,21 +8,12 @@ package com.bitants.launcherdev.app.ui.view.icontype;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Handler;
-
-import com.bitants.launcherdev.kitset.util.BitmapUtils;
-import com.bitants.launcherdev.launcher.view.icon.icontype.IconType;
-import com.bitants.launcherdev.launcher.view.icon.ui.LauncherIconViewConfig;
-import com.bitants.launcherdev.theme.data.ThemeData;
 import com.bitants.launcherdev.kitset.util.BitmapUtils;
 import com.bitants.launcherdev.launcher.LauncherSettings.Favorites;
 import com.bitants.launcherdev.launcher.info.ApplicationInfo;
 import com.bitants.launcherdev.launcher.view.icon.icontype.IconType;
 import com.bitants.launcherdev.launcher.view.icon.ui.LauncherIconViewConfig;
 import com.bitants.launcherdev.theme.ThemeManagerFactory;
-import com.bitants.launcherdev.theme.data.ThemeData;
-import com.bitants.launcherdev.kitset.util.BitmapUtils;
-import com.bitants.launcherdev.launcher.view.icon.icontype.IconType;
-import com.bitants.launcherdev.launcher.view.icon.ui.LauncherIconViewConfig;
 import com.bitants.launcherdev.theme.data.ThemeData;
 
 /**

@@ -1,12 +1,11 @@
 package com.bitants.launcherdev.settings;
 
-import com.bitants.launcher.R;
-
 import android.content.Context;
 import android.preference.PreferenceCategory;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
+import com.bitants.launcher.R;
 /**
  * 将自定义分隔栏样式提升到CommonLibrary包。
  * <p>Title: PromptPreferenceCategory</p>

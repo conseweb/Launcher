@@ -1,7 +1,6 @@
 package com.bitants.launcherdev.launcher.edit.data;
 
 import android.content.Context;
-
 import com.bitants.launcher.R;
 
 

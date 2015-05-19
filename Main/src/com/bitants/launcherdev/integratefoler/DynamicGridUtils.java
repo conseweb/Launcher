@@ -1,8 +1,8 @@
 package com.bitants.launcherdev.integratefoler;
 
-import java.util.List;
-
 import android.view.View;
+
+import java.util.List;
 
 
 public class DynamicGridUtils {

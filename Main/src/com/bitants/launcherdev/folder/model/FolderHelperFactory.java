@@ -1,10 +1,7 @@
 package com.bitants.launcherdev.folder.model;
 
 import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.folder.model.IFolderHelper;
-import com.bitants.launcherdev.launcher.Launcher;
 import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
-import com.bitants.launcherdev.launcher.Launcher;
 
 /** 
  * 类说明:文件夹打开逻辑类工厂

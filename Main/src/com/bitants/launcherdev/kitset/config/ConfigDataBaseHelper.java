@@ -2,7 +2,6 @@ package com.bitants.launcherdev.kitset.config;
 
 
 import android.database.sqlite.SQLiteDatabase;
-
 import com.bitants.launcherdev.launcher.support.DBHelperFactory;
 import com.bitants.launcherdev.push.PushMsgHandler;
 

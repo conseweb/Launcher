@@ -1,7 +1,5 @@
 package com.bitants.launcherdev.launcher.appslist.view;
 
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -15,10 +13,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import com.bitants.launcherdev.launcher.appslist.AppslistActivity;
 
-import com.bitants.launcherdev.launcher.appslist.AppslistActivity;
-import com.bitants.launcherdev.launcher.appslist.AppslistActivity;
-import com.bitants.launcherdev.launcher.appslist.AppslistActivity;
+import java.util.ArrayList;
 
 public class ScrollAlphalbetView extends ImageView {
 	private Paint paint = null;

@@ -2,7 +2,6 @@ package com.bitants.launcherdev.app;
 
 import android.content.Context;
 import android.database.Cursor;
-
 import com.bitants.launcherdev.launcher.config.db.ConfigDataBase;
 import com.bitants.launcherdev.launcher.config.db.DefaultLauncherTable;
 

@@ -1,16 +1,6 @@
 package com.bitants.launcherdev.launcher;
 
-import static android.util.Log.e;
-
-import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.List;
-
-import android.content.ComponentName;
-import android.content.ContentProviderClient;
-import android.content.ContentResolver;
-import android.content.Context;
-import android.content.Intent;
+import android.content.*;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.os.RemoteException;
@@ -18,11 +8,12 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
-import com.bitants.launcherdev.launcher.info.*;
-import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
 import com.bitants.launcherdev.datamodel.Global;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
+import com.bitants.launcherdev.launcher.info.ApplicationInfo;
+import com.bitants.launcherdev.launcher.info.FolderInfo;
+import com.bitants.launcherdev.launcher.info.ItemInfo;
+import com.bitants.launcherdev.launcher.info.WidgetInfo;
 import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
 import com.bitants.launcherdev.launcher.model.load.Callbacks;
 import com.bitants.launcherdev.launcher.model.load.DeferredHandler;
@@ -34,10 +25,13 @@ import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
 import com.bitants.launcherdev.launcher.support.BaseIconCache;
 import com.bitants.launcherdev.launcher.support.BaseLauncherViewHelper;
 import com.bitants.launcherdev.launcher.touch.DropTarget;
-import com.bitants.launcherdev.launcher.touch.DropTarget;
 import com.bitants.launcherdev.launcher.view.icon.ui.impl.IconMaskTextView;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
+
+import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.List;
+
+import static android.util.Log.e;
 
 public class LauncherLoaderHelperImpl extends LauncherLoaderHelper{
 

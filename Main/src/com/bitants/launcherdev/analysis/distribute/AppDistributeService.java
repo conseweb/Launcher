@@ -4,9 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import com.bitants.launcherdev.kitset.util.StringUtil;
-import com.bitants.launcherdev.kitset.util.StringUtil;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.kitset.util.StringUtil;
 
 /**
  * description: 应用分发对外接口<br/>

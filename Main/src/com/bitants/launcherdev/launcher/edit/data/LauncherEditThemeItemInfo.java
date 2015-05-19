@@ -1,12 +1,8 @@
 package com.bitants.launcherdev.launcher.edit.data;
 
 import android.content.Context;
-
-import com.bitants.launcherdev.theme.data.ThemeType;
-import com.bitants.launcherdev.theme.data.ThemeGlobal;
-import com.bitants.launcherdev.theme.data.ThemeGlobal;
-import com.bitants.launcherdev.theme.data.ThemeType;
 import com.bitants.launcher.R;
+import com.bitants.launcherdev.theme.data.ThemeGlobal;
 import com.bitants.launcherdev.theme.data.ThemeType;
 
 /**

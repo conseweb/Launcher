@@ -1,22 +1,18 @@
 package com.bitants.launcherdev.folder;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.os.Looper;
 import android.os.MessageQueue.IdleHandler;
-
-import com.bitants.launcherdev.launcher.info.FolderInfo;
 import com.bitants.launcherdev.kitset.util.ThreadUtil;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.launcher.info.ApplicationInfo;
 import com.bitants.launcherdev.launcher.info.FolderInfo;
 import com.bitants.launcherdev.launcher.view.icon.ui.folder.BaseFolderReceiver;
-import com.bitants.launcherdev.launcher.view.icon.ui.folder.BaseFolderReceiver;
 import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
 import com.bitants.launcherdev.util.UIHandlerFactory;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FolderIconReceiver extends BaseFolderReceiver {
 

@@ -1,9 +1,9 @@
 package com.bitants.launcherdev.launcher.appslist.search;
 
+import com.bitants.launcherdev.launcher.appslist.utils.CellLayoutItem;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import com.bitants.launcherdev.launcher.appslist.utils.CellLayoutItem;
 
 public class ContactSearch {
 	/**

@@ -1,29 +1,12 @@
 package com.bitants.launcherdev.launcher;
 
-import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-
-import android.content.ContentProviderOperation;
+import android.content.*;
 import android.content.ContentProviderOperation.Builder;
-import android.content.ContentResolver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.OperationApplicationException;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.RemoteException;
 import android.util.Log;
-
-import com.bitants.launcherdev.datamodel.Global;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
-import com.bitants.launcherdev.launcher.support.BaseIconCache;
 import com.bitants.launcherdev.datamodel.Global;
 import com.bitants.launcherdev.launcher.LauncherSettings.Favorites;
 import com.bitants.launcherdev.launcher.info.ApplicationInfo;
@@ -31,12 +14,12 @@ import com.bitants.launcherdev.launcher.info.FolderInfo;
 import com.bitants.launcherdev.launcher.info.ItemInfo;
 import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
 import com.bitants.launcherdev.launcher.support.BaseIconCache;
-import com.bitants.launcherdev.datamodel.Global;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
-import com.bitants.launcherdev.launcher.support.BaseIconCache;
+
+import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 public class LauncherModel extends BaseLauncherModel {
 	static final String TAG = "LauncherModel";
@@ -154,7 +137,7 @@ public class LauncherModel extends BaseLauncherModel {
 	
 	/**
 	 * 批量更新应用项名称
-	 * @author wangguomei
+	 * @author Michael
 	 */
 	public static void batchUpdateItemTitleById(Context context, List<ApplicationInfo> items) {
 		

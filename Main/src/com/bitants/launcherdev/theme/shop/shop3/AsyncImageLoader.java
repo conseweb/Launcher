@@ -1,20 +1,17 @@
 package com.bitants.launcherdev.theme.shop.shop3;
 
-import java.io.File;
-import java.lang.ref.WeakReference;
-import java.util.HashMap;
-
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-
-import com.bitants.launcherdev.theme.data.ThemeFormart;
 import com.bitants.launcherdev.kitset.util.FileUtil;
 import com.bitants.launcherdev.kitset.util.ThreadUtil;
 import com.bitants.launcherdev.theme.data.ThemeFormart;
 import com.bitants.launcherdev.theme.shop.shopGlobal;
-import com.bitants.launcherdev.theme.data.ThemeFormart;
+
+import java.io.File;
+import java.lang.ref.WeakReference;
+import java.util.HashMap;
 
 /**
  * 模式:使用线程池为每个异步加载的图片提供服务

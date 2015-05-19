@@ -5,7 +5,6 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
-
 import com.bitants.launcher.R;
 
 public class AppListItemView extends LinearLayout {

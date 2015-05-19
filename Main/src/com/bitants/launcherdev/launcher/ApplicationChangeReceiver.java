@@ -3,7 +3,6 @@ package com.bitants.launcherdev.launcher;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
-
 import com.bitants.launcherdev.launcher.broadcast.HiBroadcastStaticReceiver;
 
 public class ApplicationChangeReceiver extends HiBroadcastStaticReceiver {
@@ -29,7 +28,7 @@ public class ApplicationChangeReceiver extends HiBroadcastStaticReceiver {
 				
 			} else if (Intent.ACTION_PACKAGE_REMOVED.equals(action)) {
 				if (!replacing) {
-					// 桌面未启动的情况，删除应用程序桌面上相关图标 caizp 2013-3-3
+					// 桌面未启动的情况，删除应用程序桌面上相关图标 
 					ContentResolver cr = ctx.getContentResolver();
 					String where = LauncherSettings.Favorites.INTENT + " like ?";
 					String[] selectionArgs = { "%" + packageName + "%" };

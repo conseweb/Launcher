@@ -1,13 +1,11 @@
 package com.bitants.launcherdev.app;
 
-import com.bitants.launcherdev.kitset.util.SystemUtil;
-import com.bitants.launcherdev.kitset.util.SystemUtil;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import com.bitants.launcherdev.kitset.util.SystemUtil;
+
 
 public class AppResolverSelectActivity extends Activity {
 
@@ -41,7 +39,7 @@ public class AppResolverSelectActivity extends Activity {
 //		isAlwaysSelect = intent.getBooleanExtra("is_always_select", false);
 //		isSetDefaultMode = intent.getBooleanExtra("is_set_default_mode", false);
 		intent.setComponent(null);
-		//修改为使用系统打开方式 caizp 2013-6-3
+		// 使用系统打开
 		SystemUtil.startActivitySafely(mContext, intent);
 		finish();
 	}

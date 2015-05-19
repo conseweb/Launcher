@@ -1,18 +1,15 @@
 package com.bitants.launcherdev.menu;
 
-import java.util.List;
-
-import com.bitants.launcherdev.view.FontableTextView;
-import com.bitants.launcherdev.view.FontableTextView;
-import com.bitants.launcher.R;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.view.FontableTextView;
+
+import java.util.List;
 
 /**
  * 菜单Adapter

@@ -9,10 +9,9 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewTreeObserver.OnPreDrawListener;
-
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.kitset.util.StringUtil;
 import com.bitants.launcherdev.launcher.appslist.AppslistActivity;
-import com.bitants.launcher.R;
 
 public class BubbleTextView extends View {
 	private Paint paint;

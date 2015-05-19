@@ -1,33 +1,11 @@
 package com.bitants.launcherdev.folder.view;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.bitants.launcherdev.framework.view.commonsliding.CommonLayout;
-import com.bitants.launcherdev.framework.view.commonsliding.CommonViewHolder;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonData;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
-import com.bitants.launcherdev.framework.view.draggersliding.DraggerChooseItem;
-import com.bitants.launcherdev.framework.view.draggersliding.DraggerSlidingView;
-import com.bitants.launcherdev.launcher.DeleteZoneTextView;
-import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.screens.DeleteZone;
-import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
-import com.bitants.launcherdev.launcher.touch.DragSource;
-import com.bitants.launcherdev.launcher.touch.DropTarget;
-import com.bitants.launcherdev.launcher.view.DragView;
-import com.bitants.launcherdev.launcher.view.icon.ui.impl.AppMaskTextView;
-import com.bitants.launcherdev.folder.model.FolderHelper;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.folder.model.FolderHelper;
 import com.bitants.launcherdev.folder.model.FolderSwitchController;
 import com.bitants.launcherdev.framework.AnyCallbacks.OnFolderDragOutCallback;
@@ -40,24 +18,6 @@ import com.bitants.launcherdev.framework.view.draggersliding.DraggerSlidingView;
 import com.bitants.launcherdev.launcher.DeleteZoneTextView;
 import com.bitants.launcherdev.launcher.Launcher;
 import com.bitants.launcherdev.launcher.config.preference.BaseSettingsPreference;
-import com.bitants.launcherdev.launcher.config.preference.BaseSettingsPreference;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.screens.DeleteZone;
-import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
-import com.bitants.launcherdev.launcher.touch.DragSource;
-import com.bitants.launcherdev.launcher.view.DragView;
-import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
-import com.bitants.launcherdev.launcher.view.icon.ui.impl.AppMaskTextView;
-import com.bitants.launcher.R;
-import com.bitants.launcherdev.framework.view.commonsliding.CommonLayout;
-import com.bitants.launcherdev.framework.view.commonsliding.CommonViewHolder;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonData;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
-import com.bitants.launcherdev.framework.view.draggersliding.DraggerChooseItem;
-import com.bitants.launcherdev.framework.view.draggersliding.DraggerSlidingView;
-import com.bitants.launcherdev.launcher.DeleteZoneTextView;
-import com.bitants.launcherdev.launcher.Launcher;
 import com.bitants.launcherdev.launcher.info.ApplicationInfo;
 import com.bitants.launcherdev.launcher.info.FolderInfo;
 import com.bitants.launcherdev.launcher.screens.DeleteZone;
@@ -65,7 +25,13 @@ import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
 import com.bitants.launcherdev.launcher.touch.DragSource;
 import com.bitants.launcherdev.launcher.touch.DropTarget;
 import com.bitants.launcherdev.launcher.view.DragView;
+import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
 import com.bitants.launcherdev.launcher.view.icon.ui.impl.AppMaskTextView;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 /**
  * represent folder's apps view
@@ -119,6 +85,7 @@ public class FolderSlidingView extends DraggerSlidingView {
 	}
 
 	private View createViewFromLauncher(ICommonData data, int position){
+		Context mContext = getContext();
 		AppMaskTextView itv = new AppMaskTextView(mContext);
 		final ApplicationInfo info = (ApplicationInfo) data.getDataList().get(position);
 		itv.setText(info.title);
@@ -817,7 +784,6 @@ public class FolderSlidingView extends DraggerSlidingView {
 	
 	/**
 	 * 获取编辑模式下拖拽多选项中的对象
-	 * @param v
 	 * @param info
 	 * @return 若未找到则返回null
 	 */

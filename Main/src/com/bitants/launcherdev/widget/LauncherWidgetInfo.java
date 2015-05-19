@@ -2,10 +2,9 @@ package com.bitants.launcherdev.widget;
 
 import android.content.ComponentName;
 import android.graphics.drawable.Drawable;
-
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.datamodel.Global;
 import com.bitants.launcherdev.launcher.LauncherSettings;
-import com.bitants.launcher.R;
 
 /**
  * 非标小部件信息
@@ -301,7 +300,7 @@ public class LauncherWidgetInfo extends LauncherItemInfo {
 	 */
 	public static LauncherWidgetInfo makeMemoryClean1X1WidgetInfo() {
 		LauncherWidgetInfo info = new LauncherWidgetInfo();
-		info.catagoryNo = CATAGORY_CUSTOM_WIDGET;
+		info.catagoryNo = LauncherItemInfo.CATAGORY_CUSTOM_WIDGET;
 		info.type = TYPE_INSIDE;
 		info.title ="一键清理"; //Global.getApplicationContext().getString(R.string.widget_memoryclean)+"(1x1)";
 //		info.previewImage = Global.getApplicationContext().getResources().getDrawable(R.drawable.widget_panda_memory_clean);
@@ -324,7 +323,7 @@ public class LauncherWidgetInfo extends LauncherItemInfo {
 	 */
 	public static LauncherWidgetInfo makeWeatherClockWidgetInfo() {
 		LauncherWidgetInfo info = new LauncherWidgetInfo();
-		info.catagoryNo = CATAGORY_CUSTOM_WIDGET;
+		info.catagoryNo = LauncherItemInfo.CATAGORY_CUSTOM_WIDGET;
 		info.type = TYPE_INSIDE;
 		info.title ="时钟天气";
 		info.previewImageResInt = R.drawable.widget_default_preview_img;//1;R.drawable.widget_panda_memory_clean_1x1;
@@ -346,7 +345,7 @@ public class LauncherWidgetInfo extends LauncherItemInfo {
 	 */
 	public static LauncherWidgetInfo makeThemeWidgetInfo() {
 		LauncherWidgetInfo info = new LauncherWidgetInfo();
-		info.catagoryNo = CATAGORY_CUSTOM_WIDGET;
+		info.catagoryNo = LauncherItemInfo.CATAGORY_CUSTOM_WIDGET;
 		info.type = TYPE_INSIDE;
 		info.title ="美化手机";
 		info.previewImageResInt = R.drawable.widget_default_preview_img;//1;R.drawable.widget_panda_memory_clean_1x1;

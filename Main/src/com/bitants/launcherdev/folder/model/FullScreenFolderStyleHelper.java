@@ -4,39 +4,26 @@ import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.MeasureSpec;
+import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.ScaleAnimation;
 import android.widget.LinearLayout;
-
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.folder.ZscaleAnimation;
-import com.bitants.launcherdev.folder.view.FolderView;
-import com.bitants.launcherdev.kitset.util.ScreenUtil;
-import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.view.icon.ui.impl.IconMaskTextView;
-import com.bitants.launcherdev.folder.ZscaleAnimation;
-import com.bitants.launcherdev.folder.model.stylehelper.AbstractFolderStyleHelper;
 import com.bitants.launcherdev.folder.model.stylehelper.AbstractFolderStyleHelper;
 import com.bitants.launcherdev.folder.view.FolderView;
 import com.bitants.launcherdev.kitset.util.ScreenUtil;
 import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
 import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
 import com.bitants.launcherdev.launcher.view.icon.ui.impl.IconMaskTextView;
-import com.bitants.launcherdev.folder.ZscaleAnimation;
-import com.bitants.launcherdev.folder.view.FolderView;
-import com.bitants.launcherdev.kitset.util.ScreenUtil;
-import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.view.icon.ui.impl.IconMaskTextView;
 import com.nineoldandroids.animation.Animator;
+import com.nineoldandroids.animation.Animator.AnimatorListener;
 import com.nineoldandroids.animation.AnimatorSet;
 import com.nineoldandroids.animation.ObjectAnimator;
-import com.nineoldandroids.animation.Animator.AnimatorListener;
-import com.bitants.launcher.R;
 
 public class FullScreenFolderStyleHelper extends AbstractFolderStyleHelper {
 

@@ -1,8 +1,5 @@
 package com.bitants.launcherdev.launcher.edit;
 
-import java.io.File;
-import java.util.WeakHashMap;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -11,13 +8,11 @@ import android.net.Uri;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.ImageView.ScaleType;
-
-import com.bitants.launcherdev.kitset.util.ScreenUtil;
+import android.widget.TextView;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.view.RoundedDrawable;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonSlidingView;
 import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonData;
@@ -31,13 +26,13 @@ import com.bitants.launcherdev.launcher.edit.data.LauncherEditEffectItemInfo;
 import com.bitants.launcherdev.launcher.edit.data.LauncherEditThemeItemInfo;
 import com.bitants.launcherdev.launcher.edit.data.LauncherEditWallpaperItemInfo;
 import com.bitants.launcherdev.settings.SettingsPreference;
-import com.bitants.launcherdev.theme.data.ThemeData;
 import com.bitants.launcherdev.theme.data.ThemeFormart;
 import com.bitants.launcherdev.theme.data.ThemeGlobal;
 import com.bitants.launcherdev.theme.pref.ThemeSharePref;
 import com.bitants.launcherdev.widget.LauncherWidgetInfo;
-import com.bitants.launcher.R;
-import com.bitants.launcherdev.kitset.util.ScreenUtil;
+
+import java.io.File;
+import java.util.WeakHashMap;
 
 public class LauncherEditSlidingView extends CommonSlidingView {
 
@@ -130,6 +125,7 @@ public class LauncherEditSlidingView extends CommonSlidingView {
 	
 	
 	public View createWidgetItemView(ICommonData data,ICommonDataItem item) {
+		Context mContext = getContext();
 		final LauncherWidgetInfo info = (LauncherWidgetInfo) item;
 		String inCacheFlag = info.getPackageName() + "@" + info.getClassName() + "@" + info.getLayoutResName();
 		View v = widgetItemViewCache.get(inCacheFlag);
@@ -176,6 +172,7 @@ public class LauncherEditSlidingView extends CommonSlidingView {
 	
 	
 	public View createSystemWidgetItemView(ICommonDataItem item,int position) {
+        Context mContext = getContext();
 		View v = widgetItemViewCache.get(position+"");
 		if(v == null){
 			v = layoutInflater.inflate(R.layout.launcher_edit_widget_item, this, false);
@@ -190,6 +187,7 @@ public class LauncherEditSlidingView extends CommonSlidingView {
 	}
 	
 	public View createThemeItemView(ICommonDataItem item,int position) {
+        final Context mContext = getContext();
 		final LauncherEditThemeItemInfo info = (LauncherEditThemeItemInfo) item;
 		View v = themeItemViewCache.get(position);
 		if (v == null) {
@@ -272,6 +270,7 @@ public class LauncherEditSlidingView extends CommonSlidingView {
 	
 	
 	public View createWallpaperItemView(ICommonDataItem item,int position) {
+        final Context mContext = getContext();
 		final LauncherEditWallpaperItemInfo info = (LauncherEditWallpaperItemInfo) item;
 		int type = info.type;
 		View v = wallpaperItemViewCache.get(position);

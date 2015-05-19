@@ -1,23 +1,14 @@
 package com.bitants.launcherdev.widget;
 
-import java.io.IOException;
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-
-import com.bitants.launcherdev.datamodel.Global;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
-import com.bitants.launcherdev.kitset.invoke.ForeignPackage;
-import com.bitants.launcherdev.kitset.util.AndroidPackageUtils;
-import com.bitants.launcherdev.kitset.util.ComparatorUtil;
-import com.bitants.launcherdev.kitset.util.StringUtil;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.ResolveInfo;
+import android.content.res.XmlResourceParser;
+import com.android.internal.util.XmlUtils;
 import com.bitants.launcherdev.datamodel.Global;
 import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
 import com.bitants.launcherdev.kitset.invoke.ForeignPackage;
@@ -27,22 +18,9 @@ import com.bitants.launcherdev.kitset.util.StringUtil;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.content.pm.ResolveInfo;
-import android.content.res.XmlResourceParser;
-
-import com.android.internal.util.XmlUtils;
-import com.bitants.launcherdev.datamodel.Global;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
-import com.bitants.launcherdev.kitset.invoke.ForeignPackage;
-import com.bitants.launcherdev.kitset.util.AndroidPackageUtils;
-import com.bitants.launcherdev.kitset.util.ComparatorUtil;
-import com.bitants.launcherdev.kitset.util.StringUtil;
+import java.io.IOException;
+import java.lang.reflect.Field;
+import java.util.*;
 
 /**
  * 小部件数据管理类
@@ -256,20 +234,8 @@ public final class LauncherWidgetInfoManager {
 	 * 初始化忽略的小部件列表(不在匣子及下载更多的已安装中显示)
 	 */
 	private void initIngoreInstalledWidgetsData() {
-		ingoreInstalledWidgetMap.put("com.nd.android.widget.pandahome.flashlight", ""); // 手电筒
-		ingoreInstalledWidgetMap.put("com.nd.android.widget.pandahome.onekeyoffscreen", ""); // 一键关屏
-		ingoreInstalledWidgetMap.put("com.nd.android.widget.pandahome.ionekeyoffscreen", ""); // 一键关屏
-		ingoreInstalledWidgetMap.put("com.nd.android.launcher91", "");// 91桌面海外版的黄历天气
-		ingoreInstalledWidgetMap.put("com.nd.android.smarthome", "");// 安卓桌面的黄历天气
-		ingoreInstalledWidgetMap.put("com.nd.fjmobile.pandahome2", "");// 移动定制版的黄历天气
-		ingoreInstalledWidgetMap.put("com.nd.android.launcher.core", "");// 安卓桌面调试包的黄历天气
-		ingoreInstalledWidgetMap.put("com.nd.android.pandahome.hd", "");// 91桌面HD包的黄历天气
-		ingoreInstalledWidgetMap.put("com.xtouch.android.launcher", "");// 91桌面海外定制包的黄历天气
-		ingoreInstalledWidgetMap.put("com.nd.android.ilauncher", "");// 91爱桌面的黄历天气
-		ingoreInstalledWidgetMap.put("com.baidu.android.launcher", "");// 百度桌面的黄历天气
-		ingoreInstalledWidgetMap.put("com.bitants.launcher", "");// 91桌面的黄历天气
+		ingoreInstalledWidgetMap.put("com.bitants.launcher", "");// 黄历天气	
 	}
-
 	
 	/**
 	 * 91桌面内部快捷方式widget

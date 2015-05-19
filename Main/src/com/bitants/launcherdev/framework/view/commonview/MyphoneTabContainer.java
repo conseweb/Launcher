@@ -1,8 +1,5 @@
 package com.bitants.launcherdev.framework.view.commonview;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
@@ -12,14 +9,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import com.bitants.launcherdev.framework.view.MyPhoneViewPager;
-import com.bitants.launcherdev.framework.view.MyPhoneViewPagerTab;
-import com.bitants.launcherdev.framework.view.MyPhoneViewPager;
-import com.bitants.launcherdev.framework.view.MyPhoneViewPagerTab;
 import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.view.MyPhoneViewPager;
 import com.bitants.launcherdev.framework.view.MyPhoneViewPagerTab;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 我的手机统一布局

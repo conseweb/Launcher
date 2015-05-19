@@ -1,28 +1,19 @@
 package com.bitants.launcherdev.folder.model;
 
-import java.util.ArrayList;
-
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.view.View;
 import android.view.Window;
-
-import com.bitants.launcherdev.folder.view.FolderSlidingView;
-import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.app.SerializableAppInfo;
-import com.bitants.launcherdev.folder.model.IFolderHelper;
-import com.bitants.launcherdev.folder.view.FolderSlidingView;
-import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
 import com.bitants.launcher.R;
+import com.bitants.launcherdev.app.SerializableAppInfo;
 import com.bitants.launcherdev.folder.view.FolderSlidingView;
 import com.bitants.launcherdev.launcher.Launcher;
 import com.bitants.launcherdev.launcher.info.FolderInfo;
 import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
+
+import java.util.ArrayList;
 
 /** 
  * 文件操作基类

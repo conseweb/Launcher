@@ -1,21 +1,8 @@
 package com.bitants.launcherdev.launcher;
 
-import java.util.ArrayList;
-
 import android.view.View;
 import android.widget.Toast;
-
-import com.bitants.launcherdev.framework.AnyCallbacks;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.bitants.launcherdev.launcher.support.BaseCellLayoutHelper;
-import com.bitants.launcherdev.launcher.touch.BaseDragController;
-import com.bitants.launcherdev.launcher.touch.WorkspaceDragAndDropImpl;
-import com.bitants.launcherdev.launcher.view.DragView;
-import com.bitants.launcherdev.launcher.view.icon.ui.impl.IconMaskTextView;
-import com.bitants.launcherdev.folder.model.FolderHelper;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.folder.model.FolderHelper;
 import com.bitants.launcherdev.framework.AnyCallbacks.OnDragEventCallback;
 import com.bitants.launcherdev.launcher.info.ApplicationInfo;
@@ -27,19 +14,9 @@ import com.bitants.launcherdev.launcher.touch.BaseDragController;
 import com.bitants.launcherdev.launcher.touch.WorkspaceDragAndDropImpl;
 import com.bitants.launcherdev.launcher.view.DragView;
 import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
-import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
 import com.bitants.launcherdev.launcher.view.icon.ui.impl.IconMaskTextView;
-import com.bitants.launcher.R;
-import com.bitants.launcherdev.framework.AnyCallbacks;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.bitants.launcherdev.launcher.support.BaseCellLayoutHelper;
-import com.bitants.launcherdev.launcher.touch.BaseDragController;
-import com.bitants.launcherdev.launcher.touch.WorkspaceDragAndDropImpl;
-import com.bitants.launcherdev.launcher.view.DragView;
-import com.bitants.launcherdev.launcher.view.icon.ui.impl.IconMaskTextView;
+
+import java.util.ArrayList;
 
 /**
  * Description: 处理默认桌面上Workspace的拖放
@@ -66,8 +43,8 @@ public class WorkspaceDragAndDropOnDefault extends WorkspaceDragAndDropImpl {
 			appInfo = appInfo.copy();
 		}
 
-		if (dragOverView instanceof AnyCallbacks.OnDragEventCallback) {
-			((AnyCallbacks.OnDragEventCallback) dragOverView).onDropAni(dragView);
+		if (dragOverView instanceof OnDragEventCallback) {
+			((OnDragEventCallback) dragOverView).onDropAni(dragView);
 		}
 
 		if (!external) {
@@ -117,8 +94,8 @@ public class WorkspaceDragAndDropOnDefault extends WorkspaceDragAndDropImpl {
 		if (dropOverView instanceof FolderIconTextView) {
 			FolderIconTextView fi = (FolderIconTextView) dropOverView;
 			if (fi.acceptDrop(dragObject)) {
-				if (dropOverView instanceof AnyCallbacks.OnDragEventCallback) {
-					((AnyCallbacks.OnDragEventCallback) dropOverView).onDropAni(dragView);
+				if (dropOverView instanceof OnDragEventCallback) {
+					((OnDragEventCallback) dropOverView).onDropAni(dragView);
 				}
 				if (!external)
 					mWorkspace.getParentCellLayoutForView(mDragInfo.cell).removeView(mDragInfo.cell);

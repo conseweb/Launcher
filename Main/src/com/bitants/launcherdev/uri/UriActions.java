@@ -1,15 +1,8 @@
 package com.bitants.launcherdev.uri;
 
-import com.bitants.launcherdev.kitset.util.StringUtil;
 //import com.bitants.launcherdev.webconnect.downloadmanage.model.DownloadManager;
-import com.bitants.launcherdev.kitset.AppDistributeUtil;
-import com.bitants.launcherdev.kitset.AppDistributeUtil;
-import com.bitants.launcherdev.kitset.util.StringUtil;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
 //import com.bitants.launcherdev.webconnect.downloadmanage.model.BaseDownloadInfo;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
 //import com.bitants.launcherdev.webconnect.downloadmanage.model.DownloadManager;
-import com.bitants.launcherdev.kitset.util.StringUtil;
 //import com.bitants.launcherdev.webconnect.downloadmanage.model.DownloadManager;
 
 /**

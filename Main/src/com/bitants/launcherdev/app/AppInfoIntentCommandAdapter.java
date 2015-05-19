@@ -5,16 +5,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
+import com.bitants.launcherdev.framework.view.dialog.CommonDialog;
+import com.bitants.launcherdev.launcher.Launcher;
+import com.bitants.launcherdev.launcher.info.ApplicationInfo;
 
-import com.bitants.launcherdev.framework.view.dialog.CommonDialog;
-import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.framework.view.dialog.CommonDialog;
-import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.framework.view.dialog.CommonDialog;
-import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
 
 /**
  * 桌面快捷方式适配器,非桌面快捷方式请不要使用
@@ -45,7 +39,7 @@ public class AppInfoIntentCommandAdapter implements IntentCommand {
 		if (ctx instanceof Launcher) {
 			if (CustomIntent.ACTION_OPEN_DRAWER.equals(action)) { // 打开匣子
 				Intent intent = new Intent();
-				intent.setComponent(new ComponentName(context, "AppslistActivity"));
+				intent.setComponent(new ComponentName(context, "com.bitants.launcherdev.launcher.appslist.AppslistActivity"));
 				context.startActivity(intent);
 			} 
 		}

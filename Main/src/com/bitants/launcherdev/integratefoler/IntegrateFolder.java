@@ -1,16 +1,22 @@
 package com.bitants.launcherdev.integratefoler;
 
-import java.util.List;
-
-import com.bitants.launcherdev.framework.OnKeyDownListenner;
-import com.bitants.launcherdev.launcher.DragController;
-import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.screens.DragLayer;
-import com.bitants.launcherdev.launcher.touch.DragSource;
-import com.bitants.launcherdev.launcher.touch.DropTarget;
-import com.bitants.launcherdev.launcher.view.DragView;
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Rect;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.util.AttributeSet;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.OnKeyDownListenner;
 import com.bitants.launcherdev.launcher.DragController;
 import com.bitants.launcherdev.launcher.Launcher;
@@ -21,35 +27,8 @@ import com.bitants.launcherdev.launcher.touch.DragSource;
 import com.bitants.launcherdev.launcher.touch.DropTarget;
 import com.bitants.launcherdev.launcher.view.DragView;
 import test.DataTest;
-import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Rect;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.util.AttributeSet;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.PopupWindow;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
-import com.bitants.launcherdev.framework.OnKeyDownListenner;
-import com.bitants.launcherdev.kitset.GpuControler;
-import com.bitants.launcherdev.launcher.DragController;
-import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.screens.DragLayer;
-import com.bitants.launcherdev.launcher.touch.DragSource;
-import com.bitants.launcherdev.launcher.touch.DropTarget;
-import com.bitants.launcherdev.launcher.view.DragView;
-import com.bitants.launcher.R;
+import java.util.List;
 
 public class IntegrateFolder extends RelativeLayout implements DropTarget, DragSource, View.OnClickListener, View.OnLongClickListener, OnKeyDownListenner {
 

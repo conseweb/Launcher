@@ -8,9 +8,8 @@ import android.preference.Preference.OnPreferenceClickListener;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
-
-import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
 import com.bitants.launcher.R;
+import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
 
 /**
  * 卡片屏设置

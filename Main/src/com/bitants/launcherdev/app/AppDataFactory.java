@@ -1,28 +1,15 @@
 package com.bitants.launcherdev.app;
 
+import android.content.ComponentName;
+import android.content.Context;
+import android.database.Cursor;
+import com.bitants.launcherdev.app.data.AppDataBase;
+import com.bitants.launcherdev.app.data.AppTable;
+import com.bitants.launcherdev.launcher.info.ApplicationInfo;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.Intent;
-import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.text.TextUtils;
-
-import com.bitants.launcherdev.app.data.AppDataBase;
-import com.bitants.launcherdev.app.data.AppTable;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.app.data.AppDataBase;
-import com.bitants.launcherdev.app.data.AppTable;
-import com.bitants.launcherdev.datamodel.Global;
-import com.bitants.launcherdev.kitset.util.BaseBitmapUtils;
-import com.bitants.launcherdev.kitset.util.StringUtil;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.support.BaseIconCache;
-import com.bitants.launcherdev.app.data.AppDataBase;
-import com.bitants.launcherdev.app.data.AppTable;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
 
 /**
  * 应用程序工厂 <br>

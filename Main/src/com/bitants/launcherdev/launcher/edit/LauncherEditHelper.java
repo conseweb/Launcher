@@ -5,16 +5,6 @@ import com.bitants.launcherdev.launcher.edit.data.LauncherEditEffectItemInfo;
 import com.bitants.launcherdev.launcher.edit.data.LauncherEditThemeItemInfo;
 import com.bitants.launcherdev.launcher.edit.data.LauncherEditWallpaperItemInfo;
 import com.bitants.launcherdev.widget.LauncherWidgetInfo;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditEffectItemInfo;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditThemeItemInfo;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditWallpaperItemInfo;
-import com.bitants.launcherdev.widget.LauncherWidgetInfo;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditEffectItemInfo;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditThemeItemInfo;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditWallpaperItemInfo;
-import com.bitants.launcherdev.widget.LauncherWidgetInfo;
 
 /**
  * 帮助类

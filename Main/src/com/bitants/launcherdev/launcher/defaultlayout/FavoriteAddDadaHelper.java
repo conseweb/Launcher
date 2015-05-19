@@ -1,22 +1,21 @@
 package com.bitants.launcherdev.launcher.defaultlayout;
 
-import java.net.URISyntaxException;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
-
 import com.bitants.launcherdev.app.CustomIntent;
 import com.bitants.launcherdev.kitset.util.BitmapUtils;
 import com.bitants.launcherdev.launcher.LauncherProvider;
 import com.bitants.launcherdev.launcher.LauncherSettings.Favorites;
 
+import java.net.URISyntaxException;
+
 /**
  * 新安装桌面 添加桌面数据时调用 
- * @author zhenghonglin
+ * @author Michael
  *
  */
 class FavoriteAddDadaHelper {

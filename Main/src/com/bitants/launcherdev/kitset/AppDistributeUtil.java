@@ -3,13 +3,7 @@ package com.bitants.launcherdev.kitset;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
-
-import com.bitants.launcherdev.analysis.distribute.AppDistributeService;
-import com.bitants.launcherdev.kitset.util.StringUtil;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.analysis.AppAnalysisConstant;
-import com.bitants.launcherdev.analysis.distribute.AppDistributePool;
 import com.bitants.launcherdev.analysis.distribute.AppDistributePool;
 import com.bitants.launcherdev.analysis.distribute.AppDistributeService;
 import com.bitants.launcherdev.kitset.util.StringUtil;
@@ -17,10 +11,6 @@ import com.bitants.launcherdev.kitset.util.TelephoneUtil;
 import com.bitants.launcherdev.kitset.util.ThreadUtil;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.net.ThemeHttpCommon;
-import com.bitants.launcherdev.analysis.distribute.AppDistributeService;
-import com.bitants.launcherdev.kitset.util.StringUtil;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
 
 /**
  * description: 应用分发统计接口<br/>

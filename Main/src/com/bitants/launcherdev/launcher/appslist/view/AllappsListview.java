@@ -1,14 +1,8 @@
 package com.bitants.launcherdev.launcher.appslist.view;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Configuration;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
@@ -16,24 +10,11 @@ import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.AbsListView;
+import android.view.*;
+import android.widget.*;
 import android.widget.AbsListView.OnScrollListener;
-import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.BaseAdapter;
-import android.widget.EditText;
-import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.SectionIndexer;
-
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.launcher.appslist.search.ContactSearch;
 import com.bitants.launcherdev.launcher.appslist.search.MatchType;
 import com.bitants.launcherdev.launcher.appslist.utils.CellLayoutItem;
@@ -41,7 +22,11 @@ import com.bitants.launcherdev.launcher.appslist.utils.CellLayoutItemSortByLabel
 import com.bitants.launcherdev.launcher.info.ApplicationInfo;
 import com.bitants.launcherdev.launcher.view.icon.ui.impl.AppMaskTextView;
 import com.bitants.launcherdev.util.ActivityActionUtil;
-import com.bitants.launcher.R;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class AllappsListview extends RelativeLayout implements OnScrollListener {
 	private ListView mAppsList;

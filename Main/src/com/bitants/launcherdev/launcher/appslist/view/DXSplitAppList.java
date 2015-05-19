@@ -1,15 +1,13 @@
 package com.bitants.launcherdev.launcher.appslist.view;
 
 
-
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
-
 import com.bitants.launcherdev.launcher.appslist.utils.CellLayoutItem;
 import com.bitants.launcherdev.launcher.appslist.utils.PinyinHelper;
+
+import java.util.ArrayList;
 
 
 

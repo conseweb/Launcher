@@ -1,23 +1,18 @@
 package com.bitants.launcherdev.launcher;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import com.bitants.launcherdev.kitset.util.SystemUtil;
+import android.app.Activity;
+import android.appwidget.AppWidgetManager;
+import android.appwidget.AppWidgetProviderInfo;
+import android.content.Intent;
+import android.os.Bundle;
 import com.bitants.launcherdev.kitset.util.SystemUtil;
 import com.bitants.launcherdev.launcher.config.CellLayoutConfig;
 import com.bitants.launcherdev.launcher.info.WidgetInfo;
 import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
 import com.bitants.launcherdev.launcher.support.BaseCellLayoutHelper;
 
-import android.app.Activity;
-import android.appwidget.AppWidgetManager;
-import android.appwidget.AppWidgetProviderInfo;
-import android.content.Intent;
-import android.graphics.Color;
-import android.os.Bundle;
-import com.bitants.launcherdev.kitset.util.SystemUtil;
-import com.bitants.launcherdev.launcher.support.BaseCellLayoutHelper;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class LauncherActivityResultHelper {

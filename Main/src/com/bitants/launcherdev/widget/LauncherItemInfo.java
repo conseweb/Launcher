@@ -1,10 +1,7 @@
 package com.bitants.launcherdev.widget;
 
 import android.graphics.drawable.Drawable;
-
-import com.bitants.launcherdev.launcher.info.ItemInfo;
 import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
 import com.bitants.launcherdev.launcher.info.ItemInfo;
 
 public class LauncherItemInfo extends ItemInfo implements ICommonDataItem {

@@ -1,19 +1,18 @@
 package com.bitants.launcherdev.launcher.edit;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.bitants.launcherdev.framework.view.BaseLineLightBar;
-import com.bitants.launcherdev.framework.view.commonsliding.CommonLightbar;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.CommonSlidingViewData;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonData;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
-import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.LauncherActivityResultHelper;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditAddItemInfo;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditItemInfo;
-import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
-import com.bitants.launcherdev.launcher.support.BaseCellLayoutHelper;
+import android.appwidget.AppWidgetManager;
+import android.content.Context;
+import android.content.Intent;
+import android.util.AttributeSet;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
+import android.view.animation.AnimationUtils;
+import android.widget.CheckedTextView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.view.BaseLineLightBar;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonLightbar;
 import com.bitants.launcherdev.framework.view.commonsliding.CommonSlidingView.OnCommonSlidingViewClickListener;
@@ -26,31 +25,9 @@ import com.bitants.launcherdev.launcher.edit.data.LauncherEditAddItemInfo;
 import com.bitants.launcherdev.launcher.edit.data.LauncherEditItemInfo;
 import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
 import com.bitants.launcherdev.launcher.support.BaseCellLayoutHelper;
-import com.bitants.launcher.R;
 
-import android.appwidget.AppWidgetManager;
-import android.content.Context;
-import android.content.Intent;
-import android.util.AttributeSet;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.Animation.AnimationListener;
-import android.widget.CheckedTextView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
-import com.bitants.launcherdev.framework.view.BaseLineLightBar;
-import com.bitants.launcherdev.framework.view.commonsliding.CommonLightbar;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.CommonSlidingViewData;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonData;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
-import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.LauncherActivityResultHelper;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditAddItemInfo;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditItemInfo;
-import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
-import com.bitants.launcherdev.launcher.support.BaseCellLayoutHelper;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LauncherEditView extends RelativeLayout implements OnCommonSlidingViewClickListener {
 

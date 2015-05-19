@@ -1,8 +1,6 @@
 package com.bitants.launcherdev.launcher;
 
 import com.bitants.launcherdev.launcher.model.BaseLauncherSettings;
-import com.bitants.launcherdev.launcher.model.BaseLauncherSettings;
-import com.bitants.launcherdev.launcher.model.BaseLauncherSettings;
 
 /**
  * Settings related utilities.
@@ -146,7 +144,7 @@ public class LauncherSettings {
         public static final int ITEM_TYPE_WIDGET_GRAB_TICKET = 2031;
         
         /**
-         * 熊猫桌面2.x最近安装和实时文件夹URI add by caizp 2012-8-28
+         * 最近安装和实时文件夹URI 
          */
 //        public final static String LIVEFOLDER_AUTHORITY = "com.bitants.launcher.livefolder.CustomLiveFolderProvider";
 //        public static final Uri LATEST_INSTALL_APP_URI = 

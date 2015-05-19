@@ -1,35 +1,15 @@
 package com.bitants.launcherdev.integratefoler;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-
 import android.content.Context;
 import android.database.DataSetObserver;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.MotionEvent;
-import android.view.VelocityTracker;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
+import android.view.*;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.Scroller;
-
-import com.bitants.launcherdev.launcher.DragController;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.touch.DragSource;
-import com.bitants.launcherdev.launcher.touch.DropTarget;
-import com.bitants.launcherdev.launcher.view.DragView;
-import com.bitants.launcherdev.kitset.GpuControler;
-import com.bitants.launcherdev.launcher.DragController;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.touch.DragSource;
-import com.bitants.launcherdev.launcher.touch.DropTarget;
-import com.bitants.launcherdev.launcher.view.DragView;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.launcher.DragController;
 import com.bitants.launcherdev.launcher.info.ApplicationInfo;
 import com.bitants.launcherdev.launcher.touch.DragSource;
@@ -39,7 +19,11 @@ import com.nineoldandroids.animation.Animator;
 import com.nineoldandroids.animation.AnimatorListenerAdapter;
 import com.nineoldandroids.animation.AnimatorSet;
 import com.nineoldandroids.animation.ObjectAnimator;
-import com.bitants.launcher.R;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 
 public class IntegrateFolderGridView extends ViewGroup implements DragSource, DropTarget {
 

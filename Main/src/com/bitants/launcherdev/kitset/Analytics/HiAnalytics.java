@@ -2,16 +2,11 @@ package com.bitants.launcherdev.kitset.Analytics;
 
 import android.content.Context;
 import android.util.Log;
-
-import com.bitants.launcherdev.framework.httplib.DxHttpClient;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
-import com.nd.analytics.NdAnalytics;
-import com.nd.analytics.NdAnalyticsSettings;
 import com.bitants.launcherdev.framework.httplib.DxHttpClient;
 import com.bitants.launcherdev.kitset.util.TelephoneUtil;
 import com.bitants.launcherdev.kitset.util.ThreadUtil;
-import com.bitants.launcherdev.framework.httplib.DxHttpClient;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
+import com.nd.analytics.NdAnalytics;
+import com.nd.analytics.NdAnalyticsSettings;
 
 /**
  * 功能统计封装类

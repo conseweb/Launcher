@@ -1,19 +1,17 @@
 package com.bitants.launcherdev.kitset.util;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
-
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.graphics.BitmapFactory;
 import android.util.Log;
-
-import com.google.android.mms.ContentType;
 import com.bitants.launcherdev.framework.httplib.HttpCommon;
+import com.google.android.mms.ContentType;
+import org.apache.http.Header;
+import org.apache.http.HttpEntity;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * 图片处理相关内容

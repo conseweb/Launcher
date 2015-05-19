@@ -1,22 +1,14 @@
 package com.bitants.launcherdev.launcher;
 
-import java.io.File;
-
 import com.bitants.launcherdev.kitset.config.ConfigDataBaseHelper;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.kitset.config.ConfigDataBaseHelper;
-import com.bitants.launcherdev.launcher.BaseLauncherApplication;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.launcher.model.load.LauncherLoaderHelper;
 import com.bitants.launcherdev.launcher.support.DBHelperFactory;
-import com.bitants.launcherdev.kitset.config.ConfigDataBaseHelper;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-//import org.acra.CrashReportingLibrary;
+
+import java.io.File;
 
 public class LauncherApplication extends BaseLauncherApplication {
-
-//	private CrashReportingLibrary mCrashReporter = null;
-
+	
 	/**
 	 * 初始化数据库辅助类
 	 */

@@ -1,9 +1,9 @@
 package com.bitants.launcherdev.integratefoler;
 
+import android.content.Context;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import android.content.Context;
 
 public abstract class AbstractFolderGridAdapter extends AbstractDynamicGridAdapter {
     private Context mContext;

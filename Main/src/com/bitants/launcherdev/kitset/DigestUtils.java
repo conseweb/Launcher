@@ -11,12 +11,10 @@
  */
 package com.bitants.launcherdev.kitset;
 
+import com.bitants.launcherdev.kitset.apache.Hex;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-
-import com.bitants.launcherdev.kitset.apache.Hex;
-import com.bitants.launcherdev.kitset.apache.Hex;
-import com.bitants.launcherdev.kitset.apache.Hex;
 
 /**
  * 第三方加密源码

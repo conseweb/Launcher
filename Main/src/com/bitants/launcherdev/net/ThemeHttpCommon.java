@@ -1,31 +1,12 @@
 package com.bitants.launcherdev.net;
 
 
-
-
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.UnsupportedEncodingException;
-import java.util.HashMap;
-import java.util.zip.GZIPInputStream;
-
-import javax.net.ssl.SSLHandshakeException;
-
+import android.content.Context;
+import android.os.Build;
 import com.bitants.launcherdev.kitset.Analytics.HiAnalytics;
+import com.bitants.launcherdev.kitset.DigestUtils;
 import com.bitants.launcherdev.kitset.util.TelephoneUtil;
-import com.bitants.launcherdev.kitset.Analytics.HiAnalytics;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpEntityEnclosingRequest;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.NoHttpResponseException;
-import org.apache.http.ParseException;
+import org.apache.http.*;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.HttpRequestRetryHandler;
@@ -44,12 +25,10 @@ import org.apache.http.util.CharArrayBuffer;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
-import android.content.Context;
-import android.os.Build;
-
-import com.bitants.launcherdev.kitset.DigestUtils;
-import com.bitants.launcherdev.kitset.Analytics.HiAnalytics;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
+import javax.net.ssl.SSLHandshakeException;
+import java.io.*;
+import java.util.HashMap;
+import java.util.zip.GZIPInputStream;
 
 /**
  * 网络操作类
@@ -59,7 +38,7 @@ public class ThemeHttpCommon {
 
 	public static final String TAG = "ServerHttpCommon";
 	
-	public static final String HOSTNAME = "http://pandahome.sj.91.com/";
+	public static final String HOSTNAME = "http://sj.mojing.io/";
 
 	public static final String CHARSET_UTF_8 = org.apache.http.protocol.HTTP.UTF_8;
 
@@ -98,7 +77,7 @@ public class ThemeHttpCommon {
 	private static String CUID;
 	private static final String ProtocolVersion = ThemeHttpCommon.utf8URLencode("1.0");
 	
-	private static final String REQUEST_KEY = "27B1F81F-1DD8-4F98-8D4B-6992828FB6E2";
+	private static final String REQUEST_KEY = "fab303a3-fe03-11e4-813e-4c8d79f34d0e";
 	
 	public static final String MT = "4";
 	public static final String PID = "106";

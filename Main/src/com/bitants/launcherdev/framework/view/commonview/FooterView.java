@@ -1,8 +1,5 @@
 package com.bitants.launcherdev.framework.view.commonview;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
@@ -11,8 +8,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import com.bitants.launcher.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**

@@ -1,8 +1,5 @@
 package com.bitants.launcherdev.launcher.appslist;
 
-import java.net.URISyntaxException;
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -13,17 +10,11 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import com.bitants.launcherdev.kitset.util.ScreenUtil;
-import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.appslist.view.AllappsListview;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.theme.adaption.ThemeIconIntentAdaptation;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.datamodel.Global;
 import com.bitants.launcherdev.kitset.util.ScreenUtil;
 import com.bitants.launcherdev.launcher.Launcher;
 import com.bitants.launcherdev.launcher.LauncherSettings;
-import com.bitants.launcherdev.launcher.appslist.utils.CellLayoutItem;
 import com.bitants.launcherdev.launcher.appslist.utils.CellLayoutItem;
 import com.bitants.launcherdev.launcher.appslist.view.AllappsListview;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
@@ -31,12 +22,9 @@ import com.bitants.launcherdev.launcher.info.ApplicationInfo;
 import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
 import com.bitants.launcherdev.theme.adaption.ThemeIconIntentAdaptation;
 import com.bitants.launcherdev.theme.assit.BaseThemeAssit;
-import com.bitants.launcher.R;
-import com.bitants.launcherdev.kitset.util.ScreenUtil;
-import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.appslist.view.AllappsListview;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.theme.adaption.ThemeIconIntentAdaptation;
+
+import java.net.URISyntaxException;
+import java.util.ArrayList;
 
 public class AppslistActivity extends Activity {
 	private AllappsListview appLinearLayout;

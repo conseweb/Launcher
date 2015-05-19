@@ -1,32 +1,12 @@
 package com.bitants.launcherdev.push;
 
-import java.util.List;
-
-import com.bitants.launcherdev.kitset.Analytics.AnalyticsConstant;
-import com.bitants.launcherdev.kitset.util.CUIDUtil;
-import com.bitants.launcherdev.kitset.util.StringUtil;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.uri.UriActions;
-import com.bitants.launcherdev.push.PushSDKAdapterInterface;
-import com.bitants.launcherdev.kitset.Analytics.AnalyticsConstant;
-import com.bitants.launcherdev.kitset.Analytics.HiAnalytics;
-import com.bitants.launcherdev.kitset.util.CUIDUtil;
-import com.bitants.launcherdev.kitset.util.StringUtil;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.uri.UriActions;
-import org.json.JSONArray;
-
 import android.content.Context;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Handler;
 import android.view.View;
 import android.widget.RemoteViews;
-
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.httplib.GZipHttpUtil;
 import com.bitants.launcherdev.framework.view.bubble.LauncherBubbleView;
 import com.bitants.launcherdev.kitset.Analytics.AnalyticsConstant;
@@ -42,9 +22,11 @@ import com.bitants.launcherdev.launcher.info.ApplicationInfo;
 import com.bitants.launcherdev.push.model.CompaigPushInfo;
 import com.bitants.launcherdev.push.model.NotifyPushInfo;
 import com.bitants.launcherdev.push.model.ServerConfigInfo;
-import com.bitants.launcherdev.uri.UriActions;
+import org.json.JSONArray;
+
+import java.util.List;
+
 //import com.bitants.launcherdev.webconnect.downloadmanage.model.filetype.FileType;
-import com.bitants.launcher.R;
 
 /**
  * 推送SDK时的适配

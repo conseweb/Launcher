@@ -1,11 +1,7 @@
 package com.bitants.launcherdev.folder.view;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.content.res.Resources;
-import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.text.Editable;
 import android.text.Selection;
@@ -17,17 +13,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import com.bitants.launcherdev.framework.view.commonsliding.CommonLayout;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
-import com.bitants.launcherdev.framework.view.draggersliding.DraggerChooseItem;
-import com.bitants.launcherdev.framework.view.draggersliding.datamodel.DraggerSlidingViewData;
-import com.bitants.launcherdev.kitset.util.ScreenUtil;
-import com.bitants.launcherdev.launcher.DragController;
-import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.touch.DropTarget;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.app.SerializableAppInfo;
 import com.bitants.launcherdev.folder.model.FolderSwitchController;
 import com.bitants.launcherdev.framework.AnyCallbacks.CommonSlidingViewCallback;
@@ -53,18 +39,9 @@ import com.bitants.launcherdev.launcher.touch.DropTarget;
 import com.bitants.launcherdev.launcher.view.DragView;
 import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
 import com.bitants.launcherdev.util.ActivityActionUtil;
-import com.bitants.launcher.R;
-import com.bitants.launcherdev.framework.view.commonsliding.CommonLayout;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
-import com.bitants.launcherdev.framework.view.draggersliding.DraggerChooseItem;
-import com.bitants.launcherdev.framework.view.draggersliding.datamodel.DraggerSlidingViewData;
-import com.bitants.launcherdev.kitset.util.ScreenUtil;
-import com.bitants.launcherdev.launcher.DragController;
-import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.touch.DropTarget;
-import com.bitants.launcherdev.util.ActivityActionUtil;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 文件夹显示视图，包括文件夹名字输入框，添加app按钮，横向滑屏的app列表

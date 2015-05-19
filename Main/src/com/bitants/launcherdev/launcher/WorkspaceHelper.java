@@ -1,18 +1,7 @@
 package com.bitants.launcherdev.launcher;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.database.sqlite.SQLiteDatabase;
 import android.view.View;
-
-import com.bitants.launcherdev.datamodel.Global;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.info.WidgetInfo;
-import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
-import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.bitants.launcherdev.launcher.support.LauncherAppWidgetHost;
 import com.bitants.launcherdev.datamodel.Global;
 import com.bitants.launcherdev.kitset.util.ThreadUtil;
 import com.bitants.launcherdev.launcher.config.ConfigFactory;
@@ -23,15 +12,10 @@ import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
 import com.bitants.launcherdev.launcher.model.BaseLauncherSettings;
 import com.bitants.launcherdev.launcher.screens.CellLayout;
 import com.bitants.launcherdev.launcher.screens.ScreenViewGroup;
-import com.bitants.launcherdev.launcher.screens.ScreenViewGroup;
 import com.bitants.launcherdev.launcher.support.LauncherAppWidgetHost;
-import com.bitants.launcherdev.datamodel.Global;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.info.WidgetInfo;
-import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
-import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.bitants.launcherdev.launcher.support.LauncherAppWidgetHost;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class WorkspaceHelper {
 

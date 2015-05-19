@@ -1,15 +1,14 @@
 package com.bitants.launcherdev.settings;
 
-import java.util.HashMap;
-
 import android.os.Bundle;
 import android.preference.Preference;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
-
-import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
 import com.bitants.launcher.R;
+import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
+
+import java.util.HashMap;
 
 public class SettingsItemSelectActivity extends BasePreferenceActivity {
 	

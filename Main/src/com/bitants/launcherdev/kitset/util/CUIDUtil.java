@@ -1,9 +1,9 @@
 package com.bitants.launcherdev.kitset.util;
 
-import java.net.URLEncoder;
-
 import com.bitants.launcherdev.kitset.Analytics.HiAnalytics;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
+
+import java.net.URLEncoder;
 
 /**
  * description: <br/>

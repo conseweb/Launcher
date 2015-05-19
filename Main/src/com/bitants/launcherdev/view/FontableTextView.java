@@ -7,12 +7,9 @@ import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
-
-import com.bitants.launcherdev.launcher.broadcast.HiBroadcastReceiver;
 import com.bitants.launcherdev.kitset.util.PaintUtils2;
 import com.bitants.launcherdev.launcher.broadcast.HiBroadcastReceiver;
 import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
-import com.bitants.launcherdev.launcher.broadcast.HiBroadcastReceiver;
 
 /**
  * <p>类说明：  支持从配置中读取字体的TextView</p>
@@ -68,7 +65,8 @@ public class FontableTextView extends TextView {
 	@Override
 	protected void onAttachedToWindow() {
 		super.onAttachedToWindow();
-		
+
+        Context mContext = getContext();
 		// 注册字体刷新广播过虑器 yuf@2012.11.09
 		mRefreshFontReceiver = new RefreshFontReceiver();
 		IntentFilter filter = new IntentFilter(SettingsConstants.ACTION_REFRESH_APP_NAME);
@@ -86,6 +84,7 @@ public class FontableTextView extends TextView {
 	@Override
 	protected void onDetachedFromWindow() {
 		super.onDetachedFromWindow();
+		Context mContext = getContext();
 		if (mRefreshFontReceiver != null) {
 			mContext.unregisterReceiver(mRefreshFontReceiver);
 			

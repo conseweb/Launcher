@@ -1,18 +1,11 @@
 package com.bitants.launcherdev.launcher.appslist.utils;
 
+import android.text.TextUtils;
+import com.bitants.launcherdev.launcher.appslist.pinyin.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
-
-import android.text.TextUtils;
-
-import com.bitants.launcherdev.launcher.appslist.pinyin.*;
-import com.bitants.launcherdev.launcher.appslist.pinyin.MultiPinYin1;
-import com.bitants.launcherdev.launcher.appslist.pinyin.MultiPinYin2;
-import com.bitants.launcherdev.launcher.appslist.pinyin.MultiPinYin3;
-import com.bitants.launcherdev.launcher.appslist.pinyin.MultiPinYin4;
-import com.bitants.launcherdev.launcher.appslist.pinyin.MultiPinYin5;
-import com.bitants.launcherdev.launcher.appslist.pinyin.SimplePinYin;
 
 /**
  * 汉字转拼音，包括多音字的处理

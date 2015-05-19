@@ -1,10 +1,10 @@
 package com.bitants.launcherdev.integratefoler;
 
-import java.util.HashMap;
-import java.util.List;
-
 import android.database.DataSetObservable;
 import android.database.DataSetObserver;
+
+import java.util.HashMap;
+import java.util.List;
 
 
 public abstract class AbstractDynamicGridAdapter implements DynamicGridAdapterInterface{

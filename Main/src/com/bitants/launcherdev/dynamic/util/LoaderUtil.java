@@ -1,11 +1,11 @@
 package com.bitants.launcherdev.dynamic.util;
 
+import com.bitants.launcherdev.dynamic.clientparser.Client;
+import com.bitants.launcherdev.dynamic.clientparser.SaxParseService;
+
 import java.io.InputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
-
-import com.bitants.launcherdev.dynamic.clientparser.Client;
-import com.bitants.launcherdev.dynamic.clientparser.SaxParseService;
 
 public class LoaderUtil {
 

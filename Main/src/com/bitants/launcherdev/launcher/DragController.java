@@ -1,24 +1,15 @@
 package com.bitants.launcherdev.launcher;
 
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.graphics.Rect;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationSet;
 import android.view.animation.TranslateAnimation;
-import android.view.animation.Animation.AnimationListener;
-
-import com.bitants.launcherdev.kitset.util.ScreenUtil;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.screens.dockbar.DockbarCellLayout;
-import com.bitants.launcherdev.launcher.touch.DragScroller;
 import com.bitants.launcherdev.folder.model.FolderSwitchController;
-import com.bitants.launcherdev.folder.view.FolderSlidingView;
-import com.bitants.launcherdev.framework.view.draggersliding.DraggerChooseItem;
 import com.bitants.launcherdev.folder.view.FolderSlidingView;
 import com.bitants.launcherdev.framework.view.draggersliding.DraggerChooseItem;
 import com.bitants.launcherdev.kitset.util.ScreenUtil;
@@ -30,12 +21,8 @@ import com.bitants.launcherdev.launcher.touch.DragScroller;
 import com.bitants.launcherdev.launcher.touch.DragSource;
 import com.bitants.launcherdev.launcher.view.DragView;
 import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
-import com.bitants.launcherdev.launcher.view.icon.ui.impl.DockbarCell;
-import com.bitants.launcherdev.kitset.util.ScreenUtil;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.screens.dockbar.DockbarCellLayout;
-import com.bitants.launcherdev.launcher.touch.DragScroller;
-import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
+
+import java.util.ArrayList;
 
 public class DragController extends BaseDragController{
 

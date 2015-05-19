@@ -4,9 +4,6 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
-
-import com.bitants.launcherdev.framework.view.prompt.PromptPreferenceAction;
-import com.bitants.launcherdev.framework.view.prompt.PromptPreferenceAction;
 import com.bitants.launcherdev.framework.view.prompt.PromptPreferenceAction;
 
 /**

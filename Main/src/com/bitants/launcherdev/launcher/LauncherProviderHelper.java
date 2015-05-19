@@ -1,17 +1,5 @@
 package com.bitants.launcherdev.launcher;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.util.List;
-
-import com.bitants.launcherdev.kitset.util.*;
-import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.bitants.launcherdev.theme.adaption.ThemeIconIntentAdaptation;
-import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.bitants.launcherdev.theme.adaption.ThemeIconIntentAdaptation;
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
-
 import android.appwidget.AppWidgetHost;
 import android.content.ComponentName;
 import android.content.ContentValues;
@@ -30,11 +18,10 @@ import android.net.Uri;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.Xml;
-
 import com.android.internal.util.XmlUtils;
+import com.bitants.launcher.R;
 import com.bitants.launcherdev.kitset.config.ConfigPreferences;
-import com.bitants.launcherdev.kitset.util.ScreenUtil;
-import com.bitants.launcherdev.kitset.util.SystemUtil;
+import com.bitants.launcherdev.kitset.util.*;
 import com.bitants.launcherdev.launcher.LauncherSettings.Favorites;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.launcher.config.CellLayoutConfig;
@@ -46,7 +33,12 @@ import com.bitants.launcherdev.launcher.screens.ScreenViewGroup;
 import com.bitants.launcherdev.settings.SettingsPreference;
 import com.bitants.launcherdev.theme.adaption.ThemeIconIntentAdaptation;
 import com.bitants.launcherdev.theme.data.BaseThemeData;
-import com.bitants.launcher.R;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.util.List;
 
 public class LauncherProviderHelper {
 	private static final String TAG = "LauncherProviderHelper";
