@@ -3,14 +3,12 @@ package com.bitants.launcherdev.app;
 import android.content.Context;
 import android.database.Cursor;
 
-import com.bitants.launcherdev.launcher.config.db.DefaultLauncherTable;
 import com.bitants.launcherdev.launcher.config.db.ConfigDataBase;
-import com.bitants.launcherdev.launcher.config.db.DefaultLauncherTable;
 import com.bitants.launcherdev.launcher.config.db.DefaultLauncherTable;
 
 public class DefaultAppAssit {
 
-	public static final String COMPONENT_STR = "com.bitants.mirrorlauncher/AppResolverSelectActivity";
+	public static final String COMPONENT_STR = "com.bitants.launcher/com.bitants.launcherdev.app.AppResolverSelectActivity";
 	/**
 	 * 拨号Uri
 	 */

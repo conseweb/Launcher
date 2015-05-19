@@ -16,7 +16,7 @@ import com.bitants.launcherdev.theme.module.ModuleConstant;
  */
 public class BaseThemeData {
 	public static String THEME_COMP_PKG = "com.bitants.launcher";
-	public static String THEME_APP_SELECT_ACTIVITY = "com.bitants.launcherdev.app.activity.AppResolverSelectActivity";
+	public static String THEME_APP_SELECT_ACTIVITY = "com.bitants.launcherdev.app.AppResolverSelectActivity";
 	
 	//=======================下列属性是可配置的config.xml========================//
 	/** 默认的浏览器Intent */
