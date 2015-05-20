@@ -15,6 +15,9 @@ import android.widget.Toast;
 import com.bitants.cleaner.view.CleanView;
 import com.bitants.util.Value;
 
+import com.avos.avoscloud.AVOSCloud;
+import com.avos.avoscloud.AVAnalytics;
+
 public class CleanActivity extends Activity
 {
 	private CleanView rootView=null;
@@ -59,11 +62,18 @@ public class CleanActivity extends Activity
 			}
 		};
 	};
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
 	{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+
+        //如果使用美国节点，请加上这行代码 AVOSCloud.useAVCloudUS();
+        AVOSCloud.initialize(this, "n8nethvws3hugrld9urcsxc1ob58b7jd20migptb4mzis0gy", "nno6lpffak5adzllro3nl0v0081b48lmfjr6v4c9iys92i2n");
+
+        AVAnalytics.trackAppOpened(getIntent());
+
 		SharedPreferences sharedPreferences = getSharedPreferences("demo360", Activity.MODE_PRIVATE);
 		SharedPreferences.Editor editor = sharedPreferences.edit();
 		long time = System.currentTimeMillis();
