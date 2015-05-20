@@ -1,11 +1,11 @@
-package com.mojing.cleaner;
+package com.bitants.cleaner;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import android.os.Message;
 
-import com.mojing.util.CleanUtil;
-import com.mojing.util.Value;
+import com.bitants.util.CleanUtil;
+import com.bitants.util.Value;
 
 public class CleanService extends Service implements Runnable
 {

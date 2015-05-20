@@ -1,4 +1,4 @@
-package com.mojing.cleaner;
+package com.bitants.cleaner;
 
 
 import java.util.ArrayList;
@@ -18,8 +18,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.mojing.cleaner.view.MAdapter;
-import com.mojing.entity.AppItem;
+import com.bitants.cleaner.view.MAdapter;
+import com.bitants.entity.AppItem;
 
 public class SetWhiteListActivity extends Activity
 {

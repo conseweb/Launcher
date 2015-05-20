@@ -1,4 +1,4 @@
-package com.mojing.cleaner.view;
+package com.bitants.cleaner.view;
 
 import java.text.DecimalFormat;
 
@@ -18,10 +18,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.mojing.cleaner.R;
-import com.mojing.cleaner.SetWhiteListActivity;
-import com.mojing.util.CleanUtil;
-import com.mojing.util.Value;
+import com.bitants.cleaner.R;
+import com.bitants.cleaner.SetWhiteListActivity;
+import com.bitants.util.CleanUtil;
+import com.bitants.util.Value;
 
 public class CleanView extends FrameLayout
 {

@@ -1,4 +1,4 @@
-package com.mojing.cleaner.view;
+package com.bitants.cleaner.view;
 
 import android.content.Context;
 import android.util.AttributeSet;

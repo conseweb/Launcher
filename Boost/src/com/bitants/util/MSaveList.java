@@ -1,4 +1,4 @@
-package com.mojing.util;
+package com.bitants.util;
 
 import java.util.ArrayList;
 import java.util.List;

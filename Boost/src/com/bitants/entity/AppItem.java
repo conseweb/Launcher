@@ -1,4 +1,4 @@
-package com.mojing.entity;
+package com.bitants.entity;
 
 import android.graphics.drawable.Drawable;
 

@@ -1,4 +1,4 @@
-package com.mojing.cleaner;
+package com.bitants.cleaner;
 
 import java.io.IOException;
 

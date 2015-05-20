@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/shortcut_process_clear_fg" />
 
- <com.mojing.cleaner.view.LevelView
+ <com.bitants.cleaner.view.LevelView
      android:id="@+id/text0"
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"

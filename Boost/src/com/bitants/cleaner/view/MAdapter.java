@@ -1,4 +1,4 @@
-package com.mojing.cleaner.view;
+package com.bitants.cleaner.view;
 
 import java.util.List;
 
@@ -14,9 +14,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mojing.cleaner.R;
-import com.mojing.entity.AppItem;
-import com.mojing.util.MSaveList;
+import com.bitants.cleaner.R;
+import com.bitants.entity.AppItem;
+import com.bitants.util.MSaveList;
 
 public class MAdapter extends BaseAdapter
 {

@@ -1,4 +1,4 @@
-package com.mojing.util;
+package com.bitants.util;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

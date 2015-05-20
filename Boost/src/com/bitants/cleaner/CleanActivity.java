@@ -1,4 +1,4 @@
-package com.mojing.cleaner;
+package com.bitants.cleaner;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -12,8 +12,8 @@ import android.os.Handler;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.mojing.cleaner.view.CleanView;
-import com.mojing.util.Value;
+import com.bitants.cleaner.view.CleanView;
+import com.bitants.util.Value;
 
 public class CleanActivity extends Activity
 {

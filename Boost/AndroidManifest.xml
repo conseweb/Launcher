@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Black.NoTitleBar" >
         <activity
-            android:name="com.mojing.cleaner.CleanActivity"
+            android:name="com.bitants.cleaner.CleanActivity"
             android:theme="@style/MTheme"
             android:label="@string/app_name" >
             <intent-filter>
@@ -23,14 +23,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.mojing.cleaner.MainActivity"
+        <activity android:name="com.bitants.cleaner.MainActivity"
             android:theme="@style/MTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <service android:name="com.mojing.cleaner.CleanService"> </service>
-        <activity android:name="com.mojing.cleaner.SetWhiteListActivity"></activity>
+        <service android:name="com.bitants.cleaner.CleanService"> </service>
+        <activity android:name="com.bitants.cleaner.SetWhiteListActivity"></activity>
     </application>
 
 </manifest>
