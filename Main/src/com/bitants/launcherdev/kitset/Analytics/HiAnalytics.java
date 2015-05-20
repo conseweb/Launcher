@@ -109,7 +109,8 @@ public class HiAnalytics {
 	public static String getCUID(Context ctx){
 		String cuid = "";
 		try{
-			cuid = NdAnalytics.getCUID(ctx);
+//			cuid = NdAnalytics.getCUID(ctx);
+			cuid = "123456789";
 			cuid = cuid == null ? "" : cuid;
 		} catch (Exception e){
 			e.printStackTrace();

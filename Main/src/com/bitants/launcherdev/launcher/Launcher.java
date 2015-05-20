@@ -46,8 +46,8 @@ import com.bitants.launcherdev.launcher.view.BaseDeleteZoneTextView;
 import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
 import com.bitants.launcherdev.launcher.view.icon.ui.util.BeansContainer;
 import com.bitants.launcherdev.menu.LauncherMenu;
-import com.bitants.launcherdev.push.PushManager;
-import com.bitants.launcherdev.push.PushSDKAdapter;
+//import com.bitants.launcherdev.push.PushManager;
+//import com.bitants.launcherdev.push.PushSDKAdapter;
 import com.bitants.launcherdev.theme.adaption.ThemeIconIntentAdaptation;
 import com.bitants.launcherdev.util.ActivityActionUtil;
 
@@ -151,7 +151,7 @@ public class Launcher extends BaseLauncher {
 	@Override
 	protected void onStart() {
 		super.onStart();
-		LauncherOnStartDispatcher.getInstance().addListener(PushManager.getInstance()); //注册推送接收监听器
+//		LauncherOnStartDispatcher.getInstance().addListener(PushManager.getInstance()); //注册推送接收监听器
 		LauncherOnStartDispatcher.getInstance().dispatch(this);
 	}
 	
@@ -511,9 +511,10 @@ public class Launcher extends BaseLauncher {
 		addOnKeyDownListener(mDragController);
 		addOnKeyDownListener(previewEditController);
 		// 添加推送SDK适配器
-		PushManager.getInstance().setPushSDKAdapter(new PushSDKAdapter());
+        // TODO: init or setup push sdk
+//		PushManager.getInstance().setPushSDKAdapter(new PushSDKAdapter());
 	}
-	
+
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		LauncherActivityResultHelper.onActivityResult(requestCode, resultCode, data, this);

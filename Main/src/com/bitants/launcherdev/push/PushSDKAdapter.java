@@ -26,26 +26,25 @@ import org.json.JSONArray;
 
 import java.util.List;
 
-//import com.bitants.launcherdev.webconnect.downloadmanage.model.filetype.FileType;
 
 /**
  * 推送SDK时的适配
  *
- * @author guojianyun
+ * @author Michael
  */
 public class PushSDKAdapter extends PushSDKAdapterInterface {
 
 	/**
 	 * 国内服务器
 	 */
-	public final static String Panda_Space_Inland_Server = "http://pandahome.sj.91.com/";
+	public final static String Mirror_Space_Inland_Server = "http://sj.mojing.io/";
 	
 	 /**
      * 每日新鲜事hot接口
      */
-    public static final String URL_DAILY_HOT_NEWS_TO91 = Panda_Space_Inland_Server + "android/getdata.aspx?mt=4&tfv=40000&action=2" + CUIDUtil.getCUIDPART() + "&pid=106";
+    public static final String URL_DAILY_HOT_NEWS_TO91 = Mirror_Space_Inland_Server + "android/getdata.aspx?mt=4&tfv=40000&action=2" + CUIDUtil.getCUIDPART() + "&pid=106";
 	
-    public final static String CACHES_HOME_MARKET = BaseConfig.getBaseDir() + "/caches/91space/";
+    public final static String CACHES_HOME_MARKET = BaseConfig.getBaseDir() + "/caches/space/";
     
     /**
 	 * 获取服务端推送消息

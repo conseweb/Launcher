@@ -54,8 +54,8 @@ public class LauncherBubbleManager {
     public void dismissBubbleAndRecord(View v) {
         int pushId = this.dismissBubble(v);
         if(pushId > 0) {
-            PushMsgHandler.setPushMsgRead((long)pushId);
-            PushManager.getInstance().getPushSDKAdapter().statClickPushNotification("" + pushId);
+//            PushMsgHandler.setPushMsgRead((long)pushId);
+//            PushManager.getInstance().getPushSDKAdapter().statClickPushNotification("" + pushId);
         }
 
     }

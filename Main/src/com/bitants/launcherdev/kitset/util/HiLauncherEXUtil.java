@@ -5,5 +5,5 @@ package com.bitants.launcherdev.kitset.util;
  */
 public class HiLauncherEXUtil {
 
-	public static final String MAILTO_EMAIL = "mailto:dxzmfeedback@gmail.com";
+	public static final String MAILTO_EMAIL = "mailto:hfeeki@mojing.io";
 }
