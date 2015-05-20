@@ -8,6 +8,8 @@ import com.bitants.launcherdev.kitset.util.ThreadUtil;
 import com.nd.analytics.NdAnalytics;
 import com.nd.analytics.NdAnalyticsSettings;
 
+import java.util.UUID;
+
 /**
  * 功能统计封装类
  */
@@ -100,6 +102,16 @@ public class HiAnalytics {
 	public static void release() {
 //		NdAnalytics.release();
 	}
+
+//    public String getIdentity() {
+//        SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(context);
+//        String identity = preference.getString("identity", null);
+//        if (identity == null) {
+//            identity = java.util.UUID.randomUUID().toString();
+//            preference.edit().putString("identity", identity);
+//        }
+//        return identity;
+//    }
 	
 	/**
 	 * 获取手机的CUID
@@ -110,7 +122,7 @@ public class HiAnalytics {
 		String cuid = "";
 		try{
 //			cuid = NdAnalytics.getCUID(ctx);
-			cuid = "123456789";
+            cuid = UUID.randomUUID().toString();
 			cuid = cuid == null ? "" : cuid;
 		} catch (Exception e){
 			e.printStackTrace();
