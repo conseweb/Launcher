@@ -16,8 +16,8 @@ import com.bitants.launcherdev.launcher.config.preference.BaseConfigPreferences;
 
 /**
  * Description: 桌面启动时，回调注册的监听
- * Author: guojy
- * Date: 2013-10-25 下午3:27:44
+ * Author: Michael
+ * Date: 2013-11-2
  */
 public class LauncherOnStartDispatcher {
 
@@ -108,8 +108,8 @@ public class LauncherOnStartDispatcher {
 		void onLauncherStart(Context ctx);
 		/**
 		 * Description: 返回调用类型：TYPE_EVERY_TIME(每次启动都调用), TYPE_ONCE_A_DAY(每天调用一次)
-		 * Author: guojy
-		 * Date: 2013-10-28 下午3:10:30
+		 * Author: Michael
+		 * Date: 2013-11-08
 		 */
 		int getType();
 	}

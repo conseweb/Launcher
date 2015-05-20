@@ -21,7 +21,7 @@
             android:id="@+id/workspace_layer"
 			android:layout_height="match_parent"
 			android:layout_width="match_parent">
-		<com.nd.hilauncherdev.launcher.Workspace
+		<com.bitants.launcherdev.launcher.Workspace
 			android:id="@+id/workspace" android:layout_width="match_parent"
 			android:layout_height="match_parent"/>
 	</com.bitants.launcherdev.launcher.screens.WorkspaceLayer>
@@ -43,7 +43,7 @@
         android:layout_height="@dimen/launcher_linelight_and_dockbar_height"
         android:layout_gravity="bottom|center_horizontal">       
 		
-		<com.nd.hilauncherdev.framework.view.LineLightBar
+		<com.bitants.launcherdev.framework.view.LineLightBar
 			android:id="@+id/lightbar"
 	        android:layout_width="match_parent"
 	        android:layout_height="@dimen/launcher_linelight_light_height"
@@ -51,7 +51,7 @@
 			android:layout_alignParentTop="true" 
 	        android:layout_marginLeft="6dip"
 	        android:layout_marginRight="7dip"/>
-		<com.nd.hilauncherdev.launcher.MagicDockbar
+		<com.bitants.launcherdev.launcher.MagicDockbar
     		android:id="@+id/quick_start_bar"
         	android:layout_width="match_parent"
         	android:layout_height="@dimen/button_bar_height"

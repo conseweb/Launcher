@@ -4,15 +4,15 @@
     
     <!-- ContentProvider前缀 -->
     <string name="pkg_content_uri_authority">com.simon.android.launcher2.settings</string>
-    <string name="pkg_content_uri_authority_sub">com.simon.hilauncherdev</string>
+    <string name="pkg_content_uri_authority_sub">com.bitants.launcherdev</string>
     <!-- SD卡根目录 -->
     <string name="pkg_base_dir">ExplorerLauncher</string>
     <!-- 是否有程序匣子 -->
     <integer name="has_drawer">0</integer>
     
     <!-- workspace配置：最大屏数、默认屏数、默认屏 -->
-    <integer name="workspace_max_screens">9</integer>
-    <integer name="workspace_default_screen_count">5</integer>
+    <integer name="workspace_max_screens">5</integer>
+    <integer name="workspace_default_screen_count">3</integer>
     <integer name="workspace_default_screen">2</integer>
     
     <!-- dock栏配置：最大屏数、默认屏、每屏可放置图标数 -->
@@ -21,14 +21,14 @@
     <integer name="dockbar_cell_counts">4</integer>
     
     <!-- 主题配置：主题常量引用到包名前缀、应用选择Activity -->
-    <string name="theme_comp_pkg">com.simon.android.pandahome2</string>
-    <string name="theme_app_select_activity">com.nd.hilauncherdev.app.AppResolverSelectActivity</string>
+    <string name="theme_comp_pkg">com.bitants.launcher</string>
+    <string name="theme_app_select_activity">com.bitants.launcherdev.app.AppResolverSelectActivity</string>
     
     
     
     <!-- 主题广播配置 -->
     <!-- 当前主题信息广播 -->
-    <string name="INTENT_CURRENT_THEME_INFO">com.nd.android.pandahome.THEME_INFO</string>
+    <string name="INTENT_CURRENT_THEME_INFO">com.bitants.launcher.THEME_INFO</string>
     <!-- 询问当前主题广播 -->
     <string name="ACTION_ASK_THEME">com.nd.android.pandahome.ASK_THEME</string>
     <!-- 百宝箱请求安装应用主题广播 -->

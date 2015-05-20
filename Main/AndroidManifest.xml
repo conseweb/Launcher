@@ -56,23 +56,6 @@
 		<provider android:name="com.bitants.launcherdev.launcher.LauncherProvider"
 			android:authorities="com.bitants.launcher.settings" />
 		
-		
-		<!--<service android:name="com.baidu.dx.personalize.theme.LocalThemeService" />-->
-        
-        <!-- 应用下载，下载管理 -->
-        <!--<service-->
-            <!--android:name="com.nd.hilauncherdev.webconnect.downloadmanage.model.DownloadServerService"-->
-            <!--android:exported="false" />-->
-        <!--<service-->
-            <!--android:name="com.bitants.launcherdev.webconnect.downloadmanage.model.PluginDownloadForwardService"-->
-            <!--android:exported="false" >-->
-            <!--<intent-filter>-->
-                <!--<action android:name="com.mobo.launcher.FORWARD_SERVICE" />-->
-                <!--<category android:name="android.intent.category.DEFAULT" />-->
-            <!--</intent-filter>-->
-        <!--</service>-->
-        <!-- 应用下载，下载管理   End -->
-		
 		<!-- Intent received used to install shortcuts from other applications -->
 		<receiver android:name="com.bitants.launcherdev.launcher.broadcast.InstallShortcutReceiver"
 			android:permission="com.android.launcher.permission.INSTALL_SHORTCUT">
