@@ -333,7 +333,7 @@ public class ThemeResourceWrapper{
 	}
 
     /**
-     * 是否有91桌面的设置，默认为有，第三方主题可能会没有
+     * 是否有魔镜桌面的设置，默认为有，第三方主题可能会没有
      * @return
      */
     public boolean hasPandaConfig(){

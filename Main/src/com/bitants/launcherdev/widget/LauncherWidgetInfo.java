@@ -109,7 +109,7 @@ public class LauncherWidgetInfo extends LauncherItemInfo {
 	private int previewImageResInt = -1;
 	
 	/**
-	 * 第一次添加到小部件列表 时91桌面的版本号
+	 * 第一次添加到小部件列表 时魔镜桌面的版本号
 	 */
 	private int launcherVersionCode;
 	

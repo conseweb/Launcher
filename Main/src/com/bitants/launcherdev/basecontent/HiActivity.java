@@ -13,6 +13,6 @@ public class HiActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		HiAnalytics.init(this);
+//		HiAnalytics.init(this);
 	}
 }

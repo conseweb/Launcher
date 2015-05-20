@@ -333,7 +333,7 @@ public class SettingsConstants {
     public final static String SETTING_BACKUP_RESET = "settings_backup_reset";
     
     /**
-     * 关于91桌面key
+     * 关于魔镜桌面key
      */
     public final static String SETTING_ABOUT = "settings_about";
     /**
@@ -353,12 +353,12 @@ public class SettingsConstants {
      */
     public final static String SETTING_ABOUT_FEEDBACK = "settings_about_feedback";
     /**
-     * 关于91桌面key
+     * 关于魔镜桌面key
      */
     public final static String SETTING_ABOUT_COPYRIGHT = "settings_about_copyright";
     
     /**
-     * 退出91桌面key
+     * 退出魔镜桌面key
      */
     public final static String SETTING_EXIT = "settings_exit";
     
@@ -464,7 +464,7 @@ public class SettingsConstants {
 	 */
 	public static final String SETTINGS_HOME_RESET_CURRENT_SCENE = "settings_home_reset_current_scene";
 	/**
-	 * 返回91桌面默认模式
+	 * 返回魔镜桌面默认模式
 	 */
 	public static final String SETTINGS_HOME_BACK_TO_DEFAULT_SCENE = "settings_home_back_to_default_scene";
 	/**

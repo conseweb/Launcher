@@ -238,7 +238,7 @@ public final class LauncherWidgetInfoManager {
 	}
 	
 	/**
-	 * 91桌面内部快捷方式widget
+	 * 魔镜桌面内部快捷方式widget
 	 * 
 	 * @return
 	 */

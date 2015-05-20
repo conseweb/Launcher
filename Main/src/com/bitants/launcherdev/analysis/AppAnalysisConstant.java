@@ -86,7 +86,7 @@ public class AppAnalysisConstant {
 
     /**
      * 由服务端来入库数据 sp保留
-     * 现在各桌面推荐列表统一，下载的量都会统计到91桌面上
+     * 现在各桌面推荐列表统一，下载的量都会统计到魔镜桌面上
      */
     public static final int SP_LAUNCHER_UNINSTALL_RECOMMEND_APP = 98;    //桌面卸载推荐
 

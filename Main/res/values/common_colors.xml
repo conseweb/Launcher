@@ -8,7 +8,8 @@
 	** distributed under the License is distributed on an "AS IS" BASIS, ** WITHOUT 
 	WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. ** See the 
 	License for the specific language governing permissions and ** limitations 
-	under the License. */
+	under the License. */
+
 -->
 <resources>
 
@@ -45,16 +46,16 @@
     <!-- 统一背景色 -->
     <color name="myphone_common_bg_color">#f2f2f2</color>
     <!-- 内容颜色 -->
-    <color name="myphone_common_text_color">#303030</color>
+    <!--<color name="myphone_common_text_color">#303030</color>-->
     <!-- 说明文字颜色与ViewPagerTab未选中颜色 -->
-    <color name="myphone_common_little_text_color">#8f8f8f</color>
+    <!--<color name="myphone_common_little_text_color">#8f8f8f</color>-->
     <!-- 单独用于HeadSwitchView -->
     <color name="myphone_common_little_text_color_news">#6052D6</color>
     <!-- ViewPagerTab选中颜色 -->
     <color name="myphone_common_dialog_text_color">#1e82dc</color><!-- 5eb9f2 -->
   
 
-    <drawable name="myphone_bg_color">#f9fafb</drawable>
+    <!--<drawable name="myphone_bg_color">#f9fafb</drawable>-->
     <drawable name="blackTransparent">#CC000000</drawable>
     <drawable name="white">#FFFFFFFF</drawable>
     <drawable name="silver">#00ffffff</drawable>
@@ -83,13 +84,13 @@
     <color name="pz_guide_text_color">#1c7bdb</color>
     
 	<!-- 与新主题相关的文字颜色 -->
-    <color name="theme_relative">#1e83de</color>
+    <!--<color name="theme_relative">#1e83de</color>-->
     
-    <color name="common_text_color">#FF333333</color>
-    <color name="common_little_text_color">#FF919191</color>
-    <color name="common_title_little_text_color">#6053d6</color>
-    <color name="common_btn_text_color">#FF5F5F5F</color>
-    <color name="common_remind_gray">#ff5b5b5b</color>
-    <color name="common_remind_gray_bg">#ffebebeb</color>
-    <color name="common_remind_orange">#fff78a41</color>
+    <!--<color name="common_text_color">#FF333333</color>-->
+    <!--<color name="common_little_text_color">#FF919191</color>-->
+    <!--<color name="common_title_little_text_color">#6053d6</color>-->
+    <!--<color name="common_btn_text_color">#FF5F5F5F</color>-->
+    <!--<color name="common_remind_gray">#ff5b5b5b</color>-->
+    <!--<color name="common_remind_gray_bg">#ffebebeb</color>-->
+    <!--<color name="common_remind_orange">#fff78a41</color>-->
 </resources>

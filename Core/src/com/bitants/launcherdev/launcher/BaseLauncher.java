@@ -563,7 +563,7 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 	protected void onStart() {
 		super.onStart();
 		// 用户统计数据上传
-		LauncherConfig.getLauncherHelper().startUpHiAnalytics(this);
+//		LauncherConfig.getLauncherHelper().startUpHiAnalytics(this);
 		
 		LauncherBroadcastControl.sendBrocdcastLauncherOnstart(this);//桌面启动广播
 		

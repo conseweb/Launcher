@@ -5,7 +5,7 @@ package com.bitants.launcherdev.framework.effect;
  */
 public class EffectConfig {
 	public static final int[] SCREEN_EFFECT_VALUES = {
-		    //91桌面原                           点心桌面
+		    //魔镜桌面原                           点心桌面
 			// 默认                                     经典
 			 EffectsType.DEFAULT,
 			// 随机               		随机

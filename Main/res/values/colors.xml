@@ -25,6 +25,8 @@
     
     <color name="gray">#999</color>
 	<color name="green">#696</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffffff</color>
 	<color name="red">#c66</color>
 	<color name="blue">#369</color>
 	<color name="brown">#c96</color>

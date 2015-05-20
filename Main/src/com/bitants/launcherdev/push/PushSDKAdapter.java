@@ -277,7 +277,7 @@ public class PushSDKAdapter extends PushSDKAdapterInterface {
 	}
 
 	/**
-	 * 解析活动通知(用于兼容旧版91桌面，其它桌面可不用实现)
+	 * 解析活动通知(用于兼容旧版魔镜桌面，其它桌面可不用实现)
 	 * 
 	 * @param compaignArray
 	 */
@@ -287,7 +287,7 @@ public class PushSDKAdapter extends PushSDKAdapterInterface {
 	}
 
 	/**
-	 * 发送活动通知(用于兼容旧版91桌面，其它桌面可不用实现)
+	 * 发送活动通知(用于兼容旧版魔镜桌面，其它桌面可不用实现)
 	 * 
 	 * @param ctx
 	 * @param item
@@ -299,7 +299,7 @@ public class PushSDKAdapter extends PushSDKAdapterInterface {
 	}
 
 	/**
-	 * 发送活动通知前处理(用于兼容旧版91桌面，其它桌面可不用实现)
+	 * 发送活动通知前处理(用于兼容旧版魔镜桌面，其它桌面可不用实现)
 	 * 
 	 * @param serverConfigInfo
 	 * @param notificationHandler

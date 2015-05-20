@@ -47,7 +47,7 @@ public class BaseSimpleTheme {
     public String version = "";
     
     /**
-     * 91桌面标识
+     * 魔镜桌面标识
      */
     public int savedPandaFlag = -1;
 

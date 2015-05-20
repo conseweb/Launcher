@@ -83,7 +83,7 @@
 	
 	<!-- root提示-->
 	<string name="myphone_root_fail_title">获取ROOT权限失败</string>
-	<string name="myphone_root_fail_desc">91桌面无法获取ROOT权限，请在SuperUser KingUser等授权管理软件中允许ROOT权限</string>
+	<string name="myphone_root_fail_desc">魔镜桌面无法获取ROOT权限，请在SuperUser KingUser等授权管理软件中允许ROOT权限</string>
 	
 	<string name="frame_viewfacotry_err_info_text">Error</string>
     <string name="frame_viewfacotry_data_load_text">Loading</string>

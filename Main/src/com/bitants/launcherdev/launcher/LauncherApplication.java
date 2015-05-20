@@ -69,7 +69,7 @@ public class LauncherApplication extends BaseLauncherApplication {
 //		if (!dir.isDirectory()) {
 //			dir.mkdirs();
 //		}
-//		dir = new File(BASE_DIR_91CLOCKWEATHER);
+//		dir = new File(BASE_DIR_CLOCKWEATHER);
 //		if (!dir.isDirectory()) {
 //			dir.mkdirs();
 //		}

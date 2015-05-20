@@ -67,7 +67,7 @@
 	
 	<string name="main_dock_notification_disable_hint">通知栏已关闭，请先打开通知栏</string>
 	
-	<string name="out_of_space" msgid="8365249326091984698">"此屏幕上空间不足 (91桌面)"</string>
+	<string name="out_of_space" msgid="8365249326091984698">"此屏幕上空间不足 (魔镜桌面)"</string>
 	<string name="shortcut_installed" msgid="7071557296331322355">
 		"已创建"
 		<xliff:g id="NAME">%s</xliff:g>
@@ -96,7 +96,7 @@
 	
 	<!-- root提示 -->
 	<string name="myphone_root_fail_title">获取ROOT权限失败</string>
-	<string name="myphone_root_fail_desc">91桌面无法获取ROOT权限，请在SuperUser KingUser等授权管理软件中允许ROOT权限</string>
+	<string name="myphone_root_fail_desc">魔镜桌面无法获取ROOT权限，请在SuperUser KingUser等授权管理软件中允许ROOT权限</string>
 	
 	<string name="frame_viewfacotry_err_info_text">出错啦!</string>
     <string name="frame_viewfacotry_data_load_text">正在很努力地很努力地加载中</string>
@@ -107,7 +107,7 @@
     <string name="frame_viewfacotry_net_break_btn">网络设置</string>
     <string name="frame_viewfacotry_show_netsetting_err">打开网络设置失败</string>
     <string name="frame_viewfacotry_net_slowly_reflesh_btn">刷新</string>
-    <string name="frame_viewfactory_dialog_title">91桌面提示</string>
+    <string name="frame_viewfactory_dialog_title">魔镜桌面提示</string>
     <string name="frame_viewfactory_err_title">出错啦！</string>
     <string name="frame_viewfactory_err_content_text">不好意思，出错啦！我们需要您的反馈来帮助我们尽快修复这个问题，请放心，我们只采集出错信息，不收集您的个人信息。</string>
     <string name="frame_viewfactory_tell_us">告诉我们</string>

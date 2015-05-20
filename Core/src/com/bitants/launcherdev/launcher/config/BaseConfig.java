@@ -10,18 +10,10 @@ import com.bitants.launcherdev.kitset.util.TelephoneUtil;
 import com.bitants.launcherdev.launcher.config.preference.BaseConfigPreferences;
 import com.bitants.launcherdev.launcher.support.BaseIconCache;
 import com.bitants.launcher.R;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
 import com.bitants.launcherdev.launcher.BaseLauncher;
 import com.bitants.launcherdev.launcher.BaseLauncherApplication;
-import com.bitants.launcherdev.launcher.BaseLauncherApplication;
-import com.bitants.launcherdev.launcher.config.preference.BaseConfigPreferences;
 import com.bitants.launcherdev.launcher.config.preference.BaseSettingsPreference;
-import com.bitants.launcherdev.launcher.config.preference.BaseSettingsPreference;
-import com.bitants.launcherdev.launcher.support.BaseIconCache;
 import com.bitants.launcherdev.theme.pref.ThemeSharePref;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
-import com.bitants.launcherdev.launcher.config.preference.BaseConfigPreferences;
-import com.bitants.launcherdev.launcher.support.BaseIconCache;
 
 public class BaseConfig {
 	public static final String TAG = "com.bitants.launcherdev";
@@ -53,13 +45,13 @@ public class BaseConfig {
 	private static boolean isZh = true;
 
 	/** BASE_DIR 读取config.xml */
-	private static String BASE_DIR = Environment.getExternalStorageDirectory() + "/PandaHome2";
+	private static String BASE_DIR = Environment.getExternalStorageDirectory() + "/bitants";
 	
 	/** 防止图库扫描 */
 	public static String NO_MEDIA = getBaseDir() + "/.nomedia";
 
 	/** 91天气秀皮肤存放目录 */
-	public static String BASE_DIR_91CLOCKWEATHER = getBaseDir() + "/91clockandweather/skins/";
+	public static String BASE_DIR_CLOCKWEATHER = getBaseDir() + "/clockandweather/skins/";
 
 	/** 主题资源根目录 */
 	public static String THEME_DIR = getBaseDir() + "/Themes/";
@@ -100,11 +92,11 @@ public class BaseConfig {
 	/**
 	 * root权限的命令行文件名，可执行root权限的命令
 	 */
-	public static final String SUPER_SHELL_FILE_NAME = "panda_super_shell";
+	public static final String SUPER_SHELL_FILE_NAME = "super_shell";
 	/**
 	 * 调用 root权限的shell时传进的参数，过滤权限，防止其他应用的操作
 	 */
-	public static final String SUPER_SHELL_PERMISSION = "com.nd.android.launcher.permission.SUPER_SHELL";
+	public static final String SUPER_SHELL_PERMISSION = "com.bitants.launcher.permission.SUPER_SHELL";
 	
 	/**
 	 * 默认字体测量大小
@@ -152,7 +144,7 @@ public class BaseConfig {
 		/** 防止图库扫描 */
 		NO_MEDIA = BASE_DIR + "/.nomedia";
 		/** 91天气秀皮肤存放目录 */
-		BASE_DIR_91CLOCKWEATHER = BASE_DIR + "/91clockandweather/skins/";
+		BASE_DIR_CLOCKWEATHER = BASE_DIR + "/91clockandweather/skins/";
 		/** 主题资源根目录 */
 		THEME_DIR = BASE_DIR + "/Themes/";
 		/**

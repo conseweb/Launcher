@@ -228,7 +228,7 @@ public class ThemeManagerFactory {
 		//主题资源目录
 		String currentThemePath = BaseConfig.THEME_DIR + themeId.replace(" ", "_") + "/";
 		//天气皮肤目录
-		String weatherSkinPath = BaseConfig.BASE_DIR_91CLOCKWEATHER + themeId + "/";
+		String weatherSkinPath = BaseConfig.BASE_DIR_CLOCKWEATHER + themeId + "/";
 		if(null != packageName) {
 			if(Build.VERSION.SDK_INT < 14){//4.0以下过滤主题询问方包名，只有主题询问方才能收到广播
 				themeIntent.setPackage(packageName);
@@ -250,7 +250,7 @@ public class ThemeManagerFactory {
 				} else {//主题模块
 					currentThemePath = BaseConfig.THEME_DIR + moduleItem.getId().replace(" ", "_") + "/";
 					if(ModuleConstant.MODULE_WEATHER.equals(moduleItem.getKey())){//天气模块
-						weatherSkinPath = BaseConfig.BASE_DIR_91CLOCKWEATHER + moduleItem.getId() + "/";
+						weatherSkinPath = BaseConfig.BASE_DIR_CLOCKWEATHER + moduleItem.getId() + "/";
 					}
 				}
 				// 当前主题是默认主题，但第三方模块皮肤为其他主题或单独模块包资源时，主题ID修改为moduleItem.getId()，防止第三方应用切换至默认皮肤 caizp 2014-6-25
@@ -483,11 +483,11 @@ public class ThemeManagerFactory {
         //删除黄历天气皮肤文件夹
         FileUtil.delFolder(ThemeGlobal.BASE_DIR_CLOCKWEATHER + themeId.replace(" ", "_") + "/");
         //删除91天气秀皮肤文件夹(历史冗余数据)
-        FileUtil.delFolder(BaseConfig.BASE_DIR_91CLOCKWEATHER + themeId.replace("/", "_") + "/");
+        FileUtil.delFolder(BaseConfig.BASE_DIR_CLOCKWEATHER + themeId.replace("/", "_") + "/");
         //删除91天气秀皮肤文件夹(历史冗余数据)
-        FileUtil.delFolder(BaseConfig.BASE_DIR_91CLOCKWEATHER + themeId.replace("_", " ") + "/");
+        FileUtil.delFolder(BaseConfig.BASE_DIR_CLOCKWEATHER + themeId.replace("_", " ") + "/");
         //删除91天气秀皮肤文件夹
-        FileUtil.delFolder(BaseConfig.BASE_DIR_91CLOCKWEATHER + themeId + "/");
+        FileUtil.delFolder(BaseConfig.BASE_DIR_CLOCKWEATHER + themeId + "/");
         //删除备份的图片背景文件
         File picFile = new File(WallpaperUtil.getWPPicHome());
         if ((null != picFile) && picFile.exists()) {

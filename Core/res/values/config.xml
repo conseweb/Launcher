@@ -1,5 +1,5 @@
 <resources>
-    <!-- 是否为91桌面 ，非91桌面必须置为0-->
+    <!-- 是否为魔镜桌面 ，非魔镜桌面必须置为0-->
     <integer name="is_91Launcher">0</integer>
     
     <!-- ContentProvider前缀 -->

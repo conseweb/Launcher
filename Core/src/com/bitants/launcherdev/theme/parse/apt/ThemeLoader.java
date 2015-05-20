@@ -933,8 +933,8 @@ public class ThemeLoader {
     	String themeWeatherPackage = unZipPath + ThemeGlobal.THEME_CLOCKWEATHER_SKIN;
     	String themeWeatherFolder = unZipPath + ModuleConstant.MODULE_WEATHER + "/";
     	//如果中间生成文件夹存在，则都删除，避免数据冗余
-    	String weatherShowSkinPath = BaseConfig.BASE_DIR_91CLOCKWEATHER + themeWeatherId + "/";
-		String weatherShowTempSkinPath = BaseConfig.BASE_DIR_91CLOCKWEATHER + themeWeatherId + ".tmp/";
+    	String weatherShowSkinPath = BaseConfig.BASE_DIR_CLOCKWEATHER + themeWeatherId + "/";
+		String weatherShowTempSkinPath = BaseConfig.BASE_DIR_CLOCKWEATHER + themeWeatherId + ".tmp/";
 		//删除原文件夹
 		FileUtil.delFolder(weatherShowSkinPath);
 		FileUtil.delFolder(weatherShowTempSkinPath);
