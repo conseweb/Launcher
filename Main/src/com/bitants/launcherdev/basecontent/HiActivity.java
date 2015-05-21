@@ -2,7 +2,6 @@ package com.bitants.launcherdev.basecontent;
 
 import android.app.Activity;
 import android.os.Bundle;
-import com.bitants.launcherdev.kitset.Analytics.HiAnalytics;
 
 /**
  * 1. 功能统计初始化
@@ -13,6 +12,6 @@ public class HiActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-//		HiAnalytics.init(this);
+//		MoAnalytics.init(this);
 	}
 }

@@ -1,7 +1,7 @@
 package com.bitants.launcherdev.framework.httplib;
 
 import android.content.Context;
-import com.bitants.launcherdev.kitset.Analytics.HiAnalytics;
+import com.bitants.launcherdev.kitset.Analytics.MoAnalytics;
 import com.bitants.launcherdev.kitset.util.DocumentHelper;
 import com.bitants.launcherdev.kitset.util.StringUtil;
 import com.bitants.launcherdev.kitset.util.TelephoneUtil;
@@ -97,7 +97,7 @@ public class DxHttpClient {
 		HttpRemoteRequest.appendAttrValue(sb, "JailBroken", "0");
 		HttpRemoteRequest.appendAttrValue(sb, "Fid", String.valueOf(0 - eventId));
 		HttpRemoteRequest.appendAttrValue(sb, "IMEI", TelephoneUtil.getIMEI(ctx));
-		String cuid = HiAnalytics.getCUID(ctx);
+		String cuid = MoAnalytics.getCUID(ctx);
 		cuid = StringUtil.isEmpty(cuid) ? "" : URLEncoder.encode(cuid);
 		HttpRemoteRequest.appendAttrValue(sb, "cuid", cuid);
 		if (encode) {

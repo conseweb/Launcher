@@ -1,6 +1,6 @@
 package com.bitants.launcherdev.kitset.util;
 
-import com.bitants.launcherdev.kitset.Analytics.HiAnalytics;
+import com.bitants.launcherdev.kitset.Analytics.MoAnalytics;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 
 import java.net.URLEncoder;
@@ -20,7 +20,7 @@ public class CUIDUtil {
     public static String getCUIDPART() {
         if (StringUtil.isEmpty(CUID_PART) && BaseConfig.getApplicationContext() != null) {
             try {
-                CUID = HiAnalytics.getCUID(BaseConfig.getApplicationContext());
+                CUID = MoAnalytics.getCUID(BaseConfig.getApplicationContext());
                 String CUID_encode = URLEncoder.encode(CUID, "UTF-8");
                 if (!StringUtil.isEmpty(CUID_encode)) {
                     CUID_PART = "&CUID=" + CUID_encode;
@@ -36,7 +36,7 @@ public class CUIDUtil {
     public static String getCUID() {
         if(StringUtil.isEmpty(CUID) && BaseConfig.getApplicationContext() != null){
             try {
-                CUID = HiAnalytics.getCUID(BaseConfig.getApplicationContext());
+                CUID = MoAnalytics.getCUID(BaseConfig.getApplicationContext());
             } catch (Exception e) {
                 e.printStackTrace();
             }

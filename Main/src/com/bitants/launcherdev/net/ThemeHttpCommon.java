@@ -3,7 +3,7 @@ package com.bitants.launcherdev.net;
 
 import android.content.Context;
 import android.os.Build;
-import com.bitants.launcherdev.kitset.Analytics.HiAnalytics;
+import com.bitants.launcherdev.kitset.Analytics.MoAnalytics;
 import com.bitants.launcherdev.kitset.DigestUtils;
 import com.bitants.launcherdev.kitset.util.TelephoneUtil;
 import org.apache.http.*;
@@ -387,7 +387,7 @@ public class ThemeHttpCommon {
 				IMSI = ThemeHttpCommon.utf8URLencode(TelephoneUtil.getIMSI(ctx));
 			}
 			if (null == CUID) {
-				CUID = ThemeHttpCommon.utf8URLencode(HiAnalytics.getCUID(ctx));
+				CUID = ThemeHttpCommon.utf8URLencode(MoAnalytics.getCUID(ctx));
 			}
 
 			String Sign = DigestUtils.md5Hex(PID + MT + DivideVersion + SupPhone + SupFirm + IMEI + IMSI + CUID + ProtocolVersion + jsonParams + REQUEST_KEY);

@@ -10,7 +10,7 @@ import com.bitants.launcher.R;
 import com.bitants.launcherdev.framework.httplib.GZipHttpUtil;
 import com.bitants.launcherdev.framework.view.bubble.LauncherBubbleView;
 import com.bitants.launcherdev.kitset.Analytics.AnalyticsConstant;
-import com.bitants.launcherdev.kitset.Analytics.HiAnalytics;
+import com.bitants.launcherdev.kitset.Analytics.MoAnalytics;
 import com.bitants.launcherdev.kitset.config.ConfigPreferences;
 import com.bitants.launcherdev.kitset.util.CUIDUtil;
 import com.bitants.launcherdev.kitset.util.StringUtil;
@@ -148,7 +148,7 @@ public class PushSDKAdapter extends PushSDKAdapterInterface {
 	@Override
 	public void statReceivePushNotification(String tag) {
 		tag += TelephoneUtil.isNetworkAvailable(BaseConfig.getApplicationContext()) ? "_net" : "_no_net";
-		HiAnalytics.submitEvent(BaseConfig.getApplicationContext(), AnalyticsConstant.NOTIFICATION_MESSAGE_PUSH, tag);
+		MoAnalytics.submitEvent(BaseConfig.getApplicationContext(), AnalyticsConstant.NOTIFICATION_MESSAGE_PUSH, tag);
 	}
 
 	/**
@@ -157,7 +157,7 @@ public class PushSDKAdapter extends PushSDKAdapterInterface {
 	@Override
 	public void statClickPushNotification(String tag) {
 		tag += TelephoneUtil.isNetworkAvailable(BaseConfig.getApplicationContext()) ? "_net" : "_no_net";
-		HiAnalytics.submitEvent(BaseConfig.getApplicationContext(), AnalyticsConstant.NOTIFICATION_MESSAGE_PUSH_CLICK, tag);
+		MoAnalytics.submitEvent(BaseConfig.getApplicationContext(), AnalyticsConstant.NOTIFICATION_MESSAGE_PUSH_CLICK, tag);
 	}
 
 

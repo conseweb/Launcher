@@ -5,17 +5,17 @@ import android.util.Log;
 import com.bitants.launcherdev.framework.httplib.DxHttpClient;
 import com.bitants.launcherdev.kitset.util.TelephoneUtil;
 import com.bitants.launcherdev.kitset.util.ThreadUtil;
-import com.nd.analytics.NdAnalytics;
-import com.nd.analytics.NdAnalyticsSettings;
+//import com.nd.analytics.NdAnalytics;
+//import com.nd.analytics.NdAnalyticsSettings;
 
 import java.util.UUID;
 
 /**
  * 功能统计封装类
  */
-public class HiAnalytics {
+public class MoAnalytics {
 	private static int init = -1;
-	private static final String TAG = "HiAnalytics";
+	private static final String TAG = "MoAnalytics";
 	/*
 	 * 用户统计数据上传后的广播
 	 */
@@ -28,14 +28,14 @@ public class HiAnalytics {
 	public static final String CONST_STRING_KEY_ANALYTICS_WAY = "key_analytics_way";
 	
 	/**
-	 * 产品ID,暂用熊猫2.7的id
+	 * 产品ID
 	 */
-	public static final int AppId = 114556;
+	public static final int AppId = 1927446;
 
 	/**
-	 * 产品Key,暂用熊猫2.7的key
+	 * 产品Key
 	 */
-	public static final String AppKey = "1a17861612dd64dbb94bdeece97c6c086f2b54c6cb7abdfb";
+	public static final String AppKey = "e48ecc9d444c1a3508e139a8378ea917b9c5b23362f8c26f";
 
 
 	/**
@@ -48,16 +48,16 @@ public class HiAnalytics {
 			return;
 		
 		// 初始化数据分析
-		NdAnalyticsSettings settings = new NdAnalyticsSettings();
-		settings.setAppId(AppId);
-		settings.setAppKey(AppKey);
+//		NdAnalyticsSettings settings = new NdAnalyticsSettings();
+//		settings.setAppId(AppId);
+//		settings.setAppKey(AppKey);
 
 		
-		NdAnalytics.setReportStartupOnlyOnceADay(true);
-		NdAnalytics.initialize(context, settings);
+//		NdAnalytics.setReportStartupOnlyOnceADay(true);
+//		NdAnalytics.initialize(context, settings);
 		
 		init = 1;
-		Log.e(TAG, "=============================HiAnalytics.init=============================");
+		Log.e(TAG, "=============================Analytics.init=============================");
 	}
 
 
@@ -88,7 +88,7 @@ public class HiAnalytics {
 
 	
 	public static void submitEvent(Context context, int eventId, String label) {
-		NdAnalytics.onEvent(context, eventId, label);
+//		NdAnalytics.onEvent(context, eventId, label);
 	}
 	
 	
@@ -131,12 +131,13 @@ public class HiAnalytics {
 	}
 	
 	public static void startUp(Context ctx) {
-		NdAnalytics.startup(ctx);
-		Log.e(TAG, "=============================HiAnalytics.startUp=============================");
+//		NdAnalytics.startup(ctx);
+		Log.e(TAG, "=============================MoAnalytics.startUp=============================");
 	}
 	
 	public static String getChannel(Context ctx) {
-		return NdAnalytics.getChannel(ctx);
+//		return NdAnalytics.getChannel(ctx);
+		return "";
 	}
 	
 	/**

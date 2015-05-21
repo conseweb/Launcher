@@ -27,6 +27,7 @@ import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDat
 import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
 import com.bitants.launcherdev.framework.view.draggersliding.DraggerChooseItem;
 import com.bitants.launcherdev.framework.view.draggersliding.datamodel.DraggerSlidingViewData;
+import com.bitants.launcherdev.kitset.util.MessageUtils;
 import com.bitants.launcherdev.kitset.util.ScreenUtil;
 import com.bitants.launcherdev.launcher.DragController;
 import com.bitants.launcherdev.launcher.Launcher;
@@ -97,9 +98,11 @@ public class FolderView extends RelativeLayout implements
 	 * 是否可点击，用于在文件夹打开动画未完成前屏蔽单击事件
 	 */
 	private boolean isClickable = true;
+    private Context mContext;
 
-	public FolderView(Context context, AttributeSet attrs) {
+    public FolderView(Context context, AttributeSet attrs) {
 		super(context, attrs);
+        mContext = context;
 		Resources res = context.getResources();
 		mLightChecked = res.getDrawable(R.drawable.spring_lightbar_checked);
 		mLightNormal = res.getDrawable(R.drawable.spring_lightbar_normal);
@@ -216,7 +219,7 @@ public class FolderView extends RelativeLayout implements
 			 * 行为统计
 			 */
 //			if (analysisId != AnalyticsConstant.INVALID)
-//				HiAnalytics.submitEvent(mContext, analysisId);
+//				MoAnalytics.submitEvent(mContext, analysisId);
 		}
 
 	}
@@ -434,6 +437,7 @@ public class FolderView extends RelativeLayout implements
 	@Override
 	public void onItemClick(View v, int positionInData, int positionInScreen,
 			int screen, ICommonData data) {
+
 		if(BaseSettingsPreference.getInstance().getFolderStyle() == FolderIconTextView.FOLDER_STYLE_FULL_SCREEN){
 			if(mFolderGirdView.getAddView() == v){
 //				mAddMore.performClick();

@@ -27,7 +27,7 @@ public class LauncherProvider extends BaseLauncherProvider {
 		Context mContext = getContext();
 		if(BaseConfig.getApplicationContext()==null){
 			BaseConfig.setApplicationContext(mContext);
-			//HiAnalytics.init(mContext);
+			//MoAnalytics.init(mContext);
 		}
 		
 		//初始化数据库辅助类

@@ -25,8 +25,8 @@ import java.util.*;
 
 /**
  * 桌面打开文件夹逻辑类
- * @author pdw
- * @date 2012-6-4 下午03:38:48 
+ * @author Michael
+ * @date 2013-7-14
  */
 public class LauncherFolderHelper extends AbstractFolderHelper {
 	

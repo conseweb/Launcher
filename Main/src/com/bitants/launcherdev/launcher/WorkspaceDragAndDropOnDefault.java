@@ -118,7 +118,7 @@ public class WorkspaceDragAndDropOnDefault extends WorkspaceDragAndDropImpl {
 				/**
 				 * 拖动图标进入文件夹统计
 				 */
-//				HiAnalytics.submitEvent(mContext, AnalyticsConstant.FOLDER_MERGE_INTO, FolderAnalysisConstants.FOLDER_ANALYSIS_LABEL_LAUNCHER);
+//				MoAnalytics.submitEvent(mContext, AnalyticsConstant.FOLDER_MERGE_INTO, FolderAnalysisConstants.FOLDER_ANALYSIS_LABEL_LAUNCHER);
 				
 				return true;
 			}
@@ -219,7 +219,7 @@ public class WorkspaceDragAndDropOnDefault extends WorkspaceDragAndDropImpl {
 //			pandaWidgetInfo.cellY = targetCell[1];
 //			((Launcher)mLauncher).addCustomWidgetToScreen(pandaWidgetInfo, view, screen);
 //			if(info instanceof LauncherWidgetInfo)
-//				HiAnalytics.submitEvent(mContext, AnalyticsConstant.WIDGET_ADD_TO_LAUNCHER_FROM_DRAWER, ((LauncherWidgetInfo)info).getTitle());
+//				MoAnalytics.submitEvent(mContext, AnalyticsConstant.WIDGET_ADD_TO_LAUNCHER_FROM_DRAWER, ((LauncherWidgetInfo)info).getTitle());
 //		} else if (info.itemType == LauncherSettings.Favorites.ITEM_TYPE_WIDGET_SHORTCUT) {
 //			View view = LauncherWidgetHelper.createShortcutByLauncherWidget(mLauncher, (LauncherWidgetInfo) info);
 //			if (view == null || view.getTag() == null)
@@ -227,7 +227,7 @@ public class WorkspaceDragAndDropOnDefault extends WorkspaceDragAndDropImpl {
 //			
 //			((Workspace)mWorkspace).addViewInCurrentScreenFromOutside(view, cellLayout, (ItemInfo) view.getTag());
 //			if(info instanceof LauncherWidgetInfo)
-//				HiAnalytics.submitEvent(mContext, AnalyticsConstant.WIDGET_ADD_TO_LAUNCHER_FROM_DRAWER, ((LauncherWidgetInfo)info).getTitle());
+//				MoAnalytics.submitEvent(mContext, AnalyticsConstant.WIDGET_ADD_TO_LAUNCHER_FROM_DRAWER, ((LauncherWidgetInfo)info).getTitle());
 //		} else {
 			//拷贝ItemInfo，防止后面对它的修改影响到原来ItemInfo!
 //			if (!(dragInfo instanceof LauncherWidgetInfo) && info.container == ItemInfo.NO_ID) {
