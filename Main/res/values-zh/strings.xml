@@ -18,7 +18,7 @@
 	<string name="menu_effect">飞骐2特效选择</string>
 	<string name="menu_sys_setting">飞骐2系统设置</string>
 	<string name="menu_custom_setting">飞骐2桌面设置</string>
-	<string name="menu_share">飞骐2分享</string>
+	<string name="menu_share">飞骐2屏幕预览</string>
 	
 	<!-- 快捷 -->
 	<string name="dockbar_dock_drawer">全部应用</string>

@@ -15,16 +15,14 @@ import java.net.URLEncoder;
 
 /**
  * 服务端接口交互类 </br>
- * Created on: 2014-2-12 </br>
- * Author: pdw </br>
  */
 public class DxHttpClient {
 	//全局统计开关接口
 	private static final String CONFIG_SWITCH_URL = "http://logstatic.sj.91.com/config.xml";
 	
 
-	// 测试"192.168.254.69:803";
-	// 生产“pandahome.sj.91.com”
+	// 测试"192.168.0.6:8000";
+	// 
 	
 	//实时统计接口
 	private static final String REALTIME_STATE_URL = "http://pandahome.sj.91.com/theme.ashx/SuppleFunc?Mt=4&Format=json&PID=106";

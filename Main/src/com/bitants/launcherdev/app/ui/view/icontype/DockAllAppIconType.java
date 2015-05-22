@@ -1,6 +1,5 @@
 /**
  * @author Michael
- * Date:2014-3-21下午6:02:58
  *
  */
 package com.bitants.launcherdev.app.ui.view.icontype;
@@ -19,7 +18,6 @@ import com.bitants.launcherdev.theme.data.ThemeData;
 /**
  * 匣子图标
  * @author Michael
- * Date:2014-3-21下午6:02:58
  *
  */
 public class DockAllAppIconType extends IconType {

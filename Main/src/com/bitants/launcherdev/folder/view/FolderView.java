@@ -47,8 +47,6 @@ import java.util.List;
 /**
  * 文件夹显示视图，包括文件夹名字输入框，添加app按钮，横向滑屏的app列表
  * 
- * @author pdw
- * @date 2012-5-24 下午04:39:43 
  **/
 public class FolderView extends RelativeLayout implements
 		OnCommonSlidingViewClickListener, OnCommonSlidingViewLongClickListener,
@@ -671,7 +669,7 @@ public class FolderView extends RelativeLayout implements
 	/**
 	 * 显示长按菜单
 	 * @author Michael
-	 * @createtime 2013-7-17
+	 * @createtime 2013-3-11
 	 */
 	public void showShortcutMenu(){
 		if(clickView != null){

@@ -136,8 +136,8 @@ public class MagicDockbar extends BaseMagicDockbar {
 	
 	/**
 	 * <br>Description: 应用主题皮肤
-	 * <br>Author:caizp
-	 * <br>Date:2012-7-19下午03:04:14
+	 * <br>Author: Michael
+	 * <br>Date:2013-5-16
 	 * @see com.bitants.launcherdev.theme.assit.ThemeUIRefreshListener#applyTheme()
 	 */
 	@Override
@@ -164,8 +164,8 @@ public class MagicDockbar extends BaseMagicDockbar {
 	
 	/**
 	 * 清除替换的虚框背景
-	 * Create On 2014-7-26上午11:14:00
-	 * Author : pdw
+	 * Create On 2013-5-21
+	 * Author : Michael
 	 */
 	public void cleanDirtyBackground() {
 		DockbarCellLayout cellLayout = (DockbarCellLayout) getChildAt(mCurrentScreen);

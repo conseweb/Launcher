@@ -33,7 +33,7 @@ public class LauncherItemInfo extends ItemInfo implements ICommonDataItem {
 	 */
 	protected Drawable previewImage;
 
-	protected int type;
+	public int type;
 
 	/**
 	 * 类别序号

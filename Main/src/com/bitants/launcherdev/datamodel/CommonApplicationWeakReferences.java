@@ -8,8 +8,6 @@ import java.lang.ref.WeakReference;
 
 /**
  * 全局图片缓存 <br>
- * Author:ryan <br>
- * Date:2012-5-18上午11:58:30
  */
 public class CommonApplicationWeakReferences {
 	private static CommonApplicationWeakReferences instance;

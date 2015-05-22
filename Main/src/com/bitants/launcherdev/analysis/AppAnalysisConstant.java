@@ -3,7 +3,6 @@ package com.bitants.launcherdev.analysis;
 /**
  * description: <br/>
  * author: Michael<br/>
- * data: 2014/8/28<br/>
  */
 public class AppAnalysisConstant {
 
@@ -68,7 +67,7 @@ public class AppAnalysisConstant {
      * 渠道 服务端根据上传的sp来生成对应的placeId 代表不同的位置
      * 统一请求下载包的sp
      */
-    public static final int SP_ASSIST_91 = 0;                   //从91助手下载的包
+    public static final int SP_ASSIST_91 = 0;                   //从91下载的包
     public static final int SP_LAUNCHER_ICON_APP = 110;         //桌面icon推荐
     public static final int SP_LAUNCHER_WIDGET_APP = 111;       //桌面预置插件推荐
     public static final int SP_LAUNCHER_FOLDER_APP = 103;       //桌面文件夹

@@ -5,7 +5,7 @@ import com.bitants.launcherdev.launcher.view.icon.ui.util.IconTypeFactoryManager
 
 /**
  * @author Michael
- * Date:2014-3-26下午5:13:22
+ * Date:2013-5-16
  *
  */
 public class LauncherFolderReceiverFactory extends FolderReceiverFactory {

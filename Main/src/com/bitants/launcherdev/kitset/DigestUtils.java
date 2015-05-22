@@ -1,14 +1,4 @@
-/**
- * Version 1.0
- *
- * =============================================================
- * Revision History
- * 
- * Modification                    Tracking
- * Date           Author           Number      Description of changes
- * ----------     --------------   ---------   -------------------------
- * 2009-9-23         yangbin            代码重构
- */
+
 package com.bitants.launcherdev.kitset;
 
 import com.bitants.launcherdev.kitset.apache.Hex;

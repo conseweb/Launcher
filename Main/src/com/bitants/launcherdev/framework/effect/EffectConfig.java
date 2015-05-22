@@ -1,11 +1,11 @@
 package com.bitants.launcherdev.framework.effect;
 
 /**
- * 特效配置类 </br> Created on: 2014-6-25 </br> Author: pdw </br>
+ * 特效配置类 </br>
  */
 public class EffectConfig {
 	public static final int[] SCREEN_EFFECT_VALUES = {
-		    //魔镜桌面原                           点心桌面
+		    //魔镜桌面原                           
 			// 默认                                     经典
 			 EffectsType.DEFAULT,
 			// 随机               		随机

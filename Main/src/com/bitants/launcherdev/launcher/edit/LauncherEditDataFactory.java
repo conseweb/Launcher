@@ -58,7 +58,7 @@ public class LauncherEditDataFactory {
 	public static List<ICommonDataItem> getWidgetDataInfos(Context context) {
 		ArrayList<ICommonDataItem> widgetList = new ArrayList<ICommonDataItem>();
 		/**加载91小部件信息*/	
-		widgetList.addAll(LauncherWidgetInfoManager.getInstance().loadAllInstalledLauncherWidgetInfos(false));
+		widgetList.addAll(LauncherWidgetInfoManager.getInstance().loadAllInstalledLauncherWidgetInfos(true));
 		/**加载内部小部件信息*/
 		widgetList.addAll(LauncherWidgetInfoManager.getInstance().loadAllLauncherWidgetInside());
 		Collections.sort(widgetList, LauncherWidgetInfoManager.WIDGET_TITLE_COMPARATOR);
@@ -172,7 +172,7 @@ public class LauncherEditDataFactory {
 	/**
 	 * 获取壁纸
 	 * @author Michael
-	 * Date:2014-1-28下午2:54:59
+	 * Date:2013-11-28
 	 * @param path
 	 * @param context
 	 * @param type

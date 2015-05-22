@@ -25,8 +25,6 @@ public interface IntentCommand {
 	
 	/**
 	 * 要执行的命令动作
-	 * 于2014/1/14新增点击来源参数
-	 * @date 2012-6-2 上午10:57:12
 	 * @param actionFrom 点击来源
 	 */
 	public void action(Context ctx, int actionFrom);

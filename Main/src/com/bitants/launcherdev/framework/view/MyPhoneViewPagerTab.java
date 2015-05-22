@@ -403,7 +403,7 @@ public class MyPhoneViewPagerTab extends View {
 	}
 	
 	/****************************************************************
-	 * end add by linqiang(866116) 添加排序功能TAB
+	 * 添加排序功能TAB
 	 ****************************************************************/
 
 	public void setTabDivideImg(Drawable drawable) {

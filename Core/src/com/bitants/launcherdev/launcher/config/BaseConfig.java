@@ -144,7 +144,7 @@ public class BaseConfig {
 		/** 防止图库扫描 */
 		NO_MEDIA = BASE_DIR + "/.nomedia";
 		/** 91天气秀皮肤存放目录 */
-		BASE_DIR_CLOCKWEATHER = BASE_DIR + "/91clockandweather/skins/";
+		BASE_DIR_CLOCKWEATHER = BASE_DIR + "/clockandweather/skins/";
 		/** 主题资源根目录 */
 		THEME_DIR = BASE_DIR + "/Themes/";
 		/**

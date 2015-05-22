@@ -21,6 +21,7 @@ import com.bitants.launcherdev.launcher.screens.CellLayout;
 import com.bitants.launcherdev.launcher.screens.ScreenViewGroup;
 import com.bitants.launcherdev.launcher.screens.dockbar.LightBarInterface;
 import com.bitants.launcherdev.launcher.screens.dockbar.MagicDockbarRelativeLayout;
+import com.bitants.launcherdev.launcher.screens.preview.PreviewCellInfo;
 import com.bitants.launcherdev.launcher.screens.preview.PreviewEditAdvancedController;
 import com.bitants.launcherdev.launcher.touch.DragScroller;
 import com.bitants.launcherdev.launcher.touch.DropTarget;
@@ -100,8 +101,8 @@ public class Workspace extends ScreenViewGroup implements DragScroller, AnyCallb
 	
 	/**
 	 * Description: 进入屏幕编辑模式
-	 * Author: guojy
-	 * Date: 2012-8-16 下午05:47:59
+	 * Author: Michael
+	 * Date: 2013-3-18
 	 */
 	public void changeToSpringMode(){
 		changeToSpringMode(true, LauncherEditView.TAB_ADD);
@@ -109,8 +110,8 @@ public class Workspace extends ScreenViewGroup implements DragScroller, AnyCallb
 	
 	/**
 	 * Description: 从其它地方添加View到Workspace
-	 * Author: guojy
-	 * Date: 2013-2-1 下午5:18:00
+	 * Author: Michael
+	 * Date: 2013-3-15
 	 */
 	public void addViewInCurrentScreenFromOutside(View view, CellLayout cellLayout, ItemInfo info){
 		addViewInScreenFromOutside(view, cellLayout, info, mCurrentScreen);
@@ -154,6 +155,53 @@ public class Workspace extends ScreenViewGroup implements DragScroller, AnyCallb
 		if(isOnSpringMode())
 			return;
 		lightbar.scrollHighLight(mScrollX);
+	}
+	
+	//移除默认空屏幕
+	public void checkWorkSpaceEmptyRemove(){
+		if(getChildCount()>0){
+			Boolean isdefaut=true;
+			for(int i=0;i<getChildCount();i++){
+				
+				CellLayout view=getCellLayoutAt(i);
+				if(view!=null&&view.getChildCount()<=0){
+					removeScreenFromWorkspace(i);
+					deleteScreen(i);
+				}else{
+					if(isdefaut){
+						setCurrentScreen(i);
+						setDefaultScreen(i);
+						isdefaut=false;
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	private void deleteScreen(final int position) {
+		int currentScreen = getCurrentScreen();
+		int defaultScreen = getDefaultScreen();
+		if(position < currentScreen) {
+			currentScreen--;
+		}
+		if(position < defaultScreen) {
+			defaultScreen--;
+		}
+		
+		if (getChildCount()-1 <= currentScreen) {
+			currentScreen = 0;
+		}
+		if (getChildCount()-1 <= defaultScreen) {
+			defaultScreen = 0;
+		}
+		setCurrentScreen(currentScreen);
+		setDefaultScreen(defaultScreen);
+		//修改Workspace数据
+		removeScreenFromWorkspace(position);
 	}
 	
 	@Override

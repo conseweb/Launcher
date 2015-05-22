@@ -33,8 +33,6 @@ public class Global extends BaseConfig {
 
 	/**
 	 * Description: dockbar是否显示应用的名称
-	 * Author: guojy
-	 * Date: 2013-8-30 下午1:42:42
 	 */
 	public static boolean isShowDockbarText() {
 		return true;

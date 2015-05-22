@@ -13,7 +13,6 @@ import java.util.List;
 
 /**
  * 应用程序工厂 <br>
- * Author:ryan
  */
 public class AppDataFactory extends BaseAppDataFactory{
 	private static final String TAG = "AppDataFactory";	

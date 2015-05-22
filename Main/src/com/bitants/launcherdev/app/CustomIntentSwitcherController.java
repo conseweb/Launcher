@@ -11,8 +11,6 @@ import java.util.ArrayList;
 /**
  * 自定义快捷方式开关控制器 负责自定义快捷方式的跳转
  * 
- * @author pdw
- * @date 2012-06-02 10:45:00
  */
 public class CustomIntentSwitcherController {
 
@@ -39,7 +37,6 @@ public class CustomIntentSwitcherController {
 	 * 
 	 * @param command
 	 *            注册的命令
-	 * @date 2012-6-2 上午11:39:33
 	 */
 	public void registerCustomIntent(IntentCommand command) {
 		if (!commands.contains(command)) {
@@ -51,8 +48,6 @@ public class CustomIntentSwitcherController {
 	/**
 	 * 移除自定义快捷方式命令 <br>
 	 * 当快捷方式从桌面移除的时候你可能要调用此方法 <br>
-	 * create at 2012-6-5 上午10:24:43 <br>
-	 * modify at 2012-6-5 上午10:24:43
 	 * 
 	 * @param command
 	 *            快捷方式命令
@@ -64,8 +59,6 @@ public class CustomIntentSwitcherController {
 	/**
 	 * 移除自定义快捷方式命令 <br>
 	 * 当快捷方式从桌面移除的时候你可能要调用此方法 <br>
-	 * create at 2012-6-5 上午10:24:43 <br>
-	 * modify at 2012-6-5 上午10:24:43
 	 * 
 	 * @param commandAct
 	 *            快捷方式命令action字符串 Intent.getAction()
@@ -87,7 +80,6 @@ public class CustomIntentSwitcherController {
 	 * @param actionFrom 点击来源
 	 * @param action
 	 *            自定义快捷方式action
-	 * @date 2012-6-2 上午11:36:27
 	 */
 	public void onAction(Context ctx,ApplicationInfo app, int actionFrom) {
 		if (app.itemType != Favorites.ITEM_TYPE_CUSTOM_INTENT &&
@@ -108,8 +100,6 @@ public class CustomIntentSwitcherController {
 	
 	/**
 	 * 长按回调
-	 * Create On 2014-11-10下午5:12:37
-	 * Author : pdw
 	 * @param ctx
 	 * @param app
 	 * @param actionFrom
@@ -134,9 +124,6 @@ public class CustomIntentSwitcherController {
 	/**
 	 * 查看命令
 	 * 
-	 * @author Jimmy <br>
-	 *         create at 2012-7-20 下午02:48:41 <br>
-	 *         modify at 2012-7-20 下午02:48:41
 	 * @param app
 	 * @return
 	 */

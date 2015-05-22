@@ -13,8 +13,6 @@ import com.bitants.launcherdev.launcher.info.ApplicationInfo;
 /**
  * 桌面快捷方式适配器,非桌面快捷方式请不要使用
  * 
- * @author pdw
- * @date 2012-06-03 11:23:00
  */
 public class AppInfoIntentCommandAdapter implements IntentCommand {
 

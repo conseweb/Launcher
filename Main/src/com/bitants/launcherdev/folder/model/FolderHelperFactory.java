@@ -6,8 +6,6 @@ import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
 /** 
  * 类说明:文件夹打开逻辑类工厂
  *  
- * @author pdw 
- * @date 2012-8-8 下午03:22:53 
  */
 public class FolderHelperFactory {
 	
@@ -41,7 +39,6 @@ public class FolderHelperFactory {
 	/**
 	 * <p>获取文件逻辑类</p>
 	 * 
-	 * <p>date: 2012-8-8 下午03:40:10
 	 * @param open
 	 * @return
 	 */

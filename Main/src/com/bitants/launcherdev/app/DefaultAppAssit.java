@@ -60,8 +60,6 @@ public class DefaultAppAssit {
 	
 	/**
 	 * <br>Description: 保存默认启动的应用程序
-	 * <br>Author:caizp
-	 * <br>Date:2013-5-7下午6:05:15
 	 * @param packageName
 	 * @param className
 	 * @param appIntent
@@ -97,8 +95,6 @@ public class DefaultAppAssit {
 	
 	/**
 	 * <br>Description:清除默认打开应用
-	 * <br>Author:caizp
-	 * <br>Date:2013-5-9上午11:14:03
 	 * @param context
 	 * @param appIntent
 	 */

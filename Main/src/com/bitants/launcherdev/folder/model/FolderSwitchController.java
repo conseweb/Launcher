@@ -24,7 +24,6 @@ import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
  * <p>文件夹逻辑控制器<p>
  * <p>负责文件夹各项操作的分发:打开、关闭、批量添加、重命名、加密、排序...<p>
  * @author Michael
- * @date 2012-5-23 下午02:51:08 <br>
  *       
  */
 public class FolderSwitchController extends AbstractFolderSwitchController implements OnKeyDownListenner {

@@ -297,7 +297,7 @@ public class LauncherEditView extends RelativeLayout implements OnCommonSlidingV
 	/**
 	 * 立即布局
 	 * @author Michael
-	 * @createtime 2013-8-20 
+	 * @createtime 2013-6-10 
 	 * @param slidingView
 	 */
 	public void relayout(){
@@ -310,7 +310,7 @@ public class LauncherEditView extends RelativeLayout implements OnCommonSlidingV
 	/**
 	 * 立即布局
 	 * @author Michael
-	 * @createtime 2013-8-20 
+	 * @createtime 2013-6-10 
 	 * @param slidingView
 	 */
 	public void relayout(final int screen){
@@ -336,22 +336,28 @@ public class LauncherEditView extends RelativeLayout implements OnCommonSlidingV
 			return;
 		}
 		ICommonDataItem dataItem = data.getDataList().get(positionInData);
-		final LauncherEditItemInfo item = (LauncherEditItemInfo) dataItem;
-		if (item instanceof LauncherEditAddItemInfo) {
-			if (item.type == LauncherEditAddItemInfo.TYPE_WIDGET_SYSTEM) {
+
+		if (dataItem instanceof LauncherWidgetInfo) {
+			final LauncherWidgetInfo item = (LauncherWidgetInfo) dataItem;
+			if (item.type == LauncherWidgetInfo.TYPE_SYSTEM) {
 				if (BaseCellLayoutHelper.findCellXYForApp(mLauncher) == null) {
 					return;
 				}
 //				setAllowClick(false);
 //				if (Build.VERSION.SDK_INT < 16) {
 					showAppWidgetPickPage(mLauncher);
-					Toast.makeText(mContext, R.string.common_loading,
-							Toast.LENGTH_SHORT).show();
+//					Toast.makeText(mContext, R.string.common_loading,
+//							Toast.LENGTH_SHORT).show();
 //				} else {
 //					showSystemWidgetViewCategory(0);
 //					setAllowClick(true);
 //				}
 			}
+		}else if(dataItem instanceof LauncherEditEffectItemInfo){
+			final LauncherEditEffectItemInfo item = (LauncherEditEffectItemInfo) dataItem;
+			BaseSettingsPreference.getInstance().setScreenScrollEffects(item.type);
+			mLauncher.getWorkspace().changeToNormalMode();
+			hideWithAnimation();
 		}
 	}
 	
@@ -442,7 +448,7 @@ public class LauncherEditView extends RelativeLayout implements OnCommonSlidingV
 	/**
 	 * 退出编辑模式 清除无用数据
 	 * @author Michael
-	 * @createtime 2013-7-15
+	 * @createtime 2013-6-18
 	 */
 	private void clear(){
 //		themeList.clear();

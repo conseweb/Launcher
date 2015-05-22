@@ -18,9 +18,6 @@ import java.util.ArrayList;
 /** 
  * 文件操作基类
  * 
- * @author pdw 
- * @version 
- * @date 2012-7-18 下午02:16:26 
  */
 public abstract class AbstractFolderHelper implements IFolderHelper {
 	

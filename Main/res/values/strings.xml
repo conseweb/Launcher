@@ -2,8 +2,8 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="application_name" msgid="8424725141379931883">Pi Launcher</string>
-    <string name="app_name">PiLauncher</string>
+    <string name="application_name" msgid="8424725141379931883">Mirror Launcher</string>
+    <string name="app_name">Mirror Launcher</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
 
@@ -18,11 +18,11 @@
     
     <!-- 菜单 -->
     <string name="menu_add">飞骐2添加小部件</string>
-	<string name="menu_theme">飞骐2美化手机</string>
-	<string name="menu_effect">飞骐2特效选择</string>
-	<string name="menu_sys_setting">飞骐2系统设置</string>
-	<string name="menu_custom_setting">飞骐2桌面设置</string>
-	<string name="menu_share">飞骐分享</string>
+	<string name="menu_theme">飞骐美化手机</string>
+	<string name="menu_effect">特效选择</string>
+	<string name="menu_sys_setting">系统设置</string>
+	<string name="menu_custom_setting">桌面设置</string>
+	<string name="menu_share">分享</string>
 	
 	<!-- 快捷 -->
 	<string name="dockbar_dock_drawer">全部应用</string>

@@ -8,15 +8,14 @@ import com.bitants.launcherdev.core.model.AbstractDataBase;
 /**
  * 数据库工具类
  * 
- * @author youy
  * 
  */
 public class MyPhoneDB extends AbstractDataBase {
 
 	/**
-	 * db版本号在3.1版本升至2，之前版本号位1 by pdw 在3.2.1升至3，增加小部件列表表 by lx
-	 * db版本号在3.5.2版本升至4，之前版本号位3 by pdw 2013-01-11 db版本号在3.62版本升至6 by youy 文件扫描记录
-	 * db版本号在5.1版本升至7，修改通用的下载管理模块，by hjiang
+	 * db版本号在3.1版本升至2，之前版本号位1 在3.2.1升至3，增加小部件列表表
+	 * db版本号在3.5.2版本升至4，之前版本号位3  db版本号在3.62版本升至6 文件扫描记录
+	 * db版本号在5.1版本升至7，修改通用的下载管理模块，
 	 */
 	private static final int VERSION = 7;
 	private static final String DB_NAME = "myphone.db";
@@ -36,7 +35,6 @@ public class MyPhoneDB extends AbstractDataBase {
 //		db.execSQL(CREATE_CONFIG_TABLE);
 //		//572采用通用下载sdk,新字段为兼容历史版本,572后续版本不得采用该字段，
 //		//若需要为某下载记录定制个性化值时可考虑用addition_info,通用sdk中已有很好的支持。
-//		//wanggm 2015.02.03
 //        db.execSQL("alter table log_download add column 'extra' VARCHAR(32)");
 	}
 

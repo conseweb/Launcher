@@ -15,7 +15,7 @@ import com.bitants.launcherdev.net.ThemeHttpCommon;
 /**
  * description: 应用分发统计接口<br/>
  * author: Michael<br/>
- * date: 2014/10/8<br/>
+ * date: 2013/11/2<br/>
  */
 public class AppDistributeUtil {
 
