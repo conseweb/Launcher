@@ -27,8 +27,6 @@ import com.bitants.launcherdev.theme.data.BaseThemeData;
 
 /**
  * Description: 主题图标机型适配 <br>
- * Author:caizp <br>
- * Date:2011-7-4下午04:22:44
  */
 public class ThemeIconIntentAdaptation {
 	/**
@@ -214,8 +212,6 @@ public class ThemeIconIntentAdaptation {
 	
 	/**
 	 * <br>Description: 验证Activity是否APP主入口
-	 * <br>Author:caizp
-	 * <br>Date:2014年8月11日上午11:56:31
 	 * @param resolveInfo
 	 * @param packageName
 	 * @param clsName
@@ -354,8 +350,6 @@ public class ThemeIconIntentAdaptation {
 
 	/**
 	 * 获得具体适配后的应用程序信息
-	 * <br>Author:ryan
-	 * <br>Date:2012-7-17下午05:12:31
 	 */
 	public ComponentName getActualComponent(String key) {
 		if (null == key)
@@ -405,8 +399,6 @@ public class ThemeIconIntentAdaptation {
 	
 	/**
 	 * 是否监听提示的应用程序
-	 * <br>Author:ryan
-	 * <br>Date:2012-7-17下午05:13:04
 	 */
 	public String getHintApp(ComponentName cn) {
 		if (null == cn)
@@ -435,7 +427,6 @@ public class ThemeIconIntentAdaptation {
 	 * 根据主题key获取 intent描述串, 只适用于托盘默认四应用, 非该四应用则返回null
 	 * @param themeKey 主题key, 由 包名 | 类名 组成
 	 * @return
-	 * @author Yu.F
 	 */
 	public static String getDefaultDockAppUriString(String themeKey) {
 		if (TextUtils.isEmpty(themeKey))
@@ -530,7 +521,6 @@ public class ThemeIconIntentAdaptation {
 	 * 获取Dock四个默认应用(拨号, 联系人, 短信, 浏览器)的主题key
 	 * @param uri 传入Dock四个默认应用的intent uri用于判断
 	 * @return 主题key
-	 * @author Yu.F@2012.11.16
 	 */
 	public static String getDefaultDockAppThemeKey(String uri) {
 		if (TextUtils.isEmpty(uri))
@@ -554,7 +544,6 @@ public class ThemeIconIntentAdaptation {
 	 * 获取托盘默认四应用(初始状态下, 即未被改动intent的情况下)的主题key
 	 * @param cn 原ComponentName, 并非被改动过的
 	 * @return 如果不是托盘默认四应用的初始状态, 则返回null
-	 * @author Yu.F
 	 */
 	public static String getDefaultDockAppThemeKeyByOriginalStateComponentName(ComponentName cn) {
 		if (cn == null)

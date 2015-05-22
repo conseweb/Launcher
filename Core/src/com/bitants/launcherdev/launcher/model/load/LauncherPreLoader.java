@@ -15,7 +15,7 @@ import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
 
 /**
- * Description: 桌面启动时，异步数据加载 Author: guojy Date: 2012-11-1 下午04:01:35
+ * Description: 桌面启动时，异步数据加载
  */
 public class LauncherPreLoader {
 

@@ -25,8 +25,6 @@ import com.bitants.launcherdev.theme.pref.ThemeSharePref;
 
 /**
  * <br>Description: 基础主题
- * <br>Author:caizp
- * <br>Date:2014-3-31下午2:42:34
  */
 public class BasePandaTheme {
 	
@@ -155,8 +153,6 @@ public class BasePandaTheme {
     
     /**
      * <br>Description: 构造函数，并加载指定themeId
-     * <br>Author:caizp
-     * <br>Date:2011-11-15下午3:53:20
      * @param ctx
      * @param themeId
      * @param isCurrentTheme 是否当前主题 
@@ -418,8 +414,6 @@ public class BasePandaTheme {
     
     /**
      * <br>Description: 获取所有主题预览图路径(由主题预览图key(模块预览图为模块key)与路径组成)
-     * <br>Author:caizp
-     * <br>Date:2014-6-21下午6:03:18
      * @return
      */
     public String[][] getAllPreviewPath() {
@@ -439,8 +433,6 @@ public class BasePandaTheme {
     
     /**
 	 * <br>Description: 获取主题壁纸stream,无壁纸时返回null
-	 * <br>Author:caizp
-	 * <br>Date:2011-6-28下午05:41:29
 	 * @return
 	 */
 	public InputStream getWallpaperStream(){
@@ -449,8 +441,6 @@ public class BasePandaTheme {
 	
 	/**
 	 * <br>Description: 获取主题壁纸Bitmap,无壁纸时返回null
-	 * <br>Author:caizp
-	 * <br>Date:2011-6-28下午05:41:29
 	 * @return
 	 */
 	public Bitmap getWallpaperBitmap(){
@@ -460,8 +450,6 @@ public class BasePandaTheme {
 	/**
 	 * <br>Description:获取主题图片接口
 	 * (包括图标、普通图片)
-	 * <br>Author:caizp
-	 * <br>Date:2011-6-29下午12:51:28
 	 * @param key 请参考{@link ThemeData}中的主题常量定义
 	 * @return
 	 */
@@ -478,8 +466,6 @@ public class BasePandaTheme {
 	
 	/**
 	 * <br>Description:获取主题切割蒙板, 前蒙板， 后蒙板接口
-	 * <br>Author: ddj
-	 * <br>Date:2014-4-1下午12:51:28
 	 * @return
 	 */
 	public Drawable getIconMask(String key){
@@ -495,8 +481,6 @@ public class BasePandaTheme {
 	
 	/**
 	 * <br>Description:获取主题文本(如颜色，获取不到时返回null)
-	 * <br>Author:caizp
-	 * <br>Date:2011-6-29下午12:51:28
 	 * @param key
 	 * @return
 	 */
@@ -507,8 +491,6 @@ public class BasePandaTheme {
 	
 	/**
 	 * <br>Description:获取主题图标
-	 * <br>Author:caizp
-	 * <br>Date:2011-6-28下午05:57:42
 	 * @param key
 	 * @return
 	 */
@@ -528,8 +510,6 @@ public class BasePandaTheme {
 	
 	/**
 	 * <br>Description:获取主题图片(非图标)
-	 * <br>Author:caizp
-	 * <br>Date:2011-6-28下午05:57:58
 	 * @param key
 	 * @param isStateListDrawable  是否多态图片
 	 * @param getDefaultWhenNull  获取不到图片时是否获取默认图片
@@ -576,8 +556,6 @@ public class BasePandaTheme {
 	
 	/**
 	 * <br>Description: 从数据库中读取其他主题数据
-	 * <br>Author:caizp
-	 * <br>Date:2014-3-31上午10:26:29
 	 */
 	protected void loadOtherDataFromDb(Cursor cursor) {
 		
@@ -585,8 +563,6 @@ public class BasePandaTheme {
 	
 	/**
 	 * <br>Description: 从主题包的xml中读取信息
-	 * <br>Author:caizp
-	 * <br>Date:2014-4-1下午3:20:10
 	 * @param map
 	 */
 	public void loadOtherDataFromXml(Map<String, String> attrMap) {
@@ -595,8 +571,6 @@ public class BasePandaTheme {
 	
 	/**
 	 * <br>Description: 从apk主题包中读取信息
-	 * <br>Author:caizp
-	 * <br>Date:2014-4-4下午1:44:55
 	 */
 	public void loadOtherDataFromExContext(ExternalTheme et) {
 		
@@ -604,8 +578,6 @@ public class BasePandaTheme {
 	
 	/**
 	 * <br>Description: 是否需要缩放图标
-	 * <br>Author:caizp
-	 * <br>Date:2014-3-31下午2:12:04
 	 * @return
 	 */
 	protected boolean needScaleIcon() {
@@ -634,8 +606,6 @@ public class BasePandaTheme {
     
     /**
      * <br>Description:保存主题数据至数据库
-     * <br>Author:caizp
-     * <br>Date:2011-6-27下午05:32:10
      * @return
      */
     public int save() {
@@ -693,8 +663,6 @@ public class BasePandaTheme {
     
     /**
      * <br>Description: 更新主题数据
-     * <br>Author:caizp
-     * <br>Date:2014年11月14日下午4:14:37
      * @return
      */
     public int update() {

@@ -357,8 +357,6 @@ public class ApkTools {
 	
 	/**
 	 * 加载apk默认icon
-	 * Create On 2014-7-21下午6:06:27
-	 * Author : pdw
 	 * @param ctx
 	 * @param packName
 	 * @return

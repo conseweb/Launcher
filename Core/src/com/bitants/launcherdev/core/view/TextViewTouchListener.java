@@ -7,8 +7,6 @@ import android.widget.TextView;
 
 /**
  * <p>类说明: Custom TextView Touch Event Listener </p>
- * <p>创建时间：2012-8-29 下午06:05:35</p>
- * @author yuf
  * @version 1.0
  */
 public class TextViewTouchListener implements OnTouchListener {

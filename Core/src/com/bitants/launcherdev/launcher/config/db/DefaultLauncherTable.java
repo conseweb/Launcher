@@ -1,8 +1,7 @@
 package com.bitants.launcherdev.launcher.config.db;
 
 /**
- * @author pdw
- * @date 2012-6-5 下午06:25:49 dockbar默认启动table
+ * dockbar默认启动table
  */
 public class DefaultLauncherTable {
 	/**

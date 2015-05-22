@@ -22,7 +22,6 @@ import java.util.List;
 /**
  * 编辑模式添加数据集数据
  * 
- * @author Anson
  */
 public class LauncherEditDataFactory {
 	
@@ -171,8 +170,6 @@ public class LauncherEditDataFactory {
 	
 	/**
 	 * 获取壁纸
-	 * @author Michael
-	 * Date:2013-11-28
 	 * @param path
 	 * @param context
 	 * @param type

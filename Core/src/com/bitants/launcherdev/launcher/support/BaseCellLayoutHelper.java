@@ -86,8 +86,6 @@ public class BaseCellLayoutHelper {
 	
 	/**
 	 * Description: 获取编辑模式下cell坐标位置
-	 * Author: guojy
-	 * Date: 2012-7-16 上午10:26:29
 	 */
 	public static void getSpringCellToPoint(int cellX, int cellY, int[] result){
 		int topMargin = topDiffNormalAndSpring + springTopMargin;
@@ -106,8 +104,6 @@ public class BaseCellLayoutHelper {
 	
 	/**
 	 * Description: 编辑模式Rect匹配
-	 * Author: guojy
-	 * Date: 2013-7-27 下午3:19:17
 	 */
 	public static void springToNormalRectEx(Rect r){
 		r.offset(0, -springTopMargin);
@@ -123,8 +119,6 @@ public class BaseCellLayoutHelper {
 	}
 	
 	/**
-	 * author:Michael
-	 * date:2013-5-6
 	 * 修改计算空cell的顺序为从下到上，从左到右
 	 * @param vacant
 	 * @param spanX
@@ -161,8 +155,6 @@ public class BaseCellLayoutHelper {
 	
 	/**
 	 * Description: 编辑模式坐标匹配（使得编辑模式缩放后的坐标匹配缩放前的坐标）
-	 * Author: guojy
-	 * Date: 2012-7-15 下午05:48:04
 	 */
 	//location为屏幕坐标
 	public static void springToNormalCoordinateEx(int[] location){
@@ -178,8 +170,6 @@ public class BaseCellLayoutHelper {
 	
 	/**
 	 * Description: 编辑模式坐标匹配（使得正常模式下坐标匹配编辑模式坐标）
-	 * Author: guojy
-	 * Date: 2013-7-22 上午10:59:34
 	 */
 	//location为屏幕坐标
 	public static void normalToSpringCoordinateEx(int[] location){
@@ -195,8 +185,6 @@ public class BaseCellLayoutHelper {
 	
 	/**
 	 * Description: 在当前屏为添加app找位置
-	 * Author: guojy
-	 * Date: 2013-7-30 下午4:14:03
 	 */
 	public static int[] findCellXYForApp(BaseLauncher mLauncher){
 		CellLayout cl =  mLauncher.mWorkspace.getCurrentCellLayout();
@@ -214,8 +202,6 @@ public class BaseCellLayoutHelper {
 	
 	/**
 	 * Description: 在当前屏为添加Widget找位置
-	 * Author: guojy
-	 * Date: 2013-7-30 下午4:14:03
 	 */
 	public static int[] findCellXYForWidget(BaseLauncher mLauncher, int spanX, int spanY, ItemInfo item){
 		CellLayout cl =  mLauncher.mWorkspace.getCurrentCellLayout();
@@ -229,8 +215,6 @@ public class BaseCellLayoutHelper {
 	
 	/**
 	 * Description: 统计CellLayout中单元格的占用情况
-	 * Author: guojy
-	 * Date: 2012-8-29 下午02:28:36
 	 */
 	public static void findOccupiedCells(boolean[][] occupied, View ignoreView, CellLayout cl) {
 		if(occupied == null){
@@ -274,8 +258,6 @@ public class BaseCellLayoutHelper {
 	
 	/**
 	 * Description: 统计CellLayout中单元格的占用情况，统计时不统计app和文件夹
-	 * Author: guojy
-	 * Date: 2012-8-29 下午02:28:36
 	 */
 	public static void findOccupiedCellsForApp(boolean[][] occupied, View ignoreView, CellLayout cl) {
 		if(occupied == null){
@@ -319,8 +301,6 @@ public class BaseCellLayoutHelper {
 	
 	/**
 	 * Description: celllayout中的View移动位置后，是否有空闲区域可以摆放目标部件
-	 * Author: guojy
-	 * Date: 2013-1-25 上午10:57:32
 	 */
 	public static boolean isVacantForReorder(boolean[][] mOccupied, int spanX, int spanY){
 		int xLen = mOccupied.length;
@@ -339,8 +319,6 @@ public class BaseCellLayoutHelper {
 
 	/**
 	 * Description: 从CellLayout顶部开始找可以摆放该部件的第一个位置
-	 * Author: guojy
-	 * Date: 2012-8-29 下午02:31:06
 	 * @param spanX 部件的span长度
 	 * @param spanY 部件的span高度
 	 */
@@ -365,8 +343,6 @@ public class BaseCellLayoutHelper {
 	}
 	/**
 	 * Description: 从CellLayout底部开始找可以摆放该部件的位置
-	 * Author: guojy
-	 * Date: 2013-1-16 上午9:42:48
 	 */
 	public static int[] findVacantCellFromBottom(boolean[][] mOccupied, int spanX, int spanY){
 		try{
@@ -390,8 +366,6 @@ public class BaseCellLayoutHelper {
 	
 	/**
 	 * Description: 从CellLayout的特定位置开始找可以摆放该部件的位置
-	 * Author: guojy
-	 * Date: 2013-1-16 下午4:45:49
 	 */
 	public static int[] findVacantCellFromTargetCell(boolean[][] mOccupied, int spanX, int spanY, int targetCellX, int targetCellY){
 		try{
@@ -432,8 +406,6 @@ public class BaseCellLayoutHelper {
 	}
 	/**
 	 * Description: 查找目标位置所在的9宫格内的空闲位置
-	 * Author: guojy
-	 * Date: 2013-1-22 上午10:14:18
 	 */
 	private static int[] findVacantCellOnNineGrids(int targetCellX, int targetCellY, int spanX, int spanY, boolean[][] mOccupied){
 		int i = targetCellX;
@@ -457,8 +429,6 @@ public class BaseCellLayoutHelper {
 	}
 	/**
 	 * Description: 查找目标位置所在行是否有空闲位置(先查找目标位置是否可以，再从目标位置左右两边开始找)
-	 * Author: guojy
-	 * Date: 2013-1-16 下午5:19:06
 	 */
 	private static int[] findVacantCellOnLine(int targetCellX, int targetCellY, int spanX, int spanY, boolean[][] mOccupied){
 		int xLen = mOccupied.length;
@@ -489,8 +459,6 @@ public class BaseCellLayoutHelper {
 	}
 	/**
 	 * Description: 查找目标位置是否空闲
-	 * Author: guojy
-	 * Date: 2013-1-16 下午5:19:17
 	 */
 	private static boolean isTargetCellVacant(int i, int j, int spanX, int spanY, boolean[][] mOccupied){
 		int xLen = mOccupied.length;
@@ -515,8 +483,6 @@ public class BaseCellLayoutHelper {
 	
 	/**
 	 * Description: 找出CellLayout上可以摆放该部件的所有位置
-	 * Author: guojy
-	 * Date: 2012-9-21 下午03:37:53
 	 */
 	public static ArrayList<int[]> findAllVacantCell(boolean[][] mOccupied, int spanX, int spanY){
 		ArrayList<int[]> list = new ArrayList<int[]>();
@@ -541,8 +507,6 @@ public class BaseCellLayoutHelper {
 	
 	/**
 	 * Description: 按从上到下，从左到右找出CellLayout上可以摆放该部件的所有位置
-	 * Author: Michael
-	 * Date: 2013-4-26 下午17:17:53
 	 */
 	public static ArrayList<int[]> findAllVacantCellFromBottom(boolean[][] mOccupied, int spanX, int spanY){
 		ArrayList<int[]> list = new ArrayList<int[]>();
@@ -567,8 +531,6 @@ public class BaseCellLayoutHelper {
 	
 	/**
 	 * Description: 根据拖动app的大小，找出CellLayout上所有可放置该app区域
-	 * Author: guojy
-	 * Date: 2012-9-7 上午10:06:15
 	 */
 	public static CellLayout.CellInfo findAllVacantCells(boolean[][] occupied, int spanX, int spanY, int xCount, int yCount, int screen) {
 		CellLayout.CellInfo cellInfo = new CellLayout.CellInfo();
@@ -642,8 +604,6 @@ public class BaseCellLayoutHelper {
 	}
 	/**
 	 * Description: 绘制编辑模式的屏背景
-	 * Author: guojy
-	 * Date: 2012-7-24 下午09:35:13
 	 */
 	public void drawSpringBackground(int alpha, Canvas canvas){
 		springScreenBackground = BaseConfig.getApplicationContext().getResources().getDrawable(R.drawable.edit_screen_bg);
@@ -653,8 +613,6 @@ public class BaseCellLayoutHelper {
 	}
 	/**
 	 * Description: 绘制编辑模式的无空余间屏背景
-	 * Author: guojy
-	 * Date: 2012-7-24 下午09:35:25
 	 */
 	public void drawSpringNoVacantBackground(int alpha, Canvas canvas){
 		if(springNoVacantScreenBackground == null){
@@ -665,8 +623,6 @@ public class BaseCellLayoutHelper {
 	}
 	/**
 	 * Description: 设置背景图位置
-	 * Author: guojy
-	 * Date: 2012-8-1 上午09:34:18
 	 */
 	private void setBackgroundBounds(Drawable bg){
 //		final int fixLeftBgPic = ScreenUtil.dip2px(mContext, 3);//背景图有渐进变色的边距，用于校正该背景图边距
@@ -678,8 +634,6 @@ public class BaseCellLayoutHelper {
 	}
 	/**
 	 * Description: 绘制编辑模式的删除按钮，返回按钮的触点感应区
-	 * Author: guojy
-	 * Date: 2012-7-24 下午09:33:31
 	 */
 	public Rect drawSpringDelBtn(int alpha, Canvas canvas){
 		int delBtnWidth = mCellLayoutWidthEx/10;
@@ -702,8 +656,6 @@ public class BaseCellLayoutHelper {
 	}
 	/**
 	 * Description: 绘制编辑模式的添加屏按钮
-	 * Author: guojy
-	 * Date: 2012-7-24 下午09:34:50
 	 */
 	public void drawSpringAddBtn(int alpha, Canvas canvas){
 		int addBtnWidth = mCellLayoutWidthEx/2;
@@ -726,8 +678,6 @@ public class BaseCellLayoutHelper {
 	 *  ......4.........
 	 *  ...2..cell...1..
 	 *  .....3..........
-	 * @author Michael
-	 * @createtime 2013-5-28 
 	 * @param VacantCells 未被占用的cell
 	 * @param currentXCell 目标cell的横坐标
 	 * @param currentYCell 目标cell的纵坐标

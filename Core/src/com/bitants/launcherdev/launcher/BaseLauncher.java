@@ -293,8 +293,6 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 	
 	/**
 	 * 初始化数据，拖动，图标，字体等 <br>
-	 * Author:ryan <br>
-	 * Date:2012-12-22下午02:34:00
 	 */
 	protected void initGlobalSomething() {
 		BaseLauncherApplication app = ((BaseLauncherApplication) getApplication());
@@ -311,8 +309,6 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 	
 	/**
 	 * 预加载桌面数据 <br>
-	 * Author:ryan <br>
-	 * Date:2012-12-22下午02:34:32
 	 */
 	private void loadWorspaceFirst() {
 		if(isAsyncLoadLauncherData()){
@@ -422,8 +418,6 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 	
 	/**
 	 * 预加载未完成则重新加载 <br>
-	 * Author:ryan <br>
-	 * Date:2012-12-22下午02:38:34
 	 */
 	private void loadDataIfNeed(Bundle savedInstanceState) {
 		setSavedState(savedInstanceState);
@@ -446,8 +440,6 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 	
 	/**
 	 * 先填充0屏 <br>
-	 * Author:ryan <br>
-	 * Date:2013-1-19下午06:43:00
 	 */
 	private void setupZeroView() {
 		if (mZeroViewGroup != null)
@@ -485,7 +477,6 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 	
 	/**
 	 * 记录用户启动时间
-	 * @author Ryan
 	 */
 	private void recordLauncherCreateTime() {
 		// 保存桌面显示完成的时间
@@ -572,8 +563,6 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 	
 	/**
 	 * 桌面数据是否加载完成 <br>
-	 * Author:ryan <br>
-	 * Date:2012-11-5下午06:08:26
 	 */
 	public boolean hasLoadWorkspace() {
 		synchronized (hasLoadWorkspaceLock) {
@@ -617,8 +606,6 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 	
 	/**
 	 * 是否允许绑定桌面 <br>
-	 * Author:ryan <br>
-	 * Date:2012-11-5下午06:08:04
 	 */
 	public boolean allowToBindWorkspace() {
 		synchronized (startBindWorkspaceLock) {
@@ -750,9 +737,7 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 	
 	/**
 	 * 语言变化不做动作，先屏蔽 <br>
-	 * Author:ryan <br>
-	 * Date:2012-10-31上午11:33:33
-	 * 
+	 *
 	 * @deprecated
 	 */
 	void checkForLocaleChange() {
@@ -839,7 +824,7 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 	}
 	
 	/**
-	 * Description: 刷新编辑模式页面 Author: guojy Date: 2012-7-26 下午05:05:00
+	 * Description: 刷新编辑模式页面
 	 */
 	public void refreshWorkspaceSpringScreen() {
 		if (mWorkspace.isOnSpringMode()) {
@@ -848,7 +833,7 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 	}
 	
 	/**
-	 * Description: 是否处于屏幕编辑模式 Author: guojy Date: 2012-8-17 下午04:54:06
+	 * Description: 是否处于屏幕编辑模式
 	 */
 	public boolean isOnSpringMode() {
 		return mWorkspace.isOnSpringMode();
@@ -998,9 +983,7 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 	/**
 	 * <br>
 	 * Description: 获取屏幕预览/管理控制器 <br>
-	 * Author:caizp <br>
-	 * Date:2012-6-25上午10:44:13
-	 * 
+	 *
 	 * @return
 	 */
 	public PreviewEditAdvancedController getPreviewEditController() {

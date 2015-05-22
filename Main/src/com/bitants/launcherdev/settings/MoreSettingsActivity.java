@@ -12,7 +12,6 @@ import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
 
 /**
  * 更多设置
- * @author wgm 
  */
 public class MoreSettingsActivity extends BasePreferenceActivity implements OnPreferenceChangeListener {
 

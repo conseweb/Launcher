@@ -40,8 +40,6 @@ public class MaskUtils {
 	 * 返回值为数组 int[2] = {-1,           -1,                    -1}
 	 *                      -1:不画背板     -1:没有对应的背板值     -1:不满
 	 *                       1:画背板       >0:对应的背板值         1:满
-	 * @author Michael
-	 * Date:2014-3-12下午6:04:07
 	 *  @param context
 	 *  @param bitmap
 	 *  @return

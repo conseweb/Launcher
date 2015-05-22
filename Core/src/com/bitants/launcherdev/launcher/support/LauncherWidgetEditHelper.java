@@ -21,8 +21,6 @@ import com.bitants.launcherdev.launcher.view.ResizeWidgetView.OnClickOutsideList
 
 /**
  * Widget大小编辑 <br>
- * Author:ryan <br>
- * Date:2012-5-31上午10:17:58
  */
 public class LauncherWidgetEditHelper {
 	public boolean mIsWidgetEditMode;

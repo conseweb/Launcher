@@ -8,7 +8,6 @@ import android.util.Log;
 
 /**
  * description: 应用分发池数据库<br/>
- * author: Michael<br/>
  */
 public class AppDistributePool extends SQLiteOpenHelper {
 

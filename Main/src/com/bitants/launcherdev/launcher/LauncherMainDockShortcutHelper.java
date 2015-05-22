@@ -15,7 +15,6 @@ import com.bitants.launcherdev.theme.data.ThemeData;
 /**
  * 界面管理快捷方式辅助类
  * 
- * @author Anson
  */
 public class LauncherMainDockShortcutHelper {
 	
@@ -95,8 +94,6 @@ public class LauncherMainDockShortcutHelper {
 	
 	/**
 	 * 获取快捷对应的key
-	 * @author Michael
-	 * Date:2014-1-7下午3:19:58
 	 *  @param ctx
 	 *  @param title
 	 *  @return
@@ -113,8 +110,6 @@ public class LauncherMainDockShortcutHelper {
 	
 	/**
 	 * 获取快捷对应的key
-	 * @author Michael
-	 * Date:2014-1-7下午3:19:58
 	 *  @param ctx
 	 *  @param title
 	 *  @return
@@ -157,12 +152,11 @@ public class LauncherMainDockShortcutHelper {
 	
 	/**
 	 * 通过action获取标题
-	 * @author wangguomei
-	 * 
+	 *
 	 * @param Context
-	 * @param 91快捷action
+	 * @param 快捷action
 	 * 
-	 * @return 91快捷标题
+	 * @return 快捷标题
 	 */
 	public static String get91ShortcutTitleByAction(Context ctx, String action) {
 		return getTitleByAction(ctx,action);

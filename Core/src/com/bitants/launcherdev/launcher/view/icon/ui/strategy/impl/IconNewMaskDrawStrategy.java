@@ -21,8 +21,6 @@ import com.bitants.launcherdev.launcher.view.icon.ui.strategy.DrawStragegyFactor
 import com.bitants.launcherdev.launcher.view.icon.ui.strategy.DrawStrategy;
 
 /**
- * @author Michael
- * @createtime 2013-7-31
  */
 public class IconNewMaskDrawStrategy extends DrawStrategy {
 	

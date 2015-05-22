@@ -32,8 +32,6 @@ public class BaseLauncherViewHelper {
 
 	/**
 	 * Description: 创建桌面上普通app、“我的手机”里的app、系统快捷、91快捷、自定义app(热门软件、热门游戏等)的View
-	 * Author: guojy
-	 * Date: 2013-9-18 下午4:36:34
 	 */
 	public static View createCommonAppView(BaseLauncher mLauncher, ApplicationInfo info) {
 		if(mLauncher == null)
@@ -56,8 +54,6 @@ public class BaseLauncherViewHelper {
 	
 	/**
 	 * Description: 创建IconMaskTextView，未设置icon 
-	 * Author: guojy
-	 * Date: 2013-9-18 下午4:56:38
 	 */
 	public static IconMaskTextView createIconMaskTextViewWithoutIcon(BaseLauncher mLauncher, CharSequence title, ItemInfo info, ViewGroup parent) {
 		if(mLauncher == null)
@@ -79,8 +75,6 @@ public class BaseLauncherViewHelper {
 
 	/**
 	 * Description: 创建dock栏上的应用View
-	 * Author: guojy
-	 * Date: 2013-9-18 下午4:37:41
 	 */
 	public static View createDockShortcut(BaseLauncher mLauncher, ApplicationInfo app) {
 		if(mLauncher == null)
@@ -97,8 +91,6 @@ public class BaseLauncherViewHelper {
 	
 	/**
 	 * Description: 创建文件夹View(目前用于桌面搬家)
-	 * Author: guojy
-	 * Date: 2013-9-18 下午4:56:49
 	 */
 	public static FolderIconTextView createFolderIconTextViewFromContext(BaseLauncher mLauncher, FolderInfo folderInfo) {
 		FolderIconTextView folder = new FolderIconTextView(mLauncher);
@@ -109,8 +101,6 @@ public class BaseLauncherViewHelper {
 	
 	/**
 	 * Description: 根据配置文件创建文件夹View
-	 * Author: guojy
-	 * Date: 2013-9-18 下午4:56:49
 	 */
 	public static FolderIconTextView createFolderIconTextViewFromXML(BaseLauncher mLauncher, ViewGroup parent, FolderInfo folderInfo){
 		FolderIconTextView folder = (FolderIconTextView) LayoutInflater.from(mLauncher).inflate(R.layout.folder_icon, parent, false);
@@ -129,8 +119,6 @@ public class BaseLauncherViewHelper {
 	
 	/**
 	 * Description: 创建带布局LayoutParams的文件夹View
-	 * Author: guojy
-	 * Date: 2013-10-29 下午6:21:55
 	 */
 	public static View createFolderIconTextView(BaseLauncher mLauncher, FolderInfo folderInfo) {
 		FolderIconTextView folder = new FolderIconTextView(mLauncher);

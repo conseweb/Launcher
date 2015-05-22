@@ -548,8 +548,6 @@ public class SpringEffectsFactory {
 	 * 
 	 * <br>
 	 * Description:LG褶皱内特效 <br>
-	 * Author:zhenghonglin <br>
-	 * Date:2014-1-6下午03:31:45
 	 */
 	private void processLGDrapeInside(Canvas canvas) {
 		int screenWidth = mCellLayout.getWidth();
@@ -888,7 +886,7 @@ public class SpringEffectsFactory {
 	}
 
 	/**
-	 * Description: 滚咕噜滚(车轮) Author: guojy Date: 2012-7-22 下午05:03:09
+	 * Description: 滚咕噜滚(车轮)
 	 */
 	private void processWheel(Canvas canvas) {
 		int shiftingX = (int) (mSpringDistanceToLeft);
@@ -1252,7 +1250,7 @@ public class SpringEffectsFactory {
 	}
 
 	/**
-	 * Description: 编辑模式特效下，绘制当前屏背景 Author: guojy Date: 2012-9-18 下午03:50:38
+	 * Description: 编辑模式特效下，绘制当前屏背景
 	 */
 	private void drawSpringScreenBackground(Canvas canvas) {
 		int loc = getCellLayoutLocation();

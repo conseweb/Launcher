@@ -185,9 +185,7 @@ public class BaseConfig {
 	
 	/**
 	 * 跨进程调用可能为NULL!!! <br>
-	 * Author:ryan <br>
-	 * Date:2012-11-29下午02:22:08
-	 * 
+	 *
 	 * @return
 	 */
 	public static BaseLauncher getBaseLauncher() {
@@ -229,8 +227,6 @@ public class BaseConfig {
 	/**
 	 * <br>
 	 * Description: 重置默认字体测量大小 <br>
-	 * Author:caizp <br>
-	 * Date:2012-11-5下午08:14:28
 	 */
 	public static void resetDefaultFontMeasureSize() {
 		Paint paint = new Paint();
@@ -239,8 +235,6 @@ public class BaseConfig {
 	}
 
 	/**
-	 * @author Michael
-	 * Date:2014-3-19下午4:47:24
 	 *  @return
 	 */
 	public static boolean isLargeIconMode() {
@@ -276,8 +270,6 @@ public class BaseConfig {
 
 	/**
 	 * 获取IconCache接口
-	 * @author Michael
-	 * Date:2014-3-21下午2:02:22
 	 *  @return
 	 */
 	public static BaseIconCache getIconCache(){

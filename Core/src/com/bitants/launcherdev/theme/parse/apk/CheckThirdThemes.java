@@ -29,8 +29,6 @@ import com.bitants.launcherdev.theme.data.ThemeGlobal;
 
 /**
  * <br>Description: 检测APK主题
- * <br>Author:caizp
- * <br>Date:2011-7-13下午04:16:10
  */
 public class CheckThirdThemes extends Thread{
 	
@@ -84,8 +82,6 @@ public class CheckThirdThemes extends Thread{
 	
 	/**
 	 * <br>Description: 检测所有已安装的PandaHome主题包并写入数据库
-	 * <br>Author:caizp
-	 * <br>Date:2012-2-29下午03:28:19
 	 */
 	private void installExternalThemes(){
         final List<String> pandaList = checkExternalThemes(ThemeGlobal.INTENT_PANDAHOME_THEME);
@@ -266,8 +262,6 @@ public class CheckThirdThemes extends Thread{
 
     /**
      * <br>Description: 检测已被卸载的APK主题，删除数据库中遗留的数据
-     * <br>Author:caizp
-     * <br>Date:2011-6-30下午06:11:04
      */
 	private void checkUninstallThemes(){
 		String sql = "select id from Theme where type='" + ThemeType.PANDAHOME + "'";
@@ -295,8 +289,6 @@ public class CheckThirdThemes extends Thread{
 	/**
 	 * <br>
 	 * Description: 创建91黄历天气皮肤数据存放目录 <br>
-	 * Author:caizp <br>
-	 * Date:2012-7-12下午06:11:00
 	 */
 	public static String createWeatherClockTempPath() {
 		final String baseDir = ThemeGlobal.BASE_DIR_CLOCKWEATHER;

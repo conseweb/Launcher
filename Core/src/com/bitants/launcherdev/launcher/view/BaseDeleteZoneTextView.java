@@ -125,8 +125,6 @@ public class BaseDeleteZoneTextView extends View implements DropTarget {
 	
 	/**
 	 * Description: 甩动图标到屏幕顶部区域进行删除
-	 * Author: guojy
-	 * Date: 2013-2-16 下午2:20:33
 	 */
 	public void onFlingToDelete(final DragSource source, final int x, final int y, final int xOffset, final int yOffset,
 			final DragView dragView, final Object dragInfo, int endX, int endY, final boolean isFlingToDeleteZone) {

@@ -1,6 +1,4 @@
 /**
- * @author Michael
- * Date:2014-3-27下午1:44:29
  *
  */
 package com.bitants.launcherdev.launcher.view.icon.ui.folder;
@@ -107,8 +105,6 @@ import com.bitants.launcherdev.theme.assit.ThemeUIRefreshListener;
 
 /**
  * 文件夹 <br>
- * Author:ryan <br>
- * Date:2012-5-21下午02:02:39
  */
 public class FolderIconTextView extends EditableIconView implements AnyCallbacks.OnDragEventCallback, ThemeUIRefreshListener {
 	
@@ -411,8 +407,6 @@ public class FolderIconTextView extends EditableIconView implements AnyCallbacks
 	
 	/**
 	 * 通过宽度和长度来设置值
-	 * @author Michael
-	 * Date:2013-11-6上午9:43:29
 	 *  @param widthSize
 	 *  @param heightSize
 	 */
@@ -1132,8 +1126,6 @@ public class FolderIconTextView extends EditableIconView implements AnyCallbacks
 	
 	/**
 	 * 批量添加ApplicationInfo
-	 * @author Michael
-	 * @createtime 2013-6-13 
 	 * @param items
 	 */
 	public void addItems(ArrayList<ApplicationInfo> items){
@@ -1299,8 +1291,6 @@ public class FolderIconTextView extends EditableIconView implements AnyCallbacks
 	/**
 	 * 从workspace中移除掉自己，当自己文件夹内容为空时
 	 * 
-	 * @author pdw
-	 * <br>创建于 2012-7-12 下午08:29:37
 	 */
 	public void removeSelf() {
 		if (mInfo.getSize() != 0)
@@ -1500,8 +1490,6 @@ public class FolderIconTextView extends EditableIconView implements AnyCallbacks
 	
 	/**
 	 * 根据componentName查找文件夹中的ApplicationInfo
-	 * @author Michael
-	 * Date:2013-9-24下午12:06:21
 	 *  @param componentName
 	 *  @return
 	 */

@@ -8,7 +8,6 @@ import com.bitants.launcher.R;
 
 /**
  * 桌面设置主界面
- * @author wgm 
  */
 public class HomeSettingsActivity extends Activity implements View.OnClickListener {
 

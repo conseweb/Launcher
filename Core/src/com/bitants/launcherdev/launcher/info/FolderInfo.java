@@ -166,8 +166,6 @@ public class FolderInfo extends ItemInfo implements ICommonDataItem {
     
 	/**
 	 * 兼容代理视图Bottom
-	 * <br>Author:ryan
-	 * <br>Date:2012-7-14上午09:50:51
 	 */
 	public int getViewBottom() {
 		if (proxyView != null)
@@ -180,8 +178,6 @@ public class FolderInfo extends ItemInfo implements ICommonDataItem {
 	
 	/**
 	 * 兼容代理视图Top
-	 * <br>Author:ryan
-	 * <br>Date:2012-7-14上午09:50:51
 	 */
 	public int getViewTop() {
 		if (proxyView != null)
@@ -194,7 +190,6 @@ public class FolderInfo extends ItemInfo implements ICommonDataItem {
 	
 	/**
 	 * 判断文件夹状态，若为空则自动删除，考虑代理视图情况
-	 * <br>Author:ryan
 	 * <br>Date:2012-7-14上午09:50:31
 	 */
 	public void checkFolderState() {
@@ -206,8 +201,6 @@ public class FolderInfo extends ItemInfo implements ICommonDataItem {
 	
 	/**
 	 * 兼容代理视图重绘
-	 * <br>Author:ryan
-	 * <br>Date:2012-7-14上午10:46:41
 	 */
 	public void invalidate() {
 		if (mFolderIcon != null)

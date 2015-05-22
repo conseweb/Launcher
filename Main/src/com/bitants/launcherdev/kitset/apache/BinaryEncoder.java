@@ -6,7 +6,6 @@ package com.bitants.launcherdev.kitset.apache;
 /**
  * Defines common encoding methods for byte array encoders.
  * 
- * @author Apache Software Foundation
  * @version $Id: BinaryEncoder.java,v 1.10 2004/02/29 04:08:31 tobrien Exp $
  */
 public interface BinaryEncoder extends Encoder {

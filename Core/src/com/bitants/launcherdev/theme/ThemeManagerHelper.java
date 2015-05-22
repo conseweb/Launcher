@@ -21,15 +21,11 @@ import com.bitants.launcherdev.theme.data.ThemeGlobal;
 /**
  * 
  * <br>Title: 基础主题管理类
- * <br>Author:caizp
- * <br>Date:2014-3-26下午3:55:57
  */
 public class ThemeManagerHelper {
 	
 	/**
      * <br>Description: 分配主题对象供解析主题时装载(获取未填充内容的主题对象)
-     * <br>Author:caizp
-     * <br>Date:2014-4-1下午4:23:36
      * @return
      */
     public BasePandaTheme allocatPandaThemeObj() {
@@ -38,8 +34,6 @@ public class ThemeManagerHelper {
 	
 	/**
 	 * <br>Description: 通过主题Id获取主题对象(获取完整主题对象)
-	 * <br>Author:caizp
-	 * <br>Date:2014-3-26下午3:57:45
 	 * @param key
 	 * @return
 	 */
@@ -57,8 +51,6 @@ public class ThemeManagerHelper {
 	
 	/**
 	 * <br>Description: 删除主题相关数据
-	 * <br>Author:caizp
-	 * <br>Date:2014-3-3上午11:22:13
 	 * @param ctx
 	 * @param themeId
 	 */
@@ -69,8 +61,6 @@ public class ThemeManagerHelper {
 	
 	/**
 	 * <br>Description: 删除主题模块包相关数据
-	 * <br>Author:caizp
-	 * <br>Date:2014-6-20上午11:21:20
 	 * @param ctx
 	 * @param moduleId
 	 * @param moduleKey
@@ -82,8 +72,6 @@ public class ThemeManagerHelper {
 	
 	/**
 	 * <br>Description: 增加当前主题信息广播参数
-	 * <br>Author:caizp
-	 * <br>Date:2014-4-4下午3:24:58
 	 * @param themeInfoIntent
 	 */
 	public void addThemeInfoIntentExtra(Intent themeInfoIntent) {
@@ -93,9 +81,7 @@ public class ThemeManagerHelper {
 	/**
 	 * <br>
 	 * Description: 应用主题(不显示等待框) <br>
-	 * Author:caizp <br>
-	 * Date:2012-7-12上午10:43:51
-	 * 
+	 *
 	 * @param ctx
 	 * @param themeId
 	 *            主题ID
@@ -160,9 +146,7 @@ public class ThemeManagerHelper {
 	/**
 	 * <br>
 	 * Description: 应用主题模块(不显示等待框),应用整个主题包时请勿调用此方法 <br>
-	 * Author:caizp <br>
-	 * Date:2012-7-12上午10:43:51
-	 * 
+	 *
 	 * @param ctx
 	 * @param modules
 	 *            模块信息

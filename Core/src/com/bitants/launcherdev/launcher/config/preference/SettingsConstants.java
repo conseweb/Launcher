@@ -1,7 +1,6 @@
 package com.bitants.launcherdev.launcher.config.preference;
 /**
  *
- * @author Anson
  */
 public class SettingsConstants {
 	

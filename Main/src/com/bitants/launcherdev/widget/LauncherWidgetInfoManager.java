@@ -25,7 +25,6 @@ import java.util.*;
 /**
  * 小部件数据管理类
  * 
- * @author zjf date 2012-5-22
  */
 public final class LauncherWidgetInfoManager {
 	//仅供测试使用

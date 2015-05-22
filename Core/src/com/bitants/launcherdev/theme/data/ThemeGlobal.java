@@ -14,8 +14,6 @@ import com.bitants.launcherdev.theme.module.ModuleConstant;
 
 /**
  * <br>Description:主题全局常量
- * <br>Author:caizp
- * <br>Date:2011-6-28下午04:04:26
  */
 public class ThemeGlobal {
 	
@@ -219,8 +217,6 @@ public class ThemeGlobal {
     
     /**
      * <br>Description: 获取主题缩略图位置
-     * <br>Author:caizp
-     * <br>Date:2014-6-25下午3:34:51
      * @param themeId
      * @param themeType
      * @return
@@ -254,8 +250,6 @@ public class ThemeGlobal {
     
     /**
      * <br>Description: 获取模块包缩略图位置
-     * <br>Author:caizp
-     * <br>Date:2014年11月13日下午4:58:27
      * @param moduleId
      * @param moduleKey
      * @return
@@ -280,8 +274,6 @@ public class ThemeGlobal {
     
     /**
      * <br>Description: 判断SD卡主题资源是否被删除
-     * <br>Author:caizp
-     * <br>Date:2014年12月29日上午11:15:00
      * @param themeType
      * @param themeId
      * @param aptPath
@@ -296,8 +288,6 @@ public class ThemeGlobal {
     
     /**
      * <br>Description: 判断SD卡模块资源是否被删除
-     * <br>Author:caizp
-     * <br>Date:2014年12月29日上午11:24:43
      * @param moduleId
      * @param moduleKey
      * @return

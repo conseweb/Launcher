@@ -26,8 +26,6 @@ import com.bitants.launcherdev.kitset.util.BaseBitmapUtils;
 /**
  * <br>
  * Description: 主题资源解析 <br>
- * Author:caizp <br>
- * Date:2011-7-1下午02:42:18
  */
 public class ResParser {
 	
@@ -242,8 +240,6 @@ public class ResParser {
 	
 	/**
 	 * <br>Description: 根据主题或模块目录扫描获取图片或图标所在位置
-	 * <br>Author:caizp
-	 * <br>Date:2014-6-19下午1:59:49
 	 * @param themePath 图片或图标所属主题根目录
 	 * @param key 图片或图标key
 	 * @param moduleKey 图片或图标所属模块

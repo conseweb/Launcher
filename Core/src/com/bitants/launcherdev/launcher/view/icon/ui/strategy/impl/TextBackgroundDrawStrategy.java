@@ -21,8 +21,6 @@ import com.bitants.launcherdev.launcher.view.icon.ui.strategy.DrawStrategy;
 
 /**
  * 带有背景的标题绘画策略
- * @author ZSY
- * @since 2013-3-5
  */
 public class TextBackgroundDrawStrategy extends DrawStrategy {
 	

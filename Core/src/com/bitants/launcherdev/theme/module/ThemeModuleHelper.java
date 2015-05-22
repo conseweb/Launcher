@@ -14,8 +14,6 @@ import com.bitants.launcherdev.theme.pref.ThemeSharePref;
 
 /**
  * <br>Description: 主题模块包管理
- * <br>Author:caizp
- * <br>Date:2014-6-20上午11:12:48
  */
 public class ThemeModuleHelper {
 	
@@ -116,8 +114,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description: V5.7.2版本新主题标识，用于判断提示升级桌面
-	 * <br>Author:caizp
-	 * <br>Date:2014-6-12下午4:28:47
 	 */
 	public void upgrade2V5720ThemeDataBase() {
 		LauncherThemeDataBase db = new LauncherThemeDataBase(BaseConfig.getApplicationContext());
@@ -138,8 +134,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description: V6.0版本(内测包5998)新主题结构支持
-	 * <br>Author:caizp
-	 * <br>Date:2014-6-12下午4:28:47
 	 */
 	public void upgrade2V5998ThemeDataBase() {
 		LauncherThemeDataBase db = new LauncherThemeDataBase(BaseConfig.getApplicationContext());
@@ -170,8 +164,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description: V6.0版本(内测包5999)增加主题包支持的桌面最低版本标识
-	 * <br>Author:caizp
-	 * <br>Date:2014-8-6下午4:28:47
 	 */
 	public void upgrade2V5999ThemeDataBase() {
 		LauncherThemeDataBase db = new LauncherThemeDataBase(BaseConfig.getApplicationContext());
@@ -193,8 +185,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description: V6.3版本增加讯飞输入法及触宝拨号
-	 * <br>Author:caizp
-	 * <br>Date:2014-8-6下午4:28:47
 	 */
 	public void upgrade2V6298ThemeDataBase() {
 		LauncherThemeDataBase db = new LauncherThemeDataBase(BaseConfig.getApplicationContext());
@@ -230,8 +220,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description: 获取当前主题表初始化SQL
-	 * <br>Author:caizp
-	 * <br>Date:2014-6-13上午11:56:07
 	 * @return
 	 */
 	public String[] getCurrentThemeInitSql() {
@@ -249,8 +237,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description: 获取当前主题模块信息
-	 * <br>Author:caizp
-	 * <br>Date:2014-6-13下午4:58:23
 	 * @return
 	 */
 	public List<ThemeModuleItem> getCurrentThemeModule() {
@@ -287,8 +273,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description: 查询模块包或主题模块被当前主题使用
-	 * <br>Author:caizp
-	 * <br>Date:2014-6-20下午6:18:30
 	 * @param modulePkg
 	 * @param moduleType
 	 * @return
@@ -321,8 +305,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description: 根据模块KEY查询当前主题对应模块信息
-	 * <br>Author:caizp
-	 * <br>Date:2014-6-20下午6:18:30
 	 * @param modulePkg
 	 * @return null-无对应模块ID
 	 */
@@ -359,8 +341,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description: 根据包名查询当前主题对应模块信息
-	 * <br>Author:caizp
-	 * <br>Date:2014-6-20下午6:18:30
 	 * @param modulePkg
 	 * @return null-无对应模块ID
 	 */
@@ -397,8 +377,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description: 更新当前主题模块信息(应用部分主题模块或单个模块包时调用该方法)
-	 * <br>Author:caizp
-	 * <br>Date:2014-6-20下午5:04:35
 	 * @param modules
 	 * @return
 	 */
@@ -429,8 +407,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description: 更新当前主题模块信息(应用主题整包时调用该方法)
-	 * <br>Author:caizp
-	 * <br>Date:2014-6-20下午5:00:35
 	 * @param themeId
 	 */
 	public void updateCurrentThemeModule(String themeId) {
@@ -450,8 +426,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description: 保存模块包信息
-	 * <br>Author:caizp
-	 * <br>Date:2014-6-19下午7:42:14
 	 * @param moduleInfo
 	 * @return
 	 */
@@ -488,8 +462,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description: 更新模块包信息
-	 * <br>Author:caizp
-	 * <br>Date:2014年11月14日下午4:25:49
 	 * @param moduleInfo
 	 * @return
 	 */
@@ -521,8 +493,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description:获取模块信息列表
-	 * <br>Author:caizp
-	 * <br>Date:2014-6-19下午8:00:01
 	 * @param moduleCategory 模块分类
 	 * @return
 	 */
@@ -569,8 +539,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description: 获取模块数量
-	 * <br>Author:caizp
-	 * <br>Date:2013-10-14下午05:44:08
 	 * @return
 	 */
 	public int getModuleInfosCount(){
@@ -600,8 +568,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description:获取模块信息列表
-	 * <br>Author:caizp
-	 * <br>Date:2014-6-19下午8:00:01
 	 * @param moduleKey 模块key
 	 * @return
 	 */
@@ -647,8 +613,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description:获取模块信息
-	 * <br>Author:caizp
-	 * <br>Date:2014-6-19下午8:00:01
 	 * @param moduleId 模块ID
 	 * @return
 	 */
@@ -694,8 +658,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description: 模块包是否已存在
-	 * <br>Author:caizp
-	 * <br>Date:2014年8月16日上午11:46:39
 	 * @param db.
 	 * @param moduleKey
 	 * @param moduleId
@@ -731,8 +693,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description: 删除模块包数据库信息
-	 * <br>Author:caizp
-	 * <br>Date:2014-6-19下午7:42:14
 	 * @param moduleInfo
 	 * @return
 	 */
@@ -755,8 +715,6 @@ public class ThemeModuleHelper {
 	
 	/**
 	 * <br>Description: 删除模块包文件
-	 * <br>Author:caizp
-	 * <br>Date:2014-6-19下午7:42:14
 	 * @param moduleInfo
 	 * @return
 	 */

@@ -14,7 +14,6 @@ import android.widget.Scroller;
 /**
  * 支持循环滚屏组件
  * 
- * @author pdw
  */
 public abstract class DockbarSlidingView extends ViewGroup {
 

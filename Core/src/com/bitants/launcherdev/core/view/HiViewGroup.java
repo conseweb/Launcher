@@ -6,8 +6,6 @@ import android.view.ViewGroup;
 
 /**
  * 简单继承了ViewGroup, 封装一些操作
- * @author ZSY
- * @since 2013-3-26
  */
 public abstract class HiViewGroup extends ViewGroup {
 	

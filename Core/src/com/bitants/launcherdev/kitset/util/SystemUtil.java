@@ -185,8 +185,6 @@ public class SystemUtil {
 
 	// /**
 	// * 更新应用程序使用次数 <br>
-	// * Author:ryan <br>
-	// * Date:2012-6-30下午08:08:38
 	// */
 	// private static void maybeUpdateUsedTime(Context ctx, ComponentName
 	// component) {
@@ -247,8 +245,6 @@ public class SystemUtil {
 	
 	/**
 	 * <br>Description:获取资源ID
-	 * <br>Author:caizp
-	 * <br>Date:2014-3-31上午11:43:10
 	 * @param ctx
 	 * @param key
 	 * @param type

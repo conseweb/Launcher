@@ -1,6 +1,4 @@
 /**
- * @author Michael
- * Date:2014-3-20上午11:01:55
  *
  */
 package com.bitants.launcherdev.launcher.view.icon.icontype.impl;
@@ -35,8 +33,6 @@ import com.bitants.launcherdev.launcher.view.icon.ui.LauncherIconView;
 import com.bitants.launcherdev.launcher.view.icon.ui.LauncherIconViewConfig;
 
 /**
- * @author Michael
- * Date:2014-3-20上午11:01:55
  *
  */
 public class DynamicIconType extends AppIconType{

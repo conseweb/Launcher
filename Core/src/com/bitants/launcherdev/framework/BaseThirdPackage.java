@@ -1,13 +1,9 @@
 /**
- * @author Michael
- * Date:2014-3-20下午1:34:37
  *
  */
 package com.bitants.launcherdev.framework;
 
 /**
- * @author Michael
- * Date:2014-3-20下午1:34:37
  *
  */
 public class BaseThirdPackage {

@@ -44,8 +44,6 @@ import java.lang.ref.WeakReference;
 
 /**
  * 桌面专用应用程序图标，其他情况请使用 <br>
- * Author:ryan <br>
- * Date:2012-7-12下午03:19:49
  */
 public class IconMaskTextView extends LauncherIconView implements OnDragEventCallback {
 	/**
@@ -104,8 +102,6 @@ public class IconMaskTextView extends LauncherIconView implements OnDragEventCal
 
 	/**
 	 * 初始化参数
-	 * @author Michael
-	 * @createtime 2013-7-30
 	 */
 	protected void initParams(AttributeSet attrs) {
 		initParamsDefault(attrs);
@@ -117,8 +113,6 @@ public class IconMaskTextView extends LauncherIconView implements OnDragEventCal
 	/**
 	 * 改变数据 并重新设置各个绘画策略所需数据
 	 * 
-	 * @author Michael
-	 * @createtime 2013-8-7
 	 * @param w
 	 * @param h
 	 */

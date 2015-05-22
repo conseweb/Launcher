@@ -8,8 +8,6 @@ import com.bitants.launcherdev.launcher.config.BaseConfig;
 
 /**
  * <br>Description:扩展主题类
- * <br>Author:caizp
- * <br>Date:2011-6-27下午05:00:08
  */
 public class ExternalTheme {
 

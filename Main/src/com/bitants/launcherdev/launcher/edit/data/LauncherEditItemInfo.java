@@ -5,7 +5,6 @@ import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDat
 
 /**
  *
- * @author Anson
  */
 public class LauncherEditItemInfo implements ICommonDataItem {
 	

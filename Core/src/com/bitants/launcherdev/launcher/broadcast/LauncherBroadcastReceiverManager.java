@@ -17,7 +17,6 @@ import android.util.Log;
 
 /**
  * Launcher动态注册广播监听管理
- * Author: guojy
  */
 public class LauncherBroadcastReceiverManager{
 	private static final String TAG = "LauncherBroadcastReceiverManager";

@@ -8,7 +8,6 @@ import com.bitants.launcherdev.launcher.config.BaseConfig;
 
 /**
  * description: 应用分发对外接口<br/>
- * author: Michael<br/>
  */
 public class AppDistributeService {
 

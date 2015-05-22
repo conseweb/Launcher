@@ -843,8 +843,6 @@ public final class SUtil {
 
     /**
      * <br>Description:文件大小转换
-     * <br>Author:caizp
-     * <br>Date:2011-5-16下午06:22:02
      * @param num
      * @param scale
      * @return
@@ -888,7 +886,6 @@ public final class SUtil {
     
     /**
 	 * 将字节数转换为GB,MB,KB单位
-	 * <br>Author:zhuchenghua
 	 * @param bytes
 	 * @param faction 保留小数位的位数
 	 * @return
@@ -908,7 +905,6 @@ public final class SUtil {
 	
 	/**
 	 * 格式化数字，并转成字符串，
-	 * <br>Author:zhuchenghua
 	 * @param num
 	 * @param pattern 格式：如".##"表示保留两位小数,"#.##"表示整数位一位，小数位两位
 	 * @param minFaction 多少位小数
@@ -996,8 +992,6 @@ public final class SUtil {
     /**
      * 
      * <br>Description:把16进制字符串转换成字节数组
-     * <br>Author:zhenghonglin
-     * <br>Date:2011-11-28下午04:52:48
      * @param hex
      * @return
      */

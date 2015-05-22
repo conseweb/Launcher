@@ -22,7 +22,6 @@ package com.bitants.launcherdev.kitset.apache;
  * Hex encoder and decoder.
  * 
  * @since 1.1
- * @author Apache Software Foundation
  * @version $Id: Hex.java,v 1.13 2004/04/18 18:22:33 ggregory Exp $
  */
 public class Hex implements  BinaryEncoder, BinaryDecoder {

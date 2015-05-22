@@ -6,8 +6,6 @@ import android.graphics.drawable.Drawable;
 
 /**
  * <br>Description: 简单主题类,只记录主题主要信息
- * <br>Author:caizp
- * <br>Date:2011-7-13下午04:55:46
  */
 public class BaseSimpleTheme {
 

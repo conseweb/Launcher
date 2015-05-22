@@ -27,8 +27,6 @@ import com.bitants.launcherdev.launcher.config.preference.BaseConfigPreferences;
 /**
  * 
  * Description: CellLayout基本配置信息
- * Author: guojy
- * Date: 2013-5-9 下午4:59:49
  */
 public class CellLayoutConfig{
 	public static String TAG = "CellLayoutConfig";
@@ -232,8 +230,6 @@ public class CellLayoutConfig{
 	
 	/**
 	 * Description: 用于换算spanXY
-	 * Author: guojy
-	 * Date: 2013-8-16 下午3:57:58
 	 */
 	public static int[] spanXYMather(int spanX, int spanY, Object item){
 		if(BaseConfig.isOnScene()){
@@ -270,8 +266,6 @@ public class CellLayoutConfig{
 	
 	/**
 	 * 小部件所需空间计算
-	 * @author Michael
-	 * Date:2013-10-8上午9:17:14
 	 *  @param context
 	 *  @param component
 	 *  @return
@@ -290,8 +284,6 @@ public class CellLayoutConfig{
 	
 	/**
 	 * 反射调用minResizeWidth值
-	 * @author Michael
-	 * Date:2013-11-13下午5:16:52
 	 *  @param appWidgetProviderInfo
 	 *  @return
 	 */
@@ -306,8 +298,6 @@ public class CellLayoutConfig{
 	
 	/**
 	 * 反射调用minResizeHeight值
-	 * @author Michael
-	 * Date:2013-11-13下午5:16:52
 	 *  @param appWidgetProviderInfo
 	 *  @return
 	 */
@@ -360,8 +350,6 @@ public class CellLayoutConfig{
 	}
 	/**
 	 * Description: 如传入参数小于0， 则不改变原参数值
-	 * Author: guojy
-	 * Date: 2013-8-6 上午11:04:16
 	 */
 	private static void reset(int marginLeft, int marginTop, int marginRight, int marginBottom, int countX, int countY){
 		portMarginLeft = marginLeft >= 0 ? marginLeft : portMarginLeft;

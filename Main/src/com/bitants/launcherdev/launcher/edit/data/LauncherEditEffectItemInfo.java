@@ -6,7 +6,6 @@ import com.bitants.launcherdev.theme.data.ThemeGlobal;
 /**
  * 编辑模式特效数据集类型
  *
- * @author Anson
  */
 public class LauncherEditEffectItemInfo extends LauncherEditItemInfo {
 	

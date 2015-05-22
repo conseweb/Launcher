@@ -28,8 +28,6 @@ import com.bitants.launcherdev.theme.assit.ThemeUIRefreshListener;
 /**
  * 桌面右键菜单
  * 
- * @author youy
- * 
  */
 public class BaseLauncherMenu implements ThemeUIRefreshListener {
 	public PopupWindow menuWindow;

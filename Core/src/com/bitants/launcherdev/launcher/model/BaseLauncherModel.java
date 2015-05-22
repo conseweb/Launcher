@@ -285,8 +285,6 @@ public class BaseLauncherModel extends BroadcastReceiver{
 	
 	/**
 	 * 批量增加Items
-	 * @author Michael
-	 * @createtime 2013-6-13 
 	 * @param context
 	 * @param items
 	 */
@@ -331,8 +329,6 @@ public class BaseLauncherModel extends BroadcastReceiver{
 	
 	/**
 	 * 批量修改Items
-	 * @author Michael
-	 * @createtime 2013-6-13 
 	 * @param context
 	 * @param items
 	 */
@@ -367,8 +363,6 @@ public class BaseLauncherModel extends BroadcastReceiver{
 	
 	/**
 	 * 批量删除
-	 * @author Michael
-	 * @createtime 2013-6-13 
 	 * @param context
 	 * @param items
 	 */
@@ -404,8 +398,6 @@ public class BaseLauncherModel extends BroadcastReceiver{
 	
 	/**
 	 * 返回快捷方式 <br>
-	 * Author:ryan <br>
-	 * Date:2012-5-21下午09:50:12
 	 */
 	public ApplicationInfo addShortcut(Context context, Intent data, int screen, int[] cellXY, boolean notify) {
 		final ApplicationInfo info = infoFromShortcutIntent(context, data);
@@ -1016,7 +1008,6 @@ public class BaseLauncherModel extends BroadcastReceiver{
 
     /**
 	 * 获取文件夹内容（只供推荐文件夹调用）
-	 * @author Ryan
 	 */
 	public static List<ApplicationInfo> getFolderContentById(Context context, long id) {
 		List<ApplicationInfo> result = new ArrayList<ApplicationInfo>();

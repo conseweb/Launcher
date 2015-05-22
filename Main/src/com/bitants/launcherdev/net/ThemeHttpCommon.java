@@ -414,8 +414,6 @@ public class ThemeHttpCommon {
 	
 	/**
 	 * 应用分发接口
-	 * Create On 2014-9-3下午5:06:32
-	 * Author : pdw
 	 * @param actionCode
 	 * @return
 	 */
@@ -425,8 +423,6 @@ public class ThemeHttpCommon {
 	
 	/**
 	 * 应用分发统计
-	 * Create On 2014-9-3下午5:04:11
-	 * Author : pdw
 	 * @param sp
 	 * @param packName 包名
 	 * @param stateStep 统计步骤

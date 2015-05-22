@@ -15,8 +15,6 @@ import com.bitants.launcherdev.launcher.config.LauncherConfig;
 
 /**
  * 间隔8小时发送一次活跃度统计
- * @author Ryan
- * @since 2013-7-30
  */
 public class UserStateService extends Service {
 	/**

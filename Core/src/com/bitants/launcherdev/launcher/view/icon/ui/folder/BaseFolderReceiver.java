@@ -1,14 +1,10 @@
 /**
- * @author Michael
- * Date:2014-3-26下午2:36:10
  *
  */
 package com.bitants.launcherdev.launcher.view.icon.ui.folder;
 
 
 /**
- * @author Michael
- * Date:2014-3-26下午2:36:10
  *
  */
 public class BaseFolderReceiver {

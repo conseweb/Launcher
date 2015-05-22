@@ -54,7 +54,7 @@
         
         <!-- The settings provider contains Home's data, like the workspace favorites -->
 		<provider android:name="com.bitants.launcherdev.launcher.LauncherProvider"
-			android:authorities="com.bitants.launcher.settings" />
+			android:authorities="com.bitants.launcherdev.settings" />
 		
 		<!-- Intent received used to install shortcuts from other applications -->
 		<receiver android:name="com.bitants.launcherdev.launcher.broadcast.InstallShortcutReceiver"

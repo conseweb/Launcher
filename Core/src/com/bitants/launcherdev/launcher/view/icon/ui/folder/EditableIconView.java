@@ -26,7 +26,6 @@ import com.bitants.launcherdev.kitset.util.ScreenUtil;
 
 /**
  * 可编辑图标的抽象父类，如程序匣子中的应用图标，长按后会显示一个打X的图标，代表可编辑状态
- * @author zhuchenghua
  *
  */
 public class EditableIconView extends View {

@@ -157,8 +157,6 @@ public class LauncherActivityResultHelper {
 	
 	/**
 	 * 从标题中获取widget的长和宽
-	 * @author Michael
-	 * Date:2013-11-14下午2:37:11
 	 *  @param s
 	 *  @return
 	 */

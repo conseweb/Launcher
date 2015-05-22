@@ -36,8 +36,6 @@ import com.bitants.launcherdev.kitset.util.ScreenUtil;
 
 /**
  * <br>Description: 屏幕预览， 可拖拉排序， 删除，放置拖动项
- * <br>Author:caizp
- * <br>Date:2012-6-20下午07:32:27
  */
 public class PreviewEditAdvancedController implements OnKeyDownListenner,
 		OnSwitchDataListener, OnCommonSlidingViewClickListener,
@@ -106,8 +104,6 @@ public class PreviewEditAdvancedController implements OnKeyDownListenner,
 	
 	/**
 	 * <br>Description: 初始化动画
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-28下午03:37:21
 	 */
 	private void createAnimations() {
 		// 出现,从上到下,透明度与位置变化
@@ -152,8 +148,6 @@ public class PreviewEditAdvancedController implements OnKeyDownListenner,
 
 	/**
 	 * <br>Description: 开启桌面预览模式
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-20下午07:50:50
 	 * @param previewMode 0.屏幕编辑模式  1.拖动项放置模式
 	 */
 	public void startDesktopEdit(int previewMode) {
@@ -213,8 +207,6 @@ public class PreviewEditAdvancedController implements OnKeyDownListenner,
 
 	/**
 	 * <br>Description:离开桌面预览模式
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-20下午08:36:10
 	 */
 	public void stopDesktopEdit() {
 		if (!mIsPreviewMode)
@@ -242,8 +234,6 @@ public class PreviewEditAdvancedController implements OnKeyDownListenner,
 
 	/**
 	 * <br>Description: 是否处于预览状态(编辑或放置模式)
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-20下午08:40:32
 	 * @return
 	 */
 	public boolean isPreviewMode() {
@@ -252,8 +242,6 @@ public class PreviewEditAdvancedController implements OnKeyDownListenner,
 
 	/**
 	 * <br>Description: 初始化预览界面
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-20下午09:41:25
 	 */
 	private void initPreview() {
 		if(isFirstLayout){
@@ -312,8 +300,6 @@ public class PreviewEditAdvancedController implements OnKeyDownListenner,
 
 	/**
 	 * <br>Description: 监听回退键，退出屏幕预览
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-20下午09:39:34
 	 * @see com.bitants.launcherdev.framework.OnKeyDownListenner#onKeyDownProcess(int, android.view.KeyEvent)
 	 */
 	@Override
@@ -334,8 +320,6 @@ public class PreviewEditAdvancedController implements OnKeyDownListenner,
 
 	/**
 	 * <br>Description: 屏幕缩略图长按事件响应
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-20下午09:15:53
 	 * @see com.bitants.launcherdev.framework.view.commonsliding.CommonSlidingView.OnCommonSlidingViewLongClickListener#onItemLongClick(android.view.View, int, int, int, com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonData)
 	 */
 	@Override
@@ -360,8 +344,6 @@ public class PreviewEditAdvancedController implements OnKeyDownListenner,
 
 	/**
 	 * <br>Description: 屏幕缩略图点击事件响应
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-20下午09:17:02
 	 * @see com.bitants.launcherdev.framework.view.commonsliding.CommonSlidingView.OnCommonSlidingViewClickListener#onItemClick(android.view.View, int, int, int, com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonData)
 	 */
 	@Override
@@ -403,8 +385,6 @@ public class PreviewEditAdvancedController implements OnKeyDownListenner,
 	
 	/**
 	 * <br>Description: 显示屏幕空间已满提示
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-27下午02:54:12
 	 */
 	public void showNotifyIsFullScreenZone(){
     	if(isShowNotifyZone) return;
@@ -416,8 +396,6 @@ public class PreviewEditAdvancedController implements OnKeyDownListenner,
 	
 	/**
 	 * <br>Description: 隐藏屏幕空间已满提示
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-27下午02:54:12
 	 */
     public void closeNotifyIsFullScreenZone(){
     	if(isShowNotifyZone){

@@ -9,7 +9,6 @@ import com.bitants.launcherdev.kitset.GpuControler;
 
 /**
  *
- * @author Anson
  */
 public class DrawerLayout extends DraggerLayout {
 	

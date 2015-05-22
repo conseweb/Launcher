@@ -704,8 +704,6 @@ public class BaseDragController implements DragLayerEventHandler, OnKeyDownListe
 	
 	/**
 	 * Description: 处理甩动图标到顶部删除卸载区域
-	 * Author: guojy
-	 * Date: 2013-2-16 下午4:28:27
 	 */
 	private void dropOnFlingToDeleteTarget(int x, int y, PointF vel) {
         final int[] coordinates = mCoordinatesTemp;
@@ -746,8 +744,6 @@ public class BaseDragController implements DragLayerEventHandler, OnKeyDownListe
 	
 	/**
 	 * Description: 判断用户是否甩动图标到顶部删除卸载区域
-	 * Author: guojy
-	 * Date: 2013-2-16 下午4:28:19
 	 */
 	private PointF isFlingingToDelete() {
 		//判断是否允许甩动到删除卸载区
@@ -962,9 +958,7 @@ public class BaseDragController implements DragLayerEventHandler, OnKeyDownListe
 	/**
 	 * <br>
 	 * Description: 设置滚动边界的显示 <br>
-	 * Author:zhou<br>
-	 * Date:2013-01-07上午11:26:43
-	 * 
+	 *
 	 * @param isLeft  是否是左边栏
 	 * @param isWorkspace 是否在屏幕上，false 表示在匣子中
 	 * @param isVisible   显示或者隐藏，如果是false 时，前两个参数 忽略

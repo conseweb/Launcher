@@ -114,8 +114,6 @@ public abstract class AbstractDataBaseSuper {
 	 * 
 	 * @Title: query
 	 * @Description: 查询单个条件
-	 * @author linyt
-	 * @date 2012-8-8
 	 * @param table 表名
 	 * @param key 查询字段
 	 * @param value 查询字段值
@@ -132,8 +130,6 @@ public abstract class AbstractDataBaseSuper {
 	 * 
 	 * @Title: query
 	 * @Description: 查询给定表所有数据
-	 * @author linyt
-	 * @date 2012-8-8
 	 * @param table
 	 * @param columns
 	 * @param selection

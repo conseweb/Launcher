@@ -37,8 +37,6 @@ import com.bitants.launcherdev.launcher.screens.CellLayout;
 
 /**
  * Description: 桌面长按编辑模式
- * Author: guojy
- * Date: 2013-9-26 下午5:51:51
  */
 public class WorkspaceSpring {
 	private BaseLauncher mLauncher;
@@ -140,8 +138,6 @@ public class WorkspaceSpring {
 
 	/**
 	 * Description: 关闭编辑模式动画
-	 * Author: guojy
-	 * Date: 2012-7-15 下午04:13:05
 	 */
 	public void animationNormalMode(boolean removeSpringAddScreen){
 		mWorkspace.hideEditor();
@@ -151,8 +147,6 @@ public class WorkspaceSpring {
 	}
 	/**
 	 * Description: 退回程序匣子时，关闭编辑模式动画
-	 * Author: guojy
-	 * Date: 2012-8-16 上午09:51:50
 	 */
 	public void animationNormalModeFromDrawer(boolean removeSpringAddScreen){
 		animationNormalMode(removeSpringAddScreen, springAniDefaultDruation, true);
@@ -239,8 +233,6 @@ public class WorkspaceSpring {
 	}
 	/**
 	 * Description: 返回程序匣子时，退出编辑模式
-	 * Author: guojy
-	 * Date: 2012-8-6 上午10:24:15
 	 */
 	public void changeToNormalModeFromDrawer(boolean removeSpringAddScreen, boolean isShowDrawer) {
 		mLauncher.showBottomContainer();
@@ -254,8 +246,6 @@ public class WorkspaceSpring {
 	}
 	/**
 	 * Description: 从程序匣子进入编辑模式
-	 * Author: guojy
-	 * Date: 2012-8-6 上午10:24:08
 	 */
 	public void changeToSpringModeFromDrawer(int fromTab){
 		mSpringStartPage = mWorkspace.getCurrentScreen();
@@ -289,8 +279,6 @@ public class WorkspaceSpring {
 	}
 	/**
 	 * Description: 打开编辑模式动画
-	 * Author: guojy
-	 * Date: 2012-7-12 下午09:26:41
 	 */
 	public void animationSpringMode(boolean createSpringAddScreen){
 		springAnimationType = SPRINGANIMATION_NORMAL;
@@ -299,8 +287,6 @@ public class WorkspaceSpring {
 	
 	/**
 	 * Description: 从程序匣子进入编辑模式动画
-	 * Author: guojy
-	 * Date: 2012-8-16 上午09:46:13
 	 */
 	public void animationSpringModeFromDrawer(){
 		resolve2NormalSpringMode();
@@ -310,8 +296,6 @@ public class WorkspaceSpring {
 
 	/**
 	 * Description: 在编辑模式下重新进入编辑模式动画
-	 * Author: guojy
-	 * Date: 2012-8-16 上午09:46:36
 	 */
 	public void animationSpringModeReboot(){
 		springAnimationType = SPRINGANIMATION_REBOOT;
@@ -428,8 +412,6 @@ public class WorkspaceSpring {
 	
 	/**
 	 * Description: 是否处于打开编辑模式的动画中
-	 * Author: guojy
-	 * Date: 2012-7-27 下午02:07:57
 	 */
 	public boolean isOnEnterSpringModeAnimation(){
 		return isOnEnterSpringModeAnimation;
@@ -440,8 +422,6 @@ public class WorkspaceSpring {
 	
 	/**
 	 * Description: 是否处于退出编辑模式的动画中
-	 * Author: guojy
-	 * Date: 2012-7-26 上午10:21:00
 	 */
 	public boolean isOnExitSpringModeAnimation(){
 		return isOnExitSpringModeAnimation;
@@ -452,8 +432,6 @@ public class WorkspaceSpring {
 	
 	/**
 	 * Description: 修复退出编辑模式动画中断时的错误状态
-	 * Author: guojy
-	 * Date: 2012-8-8 下午03:52:27
 	 */
 	public void fixExitSpringModeAnimationState(){
 		if(isOnExitSpringModeAnimation() && !mWorkspace.isOnSpringMode())
@@ -462,8 +440,6 @@ public class WorkspaceSpring {
 	
 	/**
 	 * Description: 计算各个编辑屏中心点X轴坐标（相对于整个画布的坐标）
-	 * Author: guojy
-	 * Date: 2012-7-19 下午05:05:52
 	 */
 	private void initSpringScreenCenterX(){
 		int arrayLen = mWorkspace.getChildCount();
@@ -478,16 +454,12 @@ public class WorkspaceSpring {
 	/**
 	 * 
 	 * Description: 编辑模式下，第一屏离父View的左边距
-	 * Author: guojy
-	 * Date: 2012-7-18 下午08:34:05
 	 */
 	private int getLeftPaddingForSpringMode(){
 		return springPageSplit + springPageGap+mSpringStartPage*(springPageGap + 2*springPageSplit);
 	}
 	/**
 	 * Description: 编辑模式下，当前屏的动画前与动画后的位置偏移量
-	 * Author: guojy
-	 * Date: 2012-7-15 下午04:34:01
 	 */
 	public int getAdjustXBySpringMode(){
 		return (mWorkspace.getCurrentScreen()-mSpringStartPage)*springPageOffsetX;
@@ -524,24 +496,18 @@ public class WorkspaceSpring {
 	
 	/**
 	 * Description: 获取编辑模式的CellLayout缩放比例
-	 * Author: guojy
-	 * Date: 2012-7-22 上午11:36:27
 	 */
 	public float getSpringScale(){
 		return springScale;
 	}
 	/**
 	 * Description: 获取编辑模式缩放后左右CellLayout露出的距离
-	 * Author: guojy
-	 * Date: 2012-7-21 下午02:43:55
 	 */
 	public int getSpringPageSplit(){
 		return springPageSplit;
 	}
 	/**
 	 * Description: 获取编辑模式缩放后CellLayout的间距
-	 * Author: guojy
-	 * Date: 2012-7-24 上午10:17:46
 	 */
 	public int getSpringPageGap(){
 		return springPageGap;
@@ -551,8 +517,6 @@ public class WorkspaceSpring {
 	/**
 	 * 
 	 * @description 设置编辑模式下的页面间距和左右显示出来的页面大小
-	 * @author Michael
-	 * @date 2013-05-28 上午8:19:00
 	 */
 	private void setPageSplitAndSpaceGap(int pageSplit, int pageGap){
 		springPageSplit = pageSplit;
@@ -574,8 +538,6 @@ public class WorkspaceSpring {
 	/**
 	 * 
 	 * @description 设置无editor的编辑模式下的页面间距和左右显示出来的页面默认大小
-	 * @author Michael
-	 * @date 2013-05-28 上午8:19:00
 	 */
 	public void setPageSplitAndSpaceGapDefault(){
 		setPageSplitAndSpaceGap(mWorkspace.getScreenWidth()/14, mWorkspace.getScreenWidth()/30);
@@ -583,8 +545,6 @@ public class WorkspaceSpring {
 	
 	/**
 	 * @description 进入到编辑模式 修改编辑模式下的参数
-	 * @author Michael
-	 * @createtime 2013-6-5
 	 */
 	public void change2SpringModeWithEditor(){
 		springModeWithEditor = true;
@@ -606,8 +566,6 @@ public class WorkspaceSpring {
 
 	/**
 	 * Description: 修复无dock栏桌面的缩放比例
-	 * Author: guojy
-	 * Date: 2013-8-28 下午3:58:39
 	 */
 	private float fixSpringScaleOnScene(float springScale){
 		if(BaseConfig.isOnScene()){
@@ -624,8 +582,6 @@ public class WorkspaceSpring {
 	
 	/**
 	 * 计算LauncherEditorView的高度
-	 * @author Michael
-	 * @createtime 2013-6-25 
 	 * @return
 	 */
 	public float calcEditorHeight(){
@@ -644,8 +600,6 @@ public class WorkspaceSpring {
 	
 	/**
 	 * @description  恢复进入到编辑模式前的状态
-	 * @author Michael
-	 * @createtime 2013-6-5
 	 */
 	private void resolve2NormalSpringMode(){
 		springModeWithEditor = false;
@@ -655,8 +609,6 @@ public class WorkspaceSpring {
 	
 	/**
 	 * Description: 编辑模式下，新增、删除或退出编辑屏
-	 * Author: guojy
-	 * Date: 2012-8-9 上午10:02:17
 	 */
 	public void handleOnSpringActionUp(MotionEvent ev) {
 		//计算编辑模式当前页面范围
@@ -712,8 +664,6 @@ public class WorkspaceSpring {
 	}
 	/**
 	 * Description: 在编辑模式下删除当前屏
-	 * Author: guojy
-	 * Date: 2012-7-18 下午08:22:39
 	 */
 	public void deleteScreenOnSpringMode(){
 		int curScreen = mWorkspace.getCurrentScreen();
@@ -758,8 +708,6 @@ public class WorkspaceSpring {
 	
 	/**
 	 * Description: 获取编辑模式下,页面动画沿Y轴方向的距离
-	 * Author: guojy
-	 * Date: 2012-7-24 下午03:27:45
 	 */
 	public int getSpringPageTranslationY(){
 		return springPageTranslationY;

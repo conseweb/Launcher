@@ -33,8 +33,6 @@ import com.bitants.launcherdev.theme.pref.ThemeSharePref;
 
 /**
  * <br>Description: 主题管理接口
- * <br>Author:caizp
- * <br>Date:2014-4-4上午10:07:03
  */
 public class ThemeManagerFactory {
 	
@@ -76,9 +74,7 @@ public class ThemeManagerFactory {
 	/**
 	 * <br>
 	 * Description:获取当前主题 <br>
-	 * Author:caizp <br>
-	 * Date:2014-4-2下午6:39:35
-	 * 
+	 *
 	 * @return
 	 */
 	public BasePandaTheme getCurrentTheme() {
@@ -95,8 +91,6 @@ public class ThemeManagerFactory {
 	/**
 	 * <br>
 	 * Description: 重置当前主题 <br>
-	 * Author:caizp <br>
-	 * Date:2014-4-3上午9:44:53
 	 */
 	public void resetCurrentTheme() {
 		if (null != themeManagerHelper) {
@@ -106,8 +100,6 @@ public class ThemeManagerFactory {
 	
 	/**
 	 * <br>Description: 获取当前主题图片
-	 * <br>Author:caizp
-	 * <br>Date:2014-4-3上午9:40:54
 	 * @param key
 	 * @return
 	 */
@@ -117,8 +109,6 @@ public class ThemeManagerFactory {
 	
 	/**
 	 * <br>Description: 获取当前主题图标
-	 * <br>Author:caizp
-	 * <br>Date:2014-4-3上午9:41:12
 	 * @param key
 	 * @return
 	 */
@@ -128,8 +118,6 @@ public class ThemeManagerFactory {
 
 	/**
 	 * <br>Description: 获取当前主题文本
-	 * <br>Author:caizp
-	 * <br>Date:2014-4-3上午9:41:12
 	 * @param key
 	 * @return
 	 */
@@ -139,8 +127,6 @@ public class ThemeManagerFactory {
 	
 	/**
 	 * <br>Description: 获取当前主题图标文字颜色
-	 * <br>Author:caizp
-	 * <br>Date:2012-10-10下午03:49:10
 	 * @return 默认白色
 	 */
 	public int getThemeIconTextColor() {
@@ -157,8 +143,6 @@ public class ThemeManagerFactory {
 	
 	/**
 	 * <br>Description: 获取当前主题配置指示灯是否横条型指示灯
-	 * <br>Author:caizp
-	 * <br>Date:2014-2-26下午6:13:54
 	 * @return
 	 */
 	public boolean isLineLight() {
@@ -181,9 +165,7 @@ public class ThemeManagerFactory {
 	/**
 	 * <br>
 	 * Description: 加载当前主题图片资源(自动释放原有资源) <br>
-	 * Author:caizp <br>
-	 * Date:2011-6-29下午02:38:28
-	 * 
+	 *
 	 * @param key
 	 *            需换肤控件主题图片key {@link ThemeData}
 	 * @param item
@@ -216,8 +198,6 @@ public class ThemeManagerFactory {
 	
 	/**
 	 * <br>Description: 发送当前主题信息广播
-	 * <br>Author:caizp
-	 * <br>Date:2014-4-4上午11:08:25
 	 * @param context
 	 * @param packageName 指定接收应用包名，4.0以下过滤主题询问方包名，只有主题询问方才能收到广播
 	 */
@@ -294,9 +274,7 @@ public class ThemeManagerFactory {
 	/**
 	 * <br>
 	 * Description: 应用主题(不显示等待框) <br>
-	 * Author:caizp <br>
-	 * Date:2012-7-12上午10:43:51
-	 * 
+	 *
 	 * @param ctx
 	 * @param themeId
 	 *            主题ID
@@ -317,9 +295,7 @@ public class ThemeManagerFactory {
 	/**
 	 * <br>
 	 * Description: 应用主题(不显示等待框) <br>
-	 * Author:caizp <br>
-	 * Date:2012-7-12上午10:43:51
-	 * 
+	 *
 	 * @param ctx
 	 * @param themeId
 	 *            主题ID
@@ -366,9 +342,7 @@ public class ThemeManagerFactory {
 
 	/**
 	 * 重新安装文件夹的导入主题 <br>
-	 * Author:caizp <br>
-	 * Date:2012-7-12下午05:23:00
-	 * 
+	 *
 	 * @param ctx
 	 * @param file
 	 *            主题文件夹
@@ -393,8 +367,6 @@ public class ThemeManagerFactory {
 	
 	/**
 	 * <br>Description: 删除主题相关数据
-	 * <br>Author:caizp
-	 * <br>Date:2014-3-3上午11:22:13
 	 * @param ctx
 	 * @param themeId
 	 */
@@ -406,8 +378,6 @@ public class ThemeManagerFactory {
 	
 	/**
 	 * <br>Description: 删除指定主题Id的主题数据库数据
-	 * <br>Author:caizp
-	 * <br>Date:2011-6-30下午06:06:44
 	 * @param themeId
 	 * @return
 	 */
@@ -438,8 +408,6 @@ public class ThemeManagerFactory {
 	
 	/**
 	 * <br>Description: 删除数据库中的所有主题记录
-	 * <br>Author:caizp
-	 * <br>Date:2013-5-20下午3:08:53
 	 */
 	public void deleteAllThemeRecords() {
 		Cursor cursor = null;
@@ -464,8 +432,6 @@ public class ThemeManagerFactory {
 	
 	/**
 	 * <br>Description: 删除在SD卡上的主题数据
-	 * <br>Author:caizp
-	 * <br>Date:2011-7-13下午05:44:43
 	 * @param themeId
 	 */
 	public void removeThemeAllFile(String themeId) {
@@ -512,8 +478,6 @@ public class ThemeManagerFactory {
 	
 	/**
 	 * <br>Description:更新theme表中主题的最新使用时间和使用次数
-	 * <br>Author:caizp
-	 * <br>Date:2014-4-3下午03:46:15
 	 */
 	public boolean updateUseTimeAndUseCount(LauncherThemeDataBase db, String themeId){
 		Cursor cursor = null;
@@ -533,8 +497,6 @@ public class ThemeManagerFactory {
 	
 	/**
 	 * <br>Description: 获取主题数量
-	 * <br>Author:caizp
-	 * <br>Date:2013-10-14下午05:44:08
 	 * @return
 	 */
 	public int getThemesCount(){
@@ -565,8 +527,6 @@ public class ThemeManagerFactory {
 	
 	/**
 	 * <br>Description: 主题是否存在
-	 * <br>Author:caizp
-	 * <br>Date:2011-7-13下午05:44:08
 	 * @return
 	 */
     public boolean isThemeIdLikeExist(Context ctx, String themeId) {
@@ -597,8 +557,6 @@ public class ThemeManagerFactory {
     
     /**
 	 * Description: 获取指定主题Id的主题对象实例 <br>
-	 * Author:caizp <br>
-	 * Date:2014-4-3下午02:34:57
 	 * @param themeId
 	 * @return
 	 */
@@ -647,8 +605,6 @@ public class ThemeManagerFactory {
     
     /**
 	 * <br>Description: 主题名称对应的主题ID
-	 * <br>Author:caizp
-	 * <br>Date:2011-7-13下午05:44:08
 	 * @return
 	 */
     public String getThemeIdByName(Context ctx, String themeName) {
@@ -702,9 +658,7 @@ public class ThemeManagerFactory {
 	
 	/**
 	 * 重新安装文件夹的模块 <br>
-	 * Author:caizp <br>
-	 * Date:2014-8-16下午05:23:00
-	 * 
+	 *
 	 * @param ctx
 	 * @param moduleKey 模块KEY
 	 * @param file
@@ -726,9 +680,7 @@ public class ThemeManagerFactory {
 	/**
 	 * <br>
 	 * Description: 应用主题模块(不显示等待框) <br>
-	 * Author:caizp <br>
-	 * Date:2012-7-12上午10:43:51
-	 * 
+	 *
 	 * @param ctx
 	 * @param modules
 	 *            主题模块
@@ -747,8 +699,6 @@ public class ThemeManagerFactory {
 	
 	/**
 	 * <br>Description: 删除主题模块相关数据
-	 * <br>Author:caizp
-	 * <br>Date:2014-3-3上午11:22:13
 	 * @param ctx
 	 * @param themeId
 	 */

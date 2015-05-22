@@ -25,8 +25,6 @@ import java.util.*;
 
 /**
  * 桌面打开文件夹逻辑类
- * @author Michael
- * @date 2013-7-14
  */
 public class LauncherFolderHelper extends AbstractFolderHelper {
     
@@ -191,8 +189,6 @@ public class LauncherFolderHelper extends AbstractFolderHelper {
     /**
      * <p>交叉对比添加的应用程序和文件夹中的应用程序</p>
      * 
-     * <p>date: 2012-9-28 上午11:36:34
-     * @author pdw
      * @param userFolderInfo
      */
     private void handleAppAdd(FolderInfo userFolderInfo,ArrayList<SerializableAppInfo> addList) {

@@ -370,8 +370,6 @@ public class LauncherWidgetInfo extends LauncherItemInfo {
 	
 	/**
 	 * 是否是内置动态插件
-	 * @author Michael
-	 * Date:2013-12-20上午8:44:35
 	 * @return
 	 */
 	public boolean isInsideDynamicWidget(){
@@ -396,8 +394,6 @@ public class LauncherWidgetInfo extends LauncherItemInfo {
 	
 	/**
 	 * 是否是可安装插件
-	 * @author Michael
-	 * Date:2014-1-26上午9:34:41
 	 *  @param widgetInfo
 	 */
 	public static boolean isOutSideWidget(LauncherWidgetInfo widgetInfo){
@@ -409,8 +405,6 @@ public class LauncherWidgetInfo extends LauncherItemInfo {
 	
 	/**
 	 * 是否91插件如百度插件等
-	 * @author Michael
-	 * Date:2014-1-26上午9:38:29
 	 *  @param widgetInfo
 	 *  @return
 	 */
@@ -423,8 +417,6 @@ public class LauncherWidgetInfo extends LauncherItemInfo {
 	
 	/**
 	 * 是否通过安装插件或是天气类型
-	 * @author Michael
-	 * Date:2014-1-26上午9:38:29
 	 *  @param widgetInfo
 	 *  @return
 	 */
@@ -437,8 +429,6 @@ public class LauncherWidgetInfo extends LauncherItemInfo {
 	
 	/**
 	 * 是否动态桌面内置插件(放置在SD卡上)
-	 * @author Michael
-	 * Date:2014-1-26上午9:38:29
 	 *  @param widgetInfo
 	 *  @return
 	 */

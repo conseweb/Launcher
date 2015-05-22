@@ -20,8 +20,6 @@ import com.bitants.launcherdev.theme.module.ThemeModuleItem;
 
 /**
  * <br>Description:主题包装类
- * <br>Author:caizp
- * <br>Date:2011-6-27下午04:49:28
  */
 public class ThemeResourceWrapper{
     /**
@@ -77,8 +75,6 @@ public class ThemeResourceWrapper{
 
     /**
      * <br>Description:获取主题Id
-     * <br>Author:caizp
-     * <br>Date:2011-6-27下午04:19:41
      * @return
      */
     public String getThemeId(){
@@ -87,8 +83,6 @@ public class ThemeResourceWrapper{
     
 	/**
 	 * <br>Description:获取主题类型
-	 * <br>Author:caizp
-	 * <br>Date:2011-6-27下午04:38:35
 	 * @return
 	 */
     public int getType() {
@@ -105,8 +99,6 @@ public class ThemeResourceWrapper{
     
     /**
      * <br>Description:获取壁纸输入流
-     * <br>Author:caizp
-     * <br>Date:2011-6-28下午03:46:18
      * @return
      */
     public InputStream getWallpaperStream(){
@@ -127,8 +119,6 @@ public class ThemeResourceWrapper{
     /**
      * 
      * <br>Description: 获取屏幕自适配壁纸
-     * <br>Author:caizp
-     * <br>Date:2011-8-22上午10:14:12
      * @return
      */
     public Bitmap getWallpaperBitmap() {
@@ -173,8 +163,6 @@ public class ThemeResourceWrapper{
 
     /**
      * <br>Description: 获取主题文本(如颜色值)
-     * <br>Author:caizp
-     * <br>Date:2011-8-26下午04:39:39
      * @param key
      * @return
      */
@@ -200,8 +188,6 @@ public class ThemeResourceWrapper{
     
     /**
      * <br>Description: 根据图片或图标key获取主题图片所在位置
-     * <br>Author:caizp
-     * <br>Date:2014-6-19下午1:51:33
      * @param key 图片key
      * @param moduleKey 图片所属模块
      * @return
@@ -239,8 +225,6 @@ public class ThemeResourceWrapper{
     
     /**
      * <br>Description: 解析图片或图标所属主题目录，并获取其所在位置
-     * <br>Author:caizp
-     * <br>Date:2014-6-19下午2:02:24
      * @param key 图片或图标key
      * @param moduleKey 图片或图标所属模块
      * @param scanEncryptFile 是否扫描加密文件
@@ -267,8 +251,6 @@ public class ThemeResourceWrapper{
 	
     /**
      * <br>Description:通过图片键名获取图片Drawable对象
-     * <br>Author:caizp
-     * <br>Date:2011-6-28下午04:34:28
      * @param key
      * @param getDefaultWhenNull 图片为空时获取默认图片
      * @return
@@ -293,8 +275,6 @@ public class ThemeResourceWrapper{
     
     /**
      * <br>Description:通过图标键名获取图片Drawable对象
-     * <br>Author:caizp
-     * <br>Date:2011-6-28下午04:34:28
      * @param key
      * @param getDefaultWhenNull 图片为空时获取默认图片
      * @return
@@ -346,8 +326,6 @@ public class ThemeResourceWrapper{
     /**
      * 
      * <br>Description:获取默认主题资源
-     * <br>Author:zhenghonglin
-     * <br>Date:2012-3-23下午03:08:59
      * @param key
      * @return
      */
@@ -367,8 +345,6 @@ public class ThemeResourceWrapper{
     /**
      * 
      * <br>Description:获取默认主题字符串资源
-     * <br>Author:zhenghonglin
-     * <br>Date:2012-3-23下午03:08:59
      * @param key
      * @return
      */

@@ -18,8 +18,6 @@ import com.bitants.launcherdev.launcher.support.BaseLauncherViewHelper;
 
 /**
  * 扩展处理显示到桌面的视图
- * <br>Author:ryan
- * <br>Date:2012-7-11下午09:02:43
  */
 public class LauncherViewHelper extends BaseLauncherViewHelper {
 	/**

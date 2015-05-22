@@ -132,7 +132,6 @@ public class HotwordCloudView extends FrameLayout implements OnGlobalLayoutListe
 	 *            动画类型
 	 * @param duration
 	 *            动画时间
-	 * @author Yu.F
 	 */
 	public void show(String[] hotwords, int displayNum, int animation, long duration) {
 		if (hotwords == null || hotwords.length == 0 || displayNum <= 0)
@@ -169,7 +168,6 @@ public class HotwordCloudView extends FrameLayout implements OnGlobalLayoutListe
 	 * 
 	 * @param hotwords
 	 *            热词数组
-	 * @author Yu.F
 	 */
 	public void show(String[] hotwords) {
 		this.show(hotwords, displayNum, HotwordCloudView.ANIMATION_IN, ANIM_DURATION);

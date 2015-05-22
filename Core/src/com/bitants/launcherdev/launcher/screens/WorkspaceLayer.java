@@ -29,7 +29,6 @@ import com.bitants.launcherdev.launcher.config.ConfigFactory;
 import com.bitants.launcherdev.launcher.support.WallpaperHelper;
 
 /**
- * Description: Author: guojy Date: 2012-10-11 下午02:42:07
  */
 public class WorkspaceLayer extends ViewGroup {
 	static final String TAG = "WorkspaceLayer";

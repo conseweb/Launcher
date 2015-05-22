@@ -184,8 +184,6 @@ public class DeleteZone extends LinearLayout {
 	
 	/**
 	 * 不显示卸载 <br>
-	 * Author:ryan <br>
-	 * Date:2012-7-28下午09:49:13
 	 */
 	private boolean isNotShowUninstall(ItemInfo item) {
 		if(isShowUninstall)

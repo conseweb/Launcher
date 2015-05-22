@@ -72,8 +72,6 @@ public class BaseIconCache{
 
 	/**
 	 * 缓存的应用程序图标与名称 <br>
-	 * Author:ryan <br>
-	 * Date:2012-7-25上午11:43:19
 	 */
 	public static class CacheEntry {
 		public Bitmap icon;
@@ -148,8 +146,6 @@ public class BaseIconCache{
 	/**
 	 * 加载时候优先初始化 <br>
 	 * Description:TODO 方法功能描述 <br>
-	 * Author:ryan <br>
-	 * Date:2012-11-16下午06:29:16
 	 */
 	public void getTitleAndIcon(ApplicationInfo application) {
 		if (application == null || application.intent == null || application.componentName == null)
@@ -196,9 +192,7 @@ public class BaseIconCache{
 
 	/**
 	 * 兼容接口 <br>
-	 * Author:ryan <br>
-	 * Date:2012-11-16下午06:17:23
-	 * 
+	 *
 	 * @param application
 	 * @return
 	 */
@@ -217,8 +211,6 @@ public class BaseIconCache{
 
 	/**
 	 * 搜索结果使用 <br>
-	 * Author:ryan <br>
-	 * Date:2012-11-16下午06:20:55
 	 */
 	public Bitmap getIcon(Intent intent) {
 		final ResolveInfo resolveInfo = mPackageManager.resolveActivity(intent, 0);
@@ -234,8 +226,6 @@ public class BaseIconCache{
 
 	/**
 	 * 重命名的不取名称 <br>
-	 * Author:ryan <br>
-	 * Date:2012-5-9下午10:34:34
 	 */
 	private CacheEntry cacheLocked(CharSequence title, ComponentName componentName, ResolveInfo info) {
 		if (StringUtil.isEmpty(title)) {
@@ -282,8 +272,6 @@ public class BaseIconCache{
 
 	/**
 	 * 获取应用程序图标与名称 <br>
-	 * Author:ryan <br>
-	 * Date:2012-11-16下午06:19:20
 	 */
 	private CacheEntry cacheLocked(ComponentName componentName, ResolveInfo info) {
 		if(componentName == null)
@@ -356,8 +344,6 @@ public class BaseIconCache{
 
 	/**
 	 * 创建缓存 <br>
-	 * Author:ryan <br>
-	 * Date:2012-7-27上午10:03:08
 	 */
 	public void makeCache(ApplicationInfo app) {
 		if (app == null)
@@ -379,9 +365,7 @@ public class BaseIconCache{
 	 * 2. 脏数据，即一个package包含两个main，返回null<br>
 	 * 3. 无此数据，返回null<br>
 	 * <br>
-	 * Author:ryan <br>
-	 * Date:2012-7-25下午09:31:26
-	 * 
+	 *
 	 * @param packageName
 	 *            应用程序包名
 	 */
@@ -431,9 +415,7 @@ public class BaseIconCache{
 
 	/**
 	 * 延迟加载 <br>
-	 * Author:ryan <br>
-	 * Date:2012-10-30下午08:06:20
-	 * 
+	 *
 	 * @return
 	 */
 	public Bitmap getmDefaultIcon() {
@@ -491,8 +473,6 @@ public class BaseIconCache{
 	
 	/**
 	 * 获取图标接口适配4.1以上
-	 * @author Michael
-	 * Date:2014-4-2下午4:24:47
 	 *  @param info
 	 *  @return
 	 */
@@ -521,8 +501,6 @@ public class BaseIconCache{
 
 	/**
 	 * 
-	 * @author Michael
-	 * Date:2014-4-2下午4:25:21
 	 *  @param resources
 	 *  @param iconId
 	 *  @param mPackageManager
@@ -545,8 +523,6 @@ public class BaseIconCache{
 
 	/**
 	 * 获取屏幕dpi
-	 * @author Michael
-	 * Date:2014-4-2下午4:25:36
 	 *  @param mContext
 	 *  @return
 	 */
@@ -599,8 +575,6 @@ public class BaseIconCache{
 
 	/**
 	 * 获取主题名称
-	 * @author Michael
-	 * Date:2014-5-26上午8:53:45
 	 *  @return
 	 */
 	public String getThemeId() {
@@ -623,8 +597,6 @@ public class BaseIconCache{
 
     /**
      * 换主题时对IconCache做清除动作
-     * @author Michael
-     * @date 2014-7-21
      */
     public void clearIconCache() {
         //當在2.3.3及以下時，使用bitmap.recycle()進行內存回收

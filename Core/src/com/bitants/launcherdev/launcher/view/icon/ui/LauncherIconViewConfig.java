@@ -12,8 +12,6 @@ import com.bitants.launcherdev.launcher.view.icon.ui.strategy.DrawStrategy;
 
 /**
  * 
- * @author Michael
- * @createtime 2013-7-30
  */
 public class LauncherIconViewConfig{
 	

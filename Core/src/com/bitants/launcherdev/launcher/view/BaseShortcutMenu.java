@@ -284,9 +284,7 @@ public class BaseShortcutMenu implements View.OnClickListener {
 	 * 
 	 * <br>
 	 * Description:根据itemType 来设置每个功能的可见 <br>
-	 * Author:zhenghonglin <br>
-	 * Date:2012-5-15下午08:20:06
-	 * 
+	 *
 	 * @param item
 	 */
 	public void setViewByItemType(ItemInfo item) {

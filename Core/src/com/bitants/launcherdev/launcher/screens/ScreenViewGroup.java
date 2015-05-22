@@ -503,7 +503,6 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 			/**
 			 * 屏幕循环滚动
 			 * 
-			 * @author Anson, 2012-06-30 14:00
 			 */
 			if (mNextScreen == -1 && isEndlessScrolling) {
 				// mCurrentScreen = getChildCount() - 1;
@@ -585,7 +584,6 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 				/**
 				 * 屏幕循环滚动
 				 * 
-				 * @author Anson, 2012-06-30 14:00
 				 */
 				/*
 				 * if (leftScreen >= 0) { drawChild(canvas,
@@ -969,16 +967,12 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 	
 	/**
 	 * Description: 刷新编辑模式的当前页面
-	 * Author: guojy
-	 * Date: 2012-7-23 下午03:57:31
 	 */
 	public void refreshSpringScreen(){
 		snapToScreen(mCurrentScreen);
 	}
 	/**
 	 * Description: 延迟刷新编辑模式的当前页面，用于无法及时加载的情况
-	 * Author: guojy
-	 * Date: 2012-7-23 下午03:57:31
 	 */
 	public void delayRefreshSpringScreen(int interval){		
 		postDelayed(new Runnable() {
@@ -1048,7 +1042,6 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 		/**
 		 * snapToScreen时就改变mCurrentScreen, 使滑屏过程中可正确取到当前屏
 		 * 
-		 * @author anson
 		 */
 		if (mNextScreen == -1 && isEndlessScrolling) {
 			mCurrentScreen = getChildCount() - 1;
@@ -1100,8 +1093,6 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 	
 	/**
 	 * Description: 定位屏幕时，在编辑模式下mScrollX需减去编辑模式的动画偏移值
-	 * Author: guojy
-	 * Date: 2012-7-13 下午02:08:19
 	 */
 	public int getFixedScrollXBySpringMode(){
 		if(isOnSpringMode()){
@@ -1634,8 +1625,6 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 	
 	/**
 	 * Description: 在编辑模式下重新进入编辑模式动画
-	 * Author: guojy
-	 * Date: 2012-8-16 上午09:46:36
 	 */
 	public void animationSpringModeReboot(){
 		mWorkspaceSpring.animationSpringModeReboot();
@@ -1643,8 +1632,6 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 	
 	/**
 	 * Description: 获取编辑模式下,页面动画沿Y轴方向的距离
-	 * Author: guojy
-	 * Date: 2012-7-24 下午03:27:45
 	 */
 	public int getSpringPageTranslationY(){
 		return mWorkspaceSpring.getSpringPageTranslationY();
@@ -1652,8 +1639,6 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 	
 	/**
 	 * Description: 获取编辑模式缩放后CellLayout的间距
-	 * Author: guojy
-	 * Date: 2012-7-24 上午10:17:46
 	 */
 	public int getSpringPageGap(){
 		return mWorkspaceSpring.getSpringPageGap();
@@ -1756,8 +1741,6 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 	
 	/**
 	 * Description: 如传入参数小于0， 则不改变原参数值
-	 * Author: guojy
-	 * Date: 2013-8-6 上午11:04:16
 	 */
 	public void changeCellLayoutMarginTop(int marginTop){
 		CellLayoutConfig.resetMarginTop(marginTop);
@@ -1968,8 +1951,6 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 	
 	/**
 	 * Description: 处理拖动dockbar上图标到屏幕预览上
-	 * Author: guojy
-	 * Date: 2013-2-1 下午5:06:48
 	 */
 	public void dropDockbarItemToScreenFromPreview(CellLayout cellLayout, Object dragInfo, int[] targetCell) {
 		initWorkspaceDragAndDropIfNotExsit(null);
@@ -1988,8 +1969,6 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 	
 	/**
 	 * Description: celllayout中的View移动位置后，是否有空闲区接收目标部件
-	 * Author: guojy
-	 * Date: 2013-1-25 上午11:02:13
 	 */
 	public boolean acceptDropForReorder(Object dragInfo){
 		initWorkspaceDragAndDropIfNotExsit(null);
@@ -2040,8 +2019,6 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 	
 	/**
 	 * Description: 是否将应用成功drop到workpace的目标位置
-	 * Author: guojy
-	 * Date: 2012-8-16 下午02:11:53
 	 */
 	public boolean isSuccessOnDropWorkspace(){
 		return mWorkspaceDragAndDrop == null ? false : mWorkspaceDragAndDrop.getTargetCell() != null;
@@ -2129,8 +2106,6 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 	
 	/**
 	 * Description: 从程序匣子进入编辑模式
-	 * Author: guojy
-	 * Date: 2012-8-6 上午10:24:08
 	 */
 	public void changeToSpringModeFromDrawer(int fromTab){
 		if (isOnSpringMode())
@@ -2142,8 +2117,6 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 	}
 	/**
 	 * Description: 返回程序匣子时，退出编辑模式
-	 * Author: guojy
-	 * Date: 2012-8-6 上午10:24:15
 	 */
 	public void changeToNormalModeFromDrawer(boolean removeSpringAddScreen, boolean isShowDrawer) {
 		if (!isOnSpringMode())
@@ -2262,8 +2235,6 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 	
 	/**
 	 * 添加从文件夹拖拽出来的app<br>
-	 * 创建于 2012-7-12 下午02:11:23
-	 * @author pdw
 	 * @param folder 拖拽的文件夹数据结构
 	 * @param item 拖拽的app
 	 * @return 是否拖拽成功
@@ -2275,8 +2246,6 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 	
 	/**
 	 * Description: 处理拖动item到匣子底部的预览上
-	 * Author: guojy
-	 * Date: 2013-9-3 下午4:11:51
 	 */
 	public void dropToScreenFromDrawerPreview(int screen, Object mDragInfo, ArrayList<ApplicationInfo> appList){
 		initWorkspaceDragAndDropIfNotExsit(null);
@@ -2286,9 +2255,7 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 	/**
 	 * <br>
 	 * Description:交换桌面视图 <br>
-	 * Author:caizp <br>
-	 * Date:2012-6-26下午06:11:47
-	 * 
+	 *
 	 * @param screenFrom
 	 * @param screenTo
 	 */
@@ -2683,8 +2650,6 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
   	
   	/**
   	 * Description: 在预览屏幕，将位置为start的屏幕，拖到end位置时，所注册的监听也要同步修改	
-  	 * Author: guojy
-  	 * Date: 2012-12-11 上午9:48:12
   	 */
   	public void changeOnWorkspaceScreenListener(int start, int end){
   		if(onWorkspaceListener.size() == 0 || start == end)
@@ -2967,8 +2932,6 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 	
 	/**
 	 * Description: 根据ItemInfo生成相应的View
-	 * Author: guojy
-	 * Date: 2013-2-1 下午5:02:58
 	 */
 	public View createViewByItemInfo(ItemInfo itemInfo){
 		return null;

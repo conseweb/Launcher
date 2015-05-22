@@ -10,8 +10,6 @@ import com.bitants.launcherdev.launcher.support.DBHelperFactory.DataBaseHelper;
 
 /**
  * <br>Description: 本地主题数据库
- * <br>Author:caizp
- * <br>Date:2012-7-11上午09:28:34
  */
 public class LauncherThemeDataBase extends AbstractDataBase {
 	

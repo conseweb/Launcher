@@ -1,6 +1,4 @@
 /**
- * @author Michael
- * Date:2014-4-30下午4:12:50
  *
  */
 package com.bitants.launcherdev.cache;
@@ -17,8 +15,7 @@ import android.os.Process;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 
 /**
- * @author Michael Date:2014-4-30下午4:12:50
- * 
+ *
  */
 public class DiskCacheTaskManager {
 
@@ -74,7 +71,6 @@ public class DiskCacheTaskManager {
 	/**
 	 * 加入写文件任务
 	 * 
-	 * @author Michael Date:2014-5-16下午4:12:22
 	 * @param key
 	 * @param runnable
 	 */
@@ -93,7 +89,6 @@ public class DiskCacheTaskManager {
 	/**
 	 * 加入判断文件是否被卸载任务
 	 * 
-	 * @author Michael Date:2014-5-16下午4:12:36
 	 * @param fileName
 	 * @param runnable
 	 */

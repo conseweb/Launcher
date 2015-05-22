@@ -21,8 +21,6 @@ import com.bitants.launcherdev.launcher.view.icon.ui.LauncherIconData;
 import com.bitants.launcherdev.launcher.view.icon.ui.LauncherIconView;
 
 /**
- * @author pdw
- * @date 2012-5-30 下午03:48:12 <br>
  * representting a app in dockbar
  */
 public class DockbarCell extends LauncherIconView {
@@ -57,8 +55,6 @@ public class DockbarCell extends LauncherIconView {
 	
 	/**
 	 * 初始化参数
-	 * @author Michael
-	 * @createtime 2013-7-30
 	 */
 	@Override
 	protected void initParams(AttributeSet attr){
@@ -68,8 +64,6 @@ public class DockbarCell extends LauncherIconView {
 	
 	/**
 	 * 改变数据 并重新设置各个绘画策略所需数据
-	 * @author Michael
-	 * @createtime 2013-8-7 
 	 * @param w
 	 * @param h
 	 */
@@ -114,8 +108,6 @@ public class DockbarCell extends LauncherIconView {
 	
 	/**
 	 * 标题
-	 * @author Michael
-	 * @createtime 2013-7-31 
 	 * @param text
 	 */
 	@Override

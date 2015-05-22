@@ -61,8 +61,6 @@ import com.bitants.launcherdev.launcher.touch.DropTarget;
 /**
  * 
  * Description: Launcher绑定View添加到桌面上
- * Author: guojy
- * Date: 2013-9-12 下午3:20:52
  */
 public class LauncherBinder implements Callbacks{
 
@@ -253,8 +251,6 @@ public class LauncherBinder implements Callbacks{
 	
 	/**
 	 * 卸载应用时调用删除
-	 * <br>Author:ryan
-	 * <br>Date:2012-7-25上午09:57:45
 	 */
 	public static void removeAppsInWorkspace(final String packageName) {
 		final BaseLauncher mLauncher = BaseConfig.getBaseLauncher();

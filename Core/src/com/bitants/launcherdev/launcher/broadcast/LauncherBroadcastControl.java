@@ -5,8 +5,6 @@ import android.content.Intent;
 
 /**
  * 需要与桌面交互的广播
- * <br>Author:ryan
- * <br>Date:2012-12-16下午04:53:04
  */
 public class LauncherBroadcastControl {
 	private static final String ACTION_WIDGET_INTERACTIVE = "nd.panda.custom.widget.interactive";

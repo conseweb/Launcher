@@ -1,6 +1,4 @@
 /**
- * @author Michael
- * Date:2014-3-20上午10:30:19
  *
  */
 package com.bitants.launcherdev.launcher.view.icon.icontype.impl;
@@ -29,8 +27,6 @@ import com.bitants.launcherdev.launcher.view.icon.icontype.IconType;
 import com.bitants.launcherdev.launcher.view.icon.ui.LauncherIconViewConfig;
 
 /**
- * @author Michael
- * Date:2014-3-20上午10:30:19
  *
  */
 public class AppIconType extends IconType {

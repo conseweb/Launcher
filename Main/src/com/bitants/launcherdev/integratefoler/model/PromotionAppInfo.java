@@ -2,7 +2,6 @@ package com.bitants.launcherdev.integratefoler.model;
 
 /**
  *  推广App信息
- * @author Michael
  */
 public class PromotionAppInfo {
 

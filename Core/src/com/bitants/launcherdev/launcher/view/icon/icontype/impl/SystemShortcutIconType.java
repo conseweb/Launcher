@@ -1,6 +1,4 @@
 /**
- * @author Michael
- * Date:2014-5-23下午4:14:11
  *
  */
 package com.bitants.launcherdev.launcher.view.icon.icontype.impl;
@@ -16,7 +14,6 @@ import com.bitants.launcherdev.launcher.view.icon.icontype.IconType;
 import com.bitants.launcherdev.launcher.view.icon.ui.LauncherIconViewConfig;
 
 /**
- * @author Michael Date:2014-5-23下午4:14:11
  * 系统快捷不进行蒙板的处理
  * 
  */

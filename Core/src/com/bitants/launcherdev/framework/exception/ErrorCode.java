@@ -4,7 +4,6 @@ import android.util.SparseArray;
 
 /**
  * 错误代码类
- * @author Administrator
  *
  */
 public class ErrorCode {

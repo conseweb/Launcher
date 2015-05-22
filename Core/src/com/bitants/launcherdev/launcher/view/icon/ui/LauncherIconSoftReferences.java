@@ -1,6 +1,4 @@
 /**
- * @author Michael
- * Date:2014-3-19下午4:27:17
  *
  */
 package com.bitants.launcherdev.launcher.view.icon.ui;
@@ -30,8 +28,6 @@ import com.bitants.launcherdev.theme.data.BaseThemeData;
 
 
 /**
- * @author Michael
- * Date:2014-3-19下午4:27:17
  *
  */
 public class LauncherIconSoftReferences {
@@ -104,8 +100,6 @@ public class LauncherIconSoftReferences {
 	/**
 	 * 
 	 * <br>Description:获取热门游戏和热门软件右上角图标（有更新通知）
-	 * <br>Author:zhenghonglin
-	 * <br>Date:2013-4-22上午10:35:37
 	 * @param res
 	 * @return
 	 */
@@ -141,8 +135,6 @@ public class LauncherIconSoftReferences {
 	
 	/**
 	 * 获取匣子中新安装图标
-	 * @author Michael
-	 * Date:2013-9-9下午4:42:58
 	 * @param mContext
 	 * @return
 	 */
@@ -162,8 +154,6 @@ public class LauncherIconSoftReferences {
 
 	/**
 	 * 获取匣子中新功能图标
-	 * @author Michael
-	 * Date:2013-9-9下午4:43:16
 	 * @return
 	 */
 	public Bitmap getDrawerNewFunctionFlagIcon() {

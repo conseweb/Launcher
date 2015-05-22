@@ -17,8 +17,6 @@ import com.bitants.launcherdev.launcher.view.icon.ui.strategy.impl.TextDrawStrat
 
 /**
  * 绘画策略工厂
- * @author Michael
- * @createtime 2013-8-7
  */
 public class DrawStragegyFactory {
 	
@@ -40,8 +38,6 @@ public class DrawStragegyFactory {
 	
 	/**
 	 * 画的顺序
-	 * @author Michael
-	 * @createtime 2013-7-31
 	 */
 	public enum DrawPriority {
 	     Prepare, LargeIconBackgroud, Icon, IconMask, IconFrontground,
@@ -82,8 +78,6 @@ public class DrawStragegyFactory {
 	
 	/**
 	 * 根据关键字创建对应的绘画策略
-	 * @author Michael
-	 * @createtime 2013-7-31 
 	 * @param priority
 	 * @param context
 	 * @return

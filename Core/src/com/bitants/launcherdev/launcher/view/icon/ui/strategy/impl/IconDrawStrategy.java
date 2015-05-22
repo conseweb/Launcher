@@ -26,8 +26,6 @@ import com.bitants.launcherdev.launcher.view.icon.ui.strategy.DrawStrategy;
 
 /**
  * 桌面图标绘画策略
- * @author Michael
- * @since 2013-3-4
  */
 public class IconDrawStrategy extends DrawStrategy {
 

@@ -1,6 +1,4 @@
 /**
- * @author Michael
- * Date:2014-3-21下午5:02:12
  *
  */
 package com.bitants.launcherdev.launcher.view.icon.icontype.impl;
@@ -41,8 +39,6 @@ import com.bitants.launcherdev.theme.adaption.ThemeIconIntentAdaptation;
 
 /**
  * 托盘四图标类型 存在托盘的才是系统快捷方式
- * @author Michael
- * Date:2014-3-21下午5:02:12
  *
  */
 public class DockDefaultFourIconType extends IconType {

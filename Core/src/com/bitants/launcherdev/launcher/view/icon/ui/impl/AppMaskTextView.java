@@ -11,8 +11,6 @@ import com.bitants.launcherdev.launcher.view.icon.ui.LauncherIconView;
 
 /**
  * 普通应用程序图标 <br>
- * Author:ryan <br>
- * Date:2012-7-12下午03:19:49
  */
 public class AppMaskTextView extends LauncherIconView {
 	static final String TAG = "AppMaskTextView";
@@ -32,8 +30,6 @@ public class AppMaskTextView extends LauncherIconView {
 	/**
 	 * 改变数据 并重新设置各个绘画策略所需数据
 	 * 
-	 * @author Michael
-	 * @createtime 2013-8-7
 	 * @param w
 	 * @param h
 	 */

@@ -13,7 +13,6 @@ import java.util.List;
 
 /**
  * 菜单Adapter
- * @author Administrator
  *
  */
 public class MenuAdapter extends BaseAdapter {

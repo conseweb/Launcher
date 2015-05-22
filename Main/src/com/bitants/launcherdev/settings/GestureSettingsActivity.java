@@ -14,7 +14,6 @@ import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
 
 /**
  * 手势设置
- * @author wgm 
  */
 public class GestureSettingsActivity extends BasePreferenceActivity 
       implements OnPreferenceChangeListener,OnPreferenceClickListener {

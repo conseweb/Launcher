@@ -8,8 +8,6 @@ import com.bitants.launcherdev.theme.data.ThemeGlobal;
 /**
  * <br>
  * Description: 主题配置类，基于SharedPreferences <br>
- * Author:caizp <br>
- * Date:2011-6-29下午03:24:13
  */
 public class ThemeSharePref {
 	
@@ -60,9 +58,7 @@ public class ThemeSharePref {
 	/**
 	 * <br>
 	 * Description: 保存当前主题Id <br>
-	 * Author:caizp <br>
-	 * Date:2011-6-29下午03:35:56
-	 * 
+	 *
 	 * @param themeId
 	 */
 	public void setCurrentThemeId(String themeId) {
@@ -75,9 +71,7 @@ public class ThemeSharePref {
 	/**
 	 * <br>
 	 * Description: 获取当前主题Id <br>
-	 * Author:caizp <br>
-	 * Date:2011-6-29下午03:41:27
-	 * 
+	 *
 	 * @param themeId
 	 * @return
 	 */
@@ -87,8 +81,6 @@ public class ThemeSharePref {
 
 	/**
 	 * 是否默认主题 <br>
-	 * Author:ryan <br>
-	 * Date:2011-10-12上午09:54:47
 	 */
 	public boolean isDefaultTheme() {
 		String currentThemeId = spThemeSharePref.getString(KEY_CURRENT_THEME_ID, ThemeGlobal.DEFAULT_THEME_ID);
@@ -98,9 +90,7 @@ public class ThemeSharePref {
 	/**
 	 * <br>
 	 * Description: 是否提示导入本地已存在的APT主题 <br>
-	 * Author:caizp <br>
-	 * Date:2011-9-2下午02:15:27
-	 * 
+	 *
 	 * @return
 	 */
 	public boolean shouldRemindExistLocalTheme() {
@@ -110,9 +100,7 @@ public class ThemeSharePref {
 	/**
 	 * <br>
 	 * Description: 设置是否提示导入本地已存在的APT主题 <br>
-	 * Author:caizp <br>
-	 * Date:2011-9-2下午02:15:10
-	 * 
+	 *
 	 * @param enable
 	 */
 	public void setShouldRemindExistLocalTheme(boolean enable) {
@@ -121,8 +109,6 @@ public class ThemeSharePref {
 	
 	/**
      * <br>Description: 是否推荐下载91动态壁纸(服务端开关控制)
-     * <br>Author:caizp
-     * <br>Date:2015年1月26日下午6:02:20
      * @return
      */
     public boolean isRecommendLiveWallpaper() {
@@ -131,8 +117,6 @@ public class ThemeSharePref {
     
     /**
      * <br>Description: 设置是否推荐下载91动态壁纸(服务端开关控制)
-     * <br>Author:caizp
-     * <br>Date:2014年11月3日
      * */
     public  void setIsRecommendLiveWallpaper(boolean enable) {
     	spThemeSharePref.edit().putBoolean(KEY_RECOMMEND_91LIVE_WALLPAPER, enable).commit();
@@ -140,8 +124,6 @@ public class ThemeSharePref {
     
     /**
      * <br>Description: 是否显示通知消息推荐下载91动态壁纸
-     * <br>Author:caizp
-     * <br>Date:2015年1月26日下午6:02:20
      * @return
      */
     public boolean isShowNotifiRecommendLiveWallpaper() {
@@ -150,8 +132,6 @@ public class ThemeSharePref {
     
     /**
      * <br>Description: 设置是否显示通知消息推荐下载91动态壁纸
-     * <br>Author:caizp
-     * <br>Date:2014年11月3日
      * */
     public  void setIsShowNotifiRecommendLiveWallpaper(boolean enable) {
     	spThemeSharePref.edit().putBoolean(KEY_SHOW_NOTIFI_RECOMMEND_91LIVE_WALLPAPER, enable).commit();

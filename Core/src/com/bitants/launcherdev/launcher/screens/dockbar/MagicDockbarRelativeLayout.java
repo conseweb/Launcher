@@ -16,7 +16,6 @@ import com.bitants.launcherdev.launcher.BaseLauncher;
 
 /**
  *
- * @author Anson
  */
 public class MagicDockbarRelativeLayout extends RelativeLayout {
 	

@@ -177,8 +177,6 @@ public class LauncherConfig {
 	
 	/**
 	 * Description: 设置新安装时的默认行列数
-	 * Author: guojy
-	 * Date: 2013-8-9 上午10:08:09
 	 */
 	private static void setNewInstallCellLayoutXYCount(Context mContext){
 		int[] countXY = getDefaultCellCountXY(mContext);
@@ -236,8 +234,6 @@ public class LauncherConfig {
 	}
 	/**
 	 * Description: 设置桌面已设置的行列数
-	 * Author: guojy
-	 * Date: 2013-8-9 上午10:08:19
 	 */
 	private static void setCellLayoutXYCount(Context mContext){
 		int type = BaseSettingsPreference.getInstance().getCountXY();

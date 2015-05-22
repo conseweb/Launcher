@@ -1,13 +1,5 @@
 /**
- * Version 1.0
  *
- * =============================================================
- * Revision History
- * 
- * Modification                    Tracking
- * Date           Author           Number      Description of changes
- * ----------     --------------   ---------   -------------------------
- * 2009-9-23         yangbin            代码重构
  */
 package com.bitants.launcherdev.core.view;
 
@@ -17,8 +9,6 @@ import android.view.View;
 
 /**
  * 避免出现 WindowLeaked异常
- * <br>Author:ryan
- * <br>Date:2011-11-6下午08:36:09
  */
 public class AviodWindowLeakedSplashWindow extends ProgressDialog {
     /**

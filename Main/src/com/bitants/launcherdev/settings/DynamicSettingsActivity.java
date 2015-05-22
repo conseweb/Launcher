@@ -12,7 +12,6 @@ import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
 
 /**
  * 动态设置
- * @author wgm 
  */
 public class DynamicSettingsActivity extends BasePreferenceActivity implements OnPreferenceChangeListener {
 

@@ -8,7 +8,6 @@ import com.bitants.launcherdev.widget.LauncherWidgetInfo;
 
 /**
  * 帮助类
- * @author wgm
  */
 public class LauncherEditHelper {
 

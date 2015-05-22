@@ -1,5 +1,4 @@
 /**
- * @author Michael
  *
  */
 package com.bitants.launcherdev.app.ui.view.icontype;
@@ -17,7 +16,6 @@ import com.bitants.launcherdev.theme.data.ThemeData;
 
 /**
  * 匣子图标
- * @author Michael
  *
  */
 public class DockAllAppIconType extends IconType {

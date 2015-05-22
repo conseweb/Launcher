@@ -13,8 +13,6 @@ import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
 
 /**
  * <p>类说明：  支持从配置中读取字体的TextView</p>
- * <p>创建时间：2012-11-9 上午10:32:38</p>
- * @author yuf
  * @version 1.0
  */
 public class FontableTextView extends TextView {

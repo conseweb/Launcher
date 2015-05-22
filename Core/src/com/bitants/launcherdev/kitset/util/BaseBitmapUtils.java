@@ -1062,8 +1062,6 @@ public class BaseBitmapUtils {
 	
 	/**
 	 * 
-	 * @author Michael
-	 * Date:2014-4-22下午4:23:39
 	 *  @param bitmap
 	 *  @param context
 	 *  @param useIconMask
@@ -1127,8 +1125,6 @@ public class BaseBitmapUtils {
 	
 	/**
 	 * 
-	 * @author Michael
-	 * Date:2014-4-22下午4:23:39
 	 *  @param bitmap
 	 *  @param context
 	 *  @return
@@ -1228,8 +1224,6 @@ public class BaseBitmapUtils {
      * @param bitmap2
      * @param context
      * @return
-     * @author Michael
-     * Date:2014-4-22下午4:23:39
      */
     public static Bitmap composeBitmap(Bitmap bitmap1, Bitmap bitmap2, Context context) {
         if (null == bitmap1 || null == bitmap2)

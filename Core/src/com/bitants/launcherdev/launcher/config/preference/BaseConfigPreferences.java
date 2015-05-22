@@ -271,8 +271,6 @@ public class BaseConfigPreferences {
 	/**
 	 * 获取新增用户时记录的桌面版本号
 	 * @Title: getVersionCodeForResident
-	 * @author lytjackson@gmail.com
-	 * @date 2014-3-31
 	 * @return
 	 */
 	public int getVersionCodeFrom() {
@@ -282,8 +280,6 @@ public class BaseConfigPreferences {
 	/**
 	 * 新增时记录版本号
 	 * @Title: setVersionCodeForResident
-	 * @author lytjackson@gmail.com
-	 * @date 2014-3-31
 	 * @param versionCode
 	 */
 	public void setVersionCodeFrom(int versionCode) {

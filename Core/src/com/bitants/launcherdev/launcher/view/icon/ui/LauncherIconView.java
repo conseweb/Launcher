@@ -43,8 +43,6 @@ import com.bitants.launcherdev.launcher.view.icon.ui.util.IconTypeFactoryManager
  *                                    component.setDrawStategyData();来设置各个绘画策略的数据。 
  *                        onDraw();   数据都已准备好了,调用LauncherIconViewConfig中的container来进行绘画。                           
  *                                      
- * @author Michael
- * Date:2013-10-28下午1:48:21
  *
  */
 public abstract class LauncherIconView extends View implements IconMaskUpdateListener{
@@ -123,8 +121,6 @@ public abstract class LauncherIconView extends View implements IconMaskUpdateLis
 	/**
 	 * 初始化参数
 	 * 
-	 * @author Michael
-	 * @createtime 2013-7-30
 	 */
 	protected void initParamsDefault(AttributeSet attrs) {
 		if (config == null) {
@@ -148,8 +144,6 @@ public abstract class LauncherIconView extends View implements IconMaskUpdateLis
 	
 	/**
 	 * 参数初始化
-	 * @author Michael
-	 * Date:2013-11-11上午10:07:49
 	 *  @param attrs
 	 */
 	abstract protected void initParams(AttributeSet attrs);
@@ -157,7 +151,6 @@ public abstract class LauncherIconView extends View implements IconMaskUpdateLis
 	/**
 	 * 当宽、高发生变化重新计算绘画数据
 	 * 
-	 * @author Michael Date:2013-10-28下午2:01:42
 	 * @param w
 	 * @param h
 	 */
@@ -167,7 +160,6 @@ public abstract class LauncherIconView extends View implements IconMaskUpdateLis
 	/**
 	 * 创建数据
 	 * 
-	 * @author Michael Date:2013-10-28下午2:17:31
 	 * @return
 	 */
 	abstract protected LauncherIconData createIconMaskData(AttributeSet attrs);
@@ -191,8 +183,6 @@ public abstract class LauncherIconView extends View implements IconMaskUpdateLis
 	/**
 	 * 标题
 	 * 
-	 * @author Michael
-	 * @createtime 2013-7-31
 	 * @param text
 	 */
 	public void setText(CharSequence text) {
@@ -240,8 +230,6 @@ public abstract class LauncherIconView extends View implements IconMaskUpdateLis
 	}
 	/**
 	 * 推荐图标安装后更新IconType
-	 * @author Michael
-	 * Date:2014-4-9下午6:24:04
 	 */
 	public void updateIconType(){
 		setTag(this.getTag());
@@ -295,8 +283,6 @@ public abstract class LauncherIconView extends View implements IconMaskUpdateLis
 	
 	/**
 	 * 获取图标的大小
-	 * @author Michael
-	 * Date:2014-3-24上午8:38:18
 	 *  @return
 	 */
 	public Rect getIconRect(){

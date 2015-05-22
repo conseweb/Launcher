@@ -8,7 +8,6 @@ import com.bitants.launcherdev.theme.data.ThemeType;
 /**
  * 编辑模式主题数据集类型
  * 
- * @author Anson
  */
 public class LauncherEditThemeItemInfo extends LauncherEditItemInfo {
 

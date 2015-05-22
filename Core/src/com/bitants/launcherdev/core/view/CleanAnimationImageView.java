@@ -8,8 +8,6 @@ import android.widget.TextView;
 
 /**
  * 动画效果的ImageView <br>
- * Author:ryan <br>
- * Date:2011-10-18下午08:33:33
  */
 public class CleanAnimationImageView extends ImageView {
 	static final String TAG = "CleanAnimationImageView";

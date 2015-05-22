@@ -142,8 +142,6 @@ public class MoAnalytics {
 	
 	/**
 	 * 实时统计
-	 * Create On 2014-8-11上午11:29:20
-	 * Author : pdw
 	 * @param ctx
 	 * @param eventId
 	 * @param label

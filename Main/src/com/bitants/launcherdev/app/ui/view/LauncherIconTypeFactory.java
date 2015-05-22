@@ -1,5 +1,4 @@
 /**
- * @author Michael
  *
  */
 package com.bitants.launcherdev.app.ui.view;
@@ -14,7 +13,6 @@ import com.bitants.launcherdev.launcher.view.icon.ui.util.IconTypeFactoryManager
 
 /**
  * 桌面图标的类型工厂
- * @author Michael
  *
  */
 public class LauncherIconTypeFactory extends IconTypeFactory{

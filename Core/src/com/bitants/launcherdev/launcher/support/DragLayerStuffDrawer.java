@@ -12,8 +12,6 @@ import com.bitants.launcherdev.launcher.screens.DragLayer;
 
 /**
  * Description: 控制DragLayer层上的素材绘制
- * Author: guojy
- * Date: 2013-10-14 上午10:42:14
  */
 public class DragLayerStuffDrawer{
 	private DragLayer mDragLayer;

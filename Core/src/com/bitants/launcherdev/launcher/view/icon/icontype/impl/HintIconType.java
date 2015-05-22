@@ -1,6 +1,4 @@
 /**
- * @author Michael
- * Date:2014-3-20上午10:51:29
  *
  */
 package com.bitants.launcherdev.launcher.view.icon.icontype.impl;
@@ -26,8 +24,6 @@ import com.bitants.launcherdev.launcher.broadcast.HiBroadcastReceiver;
 import com.bitants.launcherdev.launcher.view.icon.ui.LauncherIconView;
 
 /**
- * @author Michael
- * Date:2014-3-20上午10:51:29
  *
  */
 public class HintIconType extends AppIconType{

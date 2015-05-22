@@ -101,8 +101,6 @@ public class Workspace extends ScreenViewGroup implements DragScroller, AnyCallb
 	
 	/**
 	 * Description: 进入屏幕编辑模式
-	 * Author: Michael
-	 * Date: 2013-3-18
 	 */
 	public void changeToSpringMode(){
 		changeToSpringMode(true, LauncherEditView.TAB_ADD);
@@ -110,8 +108,6 @@ public class Workspace extends ScreenViewGroup implements DragScroller, AnyCallb
 	
 	/**
 	 * Description: 从其它地方添加View到Workspace
-	 * Author: Michael
-	 * Date: 2013-3-15
 	 */
 	public void addViewInCurrentScreenFromOutside(View view, CellLayout cellLayout, ItemInfo info){
 		addViewInScreenFromOutside(view, cellLayout, info, mCurrentScreen);

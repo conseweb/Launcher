@@ -2,7 +2,6 @@ package com.bitants.launcherdev.analysis;
 
 /**
  * description: <br/>
- * author: Michael<br/>
  */
 public class AppAnalysisConstant {
 

@@ -8,8 +8,6 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 
 /**
- * Author:ryan <br>
- * Date:2011-6-16上午10:57:17
  */
 public class PreviewImageView extends ImageView {
 	private CellLayout cellLayout;

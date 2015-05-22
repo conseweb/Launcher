@@ -520,8 +520,6 @@ public class CellLayout extends HiViewGroup implements ScreenViewGroup.HDSwitchV
 	
 	/**
 	 * <br>Description: 重置屏幕索引
-	 * <br>Author:caizp
-	 * <br>Date:2012-11-7上午11:28:10
 	 */
 	public void resetScreen() {
 		mCellInfo.screen = ((ViewGroup) getParent()).indexOfChild(this);
@@ -570,8 +568,6 @@ public class CellLayout extends HiViewGroup implements ScreenViewGroup.HDSwitchV
 	
 	/**
 	 * Description: 用于Workspace内拖动，且CellLayout基于Cell布局时
-	 * Author: guojy
-	 * Date: 2013-7-15 上午11:12:37
 	 */
 	public void onDropChild(View child, int[] cellXY) {
 		if (child != null) {
@@ -801,8 +797,6 @@ public class CellLayout extends HiViewGroup implements ScreenViewGroup.HDSwitchV
 	}
 	/**
 	 * Description: 是否点击到编辑模式的删除屏按钮
-	 * Author: guojy
-	 * Date: 2012-7-18 下午05:59:44
 	 */
 	public boolean isOnSpringDelScreenBtn(int x, int y){
 		if(springDelScreenBtnLocation == null){
@@ -871,7 +865,6 @@ public class CellLayout extends HiViewGroup implements ScreenViewGroup.HDSwitchV
 	/**
 	 * 初始化mArray mArrayHelper 数组
 	 * mArray 中存储指定下班所存储的子view的indext
-	 * author:zhenghonglin
 	 */
 	public void initArray(){
 		mArray = new int[getCountX()*getCountY()];
@@ -915,7 +908,6 @@ public class CellLayout extends HiViewGroup implements ScreenViewGroup.HDSwitchV
 	/**
 	 * 
 	 * <br>Description:获取当前CellLayout的index
-	 * <br>Author:zhenghonglin
 	 */
 	public int getLayoutIndex() {
 		return mCellLayoutLocation;
@@ -1181,8 +1173,6 @@ public class CellLayout extends HiViewGroup implements ScreenViewGroup.HDSwitchV
 	}
 	/**
 	 * Description: 从CellLayout底部开始找可以摆放该部件的位置
-	 * Author: guojy
-	 * Date: 2013-1-16 上午9:55:17
 	 */
 	public int[] findVacantCellFromBottom(int spanX, int spanY, View ignoreView){
 		findOccupiedCells(ignoreView);
@@ -1190,8 +1180,6 @@ public class CellLayout extends HiViewGroup implements ScreenViewGroup.HDSwitchV
 	}
 	/**
 	 * Description: 从CellLayout的特定位置(targetCellX, targetCellY)开始找可以摆放该部件的位置
-	 * Author: guojy
-	 * Date: 2013-1-17 上午11:42:06
 	 */
 	public int[] findVacantCellFromTarget(int targetCellX, int targetCellY, int spanX, int spanY, View ignoreView){
 		findOccupiedCells(ignoreView);
@@ -1214,8 +1202,6 @@ public class CellLayout extends HiViewGroup implements ScreenViewGroup.HDSwitchV
 	
 	/**
 	 * Description: 根据拖动app的大小，找出CellLayout上所有可放置该app区域
-	 * Author: guojy
-	 * Date: 2012-9-7 上午10:06:15
 	 */
 	public CellInfo findAllVacantCells(boolean[] occupiedCells, int spanX, int spanY) {
 		final int xCount = getCountX();
@@ -1391,8 +1377,6 @@ public class CellLayout extends HiViewGroup implements ScreenViewGroup.HDSwitchV
     
     /**
 	 * Description: 
-	 * Author: guojy
-	 * Date: 2012-9-7 上午09:44:43
 	 */
 	public void initOccupied(View ignoreView, boolean isVerifyAcceptDropApp){
 		if(isVerifyAcceptDropApp){
@@ -1457,8 +1441,6 @@ public class CellLayout extends HiViewGroup implements ScreenViewGroup.HDSwitchV
     }
 	/**
   	 * Description: celllayout中的View移动位置后，是否有空闲区域可以摆放目标部件
-  	 * Author: guojy
-  	 * Date: 2013-1-25 上午10:57:23
   	 */
   	public boolean isVacantForReorder(int spanX, int spanY, View ignoreView, boolean resetOccupied){
   		if(resetOccupied){

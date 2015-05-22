@@ -8,8 +8,6 @@ import com.bitants.launcherdev.launcher.config.preference.BaseSettingsPreference
 
 /**
  * 桌面图标大小管理类
- * @author Michael
- * Date:2014-2-24下午2:13:26
  *
  */
 public class IconSizeManager {
@@ -35,8 +33,6 @@ public class IconSizeManager {
 	
 	/**
 	 * 获取图标的值
-	 * @author Michael
-	 * Date:2014-2-24下午2:30:36
 	 *  @return
 	 */
 	public static int getIconSizeBySp(Context context){
@@ -82,8 +78,6 @@ public class IconSizeManager {
 	
 	/**
 	 * 设置IconSize
-	 * @author Michael
-	 * Date:2014-2-24下午2:45:34
 	 *  @param type
 	 */
     public static void setIconSizeType(Context context, int type){

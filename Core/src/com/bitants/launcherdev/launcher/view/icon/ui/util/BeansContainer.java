@@ -1,6 +1,4 @@
 /**
- * @author Michael
- * Date:2014-3-26下午2:43:29
  *
  */
 package com.bitants.launcherdev.launcher.view.icon.ui.util;
@@ -11,8 +9,6 @@ import com.bitants.launcherdev.launcher.view.icon.ui.util.IconTypeFactoryManager
 /**
  * 
  * 从外部注入的bean的统一管理
- * @author Michael
- * Date:2014-3-26下午2:43:29
  *
  */
 public class BeansContainer {

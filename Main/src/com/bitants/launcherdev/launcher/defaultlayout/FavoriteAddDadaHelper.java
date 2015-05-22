@@ -15,7 +15,6 @@ import java.net.URISyntaxException;
 
 /**
  * 新安装桌面 添加桌面数据时调用 
- * @author Michael
  *
  */
 class FavoriteAddDadaHelper {

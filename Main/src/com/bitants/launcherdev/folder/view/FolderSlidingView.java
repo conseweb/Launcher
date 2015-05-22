@@ -36,8 +36,6 @@ import java.util.List;
 /**
  * represent folder's apps view
  * 
- * @author pdw
- * @date 2012-5-23 下午08:49:08
  */
 public class FolderSlidingView extends DraggerSlidingView {
 
@@ -614,8 +612,7 @@ public class FolderSlidingView extends DraggerSlidingView {
 	 * 拖拽后在workspace,drawer长时间停留时，关闭文件夹 <br>
 	 * 时间间隔设置{@link FolderSwitchController#CLOSE_FOLDER_DURATION}
 	 * 
-	 * @author pdw
-	 * 
+	 *
 	 */
 	class CloseFolderRunnable implements Runnable {
 		@Override

@@ -5,7 +5,6 @@ import com.bitants.launcherdev.kitset.util.StringUtil;
 
 /**
  * 异常类
- * @author Administrator
  */
 public class PandaDesktopException extends Exception {
 

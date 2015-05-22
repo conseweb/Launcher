@@ -6,8 +6,6 @@ import com.bitants.launcherdev.launcher.config.BaseConfig;
 
 /**
  * <br>Description: 主题模块常量
- * <br>Author:caizp
- * <br>Date:2014-6-11下午3:06:47
  */
 public class ModuleConstant {
 	
@@ -154,8 +152,6 @@ public class ModuleConstant {
 	
 	/**
 	 * <br>Description: 根据模块key获取模块分类
-	 * <br>Author:caizp
-	 * <br>Date:2015年1月26日下午6:37:41
 	 * @param moduleKey
 	 * @return
 	 */
@@ -170,8 +166,6 @@ public class ModuleConstant {
 	
 	/**
 	 * <br>Description: 根据模块key获取模块对应APP包名
-	 * <br>Author:caizp
-	 * <br>Date:2015年1月26日下午6:37:41
 	 * @param moduleKey
 	 * @return
 	 */
@@ -186,8 +180,6 @@ public class ModuleConstant {
 	
 	/**
 	 * <br>Description: 根据模块对应包名获取模块key
-	 * <br>Author:caizp
-	 * <br>Date:2015年1月26日下午6:37:41
 	 * @param moduleKey
 	 * @return
 	 */
@@ -202,8 +194,6 @@ public class ModuleConstant {
 	
 	/**
 	 * <br>Description: 创建模块包目录
-	 * <br>Author:caizp
-	 * <br>Date:2014-6-11下午5:23:07
 	 */
 	public static void createModuleDir() {
 		for(int i=0; i<MODULE_KEY_ARRAY.length;i++) {

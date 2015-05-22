@@ -8,8 +8,6 @@ import com.bitants.launcherdev.launcher.info.FolderInfo;
 
 /**
  * 文件夹帮助类
- * @author pdw
- * @date 2013-1-24 上午11:30:07
  */
 public class FolderHelper {
 	/**

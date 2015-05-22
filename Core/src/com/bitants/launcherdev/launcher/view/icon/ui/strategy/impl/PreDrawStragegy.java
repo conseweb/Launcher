@@ -48,8 +48,6 @@ public class PreDrawStragegy extends DrawStrategy{
 	
 	/**
 	 * 避免每次新建对象
-	 * @author Michael
-	 * Date:2013-11-4上午11:59:46
 	 *
 	 */
 	public static class PaintFlagsDrawFilterEx extends PaintFlagsDrawFilter{

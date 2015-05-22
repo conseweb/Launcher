@@ -17,8 +17,6 @@ import com.bitants.launcherdev.launcher.config.preference.BaseConfigPreferences;
 
 /**
  * Description: DockbarCellLayoutConfig基本配置信息
- * Author: guojy
- * Date: 2013-5-13 下午2:36:07
  */
 public class DockbarCellLayoutConfig{
 	private static boolean mPortrait = true;//横竖屏
@@ -107,7 +105,7 @@ public class DockbarCellLayoutConfig{
 				BaseConfigPreferences.getInstance().setDockbarCellHeight(cellHeight);
 			}
 		} catch (Exception e) {
-			Log.e("DockbarCellLayoutConfig Exception", e.toString());
+			Log.e("DockbarCellLayoutConfig", e.toString());
 		}
 		
 		
@@ -243,8 +241,6 @@ public class DockbarCellLayoutConfig{
 	
 	/**
 	 * Description: 返回dockbar子view的(CellXY, SpanXY)信息，用于从主桌面搬数据
-	 * Author: guojy
-	 * Date: 2013-8-13 下午7:41:46
 	 */
 	public static int[] getChildCellXYAndSpanXY(int dockbarWidth, int dockbarHeight, int pos){
 		int cellWidth = dockbarWidth/5;

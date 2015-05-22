@@ -524,8 +524,6 @@ public class ResizeWidgetView extends View {
 	
 	/**
 	 * <br>Description: 点击缩放模式下非小插件区域时触发
-	 * <br>Author:caizp
-	 * <br>Date:2013-2-19下午5:38:01
 	 */
 	public interface OnClickOutsideListener {
 		void onTrigger();

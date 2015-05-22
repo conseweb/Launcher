@@ -9,8 +9,6 @@ import com.bitants.launcherdev.theme.data.BaseThemeData;
 /**
  * 用于配置主题中图标对应的程序调用信息，包括了 主题中图标的key、包名、类名、action、uri,type, 
  * 是否使用启动窗体类
- * @author 章军飞
- * date 2011-1-13
  */
 public final class ThemeIntentMetaData {
 	

@@ -6,7 +6,6 @@ import android.util.Log;
 
 /**
  * 桌面广播静态注册父类(增加异常捕获处理)
- * Author: guojy
  */
 public abstract class HiBroadcastStaticReceiver extends HiBroadcastReceiver {
 

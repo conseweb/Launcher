@@ -7,7 +7,6 @@ import com.bitants.launcher.R;
 /**
  * 编辑模式壁纸数据集类型
  *
- * @author Anson
  */
 public class LauncherEditWallpaperItemInfo extends LauncherEditItemInfo {
 	

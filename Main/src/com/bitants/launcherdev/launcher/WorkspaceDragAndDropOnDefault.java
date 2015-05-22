@@ -20,8 +20,6 @@ import java.util.ArrayList;
 
 /**
  * Description: 处理默认桌面上Workspace的拖放
- * Author: guojy
- * Date: 2013-9-3 下午3:43:54
  */
 public class WorkspaceDragAndDropOnDefault extends WorkspaceDragAndDropImpl {
 	
@@ -192,8 +190,6 @@ public class WorkspaceDragAndDropOnDefault extends WorkspaceDragAndDropImpl {
 	
 	/**
 	 * Description: 将在其他地方(非Workspace)拖动的图标放置到桌面目标位置
-	 * Author: guojy
-	 * Date: 2013-2-1 下午5:06:48
 	 */
 	@Override
 	public void dropToScreenExternal(CellLayout cellLayout, Object dragInfo, int[] targetCell) {
@@ -250,8 +246,6 @@ public class WorkspaceDragAndDropOnDefault extends WorkspaceDragAndDropImpl {
 	/**
 	 * <p>查找拖拽app时，DragView经过的底部桌面图标</p>
 	 * 
-	 * <p>date: 2012-8-13 下午02:28:38
-	 * @author pdw
 	 * @param cellLayout
 	 * @param info
 	 * @return

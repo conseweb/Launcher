@@ -1,6 +1,4 @@
 /**
- * @author Michael
- * Date:2014-3-20上午9:47:36
  *
  */
 package com.bitants.launcherdev.theme.data;
@@ -10,8 +8,6 @@ import java.util.HashMap;
 import com.bitants.launcherdev.theme.module.ModuleConstant;
 
 /**
- * @author Michael
- * Date:2014-3-20上午9:47:36
  *
  */
 public class BaseThemeData {
@@ -227,8 +223,6 @@ public class BaseThemeData {
     
     /**
      * <br>Description: 构建主题映射数据
-     * <br>Author:caizp
-     * <br>Date:2014-4-1上午9:59:51
      */
     public void buildThemeData() {
     	// 后缀为JPG的图片

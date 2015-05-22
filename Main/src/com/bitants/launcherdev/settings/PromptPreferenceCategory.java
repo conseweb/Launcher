@@ -11,8 +11,6 @@ import com.bitants.launcher.R;
  * <p>Title: PromptPreferenceCategory</p>
  * <p>Description: </p>
  * <p>Company: ND</p>
- * @author    MaoLinnan
- * @date       2013-11-5
  */
 public class PromptPreferenceCategory extends PreferenceCategory {
 	private Context context = null;

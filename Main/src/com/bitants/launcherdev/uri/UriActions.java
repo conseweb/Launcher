@@ -8,7 +8,6 @@ package com.bitants.launcherdev.uri;
 /**
  * 桌面动作响应调用
  *
- * @author michael
  */
 public class UriActions {
 

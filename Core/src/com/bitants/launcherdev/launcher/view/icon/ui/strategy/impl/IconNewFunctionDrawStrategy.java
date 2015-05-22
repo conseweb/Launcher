@@ -1,6 +1,4 @@
 /**
- * @author Michael
- * Date:2013-9-9下午4:20:19
  *
  */
 package com.bitants.launcherdev.launcher.view.icon.ui.strategy.impl;
@@ -21,8 +19,6 @@ import com.bitants.launcherdev.launcher.view.icon.ui.LauncherIconViewConfig;
 
 
 /**
- * @author Michael
- * Date:2013-9-9下午4:20:19
  */
 public class IconNewFunctionDrawStrategy extends DrawStrategy{
 	

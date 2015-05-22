@@ -7,8 +7,7 @@ import android.preference.PreferenceScreen;
 import com.bitants.launcherdev.framework.view.prompt.PromptPreferenceAction;
 
 /**
- * @author pdw
- * @date 2012-6-15 下午03:09:03 活动类都要从此类派生，负责托管
+ *  活动类都要从此类派生，负责托管
  */
 public class BasePreferenceActivity extends PreferenceActivity implements OnPreferenceClickListener {
 	@Override

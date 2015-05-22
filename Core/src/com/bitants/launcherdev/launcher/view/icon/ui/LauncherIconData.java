@@ -31,8 +31,6 @@ import com.bitants.launcherdev.launcher.config.BaseConfig;
 
 /**
  * view的相关数据
- * @author Michael
- * @createtime 2013-7-30
  */
 public class LauncherIconData {
 	
@@ -168,8 +166,6 @@ public class LauncherIconData {
 	
 	/**
 	 * 计算出所有需要的数据
-	 * @author Michael
-	 * Date:2014-3-20下午3:25:14
 	 *  @param widthSize
 	 *  @param heightSize
 	 */
@@ -238,8 +234,6 @@ public class LauncherIconData {
 	
 	/**
 	 * 设置文字
-	 * @author Michael
-	 * Date:2014-3-20下午3:46:41
 	 *  @param label
 	 */
 	public void setTitle(CharSequence label){
@@ -298,8 +292,6 @@ public class LauncherIconData {
 
 
 	/**
-	 * @author Michael
-	 * Date:2014-3-20下午5:19:53
 	 *  @param b
 	 */
 	public void setAni(boolean b) {
@@ -308,8 +300,6 @@ public class LauncherIconData {
 
 
 	/**
-	 * @author Michael
-	 * Date:2014-3-20下午5:21:39
 	 *  @return
 	 */
 	public Paint getAlphaPaint() {
@@ -333,8 +323,6 @@ public class LauncherIconData {
 	
 	/**
 	 * 获取图标的大小
-	 * @author Michael
-	 * Date:2014-3-24上午8:38:18
 	 *  @return
 	 */
 	public Rect getIconRect(LauncherIconViewConfig config){
@@ -365,8 +353,6 @@ public class LauncherIconData {
 	
 	/**
 	 * 获取蒙板的rect大小
-	 * @author Michael
-	 * Date:2014-3-24上午8:38:18
 	 *  @return
 	 */
 	public Rect getMaskRect(LauncherIconViewConfig config) {
@@ -396,8 +382,6 @@ public class LauncherIconData {
 	
 	/**
 	 * 获取缩放比例
-	 * @author Michael
-	 * Date:2014-3-25上午11:09:54
 	 *  @param config
 	 *  @return
 	 */

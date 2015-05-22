@@ -123,8 +123,6 @@ public class DragView extends DragLayerView {
 
 	/**
 	 * 由于可能引起dragingView.draw死锁，故屏蔽
-	 * <br>Author:ryan
-	 * <br>Date:2012-8-26上午11:29:06
 	 * @param canvas
 	 */
 	private void drawingAni(Canvas canvas) {
@@ -267,8 +265,6 @@ public class DragView extends DragLayerView {
 	
 	/**
 	 * Description: 校正Dragview位置
-	 * Author: guojy
-	 * Date: 2012-8-31 下午03:57:52
 	 */
 	protected void adjustTouchLocation(int[] touch){
 		if(aniMode == MODE_PREVIEW){//预览时

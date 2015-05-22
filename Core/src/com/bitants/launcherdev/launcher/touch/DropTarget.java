@@ -28,8 +28,6 @@ public interface DropTarget {
 	int AVAIABLE = 0, UNAVAIABLE = 1;
 	/**
 	 * 获取DropTarget状态
-	 * <br>Author:ryan
-	 * <br>Date:2012-5-28下午03:24:36
 	 */
 	int getState();
 

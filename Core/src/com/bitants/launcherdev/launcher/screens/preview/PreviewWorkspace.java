@@ -55,8 +55,6 @@ import com.bitants.launcherdev.launcher.touch.DropTarget;
 
 /**
  * <br>Description: 屏幕预览管理视图
- * <br>Author:caizp
- * <br>Date:2012-6-20下午09:12:17
  */
 public class PreviewWorkspace extends DraggerSlidingView {
 	
@@ -136,8 +134,6 @@ public class PreviewWorkspace extends DraggerSlidingView {
 
 	/**
 	 * <br>Description: 交换屏幕后Workspace数据处理
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-26下午05:57:11
 	 * @see com.bitants.launcherdev.framework.view.draggersliding.DraggerSlidingView#onDataChanged(com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonData, com.bitants.launcherdev.framework.view.commonsliding.CommonViewHolder)
 	 */
 	@Override
@@ -185,8 +181,6 @@ public class PreviewWorkspace extends DraggerSlidingView {
 
 	/**
 	 * <br>Description: 刷新布局
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-25下午09:20:48
 	 */
 	public void refresh(){
 		this.pageViews.clear();
@@ -197,8 +191,6 @@ public class PreviewWorkspace extends DraggerSlidingView {
 
 	/**
 	 * <br>Description: 屏幕缩略视图
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-20下午09:15:34
 	 * @see com.bitants.launcherdev.framework.view.commonsliding.CommonSlidingView#onGetItemView(com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonData, int)
 	 */
 	@Override
@@ -281,8 +273,6 @@ public class PreviewWorkspace extends DraggerSlidingView {
 	
 	/**
 	 * <br>Description: 清除所有的dropTarget
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-27下午04:39:50
 	 */
 	public void clearDropTargetList(){
 		if(mPreviewMode == PreviewEditAdvancedController.DROP_PREVIEW_MODE){
@@ -337,8 +327,6 @@ public class PreviewWorkspace extends DraggerSlidingView {
 	
 	/**
 	 * <br>Description: 新增空白屏幕
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-25下午05:55:59
 	 */
 	public void addBlankScreen(){
 		
@@ -407,8 +395,6 @@ public class PreviewWorkspace extends DraggerSlidingView {
 	
 	/**
 	 * <br>Description: 刷新预览界面当前屏幕
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-25下午09:11:28
 	 * @param position
 	 */
 	private void refreshPreviewCurrentScreen(int position){
@@ -433,8 +419,6 @@ public class PreviewWorkspace extends DraggerSlidingView {
 	
 	/**
 	 * <br>Description: 设置默认屏幕
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-25下午09:11:28
 	 * @param position
 	 */
 	private void setDefaultScreen(int position){
@@ -461,8 +445,6 @@ public class PreviewWorkspace extends DraggerSlidingView {
 	
 	/**
 	 * <br>Description: 删除屏幕
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-25下午06:04:59
 	 * @param position
 	 */
 	private void removeScreenIfNeed(final int position){
@@ -501,8 +483,6 @@ public class PreviewWorkspace extends DraggerSlidingView {
 	
 	/**
 	 * <br>Description: 删除屏幕并处理视图与数据
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-26上午10:51:27
 	 * @param position
 	 */
 	private void deleteScreen(final int position) {
@@ -549,8 +529,6 @@ public class PreviewWorkspace extends DraggerSlidingView {
 	
 	/**
 	 * <br>Description: 增加"添加"按钮
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-25下午05:47:11
 	 */
 	private void addAddButton(){
 		PreviewCellInfo cellInfo = new PreviewCellInfo();
@@ -572,8 +550,6 @@ public class PreviewWorkspace extends DraggerSlidingView {
 	
 	/**
 	 * <br>Description: 删除"添加"按钮
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-25下午05:47:32
 	 */
 	private void removeAddButton(){
 		try {

@@ -11,15 +11,12 @@ import com.bitants.launcherdev.launcher.info.FolderInfo;
 import com.bitants.launcherdev.app.SerializableAppInfo;
 
 /**
- * @author pdw
- * @date 2012-6-4 下午03:34:59 文件夹打开接口
+ *  文件夹打开接口
  */
 public interface IFolderHelper {
 	/**
 	 * 用于做撕裂的透明背景 <br>
-	 * create at 2012-6-4 下午03:42:00 <br>
-	 * modify at 2012-6-4 下午03:42:00
-	 * 
+	 *
 	 * @param folderView
 	 *            点击的文件夹视图
 	 * @param hilightClickView

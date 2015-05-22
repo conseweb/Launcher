@@ -246,9 +246,7 @@ public class BaseSettingsPreference {
 	/**
 	 * <br>
 	 * Description: 应用列表选项是否锁定 <br>
-	 * Author:caizp <br>
-	 * Date:2012-7-27下午08:17:39
-	 * 
+	 *
 	 * @return
 	 */
 	public boolean isDrawerTabsLock() {
@@ -258,9 +256,7 @@ public class BaseSettingsPreference {
 	/**
 	 * <br>
 	 * Description: 设置应用列表选项是否锁定 <br>
-	 * Author:caizp <br>
-	 * Date:2012-7-27下午08:18:02
-	 * 
+	 *
 	 * @param isEnabled
 	 */
 	public void setDrawerTabsLock(boolean isEnabled) {
@@ -269,7 +265,6 @@ public class BaseSettingsPreference {
 	
 	/**
 	 * 返回匣子背景是否透明
-	 * @author zhenghonglin
 	 */
 	public boolean getDrawerBgTransparent() {
 		return baseSP.getBoolean(SettingsConstants.SETTINGS_DRAWER_BG_TRANSPARENT, false);
@@ -277,8 +272,6 @@ public class BaseSettingsPreference {
 
 	/**
 	 * 桌面行列数 <br>
-	 * Author:ryan <br>
-	 * Date:2012-7-1下午06:17:48
 	 */
 	public int getCountXY() {
 		String value = baseSP.getString(SettingsConstants.SETTING_SCREEN_COUNTXY, "0");
@@ -452,9 +445,7 @@ public class BaseSettingsPreference {
 	/**
 	 * <br>
 	 * Description: 获取当前主题是否大图标模式 <br>
-	 * Author:caizp <br>
-	 * Date:2012-9-6下午08:43:01
-	 * 
+	 *
 	 * @return
 	 */
 	public boolean isLargeIconTheme() {
@@ -464,9 +455,7 @@ public class BaseSettingsPreference {
 	/**
 	 * <br>
 	 * Description: 设置当前主题是否大图标模式 <br>
-	 * Author:caizp <br>
-	 * Date:2012-9-6下午08:43:53
-	 * 
+	 *
 	 * @param isLarge
 	 */
 	public void setLargeIconTheme(boolean isLarge) {
@@ -477,9 +466,7 @@ public class BaseSettingsPreference {
 	/**
 	 * <br>
 	 * Description: 获取应用程序名称颜色 <br>
-	 * Author:caizp <br>
-	 * Date:2012-10-11下午02:35:05
-	 * 
+	 *
 	 * @return
 	 */
 	public int getAppNameColor() {
@@ -492,9 +479,7 @@ public class BaseSettingsPreference {
 	/**
 	 * <br>
 	 * Description: 设置应用程序名称颜色 <br>
-	 * Author:caizp <br>
-	 * Date:2012-10-11下午02:35:29
-	 * 
+	 *
 	 * @param nameColor
 	 */
 	public void setAppNameColor(int nameColor) {
@@ -505,9 +490,7 @@ public class BaseSettingsPreference {
 	/**
 	 * <br>
 	 * Description: 获取应用程序名称大小 <br>
-	 * Author:caizp <br>
-	 * Date:2012-10-11下午02:35:05
-	 * 
+	 *
 	 * @return
 	 */
 	public int getAppNameSize() {
@@ -517,9 +500,7 @@ public class BaseSettingsPreference {
 	/**
 	 * <br>
 	 * Description: 设置应用程序名称大小 <br>
-	 * Author:caizp <br>
-	 * Date:2012-10-11下午02:35:29
-	 * 
+	 *
 	 * @param nameSize
 	 */
 	public void setAppNameSize(int nameSize) {
@@ -583,8 +564,6 @@ public class BaseSettingsPreference {
 	
 	/**
 	 * 获取应用图标名称
-	 * @author Michael
-	 * Date:2014-2-17下午3:02:35
 	 *  @return
 	 */
 	public int getAppIconSize(){
@@ -593,8 +572,6 @@ public class BaseSettingsPreference {
 	
 	/**
 	 * 设置应用图标名称
-	 * @author Michael
-	 * Date:2014-2-17下午3:02:35
 	 *  @return
 	 */
 	public void setAppIconSize(int iconSize){
@@ -603,8 +580,6 @@ public class BaseSettingsPreference {
 	
 	/**
 	 * 获取应用图标大小类型
-	 * @author Michael
-	 * Date:2014-2-17下午3:02:35
 	 *  @return
 	 */
 	public int getAppIconType(){
@@ -613,8 +588,6 @@ public class BaseSettingsPreference {
 	
 	/**
 	 * 设置应用图标大小类型
-	 * @author Michael
-	 * Date:2014-2-17下午3:02:35
 	 *  @return
 	 */
 	public void setAppIconType(int type){

@@ -1,6 +1,4 @@
 /**
- * @author Michael
- * Date:2013-9-26下午4:26:22
  *
  */
 package com.bitants.launcherdev.kitset.util;

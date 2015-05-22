@@ -7,8 +7,6 @@ import com.bitants.launcherdev.launcher.info.ItemInfo;
 
 /**
  * <br>Description: 屏幕预览缩略图信息
- * <br>Author:caizp
- * <br>Date:2012-6-21下午02:05:54
  */
 public class PreviewCellInfo extends ItemInfo implements ICommonDataItem {
 	
@@ -49,8 +47,6 @@ public class PreviewCellInfo extends ItemInfo implements ICommonDataItem {
 	
 	/**
 	 * <br>Description: 获取缩略图类型
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-21下午02:14:05
 	 * @return
 	 */
 	public int getCellType() {
@@ -59,8 +55,6 @@ public class PreviewCellInfo extends ItemInfo implements ICommonDataItem {
 	
 	/**
 	 * <br>Description: 设置缩略图类型
-	 * <br>Author:caizp
-	 * <br>Date:2012-6-21下午02:14:19
 	 * @param cellType
 	 */
 	public void setCellType(int cellType){

@@ -51,8 +51,6 @@ import com.bitants.launcherdev.launcher.view.DragView;
 
 /**
  * <br>Description: 预览界面屏幕缩略图，支持桌面拖动项放置
- * <br>Author:caizp
- * <br>Date:2012-6-28下午05:49:19
  */
 public class PreviewCellView extends FrameLayout implements DropTarget {
 
@@ -298,8 +296,6 @@ public class PreviewCellView extends FrameLayout implements DropTarget {
 
 	/**
 	 * Description: 根据图标在预览图上的位置，计算出该图标在CellLayout上的对应位置
-	 * Author: guojy
-	 * Date: 2013-1-17 上午11:47:31
 	 */
 	private int[] getTargetCellXY(int x, int y, CellLayout cellLayout){
 		float cellLayoutMargin = getResources().getDimensionPixelSize(R.dimen.celllayout_preview_margin);//预览图中celllayout的margin

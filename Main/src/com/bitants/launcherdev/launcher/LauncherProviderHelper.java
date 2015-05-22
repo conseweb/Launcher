@@ -388,8 +388,6 @@ public class LauncherProviderHelper {
 
 	/**
 	 * 为新安装的应用找安装位置
-	 * @author pdw
-	 * @date 2013-9-17 下午03:22:17
 	 * @param context
 	 * @return null 如果查找失败; 否则返回int[3]; int[0]=screen, int[1]=cellX, int[2]=cellY;
 	 */
@@ -414,8 +412,6 @@ public class LauncherProviderHelper {
 	
 	/**
 	 * 查找有图标的最后一屏
-	 * @author pdw
-	 * @date 2013-9-17 下午03:24:01
 	 * @param db
 	 * @return 返回屏数,失败返回-1
 	 */
@@ -440,8 +436,6 @@ public class LauncherProviderHelper {
 	
 	/**
 	 * Description: 在屏幕上找第一个空闲位置 (若不存在空闲区并且屏幕总数小于{@link LauncherStateSet#MAX_SCREEN}，则新增一屏并返回空闲区)<br> 
-	 * Author:guojy <br>
-	 * Date: 2012-9-24 下午03:34:24 <br>
 	 * return data: data[0] 屏幕编号; data[1]cellX位置; data[2] cellY位置 如果data为null，则不存在空闲位置
 	 */
 	public static int[] getFirstVacantCell(SQLiteDatabase db, int spanX, int spanY, int startFromScreen) {
@@ -465,8 +459,6 @@ public class LauncherProviderHelper {
 	
 	/**
 	 * 从数据库查找第一个位置
-	 * @author pdw
-	 * @date 2013-9-17 下午02:40:42
 	 * @param db
 	 * @param screen
 	 * @param mSpanX
@@ -513,8 +505,8 @@ public class LauncherProviderHelper {
 	}
 	
 	/**
-     * Description: 从屏幕底部开始找第一个空闲位置 (若不存在空闲区并且屏幕总数小于9，则新增一屏并返回空闲区) Author:
-     * guojy Date: 2012-9-24 下午03:34:24 return data: data[0] 屏幕编号; data[1]
+     * Description: 从屏幕底部开始找第一个空闲位置 (若不存在空闲区并且屏幕总数小于9，则新增一屏并返回空闲区)
+     * return data: data[0] 屏幕编号; data[1]
      * cellX位置; data[2] cellY位置 如果data为null，则不存在空闲位置
      */
     public static int[] getVacantCellFromBottom(SQLiteDatabase db, int spanX, int spanY, boolean startFromDefaultScreen) {

@@ -203,8 +203,6 @@ public class StatusBarUtil {
 	
 	/**
 	 * <br>Description: 获取通知栏高度,全屏时返回0
-	 * <br>Author:caizp
-	 * <br>Date:2014年8月25日上午10:44:55
 	 * @param activity
 	 * @return
 	 */

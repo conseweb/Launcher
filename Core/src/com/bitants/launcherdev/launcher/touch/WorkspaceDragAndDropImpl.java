@@ -37,8 +37,6 @@ import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
 
 /**
  * Description: 处理默认桌面上Workspace的拖放
- * Author: guojy
- * Date: 2013-9-3 下午3:43:54
  */
 public class WorkspaceDragAndDropImpl implements WorkspaceDragAndDrop{
 	protected ScreenViewGroup mWorkspace;
@@ -429,8 +427,6 @@ public class WorkspaceDragAndDropImpl implements WorkspaceDragAndDrop{
 	
 	/**
 	 * Description: 处理在Workspace内拖动图标
-	 * Author: guojy
-	 * Date: 2013-2-1 下午5:44:06
 	 */
 	public void onDropInternal(CellLayout cellLayout, int x, int y, int xOffset, int yOffset, DragView dragView, Object dragInfo){
 		final int[] mDragViewVisualCenter = dragView.getDragCenterPoints();
@@ -471,8 +467,6 @@ public class WorkspaceDragAndDropImpl implements WorkspaceDragAndDrop{
 	
 	/**
 	 * Description: 处理在其他地方(非Workspace)拖动图标到桌面
-	 * Author: guojy
-	 * Date: 2013-2-1 下午5:03:56
 	 */
 	public void onDropExternal(int x, int y, Object dragInfo, CellLayout cellLayout, DragView dragView) {
 		//处理生成或合并文件夹
@@ -593,9 +587,7 @@ public class WorkspaceDragAndDropImpl implements WorkspaceDragAndDrop{
 	/**
 	 * <br>
 	 * Description:从桌面将拖动的item放入目标屏的目标位置上 <br>
-	 * Author:caizp <br>
-	 * Date:2012-6-27下午08:46:35
-	 * 
+	 *
 	 * @param index
 	 *            目标屏
 	 * @param targetCell
@@ -733,8 +725,6 @@ public class WorkspaceDragAndDropImpl implements WorkspaceDragAndDrop{
 	
 	/**
 	 * Description: 将在其他地方(非Workspace，如文件夹、匣子、预览区)拖动的图标放置到桌面目标位置
-	 * Author: guojy
-	 * Date: 2013-2-1 下午5:06:48
 	 */
 	public void dropToScreenExternal(CellLayout cellLayout, Object dragInfo, int[] targetCell) {
 		
@@ -742,8 +732,6 @@ public class WorkspaceDragAndDropImpl implements WorkspaceDragAndDrop{
 	
 	/**
 	 * Description: 处理在其他地方(非Workspace，如文件夹、匣子、预览区)批量拖动图标到桌面
-	 * Author: Michael
-	 * Date: 2013-5-24 下午5:03:56
 	 */
 	public void onDropExternal(int x, int y, Object dragInfo, CellLayout cellLayout, DragView dragView, ArrayList<ApplicationInfo> appList) {
 		

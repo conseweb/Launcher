@@ -30,7 +30,6 @@ public class LauncherModel extends BaseLauncherModel {
 
 	/**
 	 * 获取文件夹内容（只供推荐文件夹调用）
-	 * @author Ryan
 	 */
 	public static List<ApplicationInfo> getFolderContentById(Context context, long id) {
 		List<ApplicationInfo> result = new ArrayList<ApplicationInfo>();
@@ -102,7 +101,6 @@ public class LauncherModel extends BaseLauncherModel {
 	
 	/**
 	 * 根据应用类型加载应用项
-	 * @author wangguomei
 	 */
 	public static List<ApplicationInfo> loadItemsByTypeForLocale(Context context) {
 		final ContentResolver cr = context.getContentResolver();
@@ -137,7 +135,6 @@ public class LauncherModel extends BaseLauncherModel {
 	
 	/**
 	 * 批量更新应用项名称
-	 * @author Michael
 	 */
 	public static void batchUpdateItemTitleById(Context context, List<ApplicationInfo> items) {
 		

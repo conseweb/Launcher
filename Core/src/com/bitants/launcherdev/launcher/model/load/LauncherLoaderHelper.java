@@ -34,8 +34,6 @@ import com.bitants.launcherdev.launcher.view.icon.ui.LauncherIconViewConfig;
 
 /**
  * Description: 桌面加载和情景桌面辅助类接口(需继续调整)
- * Author: guojy
- * Date: 2013-10-22 上午11:02:52
  */
 public abstract class LauncherLoaderHelper {
 	
@@ -112,8 +110,6 @@ public abstract class LauncherLoaderHelper {
 	
 	/**
 	 * new一个CellLayout的LayoutParams
-	 * @author Michael
-	 * Date:2014-3-26下午3:09:33
 	 */
 	public abstract CellLayout.LayoutParams newCellLayoutLayoutParams(ViewGroup.MarginLayoutParams vm);
 	
@@ -139,8 +135,6 @@ public abstract class LauncherLoaderHelper {
 	
 	/**
 	 * 获取holeType
-	 * @author Michael
-	 * Date:2014-3-26下午3:14:59
 	 *  @param view
 	 *  @param info
 	 *  @param wh
@@ -151,8 +145,6 @@ public abstract class LauncherLoaderHelper {
 	
 	/**
 	 * 是否icon图标填充整个View
-	 * @author Michael
-	 * Date:2014-3-27下午12:05:57
 	 *  @param view
 	 *  @return
 	 */
@@ -162,8 +154,6 @@ public abstract class LauncherLoaderHelper {
 	
 	/**
 	 * 是否按短边缩放的形式填充整个View
-	 * @author Michael
-	 * Date:2014-3-27下午12:06:01
 	 *  @param view
 	 *  @return
 	 */
@@ -173,8 +163,6 @@ public abstract class LauncherLoaderHelper {
 	
 	/**
 	 * 情景桌面下，是否显示图标的名称
-	 * @author Michael
-	 * Date:2014-3-27下午12:06:01
 	 *  @param view
 	 *  @return
 	 */
@@ -184,8 +172,6 @@ public abstract class LauncherLoaderHelper {
 	
 	/**
 	 * Description: 是否该View被锁定无法拖动和合并文件夹
-	 * @author Michael
-	 * Date:2014-4-9下午4:06:30
 	 *  @param v
 	 *  @return
 	 */
@@ -251,8 +237,6 @@ public abstract class LauncherLoaderHelper {
 
 	/**
 	 * 初始化情景模式下的数据
-	 * @author Michael
-	 * Date:2014-3-24下午4:56:53
 	 *  @param width
 	 *  @param height
 	 *  @param view

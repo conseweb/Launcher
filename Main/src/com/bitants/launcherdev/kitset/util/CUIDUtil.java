@@ -7,8 +7,6 @@ import java.net.URLEncoder;
 
 /**
  * description: <br/>
- * author: Administrator<br/>
- * data: 2014/8/25<br/>
  */
 public class CUIDUtil {
 

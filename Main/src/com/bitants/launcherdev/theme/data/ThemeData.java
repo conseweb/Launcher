@@ -4,8 +4,6 @@ import com.bitants.launcherdev.theme.module.ModuleConstant;
 
 /**
  * <br>Title: 主题皮肤信息常量
- * <br>Author:caizp
- * <br>Date:2012-7-11上午09:13:14
  */
 public class ThemeData extends BaseThemeData{
 	

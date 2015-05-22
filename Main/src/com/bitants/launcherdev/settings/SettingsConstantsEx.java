@@ -2,7 +2,6 @@ package com.bitants.launcherdev.settings;
 
 /**
  * mobo桌面设置常量
- * @author wgm
  */
 public class SettingsConstantsEx {
 

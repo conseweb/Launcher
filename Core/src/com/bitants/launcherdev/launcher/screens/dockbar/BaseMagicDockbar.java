@@ -55,7 +55,6 @@ import com.bitants.launcherdev.theme.assit.ThemeUIRefreshListener;
 
 /**
  *
- * @author guojianyun
  */
 public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, DropTarget, OnLongClickListener, ThemeUIRefreshListener{
 	
@@ -1244,8 +1243,6 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 	
 	/**
 	 * Description: 适用于基于Cell布局
-	 * Author: guojy
-	 * Date: 2013-5-14 下午3:36:12
 	 */
 	public void addInDockbarByCell(View child, int page, int cellX,boolean showAni) {
 		if(!BaseConfig.isOnScene()){

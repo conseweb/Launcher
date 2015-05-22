@@ -19,8 +19,6 @@ public class MessageUtils {
 	/**
 	 * 描述:
 	 * 
-	 * @author linqiang(866116)
-	 * @Since 2012-10-23
 	 * @param text
 	 */
 	public static void showOnlyToast(Context mContext, final String text) {
@@ -35,8 +33,6 @@ public class MessageUtils {
 	/**
 	 * 描述:
 	 * 
-	 * @author linqiang(866116)
-	 * @Since 2012-10-23
 	 * @param text
 	 */
 	public static void showOnlyToast(Context mContext, final int text) {

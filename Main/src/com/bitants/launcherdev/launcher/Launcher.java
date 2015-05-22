@@ -170,8 +170,6 @@ public class Launcher extends BaseLauncher {
 	
 	/**
 	 * 新建文件夹 <br>
-	 * Author: Michael <br>
-	 * Date:2013-3-12 
 	 */
 	public FolderIconTextView addFolder(CellLayout layout, long container, final int screen, int cellX, int cellY, String folderTitle) {
 		int[] cellXY = new int[]{cellX, cellY};
@@ -308,8 +306,6 @@ public class Launcher extends BaseLauncher {
 	
 	/**
 	 * 是否拦截返回键 <br>
-	 * Author:ryan <br>
-	 * Date:2012-11-1下午02:20:03
 	 */
 	private boolean handleBackHere(KeyEvent event) {
 		boolean result = mWorkspace.isOnSpringMode() || previewEditController.isPreviewMode() || (!event.isCanceled() && isOnWidgetEditMode()) || !event.isCanceled()
@@ -487,8 +483,6 @@ public class Launcher extends BaseLauncher {
 	
 	/**
 	 * 初始化垃圾桶 <br>
-	 * Author:ryan <br>
-	 * Date:2013-1-16下午03:32:36
 	 */
 	@Override
 	public DeleteZone inflateDeleteZone() {

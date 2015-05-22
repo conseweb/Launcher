@@ -16,8 +16,7 @@ import java.util.HashMap;
 /**
  * 模式:使用线程池为每个异步加载的图片提供服务
  * 
- * @author cfb
- * 
+ *
  */
 public class AsyncImageLoader {
 
@@ -72,9 +71,7 @@ public class AsyncImageLoader {
 	/**
 	 * <br>
 	 * Description: 加载本地主题图片，无缩略图时自动生成 <br>
-	 * Author:caizp <br>
-	 * Date:2012-9-12上午11:24:27
-	 * 
+	 *
 	 * @param imagePath
 	 * @param themeId
 	 * @param imageCallback

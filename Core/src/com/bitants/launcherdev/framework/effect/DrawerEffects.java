@@ -578,8 +578,6 @@ public class DrawerEffects {
 	/**
 	 * 
 	 * <br>Description:LG褶皱内特效
-	 * <br>Author:zhenghonglin
-	 * <br>Date:2014-1-6下午03:31:45
 	 */
 	private void processLGDrapeInside(Canvas canvas, int screen, long drawingTime, CommonSlidingView workspace, boolean isLeft) {
 		View view = workspace.getChildAt(screen);

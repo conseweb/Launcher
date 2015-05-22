@@ -4,8 +4,6 @@ import java.io.Serializable;
 
 /**
  * Description: 主题模块项 <br>
- * Author:caizp <br>
- * Date:2014-6-12上午11:17:09
  */
 public class ThemeModuleItem implements Serializable {
 	

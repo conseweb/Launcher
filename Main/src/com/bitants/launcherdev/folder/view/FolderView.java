@@ -224,7 +224,6 @@ public class FolderView extends RelativeLayout implements
 	
 	/**
 	 * 防止用户多次单击重命名，批量添加按钮
-	 * @author pdw
 	 */
 	private class EnableClickRunnable implements Runnable{
 		
@@ -668,8 +667,6 @@ public class FolderView extends RelativeLayout implements
 	
 	/**
 	 * 显示长按菜单
-	 * @author Michael
-	 * @createtime 2013-3-11
 	 */
 	public void showShortcutMenu(){
 		if(clickView != null){

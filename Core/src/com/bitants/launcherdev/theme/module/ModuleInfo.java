@@ -3,8 +3,6 @@ package com.bitants.launcherdev.theme.module;
 /**
  * <br>
  * Description: 单独模块信息 <br>
- * Author:caizp <br>
- * Date:2014-6-12上午11:08:19
  */
 public class ModuleInfo {
 

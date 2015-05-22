@@ -674,8 +674,6 @@ public class ScreenEffects {
 	/**
 	 * 
 	 * <br>Description:LG褶皱内特效
-	 * <br>Author:zhenghonglin
-	 * <br>Date:2014-1-6下午03:31:45
 	 */
 	private void processLGDrapeInside(Canvas canvas, int screen, long drawingTime, ScreenViewGroup workspace, boolean isLeft) {
 		CellLayout view = (CellLayout) workspace.getChildAt(screen);

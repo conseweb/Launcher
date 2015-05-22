@@ -10,7 +10,6 @@ import com.bitants.launcherdev.theme.data.ThemeGlobal;
 /**
  * 桌面设置Preference持久类
  * 
- * @author Anson
  */
 public class SettingsPreference extends BaseSettingsPreference {
 	

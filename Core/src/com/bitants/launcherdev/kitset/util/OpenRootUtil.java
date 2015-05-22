@@ -550,8 +550,6 @@ public class OpenRootUtil {
 	 * 测试是否真的有root权限
 	 * 
 	 * @Title: isReallyRoot
-	 * @author lytjackson@gmail.com
-	 * @date 2014-5-6
 	 * @return
 	 */
 	public static boolean isReallyRoot(Context ctx) {
@@ -565,8 +563,6 @@ public class OpenRootUtil {
 	 * 测试是否真的有root权限
 	 * 
 	 * @Title: isReallyRoot
-	 * @author lytjackson@gmail.com
-	 * @date 2014-5-6
 	 * @param isSystem
 	 *            是否使用系统原版su来尝试授权
 	 * @return

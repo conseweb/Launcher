@@ -11,7 +11,6 @@ import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
 
 /**
  * 分享桌面
- * @author wgm 
  */
 public class ShareLauncherActivity extends BasePreferenceActivity implements OnPreferenceClickListener {
 

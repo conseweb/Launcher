@@ -2,8 +2,6 @@ package com.bitants.launcherdev.theme.data;
 
 /**
  * <br>Description:主题包类型
- * <br>Author:caizp
- * <br>Date:2011-6-27下午03:52:44
  */
 public class ThemeType {
 	

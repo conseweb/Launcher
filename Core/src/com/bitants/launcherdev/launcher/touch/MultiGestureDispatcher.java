@@ -4,10 +4,7 @@ import android.view.MotionEvent;
 
 /**
  * 支持 多指手势判断
- * @author DingXiaohui
- * @date 2013-7-29
- * @time 上午11:19:26
- * @Description 
+ * @Description
  *
  */
 public interface MultiGestureDispatcher {

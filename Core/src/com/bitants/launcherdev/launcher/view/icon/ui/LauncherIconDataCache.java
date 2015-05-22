@@ -1,6 +1,4 @@
 /**
- * @author Michael
- * Date:2014-3-19下午1:45:11
  *
  */
 package com.bitants.launcherdev.launcher.view.icon.ui;
@@ -25,8 +23,6 @@ import com.bitants.launcherdev.kitset.util.ScreenUtil;
 import com.bitants.launcherdev.launcher.config.BaseConfig;
 
 /**
- * @author Michael
- * Date:2014-3-19下午1:45:11
  *
  */
 public class LauncherIconDataCache {
@@ -118,8 +114,6 @@ public class LauncherIconDataCache {
 	
 	/**
 	 * 获取默认的文字高度
-	 * @author Michael
-	 * Date:2014-3-19下午3:22:39
 	 *  @param context
 	 *  @return
 	 */
@@ -162,8 +156,6 @@ public class LauncherIconDataCache {
 	
 	/**
 	 * 
-	 * @author Michael
-	 * Date:2014-3-19下午2:26:11
 	 *  @param measureW
 	 *  @param measureH
 	 *  @param targetW
@@ -196,8 +188,6 @@ public class LauncherIconDataCache {
 	
 	/**
 	 * 
-	 * @author Michael
-	 * Date:2014-3-19下午2:26:11
 	 *  @param originalW
 	 *  @param originalH
 	 *  @param targetW
@@ -283,8 +273,6 @@ public class LauncherIconDataCache {
 	
 	/**
 	 * 
-	 * @author Michael
-	 * Date:2014-3-19下午2:26:11
 	 *  @param measureW
 	 *  @param measureH
 	 *  @param targetW
@@ -305,8 +293,6 @@ public class LauncherIconDataCache {
 	
 	/**
 	 * 
-	 * @author Michael
-	 * Date:2014-3-19下午2:26:11
 	 *  @param measureW
 	 *  @param measureH
 	 *  @param targetW

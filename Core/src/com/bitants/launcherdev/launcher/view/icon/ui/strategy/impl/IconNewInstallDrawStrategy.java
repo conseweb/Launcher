@@ -18,8 +18,6 @@ import com.bitants.launcherdev.launcher.view.icon.ui.LauncherIconViewConfig;
 
 /**
  * 
- * @author Michael
- * Date:2013-8-26下午3:49:03
  *
  */
 public class IconNewInstallDrawStrategy extends DrawStrategy{

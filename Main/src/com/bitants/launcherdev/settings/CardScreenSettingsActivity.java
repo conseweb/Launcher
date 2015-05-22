@@ -13,7 +13,6 @@ import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
 
 /**
  * 卡片屏设置
- * @author wgm 
  */
 public class CardScreenSettingsActivity extends BasePreferenceActivity 
       implements OnPreferenceChangeListener,OnPreferenceClickListener {

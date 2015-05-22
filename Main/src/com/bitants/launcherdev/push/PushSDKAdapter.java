@@ -30,7 +30,6 @@ import java.util.List;
 /**
  * 推送SDK时的适配
  *
- * @author Michael
  */
 public class PushSDKAdapter extends PushSDKAdapterInterface {
 

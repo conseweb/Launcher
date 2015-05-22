@@ -39,8 +39,6 @@ import com.bitants.launcherdev.launcher.support.BaseIconCache;
 
 /**
  * Description: 加载和绑定Workspace图标
- * Author: guojy
- * Date: 2013-6-25 下午5:32:59
  */
 public class LauncherLoader{
 	final static String TAG = "LauncherLoader";
@@ -219,8 +217,6 @@ public class LauncherLoader{
 
 	/**
 	 * 优先加载Dock栏，当前屏，桌面图标
-	 * <br>Author:ryan
-	 * <br>Date:2012-11-19上午11:51:03
 	 */
 	public void loadIconFirst(ArrayList<ItemInfo> mCurrentDockItems,  ArrayList<ItemInfo> mCurrentItems){
 		for (final ItemInfo item : mCurrentDockItems) {

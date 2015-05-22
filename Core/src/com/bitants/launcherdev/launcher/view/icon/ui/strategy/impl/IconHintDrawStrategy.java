@@ -12,8 +12,6 @@ import com.bitants.launcherdev.launcher.view.icon.ui.strategy.DrawStrategy;
 
 /**
  * 图标提示绘画策略
- * @author ZSY
- * @since 2013-3-6
  */
 public class IconHintDrawStrategy extends DrawStrategy{
 	

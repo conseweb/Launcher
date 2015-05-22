@@ -46,8 +46,6 @@ import com.bitants.launcherdev.theme.ThemeManagerFactory;
 
 /**
  * Description: 壁纸辅助类
- * Author: guojy
- * Date: 2012-10-15 下午04:45:20
  */
 public class WallpaperHelper{
 	private final static String TAG = "WallpaperHelper";
@@ -122,8 +120,6 @@ public class WallpaperHelper{
 	 * Description: 壁纸更新
 	 * @param mScrollX
 	 * @param isFromWorkspace (true: workspace请求更新壁纸， false: workspacelayer请求更新壁纸)
-	 * Author: guojy
-	 * Date: 2012-10-18 下午02:05:22
 	 */
 	public void updateWallpaperOffset(Context ctx, int mScrollX, boolean isFromWorkspace) {
 		//开启导航页时，判断是否更新壁纸
@@ -436,8 +432,6 @@ public class WallpaperHelper{
 	
 	/**
 	 * Description: 清除循环滚屏时壁纸切换的Bitmap
-	 * Author: guojy
-	 * Date: 2012-10-26 下午02:40:36
 	 */
 	public void cleanWallpaper(){
 //		if(!isEndlessScrolling){

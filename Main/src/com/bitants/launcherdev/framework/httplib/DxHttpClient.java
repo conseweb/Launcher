@@ -31,8 +31,6 @@ public class DxHttpClient {
 	
 	/**
 	 * 获取是否可以提交实时统计开关 </br>
-	 * Create On 2014-2-12下午03:13:31 </br>
-	 * Author : pdw </br>
 	 * @param ctx
 	 * @return 获取状态
 	 */
@@ -70,8 +68,6 @@ public class DxHttpClient {
 	
 	/**
 	 * 实时活跃打点 </br>
-	 * Create On 2014-2-12下午03:54:32 </br>
-	 * Author : pdw </br>
 	 * @param ctx
 	 * @param label
 	 * @param encode
@@ -119,7 +115,6 @@ public class DxHttpClient {
 	
 	/**
 	 * 统计开关
-	 * @author Administrator
 	 *
 	 */
 	public enum SwitchState {

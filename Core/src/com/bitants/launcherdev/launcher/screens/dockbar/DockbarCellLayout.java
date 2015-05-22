@@ -15,8 +15,6 @@ import com.bitants.launcherdev.launcher.info.ItemInfo;
 /**
  * represent one screen of dockbar
  * 
- * @author pdw
- * @date 2012-5-18 下午05:08:40 
  */
 public class DockbarCellLayout extends ViewGroup {
 	public DockbarCellLayout(Context context) {

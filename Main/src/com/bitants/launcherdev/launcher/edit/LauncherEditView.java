@@ -296,8 +296,6 @@ public class LauncherEditView extends RelativeLayout implements OnCommonSlidingV
 	
 	/**
 	 * 立即布局
-	 * @author Michael
-	 * @createtime 2013-6-10 
 	 * @param slidingView
 	 */
 	public void relayout(){
@@ -309,8 +307,6 @@ public class LauncherEditView extends RelativeLayout implements OnCommonSlidingV
 	
 	/**
 	 * 立即布局
-	 * @author Michael
-	 * @createtime 2013-6-10 
 	 * @param slidingView
 	 */
 	public void relayout(final int screen){
@@ -376,7 +372,7 @@ public class LauncherEditView extends RelativeLayout implements OnCommonSlidingV
 	}
 	
 	/**
-	 * Description: 带动画显示 Author: guojy Date: 2012-7-18 上午11:26:29
+	 * Description: 带动画显示
 	 */
 	public void showWithAnimation(final String tab) {
 		if (this.getVisibility() != VISIBLE) {
@@ -398,7 +394,7 @@ public class LauncherEditView extends RelativeLayout implements OnCommonSlidingV
 	}
 
 	/**
-	 * Description: 带动画退出 Author: guojy Date: 2012-7-18 上午11:23:55
+	 * Description: 带动画退出
 	 */
 	public void hideWithAnimation() {
 		if (this.getVisibility() == VISIBLE) {
@@ -447,8 +443,6 @@ public class LauncherEditView extends RelativeLayout implements OnCommonSlidingV
 	
 	/**
 	 * 退出编辑模式 清除无用数据
-	 * @author Michael
-	 * @createtime 2013-6-18
 	 */
 	private void clear(){
 //		themeList.clear();

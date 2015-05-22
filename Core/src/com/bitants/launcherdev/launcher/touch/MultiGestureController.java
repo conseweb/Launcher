@@ -13,10 +13,7 @@ import com.bitants.launcherdev.launcher.config.BaseConfig;
 
 /**
  * 多指手势判断
- * @author DingXiaohui
- * @date 2013-7-29
- * @time 上午11:21:54
- * @Description 
+ * @Description
  *
  */
 public class MultiGestureController {
@@ -87,10 +84,7 @@ public class MultiGestureController {
 	
 	/**
 	 * 重新绑定 被判定对象
-	 * @author DingXiaohui
-	 * @date 2013-7-29
-	 * @time 上午11:28:17
-	 * @Description 
+	 * @Description
 	 * 
 	 * @param dispatcher
 	 */
@@ -150,10 +144,7 @@ public class MultiGestureController {
 	
 	/**
 	 * 判定 离开屏幕时的手势
-	 * @author DingXiaohui
-	 * @date 2013-7-29
-	 * @time 上午11:29:31
-	 * @Description 
+	 * @Description
 	 * 
 	 * @param event
 	 */
@@ -261,10 +252,7 @@ public class MultiGestureController {
 	
 	/**
 	 * 根据判定接口，执行回调
-	 * @author DingXiaohui
-	 * @date 2013-7-29
-	 * @time 上午11:30:09
-	 * @Description 
+	 * @Description
 	 * 
 	 * @param event
 	 */
@@ -293,10 +281,7 @@ public class MultiGestureController {
 	
 	/**
 	 * 重置 所有数值
-	 * @author DingXiaohui
-	 * @date 2013-7-29
-	 * @time 上午11:29:55
-	 * @Description 
+	 * @Description
 	 *
 	 */
 	private void reset() {

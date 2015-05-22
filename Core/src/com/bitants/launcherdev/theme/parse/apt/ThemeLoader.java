@@ -40,8 +40,6 @@ import com.bitants.launcherdev.theme.parse.EncodeTools;
 
 /**
  * <br>Description: apt主题包解析装载
- * <br>Author:caizp
- * <br>Date:2014-4-1下午4:59:51
  */
 public class ThemeLoader {
 	
@@ -735,8 +733,6 @@ public class ThemeLoader {
     
     /**
      * <br>Description: 安装模块包(适用模块包安装与升级)
-     * <br>Author:caizp
-     * <br>Date:2014-6-19下午5:38:06
      * @param zipPath 模块包路径
      * @return 模块包安装成功-模块包ID， 安装失败-null
      * @throws PandaDesktopException
@@ -825,8 +821,6 @@ public class ThemeLoader {
     
     /**
      * <br>Description: 从已有文件夹安装模块包
-     * <br>Author:caizp
-     * <br>Date:2014-8-16下午5:38:06
      * @param namePrefixTemp 模块文件夹路径
      * @param moduleKey 模块KEY
      * @return 模块包安装成功-模块包ID， 安装失败-null
@@ -900,8 +894,6 @@ public class ThemeLoader {
     
     /**
      * <br>Description: 兼容安卓锁屏主题壁纸
-     * <br>Author:caizp
-     * <br>Date:2012-8-24下午04:15:07
      * @param themeId
      */
     public static void loadThemeLockBg(String themeId){
@@ -924,8 +916,6 @@ public class ThemeLoader {
 
     /**
      * <br>Description:加载主题天气皮肤
-     * <br>Author:caizp
-     * <br>Date:2011-5-3上午10:28:46
      * @param unZipPath
      * @param themeWeatherId
      */
@@ -948,8 +938,6 @@ public class ThemeLoader {
     
     /**
      * <br>Description:加载主题第三方小插件皮肤
-     * <br>Author:caizp
-     * <br>Date:2013-3-11上午10:28:46
      * @param unZipPath
      * @param themeId
      */
@@ -966,8 +954,6 @@ public class ThemeLoader {
     
     /**
      * <br>Description: 重命名目录下的资源(.png->.a, .jpg->.b)
-     * <br>Author:caizp
-     * <br>Date:2014-6-27下午5:17:13
      * @param folderPath
      */
     public static void renameRes(String folderPath) {
@@ -983,8 +969,6 @@ public class ThemeLoader {
     
     /**
      * <br>Description: 验证主题资源加密资源是否合法
-     * <br>Author:caizp
-     * <br>Date:2014年7月18日下午2:03:23
      * @param folderPath
      * @return
      */
@@ -1016,8 +1000,6 @@ public class ThemeLoader {
     
     /**
      * <br>Description: 扫描主题加密资源
-     * <br>Author:caizp
-     * <br>Date:2014年7月18日下午3:50:00
      * @param rootPath
      * @param filterFileName
      * @return

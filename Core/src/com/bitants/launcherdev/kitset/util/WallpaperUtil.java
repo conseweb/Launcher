@@ -331,8 +331,6 @@ public final class WallpaperUtil {
 	/**
 	 * 描述:下载生成缩略图
 	 * 
-	 * @author linqiang(866116)
-	 * @Since 2012-5-25
 	 * @param url
 	 * @param fileName
 	 * @param savePath
@@ -406,8 +404,6 @@ public final class WallpaperUtil {
 	/**
 	 * 描述:下载网络图片
 	 * 
-	 * @author linqiang(866116)
-	 * @Since 2012-5-23
 	 * @param url
 	 *            //图片的URL
 	 * @param fileName
@@ -484,8 +480,6 @@ public final class WallpaperUtil {
 	/**
 	 * 描述:下载生成缩略图
 	 * 
-	 * @author linqiang(866116)
-	 * @Since 2012-5-25
 	 * @param url
 	 * @param fileName
 	 * @param savePath
@@ -498,8 +492,6 @@ public final class WallpaperUtil {
 	/**
 	 * 描述:通过原图生成缩略图片
 	 * 
-	 * @author linqiang(866116)
-	 * @Since 2012-6-6
 	 * @param filePath
 	 * @param thumbPath
 	 * @return

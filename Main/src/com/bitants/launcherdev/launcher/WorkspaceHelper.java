@@ -61,9 +61,7 @@ public class WorkspaceHelper {
 	/**
 	 * <br>
 	 * Description: 往Workspace末端添加空白屏 <br>
-	 * Author:caizp <br>
-	 * Date:2012-6-26上午11:54:01
-	 * 
+	 *
 	 * @return
 	 */
 	public CellLayout createScreenToWorkSpace() {
@@ -156,9 +154,7 @@ public class WorkspaceHelper {
 	/**
 	 * <br>
 	 * Description: 屏幕上的数据项移动 <br>
-	 * Author:caizp <br>
-	 * Date:2012-6-26下午03:06:50
-	 * 
+	 *
 	 * @param screenStart
 	 *            开始屏
 	 * @param screenEnd
@@ -206,8 +202,6 @@ public class WorkspaceHelper {
 	/**
 	 * <p>桌面删除某一屏后，重置后面屏幕的screen属性</p>
 	 * 
-	 * <p>date: 2012-9-27 上午11:41:13
-	 * @author pdw
 	 * @param startScreen
 	 * @param screen
 	 * @param isAsc 是否从小屏下标拖动到大屏下标

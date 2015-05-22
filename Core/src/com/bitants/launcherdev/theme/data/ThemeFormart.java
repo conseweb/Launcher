@@ -1,15 +1,7 @@
 package com.bitants.launcherdev.theme.data;
 
 /**
- * Version 1.0
  *
- * =============================================================
- * Revision History
- * 
- * Modification                    Tracking
- * Date           Author           Number      Description of changes
- * ----------     --------------   ---------   -------------------------
- * 2009-9-23         yangbin            代码重构
  */
 
 import java.io.File;
@@ -36,7 +28,6 @@ import com.bitants.launcherdev.launcher.support.FastBitmapDrawable;
 /**
  * 主题格式化类
  * 
- * @author yangbin
  */
 public class ThemeFormart {
 

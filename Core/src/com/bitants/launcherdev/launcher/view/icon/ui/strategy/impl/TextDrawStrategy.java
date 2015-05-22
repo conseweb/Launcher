@@ -18,8 +18,6 @@ import com.bitants.launcherdev.launcher.view.icon.ui.LauncherIconViewConfig;
 
 /**
  * 标题绘画策略
- * @author ZSY
- * @since 2013-3-5
  */
 public class TextDrawStrategy extends DrawStrategy{
 	

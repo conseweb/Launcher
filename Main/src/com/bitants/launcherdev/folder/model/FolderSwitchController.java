@@ -23,8 +23,7 @@ import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
 /**
  * <p>文件夹逻辑控制器<p>
  * <p>负责文件夹各项操作的分发:打开、关闭、批量添加、重命名、加密、排序...<p>
- * @author Michael
- *       
+ *
  */
 public class FolderSwitchController extends AbstractFolderSwitchController implements OnKeyDownListenner {
 	
@@ -459,8 +458,6 @@ public class FolderSwitchController extends AbstractFolderSwitchController imple
 	
 	/**
 	 * Description: GPU开启时，匣子中cellLayout需更新硬件层离屏缓存
-	 * Author: guojy
-	 * Date: 2012-11-26 上午11:11:44
 	 */
 	void destroySlidingViewHardwareLayer(){
 //		if(mLauncher.getDrawer() != null && mLauncher.getDrawer().isVisible()){

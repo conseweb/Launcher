@@ -18,7 +18,6 @@ import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
 
 /**
  * 关于桌面
- * @author wgm 
  */
 public class AboutLauncherActivity extends BasePreferenceActivity implements OnPreferenceClickListener {
 

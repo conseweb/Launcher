@@ -62,8 +62,6 @@ import com.nineoldandroids.view.ViewHelper;
 /**
  * 
  * Description: 桌面拖动时挤动其它图标位移实现
- * Author: guojy
- * Date: 2013-5-7 下午7:04:15
  */
 public class CellLayoutReorder {
 	/**
