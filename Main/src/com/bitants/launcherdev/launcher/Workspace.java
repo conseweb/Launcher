@@ -71,7 +71,7 @@ public class Workspace extends ScreenViewGroup implements DragScroller, AnyCallb
 		switch (itemInfo.itemType) {
 		case LauncherSettings.Favorites.ITEM_TYPE_APPLICATION: //普通app
 		case LauncherSettings.Favorites.ITEM_TYPE_HI_APPLICATION: //“我的手机”里的应用，如我的壁纸、我的电池等
-		case LauncherSettings.Favorites.ITEM_TYPE_CUSTOM_INTENT: //1."91快捷"里的图标，如应用列表、通知栏开关等; 2."一键装机"和"热门游戏"
+		case LauncherSettings.Favorites.ITEM_TYPE_CUSTOM_INTENT: //1."快捷"里的图标，如应用列表、通知栏开关等; 2."一键装机"和"热门游戏"
 		case LauncherSettings.Favorites.ITEM_TYPE_INDEPENDENCE:
 		case LauncherSettings.Favorites.ITEM_TYPE_SHORTCUT: //系统的快捷方式，如书签
 			view = mLauncher.createCommonAppView((ApplicationInfo) itemInfo);
@@ -150,7 +150,7 @@ public class Workspace extends ScreenViewGroup implements DragScroller, AnyCallb
 	public void updateLightbar(){
 		if(isOnSpringMode())
 			return;
-		lightbar.scrollHighLight(mScrollX);
+//		lightbar.scrollHighLight(mScrollX);
 	}
 	
 	//移除默认空屏幕

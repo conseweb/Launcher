@@ -1,18 +1,16 @@
-package test;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+package com.bitants.launcherdev.test;
 
 import android.util.Log;
 import android.view.View;
-
 import com.bitants.launcherdev.launcher.Workspace;
 import com.bitants.launcherdev.launcher.info.FolderInfo;
 import com.bitants.launcherdev.launcher.screens.CellLayout;
 import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 
 public class DataTest {

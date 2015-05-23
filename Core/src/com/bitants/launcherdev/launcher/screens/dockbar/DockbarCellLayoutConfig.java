@@ -16,9 +16,9 @@ import com.bitants.launcherdev.launcher.config.BaseConfig;
 import com.bitants.launcherdev.launcher.config.preference.BaseConfigPreferences;
 
 /**
- * Description: DockbarCellLayoutConfig基本配置信息
+ * Description: DockbarCellLayoutConfig 基本配置信息
  */
-public class DockbarCellLayoutConfig{
+public class DockbarCellLayoutConfig {
 	private static boolean mPortrait = true;//横竖屏
 	
 	private static int portMarginTop;
