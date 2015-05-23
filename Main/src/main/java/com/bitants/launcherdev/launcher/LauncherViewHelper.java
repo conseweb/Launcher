@@ -7,14 +7,16 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import com.bitants.common.launcher.BaseLauncher;
 import com.bitants.launcher.R;
-import com.bitants.launcherdev.framework.view.bubble.LauncherBubbleView;
-import com.bitants.launcherdev.kitset.util.ScreenUtil;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.launcher.config.CellLayoutConfig;
-import com.bitants.launcherdev.launcher.config.preference.BaseConfigPreferences;
-import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.bitants.launcherdev.launcher.support.BaseLauncherViewHelper;
+import com.bitants.common.framework.view.bubble.LauncherBubbleView;
+import com.bitants.common.kitset.util.ScreenUtil;
+import com.bitants.common.launcher.config.BaseConfig;
+import com.bitants.common.launcher.config.CellLayoutConfig;
+import com.bitants.common.launcher.config.preference.BaseConfigPreferences;
+import com.bitants.common.launcher.screens.CellLayout;
+import com.bitants.common.launcher.support.BaseLauncherViewHelper;
 
 /**
  * 扩展处理显示到桌面的视图

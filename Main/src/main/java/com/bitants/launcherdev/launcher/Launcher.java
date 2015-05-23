@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import com.avos.avoscloud.AVAnalytics;
+import com.bitants.common.launcher.BaseLauncher;
 import com.bitants.launcher.R;
 import com.bitants.launcherdev.app.AppInfoIntentCommandAdapter;
 import com.bitants.launcherdev.app.CustomIntentSwitcherController;
@@ -23,36 +24,38 @@ import com.bitants.launcherdev.app.IntentCommand;
 import com.bitants.launcherdev.datamodel.Global;
 import com.bitants.launcherdev.folder.LauncherFolderReceiverFactory;
 import com.bitants.launcherdev.folder.model.FolderSwitchController;
-import com.bitants.launcherdev.framework.OnKeyDownListenner;
-import com.bitants.launcherdev.framework.view.bubble.LauncherBubbleManager;
+import com.bitants.common.framework.OnKeyDownListenner;
+import com.bitants.common.framework.view.bubble.LauncherBubbleManager;
 import com.bitants.launcherdev.integratefoler.IntegrateFolder;
-import com.bitants.launcherdev.kitset.util.BaseBitmapUtils;
-import com.bitants.launcherdev.kitset.util.StatusBarUtil;
-import com.bitants.launcherdev.kitset.util.StringUtil;
-import com.bitants.launcherdev.kitset.util.WallpaperUtil;
+import com.bitants.common.kitset.util.BaseBitmapUtils;
+import com.bitants.common.kitset.util.StatusBarUtil;
+import com.bitants.common.kitset.util.StringUtil;
+import com.bitants.common.kitset.util.WallpaperUtil;
 import com.bitants.launcherdev.launcher.LauncherSettings.Favorites;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.launcher.config.CellLayoutConfig;
+import com.bitants.common.launcher.config.BaseConfig;
+import com.bitants.common.launcher.config.CellLayoutConfig;
 import com.bitants.launcherdev.launcher.edit.LauncherEditView;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
-import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.bitants.launcherdev.launcher.screens.DeleteZone;
-import com.bitants.launcherdev.launcher.support.LauncherOnStartDispatcher;
-import com.bitants.launcherdev.launcher.support.WallpaperHelper;
-import com.bitants.launcherdev.launcher.touch.BaseDragController;
-import com.bitants.launcherdev.launcher.view.BaseDeleteZoneTextView;
-import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
-import com.bitants.launcherdev.launcher.view.icon.ui.util.BeansContainer;
+import com.bitants.common.launcher.info.ApplicationInfo;
+import com.bitants.common.launcher.info.FolderInfo;
+import com.bitants.common.launcher.model.BaseLauncherModel;
+import com.bitants.common.launcher.screens.CellLayout;
+import com.bitants.common.launcher.screens.DeleteZone;
+import com.bitants.common.launcher.support.LauncherOnStartDispatcher;
+import com.bitants.common.launcher.support.WallpaperHelper;
+import com.bitants.common.launcher.touch.BaseDragController;
+import com.bitants.common.launcher.view.BaseDeleteZoneTextView;
+import com.bitants.common.launcher.view.icon.ui.folder.FolderIconTextView;
+import com.bitants.common.launcher.view.icon.ui.util.BeansContainer;
 import com.bitants.launcherdev.menu.LauncherMenu;
-//import com.bitants.launcherdev.push.PushManager;
+//import PushManager;
 //import com.bitants.launcherdev.push.PushSDKAdapter;
-import com.bitants.launcherdev.theme.adaption.ThemeIconIntentAdaptation;
+import com.bitants.common.theme.adaption.ThemeIconIntentAdaptation;
 import com.bitants.launcherdev.util.ActivityActionUtil;
 
 import java.io.File;
 import java.util.List;
+
+import hugo.weaving.DebugLog;
 
 public class Launcher extends BaseLauncher {
 
@@ -77,6 +80,7 @@ public class Launcher extends BaseLauncher {
 	
 	public CustomIntentSwitcherController mCustomIntentSwitcherController;
 
+    @DebugLog
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -85,6 +89,7 @@ public class Launcher extends BaseLauncher {
 		BeansContainer.getInstance().setFolderReceiverFactory(new LauncherFolderReceiverFactory());
 	}
 
+    @DebugLog
 	@Override
 	public void setupReadMeForNewUser(){
 		try {
@@ -103,6 +108,7 @@ public class Launcher extends BaseLauncher {
 		}
 	}
 
+    @DebugLog
 	public boolean onLongClick(View v) {
 		// 编辑被锁定桌面上的任何长按事件都不响应
 		if (!BaseConfig.allowEdit(getBaseContext())) {
@@ -380,7 +386,7 @@ public class Launcher extends BaseLauncher {
 	}
 	
 	@Override
-	void setupHelper() { 
+	public void setupHelper() {
 		super.setupHelper();
 		mCustomIntentSwitcherController = CustomIntentSwitcherController.getNewInstance();
 
@@ -457,6 +463,7 @@ public class Launcher extends BaseLauncher {
 	/**
 	 * 初始化编辑模式栏
 	 */
+    @DebugLog
 	public void setupEditor() {
 		if (editor != null) {
 			return;
@@ -491,15 +498,16 @@ public class Launcher extends BaseLauncher {
 	}
 	
 	@Override
-	public BaseDeleteZoneTextView getDeleteZoneTextView(){
+	public BaseDeleteZoneTextView getDeleteZoneTextView() {
 		return (BaseDeleteZoneTextView) findViewById(R.id.im_delete);
 	}
 	
 	@Override
-	public BaseDeleteZoneTextView getUninstallZoneTextView(){
+	public BaseDeleteZoneTextView getUninstallZoneTextView() {
 		return (BaseDeleteZoneTextView) findViewById(R.id.im_uninstallIm);
 	}
-	
+
+    @DebugLog
 	@Override
 	public void onCreateEnd(){
 		addOnKeyDownListener(mDragController);

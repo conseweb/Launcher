@@ -1,7 +1,7 @@
 package com.bitants.launcherdev.launcher.edit.data;
 
 import android.graphics.drawable.Drawable;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
+import com.bitants.common.framework.view.commonsliding.datamodel.ICommonDataItem;
 
 /**
  *

@@ -9,11 +9,11 @@ import android.os.RemoteException;
 import android.util.Log;
 import com.bitants.launcherdev.datamodel.Global;
 import com.bitants.launcherdev.launcher.LauncherSettings.Favorites;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
-import com.bitants.launcherdev.launcher.support.BaseIconCache;
+import com.bitants.common.launcher.info.ApplicationInfo;
+import com.bitants.common.launcher.info.FolderInfo;
+import com.bitants.common.launcher.info.ItemInfo;
+import com.bitants.common.launcher.model.BaseLauncherModel;
+import com.bitants.common.launcher.support.BaseIconCache;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;

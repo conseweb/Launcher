@@ -10,11 +10,11 @@ import android.content.pm.ResolveInfo;
 import android.content.res.XmlResourceParser;
 import com.android.internal.util.XmlUtils;
 import com.bitants.launcherdev.datamodel.Global;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
+import com.bitants.common.framework.view.commonsliding.datamodel.ICommonDataItem;
 import com.bitants.launcherdev.kitset.invoke.ForeignPackage;
-import com.bitants.launcherdev.kitset.util.AndroidPackageUtils;
+import com.bitants.common.kitset.util.AndroidPackageUtils;
 import com.bitants.launcherdev.kitset.util.ComparatorUtil;
-import com.bitants.launcherdev.kitset.util.StringUtil;
+import com.bitants.common.kitset.util.StringUtil;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 

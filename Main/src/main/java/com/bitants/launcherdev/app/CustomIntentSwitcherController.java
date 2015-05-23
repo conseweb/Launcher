@@ -2,9 +2,9 @@ package com.bitants.launcherdev.app;
 
 import android.content.Context;
 import android.util.Log;
-import com.bitants.launcherdev.kitset.util.StringUtil;
+import com.bitants.common.kitset.util.StringUtil;
 import com.bitants.launcherdev.launcher.LauncherSettings.Favorites;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
+import com.bitants.common.launcher.info.ApplicationInfo;
 
 import java.util.ArrayList;
 

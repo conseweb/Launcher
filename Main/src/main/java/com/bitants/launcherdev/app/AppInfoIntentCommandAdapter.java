@@ -5,9 +5,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
-import com.bitants.launcherdev.framework.view.dialog.CommonDialog;
+import com.bitants.common.framework.view.dialog.CommonDialog;
 import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
+import com.bitants.common.launcher.info.ApplicationInfo;
 
 
 /**

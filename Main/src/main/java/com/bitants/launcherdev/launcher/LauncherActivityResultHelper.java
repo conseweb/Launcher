@@ -5,11 +5,11 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProviderInfo;
 import android.content.Intent;
 import android.os.Bundle;
-import com.bitants.launcherdev.kitset.util.SystemUtil;
-import com.bitants.launcherdev.launcher.config.CellLayoutConfig;
-import com.bitants.launcherdev.launcher.info.WidgetInfo;
-import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
-import com.bitants.launcherdev.launcher.support.BaseCellLayoutHelper;
+import com.bitants.common.kitset.util.SystemUtil;
+import com.bitants.common.launcher.config.CellLayoutConfig;
+import com.bitants.common.launcher.info.WidgetInfo;
+import com.bitants.common.launcher.model.BaseLauncherModel;
+import com.bitants.common.launcher.support.BaseCellLayoutHelper;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

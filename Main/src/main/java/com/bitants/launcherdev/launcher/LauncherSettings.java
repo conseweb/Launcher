@@ -1,6 +1,6 @@
 package com.bitants.launcherdev.launcher;
 
-import com.bitants.launcherdev.launcher.model.BaseLauncherSettings;
+import com.bitants.common.launcher.model.BaseLauncherSettings;
 
 /**
  * Settings related utilities.

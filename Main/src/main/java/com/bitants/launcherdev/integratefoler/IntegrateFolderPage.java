@@ -8,11 +8,11 @@ import android.widget.Scroller;
 import com.bitants.launcher.R;
 import com.bitants.launcherdev.launcher.DragController;
 import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.support.BaseLauncherViewHelper;
-import com.bitants.launcherdev.launcher.touch.DragSource;
-import com.bitants.launcherdev.launcher.view.DragView;
+import com.bitants.common.launcher.info.ApplicationInfo;
+import com.bitants.common.launcher.info.FolderInfo;
+import com.bitants.common.launcher.support.BaseLauncherViewHelper;
+import com.bitants.common.launcher.touch.DragSource;
+import com.bitants.common.launcher.view.DragView;
 
 import java.util.List;
 

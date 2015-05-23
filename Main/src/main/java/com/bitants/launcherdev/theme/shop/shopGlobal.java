@@ -10,7 +10,7 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.bitants.launcherdev.kitset.util.FileUtil;
+import com.bitants.common.kitset.util.FileUtil;
 
 import java.io.*;
 import java.net.HttpURLConnection;

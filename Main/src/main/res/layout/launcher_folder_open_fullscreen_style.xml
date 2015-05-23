@@ -117,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/line_layout" >
 
-                <com.bitants.launcherdev.framework.view.commonsliding.CommonLightbar
+                <com.bitants.common.framework.view.commonsliding.CommonLightbar
                     android:id="@+id/light_bar"
                     android:layout_width="wrap_content"
                     android:layout_height="10dp"

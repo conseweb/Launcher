@@ -19,8 +19,8 @@ import com.bitants.launcherdev.launcher.appslist.search.ContactSearch;
 import com.bitants.launcherdev.launcher.appslist.search.MatchType;
 import com.bitants.launcherdev.launcher.appslist.utils.CellLayoutItem;
 import com.bitants.launcherdev.launcher.appslist.utils.CellLayoutItemSortByLabelHanzi;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.view.icon.ui.impl.AppMaskTextView;
+import com.bitants.common.launcher.info.ApplicationInfo;
+import com.bitants.common.launcher.view.icon.ui.impl.AppMaskTextView;
 import com.bitants.launcherdev.util.ActivityActionUtil;
 
 import java.util.ArrayList;

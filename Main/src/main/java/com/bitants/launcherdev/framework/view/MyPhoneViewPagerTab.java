@@ -16,8 +16,8 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import com.bitants.launcher.R;
 import com.bitants.launcherdev.datamodel.CommonGlobal;
-import com.bitants.launcherdev.kitset.util.ColorUtil;
-import com.bitants.launcherdev.kitset.util.ScreenUtil;
+import com.bitants.common.kitset.util.ColorUtil;
+import com.bitants.common.kitset.util.ScreenUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;

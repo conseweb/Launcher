@@ -1,9 +1,10 @@
 package com.bitants.launcherdev.launcher;
 
+import com.bitants.common.launcher.BaseLauncherApplication;
 import com.bitants.launcherdev.kitset.config.ConfigDataBaseHelper;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.launcher.model.load.LauncherLoaderHelper;
-import com.bitants.launcherdev.launcher.support.DBHelperFactory;
+import com.bitants.common.launcher.config.BaseConfig;
+import com.bitants.common.launcher.model.load.LauncherLoaderHelper;
+import com.bitants.common.launcher.support.DBHelperFactory;
 
 import java.io.File;
 

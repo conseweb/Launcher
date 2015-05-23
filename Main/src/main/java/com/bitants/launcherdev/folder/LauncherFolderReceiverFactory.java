@@ -1,7 +1,7 @@
 package com.bitants.launcherdev.folder;
 
-import com.bitants.launcherdev.launcher.view.icon.ui.folder.BaseFolderReceiver;
-import com.bitants.launcherdev.launcher.view.icon.ui.util.IconTypeFactoryManager.FolderReceiverFactory;
+import com.bitants.common.launcher.view.icon.ui.folder.BaseFolderReceiver;
+import com.bitants.common.launcher.view.icon.ui.util.IconTypeFactoryManager.FolderReceiverFactory;
 
 /**
  *

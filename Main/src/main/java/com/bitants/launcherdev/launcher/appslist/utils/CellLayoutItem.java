@@ -5,7 +5,7 @@ import android.view.View;
 import com.bitants.launcherdev.launcher.appslist.search.MatchType;
 import com.bitants.launcherdev.launcher.appslist.search.PyEntity;
 import com.bitants.launcherdev.launcher.appslist.search.StringUtil;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
+import com.bitants.common.launcher.info.ApplicationInfo;
 
 import java.util.Locale;
 

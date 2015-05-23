@@ -1,7 +1,8 @@
 package com.bitants.launcherdev.kitset.util;
 
+import com.bitants.common.kitset.util.StringUtil;
 import com.bitants.launcherdev.kitset.Analytics.MoAnalytics;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
+import com.bitants.common.launcher.config.BaseConfig;
 
 import java.net.URLEncoder;
 

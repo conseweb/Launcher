@@ -3,7 +3,7 @@ package com.bitants.launcherdev.datamodel;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
+import com.bitants.common.launcher.config.BaseConfig;
 
 public class Global extends BaseConfig {
 

@@ -4,9 +4,9 @@ import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-import com.bitants.launcherdev.kitset.util.FileUtil;
-import com.bitants.launcherdev.kitset.util.ThreadUtil;
-import com.bitants.launcherdev.theme.data.ThemeFormart;
+import com.bitants.common.kitset.util.FileUtil;
+import com.bitants.common.kitset.util.ThreadUtil;
+import com.bitants.common.theme.data.ThemeFormart;
 import com.bitants.launcherdev.theme.shop.shopGlobal;
 
 import java.io.File;

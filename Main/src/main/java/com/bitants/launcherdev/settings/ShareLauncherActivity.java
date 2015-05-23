@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 import com.bitants.launcher.R;
-import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
+import com.bitants.common.launcher.config.preference.SettingsConstants;
 
 /**
  * 分享桌面

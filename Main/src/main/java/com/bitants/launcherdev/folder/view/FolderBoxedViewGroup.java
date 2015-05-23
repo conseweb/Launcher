@@ -6,7 +6,7 @@ import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.RelativeLayout;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
+import com.bitants.common.launcher.config.BaseConfig;
 
 public class FolderBoxedViewGroup extends RelativeLayout {
 	

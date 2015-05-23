@@ -1,5 +1,7 @@
 package com.bitants.launcherdev.framework.effect;
 
+import com.bitants.common.framework.effect.EffectsType;
+
 /**
  * 特效配置类 </br>
  */

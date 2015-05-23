@@ -85,7 +85,7 @@
         android:layout_below="@id/launcher_edit_top_layout"
         android:background="@drawable/launcher_edit_view_bg" >
 
-        <com.bitants.launcherdev.framework.view.commonsliding.CommonLightbar
+        <com.bitants.common.framework.view.commonsliding.CommonLightbar
             android:id="@+id/launcher_edit_lightbar"
             android:layout_width="match_parent"
             android:layout_height="15dip"

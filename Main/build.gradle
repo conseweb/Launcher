@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+apply plugin: 'hugo'
+
+android {
+    compileSdkVersion 16
+    buildToolsVersion "21.1.1"
+
+    enforceUniquePackageName = true
+    defaultConfig {
+        applicationId "com.bitants.launcher"
+        minSdkVersion 7
+        targetSdkVersion 10
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles 'proguard.cfg'
+        }
+    }
+
+    dexOptions {
+        jumboMode = true
+    }
+}
+
+dependencies {
+    compile project(':core')
+    compile files('libs/supportv4jar.jar')
+    compile files('libs/classes.jar')
+}

@@ -1,7 +1,7 @@
 package com.bitants.launcherdev.datamodel;
 
 import android.os.Environment;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
+import com.bitants.common.launcher.config.BaseConfig;
 
 public class CommonGlobal extends BaseConfig {
 	/** OLD_DIR */

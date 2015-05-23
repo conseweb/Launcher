@@ -1,6 +1,6 @@
 package com.bitants.launcherdev.launcher.edit.data;
 
-import com.bitants.launcherdev.theme.data.ThemeGlobal;
+import com.bitants.common.theme.data.ThemeGlobal;
 
 
 /**

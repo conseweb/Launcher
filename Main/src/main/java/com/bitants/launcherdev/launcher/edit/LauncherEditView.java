@@ -11,20 +11,21 @@ import android.view.animation.AnimationUtils;
 import android.widget.CheckedTextView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
+
 import com.bitants.launcher.R;
-import com.bitants.launcherdev.framework.view.BaseLineLightBar;
-import com.bitants.launcherdev.framework.view.commonsliding.CommonLightbar;
-import com.bitants.launcherdev.framework.view.commonsliding.CommonSlidingView.OnCommonSlidingViewClickListener;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.CommonSlidingViewData;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonData;
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
+import com.bitants.common.framework.view.BaseLineLightBar;
+import com.bitants.common.framework.view.commonsliding.CommonLightbar;
+import com.bitants.common.framework.view.commonsliding.CommonSlidingView.OnCommonSlidingViewClickListener;
+import com.bitants.common.framework.view.commonsliding.datamodel.CommonSlidingViewData;
+import com.bitants.common.framework.view.commonsliding.datamodel.ICommonData;
+import com.bitants.common.framework.view.commonsliding.datamodel.ICommonDataItem;
 import com.bitants.launcherdev.launcher.Launcher;
 import com.bitants.launcherdev.launcher.LauncherActivityResultHelper;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditAddItemInfo;
-import com.bitants.launcherdev.launcher.edit.data.LauncherEditItemInfo;
-import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
-import com.bitants.launcherdev.launcher.support.BaseCellLayoutHelper;
+import com.bitants.common.launcher.config.preference.BaseSettingsPreference;
+import com.bitants.launcherdev.launcher.edit.data.LauncherEditEffectItemInfo;
+import com.bitants.common.launcher.screens.dockbar.BaseMagicDockbar;
+import com.bitants.common.launcher.support.BaseCellLayoutHelper;
+import com.bitants.launcherdev.widget.LauncherWidgetInfo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,9 +67,11 @@ public class LauncherEditView extends RelativeLayout implements OnCommonSlidingV
 	
 	private List<ICommonDataItem> commonDataItems =  new ArrayList<ICommonDataItem>();
 	private List<ICommonDataItem> widgetDataItems = new ArrayList<ICommonDataItem>();
-	
-	public LauncherEditView(Context context) {
+    private Context mContext;
+
+    public LauncherEditView(Context context) {
 		super(context);
+        mContext = context;
 	}
 
 	public LauncherEditView(Context context, AttributeSet attrs) {
@@ -118,7 +121,7 @@ public class LauncherEditView extends RelativeLayout implements OnCommonSlidingV
 	};
 	
 	@Override
-	protected void onFinishInflate() {		
+	protected void onFinishInflate() {
 		addBtn = (CheckedTextView) findViewById(R.id.launcher_edit_add_btn);
 		individalBtn = (CheckedTextView) findViewById(R.id.launcher_edit_individal_btn);
 
@@ -296,7 +299,6 @@ public class LauncherEditView extends RelativeLayout implements OnCommonSlidingV
 	
 	/**
 	 * 立即布局
-	 * @param slidingView
 	 */
 	public void relayout(){
 		// TODO Auto-generated method stub
@@ -307,7 +309,7 @@ public class LauncherEditView extends RelativeLayout implements OnCommonSlidingV
 	
 	/**
 	 * 立即布局
-	 * @param slidingView
+	 * @param screen
 	 */
 	public void relayout(final int screen){
 		// TODO Auto-generated method stub

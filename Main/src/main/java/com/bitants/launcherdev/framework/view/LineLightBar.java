@@ -3,12 +3,14 @@ package com.bitants.launcherdev.framework.view;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+
+import com.bitants.common.framework.view.BaseLineLightBar;
 import com.bitants.launcher.R;
-import com.bitants.launcherdev.launcher.config.preference.BaseSettingsPreference;
-import com.bitants.launcherdev.theme.ThemeManagerFactory;
-import com.bitants.launcherdev.theme.assit.ThemeUIRefreshAssit;
-import com.bitants.launcherdev.theme.assit.ThemeUIRefreshListener;
-import com.bitants.launcherdev.theme.data.BaseThemeData;
+import com.bitants.common.launcher.config.preference.BaseSettingsPreference;
+import com.bitants.common.theme.ThemeManagerFactory;
+import com.bitants.common.theme.assit.ThemeUIRefreshAssit;
+import com.bitants.common.theme.assit.ThemeUIRefreshListener;
+import com.bitants.common.theme.data.BaseThemeData;
 
 /**
  * 仅适用于主屏幕指示灯
@@ -50,7 +52,7 @@ public class LineLightBar extends BaseLineLightBar implements ThemeUIRefreshList
 	
 	/**
 	 * 应用主题皮肤
-	 * @see com.bitants.launcherdev.theme.assit.ThemeUIRefreshListener#applyTheme()
+	 * @see com.bitants.common.theme.assit.ThemeUIRefreshListener#applyTheme()
 	 */
 	@Override
 	public void applyTheme() {

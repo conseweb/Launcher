@@ -2,10 +2,10 @@ package com.bitants.launcherdev.settings;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.launcher.config.preference.BaseSettingsPreference;
-import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
-import com.bitants.launcherdev.theme.data.ThemeGlobal;
+import com.bitants.common.launcher.config.BaseConfig;
+import com.bitants.common.launcher.config.preference.BaseSettingsPreference;
+import com.bitants.common.launcher.config.preference.SettingsConstants;
+import com.bitants.common.theme.data.ThemeGlobal;
 
 /**
  * 桌面设置Preference持久类

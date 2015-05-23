@@ -3,8 +3,8 @@ package com.bitants.launcherdev.framework.httplib;
 import android.content.Context;
 import com.bitants.launcherdev.kitset.Analytics.MoAnalytics;
 import com.bitants.launcherdev.kitset.util.DocumentHelper;
-import com.bitants.launcherdev.kitset.util.StringUtil;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
+import com.bitants.common.kitset.util.StringUtil;
+import com.bitants.common.kitset.util.TelephoneUtil;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 

@@ -5,12 +5,16 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
+
+import com.bitants.common.kitset.util.MessageUtils;
+import com.bitants.common.kitset.util.OpenRootUtil;
+import com.bitants.common.kitset.util.TelephoneUtil;
 import com.bitants.launcher.R;
 import com.bitants.launcherdev.datamodel.db.MyPhoneDB;
-import com.bitants.launcherdev.framework.ViewFactory;
-import com.bitants.launcherdev.framework.view.dialog.CommonDialog;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
+import com.bitants.common.framework.ViewFactory;
+import com.bitants.common.framework.view.dialog.CommonDialog;
+import com.bitants.common.launcher.config.BaseConfig;
+import com.bitants.common.launcher.config.preference.SettingsConstants;
 
 import java.io.File;
 
@@ -106,7 +110,7 @@ public class ApkInstaller {
 						// 设置已提示过
 						setSilentInstallTiped(context);
 						// 开启静默安装
-						boolean open = OpenRootUtil.openSuperShell(context, 15*1000);
+						boolean open = OpenRootUtil.openSuperShell(context, 15 * 1000);
 						if (!open) {
 							// 开启失败，采用普通安装
 							MessageUtils.makeShortToast(context, context.getString(R.string.settings_advanced_silent_install_open_failed));

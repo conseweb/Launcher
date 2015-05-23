@@ -1,6 +1,6 @@
 package com.bitants.launcherdev.launcher.edit;
 
-import com.bitants.launcherdev.framework.view.commonsliding.datamodel.ICommonDataItem;
+import com.bitants.common.framework.view.commonsliding.datamodel.ICommonDataItem;
 import com.bitants.launcherdev.launcher.edit.data.LauncherEditEffectItemInfo;
 import com.bitants.launcherdev.launcher.edit.data.LauncherEditThemeItemInfo;
 import com.bitants.launcherdev.launcher.edit.data.LauncherEditWallpaperItemInfo;

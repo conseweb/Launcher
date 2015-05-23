@@ -12,7 +12,7 @@ import com.bitants.launcher.R;
 import com.bitants.launcherdev.launcher.Launcher;
 import com.bitants.launcherdev.launcher.Workspace;
 import com.bitants.launcherdev.launcher.edit.LauncherEditView;
-import com.bitants.launcherdev.launcher.screens.BaseLauncherMenu;
+import com.bitants.common.launcher.screens.BaseLauncherMenu;
 import com.bitants.launcherdev.settings.HomeSettingsActivity;
 
 import java.util.ArrayList;

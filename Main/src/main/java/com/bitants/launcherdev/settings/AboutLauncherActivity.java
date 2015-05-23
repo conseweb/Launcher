@@ -11,10 +11,10 @@ import android.widget.TextView;
 import com.bitants.launcher.R;
 import com.bitants.launcherdev.datamodel.Global;
 import com.bitants.launcherdev.kitset.util.HiLauncherEXUtil;
-import com.bitants.launcherdev.kitset.util.SystemUtil;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
+import com.bitants.common.kitset.util.SystemUtil;
+import com.bitants.common.kitset.util.TelephoneUtil;
 import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
+import com.bitants.common.launcher.config.preference.SettingsConstants;
 
 /**
  * 关于桌面

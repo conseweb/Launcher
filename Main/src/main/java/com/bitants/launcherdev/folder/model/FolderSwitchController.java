@@ -6,19 +6,22 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
+
+import com.bitants.common.folder.model.AbstractFolderSwitchController;
+import com.bitants.common.folder.model.IFolderHelper;
 import com.bitants.launcher.R;
-import com.bitants.launcherdev.folder.model.stylehelper.AbstractFolderStyleHelper;
+import com.bitants.common.folder.model.stylehelper.AbstractFolderStyleHelper;
 import com.bitants.launcherdev.folder.view.FolderView;
-import com.bitants.launcherdev.framework.OnKeyDownListenner;
-import com.bitants.launcherdev.framework.view.commonsliding.CommonLightbar;
-import com.bitants.launcherdev.kitset.util.ScreenUtil;
+import com.bitants.common.framework.OnKeyDownListenner;
+import com.bitants.common.framework.view.commonsliding.CommonLightbar;
+import com.bitants.common.kitset.util.ScreenUtil;
 import com.bitants.launcherdev.launcher.DragController;
 import com.bitants.launcherdev.launcher.Launcher;
 import com.bitants.launcherdev.launcher.LauncherSettings;
 import com.bitants.launcherdev.launcher.Workspace;
-import com.bitants.launcherdev.launcher.config.preference.BaseSettingsPreference;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
+import com.bitants.common.launcher.config.preference.BaseSettingsPreference;
+import com.bitants.common.launcher.info.FolderInfo;
+import com.bitants.common.launcher.view.icon.ui.folder.FolderIconTextView;
 
 /**
  * <p>文件夹逻辑控制器<p>

@@ -10,8 +10,11 @@ import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
+
+import com.bitants.common.kitset.util.AndroidPackageUtils;
+import com.bitants.common.kitset.util.StringUtil;
 import com.bitants.launcher.R;
-import com.bitants.launcherdev.framework.ViewFactory;
+import com.bitants.common.framework.ViewFactory;
 
 import java.io.File;
 import java.io.FileOutputStream;

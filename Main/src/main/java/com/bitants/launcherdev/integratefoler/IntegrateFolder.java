@@ -17,16 +17,16 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.bitants.launcher.R;
-import com.bitants.launcherdev.framework.OnKeyDownListenner;
+import com.bitants.common.framework.OnKeyDownListenner;
 import com.bitants.launcherdev.launcher.DragController;
 import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.screens.DragLayer;
-import com.bitants.launcherdev.launcher.touch.DragSource;
-import com.bitants.launcherdev.launcher.touch.DropTarget;
-import com.bitants.launcherdev.launcher.view.DragView;
-import test.DataTest;
+import com.bitants.common.launcher.info.ApplicationInfo;
+import com.bitants.common.launcher.info.FolderInfo;
+import com.bitants.common.launcher.screens.DragLayer;
+import com.bitants.common.launcher.touch.DragSource;
+import com.bitants.common.launcher.touch.DropTarget;
+import com.bitants.common.launcher.view.DragView;
+import com.bitants.launcherdev.test.DataTest;
 
 import java.util.List;
 

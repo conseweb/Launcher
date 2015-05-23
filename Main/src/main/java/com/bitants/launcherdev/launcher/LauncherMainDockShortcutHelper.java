@@ -8,8 +8,8 @@ import com.bitants.launcher.R;
 import com.bitants.launcherdev.app.CustomIntent;
 import com.bitants.launcherdev.kitset.util.BitmapUtils;
 import com.bitants.launcherdev.launcher.LauncherSettings.Favorites;
-import com.bitants.launcherdev.launcher.config.CellLayoutConfig;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
+import com.bitants.common.launcher.config.CellLayoutConfig;
+import com.bitants.common.launcher.info.ApplicationInfo;
 import com.bitants.launcherdev.theme.data.ThemeData;
 
 /**

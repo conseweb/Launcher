@@ -9,15 +9,15 @@ import com.bitants.launcher.R;
 import com.bitants.launcherdev.datamodel.Global;
 import com.bitants.launcherdev.folder.view.FolderBoxedViewGroup;
 import com.bitants.launcherdev.folder.view.FolderSlidingView;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.launcher.config.LauncherConfig;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.screens.dockbar.BaseMagicDockbar;
-import com.bitants.launcherdev.launcher.screens.dockbar.DockbarCellLayout;
-import com.bitants.launcherdev.launcher.touch.DragSource;
-import com.bitants.launcherdev.launcher.view.DragView;
-import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
-import com.bitants.launcherdev.launcher.view.icon.ui.impl.AppMaskTextView;
+import com.bitants.common.launcher.config.BaseConfig;
+import com.bitants.common.launcher.config.LauncherConfig;
+import com.bitants.common.launcher.info.ItemInfo;
+import com.bitants.common.launcher.screens.dockbar.BaseMagicDockbar;
+import com.bitants.common.launcher.screens.dockbar.DockbarCellLayout;
+import com.bitants.common.launcher.touch.DragSource;
+import com.bitants.common.launcher.view.DragView;
+import com.bitants.common.launcher.view.icon.ui.folder.FolderIconTextView;
+import com.bitants.common.launcher.view.icon.ui.impl.AppMaskTextView;
 
 import java.util.*;
 
@@ -136,7 +136,7 @@ public class MagicDockbar extends BaseMagicDockbar {
 	
 	/**
 	 * <br>Description: 应用主题皮肤
-	 * @see com.bitants.launcherdev.theme.assit.ThemeUIRefreshListener#applyTheme()
+	 * @see com.bitants.common.theme.assit.ThemeUIRefreshListener#applyTheme()
 	 */
 	@Override
 	public void applyTheme() {

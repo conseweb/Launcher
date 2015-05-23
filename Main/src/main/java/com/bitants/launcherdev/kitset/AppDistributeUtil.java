@@ -6,10 +6,10 @@ import android.util.Log;
 import com.bitants.launcherdev.analysis.AppAnalysisConstant;
 import com.bitants.launcherdev.analysis.distribute.AppDistributePool;
 import com.bitants.launcherdev.analysis.distribute.AppDistributeService;
-import com.bitants.launcherdev.kitset.util.StringUtil;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
-import com.bitants.launcherdev.kitset.util.ThreadUtil;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
+import com.bitants.common.kitset.util.StringUtil;
+import com.bitants.common.kitset.util.TelephoneUtil;
+import com.bitants.common.kitset.util.ThreadUtil;
+import com.bitants.common.launcher.config.BaseConfig;
 import com.bitants.launcherdev.net.ThemeHttpCommon;
 
 /**

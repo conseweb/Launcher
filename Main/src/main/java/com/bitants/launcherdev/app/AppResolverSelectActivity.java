@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import com.bitants.launcherdev.kitset.util.SystemUtil;
+import com.bitants.common.kitset.util.SystemUtil;
 
 
 public class AppResolverSelectActivity extends Activity {

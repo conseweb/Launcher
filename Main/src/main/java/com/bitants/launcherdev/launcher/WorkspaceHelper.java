@@ -2,17 +2,19 @@ package com.bitants.launcherdev.launcher;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.view.View;
+
+import com.bitants.common.launcher.BaseLauncher;
 import com.bitants.launcherdev.datamodel.Global;
-import com.bitants.launcherdev.kitset.util.ThreadUtil;
-import com.bitants.launcherdev.launcher.config.ConfigFactory;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.info.WidgetInfo;
-import com.bitants.launcherdev.launcher.model.BaseLauncherModel;
-import com.bitants.launcherdev.launcher.model.BaseLauncherSettings;
-import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.bitants.launcherdev.launcher.screens.ScreenViewGroup;
-import com.bitants.launcherdev.launcher.support.LauncherAppWidgetHost;
+import com.bitants.common.kitset.util.ThreadUtil;
+import com.bitants.common.launcher.config.ConfigFactory;
+import com.bitants.common.launcher.info.FolderInfo;
+import com.bitants.common.launcher.info.ItemInfo;
+import com.bitants.common.launcher.info.WidgetInfo;
+import com.bitants.common.launcher.model.BaseLauncherModel;
+import com.bitants.common.launcher.model.BaseLauncherSettings;
+import com.bitants.common.launcher.screens.CellLayout;
+import com.bitants.common.launcher.screens.ScreenViewGroup;
+import com.bitants.common.launcher.support.LauncherAppWidgetHost;
 
 import java.util.ArrayList;
 import java.util.List;

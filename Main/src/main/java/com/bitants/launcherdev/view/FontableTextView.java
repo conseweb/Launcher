@@ -7,9 +7,9 @@ import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
-import com.bitants.launcherdev.kitset.util.PaintUtils2;
-import com.bitants.launcherdev.launcher.broadcast.HiBroadcastReceiver;
-import com.bitants.launcherdev.launcher.config.preference.SettingsConstants;
+import com.bitants.common.kitset.util.PaintUtils2;
+import com.bitants.common.launcher.broadcast.HiBroadcastReceiver;
+import com.bitants.common.launcher.config.preference.SettingsConstants;
 
 /**
  * <p>类说明：  支持从配置中读取字体的TextView</p>

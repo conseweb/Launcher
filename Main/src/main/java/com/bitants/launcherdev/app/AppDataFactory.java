@@ -3,9 +3,11 @@ package com.bitants.launcherdev.app;
 import android.content.ComponentName;
 import android.content.Context;
 import android.database.Cursor;
-import com.bitants.launcherdev.app.data.AppDataBase;
-import com.bitants.launcherdev.app.data.AppTable;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
+
+import com.bitants.common.app.BaseAppDataFactory;
+import com.bitants.common.app.data.AppDataBase;
+import com.bitants.common.app.data.AppTable;
+import com.bitants.common.launcher.info.ApplicationInfo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +16,7 @@ import java.util.List;
 /**
  * 应用程序工厂 <br>
  */
-public class AppDataFactory extends BaseAppDataFactory{
+public class AppDataFactory extends BaseAppDataFactory {
 	private static final String TAG = "AppDataFactory";	
 	
 	private static AppDataFactory sInstance;

@@ -3,7 +3,7 @@ package com.bitants.launcherdev.launcher;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
-import com.bitants.launcherdev.launcher.broadcast.HiBroadcastStaticReceiver;
+import com.bitants.common.launcher.broadcast.HiBroadcastStaticReceiver;
 
 public class ApplicationChangeReceiver extends HiBroadcastStaticReceiver {
 	

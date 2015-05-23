@@ -6,12 +6,14 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.view.View;
 import android.view.Window;
+
+import com.bitants.common.folder.model.IFolderHelper;
 import com.bitants.launcher.R;
-import com.bitants.launcherdev.app.SerializableAppInfo;
+import com.bitants.common.app.SerializableAppInfo;
 import com.bitants.launcherdev.folder.view.FolderSlidingView;
 import com.bitants.launcherdev.launcher.Launcher;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
+import com.bitants.common.launcher.info.FolderInfo;
+import com.bitants.common.launcher.view.icon.ui.folder.FolderIconTextView;
 
 import java.util.ArrayList;
 

@@ -3,12 +3,12 @@ package com.bitants.launcherdev.launcher;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.bitants.launcherdev.launcher.touch.DragSource;
-import com.bitants.launcherdev.launcher.view.BaseDeleteZoneTextView;
-import com.bitants.launcherdev.launcher.view.DragView;
+import com.bitants.common.launcher.info.ApplicationInfo;
+import com.bitants.common.launcher.info.ItemInfo;
+import com.bitants.common.launcher.screens.CellLayout;
+import com.bitants.common.launcher.touch.DragSource;
+import com.bitants.common.launcher.view.BaseDeleteZoneTextView;
+import com.bitants.common.launcher.view.DragView;
 import com.bitants.launcherdev.util.AppUninstallUtil;
 
 public class DeleteZoneTextView extends BaseDeleteZoneTextView {

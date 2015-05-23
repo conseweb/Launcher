@@ -2,8 +2,8 @@ package com.bitants.launcherdev.app;
 
 import android.content.Context;
 import android.database.Cursor;
-import com.bitants.launcherdev.launcher.config.db.ConfigDataBase;
-import com.bitants.launcherdev.launcher.config.db.DefaultLauncherTable;
+import com.bitants.common.launcher.config.db.ConfigDataBase;
+import com.bitants.common.launcher.config.db.DefaultLauncherTable;
 
 public class DefaultAppAssit {
 

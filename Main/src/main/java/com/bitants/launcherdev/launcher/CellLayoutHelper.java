@@ -2,9 +2,9 @@ package com.bitants.launcherdev.launcher;
 
 import android.widget.Toast;
 import com.bitants.launcher.R;
-import com.bitants.launcherdev.launcher.info.ItemInfo;
-import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.bitants.launcherdev.launcher.support.BaseCellLayoutHelper;
+import com.bitants.common.launcher.info.ItemInfo;
+import com.bitants.common.launcher.screens.CellLayout;
+import com.bitants.common.launcher.support.BaseCellLayoutHelper;
 
 /**
  * Description: 

@@ -10,7 +10,7 @@ import android.widget.*;
 import android.widget.AdapterView.OnItemClickListener;
 import com.bitants.launcher.R;
 import com.bitants.launcherdev.integratefoler.model.PromotionAppInfo;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
+import com.bitants.common.launcher.info.ApplicationInfo;
 
 import java.util.ArrayList;
 import java.util.List;

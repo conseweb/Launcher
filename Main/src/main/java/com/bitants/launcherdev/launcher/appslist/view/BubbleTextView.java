@@ -10,7 +10,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewTreeObserver.OnPreDrawListener;
 import com.bitants.launcher.R;
-import com.bitants.launcherdev.kitset.util.StringUtil;
+import com.bitants.common.kitset.util.StringUtil;
 import com.bitants.launcherdev.launcher.appslist.AppslistActivity;
 
 public class BubbleTextView extends View {

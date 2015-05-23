@@ -2,8 +2,8 @@ package com.bitants.launcherdev.launcher;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.launcher.model.BaseLauncherProvider;
+import com.bitants.common.launcher.config.BaseConfig;
+import com.bitants.common.launcher.model.BaseLauncherProvider;
 
 public class LauncherProvider extends BaseLauncherProvider {
 	/**

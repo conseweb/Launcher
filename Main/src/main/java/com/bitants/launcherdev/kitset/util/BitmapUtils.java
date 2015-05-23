@@ -4,6 +4,9 @@ import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.graphics.BitmapFactory;
 import android.util.Log;
+
+import com.bitants.common.kitset.util.BaseBitmapUtils;
+import com.bitants.common.kitset.util.FileUtil;
 import com.bitants.launcherdev.framework.httplib.HttpCommon;
 import com.google.android.mms.ContentType;
 import org.apache.http.Header;
@@ -16,7 +19,7 @@ import java.io.InputStream;
 /**
  * 图片处理相关内容
  */
-public class BitmapUtils extends BaseBitmapUtils{
+public class BitmapUtils extends BaseBitmapUtils {
 	/**
 	 * 保存在线图片
 	 * @param urlString

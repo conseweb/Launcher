@@ -5,7 +5,7 @@ import android.content.Context;
 import android.os.Build;
 import com.bitants.launcherdev.kitset.Analytics.MoAnalytics;
 import com.bitants.launcherdev.kitset.DigestUtils;
-import com.bitants.launcherdev.kitset.util.TelephoneUtil;
+import com.bitants.common.kitset.util.TelephoneUtil;
 import org.apache.http.*;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;

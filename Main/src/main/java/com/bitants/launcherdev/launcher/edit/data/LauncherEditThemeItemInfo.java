@@ -2,8 +2,8 @@ package com.bitants.launcherdev.launcher.edit.data;
 
 import android.content.Context;
 import com.bitants.launcher.R;
-import com.bitants.launcherdev.theme.data.ThemeGlobal;
-import com.bitants.launcherdev.theme.data.ThemeType;
+import com.bitants.common.theme.data.ThemeGlobal;
+import com.bitants.common.theme.data.ThemeType;
 
 /**
  * 编辑模式主题数据集类型

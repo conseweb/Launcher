@@ -1,11 +1,12 @@
 package com.bitants.launcherdev.theme.data;
 
-import com.bitants.launcherdev.theme.module.ModuleConstant;
+import com.bitants.common.theme.data.BaseThemeData;
+import com.bitants.common.theme.module.ModuleConstant;
 
 /**
  * <br>Title: 主题皮肤信息常量
  */
-public class ThemeData extends BaseThemeData{
+public class ThemeData extends BaseThemeData {
 	
 	/** 情景主题ID */
 	public final static String SCENE_ID = "scene_id";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.bitants.launcherdev.launcher.screens.DeleteZone
+<com.bitants.common.launcher.screens.DeleteZone
 		xmlns:android="http://schemas.android.com/apk/res/android"
 		android:id="@+id/launcher_delete_zone" android:layout_width="fill_parent"
 		android:layout_height="@dimen/delete_zone_size" 
@@ -15,4 +15,4 @@
 			android:id="@+id/im_delete"
 			android:layout_width="fill_parent" android:layout_weight="1"
 			android:layout_height="fill_parent" />
-	</com.bitants.launcherdev.launcher.screens.DeleteZone>
+	</com.bitants.common.launcher.screens.DeleteZone>

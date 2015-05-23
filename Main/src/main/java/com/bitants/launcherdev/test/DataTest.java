@@ -3,9 +3,9 @@ package com.bitants.launcherdev.test;
 import android.util.Log;
 import android.view.View;
 import com.bitants.launcherdev.launcher.Workspace;
-import com.bitants.launcherdev.launcher.info.FolderInfo;
-import com.bitants.launcherdev.launcher.screens.CellLayout;
-import com.bitants.launcherdev.launcher.view.icon.ui.folder.FolderIconTextView;
+import com.bitants.common.launcher.info.FolderInfo;
+import com.bitants.common.launcher.screens.CellLayout;
+import com.bitants.common.launcher.view.icon.ui.folder.FolderIconTextView;
 
 import java.util.ArrayList;
 import java.util.Collections;

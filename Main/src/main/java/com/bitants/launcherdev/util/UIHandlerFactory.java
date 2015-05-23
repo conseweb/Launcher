@@ -5,14 +5,14 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.MessageQueue;
 import android.os.MessageQueue.IdleHandler;
-import com.bitants.launcherdev.kitset.util.AndroidPackageUtils;
-import com.bitants.launcherdev.kitset.util.BaseBitmapUtils;
+import com.bitants.common.kitset.util.AndroidPackageUtils;
+import com.bitants.common.kitset.util.BaseBitmapUtils;
 import com.bitants.launcherdev.launcher.LauncherSettings;
-import com.bitants.launcherdev.launcher.config.BaseConfig;
-import com.bitants.launcherdev.launcher.info.ApplicationInfo;
-import com.bitants.launcherdev.launcher.support.BaseIconCache;
-import com.bitants.launcherdev.theme.adaption.ThemeIconIntentAdaptation;
-import com.bitants.launcherdev.theme.assit.BaseThemeAssit;
+import com.bitants.common.launcher.config.BaseConfig;
+import com.bitants.common.launcher.info.ApplicationInfo;
+import com.bitants.common.launcher.support.BaseIconCache;
+import com.bitants.common.theme.adaption.ThemeIconIntentAdaptation;
+import com.bitants.common.theme.assit.BaseThemeAssit;
 
 import java.util.List;
 
