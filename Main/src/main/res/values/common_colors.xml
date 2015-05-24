@@ -9,7 +9,6 @@
 	WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. ** See the 
 	License for the specific language governing permissions and ** limitations 
 	under the License. */
-
 -->
 <resources>
 
@@ -50,7 +49,7 @@
     <!-- 说明文字颜色与ViewPagerTab未选中颜色 -->
     <!--<color name="myphone_common_little_text_color">#8f8f8f</color>-->
     <!-- 单独用于HeadSwitchView -->
-    <color name="myphone_common_little_text_color_news">#6052D6</color>
+    <!--<color name="myphone_common_little_text_color_news">#6052D6</color>-->
     <!-- ViewPagerTab选中颜色 -->
     <color name="myphone_common_dialog_text_color">#1e82dc</color><!-- 5eb9f2 -->
   

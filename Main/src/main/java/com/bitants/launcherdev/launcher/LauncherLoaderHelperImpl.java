@@ -28,6 +28,7 @@ import com.bitants.common.launcher.support.BaseIconCache;
 import com.bitants.common.launcher.support.BaseLauncherViewHelper;
 import com.bitants.common.launcher.touch.DropTarget;
 import com.bitants.common.launcher.view.icon.ui.impl.IconMaskTextView;
+import com.bitants.launcherdev.widget.LauncherWidgetInfo;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -257,6 +258,15 @@ public class LauncherLoaderHelperImpl extends LauncherLoaderHelper{
 
 						loader.addToAppWidgetList(appWidgetInfo);
 						break;
+					case LauncherSettings.Favorites.ITEM_TYPE_WIDGET_SEARCH_SHORTCUT:
+						LauncherWidgetInfo launchewidgetinfo=LauncherWidgetInfo.makeClockWidgetInfo();
+						launchewidgetinfo.id=c.getLong(idIndex);
+						launchewidgetinfo.container=c.getInt(containerIndex);
+						launchewidgetinfo.screen=c.getInt(screenIndex);
+						launchewidgetinfo.cellX= c.getInt(cellXIndex);
+						launchewidgetinfo.cellY=c.getInt(cellYIndex);
+						loader.addToItemsList(launchewidgetinfo);
+						break;
 					default:
 						// LauncherAppWidgetInfo appwidgetInfo =
 						// LauncherWidgetHelper.createWidgetInfo(itemType);
@@ -351,6 +361,14 @@ public class LauncherLoaderHelperImpl extends LauncherLoaderHelper{
 					mDockbar.addInDockbar(newFolder, item.screen, item.cellX, item.cellY, item.spanX, item.spanY, false);
 				}
 				
+				break;
+				
+			case LauncherSettings.Favorites.ITEM_TYPE_WIDGET_SEARCH_SHORTCUT:
+				
+				View view = mLauncher.createWidgetFqFromXML((LauncherWidgetInfo)item);
+				if (view == null)
+					return;
+				workspace.addInScreen(view, item.screen, item.cellX, item.cellY, item.spanX, item.spanY);
 				break;
 			default:
 //				final View view = BaseLauncherViewHelper.createAnythingAppView(mLauncher, item);

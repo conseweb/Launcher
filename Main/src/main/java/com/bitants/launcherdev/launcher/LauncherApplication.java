@@ -10,6 +10,14 @@ import java.io.File;
 
 public class LauncherApplication extends BaseLauncherApplication {
 	
+	
+	@Override
+	public void onCreate() {
+		// TODO Auto-generated method stub
+		super.onCreate();
+		// CrashHandler crashHandler = CrashHandler.getInstance();
+		// crashHandler.init(this);
+	}
 	/**
 	 * 初始化数据库辅助类
 	 */

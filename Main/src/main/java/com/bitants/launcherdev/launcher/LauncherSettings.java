@@ -143,6 +143,12 @@ public class LauncherSettings {
          */
         public static final int ITEM_TYPE_WIDGET_GRAB_TICKET = 2031;
         
+        
+        /**
+         *  4 *1 自定义搜索
+         */
+        public static final int ITEM_TYPE_WIDGET_SEARCH_SHORTCUT = 2032;
+        
         /**
          * 最近安装和实时文件夹URI 
          */

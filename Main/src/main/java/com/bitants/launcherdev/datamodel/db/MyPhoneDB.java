@@ -35,6 +35,7 @@ public class MyPhoneDB extends AbstractDataBase {
 //		db.execSQL(CREATE_CONFIG_TABLE);
 //		//572采用通用下载sdk,新字段为兼容历史版本,572后续版本不得采用该字段，
 //		//若需要为某下载记录定制个性化值时可考虑用addition_info,通用sdk中已有很好的支持。
+//		//wanggm 2015.02.03
 //        db.execSQL("alter table log_download add column 'extra' VARCHAR(32)");
 	}
 

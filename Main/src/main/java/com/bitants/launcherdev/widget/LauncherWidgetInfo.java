@@ -58,6 +58,10 @@ public class LauncherWidgetInfo extends LauncherItemInfo {
 	
 	
 	/**
+	 * 桌面集成搜索小部件
+	 */
+	public static final int TYPE_WIDGET_SEARCH = TYPE_SYSTEM + 9;
+	/**
 	 * 包名
 	 */
 	protected String packageName;
@@ -353,6 +357,28 @@ public class LauncherWidgetInfo extends LauncherItemInfo {
 		info.layoutResName = "widget_theme_1x1";
 		info.packageName = Global.getApplicationContext().getPackageName();
 		info.spanX = 1;
+		info.spanY = 1;
+		info.launcherVersionCode = 5000;
+		info.setInstalled(true);
+		return info;
+	}
+	
+	/**
+	 *  桌面搜索插件
+	 * 
+	 * @return
+	 */
+	public static LauncherWidgetInfo makeClockWidgetInfo() {
+		LauncherWidgetInfo info = new LauncherWidgetInfo();
+		info.catagoryNo = LauncherItemInfo.CATAGORY_CUSTOM_WIDGET;
+		info.type = TYPE_WIDGET_SEARCH;
+		info.itemType=LauncherSettings.Favorites.ITEM_TYPE_WIDGET_SEARCH_SHORTCUT;
+		info.title ="桌面搜索";
+		info.previewImageResInt = R.drawable.widget_default_preview_img;//1
+		info.tip = "4x1";
+		info.layoutResName = "widget_theme_4x1";
+		info.packageName = Global.getApplicationContext().getPackageName();
+		info.spanX = 4;
 		info.spanY = 1;
 		info.launcherVersionCode = 5000;
 		info.setInstalled(true);

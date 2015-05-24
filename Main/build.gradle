@@ -5,11 +5,20 @@ android {
     compileSdkVersion 16
     buildToolsVersion "21.1.1"
 
-    enforceUniquePackageName = true
+//    enforceUniquePackageName = true
     defaultConfig {
         applicationId "com.bitants.launcher"
         minSdkVersion 7
         targetSdkVersion 10
+    }
+
+    signingConfigs {
+        myConfig {
+            storeFile file("gradle.keystore")
+            storePassword "gradle"
+            keyAlias "gradle"
+            keyPassword "gradle"
+        }
     }
 
     buildTypes {
@@ -27,5 +36,8 @@ android {
 dependencies {
     compile project(':core')
     compile files('libs/supportv4jar.jar')
-    compile files('libs/classes.jar')
+    //    compile files('libs/classes.jar')
+//    compile 'com.parse.bolts:bolts-android:1.+'
+//    compile fileTree(dir: 'libs', include: 'Parse-*.jar')
+//    compile fileTree(dir: 'libs', include: 'ParseCrashReporting-*.jar')
 }

@@ -54,7 +54,7 @@ public class BaseSettingsPreference {
 	/**
 	 * 是否显示第0屏
 	 */
-	private static boolean isShowZeroView = true;
+	private static boolean isShowZeroView = false;
 	/**
 	 * 桌面是否循环滚屏
 	 */
@@ -151,7 +151,7 @@ public class BaseSettingsPreference {
 	protected BaseSettingsPreference(Context mContext) {
 		baseSP = mContext.getSharedPreferences(SettingsConstants.SETTINGS_NAME, Context.MODE_PRIVATE);
 		
-		isShowZeroView = baseSP.getBoolean(SettingsConstants.SETTING_SCREEN_NAVIGATION_VIEW, true);
+		isShowZeroView = baseSP.getBoolean(SettingsConstants.SETTING_SCREEN_NAVIGATION_VIEW, false);
 		isRollingCycle = baseSP.getBoolean(SettingsConstants.SETTING_SCREEN_ROLLING_CYCLE, false);
 		
 		isNotificationBarVisible = baseSP.getBoolean(SettingsConstants.SETTING_PERSONAL_STATUS_BAR_SWITCH, true);
@@ -341,15 +341,15 @@ public class BaseSettingsPreference {
 	}
 
 	public boolean isShowNavigationView() {
-		if(BaseConfig.isOnScene())
-			return false;
-		return isShowZeroView;
+//		if(BaseConfig.isOnScene())
+//			return false;
+		return false;
 //		return sp.getBoolean(SettingsConstants.SETTING_SCREEN_NAVIGATION_VIEW, !ChannelUtil.isChannelPackage());
 //		return sp.getBoolean(SettingsConstants.SETTING_SCREEN_NAVIGATION_VIEW, true);
 	}
 
 	public void setShowNavigationView(boolean isShow) {
-		isShowZeroView = isShow;
+		isShowZeroView = false;
 		baseSP.edit().putBoolean(SettingsConstants.SETTING_SCREEN_NAVIGATION_VIEW, isShow).commit();
 	}
 

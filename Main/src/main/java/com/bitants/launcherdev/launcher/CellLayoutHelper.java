@@ -9,7 +9,7 @@ import com.bitants.common.launcher.support.BaseCellLayoutHelper;
 /**
  * Description: 
  */
-public class CellLayoutHelper extends BaseCellLayoutHelper{
+public class CellLayoutHelper extends BaseCellLayoutHelper {
 
 	public CellLayoutHelper() {
 	}

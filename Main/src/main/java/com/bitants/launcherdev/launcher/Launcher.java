@@ -12,11 +12,18 @@ import android.text.method.TextKeyListener;
 import android.util.Log;
 import android.view.HapticFeedbackConstants;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Toast;
+
 import com.avos.avoscloud.AVAnalytics;
 import com.bitants.common.launcher.BaseLauncher;
+import com.bitants.common.launcher.info.ItemInfo;
+import com.bitants.common.launcher.screens.ScreenViewGroup;
+import com.bitants.common.launcher.support.BaseCellLayoutHelper;
 import com.bitants.launcher.R;
 import com.bitants.launcherdev.app.AppInfoIntentCommandAdapter;
 import com.bitants.launcherdev.app.CustomIntentSwitcherController;
@@ -51,6 +58,7 @@ import com.bitants.launcherdev.menu.LauncherMenu;
 //import com.bitants.launcherdev.push.PushSDKAdapter;
 import com.bitants.common.theme.adaption.ThemeIconIntentAdaptation;
 import com.bitants.launcherdev.util.ActivityActionUtil;
+import com.bitants.launcherdev.widget.LauncherWidgetInfo;
 
 import java.io.File;
 import java.util.List;
@@ -181,7 +189,8 @@ public class Launcher extends BaseLauncher {
 		int[] cellXY = new int[]{cellX, cellY};
 		return addFolder(layout, container, screen, cellXY, folderTitle);
 	}
-	
+
+    @DebugLog
 	public FolderIconTextView addFolder(CellLayout layout, long container, final int screen, int[] cellXY, String folderTitle) {
 		final FolderInfo folderInfo = new FolderInfo();
 		folderInfo.title = StringUtil.isEmpty(folderTitle) ? getText(R.string.folder_name) : folderTitle;
@@ -610,6 +619,73 @@ public class Launcher extends BaseLauncher {
 		}
 	}
 	
+	
+
+	public void addNewInstallWidget(LauncherWidgetInfo launcherWidgetInfo){
+	
+		    int[] pageInfo = BaseCellLayoutHelper.findCellXYForWidget(this, launcherWidgetInfo.spanX, launcherWidgetInfo.spanY, null);
+		    
+		    if (pageInfo == null) {
+				Toast.makeText(this, "当前屏幕没有空位", 1).show();
+				return;
+			}
+	
+			int page = mWorkspace.getCurrentScreen();
+			int cellX = pageInfo[0];
+			int cellY = pageInfo[1];
+			launcherWidgetInfo.screen = page;
+			launcherWidgetInfo.cellX = cellX;
+			launcherWidgetInfo.cellY = cellY;
+			launcherWidgetInfo.spanX = 4;
+			launcherWidgetInfo.spanY = 1;
+			launcherWidgetInfo.container= LauncherSettings.Favorites.CONTAINER_DESKTOP;
+			
+			BaseLauncherModel.addFQItemInDatabase(getBaseContext(), launcherWidgetInfo);
+			
+			View view = createWidgetFqFromXML( launcherWidgetInfo);
+			if (view == null)
+				return;
+			((Workspace)mWorkspace).addInScreen(view, page, cellX, cellY, launcherWidgetInfo.spanX, launcherWidgetInfo.spanY);
+			
+			//FIXME 在编辑模式下可能会有刷新的问题
+		
+	}
+	
+	public void addViewFromWidgetInfo(LauncherWidgetInfo launcherWidgetInfo){
+		
+		
+		ViewGroup parent = (ViewGroup) mWorkspace.getChildAt(mWorkspace.getCurrentScreen());
+		if (parent == null)
+			parent = (ViewGroup) mWorkspace.getChildAt(0);
+	  
+	    int[] pageInfo = BaseCellLayoutHelper.findCellXYForWidget(this,launcherWidgetInfo.spanX,launcherWidgetInfo.spanY, null);
+	    
+	    if (pageInfo == null) {
+			Toast.makeText(this, "当前屏幕没有空位", 1).show();
+			return;
+		}
+
+		int page = mWorkspace.getCurrentScreen();
+		int cellX = pageInfo[0];
+		int cellY = pageInfo[1];
+		launcherWidgetInfo.screen = page;
+		launcherWidgetInfo.cellX = cellX;
+		launcherWidgetInfo.cellY = cellY;
+		launcherWidgetInfo.spanX = 4;
+		launcherWidgetInfo.spanY = 1;
+		launcherWidgetInfo.container= LauncherSettings.Favorites.CONTAINER_DESKTOP;
+		
+		BaseLauncherModel.addFQItemInDatabase(getBaseContext(), launcherWidgetInfo);
+		
+		View view = createWidgetFqFromXML(launcherWidgetInfo);
+		if (view == null)
+			return;
+		((Workspace)mWorkspace).addInScreen(view, page, cellX, cellY, launcherWidgetInfo.spanX, launcherWidgetInfo.spanY);
+		
+		//FIXME 在编辑模式下可能会有刷新的问题
+	
+}
+	
 	public void setClickView(View v) {
 		mClickView = v;
 	}
@@ -630,4 +706,37 @@ public class Launcher extends BaseLauncher {
 		nManager.cancelAll();
 		android.os.Process.killProcess(android.os.Process.myPid());
 	}
+	
+	/**
+	 * 创建桌面搜索插件
+	 */
+	@Override
+	public View createWidgetFqFromXML(ItemInfo itemInfo) {
+		// TODO Auto-generated method stub
+
+		if(itemInfo==null||!(itemInfo instanceof LauncherWidgetInfo)){
+		return null;	
+		}
+		View customView=null;
+		LauncherWidgetInfo launcherWidgetInfo=(LauncherWidgetInfo) itemInfo;
+		
+		ScreenViewGroup mWorkspace = getScreenViewGroup();
+		ViewGroup parent = (ViewGroup) mWorkspace.getChildAt(mWorkspace.getCurrentScreen());
+		if (parent == null)
+			parent = (ViewGroup) mWorkspace.getChildAt(0);
+		
+		switch (launcherWidgetInfo.type) {
+		case LauncherWidgetInfo.TYPE_WIDGET_SEARCH:// 桌面时钟
+			customView =  LayoutInflater.from(this).inflate(R.layout.search, parent, false);
+			customView.setTag(itemInfo);
+			break;
+
+		default:
+			break;
+		}
+		
+		
+		return customView;
+	}
+	 
 }

@@ -37,16 +37,16 @@ public class ItemInfo {
     public long id = NO_ID;
     
     /**
-     * One of {@link com.bitants.common.launcher.model.BaseLauncherSettings.Favorites#ITEM_TYPE_APPLICATION},
-     * {@link com.bitants.common.launcher.model.BaseLauncherSettings.Favorites#ITEM_TYPE_SHORTCUT},
-     * {@link com.bitants.common.launcher.model.BaseLauncherSettings.Favorites#ITEM_TYPE_USER_FOLDER}, or
-     * {@link com.bitants.common.launcher.model.BaseLauncherSettings.Favorites#ITEM_TYPE_APPWIDGET}.
+     * One of {@link BaseLauncherSettings.Favorites#ITEM_TYPE_APPLICATION},
+     * {@link BaseLauncherSettings.Favorites#ITEM_TYPE_SHORTCUT},
+     * {@link BaseLauncherSettings.Favorites#ITEM_TYPE_USER_FOLDER}, or
+     * {@link BaseLauncherSettings.Favorites#ITEM_TYPE_APPWIDGET}.
      */
     public int itemType;
     
     /**
      * The id of the container that holds this item. For the desktop, this will be 
-     * {@link com.bitants.common.launcher.model.BaseLauncherSettings.Favorites#CONTAINER_DESKTOP}. For the all applications folder it
+     * {@link BaseLauncherSettings.Favorites#CONTAINER_DESKTOP}. For the all applications folder it
      * will be {@link #NO_ID} (since it is not stored in the settings DB). For user folders
      * it will be the id of the folder.
      */

@@ -6,7 +6,10 @@
 	Unless required by applicable law or agreed to in writing, software distributed 
 	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
 	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
-	the specific language governing permissions and limitations under the License.
+	the specific language governing permissions and limitations under the License.
+
+
+
 -->
 
 <resources>
@@ -21,7 +24,7 @@
     <dimen name="viewpager_tab_more_item">25dip</dimen>
 
     <!-- 我的手机标题 -->
-    <dimen name="myphone_title_text_size">20sp</dimen>
+    <!--<dimen name="myphone_title_text_size">20sp</dimen>-->
     <!-- 我的手机标题顶部Margin -->
     <dimen name="myphone_title_margin_top">5dip</dimen>
     <!-- 我的手机间距 -->
@@ -57,7 +60,7 @@
     <dimen name="myphone_title_bottom_text_size">18sp</dimen>
     <dimen name="myphone_title_bottom_text_size1">15sp</dimen>
     <dimen name="myphone_wp_crop_select_text_size">13sp</dimen>
-    <dimen name="dialog_top_layout_height">45dip</dimen>
+    <!--<dimen name="dialog_top_layout_height">45dip</dimen>-->
     <dimen name="dialog_bottom_layout_height">45dip</dimen>
 
     <!-- 系统功能   字体大小  -->

@@ -28,4 +28,12 @@
         launcher:y="0"
         launcher:title="@string/dockbar_dock_browser"
         launcher:uri="http://www.google.com#Intent;action=android.intent.action.VIEW;launchFlags=0x10000000;component=com.bitants.launcher/com.bitants.launcherdev.app.AppResolverSelectActivity;B.is_always_select=false;end"/>
+
+     <!-- 搜索 -->
+     <fqwidgetpreview
+    	launcher:screen="1"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:title="@string/dockbar_dock_search"
+        launcher:uri="search#Intent;action=android.intent.action.VIEW;launchFlags=0x10000000;component=com.bitants.launcher/com.bitants.launcherdev.app.AppResolverSelectActivity;B.is_always_select=false;end"/>
 </favorites>

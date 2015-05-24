@@ -145,7 +145,7 @@ public class ApplicationInfo extends ItemInfo implements ICommonDataItem {
 	 */
 	public ApplicationInfo(ResolveInfo info) {
 		this.componentName = new ComponentName(info.activityInfo.applicationInfo.packageName, info.activityInfo.name);
-		this.container = NO_ID;
+		this.container = ItemInfo.NO_ID;
 		this.setActivity(componentName);
 	}
 
@@ -155,7 +155,7 @@ public class ApplicationInfo extends ItemInfo implements ICommonDataItem {
 	public ApplicationInfo(ResolveInfo info, BaseIconCache iconCache) {
 		this.componentName = new ComponentName(info.activityInfo.applicationInfo.packageName, info.activityInfo.name);
 
-		this.container = NO_ID;
+		this.container = ItemInfo.NO_ID;
 		this.setActivity(componentName);
 
 		iconCache.getTitleAndIcon(this, info);

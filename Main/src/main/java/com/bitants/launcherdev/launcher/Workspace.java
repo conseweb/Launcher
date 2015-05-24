@@ -18,7 +18,7 @@ import com.bitants.launcherdev.launcher.edit.LauncherEditView;
 import com.bitants.common.launcher.info.ApplicationInfo;
 import com.bitants.common.launcher.info.FolderInfo;
 import com.bitants.common.launcher.info.ItemInfo;
-import com.bitants.common.launcher.info.PandaWidgetInfo;
+import com.bitants.common.launcher.info.MirrorWidgetInfo;
 import com.bitants.common.launcher.screens.CellLayout;
 import com.bitants.common.launcher.screens.ScreenViewGroup;
 import com.bitants.common.launcher.screens.dockbar.LightBarInterface;
@@ -82,7 +82,11 @@ public class Workspace extends ScreenViewGroup implements DragScroller, AnyCallb
 			break;
 			
 		case LauncherSettings.Favorites.ITEM_TYPE_PANDA_WIDGET: //匣子里的自定义桌面小部件
-			view = mLauncher.createAppWidgetView((PandaWidgetInfo)itemInfo);
+			view = mLauncher.createAppWidgetView((MirrorWidgetInfo)itemInfo);
+			break;
+			
+		case LauncherSettings.Favorites.ITEM_TYPE_WIDGET_SEARCH_SHORTCUT: //自定义插件添加
+			view = mLauncher.createWidgetFqFromXML(itemInfo);
 			break;
 //		case LauncherSettings.Favorites.ITEM_TYPE_PANDA_SHORTCUT:  
 //		case LauncherSettings.Favorites.ITEM_TYPE_SYSTEM_SHORTCUT:
@@ -155,29 +159,29 @@ public class Workspace extends ScreenViewGroup implements DragScroller, AnyCallb
 	}
 	
 	//移除默认空屏幕
-	public void checkWorkSpaceEmptyRemove(){
-		if(getChildCount()>0){
-			Boolean isdefaut=true;
-			for(int i=0;i<getChildCount();i++){
-				
-				CellLayout view=getCellLayoutAt(i);
-				if(view!=null&&view.getChildCount()<=0){
-					removeScreenFromWorkspace(i);
-					deleteScreen(i);
-				}else{
-					if(isdefaut){
-						setCurrentScreen(i);
-						setDefaultScreen(i);
-						isdefaut=false;
-					}
-					
-				}
-				
-			}
-			
-		}
-		
-	}
+//	public void checkWorkSpaceEmptyRemove(){
+//		if(getChildCount()>0){
+//			Boolean isdefaut=true;
+//			for(int i=0;i<getChildCount();i++){
+//				
+//				CellLayout view=getCellLayoutAt(i);
+//				if(view!=null&&view.getChildCount()<=0){
+//					removeScreenFromWorkspace(i);
+//					deleteScreen(i);
+//				}else{
+//					if(isdefaut){
+//						setCurrentScreen(i);
+//						setDefaultScreen(i);
+//						isdefaut=false;
+//					}
+//					
+//				}
+//				
+//			}
+//			
+//		}
+//		
+//	}
 	
 	private void deleteScreen(final int position) {
 		int currentScreen = getCurrentScreen();

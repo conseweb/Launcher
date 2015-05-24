@@ -14,6 +14,7 @@ import com.bitants.common.launcher.info.FolderInfo;
 import com.bitants.common.launcher.info.ItemInfo;
 import com.bitants.common.launcher.model.BaseLauncherModel;
 import com.bitants.common.launcher.support.BaseIconCache;
+import com.bitants.launcherdev.widget.LauncherWidgetInfo;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -299,6 +300,16 @@ public class LauncherModel extends BaseLauncherModel {
 							result.add(folderInfo);
 						}
 						break;
+						
+					case LauncherSettings.Favorites.ITEM_TYPE_WIDGET_SEARCH_SHORTCUT://如果为自定义的搜索
+						LauncherWidgetInfo launchewidgetinfo=LauncherWidgetInfo.makeClockWidgetInfo();
+						launchewidgetinfo.container=c.getInt(containerIndex);
+						launchewidgetinfo.screen=c.getInt(screenIndex);
+						launchewidgetinfo.cellX= c.getInt(cellXIndex);
+						launchewidgetinfo.cellY=c.getInt(cellYIndex);
+						launchewidgetinfo.id=c.getLong(idIndex);
+						result.add(launchewidgetinfo);
+					break;
 						
 				}
 			}

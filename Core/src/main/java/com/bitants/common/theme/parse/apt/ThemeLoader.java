@@ -19,7 +19,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.bitants.common.framework.exception.ErrorCode;
-import com.bitants.common.framework.exception.PandaDesktopException;
+import com.bitants.common.framework.exception.DesktopException;
 import com.bitants.common.kitset.util.FileUtil;
 import com.bitants.common.kitset.util.StringUtil;
 import com.bitants.common.kitset.util.TelephoneUtil;
@@ -137,14 +137,14 @@ public class ThemeLoader {
      *            主题配置文件路径。
      * @return 主题对象。
      */
-    private void loaderThemeXML(String themePath, BasePandaTheme basePandaThemeObj) throws PandaDesktopException {
+    private void loaderThemeXML(String themePath, BasePandaTheme basePandaThemeObj) throws DesktopException {
         try {
             root = XmlParser.buildXmlRootByString(StringUtil.renameRes(readXml(themePath)));
             createThemeObj(root, basePandaThemeObj);
         } catch (XmlFormatErrorException e) {
             Log.w(LOG_TAG, "Xml format error. " + e);
-            throw new PandaDesktopException(ErrorCode.XML_FORMAT_ERROR_CODE);
-        } catch (PandaDesktopException e) {
+            throw new DesktopException(ErrorCode.XML_FORMAT_ERROR_CODE);
+        } catch (DesktopException e) {
             e.printStackTrace();
             throw e;
         }
@@ -157,7 +157,7 @@ public class ThemeLoader {
      *            主题配置文件路径。
      * @return 主题对象。
      */
-    private void loaderThemeXML(String themePath, ModuleInfo moduleInfo) throws PandaDesktopException {
+    private void loaderThemeXML(String themePath, ModuleInfo moduleInfo) throws DesktopException {
         try {
         	if(null == moduleInfo)return;
             root = XmlParser.buildXmlRootByString(StringUtil.renameRes(readXml(themePath)));
@@ -181,7 +181,7 @@ public class ThemeLoader {
                     String en_name = attrMap.get(PANDA_THEME_NAME_EN);
                     if ((null == name) && (null == en_name)) {
                     	Log.w(LOG_TAG, "name attr is not found!");
-                        throw new PandaDesktopException(ErrorCode.XML_FORMAT_NAME_UNFOUND_ERROR);
+                        throw new DesktopException(ErrorCode.XML_FORMAT_NAME_UNFOUND_ERROR);
                     }
                     if (null != name) {
                     	moduleInfo.setName(name);
@@ -247,8 +247,8 @@ public class ThemeLoader {
             }
         } catch (XmlFormatErrorException e) {
             Log.w(LOG_TAG, "Xml format error. " + e);
-            throw new PandaDesktopException(ErrorCode.XML_FORMAT_ERROR_CODE);
-        } catch (PandaDesktopException e) {
+            throw new DesktopException(ErrorCode.XML_FORMAT_ERROR_CODE);
+        } catch (DesktopException e) {
             e.printStackTrace();
             throw e;
         }
@@ -263,20 +263,20 @@ public class ThemeLoader {
      * @throws Exception
      *             SDcard是否存在异常。
      */
-    public synchronized BasePandaTheme loaderThemeZipFromAssets(Context ctx, String zipPath) throws PandaDesktopException {
+    public synchronized BasePandaTheme loaderThemeZipFromAssets(Context ctx, String zipPath) throws DesktopException {
     	BasePandaTheme basePandaTheme = ThemeManagerFactory.getInstance().getThemeManagerHelper().allocatPandaThemeObj();
         namePrefix = createTimeZone();
         String unZipPath = BaseConfig.THEME_DIR + namePrefix + "/";
         if (!TelephoneUtil.isSdcardExist()) {
         	Log.w(LOG_TAG, "sdcard is not found!");
-            throw new PandaDesktopException(ErrorCode.SDCARD_UNFOUND_CODE);
+            throw new DesktopException(ErrorCode.SDCARD_UNFOUND_CODE);
         }
         ZipUtil.ectract(ctx, zipPath, unZipPath, false);
         try {
         	//验证主题可用性
 			if (!validateUnzipTheme(unZipPath)) {
 				Log.w(LOG_TAG, "zip validate error!");
-				throw new PandaDesktopException(ErrorCode.ZIP_VALIDATE_ERROR_CODE);
+				throw new DesktopException(ErrorCode.ZIP_VALIDATE_ERROR_CODE);
 			}
             loaderThemeXML(unZipPath + themeXmlName, basePandaTheme);
             //根据主题Id修改解压后的主题包路径
@@ -295,7 +295,7 @@ public class ThemeLoader {
 			if (!FileUtil.renameFile(unZipPath, newUnZipPath)) {
 				// 重全名失败，恢复原来的文件夹
 				FileUtil.renameFile(delFilePath, newUnZipPath);
-				throw new PandaDesktopException(ErrorCode.FOLDER_RENAME_ERROR);
+				throw new DesktopException(ErrorCode.FOLDER_RENAME_ERROR);
 			} else {
 				// 重全名成功，删除原来的文件夹
 				if(new File(delFilePath).exists()) {
@@ -315,12 +315,12 @@ public class ThemeLoader {
          	// 重命名旧主题目录文件 caizp 2014-6-27
          	renameRes(unZipPath + ThemeGlobal.THEME_APT_DRAWABLE_DIR);
 			renameRes(unZipPath + ThemeGlobal.THEME_APT_DRAWABLE_XHDPI_DIR);
-        } catch (PandaDesktopException pe) {
+        } catch (DesktopException pe) {
         	FileUtil.delFolder(unZipPath);
             throw pe;
         } catch (Exception e) {
             Log.w(LOG_TAG, e);
-            throw new PandaDesktopException(ErrorCode.OTHER_ERROR_CODE);
+            throw new DesktopException(ErrorCode.OTHER_ERROR_CODE);
         }
         return basePandaTheme;
     }
@@ -331,9 +331,9 @@ public class ThemeLoader {
      * @param element
      *            xml元素。
      * @return 组装后的BasePandaTheme对象。
-     * @throws PandaDesktopException
+     * @throws DesktopException
      */
-    private void createThemeObj(Element element, BasePandaTheme basePandaThemeObj) throws PandaDesktopException {
+    private void createThemeObj(Element element, BasePandaTheme basePandaThemeObj) throws DesktopException {
         if (null != element) {
             assemblyAttr(element, basePandaThemeObj);
         }
@@ -346,7 +346,7 @@ public class ThemeLoader {
      *            xml元素。
      * @return 组装后的BasePandaTheme对象。
      */
-    private void assemblyAttr(Element element, BasePandaTheme basePandaThemeObj) throws PandaDesktopException {
+    private void assemblyAttr(Element element, BasePandaTheme basePandaThemeObj) throws DesktopException {
         if (null != element) {
             Map<String, String> attrMap = element.getAttributes();
             elementTag = element.getName();
@@ -368,7 +368,7 @@ public class ThemeLoader {
                 String en_name = attrMap.get(PANDA_THEME_NAME_EN);
                 if ((null == name) && (null == en_name)) {
                 	Log.w(LOG_TAG, "name attr is not found!");
-                    throw new PandaDesktopException(ErrorCode.XML_FORMAT_NAME_UNFOUND_ERROR);
+                    throw new DesktopException(ErrorCode.XML_FORMAT_NAME_UNFOUND_ERROR);
                 }
                 if (null != name) {
                 	basePandaThemeObj.setThemeName(name);
@@ -520,9 +520,9 @@ public class ThemeLoader {
      * @param themeXmlPath
      *            文件路径
      * @return 返回文件内容。
-     * @throws PandaDesktopException
+     * @throws DesktopException
      */
-    public String readXml(String themeXmlPath) throws PandaDesktopException {
+    public String readXml(String themeXmlPath) throws DesktopException {
         StringBuffer sb = new StringBuffer();
         BufferedReader in = null;
         try {
@@ -532,7 +532,7 @@ public class ThemeLoader {
             }
         } catch (FileNotFoundException fileNotFoundException) {
             Log.w(LOG_TAG, "Can not find file :" + themeXmlPath + fileNotFoundException);
-            throw new PandaDesktopException(ErrorCode.THEME_XML_FILE_UNFOUND_CODE);
+            throw new DesktopException(ErrorCode.THEME_XML_FILE_UNFOUND_CODE);
         } catch (IOException ioException) {
             Log.w(LOG_TAG, "Read xml IOException :" + ioException);
         } finally {
@@ -605,23 +605,23 @@ public class ThemeLoader {
      * @param zipPath
      *            zip文件路径。
      * @return 主题对象。
-     * @throws PandaDesktopException
+     * @throws DesktopException
      *            安装主题发生异常，异常代码见ErrorCode.java
      */
-	public synchronized BasePandaTheme loaderThemeZip(String zipPath) throws PandaDesktopException {
+	public synchronized BasePandaTheme loaderThemeZip(String zipPath) throws DesktopException {
 		BasePandaTheme basePandaTheme = ThemeManagerFactory.getInstance().getThemeManagerHelper().allocatPandaThemeObj();
 		namePrefix = createTimeZone();
 		String unZipPath = BaseConfig.THEME_DIR + namePrefix + "/";
 		if (!TelephoneUtil.isSdcardExist()) {
 			Log.w(LOG_TAG, "sdcard is not found!");
-			throw new PandaDesktopException(ErrorCode.SDCARD_UNFOUND_CODE);
+			throw new DesktopException(ErrorCode.SDCARD_UNFOUND_CODE);
 		}
 		ZipUtil.ectract(zipPath, unZipPath, false);
 		try {
 			//验证主题可用性
 			if (!validateUnzipTheme(unZipPath)) {
 				Log.w(LOG_TAG, "zip validate error!");
-				throw new PandaDesktopException(ErrorCode.ZIP_VALIDATE_ERROR_CODE);
+				throw new DesktopException(ErrorCode.ZIP_VALIDATE_ERROR_CODE);
 			}
 			//解析主题配置文件
 			loaderThemeXML(unZipPath + themeXmlName, basePandaTheme);
@@ -637,7 +637,7 @@ public class ThemeLoader {
 				// 验证加密主题包合法性 caizp 2014-7-17
 	            if(basePandaTheme.isGuarded()) {
 	            	if(basePandaTheme.getGuardedVersion() > ThemeGlobal.SUPPORT_MAX_GUARDED_VERSION) {
-	            		throw new PandaDesktopException(ErrorCode.NOT_SUPPORT_GUARD_VERSION_ERROR);
+	            		throw new DesktopException(ErrorCode.NOT_SUPPORT_GUARD_VERSION_ERROR);
 	            	}
 	            	if(!validateThemeGuardedRes(unZipPath)) {
 	            		// 写入IMEI，暂时让主题成功安装，后期继续优化验证机制 caizp 2014-8-8
@@ -654,7 +654,7 @@ public class ThemeLoader {
 				if (!FileUtil.renameFile(unZipPath, newUnZipPath)) {
 					// 重全名失败，恢复原来的文件夹
 					FileUtil.renameFile(delFilePath, newUnZipPath);
-					throw new PandaDesktopException(ErrorCode.FOLDER_RENAME_ERROR);
+					throw new DesktopException(ErrorCode.FOLDER_RENAME_ERROR);
 				} else {
 					// 重全名成功，删除原来的文件夹
 					if(new File(delFilePath).exists()) {
@@ -682,14 +682,14 @@ public class ThemeLoader {
 			//更新主题数据记录
 			int ret = basePandaTheme.update();
 			if (ret == ThemeGlobal.EXEC_FAIL) {
-				throw new PandaDesktopException(ErrorCode.THEME_DATA_SAVE_ERROR);
+				throw new DesktopException(ErrorCode.THEME_DATA_SAVE_ERROR);
 			}
-		} catch (PandaDesktopException pe) {
+		} catch (DesktopException pe) {
 			FileUtil.delFolder(unZipPath);
 			throw pe;
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new PandaDesktopException(ErrorCode.OTHER_ERROR_CODE);
+			throw new DesktopException(ErrorCode.OTHER_ERROR_CODE);
 		}
 		return basePandaTheme;
 	}
@@ -699,15 +699,15 @@ public class ThemeLoader {
      * 
      * @param namePrefixTemp
      * @return
-     * @throws PandaDesktopException
+     * @throws DesktopException
      */
-    public synchronized BasePandaTheme loaderThemeFolder(String namePrefixTemp) throws PandaDesktopException {
+    public synchronized BasePandaTheme loaderThemeFolder(String namePrefixTemp) throws DesktopException {
     	BasePandaTheme basePandaTheme = ThemeManagerFactory.getInstance().getThemeManagerHelper().allocatPandaThemeObj();
     	namePrefix = namePrefixTemp;
         String unZipPath = BaseConfig.THEME_DIR + namePrefix + "/";
         if (!TelephoneUtil.isSdcardExist()) {
         	Log.w(LOG_TAG, "sdcard is not found!");
-            throw new PandaDesktopException(ErrorCode.SDCARD_UNFOUND_CODE);
+            throw new DesktopException(ErrorCode.SDCARD_UNFOUND_CODE);
         }
         try {
         	loaderThemeXML(unZipPath + themeXmlName, basePandaTheme);
@@ -721,12 +721,12 @@ public class ThemeLoader {
             loadThemeWeather(unZipPath, basePandaTheme.getThemeId());
             //解压第三方小插件皮肤包  add by caizp 2013-03-11
             loadThemeWidget(unZipPath, basePandaTheme.getThemeId());
-        } catch (PandaDesktopException pe) {
+        } catch (DesktopException pe) {
 //        	FileUtil.delFolder(unZipPath);
             throw pe;
         }  catch (Exception e) {
 			e.printStackTrace();
-			throw new PandaDesktopException(ErrorCode.OTHER_ERROR_CODE);
+			throw new DesktopException(ErrorCode.OTHER_ERROR_CODE);
 		}
         return basePandaTheme;
     }
@@ -735,9 +735,9 @@ public class ThemeLoader {
      * <br>Description: 安装模块包(适用模块包安装与升级)
      * @param zipPath 模块包路径
      * @return 模块包安装成功-模块包ID， 安装失败-null
-     * @throws PandaDesktopException
+     * @throws DesktopException
      */
-    public synchronized String loaderThemeModuleZip(String zipPath, String moduleKey) throws PandaDesktopException {
+    public synchronized String loaderThemeModuleZip(String zipPath, String moduleKey) throws DesktopException {
     	if(null == moduleKey)return null;
     	ModuleInfo moduleInfo = new ModuleInfo();
     	moduleInfo.setModuleKey(moduleKey);
@@ -747,7 +747,7 @@ public class ThemeLoader {
 		String unZipPath = BaseConfig.MODULE_DIR + "temp/" + namePrefix + "/";
 		if (!TelephoneUtil.isSdcardExist()) {
 			Log.w(LOG_TAG, "sdcard is not found!");
-			throw new PandaDesktopException(ErrorCode.SDCARD_UNFOUND_CODE);
+			throw new DesktopException(ErrorCode.SDCARD_UNFOUND_CODE);
 		}
 		ZipUtil.ectract(zipPath, unZipPath, false);
 		String moduleFolder = BaseConfig.MODULE_DIR + moduleKey.replace("@", "/") + "/";
@@ -758,7 +758,7 @@ public class ThemeLoader {
 			//验证主题可用性
 			if (!validateUnzipTheme(unZipPath)) {
 				Log.w(LOG_TAG, "zip validate error!");
-				throw new PandaDesktopException(ErrorCode.ZIP_VALIDATE_ERROR_CODE);
+				throw new DesktopException(ErrorCode.ZIP_VALIDATE_ERROR_CODE);
 			}
 			//解析主题配置文件
 			loaderThemeXML(unZipPath + themeXmlName, moduleInfo);
@@ -771,7 +771,7 @@ public class ThemeLoader {
 				// 验证加密主题包合法性 caizp 2014-7-17
 	            if(moduleInfo.isGuarded()) {
 	            	if(moduleInfo.getGuardedVersion() > ThemeGlobal.SUPPORT_MAX_GUARDED_VERSION) {
-	            		throw new PandaDesktopException(ErrorCode.NOT_SUPPORT_GUARD_VERSION_ERROR);
+	            		throw new DesktopException(ErrorCode.NOT_SUPPORT_GUARD_VERSION_ERROR);
 	            	}
 	            	if(!validateThemeGuardedRes(unZipPath)) {
 	            		// 写入IMEI，暂时让主题成功安装，后期继续优化验证机制 caizp 2014-8-8
@@ -788,7 +788,7 @@ public class ThemeLoader {
 				if (!FileUtil.renameFile(unZipPath, newUnZipPath)) {
 					// 重全名失败，恢复原来的文件夹
 					FileUtil.renameFile(delFilePath, newUnZipPath);
-					throw new PandaDesktopException(ErrorCode.FOLDER_RENAME_ERROR);
+					throw new DesktopException(ErrorCode.FOLDER_RENAME_ERROR);
 				} else {
 					// 重全名成功，删除原来的文件夹
 					if(new File(delFilePath).exists()) {
@@ -806,15 +806,15 @@ public class ThemeLoader {
 				if(ThemeModuleHelper.getInstance().updateModuleInfo(moduleInfo)) {
 					return moduleInfo.getModuleId();
 				} else {//保存失败
-					throw new PandaDesktopException(ErrorCode.THEME_DATA_SAVE_ERROR);
+					throw new DesktopException(ErrorCode.THEME_DATA_SAVE_ERROR);
 				}
 			}
-		} catch (PandaDesktopException pe) {
+		} catch (DesktopException pe) {
 			FileUtil.delFolder(unZipPath);
 			throw pe;
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new PandaDesktopException(ErrorCode.OTHER_ERROR_CODE);
+			throw new DesktopException(ErrorCode.OTHER_ERROR_CODE);
 		}
     	return null;
     }
@@ -824,9 +824,9 @@ public class ThemeLoader {
      * @param namePrefixTemp 模块文件夹路径
      * @param moduleKey 模块KEY
      * @return 模块包安装成功-模块包ID， 安装失败-null
-     * @throws PandaDesktopException
+     * @throws DesktopException
      */
-    public synchronized String loaderThemeModuleFolder(String namePrefixTemp, String moduleKey) throws PandaDesktopException {
+    public synchronized String loaderThemeModuleFolder(String namePrefixTemp, String moduleKey) throws DesktopException {
     	if(null == moduleKey)return null;
     	ModuleInfo moduleInfo = new ModuleInfo();
     	moduleInfo.setModuleKey(moduleKey);
@@ -835,13 +835,13 @@ public class ThemeLoader {
 		String unZipPath = namePrefixTemp + "/";
 		if (!TelephoneUtil.isSdcardExist()) {
 			Log.w(LOG_TAG, "sdcard is not found!");
-			throw new PandaDesktopException(ErrorCode.SDCARD_UNFOUND_CODE);
+			throw new DesktopException(ErrorCode.SDCARD_UNFOUND_CODE);
 		}
 		try {
 			//验证主题可用性
 			if (!validateUnzipTheme(unZipPath)) {
 				Log.w(LOG_TAG, "zip validate error!");
-				throw new PandaDesktopException(ErrorCode.ZIP_VALIDATE_ERROR_CODE);
+				throw new DesktopException(ErrorCode.ZIP_VALIDATE_ERROR_CODE);
 			}
 			//解析主题配置文件
 			loaderThemeXML(unZipPath + themeXmlName, moduleInfo);
@@ -850,7 +850,7 @@ public class ThemeLoader {
 				// 验证加密主题包合法性 caizp 2014-7-17
 	            if(moduleInfo.isGuarded()) {
 	            	if(moduleInfo.getGuardedVersion() > ThemeGlobal.SUPPORT_MAX_GUARDED_VERSION) {
-	            		throw new PandaDesktopException(ErrorCode.NOT_SUPPORT_GUARD_VERSION_ERROR);
+	            		throw new DesktopException(ErrorCode.NOT_SUPPORT_GUARD_VERSION_ERROR);
 	            	}
 	            	if(!validateThemeGuardedRes(unZipPath)) {
 	            		// 写入IMEI，暂时让主题成功安装，后期继续优化验证机制 caizp 2014-8-8
@@ -861,12 +861,12 @@ public class ThemeLoader {
 					return moduleInfo.getModuleId();
 				}
 			}
-		} catch (PandaDesktopException pe) {
+		} catch (DesktopException pe) {
 //			FileUtil.delFolder(unZipPath);
 			throw pe;
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new PandaDesktopException(ErrorCode.OTHER_ERROR_CODE);
+			throw new DesktopException(ErrorCode.OTHER_ERROR_CODE);
 		}
     	return null;
     }

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.ContentProviderOperation;
@@ -31,8 +32,8 @@ import android.util.Log;
 import com.bitants.common.kitset.util.StringUtil;
 import com.bitants.common.launcher.config.BaseConfig;
 import com.bitants.common.launcher.info.ApplicationInfo;
-import com.bitants.common.launcher.info.PandaWidgetInfo;
-import com.bitants.common.launcher.info.PandaWidgetPreviewInfo;
+import com.bitants.common.launcher.info.MirrorWidgetInfo;
+import com.bitants.common.launcher.info.MirrorWidgetPreviewInfo;
 import com.bitants.common.launcher.support.BaseIconCache;
 import com.bitants.common.launcher.support.BitmapWeakReferences;
 import com.bitants.common.R;
@@ -212,6 +213,14 @@ public class BaseLauncherModel extends BroadcastReceiver{
 			item.container = container;
 			moveItemInDatabase(context, item);
 		}
+	}
+	
+	
+	public static void addFQItemInDatabase(Context context, ItemInfo item) {
+	
+			// From all apps
+			addItemToDatabase(context, item, false);
+		
 	}
 	
 	public static void moveItemInDatabase(Context context, ItemInfo item) {
@@ -780,6 +789,7 @@ public class BaseLauncherModel extends BroadcastReceiver{
 		}
 	}
 
+	@SuppressLint("NewApi")
 	public void updateSavedIcon(Context context, ApplicationInfo info,
 			Cursor c, int iconIndex) {
 		// If this icon doesn't have a custom icon, check to see
@@ -817,14 +827,14 @@ public class BaseLauncherModel extends BroadcastReceiver{
 			int iconTypeIndex, int titleIndex) {
 		int appWidgetId = c.getInt(appWidgetIdIndex);
 		if (itemType == BaseLauncherSettings.Favorites.ITEM_TYPE_PANDA_WIDGET) {
-			PandaWidgetInfo result = new PandaWidgetInfo();
+			MirrorWidgetInfo result = new MirrorWidgetInfo();
 			result.appWidgetId = appWidgetId;
 			result.layoutResString = c.getString(iconResourceIndex);
 			result.title = c.getString(titleIndex);
 			result.pandaWidgetPackage = c.getString(iconPackageIndex);
 			return result;
 		} else if (itemType == BaseLauncherSettings.Favorites.ITEM_TYPE_PANDA_PREVIEW_WIDGET) {
-			PandaWidgetPreviewInfo result = new PandaWidgetPreviewInfo();
+			MirrorWidgetPreviewInfo result = new MirrorWidgetPreviewInfo();
 			result.appWidgetId = appWidgetId;
 			result.iconRes = c.getInt(iconTypeIndex);
 			result.title = c.getString(titleIndex);

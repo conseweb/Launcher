@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
+
+import com.bitants.common.launcher.screens.preview.PreviewEditAdvancedController;
 import com.bitants.launcher.R;
 import com.bitants.launcherdev.launcher.Launcher;
 import com.bitants.launcherdev.launcher.Workspace;
@@ -86,7 +88,7 @@ public class LauncherMenu extends BaseLauncherMenu{
 					context.startActivity(intent);
 				} 
 				else if (MENU_SHARE.equals(view.getTag().toString())) {
-					
+					context.getPreviewEditController().startDesktopEdit(PreviewEditAdvancedController.EDIT_PREVIEW_MODE);
 				}
 				menuWindow.dismiss();
 			}

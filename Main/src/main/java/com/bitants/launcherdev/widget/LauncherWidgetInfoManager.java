@@ -253,6 +253,7 @@ public final class LauncherWidgetInfoManager {
 	 */
 	public ArrayList<LauncherWidgetInfo> loadAllLauncherWidgetInside() {
 		ArrayList<LauncherWidgetInfo> listLauncherWidgetInside = new ArrayList<LauncherWidgetInfo>();
+		listLauncherWidgetInside.add(LauncherWidgetInfo.makeClockWidgetInfo());
 		listLauncherWidgetInside.add(LauncherWidgetInfo.makeWeatherClockWidgetInfo());
 		listLauncherWidgetInside.add(LauncherWidgetInfo.makeThemeWidgetInfo());
 		listLauncherWidgetInside.add(LauncherWidgetInfo.makeMemoryClean1X1WidgetInfo()); // 一键清理1x1

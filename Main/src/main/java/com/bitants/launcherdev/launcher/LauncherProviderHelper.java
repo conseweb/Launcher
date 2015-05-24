@@ -61,7 +61,7 @@ public class LauncherProviderHelper {
 	public static final String TAG_91SHORTCUT = "shortcut91";
 	public static final String TAG_DOCK_SHORTCUT = "dock_shortcut";
 	public static final String TAG_PANDAWIDGET_PREVIEW = "pandawidgetpreview";
-	
+	public static final String TAG_FQ_WIDGET_PREVIEW = "fqwidgetpreview";
 	//底部托盘
 	public static final String[] defaultDockbarApp = {BaseThemeData.ICON_PHONE, BaseThemeData.ICON_CONTACTS, 
 		BaseThemeData.ICON_MMS, BaseThemeData.ICON_BROWSER};
@@ -118,6 +118,9 @@ public class LauncherProviderHelper {
 				else if (TAG_DOCK_SHORTCUT.equals(name)) {
 					insertContentValues(values, cellX, cellY, 1, 1);
 					addUriDockShortcut(mContext, db, values, a);
+				}else if(TAG_FQ_WIDGET_PREVIEW.equals(name)){
+					insertContentValues(values, cellX, cellY, 4, 1);
+					addUriSQShortcut(mContext, db, values, a);
 				} 
 				else if (APP.equals(name)) {
 					insertContentValues(values, cellX, cellY, 1, 1);
@@ -136,6 +139,8 @@ public class LauncherProviderHelper {
 		return;
 	}
 	
+	
+
 	public static long createSysAppFolder(SQLiteDatabase db, int cellX, int cellY, int screen){
 		ContentValues values = new ContentValues();
 		values.put(Favorites.CELLX, cellX);
@@ -290,6 +295,30 @@ public class LauncherProviderHelper {
 				a.getString(R.styleable.Favorite_uri)));
 		values.put(Favorites.INTENT, intent.toUri(0));
 		db.insert(LauncherProvider.TABLE_FAVORITES, null, values);
+	}
+	
+	/**
+	 * 添加到底部托盘
+	 */
+	public static boolean addUriSQShortcut(Context mContext, SQLiteDatabase db, ContentValues values, TypedArray a) {
+		String uri = a.getString(R.styleable.Favorite_uri);
+		if (StringUtil.isEmpty(uri))
+			return false;
+		Intent intent = null;
+			try {
+				intent = Intent.parseUri(uri, 0);
+				values.put("title", "搜索插件");
+			} catch (URISyntaxException e) {
+				e.printStackTrace();
+			}
+		
+			
+			values.put(Favorites.INTENT, intent.toUri(0));
+			values.put(Favorites.CONTAINER, LauncherSettings.Favorites.CONTAINER_DESKTOP);
+			values.put(Favorites.ITEM_TYPE, LauncherSettings.Favorites.ITEM_TYPE_WIDGET_SEARCH_SHORTCUT); 
+			db.insert(LauncherProvider.TABLE_FAVORITES, null, values);
+			
+		return true;
 	}
 	
 	/**

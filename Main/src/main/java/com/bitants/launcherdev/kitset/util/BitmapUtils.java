@@ -8,7 +8,7 @@ import android.util.Log;
 import com.bitants.common.kitset.util.BaseBitmapUtils;
 import com.bitants.common.kitset.util.FileUtil;
 import com.bitants.launcherdev.framework.httplib.HttpCommon;
-import com.google.android.mms.ContentType;
+//import com.google.android.mms.ContentType;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 
@@ -42,7 +42,8 @@ public class BitmapUtils extends BaseBitmapUtils {
 			Header resHeader = entity.getContentType();
 			String contentType = resHeader.getValue();
 			CompressFormat format = null;
-			if (contentType != null && contentType.equals(ContentType.IMAGE_PNG)) {
+//			if (contentType != null && contentType.equals(ContentType.IMAGE_PNG)) {
+			if (contentType != null && contentType.equals("image/png")) {
 				format = Bitmap.CompressFormat.PNG;
 			} else {
 				format = Bitmap.CompressFormat.JPEG;

@@ -137,7 +137,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 
 	private void initDockbar(Context context) {
 		for (int i = 0; i < DEFAULT_SCREEN_COUNT; i++) {
-			DockbarCellLayout cellDockbar = (DockbarCellLayout) inflate(getContext(), R.layout.maindock_celllayout, null);
+			DockbarCellLayout cellDockbar = (DockbarCellLayout) View.inflate(getContext(), R.layout.maindock_celllayout, null);
 			addView(cellDockbar);
 		}
 	}
@@ -409,7 +409,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 	 * @return
 	 */
 	private boolean notReadyForDragAndDrop(){
-		return mLauncher.isOnSpringMode() || mLauncher.getScreenViewGroup().getVisibility() != VISIBLE;
+		return mLauncher.isOnSpringMode() || mLauncher.getScreenViewGroup().getVisibility() != View.VISIBLE;
 	}
 	
 	/**
@@ -1178,7 +1178,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 			return null;
 		for (int i = 0; i < dockbar.getChildCount(); i++) {
 			View view = dockbar.getChildAt(i);
-			if(view.getVisibility() != VISIBLE)
+			if(view.getVisibility() != View.VISIBLE)
 				continue;
 			DockbarCellLayout.LayoutParams lp = (DockbarCellLayout.LayoutParams) view.getLayoutParams();
 			if (lp.cellX == cellX)
@@ -1209,7 +1209,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 		DockbarCellLayout dockbar = (DockbarCellLayout) getChildAt(mCurrentScreen);
 		for (int i = 0; i < dockbar.getChildCount(); i++) {
 			View view = dockbar.getChildAt(i);
-			view.setVisibility(VISIBLE);
+			view.setVisibility(View.VISIBLE);
 			if(ingoreView != null && view == ingoreView)
 				continue;
 			DockbarCellLayout.LayoutParams lp = (DockbarCellLayout.LayoutParams) view.getLayoutParams();
@@ -1225,7 +1225,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 		ArrayList<View> list = new ArrayList<View>();
 		for (int i = 0; i < dockbar.getChildCount(); i++) {
 			View view = dockbar.getChildAt(i);
-			if(ignoreInvisableView && view.getVisibility() != VISIBLE)
+			if(ignoreInvisableView && view.getVisibility() != View.VISIBLE)
 				continue;
 			DockbarCellLayout.LayoutParams lp = (DockbarCellLayout.LayoutParams) view.getLayoutParams();
 			if (lp.cellX == cellX){
@@ -1233,7 +1233,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 			}
 			if(list.size() >= 2){
 				for(View v : list){
-					if(v.getVisibility() == VISIBLE)
+					if(v.getVisibility() == View.VISIBLE)
 						return v;
 				}
 			}
@@ -1311,7 +1311,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 				}
 					
 				if(mIconViewInDockbar != null){
-					mIconViewInDockbar.setVisibility(VISIBLE);
+					mIconViewInDockbar.setVisibility(View.VISIBLE);
 				}
 				mIconViewInDockbar = null;
 				lastTargetCellX = -1;
@@ -1391,7 +1391,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 				boolean hasInvisable = false;
 				for(int i = 0; i < count; i ++){
 					View v = dockbar.getChildAt(i);
-					if(v.getVisibility() != VISIBLE){
+					if(v.getVisibility() != View.VISIBLE){
 						hasInvisable = true;
 					}
 				}
@@ -1538,8 +1538,8 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 		if(mIconViewInDockbar != null && mIconViewInWorkspace != null){
 			final View fromView = mIconViewInWorkspace;
 			final View toView = mIconViewInDockbar;
-			toView.setVisibility(VISIBLE);
-			fromView.setVisibility(INVISIBLE);
+			toView.setVisibility(View.VISIBLE);
+			fromView.setVisibility(View.INVISIBLE);
 			if(fromView.getParent() != null){
 				((ViewGroup)fromView.getParent()).removeView(fromView);
 			}
@@ -1599,8 +1599,8 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 		if(mLauncher.getDragController().getDropTarget() instanceof PreviewWorkspace
 				|| (fromTmp[0] % getWidth() == 0 &&  fromTmp[1] == mLauncher.mWorkspace.getTopPadding()
 				&& (((ItemInfo)fromView.getTag()).cellX != 0 || ((ItemInfo)fromView.getTag()).cellY != 0))){
-			toView.setVisibility(VISIBLE);
-			fromView.setVisibility(INVISIBLE);
+			toView.setVisibility(View.VISIBLE);
+			fromView.setVisibility(View.INVISIBLE);
 			if(fromView.getParent() != null){
 				((ViewGroup)fromView.getParent()).removeView(fromView);
 			}
@@ -1642,7 +1642,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 			}
 			@Override
 			public void onAnimationEnd(Animation animation) {
-				aniView.setVisibility(INVISIBLE);
+				aniView.setVisibility(View.INVISIBLE);
 				mHandler.post(new Runnable(){
 					@Override
 					public void run() {
@@ -1663,7 +1663,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 					}
 					toView.requestLayout();
 				}
-				toView.setVisibility(VISIBLE);
+				toView.setVisibility(View.VISIBLE);
 				if(fromView.getParent() != null){
 					((ViewGroup)fromView.getParent()).removeView(fromView);
 				}
@@ -1677,7 +1677,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 		translateAnimation.setFillAfter(true);
 		translateAnimation.setDuration(exchangeAnimationDuration);
 		aniView.startAnimation(translateAnimation);
-		fromView.setVisibility(INVISIBLE);
+		fromView.setVisibility(View.INVISIBLE);
 		mIconViewInWorkspace = null;
 		mIconViewInDockbar = null;
 		return true;
@@ -1714,7 +1714,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 			public void onAnimationEnd(Animation animation) {
 				mDockToWpAnimationView = null;
 				
-				aniView.setVisibility(INVISIBLE);
+				aniView.setVisibility(View.INVISIBLE);
 				mHandler.post(new Runnable(){
 					@Override
 					public void run() {
@@ -1746,7 +1746,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 		translateAnimation.setDuration(exchangeAnimationDuration);
 		aniView.startAnimation(translateAnimation);
 		
-		fromView.setVisibility(INVISIBLE);
+		fromView.setVisibility(View.INVISIBLE);
 		return true;
 	}
 	
@@ -1761,7 +1761,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 		DockbarCellLayout cellLayout = (DockbarCellLayout) getChildAt(mCurrentScreen);
 		int count = cellLayout.getChildCount();
 		DockbarCellLayout.LayoutParams lp = (DockbarCellLayout.LayoutParams)mDragView.getLayoutParams();
-		mDragView.setVisibility(VISIBLE);
+		mDragView.setVisibility(View.VISIBLE);
 		View ignoreView = mDragView;
 		for(int i = lp.cellX; i < count; i ++ ){
 			View tView = findViewByCellXOnDropFail(i, ignoreView);
@@ -1786,7 +1786,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 		boolean hasInvisableView = false;
 		for(int i = 0; i < count; i ++ ){//校正位置
 			View view = cellLayout.getChildAt(i);
-			if(view.getVisibility() != VISIBLE){
+			if(view.getVisibility() != View.VISIBLE){
 				hasInvisableView = true;
 				continue;
 			}
@@ -1806,7 +1806,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 			int cellW = cellLayout.getWidth() / (count - 1);
 			for(int i = 0; i < count; i ++ ){
 				View view = cellLayout.getChildAt(i);
-				if(view.getVisibility() != VISIBLE)
+				if(view.getVisibility() != View.VISIBLE)
 					continue;
 				DockbarCellLayout.LayoutParams lp = (DockbarCellLayout.LayoutParams)view.getLayoutParams();
 				lp.width = cellW;
@@ -1850,7 +1850,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 				View invisableView = null;
 				for(int i = 0; i < count; i ++ ){
 					View v = cellLayout.getChildAt(i);
-					if(v != null && v.getVisibility() != VISIBLE){
+					if(v != null && v.getVisibility() != View.VISIBLE){				
 						invisableView = v;
 						break;
 					}
@@ -1864,7 +1864,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 								+ BaseLauncherSettings.Favorites.CONTAINER +" = " + BaseLauncherSettings.Favorites.CONTAINER_DOCKBAR, 
 								new String[]{String.valueOf(item.id)}, null);
 						if(c.getCount() > 0){
-							invisableView.setVisibility(VISIBLE);
+							invisableView.setVisibility(View.VISIBLE);
 						}else{
 							cellLayout.removeView(invisableView);
 							count --;
@@ -1981,8 +1981,8 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 			lp.isOnPending = false;
 			lp.isOnReorderAnimation = false;
 			lp.preCellX = -1;
-			if(v.getVisibility() != VISIBLE){
-				v.setVisibility(VISIBLE);
+			if(v.getVisibility() != View.VISIBLE){
+				v.setVisibility(View.VISIBLE);
 			}
 		}
 		
@@ -2099,14 +2099,14 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 				
 				for(int i = 0; i < count; i ++ ){
 					View view = cellLayout.getChildAt(i);
-					if(view.getVisibility() != VISIBLE)
+					if(view.getVisibility() != View.VISIBLE)
 						continue;
 					pushAnimateChildToPosition(view, oldCellW, newCellW);
 				}
 			}else if(action == Drag_Enter_Over){//拖入后拖动
 				for(int i = 0; i < count; i ++ ){
 					View view = cellLayout.getChildAt(i);
-					if(view.getVisibility() != VISIBLE){
+					if(view.getVisibility() != View.VISIBLE){
 						continue;
 					}
 				}
@@ -2158,7 +2158,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 				
 				for(int i = 0; i < count; i ++ ){
 					View view = cellLayout.getChildAt(i);
-					if(view.getVisibility() != VISIBLE)
+					if(view.getVisibility() != View.VISIBLE)
 						continue;
 					pullAnimateChildToPosition(view, oldCellW, newCellW);
 				}
@@ -2173,7 +2173,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 				
 				for(int i = 0; i < count; i ++ ){
 					View view = cellLayout.getChildAt(i);
-					if(view.getVisibility() != VISIBLE)
+					if(view.getVisibility() != View.VISIBLE)
 						continue;
 					pushAnimateChildToPosition(view, oldCellW, newCellW);
 				}
@@ -2189,7 +2189,7 @@ public class BaseMagicDockbar extends DockbarSlidingView implements DragSource, 
 				
 				for(int i = 0; i < count; i ++ ){
 					View view = cellLayout.getChildAt(i);
-					if(view.getVisibility() != VISIBLE)
+					if(view.getVisibility() != View.VISIBLE)
 						continue;
 					pullAnimateChildToPosition(view, oldCellW, newCellW);
 				}

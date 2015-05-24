@@ -350,6 +350,8 @@ public class LauncherEditView extends RelativeLayout implements OnCommonSlidingV
 //					showSystemWidgetViewCategory(0);
 //					setAllowClick(true);
 //				}
+			}else if(item.type == LauncherWidgetInfo.TYPE_WIDGET_SEARCH){//搜索
+				mLauncher.addNewInstallWidget(item);
 			}
 		}else if(dataItem instanceof LauncherEditEffectItemInfo){
 			final LauncherEditEffectItemInfo item = (LauncherEditEffectItemInfo) dataItem;

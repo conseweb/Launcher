@@ -263,6 +263,10 @@ public class IntegrateFolderPage extends ViewGroup {
 		promotionLayout.layout(0, top, promotionLayout.getMeasuredWidth(), top
 				+ promotionLayout.getMeasuredHeight());
 		totalHeight = top + promotionLayout.getMeasuredHeight();
+		
+		promotionLayout.setVisibility(View.INVISIBLE);
+		
+
 	}
 
 	@Override

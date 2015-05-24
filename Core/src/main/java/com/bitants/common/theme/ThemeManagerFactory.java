@@ -19,7 +19,7 @@ import android.widget.ImageView;
 import com.bitants.common.launcher.config.BaseConfig;
 import com.bitants.common.theme.data.ThemeGlobal;
 import com.bitants.common.theme.module.ModuleConstant;
-import com.bitants.common.framework.exception.PandaDesktopException;
+import com.bitants.common.framework.exception.DesktopException;
 import com.bitants.common.kitset.util.StringUtil;
 import com.bitants.common.theme.data.BaseThemeData;
 import com.bitants.common.theme.db.LauncherThemeDataBase;
@@ -330,7 +330,7 @@ public class ThemeManagerFactory {
 		try {
 			BasePandaTheme theme = ThemeLoader.getInstance().loaderThemeZip(aptPath);
 			return theme.getThemeId();
-		} catch (PandaDesktopException pe) {
+		} catch (DesktopException pe) {
 			pe.printStackTrace();
 			Log.e("installAptTheme", "error code = " + pe.getErrorCode() + ", message=" + pe.getErrorMesg());
 			FileUtil.delFile(aptPath);
@@ -358,7 +358,7 @@ public class ThemeManagerFactory {
 			} else {
 				
 			}
-		} catch (PandaDesktopException pe) {
+		} catch (DesktopException pe) {
 			pe.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -646,7 +646,7 @@ public class ThemeManagerFactory {
 		try {
 			String moduleId = ThemeLoader.getInstance().loaderThemeModuleZip(aptPath, moduleKey);
 			return moduleId;
-		} catch (PandaDesktopException pe) {
+		} catch (DesktopException pe) {
 			pe.printStackTrace();
 			Log.e("installAptThemeModule", "error code = " + pe.getErrorCode() + ", message=" + pe.getErrorMesg());
 			FileUtil.delFile(aptPath);
@@ -668,7 +668,7 @@ public class ThemeManagerFactory {
 		try {
 			String moduleId = ThemeLoader.getInstance().loaderThemeModuleFolder(file.getAbsolutePath(), moduleKey);
 			return moduleId;
-		} catch (PandaDesktopException pe) {
+		} catch (DesktopException pe) {
 			pe.printStackTrace();
 			Log.e("restallAptThemeModule", "error code = " + pe.getErrorCode() + ", message=" + pe.getErrorMesg());
 		} catch (Exception e) {
