@@ -1003,7 +1003,7 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 		/*if (mCurrentScreen == 0 || mCurrentScreen == getChildCount() - 1) {
 			ReadMeFactory.maybeShowTopMenu(mLauncher);
 		}*/
-		//滑到新的一屏的时候，清空旧的空余单元格信息。add by lx at 2012-09-25 10:21
+		//滑到新的一屏的时候，清空旧的空余单元格信息。
 		clearVacantCache();
 		DragHelper.getInstance().clearOtherScreenOutline(getCurrentCellLayout());
 		invalidate();

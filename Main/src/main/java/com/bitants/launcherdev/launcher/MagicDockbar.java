@@ -74,7 +74,7 @@ public class MagicDockbar extends BaseMagicDockbar {
 				setEndlessScrolling(false);
 			}
 		}else if(childnum < num){
-			for(int n = childnum ; n < num; n++){
+			for (int n = childnum ; n < num; n++) {
 				DockbarCellLayout cellDockbar = (DockbarCellLayout) View.inflate(mContext, R.layout.maindock_celllayout, null);
 				addView(cellDockbar);
 				List<ItemInfo> result = new ArrayList<ItemInfo>();

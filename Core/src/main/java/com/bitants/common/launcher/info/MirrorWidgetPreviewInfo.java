@@ -12,7 +12,7 @@ public class MirrorWidgetPreviewInfo extends WidgetInfo {
 	public String layoutXml;
 
 	public MirrorWidgetPreviewInfo() {
-		this.itemType = BaseLauncherSettings.Favorites.ITEM_TYPE_PANDA_PREVIEW_WIDGET;
+		this.itemType = BaseLauncherSettings.Favorites.ITEM_TYPE_MIRROR_PREVIEW_WIDGET;
 		this.container = BaseLauncherSettings.Favorites.CONTAINER_DESKTOP;
 	}
 	

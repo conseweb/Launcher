@@ -9,7 +9,7 @@ public class LauncherSettings {
 	
 	public static interface BaseLauncherColumns extends BaseLauncherSettings.BaseLauncherColumns {
 		/**
-		 * 新加一个字段 用来存储系统快捷方式等默认图标   add by zhenghonglin
+		 * 新加一个字段 用来存储系统快捷方式等默认图标
 		 */
 		static final String DEFAULT_ICON = "defaultIcon";
 	}
@@ -41,7 +41,7 @@ public class LauncherSettings {
         public static final int ITEM_TYPE_WIDGET_PHOTO_FRAME = 1002;
         
         /**
-         * 用户反馈(兼容熊猫桌面2.X小插件) edit by caizp 2012-8-28
+         * 用户反馈(兼容魔镜桌面2.X小插件)
          */
         public static final int ITEM_TYPE_WIDGET_FEEDBACK = 1011;
         
@@ -108,7 +108,7 @@ public class LauncherSettings {
         public static final int ITEM_TYPE_WIDGET_WALLPAPER_1X1 = 2025;
         
         /**
-         * 快捷开关widget(兼容熊猫桌面2.X小插件) edit by caizp 2012-8-28
+         * 快捷开关widget(兼容魔镜桌面2.X小插件)
          */
         public static final int ITEM_TYPE_WIDGET_TOGGLE = 1007;
         

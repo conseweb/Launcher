@@ -204,7 +204,7 @@ public class WorkspaceDragAndDropOnDefault extends WorkspaceDragAndDropImpl {
 		info.cellX = targetCell[0];
 		info.cellY = targetCell[1];
 		
-//		if (info.itemType == LauncherSettings.Favorites.ITEM_TYPE_PANDA_WIDGET) {//拖动匣子中小部件特殊处理
+//		if (info.itemType == LauncherSettings.Favorites.ITEM_TYPE_MIRROR_WIDGET) {//拖动匣子中小部件特殊处理
 //			PandaWidgetInfo pandaWidgetInfo = WorkspaceHelper.transformToPandaWidgetInfo(mLauncher,(LauncherWidgetInfo) dragInfo);
 //			View view = mWorkspace.createViewByItemInfo(pandaWidgetInfo);
 //			if (view == null)

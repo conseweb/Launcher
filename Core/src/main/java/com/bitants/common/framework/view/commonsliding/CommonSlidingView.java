@@ -1839,7 +1839,7 @@ public abstract class CommonSlidingView extends ViewGroup implements OnClickList
 	public boolean isScrollerFinished() {
 		return mScroller.isFinished();
 	}
-	//add by zhou,为了解决快捷方式进入我的手机时，当前页面不正确的问题
+	// 为了解决快捷方式进入我的手机时，当前页面不正确的问题
 	protected void clearOriginalData() {
 		mOriginalData=null;
 		

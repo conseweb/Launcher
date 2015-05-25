@@ -81,7 +81,7 @@ public class Workspace extends ScreenViewGroup implements DragScroller, AnyCallb
 			view = mLauncher.createFolderIconTextViewFromXML((ViewGroup) getChildAt(mCurrentScreen), itemInfo);
 			break;
 			
-		case LauncherSettings.Favorites.ITEM_TYPE_PANDA_WIDGET: //匣子里的自定义桌面小部件
+		case LauncherSettings.Favorites.ITEM_TYPE_MIRROR_WIDGET: //匣子里的自定义桌面小部件
 			view = mLauncher.createAppWidgetView((MirrorWidgetInfo)itemInfo);
 			break;
 			

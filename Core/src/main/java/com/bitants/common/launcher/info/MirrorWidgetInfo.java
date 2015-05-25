@@ -16,7 +16,7 @@ public class MirrorWidgetInfo extends WidgetInfo {
 	public boolean isCatchVerticalGesture = false;
 
 	public MirrorWidgetInfo() {
-		this.itemType = BaseLauncherSettings.Favorites.ITEM_TYPE_PANDA_WIDGET;
+		this.itemType = BaseLauncherSettings.Favorites.ITEM_TYPE_MIRROR_WIDGET;
 		this.container = BaseLauncherSettings.Favorites.CONTAINER_DESKTOP;
 	}
 
@@ -34,7 +34,7 @@ public class MirrorWidgetInfo extends WidgetInfo {
 		this.spanX = info.spanX;
 		this.spanY = info.spanY;
 		this.pandaWidgetPackage = info.pandaWidgetPackage;
-		this.itemType = BaseLauncherSettings.Favorites.ITEM_TYPE_PANDA_WIDGET;
+		this.itemType = BaseLauncherSettings.Favorites.ITEM_TYPE_MIRROR_WIDGET;
 		this.container = BaseLauncherSettings.Favorites.CONTAINER_DESKTOP;
 	}
 

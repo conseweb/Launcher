@@ -651,7 +651,7 @@ public class FileUtil {
 		return sb.toString();
 	}
 
-	// add by linqiang 从FileManagerUtil.java移动过来
+	// 从FileManagerUtil.java移动过来
 	/**
 	 * 获取缩略图
 	 * @param cxt

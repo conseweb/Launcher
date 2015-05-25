@@ -34,6 +34,8 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
+import hugo.weaving.DebugLog;
+
 import static android.util.Log.e;
 
 public class LauncherLoaderHelperImpl extends LauncherLoaderHelper{
@@ -48,11 +50,12 @@ public class LauncherLoaderHelperImpl extends LauncherLoaderHelper{
 		}
 		return instance;
 	}
-	
+
+    @DebugLog
 	@Override
 	public boolean loadFavoritesDataFromDB(Context context, LauncherLoader loader,
 			BaseLauncherModel mModel) {
-		final String TAG = "loadData";
+		final String TAG = "loadFavoritesDataFromDB";
 		final ContentResolver contentResolver = context.getContentResolver();
 		final PackageManager manager = context.getPackageManager();
 		
@@ -233,8 +236,8 @@ public class LauncherLoaderHelperImpl extends LauncherLoaderHelper{
 						loader.getFolders().put(folderInfo.id, folderInfo);
 						break;
 					case LauncherSettings.Favorites.ITEM_TYPE_APPWIDGET:
-					case LauncherSettings.Favorites.ITEM_TYPE_PANDA_WIDGET:
-					case LauncherSettings.Favorites.ITEM_TYPE_PANDA_PREVIEW_WIDGET:
+					case LauncherSettings.Favorites.ITEM_TYPE_MIRROR_WIDGET:
+					case LauncherSettings.Favorites.ITEM_TYPE_MIRROR_PREVIEW_WIDGET:
 						// Read all Launcher-specific widget details
 						appWidgetInfo = mModel.getAppWidgetInfo(itemType, c, appWidgetIdIndex, iconPackageIndex, iconResourceIndex, iconTypeIndex, titleIndex);
 						appWidgetInfo.id = c.getLong(idIndex);
@@ -356,7 +359,7 @@ public class LauncherLoaderHelperImpl extends LauncherLoaderHelper{
 				if (item.container == LauncherSettings.Favorites.CONTAINER_DESKTOP) {
 					newFolder = BaseLauncherViewHelper.createFolderIconTextView(mLauncher, (FolderInfo) item); 
 					workspace.addInScreen(newFolder, item.screen, item.cellX, item.cellY, item.spanX, item.spanY);
-				}else{
+				} else {
 					newFolder = BaseLauncherViewHelper.createFolderIconTextViewFromContext(mLauncher, (FolderInfo) item);
 					mDockbar.addInDockbar(newFolder, item.screen, item.cellX, item.cellY, item.spanX, item.spanY, false);
 				}
@@ -374,6 +377,7 @@ public class LauncherLoaderHelperImpl extends LauncherLoaderHelper{
 //				final View view = BaseLauncherViewHelper.createAnythingAppView(mLauncher, item);
 //				if (view != null)
 //					workspace.addInScreen(view, item.screen, item.cellX, item.cellY, item.spanX, item.spanY);
+                break;
 			}
 		}
 	}
@@ -426,7 +430,7 @@ public class LauncherLoaderHelperImpl extends LauncherLoaderHelper{
 										view.invalidate();
 										BaseLauncherModel.updateItemInDatabase(mLauncher, info);
 										updateCount++;
-									} else {// 匹配出多个入口，则删除该图标 caizp 2013-4-2
+									} else {// 匹配出多个入口，则删除该图标
 										BaseLauncherModel.deleteItemFromDatabase(mLauncher, info);
 										childrenToRemove.add(view);
 									}
@@ -461,7 +465,7 @@ public class LauncherLoaderHelperImpl extends LauncherLoaderHelper{
 											applicationInfo.iconBitmap = mIconCache.getIcon(applicationInfo);
 											view.invalidate();
 											BaseLauncherModel.updateItemInDatabase(mLauncher, applicationInfo);
-										} else {// 匹配出多个入口，则删除该图标 caizp 2013-4-2
+										} else {// 匹配出多个入口，则删除该图标
 											BaseLauncherModel.deleteItemFromDatabase(mLauncher, applicationInfo);
 											if (toRemove == null)
 												toRemove = new ArrayList<ApplicationInfo>();
@@ -493,7 +497,8 @@ public class LauncherLoaderHelperImpl extends LauncherLoaderHelper{
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			Toast.makeText(mLauncher, "Updating workspace is someting wrong:)", Toast.LENGTH_SHORT).show();
+			Toast.makeText(mLauncher, "Updating workspace is something wrong:)", Toast
+                    .LENGTH_SHORT).show();
 		}
 	}
 	

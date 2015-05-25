@@ -308,11 +308,11 @@ public class ThemeLoader {
 				}
 			}
             unZipPath = newUnZipPath;
-            //解压天气皮肤包  add by caizp 2011-09-02
+            //解压天气皮肤包
             loadThemeWeather(unZipPath, basePandaTheme.getThemeId());
-            // 解压第三方小插件皮肤包 add by caizp 2013-03-11
+            // 解压第三方小插件皮肤包
          	loadThemeWidget(unZipPath, basePandaTheme.getThemeId());
-         	// 重命名旧主题目录文件 caizp 2014-6-27
+         	// 重命名旧主题目录文件
          	renameRes(unZipPath + ThemeGlobal.THEME_APT_DRAWABLE_DIR);
 			renameRes(unZipPath + ThemeGlobal.THEME_APT_DRAWABLE_XHDPI_DIR);
         } catch (DesktopException pe) {
@@ -671,11 +671,11 @@ public class ThemeLoader {
 			
 			// 兼容安卓锁屏主题壁纸
 			loadThemeLockBg(basePandaTheme.getThemeId());
-			// 解压天气皮肤包 add by caizp 2011-09-02
+			// 解压天气皮肤包
 			loadThemeWeather(unZipPath, basePandaTheme.getThemeId());
-			// 解压第三方小插件皮肤包 add by caizp 2013-03-11
+			// 解压第三方小插件皮肤包
 			loadThemeWidget(unZipPath, basePandaTheme.getThemeId());
-			// 重命名旧主题目录文件 caizp 2014-6-27
+			// 重命名旧主题目录文件
 			renameRes(unZipPath + ThemeGlobal.THEME_APT_DRAWABLE_DIR);
 			renameRes(unZipPath + ThemeGlobal.THEME_APT_DRAWABLE_XHDPI_DIR);
 			
@@ -711,15 +711,15 @@ public class ThemeLoader {
         }
         try {
         	loaderThemeXML(unZipPath + themeXmlName, basePandaTheme);
-        	//主题重新导入的时候，保存在数据库中的themeid和idflag，也是将下划线改为空格.modify by lx at 2012-09-10 14:14
+        	//主题重新导入的时候，保存在数据库中的themeid和idflag，也是将下划线改为空格.
             basePandaTheme.setThemeId(basePandaTheme.getIDFlag());
             basePandaTheme.setIDFlag(basePandaTheme.getIDFlag());
             basePandaTheme.setAptPath(namePrefix + "/");
             //兼容安卓锁屏主题壁纸
             loadThemeLockBg(basePandaTheme.getThemeId());
-            //解压天气皮肤包  add by caizp 2011-09-02
+            //解压天气皮肤包
             loadThemeWeather(unZipPath, basePandaTheme.getThemeId());
-            //解压第三方小插件皮肤包  add by caizp 2013-03-11
+            //解压第三方小插件皮肤包
             loadThemeWidget(unZipPath, basePandaTheme.getThemeId());
         } catch (DesktopException pe) {
 //        	FileUtil.delFolder(unZipPath);

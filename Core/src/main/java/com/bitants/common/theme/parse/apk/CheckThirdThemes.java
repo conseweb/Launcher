@@ -162,7 +162,7 @@ public class CheckThirdThemes extends Thread{
                 }
                 Context etCtx = et.getContext();
                 if(null != etCtx){
-                	//兼容安卓锁屏主题壁纸  add by caizp 2012-8-24
+                	// 兼容安卓锁屏主题壁纸
                     int lockBgResId = etCtx.getResources().getIdentifier(BaseThemeData.PANDA_LOCK_MAIN_BACKGROUND, "drawable", et.getPackageName());
                     if(0 != lockBgResId){
                     	InputStream lockBgInputStream = null;
@@ -174,13 +174,13 @@ public class CheckThirdThemes extends Thread{
                 		}
                     	FileUtil.saveStream2File(lockBgInputStream, lockSkinPath + BaseThemeData.ZNS_LOCK_BG + ".jpg");
                     }
-                    //加载主题天气和锁屏皮肤包 add by caizp 2011-09-02
+                    //加载主题天气和锁屏皮肤包
                 	int weatherResId = etCtx.getResources().getIdentifier("weather", "raw", et.getPackageName());
                 	if(0 != weatherResId){
                 		InputStream weatherZipInputStream = null;
                     	weatherZipInputStream = etCtx.getResources().openRawResource(weatherResId);
                     	String tempPath = createWeatherClockTempPath();
-                    	//解压天气皮肤包  add by caizp 2011-09-02
+                    	//解压天气皮肤包
                     	FileUtil.saveStream2File(weatherZipInputStream, tempPath+ThemeGlobal.THEME_CLOCKWEATHER_SKIN);
                         ThemeLoader.loadThemeWeather(tempPath, et.getPackageName());
                         FileUtil.delFile(tempPath+ThemeGlobal.THEME_CLOCKWEATHER_SKIN);
@@ -194,7 +194,7 @@ public class CheckThirdThemes extends Thread{
                 		if (!dir.isDirectory()) {
                 			dir.mkdirs();
                 		}
-                		//解压第三方小插件皮肤包  add by caizp 2013-03-11
+                		//解压第三方小插件皮肤包
                         FileUtil.saveStream2File(widgetZipInputStream, tempPath + ThemeGlobal.THEME_WIDGET_SKIN);
                         ThemeLoader.loadThemeWidget(tempPath, et.getPackageName());
                         FileUtil.delFile(tempPath + ThemeGlobal.THEME_WIDGET_SKIN);

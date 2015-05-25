@@ -127,7 +127,7 @@ public class BaseLineLightBar extends View implements LightBarInterface {
 			hlLine.draw(canvas);
 			return;
 		}
-		// 圆形指示灯add by youy 2014.3.5
+		// 圆形指示灯
 		int left = (width - allWidth) / 2;
 		int top = (height - lineHeight) / 2;
 		if (isShownNavScreen) {

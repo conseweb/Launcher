@@ -826,14 +826,14 @@ public class BaseLauncherModel extends BroadcastReceiver{
 			int appWidgetIdIndex, int iconPackageIndex, int iconResourceIndex,
 			int iconTypeIndex, int titleIndex) {
 		int appWidgetId = c.getInt(appWidgetIdIndex);
-		if (itemType == BaseLauncherSettings.Favorites.ITEM_TYPE_PANDA_WIDGET) {
+		if (itemType == BaseLauncherSettings.Favorites.ITEM_TYPE_MIRROR_WIDGET) {
 			MirrorWidgetInfo result = new MirrorWidgetInfo();
 			result.appWidgetId = appWidgetId;
 			result.layoutResString = c.getString(iconResourceIndex);
 			result.title = c.getString(titleIndex);
 			result.pandaWidgetPackage = c.getString(iconPackageIndex);
 			return result;
-		} else if (itemType == BaseLauncherSettings.Favorites.ITEM_TYPE_PANDA_PREVIEW_WIDGET) {
+		} else if (itemType == BaseLauncherSettings.Favorites.ITEM_TYPE_MIRROR_PREVIEW_WIDGET) {
 			MirrorWidgetPreviewInfo result = new MirrorWidgetPreviewInfo();
 			result.appWidgetId = appWidgetId;
 			result.iconRes = c.getInt(iconTypeIndex);

@@ -899,7 +899,7 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 	 * 缓存非标小部件
 	 */
 	public void ifNeedCache(WidgetInfo item, View view) {
-		if (item.itemType != BaseLauncherSettings.Favorites.ITEM_TYPE_PANDA_WIDGET)
+		if (item.itemType != BaseLauncherSettings.Favorites.ITEM_TYPE_MIRROR_WIDGET)
 			return;
 		
 		if (!(view instanceof PandaWidgetViewContainer))

@@ -248,7 +248,7 @@ public class LauncherWidgetInfo extends LauncherItemInfo {
 	
 	public LauncherWidgetInfo() {
 		this.catagoryNo = CATAGORY_CUSTOM_WIDGET;
-		this.itemType = LauncherSettings.Favorites.ITEM_TYPE_PANDA_WIDGET;
+		this.itemType = LauncherSettings.Favorites.ITEM_TYPE_MIRROR_WIDGET;
 	}
 
 	@Override

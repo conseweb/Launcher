@@ -104,7 +104,7 @@ public class BaseLauncherSettings {
 		/**
 		 * 该值从config.xml读取，不可直接赋给静态变量使用！
 		 */
-		public static String AUTHORITY = "com.nd.android.launcher2.settings";
+		public static String AUTHORITY = "com.bitants.launcher.settings";
 		/**
 		 * 该值从config.xml读取，不可直接赋给静态变量使用！
 		 */
@@ -258,14 +258,14 @@ public class BaseLauncherSettings {
 		public static final int ITEM_TYPE_APPWIDGET = 4;
 		
 		/**
-         * 91小部件预览图(兼容熊猫桌面2.X小插件) edit by caizp 2012-8-28
+         * 小部件预览图(桌面2.X小插件)
          */
-        public static final int ITEM_TYPE_PANDA_PREVIEW_WIDGET = 1012;
+        public static final int ITEM_TYPE_MIRROR_PREVIEW_WIDGET = 1012;
         
         /**
-         * 91小部件(兼容熊猫桌面2.X小插件) edit by caizp 2012-8-28
+         * 小部件(兼容魔镜桌面2.X小插件)
          */
-        public static final int ITEM_TYPE_PANDA_WIDGET = 10000;
+        public static final int ITEM_TYPE_MIRROR_WIDGET = 10000;
 		
         /**
          * 自定义Intent

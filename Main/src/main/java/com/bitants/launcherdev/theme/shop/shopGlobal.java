@@ -406,7 +406,6 @@ public class shopGlobal {
 	
 	/**
 	 * 隐藏软键盘(已经 有实例化Global)
-	 * add by zjf 2010-09-15
 	 */
 	public static  void hideKeyboard( View view) {		
 		hideKeyboard(shopGlobal.getContext(), view);
@@ -414,7 +413,6 @@ public class shopGlobal {
 	
 	/**
 	 * 	隐藏软键盘
-	 * add by zxb 2010-03-15
 	 * @param ctx
 	 * @param view
 	 */

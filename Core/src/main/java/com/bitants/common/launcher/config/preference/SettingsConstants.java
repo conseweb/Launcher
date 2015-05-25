@@ -59,7 +59,7 @@ public class SettingsConstants {
     public final static String SETTING_PERSONAL_PANDALOCK_SWITCH = "settings_personal_panda_lock_switch";
     
     /**
-     * 锁屏选择 add by linqiang
+     * 锁屏选择
      */
     public final static String SETTING_PERSONAL_LOCK_SWITCH = "settings_personal_lock_switch";
     
