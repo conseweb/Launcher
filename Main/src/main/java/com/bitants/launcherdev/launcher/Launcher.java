@@ -622,46 +622,46 @@ public class Launcher extends BaseLauncher {
 	
 
 	public void addNewInstallWidget(LauncherWidgetInfo launcherWidgetInfo){
-	
-		    int[] pageInfo = BaseCellLayoutHelper.findCellXYForWidget(this, launcherWidgetInfo.spanX, launcherWidgetInfo.spanY, null);
-		    
-		    if (pageInfo == null) {
-				Toast.makeText(this, "当前屏幕没有空位", 1).show();
-				return;
-			}
-	
-			int page = mWorkspace.getCurrentScreen();
-			int cellX = pageInfo[0];
-			int cellY = pageInfo[1];
-			launcherWidgetInfo.screen = page;
-			launcherWidgetInfo.cellX = cellX;
-			launcherWidgetInfo.cellY = cellY;
-			launcherWidgetInfo.spanX = 4;
-			launcherWidgetInfo.spanY = 1;
-			launcherWidgetInfo.container= LauncherSettings.Favorites.CONTAINER_DESKTOP;
-			
-			BaseLauncherModel.addFQItemInDatabase(getBaseContext(), launcherWidgetInfo);
-			
-			View view = createWidgetFqFromXML( launcherWidgetInfo);
-			if (view == null)
-				return;
-			((Workspace)mWorkspace).addInScreen(view, page, cellX, cellY, launcherWidgetInfo.spanX, launcherWidgetInfo.spanY);
-			
-			//FIXME 在编辑模式下可能会有刷新的问题
+
+		ViewGroup parent = (ViewGroup) mWorkspace.getChildAt(mWorkspace.getCurrentScreen());
+		if (parent == null) {
+            parent = (ViewGroup) mWorkspace.getChildAt(0);
+        }
+
+        int[] pageInfo = BaseCellLayoutHelper.findCellXYForWidget(this, launcherWidgetInfo.spanX, launcherWidgetInfo.spanY, null);
+
+        if (pageInfo == null) {
+            Toast.makeText(this, "当前屏幕没有空位", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        int page = mWorkspace.getCurrentScreen();
+        int cellX = pageInfo[0];
+        int cellY = pageInfo[1];
+        launcherWidgetInfo.screen = page;
+        launcherWidgetInfo.cellX = cellX;
+        launcherWidgetInfo.cellY = cellY;
+        launcherWidgetInfo.spanX = 4;
+        launcherWidgetInfo.spanY = 1;
+        launcherWidgetInfo.container= LauncherSettings.Favorites.CONTAINER_DESKTOP;
+
+        BaseLauncherModel.addFQItemInDatabase(getBaseContext(), launcherWidgetInfo);
+
+        View view = createWidgetFqFromXML(launcherWidgetInfo);
+        if (view == null)
+            return;
+        ((Workspace)mWorkspace).addInScreen(view, page, cellX, cellY, launcherWidgetInfo.spanX, launcherWidgetInfo.spanY);
+
+        //FIXME 在编辑模式下可能会有刷新的问题
 		
 	}
 	
 	public void addViewFromWidgetInfo(LauncherWidgetInfo launcherWidgetInfo){
-		
-		
-		ViewGroup parent = (ViewGroup) mWorkspace.getChildAt(mWorkspace.getCurrentScreen());
-		if (parent == null)
-			parent = (ViewGroup) mWorkspace.getChildAt(0);
 	  
 	    int[] pageInfo = BaseCellLayoutHelper.findCellXYForWidget(this,launcherWidgetInfo.spanX,launcherWidgetInfo.spanY, null);
 	    
 	    if (pageInfo == null) {
-			Toast.makeText(this, "当前屏幕没有空位", 1).show();
+			Toast.makeText(this, "当前屏幕没有空位", Toast.LENGTH_LONG).show();
 			return;
 		}
 
@@ -676,7 +676,7 @@ public class Launcher extends BaseLauncher {
 		launcherWidgetInfo.container= LauncherSettings.Favorites.CONTAINER_DESKTOP;
 		
 		BaseLauncherModel.addFQItemInDatabase(getBaseContext(), launcherWidgetInfo);
-		
+
 		View view = createWidgetFqFromXML(launcherWidgetInfo);
 		if (view == null)
 			return;
@@ -711,7 +711,7 @@ public class Launcher extends BaseLauncher {
 	 * 创建桌面搜索插件
 	 */
 	@Override
-	public View createWidgetFqFromXML(ItemInfo itemInfo) {
+	public View createWidgetFqFromXML( ItemInfo itemInfo) {
 		// TODO Auto-generated method stub
 
 		if(itemInfo==null||!(itemInfo instanceof LauncherWidgetInfo)){
@@ -719,7 +719,7 @@ public class Launcher extends BaseLauncher {
 		}
 		View customView=null;
 		LauncherWidgetInfo launcherWidgetInfo=(LauncherWidgetInfo) itemInfo;
-		
+
 		ScreenViewGroup mWorkspace = getScreenViewGroup();
 		ViewGroup parent = (ViewGroup) mWorkspace.getChildAt(mWorkspace.getCurrentScreen());
 		if (parent == null)

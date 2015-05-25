@@ -1053,7 +1053,7 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 		return BaseLauncherViewHelper.createFolderIconTextViewFromXML(this, parent, ((FolderInfo) itemInfo));
 	}
 	
-	public View createWidgetFqFromXML( ItemInfo itemInfo){
+	public View createWidgetFqFromXML(ItemInfo itemInfo){
 		return null;
 	}
 	

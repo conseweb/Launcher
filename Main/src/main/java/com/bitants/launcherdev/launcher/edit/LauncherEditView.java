@@ -122,6 +122,9 @@ public class LauncherEditView extends RelativeLayout implements OnCommonSlidingV
 	
 	@Override
 	protected void onFinishInflate() {
+        if (mContext == null)
+		    mContext = getContext();
+
 		addBtn = (CheckedTextView) findViewById(R.id.launcher_edit_add_btn);
 		individalBtn = (CheckedTextView) findViewById(R.id.launcher_edit_individal_btn);
 

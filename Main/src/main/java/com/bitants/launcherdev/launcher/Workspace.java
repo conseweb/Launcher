@@ -86,7 +86,7 @@ public class Workspace extends ScreenViewGroup implements DragScroller, AnyCallb
 			break;
 			
 		case LauncherSettings.Favorites.ITEM_TYPE_WIDGET_SEARCH_SHORTCUT: //自定义插件添加
-			view = mLauncher.createWidgetFqFromXML(itemInfo);
+			view = mLauncher.createWidgetFqFromXML( itemInfo);
 			break;
 //		case LauncherSettings.Favorites.ITEM_TYPE_PANDA_SHORTCUT:  
 //		case LauncherSettings.Favorites.ITEM_TYPE_SYSTEM_SHORTCUT:

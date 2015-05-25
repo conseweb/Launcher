@@ -307,7 +307,7 @@ public class LauncherProviderHelper {
 		Intent intent = null;
 			try {
 				intent = Intent.parseUri(uri, 0);
-				values.put("title", "搜索插件");
+				values.put(Favorites.TITLE, mContext.getResources().getString(a.getResourceId(R.styleable.Favorite_title, 0)));
 			} catch (URISyntaxException e) {
 				e.printStackTrace();
 			}

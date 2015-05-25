@@ -364,7 +364,7 @@ public class LauncherLoaderHelperImpl extends LauncherLoaderHelper{
 				break;
 				
 			case LauncherSettings.Favorites.ITEM_TYPE_WIDGET_SEARCH_SHORTCUT:
-				
+
 				View view = mLauncher.createWidgetFqFromXML((LauncherWidgetInfo)item);
 				if (view == null)
 					return;

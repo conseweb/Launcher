@@ -2094,7 +2094,7 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 	}
 	
 	/**
-	 * @param removeSpringAddScreen 是否增加一个“添加”屏
+	 * @param createSpringAddScreen 是否增加一个“添加”屏
 	 * @param tab - 默认显示数据集
 	 * @return
 	 */
