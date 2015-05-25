@@ -18,8 +18,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.bitants.cleaner.view.MAdapter;
-import com.bitants.entity.AppItem;
+import com.bitants.boost.view.MAdapter;
+import com.bitants.boost.entity.AppItem;
+import com.bitants.launcher.R;
 
 public class SetWhiteListActivity extends Activity
 {

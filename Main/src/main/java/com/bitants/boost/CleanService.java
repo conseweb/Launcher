@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.os.Message;
 
-import com.bitants.util.CleanUtil;
-import com.bitants.util.Value;
+import com.bitants.boost.util.CleanUtil;
+import com.bitants.boost.util.Value;
 
 public class CleanService extends Service implements Runnable
 {
