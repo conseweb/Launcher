@@ -1,6 +1,13 @@
 apply plugin: 'com.android.application'
 apply plugin: 'hugo'
 
+advancedVersioning {
+    codeOptions {
+        versionCodeType org.moallemi.gradle.internal.VersionCodeType.AUTO_INCREMENT_ONE_STEP
+        dependsOnTasks 'debug', 'release', 'assemble'
+    }
+}
+
 android {
     compileSdkVersion 16
     buildToolsVersion "21.1.1"
@@ -12,19 +19,35 @@ android {
         targetSdkVersion 10
     }
 
-    signingConfigs {
-        myConfig {
-            storeFile file("gradle.keystore")
-            storePassword "gradle"
-            keyAlias "gradle"
-            keyPassword "gradle"
+    if(project.hasProperty("MyProject.properties")
+            && new File(project.property("MyProject.properties")).exists()) {
+
+        Properties props = new Properties()
+        props.load(new FileInputStream(file(project.property("MyProject.properties"))))
+
+        signingConfigs {
+            release {
+                storeFile file(props['keystore'])
+                storePassword props['keystore.password']
+                keyAlias props['keyAlias']
+                keyPassword props['keyPassword']
+            }
+        }
+    } else {
+        signingConfigs {
+            release {
+
+            }
         }
     }
 
     buildTypes {
         release {
             minifyEnabled true
-            proguardFiles 'proguard.cfg'
+//            proguardFiles 'proguard.cfg'
+            signingConfig signingConfigs.release
+        }
+        debug {
         }
     }
 
