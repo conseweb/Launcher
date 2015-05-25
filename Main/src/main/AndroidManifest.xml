@@ -140,6 +140,28 @@
 		<activity
             android:name="com.bitants.launcherdev.settings.SettingsItemSelectActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/SettingCustomStyle" />	
+            android:theme="@style/SettingCustomStyle" />
+
+
+        <!-- boost -->
+        <activity
+            android:name="com.bitants.boost.CleanActivity"
+            android:theme="@style/MTheme"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.bitants.boost.MainActivity"
+                  android:theme="@style/MTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <service android:name="com.bitants.boost.CleanService"> </service>
+        <activity android:name="com.bitants.boost.SetWhiteListActivity"></activity>
+        <!-- end of boost -->
+
     </application>
 </manifest>

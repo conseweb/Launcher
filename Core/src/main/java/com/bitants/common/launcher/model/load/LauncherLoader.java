@@ -175,7 +175,7 @@ public class LauncherLoader{
 //	}
 
 	/**
-	 * modified by zhl 添加boolean isCurrentScrren参数 如果item在当前屏 加入列表头
+	 *  添加boolean isCurrentScrren 参数 如果item在当前屏 加入列表头
 	 */
 	public void addToItemsList(final ItemInfo itemInfo) {
 //		if (!isOutOfBounds(itemInfo.cellX, itemInfo.cellY)) {

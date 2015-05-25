@@ -12,6 +12,7 @@ android {
     compileSdkVersion 16
     buildToolsVersion "21.1.1"
 
+//    aaptOptions.useAaptPngCruncher = true
 //    enforceUniquePackageName = true
     defaultConfig {
         applicationId "com.bitants.launcher"
