@@ -21,7 +21,7 @@ import com.bitants.common.launcher.support.OnWorkspaceScreenListener;
 /**
  * 包装处理桌面长按事件
  */
-public class PandaWidgetViewContainer extends LinearLayout implements OnWorkspaceScreenListener{
+public class MirrorWidgetViewContainer extends LinearLayout implements OnWorkspaceScreenListener{
 	/** 非标widget的IntentFilter的Category值，供桌面查询非标widget */
 	private static final String PANDA_WIDGET_CATEGORY_QUERY_INTENT = "com.nd.android.pandahome.widget.category";
 	/** 非标widget的IntentFilter的Category值，供桌面查询非标widget是否要捕获上下划动手势 */
@@ -39,7 +39,7 @@ public class PandaWidgetViewContainer extends LinearLayout implements OnWorkspac
 	/**
 	 * A constructor for this class.
 	 */
-	public PandaWidgetViewContainer(Context context, View view) {
+	public MirrorWidgetViewContainer(Context context, View view) {
 		super(context);
 		this.addView(view);
 

@@ -26,7 +26,7 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
 
-import com.bitants.common.core.widget.PandaWidgetViewContainer;
+import com.bitants.common.core.widget.MirrorWidgetViewContainer;
 import com.bitants.common.framework.OnKeyDownListenner;
 import com.bitants.common.framework.view.BaseLineLightBar;
 import com.bitants.common.kitset.util.StatusBarUtil;
@@ -137,7 +137,7 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 	private String uninstallPackageName = null;// 在桌面上或匣子里被卸载的应用的包名
 	protected WallpaperHelper mWallpaperHelper;
 	
-	public List<PandaWidgetViewContainer> pandaWidgets = new ArrayList<PandaWidgetViewContainer>();
+	public List<MirrorWidgetViewContainer> pandaWidgets = new ArrayList<MirrorWidgetViewContainer>();
 	
 	/**
 	 * 屏幕预览/管理控制器
@@ -902,10 +902,10 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 		if (item.itemType != BaseLauncherSettings.Favorites.ITEM_TYPE_MIRROR_WIDGET)
 			return;
 		
-		if (!(view instanceof PandaWidgetViewContainer))
+		if (!(view instanceof MirrorWidgetViewContainer))
 			return;
 		
-		PandaWidgetViewContainer result = (PandaWidgetViewContainer) view;
+		MirrorWidgetViewContainer result = (MirrorWidgetViewContainer) view;
 		if (getPackageName().equals(result.getWidgetPackage()))
 			return;
 		
@@ -920,7 +920,7 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 		if (view == null)
 			return;
 		
-		if (!(view instanceof PandaWidgetViewContainer))
+		if (!(view instanceof MirrorWidgetViewContainer))
 			return;
 		
 		this.pandaWidgets.remove(view);

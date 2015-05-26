@@ -12,12 +12,16 @@ android {
     compileSdkVersion 16
     buildToolsVersion "21.1.1"
 
-//    aaptOptions.useAaptPngCruncher = true
+//    http://romannurik.github.io/AndroidAssetStudio/nine-patches.html
 //    enforceUniquePackageName = true
     defaultConfig {
         applicationId "com.bitants.launcher"
         minSdkVersion 7
         targetSdkVersion 10
+    }
+
+    lintOptions {
+        abortOnError false
     }
 
     if(project.hasProperty("MyProject.properties")
@@ -45,7 +49,7 @@ android {
     buildTypes {
         release {
             minifyEnabled true
-//            proguardFiles 'proguard.cfg'
+            proguardFiles 'proguard.cfg'
             signingConfig signingConfigs.release
         }
         debug {
