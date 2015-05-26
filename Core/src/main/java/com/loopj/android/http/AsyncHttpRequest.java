@@ -29,7 +29,6 @@ import org.apache.http.protocol.HttpContext;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.UnknownHostException;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Internal class, representing the HttpRequest, done in asynchronous manner
@@ -40,16 +39,16 @@ public class AsyncHttpRequest implements Runnable {
     private final HttpUriRequest request;
     private final ResponseHandlerInterface responseHandler;
     private int executionCount;
-    private final AtomicBoolean isCancelled = new AtomicBoolean();
+    private boolean isCancelled;
     private boolean cancelIsNotified;
-    private volatile boolean isFinished;
+    private boolean isFinished;
     private boolean isRequestPreProcessed;
 
     public AsyncHttpRequest(AbstractHttpClient client, HttpContext context, HttpUriRequest request, ResponseHandlerInterface responseHandler) {
-        this.client = Utils.notNull(client, "client");
-        this.context = Utils.notNull(context, "context");
-        this.request = Utils.notNull(request, "request");
-        this.responseHandler = Utils.notNull(responseHandler, "responseHandler");
+        this.client = client;
+        this.context = context;
+        this.request = request;
+        this.responseHandler = responseHandler;
     }
 
     /**
@@ -98,7 +97,9 @@ public class AsyncHttpRequest implements Runnable {
             return;
         }
 
-        responseHandler.sendStartMessage();
+        if (responseHandler != null) {
+            responseHandler.sendStartMessage();
+        }
 
         if (isCancelled()) {
             return;
@@ -107,10 +108,10 @@ public class AsyncHttpRequest implements Runnable {
         try {
             makeRequestWithRetries();
         } catch (IOException e) {
-            if (!isCancelled()) {
+            if (!isCancelled() && responseHandler != null) {
                 responseHandler.sendFailureMessage(0, null, null, e);
             } else {
-                Log.e("AsyncHttpRequest", "makeRequestWithRetries returned error", e);
+                Log.e("AsyncHttpRequest", "makeRequestWithRetries returned error, but handler is null", e);
             }
         }
 
@@ -118,7 +119,9 @@ public class AsyncHttpRequest implements Runnable {
             return;
         }
 
-        responseHandler.sendFinishMessage();
+        if (responseHandler != null) {
+            responseHandler.sendFinishMessage();
+        }
 
         if (isCancelled()) {
             return;
@@ -141,13 +144,9 @@ public class AsyncHttpRequest implements Runnable {
             throw new MalformedURLException("No valid URI scheme was provided");
         }
 
-        if (responseHandler instanceof RangeFileAsyncHttpResponseHandler) {
-            ((RangeFileAsyncHttpResponseHandler) responseHandler).updateRequestHeaders(request);
-        }
-
         HttpResponse response = client.execute(request, context);
 
-        if (isCancelled()) {
+        if (isCancelled() || responseHandler == null) {
             return;
         }
 
@@ -183,7 +182,7 @@ public class AsyncHttpRequest implements Runnable {
                     // while the WI-FI is initialising. The retry logic will be invoked here, if this is NOT the first retry
                     // (to assist in genuine cases of unknown host) which seems better than outright failure
                     cause = new IOException("UnknownHostException exception: " + e.getMessage());
-                    retry = (executionCount > 0) && retryHandler.retryRequest(e, ++executionCount, context);
+                    retry = (executionCount > 0) && retryHandler.retryRequest(cause, ++executionCount, context);
                 } catch (NullPointerException e) {
                     // there's a bug in HttpClient 4.0.x that on some occasions causes
                     // DefaultRequestExecutor to throw an NPE, see
@@ -198,7 +197,7 @@ public class AsyncHttpRequest implements Runnable {
                     cause = e;
                     retry = retryHandler.retryRequest(cause, ++executionCount, context);
                 }
-                if (retry) {
+                if (retry && (responseHandler != null)) {
                     responseHandler.sendRetryMessage(executionCount);
                 }
             }
@@ -213,17 +212,17 @@ public class AsyncHttpRequest implements Runnable {
     }
 
     public boolean isCancelled() {
-        boolean cancelled = isCancelled.get();
-        if (cancelled) {
+        if (isCancelled) {
             sendCancelNotification();
         }
-        return cancelled;
+        return isCancelled;
     }
 
     private synchronized void sendCancelNotification() {
-        if (!isFinished && isCancelled.get() && !cancelIsNotified) {
+        if (!isFinished && isCancelled && !cancelIsNotified) {
             cancelIsNotified = true;
-            responseHandler.sendCancelMessage();
+            if (responseHandler != null)
+                responseHandler.sendCancelMessage();
         }
     }
 
@@ -232,7 +231,7 @@ public class AsyncHttpRequest implements Runnable {
     }
 
     public boolean cancel(boolean mayInterruptIfRunning) {
-        isCancelled.set(true);
+        isCancelled = true;
         request.abort();
         return isCancelled();
     }

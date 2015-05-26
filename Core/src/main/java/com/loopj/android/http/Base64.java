@@ -16,6 +16,8 @@
 
 package com.loopj.android.http;
 
+import com.bitants.common.BuildConfig;
+
 import java.io.UnsupportedEncodingException;
 
 /**

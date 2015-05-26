@@ -52,11 +52,7 @@ public abstract class FileAsyncHttpResponseHandler extends AsyncHttpResponseHand
      */
     public FileAsyncHttpResponseHandler(File file, boolean append) {
         super();
-        Utils.asserts(file != null, "File passed into FileAsyncHttpResponseHandler constructor must not be null");
-        Utils.asserts(!file.isDirectory(), "File passed into FileAsyncHttpResponseHandler constructor must not point to directory");
-        if (!file.getParentFile().isDirectory()) {
-            Utils.asserts(file.getParentFile().mkdirs(), "Cannot create parent directories for requested File location");
-        }
+        AssertUtils.asserts(file != null, "File passed into FileAsyncHttpResponseHandler constructor must not be null");
         this.mFile = file;
         this.append = append;
     }
@@ -88,7 +84,7 @@ public abstract class FileAsyncHttpResponseHandler extends AsyncHttpResponseHand
      * @return temporary file or null if creating file failed
      */
     protected File getTemporaryFile(Context context) {
-        Utils.asserts(context != null, "Tried creating temporary file without having Context");
+        AssertUtils.asserts(context != null, "Tried creating temporary file without having Context");
         try {
             // not effective in release mode
             assert context != null;
@@ -153,7 +149,7 @@ public abstract class FileAsyncHttpResponseHandler extends AsyncHttpResponseHand
                     while ((l = instream.read(tmp)) != -1 && !Thread.currentThread().isInterrupted()) {
                         count += l;
                         buffer.write(tmp, 0, l);
-                        sendProgressMessage(count, contentLength);
+                        sendProgressMessage(count, (int) contentLength);
                     }
                 } finally {
                     AsyncHttpClient.silentCloseInputStream(instream);
