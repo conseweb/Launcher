@@ -13,37 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.alibaba.fastjson;
+package com.alibaba.fastjson2.serializer;
 
 import java.io.IOException;
-import java.io.StringWriter;
-
-import org.json.simple.JSONValue;
+import java.lang.reflect.Type;
+import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * @author wenshao<szujobs@hotmail.com>
  */
-public abstract class JSON implements JSONStreamAware, JSONAware {
+public class AtomicLongSerializer implements ObjectSerializer {
 
-    // ======================
+    public final static AtomicLongSerializer instance = new AtomicLongSerializer();
 
-    public static final String toJSONString(Object object) {
+    public void write(JSONSerializer serializer, Object object, Object fieldName, Type fieldType) throws IOException {
+        SerializeWriter out = serializer.getWriter();
 
-
-        StringWriter out = new StringWriter();
-        String jsonText = "";
-
-        try {
-
-            JSONValue.writeJSONString(object, out);
-            jsonText = out.toString();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return jsonText;
+        AtomicLong val = (AtomicLong) object;
+        out.writeLong(val.get());
     }
-
 
 }

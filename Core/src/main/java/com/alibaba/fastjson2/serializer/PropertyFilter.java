@@ -13,37 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.alibaba.fastjson;
-
-import java.io.IOException;
-import java.io.StringWriter;
-
-import org.json.simple.JSONValue;
+package com.alibaba.fastjson2.serializer;
 
 /**
  * @author wenshao<szujobs@hotmail.com>
  */
-public abstract class JSON implements JSONStreamAware, JSONAware {
+public interface PropertyFilter extends SerializeFilter {
 
-    // ======================
-
-    public static final String toJSONString(Object object) {
-
-
-        StringWriter out = new StringWriter();
-        String jsonText = "";
-
-        try {
-
-            JSONValue.writeJSONString(object, out);
-            jsonText = out.toString();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return jsonText;
-    }
-
-
+    /**
+     * @param object the owner of the property
+     * @param name the name of the property
+     * @param value the value of the property
+     * @return true if the property will be filtered out, false otherwise
+     */
+    boolean apply(Object object, String name, Object value);
 }

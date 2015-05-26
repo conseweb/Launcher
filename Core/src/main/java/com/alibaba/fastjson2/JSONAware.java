@@ -13,37 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.alibaba.fastjson;
-
-import java.io.IOException;
-import java.io.StringWriter;
-
-import org.json.simple.JSONValue;
+package com.alibaba.fastjson2;
 
 /**
+ * Beans that support customized output of JSON text shall implement this interface.
+ * 
  * @author wenshao<szujobs@hotmail.com>
  */
-public abstract class JSON implements JSONStreamAware, JSONAware {
+public interface JSONAware {
 
-    // ======================
-
-    public static final String toJSONString(Object object) {
-
-
-        StringWriter out = new StringWriter();
-        String jsonText = "";
-
-        try {
-
-            JSONValue.writeJSONString(object, out);
-            jsonText = out.toString();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return jsonText;
-    }
-
-
+    /**
+     * @return JSON text
+     */
+    String toJSONString();
 }
