@@ -20,6 +20,7 @@ import java.io.File;
 import java.io.Serializable;
 import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.ParameterizedType;
@@ -35,7 +36,6 @@ import java.net.InetSocketAddress;
 import java.net.URI;
 import java.net.URL;
 import java.nio.charset.Charset;
-import java.security.AccessControlException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -63,11 +63,12 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.regex.Pattern;
 
 import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.annotation.JSONType;
-//import com.alibaba.fastjson.asm.ASMException;
-//import com.alibaba.fastjson.parser.deserializer.ASMDeserializerFactory;
-//import com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer;
+import com.alibaba.fastjson.asm.ASMException;
+import com.alibaba.fastjson.parser.deserializer.ASMDeserializerFactory;
+import com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer;
 import com.alibaba.fastjson.parser.deserializer.ArrayDeserializer;
 import com.alibaba.fastjson.parser.deserializer.ArrayListTypeFieldDeserializer;
 import com.alibaba.fastjson.parser.deserializer.AutowiredObjectDeserializer;
@@ -85,7 +86,6 @@ import com.alibaba.fastjson.parser.deserializer.JSONArrayDeserializer;
 import com.alibaba.fastjson.parser.deserializer.JSONObjectDeserializer;
 import com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer;
 import com.alibaba.fastjson.parser.deserializer.JavaObjectDeserializer;
-//import com.alibaba.fastjson.parser.deserializer.Jdk8DateCodec;
 import com.alibaba.fastjson.parser.deserializer.LongFieldDeserializer;
 import com.alibaba.fastjson.parser.deserializer.MapDeserializer;
 import com.alibaba.fastjson.parser.deserializer.NumberDeserializer;
@@ -108,15 +108,15 @@ import com.alibaba.fastjson.serializer.CharsetCodec;
 import com.alibaba.fastjson.serializer.CurrencyCodec;
 import com.alibaba.fastjson.serializer.FileCodec;
 import com.alibaba.fastjson.serializer.FloatCodec;
-import com.alibaba.fastjson.serializer.FontCodec;
+//import com.alibaba.fastjson.serializer.FontCodec;
 import com.alibaba.fastjson.serializer.InetAddressCodec;
 import com.alibaba.fastjson.serializer.InetSocketAddressCodec;
 import com.alibaba.fastjson.serializer.IntegerCodec;
 import com.alibaba.fastjson.serializer.LocaleCodec;
 import com.alibaba.fastjson.serializer.LongCodec;
 import com.alibaba.fastjson.serializer.PatternCodec;
-import com.alibaba.fastjson.serializer.PointCodec;
-import com.alibaba.fastjson.serializer.RectangleCodec;
+//import com.alibaba.fastjson.serializer.PointCodec;
+//import com.alibaba.fastjson.serializer.RectangleCodec;
 import com.alibaba.fastjson.serializer.ReferenceCodec;
 import com.alibaba.fastjson.serializer.StringCodec;
 import com.alibaba.fastjson.serializer.TimeZoneCodec;
@@ -124,12 +124,13 @@ import com.alibaba.fastjson.serializer.URICodec;
 import com.alibaba.fastjson.serializer.URLCodec;
 import com.alibaba.fastjson.serializer.UUIDCodec;
 import com.alibaba.fastjson.util.ASMUtils;
+import com.alibaba.fastjson.util.DeserializeBeanInfo;
 import com.alibaba.fastjson.util.FieldInfo;
 import com.alibaba.fastjson.util.IdentityHashMap;
 import com.alibaba.fastjson.util.ServiceLoader;
 
 /**
- * @author wenshao[szujobs@hotmail.com]
+ * @author wenshao<szujobs@hotmail.com>
  */
 public class ParserConfig {
 
@@ -147,9 +148,7 @@ public class ParserConfig {
 
     protected final SymbolTable                             symbolTable      = new SymbolTable();
 
-    private ParserConfig(){
-
-        
+    public ParserConfig(){
         primitiveClasses.add(boolean.class);
         primitiveClasses.add(Boolean.class);
 
@@ -206,8 +205,6 @@ public class ParserConfig {
 
         derializers.put(Object.class, JavaObjectDeserializer.instance);
         derializers.put(String.class, StringCodec.instance);
-        derializers.put(StringBuffer.class, StringCodec.instance);
-        derializers.put(StringBuilder.class, StringCodec.instance);
         derializers.put(char.class, CharacterCodec.instance);
         derializers.put(Character.class, CharacterCodec.instance);
         derializers.put(byte.class, NumberDeserializer.instance);
@@ -260,30 +257,13 @@ public class ParserConfig {
         derializers.put(Comparable.class, JavaObjectDeserializer.instance);
         derializers.put(Closeable.class, JavaObjectDeserializer.instance);
 
-        try {
-            derializers.put(Class.forName("java.awt.Point"), PointCodec.instance);
-            derializers.put(Class.forName("java.awt.Font"), FontCodec.instance);
-            derializers.put(Class.forName("java.awt.Rectangle"), RectangleCodec.instance);
-//            derializers.put(Class.forName("java.awt.Color"), ColorCodec.instance);
-        } catch (Throwable e) {
-            // skip
-        }
-        
 //        try {
-//            derializers.put(Class.forName("java.time.LocalDateTime"), Jdk8DateCodec.instance);
-//            derializers.put(Class.forName("java.time.LocalDate"), Jdk8DateCodec.instance);
-//            derializers.put(Class.forName("java.time.LocalTime"), Jdk8DateCodec.instance);
-//            derializers.put(Class.forName("java.time.ZonedDateTime"), Jdk8DateCodec.instance);
-//            derializers.put(Class.forName("java.time.OffsetDateTime"), Jdk8DateCodec.instance);
-//            derializers.put(Class.forName("java.time.OffsetTime"), Jdk8DateCodec.instance);
-//            derializers.put(Class.forName("java.time.ZoneOffset"), Jdk8DateCodec.instance);
-//            derializers.put(Class.forName("java.time.ZoneRegion"), Jdk8DateCodec.instance);
-//            derializers.put(Class.forName("java.time.ZoneId"), Jdk8DateCodec.instance);
-//            derializers.put(Class.forName("java.time.Period"), Jdk8DateCodec.instance);
-//            derializers.put(Class.forName("java.time.Duration"), Jdk8DateCodec.instance);
-//            derializers.put(Class.forName("java.time.Instant"), Jdk8DateCodec.instance);
+//            derializers.put(Class.forName("java.awt.Point"), PointCodec.instance);
+//            derializers.put(Class.forName("java.awt.Font"), FontCodec.instance);
+//            derializers.put(Class.forName("java.awt.Rectangle"), RectangleCodec.instance);
+//            derializers.put(Class.forName("java.awt.Color"), ColorCodec.instance);
 //        } catch (Throwable e) {
-//
+//            // skip
 //        }
     }
 
@@ -398,12 +378,124 @@ public class ParserConfig {
     }
 
     public ObjectDeserializer createJavaBeanDeserializer(Class<?> clazz, Type type) {
+        boolean asmEnable = this.asmEnable;
+        if (asmEnable) {
+            Class<?> superClass = clazz;
 
-        return new JavaBeanDeserializer(this, clazz, type);
+            for (;;) {
+                if (!Modifier.isPublic(superClass.getModifiers())) {
+                    asmEnable = false;
+                    break;
+                }
 
+                superClass = superClass.getSuperclass();
+                if (superClass == Object.class || superClass == null) {
+                    break;
+                }
+            }
+        }
+
+        if (clazz.getTypeParameters().length != 0) {
+            asmEnable = false;
+        }
+
+        if (ASMDeserializerFactory.getInstance().isExternalClass(clazz)) {
+            asmEnable = false;
+        }
+
+        if (asmEnable) {
+            if (clazz.isInterface()) {
+                asmEnable = false;
+            }
+            DeserializeBeanInfo beanInfo = DeserializeBeanInfo.computeSetters(clazz, type);
+            if (beanInfo.getFieldList().size() > 200) {
+                asmEnable = false;
+            }
+
+            Constructor<?> defaultConstructor = beanInfo.getDefaultConstructor();
+            if (defaultConstructor == null && !clazz.isInterface()) {
+                asmEnable = false;
+            }
+
+            for (FieldInfo fieldInfo : beanInfo.getFieldList()) {
+                if (fieldInfo.isGetOnly()) {
+                    asmEnable = false;
+                    break;
+                }
+
+                Class<?> fieldClass = fieldInfo.getFieldClass();
+                if (!Modifier.isPublic(fieldClass.getModifiers())) {
+                    asmEnable = false;
+                    break;
+                }
+
+                if (fieldClass.isMemberClass() && !Modifier.isStatic(fieldClass.getModifiers())) {
+                    asmEnable = false;
+                }
+            }
+        }
+
+        if (asmEnable) {
+            if (clazz.isMemberClass() && !Modifier.isStatic(clazz.getModifiers())) {
+                asmEnable = false;
+            }
+        }
+
+        if (!asmEnable) {
+            return new JavaBeanDeserializer(this, clazz, type);
+        }
+
+        try {
+            return ASMDeserializerFactory.getInstance().createJavaBeanDeserializer(this, clazz, type);
+            // } catch (VerifyError e) {
+            // e.printStackTrace();
+            // return new JavaBeanDeserializer(this, clazz, type);
+        } catch (NoSuchMethodException ex) {
+            return new JavaBeanDeserializer(this, clazz, type);
+        } catch (ASMException asmError) {
+            return new JavaBeanDeserializer(this, clazz, type);
+        } catch (Exception e) {
+            throw new JSONException("create asm deserializer error, " + clazz.getName(), e);
+        }
     }
 
     public FieldDeserializer createFieldDeserializer(ParserConfig mapping, Class<?> clazz, FieldInfo fieldInfo) {
+        boolean asmEnable = this.asmEnable;
+
+        if (asmEnable) {
+            Class<?> superClass = clazz;
+
+            for (;;) {
+                if (!Modifier.isPublic(superClass.getModifiers())) {
+                    asmEnable = false;
+                    break;
+                }
+
+                superClass = superClass.getSuperclass();
+                if (superClass == Object.class || superClass == null) {
+                    break;
+                }
+            }
+        }
+
+        if (fieldInfo.getFieldClass() == Class.class) {
+            asmEnable = false;
+        }
+
+        if (ASMDeserializerFactory.getInstance().isExternalClass(clazz)) {
+            asmEnable = false;
+        }
+
+        if (!asmEnable) {
+            return createFieldDeserializerWithoutASM(mapping, clazz, fieldInfo);
+        }
+
+        try {
+            return ASMDeserializerFactory.getInstance().createFieldDeserializer(mapping, clazz, fieldInfo);
+        } catch (Throwable e) {
+            // skip
+        }
+
         return createFieldDeserializerWithoutASM(mapping, clazz, fieldInfo);
     }
 
@@ -474,6 +566,8 @@ public class ParserConfig {
 
         if (deserizer instanceof JavaBeanDeserializer) {
             return ((JavaBeanDeserializer) deserizer).getFieldDeserializerMap();
+        } else if (deserizer instanceof ASMJavaBeanDeserializer) {
+            return ((ASMJavaBeanDeserializer) deserizer).getInnterSerializer().getFieldDeserializerMap();
         } else {
             return Collections.emptyMap();
         }

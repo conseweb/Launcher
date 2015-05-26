@@ -26,14 +26,14 @@ import java.util.TreeMap;
 import com.alibaba.fastjson.JSON;
 
 /**
- * @author wenshao[szujobs@hotmail.com]
+ * @author wenshao<szujobs@hotmail.com>
  */
 public class MapSerializer implements ObjectSerializer {
 
     public static MapSerializer instance = new MapSerializer();
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
-    public void write(JSONSerializer serializer, Object object, Object fieldName, Type fieldType, int features) throws IOException {
+    public void write(JSONSerializer serializer, Object object, Object fieldName, Type fieldType) throws IOException {
         SerializeWriter out = serializer.getWriter();
 
         if (object == null) {
@@ -43,15 +43,15 @@ public class MapSerializer implements ObjectSerializer {
 
         Map<?, ?> map = (Map<?, ?>) object;
 
-//        if (out.isEnabled(SerializerFeature.SortField)) {
-//            if ((!(map instanceof SortedMap)) && !(map instanceof LinkedHashMap)) {
-//                try {
-//                    map = new TreeMap(map);
-//                } catch (Exception ex) {
-//                    // skip
-//                }
-//            }
-//        }
+        if (out.isEnabled(SerializerFeature.SortField)) {
+            if ((!(map instanceof SortedMap)) && !(map instanceof LinkedHashMap)) {
+                try {
+                    map = new TreeMap(map);
+                } catch (Exception ex) {
+                    // skip
+                }
+            }
+        }
 
         if (serializer.containsReference(object)) {
             serializer.writeReference(object);
@@ -59,7 +59,7 @@ public class MapSerializer implements ObjectSerializer {
         }
 
         SerialContext parent = serializer.getContext();
-        serializer.setContext(parent, object, fieldName, 0);
+        serializer.setContext(parent, object, fieldName);
         try {
             out.write('{');
 
@@ -160,8 +160,7 @@ public class MapSerializer implements ObjectSerializer {
                     }
 
                     if (out.isEnabled(SerializerFeature.BrowserCompatible)
-                        || out.isEnabled(SerializerFeature.WriteNonStringKeyAsString)
-                        || out.isEnabled(SerializerFeature.BrowserSecure)) {
+                        || out.isEnabled(SerializerFeature.WriteNonStringKeyAsString)) {
                         String strEntryKey = JSON.toJSONString(entryKey);
                         serializer.write(strEntryKey);
                     } else {
@@ -181,12 +180,12 @@ public class MapSerializer implements ObjectSerializer {
                 Class<?> clazz = value.getClass();
 
                 if (clazz == preClazz) {
-                    preWriter.write(serializer, value, entryKey, null, 0);
+                    preWriter.write(serializer, value, entryKey, null);
                 } else {
                     preClazz = clazz;
                     preWriter = serializer.getObjectWriter(clazz);
 
-                    preWriter.write(serializer, value, entryKey, null, 0);
+                    preWriter.write(serializer, value, entryKey, null);
                 }
             }
         } finally {

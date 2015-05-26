@@ -16,11 +16,11 @@ import java.util.concurrent.ConcurrentMap;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.parser.DefaultJSONParser;
-import com.alibaba.fastjson.parser.DefaultJSONParser.ResolveTask;
 import com.alibaba.fastjson.parser.Feature;
 import com.alibaba.fastjson.parser.JSONLexer;
 import com.alibaba.fastjson.parser.JSONToken;
 import com.alibaba.fastjson.parser.ParseContext;
+import com.alibaba.fastjson.parser.DefaultJSONParser.ResolveTask;
 import com.alibaba.fastjson.util.TypeUtils;
 
 public class MapDeserializer implements ObjectDeserializer {
@@ -128,11 +128,11 @@ public class MapDeserializer implements ObjectDeserializer {
 
                 lexer.resetStringPosition();
 
-                if (key == JSON.DEFAULT_TYPE_KEY && !parser.isEnabled(Feature.DisableSpecialKeyDetect)) {
+                if (key == JSON.DEFAULT_TYPE_KEY) {
                     String typeName = lexer.scanSymbol(parser.getSymbolTable(), '"');
                     Class<?> clazz = TypeUtils.loadClass(typeName);
 
-                    if (Map.class.isAssignableFrom(clazz) ) {
+                    if (clazz == map.getClass()) {
                         lexer.nextToken(JSONToken.COMMA);
                         if (lexer.token() == JSONToken.RBRACE) {
                             lexer.nextToken(JSONToken.COMMA);
@@ -205,8 +205,7 @@ public class MapDeserializer implements ObjectDeserializer {
                     break;
                 }
 
-                if (lexer.token() == JSONToken.LITERAL_STRING && lexer.isRef()
-                    && !parser.isEnabled(Feature.DisableSpecialKeyDetect)) {
+                if (lexer.token() == JSONToken.LITERAL_STRING && lexer.isRef()) {
                     Object object = null;
 
                     lexer.nextTokenWithColon(JSONToken.LITERAL_STRING);
@@ -244,8 +243,7 @@ public class MapDeserializer implements ObjectDeserializer {
 
                 if (map.size() == 0 //
                     && lexer.token() == JSONToken.LITERAL_STRING //
-                    && JSON.DEFAULT_TYPE_KEY.equals(lexer.stringVal()) //
-                    && !parser.isEnabled(Feature.DisableSpecialKeyDetect)) {
+                    && JSON.DEFAULT_TYPE_KEY.equals(lexer.stringVal())) {
                     lexer.nextTokenWithColon(JSONToken.LITERAL_STRING);
                     lexer.nextToken(JSONToken.COMMA);
                     if (lexer.token() == JSONToken.RBRACE) {

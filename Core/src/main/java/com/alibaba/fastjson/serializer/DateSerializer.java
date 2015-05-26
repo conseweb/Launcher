@@ -26,13 +26,13 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.util.IOUtils;
 
 /**
- * @author wenshao[szujobs@hotmail.com]
+ * @author wenshao<szujobs@hotmail.com>
  */
 public class DateSerializer implements ObjectSerializer {
 
     public final static DateSerializer instance = new DateSerializer();
 
-    public void write(JSONSerializer serializer, Object object, Object fieldName, Type fieldType, int features) throws IOException {
+    public void write(JSONSerializer serializer, Object object, Object fieldName, Type fieldType) throws IOException {
         SerializeWriter out = serializer.getWriter();
 
         if (object == null) {
@@ -114,17 +114,8 @@ public class DateSerializer implements ObjectSerializer {
                     IOUtils.getChars(year, 4, buf);
                 }
             }
-            
+
             out.write(buf);
-            
-            int timeZone = calendar.getTimeZone().getRawOffset()/(3600*1000);
-            if (timeZone == 0) {
-                out.append("Z");
-            } else if (timeZone > 0) {
-                out.append("+").append(String.format("%02d", timeZone)).append(":00");
-            } else {
-                out.append("-").append(String.format("%02d", -timeZone)).append(":00");
-            }
 
             if (serializer.isEnabled(SerializerFeature.UseSingleQuotes)) {
                 out.append('\'');

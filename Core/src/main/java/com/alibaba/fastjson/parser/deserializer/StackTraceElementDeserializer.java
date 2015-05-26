@@ -47,7 +47,7 @@ public class StackTraceElementDeserializer implements ObjectDeserializer {
             }
 
             lexer.nextTokenWithColon(JSONToken.LITERAL_STRING);
-            if ("className".equals(key)) {
+            if (key == "className") {
                 if (lexer.token() == JSONToken.NULL) {
                     declaringClass = null;
                 } else if (lexer.token() == JSONToken.LITERAL_STRING) {
@@ -55,7 +55,7 @@ public class StackTraceElementDeserializer implements ObjectDeserializer {
                 } else {
                     throw new JSONException("syntax error");
                 }
-            } else if ("methodName".equals(key)) {
+            } else if (key == "methodName") {
                 if (lexer.token() == JSONToken.NULL) {
                     methodName = null;
                 } else if (lexer.token() == JSONToken.LITERAL_STRING) {
@@ -63,7 +63,7 @@ public class StackTraceElementDeserializer implements ObjectDeserializer {
                 } else {
                     throw new JSONException("syntax error");
                 }
-            } else if ("fileName".equals(key)) {
+            } else if (key == "fileName") {
                 if (lexer.token() == JSONToken.NULL) {
                     fileName = null;
                 } else if (lexer.token() == JSONToken.LITERAL_STRING) {
@@ -71,7 +71,7 @@ public class StackTraceElementDeserializer implements ObjectDeserializer {
                 } else {
                     throw new JSONException("syntax error");
                 }
-            } else if ("lineNumber".equals(key)) {
+            } else if (key == "lineNumber") {
                 if (lexer.token() == JSONToken.NULL) {
                     lineNumber = 0;
                 } else if (lexer.token() == JSONToken.LITERAL_INT) {
@@ -79,7 +79,7 @@ public class StackTraceElementDeserializer implements ObjectDeserializer {
                 } else {
                     throw new JSONException("syntax error");
                 }
-            } else if ("nativeMethod".equals(key)) {
+            } else if (key == "nativeMethod") {
                 if (lexer.token() == JSONToken.NULL) {
                     lexer.nextToken(JSONToken.COMMA);
                 } else if (lexer.token() == JSONToken.TRUE) {

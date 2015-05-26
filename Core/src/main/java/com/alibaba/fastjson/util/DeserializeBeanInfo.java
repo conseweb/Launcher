@@ -1,5 +1,6 @@
 package com.alibaba.fastjson.util;
 
+//import java.beans.Introspector;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -18,7 +19,6 @@ import java.util.concurrent.atomic.AtomicLong;
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.annotation.JSONCreator;
 import com.alibaba.fastjson.annotation.JSONField;
-import com.alibaba.fastjson.serializer.SerializerFeature;
 
 public class DeserializeBeanInfo {
 
@@ -30,12 +30,9 @@ public class DeserializeBeanInfo {
     private final List<FieldInfo> fieldList       = new ArrayList<FieldInfo>();
     private final List<FieldInfo> sortedFieldList = new ArrayList<FieldInfo>();
 
-    private int                   parserFeatures  = 0;
-
     public DeserializeBeanInfo(Class<?> clazz){
         super();
         this.clazz = clazz;
-        this.parserFeatures = TypeUtils.getParserFeatures(clazz);
     }
 
     public Constructor<?> getDefaultConstructor() {
@@ -87,15 +84,6 @@ public class DeserializeBeanInfo {
     public boolean add(FieldInfo field) {
         for (FieldInfo item : this.fieldList) {
             if (item.getName().equals(field.getName())) {
-                if (item.isGetOnly() && !field.isGetOnly()) {
-                    continue;
-                }
-
-                if (item.getFieldClass().isAssignableFrom(field.getFieldClass())) {
-                    fieldList.remove(item);
-                    break;
-                }
-
                 return false;
             }
         }
@@ -111,12 +99,12 @@ public class DeserializeBeanInfo {
 
         Constructor<?> defaultConstructor = getDefaultConstructor(clazz);
         if (defaultConstructor != null) {
-            TypeUtils.setAccessible(defaultConstructor);
+            defaultConstructor.setAccessible(true);
             beanInfo.setDefaultConstructor(defaultConstructor);
         } else if (defaultConstructor == null && !(clazz.isInterface() || Modifier.isAbstract(clazz.getModifiers()))) {
             Constructor<?> creatorConstructor = getCreatorConstructor(clazz);
             if (creatorConstructor != null) {
-                TypeUtils.setAccessible(creatorConstructor);
+                creatorConstructor.setAccessible(true);
                 beanInfo.setCreatorConstructor(creatorConstructor);
 
                 for (int i = 0; i < creatorConstructor.getParameterTypes().length; ++i) {
@@ -134,11 +122,8 @@ public class DeserializeBeanInfo {
 
                     Class<?> fieldClass = creatorConstructor.getParameterTypes()[i];
                     Type fieldType = creatorConstructor.getGenericParameterTypes()[i];
-                    Field field = TypeUtils.getField(clazz, fieldAnnotation.name());
-                    final int ordinal = fieldAnnotation.ordinal();
-                    final int serialzeFeatures = SerializerFeature.of(fieldAnnotation.serialzeFeatures());
-                    FieldInfo fieldInfo = new FieldInfo(fieldAnnotation.name(), clazz, fieldClass, fieldType, field,
-                                                        ordinal, serialzeFeatures);
+                    Field field = getField(clazz, fieldAnnotation.name());
+                    FieldInfo fieldInfo = new FieldInfo(fieldAnnotation.name(), clazz, fieldClass, fieldType, field);
                     beanInfo.add(fieldInfo);
                 }
                 return beanInfo;
@@ -146,7 +131,7 @@ public class DeserializeBeanInfo {
 
             Method factoryMethod = getFactoryMethod(clazz);
             if (factoryMethod != null) {
-                TypeUtils.setAccessible(factoryMethod);
+                factoryMethod.setAccessible(true);
                 beanInfo.setFactoryMethod(factoryMethod);
 
                 for (int i = 0; i < factoryMethod.getParameterTypes().length; ++i) {
@@ -164,16 +149,8 @@ public class DeserializeBeanInfo {
 
                     Class<?> fieldClass = factoryMethod.getParameterTypes()[i];
                     Type fieldType = factoryMethod.getGenericParameterTypes()[i];
-                    Field field = TypeUtils.getField(clazz, fieldAnnotation.name());
-                    final int ordinal = fieldAnnotation.ordinal();
-                    final int serialzeFeatures = SerializerFeature.of(fieldAnnotation.serialzeFeatures());
-                    FieldInfo fieldInfo = new FieldInfo(fieldAnnotation.name() //
-                                                        , clazz //
-                                                        , fieldClass //
-                                                        , fieldType //
-                                                        , field //
-                                                        , ordinal //
-                                                        , serialzeFeatures);
+                    Field field = getField(clazz, fieldAnnotation.name());
+                    FieldInfo fieldInfo = new FieldInfo(fieldAnnotation.name(), clazz, fieldClass, fieldType, field);
                     beanInfo.add(fieldInfo);
                 }
                 return beanInfo;
@@ -182,8 +159,7 @@ public class DeserializeBeanInfo {
             throw new JSONException("default constructor not found. " + clazz);
         }
 
-        for (Method method : clazz.getMethods()) {
-            int ordinal = 0, serialzeFeatures = 0;
+        for (Method method :TypeUtils.getAllMethods(clazz)) {
             String methodName = method.getName();
             if (methodName.length() < 4) {
                 continue;
@@ -213,13 +189,10 @@ public class DeserializeBeanInfo {
                     continue;
                 }
 
-                ordinal = annotation.ordinal();
-                serialzeFeatures = SerializerFeature.of(annotation.serialzeFeatures());
-
                 if (annotation.name().length() != 0) {
                     String propertyName = annotation.name();
-                    beanInfo.add(new FieldInfo(propertyName, method, null, clazz, type, ordinal, serialzeFeatures));
-                    TypeUtils.setAccessible(method);
+                    beanInfo.add(new FieldInfo(propertyName, method, null, clazz, type));
+                    method.setAccessible(true);
                     continue;
                 }
             }
@@ -232,45 +205,38 @@ public class DeserializeBeanInfo {
 
             String propertyName;
             if (Character.isUpperCase(c3)) {
-                if (TypeUtils.compatibleWithJavaBean) {
-                    propertyName = TypeUtils.decapitalize(methodName.substring(3));
-                } else {
+//                if (TypeUtils.compatibleWithJavaBean) {
+//                    propertyName = Introspector.decapitalize(methodName.substring(3));
+//                } else {
                     propertyName = Character.toLowerCase(methodName.charAt(3)) + methodName.substring(4);
-                }
+//                }
             } else if (c3 == '_') {
                 propertyName = methodName.substring(4);
             } else if (c3 == 'f') {
                 propertyName = methodName.substring(3);
-            } else if (methodName.length() >= 5 && Character.isUpperCase(methodName.charAt(4))) {
-                propertyName = TypeUtils.decapitalize(methodName.substring(3));
             } else {
                 continue;
             }
 
-            Field field = TypeUtils.getField(clazz, propertyName);
+            Field field = getField(clazz, propertyName);
             if (field == null && method.getParameterTypes()[0] == boolean.class) {
                 String isFieldName = "is" + Character.toUpperCase(propertyName.charAt(0)) + propertyName.substring(1);
-                field = TypeUtils.getField(clazz, isFieldName);
+                field = getField(clazz, isFieldName);
             }
 
             if (field != null) {
                 JSONField fieldAnnotation = field.getAnnotation(JSONField.class);
 
-                if (fieldAnnotation != null) {
-                    ordinal = fieldAnnotation.ordinal();
-                    serialzeFeatures = SerializerFeature.of(fieldAnnotation.serialzeFeatures());
+                if (fieldAnnotation != null && fieldAnnotation.name().length() != 0) {
+                    propertyName = fieldAnnotation.name();
 
-                    if (fieldAnnotation.name().length() != 0) {
-                        propertyName = fieldAnnotation.name();
-                        beanInfo.add(new FieldInfo(propertyName, method, field, clazz, type, ordinal, serialzeFeatures));
-                        continue;
-                    }
+                    beanInfo.add(new FieldInfo(propertyName, method, field, clazz, type));
+                    continue;
                 }
-
             }
 
-            beanInfo.add(new FieldInfo(propertyName, method, null, clazz, type, ordinal, serialzeFeatures));
-            TypeUtils.setAccessible(method);
+            beanInfo.add(new FieldInfo(propertyName, method, null, clazz, type));
+            method.setAccessible(true);
         }
 
         for (Field field : clazz.getFields()) {
@@ -290,23 +256,17 @@ public class DeserializeBeanInfo {
                 continue;
             }
 
-            int ordinal = 0, serialzeFeatures = 0;
             String propertyName = field.getName();
 
             JSONField fieldAnnotation = field.getAnnotation(JSONField.class);
 
-            if (fieldAnnotation != null) {
-                ordinal = fieldAnnotation.ordinal();
-                serialzeFeatures = SerializerFeature.of(fieldAnnotation.serialzeFeatures());
-
-                if (fieldAnnotation.name().length() != 0) {
-                    propertyName = fieldAnnotation.name();
-                }
+            if (fieldAnnotation != null && fieldAnnotation.name().length() != 0) {
+                propertyName = fieldAnnotation.name();
             }
-            beanInfo.add(new FieldInfo(propertyName, null, field, clazz, type, ordinal, serialzeFeatures));
+            beanInfo.add(new FieldInfo(propertyName, null, field, clazz, type));
         }
 
-        for (Method method : clazz.getMethods()) {
+        for (Method method : TypeUtils.getAllMethods(clazz)) {
             String methodName = method.getName();
             if (methodName.length() < 4) {
                 continue;
@@ -327,14 +287,7 @@ public class DeserializeBeanInfo {
                     || AtomicInteger.class == method.getReturnType() //
                     || AtomicLong.class == method.getReturnType() //
                 ) {
-                    String propertyName;
-
-                    JSONField annotation = method.getAnnotation(JSONField.class);
-                    if (annotation != null && annotation.name().length() > 0) {
-                        propertyName = annotation.name();
-                    } else {
-                        propertyName = Character.toLowerCase(methodName.charAt(3)) + methodName.substring(4);
-                    }
+                    String propertyName = Character.toLowerCase(methodName.charAt(3)) + methodName.substring(4);
 
                     FieldInfo fieldInfo = beanInfo.getField(propertyName);
                     if (fieldInfo != null) {
@@ -342,12 +295,20 @@ public class DeserializeBeanInfo {
                     }
 
                     beanInfo.add(new FieldInfo(propertyName, method, null, clazz, type));
-                    TypeUtils.setAccessible(method);
+                    method.setAccessible(true);
                 }
             }
         }
 
         return beanInfo;
+    }
+
+    public static Field getField(Class<?> clazz, String fieldName) {
+        try {
+            return clazz.getDeclaredField(fieldName);
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     public static Constructor<?> getDefaultConstructor(Class<?> clazz) {
@@ -420,7 +381,4 @@ public class DeserializeBeanInfo {
         return factoryMethod;
     }
 
-    public int getParserFeatures() {
-        return parserFeatures;
-    }
 }

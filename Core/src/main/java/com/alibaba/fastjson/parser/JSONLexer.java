@@ -54,6 +54,8 @@ public interface JSONLexer {
 
     void scanString();
 
+    Number numberValue();
+
     int intValue();
 
     void nextTokenWithColon();

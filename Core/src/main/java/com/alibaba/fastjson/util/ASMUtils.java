@@ -11,14 +11,10 @@ import com.alibaba.fastjson.parser.JSONToken;
 import com.alibaba.fastjson.parser.deserializer.ObjectDeserializer;
 
 public class ASMUtils {
-	
+
     public static boolean isAndroid(String vmName) {
-        if (vmName == null) { // default is false
-            return false;
-        }
-        
         String lowerVMName = vmName.toLowerCase();
-        
+
         return lowerVMName.contains("dalvik") //
                || lowerVMName.contains("lemur") // aliyun-vm name
         ;
@@ -133,16 +129,5 @@ public class ASMUtils {
             }
         }
         parser.accept(JSONToken.RBRACKET, JSONToken.COMMA);
-    }
-    
-    public static boolean checkName(String name) {
-        for (int i = 0; i < name.length(); ++i) {
-            char c = name.charAt(i);
-            if (c < '\001' || c > '\177') {
-                return false;
-            }
-        }
-        
-        return true;
     }
 }

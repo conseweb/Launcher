@@ -20,10 +20,6 @@ public class ASMClassLoader extends ClassLoader {
     public ASMClassLoader(){
         super(getParentClassLoader());
     }
-    
-    public ASMClassLoader(ClassLoader parent){
-        super (parent);
-    }
 
     static ClassLoader getParentClassLoader() {
         ClassLoader contextClassLoader = Thread.currentThread().getContextClassLoader();
