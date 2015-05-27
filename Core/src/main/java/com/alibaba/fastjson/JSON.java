@@ -15,35 +15,64 @@
  */
 package com.alibaba.fastjson;
 
+import android.util.Log;
+
+import com.JSONObjectSerialization.JSONInputStream;
+import com.JSONObjectSerialization.JSONOutputStream;
+import com.JSONObjectSerialization.JSONStreamException;
+
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.StringWriter;
 
-import org.json.simple.JSONValue;
 
 /**
  * @author wenshao<szujobs@hotmail.com>
  */
 public abstract class JSON implements JSONStreamAware, JSONAware {
 
+    public static String DEFAULT_TYPE_KEY     = "@type";
+
+    public static int    DEFAULT_PARSER_FEATURE;
+
+    static {
+//        DEFAULT_PARSER_FEATURE = (((((((0 | Feature.AutoCloseSource.getMask()) | Feature.InternFieldNames.getMask()) | Feature.UseBigDecimal.getMask()) | Feature.AllowUnQuotedFieldNames.getMask()) | Feature.AllowSingleQuotes.getMask()) | Feature.AllowArbitraryCommas.getMask()) | Feature.SortFeidFastMatch.getMask()) | Feature.IgnoreNotMatch.getMask();
+//        DEFAULT_GENERATE_FEATURE = (((0 | SerializerFeature.QuoteFieldNames.getMask()) | SerializerFeature.SkipTransientField.getMask()) | SerializerFeature.WriteEnumUsingToString.getMask()) | SerializerFeature.SortField.getMask();
+    }
+
+    public static String DEFFAULT_DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
+
+    public static int    DEFAULT_GENERATE_FEATURE;
+
     // ======================
 
     public static final String toJSONString(Object object) {
 
+        // Serializing it to JSON string
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        JSONOutputStream jos = new JSONOutputStream(baos);
+        jos.writeObject(object);
+        jos.close();
 
-        StringWriter out = new StringWriter();
-        String jsonText = "";
+        // Get the string form the output stream and print it
+        String jsonString = baos.toString();
 
-        try {
-
-            JSONValue.writeJSONString(object, out);
-            jsonText = out.toString();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return jsonText;
+        return jsonString;
     }
 
+//    public void writeJSONString(Appendable out) throws IOException {
+//        // Deserialize the concrete object from the JSON string
+//        JSONInputStream jis = new JSONInputStream(jsonString);
+//        SimpleClass sc2 = null;
+//        try
+//        {
+//            sc2 = jis.readObject(out.class);
+//        }
+//        catch (JSONStreamException e)
+//        {
+//            Log.e("JSONObjectSerialization", "Failed to deserialize the object");
+//            return;
+//        }
+//    }
 
 }
