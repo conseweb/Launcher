@@ -3,7 +3,7 @@
     <integer name="is_91Launcher">0</integer>
     
     <!-- ContentProvider前缀 -->
-    <string name="pkg_content_uri_authority">com.bitants.launcher.settings</string>
+    <string name="pkg_content_uri_authority">com.bitants.launcherdev.settings</string>
     <string name="pkg_content_uri_authority_sub">com.bitants.launcherdev</string>
     <!-- SD卡根目录 -->
     <string name="pkg_base_dir">MirrorLauncher</string>

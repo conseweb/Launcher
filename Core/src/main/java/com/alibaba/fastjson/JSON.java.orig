@@ -15,6 +15,13 @@
  */
 package com.alibaba.fastjson;
 
+import android.util.Log;
+
+import com.JSONObjectSerialization.JSONInputStream;
+import com.JSONObjectSerialization.JSONOutputStream;
+import com.JSONObjectSerialization.JSONStreamException;
+
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.Writer;
 import java.lang.reflect.Array;
@@ -28,6 +35,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
+<<<<<<< .merge_file_X0iSvO
+=======
 import com.alibaba.fastjson.parser.DefaultJSONParser;
 import com.alibaba.fastjson.parser.DefaultJSONParser.ResolveTask;
 import com.alibaba.fastjson.parser.Feature;
@@ -53,6 +62,7 @@ import com.alibaba.fastjson.util.FieldInfo;
 import com.alibaba.fastjson.util.IOUtils;
 import com.alibaba.fastjson.util.ThreadLocalCache;
 import com.alibaba.fastjson.util.TypeUtils;
+>>>>>>> .merge_file_Mf9bHg
 
 /**
  * @author wenshao<szujobs@hotmail.com>
@@ -60,6 +70,50 @@ import com.alibaba.fastjson.util.TypeUtils;
 public abstract class JSON implements JSONStreamAware, JSONAware {
 
     public static String DEFAULT_TYPE_KEY     = "@type";
+<<<<<<< .merge_file_X0iSvO
+
+    public static int    DEFAULT_PARSER_FEATURE;
+
+    static {
+//        DEFAULT_PARSER_FEATURE = (((((((0 | Feature.AutoCloseSource.getMask()) | Feature.InternFieldNames.getMask()) | Feature.UseBigDecimal.getMask()) | Feature.AllowUnQuotedFieldNames.getMask()) | Feature.AllowSingleQuotes.getMask()) | Feature.AllowArbitraryCommas.getMask()) | Feature.SortFeidFastMatch.getMask()) | Feature.IgnoreNotMatch.getMask();
+//        DEFAULT_GENERATE_FEATURE = (((0 | SerializerFeature.QuoteFieldNames.getMask()) | SerializerFeature.SkipTransientField.getMask()) | SerializerFeature.WriteEnumUsingToString.getMask()) | SerializerFeature.SortField.getMask();
+    }
+
+    public static String DEFFAULT_DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
+
+    public static int    DEFAULT_GENERATE_FEATURE;
+
+    // ======================
+
+    public static final String toJSONString(Object object) {
+
+        // Serializing it to JSON string
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        JSONOutputStream jos = new JSONOutputStream(baos);
+        jos.writeObject(object);
+        jos.close();
+
+        // Get the string form the output stream and print it
+        String jsonString = baos.toString();
+
+        return jsonString;
+    }
+
+//    public void writeJSONString(Appendable out) throws IOException {
+//        // Deserialize the concrete object from the JSON string
+//        JSONInputStream jis = new JSONInputStream(jsonString);
+//        SimpleClass sc2 = null;
+//        try
+//        {
+//            sc2 = jis.readObject(out.class);
+//        }
+//        catch (JSONStreamException e)
+//        {
+//            Log.e("JSONObjectSerialization", "Failed to deserialize the object");
+//            return;
+//        }
+//    }
+=======
 
     public static int    DEFAULT_PARSER_FEATURE;
     static {
@@ -701,6 +755,7 @@ public abstract class JSON implements JSONStreamAware, JSONAware {
     public static final <T> T toJavaObject(JSON json, Class<T> clazz) {
         return TypeUtils.cast(json, clazz, ParserConfig.getGlobalInstance());
     }
+>>>>>>> .merge_file_Mf9bHg
 
     public final static String VERSION = "1.1.37";
 }
