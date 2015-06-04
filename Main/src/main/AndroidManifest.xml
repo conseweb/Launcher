@@ -26,6 +26,12 @@
 	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
 	<uses-permission android:name="android.permission.INTERNET" />
+    <use-permission android:name="android.permission.BIND_WALLPAPER" ></use-permission>
+
+    <uses-feature
+        android:name="android.software.live_wallpaper"
+        android:required="true" >
+    </uses-feature>
 
     <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="10"/>
 
@@ -162,6 +168,22 @@
         <service android:name="com.bitants.boost.CleanService"> </service>
         <activity android:name="com.bitants.boost.SetWhiteListActivity"></activity>
         <!-- end of boost -->
+
+        <!-- livewallpaper -->
+        <service
+            android:name="com.bitants.wallpaper.GIFWallpaperService"
+            android:enabled="true"
+            android:label="GIF Wallpaper"
+            android:permission="android.permission.BIND_WALLPAPER" >
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/wallpaper" >
+            </meta-data>
+        </service>
+        <!-- end of livewallpaper -->
 
     </application>
 </manifest>
