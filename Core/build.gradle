@@ -16,13 +16,13 @@ android {
         versionCode getVersionCodeFromManifest()
         versionName "1.0.1"
 
-        ndk {
-            moduleName "innBitmap2Blur"
-            abiFilter "armeabi armeabi-v7a"
-            cFlags "-DANDROID_NDK"
-            ldLibs  "jnigraphics"
-            ldLibs  "log"
-        }
+//        ndk {
+//            moduleName "innBitmap2Blur"
+//            abiFilter "armeabi armeabi-v7a"
+//            cFlags "-DANDROID_NDK"
+//            ldLibs  "jnigraphics"
+//            ldLibs  "log"
+//        }
     }
 
     buildTypes {

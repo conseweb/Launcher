@@ -23,7 +23,7 @@ import java.util.ArrayList;
  */
 public abstract class AbstractFolderHelper implements IFolderHelper {
 	
-	protected int mAlpha = 140;
+	protected int mAlpha = 180;
 	/**
 	 * 是否全屏
 	 */

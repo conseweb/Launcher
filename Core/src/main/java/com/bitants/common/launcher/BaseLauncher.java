@@ -220,7 +220,7 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
             public boolean onAction() {
                 isNewInstall = true;
                 Log.w("Launcher", "isNewInstall");
-                // 记录用户第一次使用桌面的时间 caizp 2012-12-4
+                // 记录用户第一次使用桌面的时间
                 BaseConfigPreferences.getInstance().setFirstLaunchTime(System.currentTimeMillis());
                 // 新安装用户不显示更新日志
                 String curVersionName = TelephoneUtil.getVersionName(BaseLauncher.this);
@@ -292,7 +292,7 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 	 * 是否异步加载桌面数据
 	 * @return
 	 */
-	private boolean isAsyncLoadLauncherData(){
+	private boolean isAsyncLoadLauncherData() {
 		return BaseSettingsPreference.getInstance().isAsyncLoadLauncherData() && !isNewInstall && !isUpdateInstall;
 	}
 	

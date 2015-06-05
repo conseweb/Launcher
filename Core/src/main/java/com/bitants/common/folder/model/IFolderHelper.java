@@ -17,7 +17,7 @@ public interface IFolderHelper {
 	/**
 	 * 用于做撕裂的透明背景 <br>
 	 *
-	 * @param folderView
+	 * @param outVRect
 	 *            点击的文件夹视图
 	 * @param hilightClickView
 	 *            是否高亮点击文件夹视图

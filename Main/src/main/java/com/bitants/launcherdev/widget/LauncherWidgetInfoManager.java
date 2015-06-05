@@ -34,7 +34,7 @@ public final class LauncherWidgetInfoManager {
 
 	private Context mContext;
 
-	public static final String PANDA_WIDGET_CATEGORY_QUERY_INTENT = "com.nd.android.pandahome.widget.category";
+	public static final String MIRROR_WIDGET_CATEGORY_QUERY_INTENT = "com.bitants.launcherdev.widget.category";
 
 	/**
 	 * 所有小部件信息
@@ -57,7 +57,7 @@ public final class LauncherWidgetInfoManager {
 	private Map<String, String> ingoreInstalledWidgetMap = new HashMap<String, String>();
 	
 	/**
-	 * 已经安装91标准小部件包名列表
+	 * 已经安装标准小部件包名列表
 	 */
 	private Map<String, String> installedPandaWidgetPkgMap = new HashMap<String, String>();
 	
@@ -70,7 +70,7 @@ public final class LauncherWidgetInfoManager {
 
 	private static final String WIDGET_INFO_FILE_NAME = "widget";
 
-	private static final String TAB_PANDAWIDGETS = "pandawidgets";
+	private static final String TAB_MIRRORWIDGETS = "mirrorwidgets";
 	
 	//MOBO桌面支持的第三方插件列表
 	private ArrayList<String> mSupportWidgetPackage = new ArrayList<String>();
@@ -137,7 +137,7 @@ public final class LauncherWidgetInfoManager {
 	}
 
 	/**
-	 * 检查最新安装的软件是否是新标准的91小部件
+	 * 检查最新安装的软件是否是新标准的小部件
 	 * 
 	 * @param packageName
 	 * @return
@@ -145,7 +145,7 @@ public final class LauncherWidgetInfoManager {
 	public boolean checkLastUpdateSoftIsPandaWidget(String packageName) {
 		if (AndroidPackageUtils.isPkgInstalled(mContext, packageName)) {
 			PackageManager pm = Global.getApplicationContext().getPackageManager();
-			Intent it = new Intent(PANDA_WIDGET_CATEGORY_QUERY_INTENT);
+			Intent it = new Intent(MIRROR_WIDGET_CATEGORY_QUERY_INTENT);
 			it.setPackage(packageName);
 			List<ResolveInfo> resolveInfoList = pm.queryIntentActivities(it, 0);
 			if (null != resolveInfoList && resolveInfoList.size() > 0) {
@@ -345,7 +345,7 @@ public final class LauncherWidgetInfoManager {
 	public ArrayList<LauncherWidgetInfo> loadAllInstalledLauncherWidgetInfos(boolean execepHuangli) {
 		ArrayList<LauncherWidgetInfo> listAllWidgetInfos = new ArrayList<LauncherWidgetInfo>();
 		PackageManager pm = Global.getApplicationContext().getPackageManager();
-		Intent it = new Intent(PANDA_WIDGET_CATEGORY_QUERY_INTENT);
+		Intent it = new Intent(MIRROR_WIDGET_CATEGORY_QUERY_INTENT);
 
 		installedPandaWidgetPkgMap.clear();
 		List<ResolveInfo> resolveInfoList = pm.queryIntentActivities(it, 0);
@@ -396,7 +396,7 @@ public final class LauncherWidgetInfoManager {
 	public static List<String> loadAllInstalledWidgetPackageName(){
 		HashSet<String> packageNames = new HashSet<String>();
 		PackageManager pm = Global.getApplicationContext().getPackageManager();
-		Intent it = new Intent(PANDA_WIDGET_CATEGORY_QUERY_INTENT);
+		Intent it = new Intent(MIRROR_WIDGET_CATEGORY_QUERY_INTENT);
 		List<ResolveInfo> resolveInfoList = pm.queryIntentActivities(it, 0);
 		for (ResolveInfo resolveInfo : resolveInfoList) {
 			if(resolveInfo.activityInfo != null){
@@ -459,7 +459,7 @@ public final class LauncherWidgetInfoManager {
 		int type;
 		try {
 			int depth = xrp.getDepth();
-			XmlUtils.beginDocument(xrp, TAB_PANDAWIDGETS);
+			XmlUtils.beginDocument(xrp, TAB_MIRRORWIDGETS);
 			while (((type = xrp.next()) != XmlPullParser.END_TAG || xrp.getDepth() > depth) && type != XmlPullParser.END_DOCUMENT) {
 				if (type != XmlPullParser.START_TAG) {
 					continue;
