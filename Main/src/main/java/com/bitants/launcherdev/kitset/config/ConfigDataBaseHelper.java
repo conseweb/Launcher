@@ -3,7 +3,7 @@ package com.bitants.launcherdev.kitset.config;
 
 import android.database.sqlite.SQLiteDatabase;
 import com.bitants.common.launcher.support.DBHelperFactory;
-import com.bitants.common.push.PushMsgHandler;
+//import com.bitants.common.push.PushMsgHandler;
 
 /**
  * 桌面配置数据库
@@ -17,7 +17,7 @@ public class ConfigDataBaseHelper implements DBHelperFactory.DataBaseHelper {
 
 	@Override
 	public void onDataBaseCreate(SQLiteDatabase db) {
-		db.execSQL(PushMsgHandler.CREATE_PUSH_DB);
+//		db.execSQL(PushMsgHandler.CREATE_PUSH_DB);
 	}
 	
 	@Override

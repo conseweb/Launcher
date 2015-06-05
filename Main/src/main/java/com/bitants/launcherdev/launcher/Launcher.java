@@ -32,7 +32,7 @@ import com.bitants.launcherdev.datamodel.Global;
 import com.bitants.launcherdev.folder.LauncherFolderReceiverFactory;
 import com.bitants.launcherdev.folder.model.FolderSwitchController;
 import com.bitants.common.framework.OnKeyDownListenner;
-import com.bitants.common.framework.view.bubble.LauncherBubbleManager;
+//import com.bitants.common.framework.view.bubble.LauncherBubbleManager;
 import com.bitants.launcherdev.integratefoler.IntegrateFolder;
 import com.bitants.common.kitset.util.BaseBitmapUtils;
 import com.bitants.common.kitset.util.StatusBarUtil;
@@ -155,7 +155,7 @@ public class Launcher extends BaseLauncher {
 				}
 			} else {
 				//setupDeleteZone();
-				LauncherBubbleManager.getInstance().dismissBubble(cellInfo.cell);
+//				LauncherBubbleManager.getInstance().dismissBubble(cellInfo.cell);
 				mWorkspace.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS, HapticFeedbackConstants.FLAG_IGNORE_VIEW_SETTING);
 				mWorkspace.startDrag(cellInfo);
 			}
@@ -174,12 +174,12 @@ public class Launcher extends BaseLauncher {
 		super.onResume();
 		StatusBarUtil.toggleStateBar(this, true);
 		
-		handler.postDelayed(new Runnable() {
-			@Override
-			public void run() {
-				LauncherBubbleManager.getInstance().showAllBubbles();
-			}
-		}, 2000);
+//		handler.postDelayed(new Runnable() {
+//			@Override
+//			public void run() {
+//				LauncherBubbleManager.getInstance().showAllBubbles();
+//			}
+//		}, 2000);
 	}
 	
 	/**
@@ -216,7 +216,7 @@ public class Launcher extends BaseLauncher {
 	@SuppressWarnings("ResourceType")
 	public void onClick(View v) {
 		//点击后删除消息
-		LauncherBubbleManager.getInstance().dismissBubbleAndRecord(v);
+//		LauncherBubbleManager.getInstance().dismissBubbleAndRecord(v);
 		mClickView = v;		
 		Object tag = v.getTag();
 		if (tag instanceof ApplicationInfo) {

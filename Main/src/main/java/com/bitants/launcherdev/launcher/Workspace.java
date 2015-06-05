@@ -9,7 +9,7 @@ import com.bitants.common.launcher.BaseLauncher;
 import com.bitants.launcher.R;
 import com.bitants.common.folder.model.FolderHelper;
 import com.bitants.common.framework.AnyCallbacks;
-import com.bitants.common.framework.view.bubble.LauncherBubbleManager;
+//import com.bitants.common.framework.view.bubble.LauncherBubbleManager;
 import com.bitants.common.framework.view.commonsliding.CommonLightbar;
 import com.bitants.common.launcher.config.BaseConfig;
 import com.bitants.common.launcher.config.ConfigFactory;
@@ -325,7 +325,7 @@ public class Workspace extends ScreenViewGroup implements DragScroller, AnyCallb
 	
 	@Override
 	public void handleOnDragOverOrReorder(View v) {
-		LauncherBubbleManager.getInstance().dismissBubble(v);
+//		LauncherBubbleManager.getInstance().dismissBubble(v);
 	}
 	
 	public void changeToSpringMode(String tab){
