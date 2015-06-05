@@ -1,9 +1,8 @@
 package com.bitants.launcherdev.datamodel.db;
 
 import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 
-import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
+import com.bitants.common.sqliteasset.SQLiteAssetHelper;
 
 /**
  * Created by michael on 15/6/5.

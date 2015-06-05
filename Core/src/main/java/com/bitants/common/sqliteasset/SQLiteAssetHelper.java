@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.readystatesoftware.sqliteasset;
+package com.bitants.common.sqliteasset;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

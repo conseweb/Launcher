@@ -96,7 +96,7 @@ public class SpringEffectsFactory {
 	 * 
 	 * @param canvas
 	 * @param layout
-	 * @param mWorkspace
+	 * @param screenViewGroup
 	 * @param drawingTime
 	 * @param offSet
 	 */
@@ -242,7 +242,7 @@ public class SpringEffectsFactory {
 		case EffectsType.LG_CUBE_INSIDE:
 			processLGDrapeInside(canvas);
 			break;
-		// ==================点心桌面特效==============================
+		// ==================桌面特效==============================
 		case EffectsType.DX_SQUASH:
 			processSquash(canvas);
 			break;

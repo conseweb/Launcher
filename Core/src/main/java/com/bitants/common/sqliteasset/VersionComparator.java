@@ -1,4 +1,4 @@
-package com.readystatesoftware.sqliteasset;
+package com.bitants.common.sqliteasset;
 
 import android.util.Log;
 
@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.readystatesoftware.sqliteasset.SQLiteAssetHelper.SQLiteAssetException;
+import com.bitants.common.sqliteasset.SQLiteAssetHelper.SQLiteAssetException;
 
 /**
  * Compare paths by their upgrade version numbers, instead of using

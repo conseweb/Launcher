@@ -41,6 +41,19 @@
 
         <meta-data android:name="leancloud" android:value="LeanCloud"/>
 
+        <activity
+            android:name="com.bitants.launcherdev.launcher.SplashScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.MONKEY" />
+                <category android:name="android.intent.category.THIRD_PKG_CHECK" />
+            </intent-filter>
+        </activity>
+
         <activity android:name="com.bitants.launcherdev.launcher.Launcher"
 		    android:label="@string/app_name"
 			android:launchMode="singleTask" android:clearTaskOnLaunch="true"
@@ -48,12 +61,8 @@
 			android:configChanges="locale|keyboardHidden|orientation" 
 			android:screenOrientation="portrait" android:windowSoftInputMode="stateUnspecified|adjustPan">
 			<intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-				<category android:name="android.intent.category.LAUNCHER" />
-				<category android:name="android.intent.category.HOME" />
-				<category android:name="android.intent.category.DEFAULT" />
-				<category android:name="android.intent.category.MONKEY" />
-				<category android:name="android.intent.category.THIRD_PKG_CHECK" />
+				<action android:name="com.bitants.launcherdev.launcher.MAINACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
 		</activity>
         
@@ -86,17 +95,6 @@
 				<data android:scheme="package" />
 			</intent-filter>
 		</receiver>
-		
-		<!--<activity-->
-            <!--android:name="com.bitants.launcherdev.menu.personal.AllDownloadManagerActivity"-->
-            <!--android:screenOrientation="portrait" android:launchMode="singleInstance" -->
-            <!--android:theme="@android:style/Theme.NoTitleBar"-->
-            <!--android:process=":hilauncherex_shopv2_process">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="com.mobo.launcher.downloadmanager.SHOW" />-->
-                <!--<category android:name="android.intent.category.DEFAULT" />-->
-            <!--</intent-filter>-->
-          <!--</activity>-->
           
 		<!-- 应用列表 -->
 		<activity
@@ -107,12 +105,6 @@
 		<activity
 			android:name="com.bitants.launcherdev.app.AppResolverSelectActivity"
 			android:screenOrientation="portrait" android:theme="@style/TipDialog" />
-		
-		<!-- 推送消息跳转处理 -->
-        <activity
-            android:name="com.bitants.common.push.PushMsgRedirectActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" />
         
         <!-- 桌面设置入口 -->
         <activity

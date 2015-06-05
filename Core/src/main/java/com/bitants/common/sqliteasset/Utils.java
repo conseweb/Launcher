@@ -1,4 +1,4 @@
-package com.readystatesoftware.sqliteasset;
+package com.bitants.common.sqliteasset;
 
 import android.util.Log;
 
