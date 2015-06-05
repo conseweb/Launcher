@@ -157,8 +157,7 @@ public final class WallpaperUtil {
 	/**
 	 * 应用壁纸(指定输入流)[参考安卓桌面的代码]
 	 * @param ctx
-	 * @param wallpaperInputStream1
-	 * @param wallpaperInputStream2
+	 * @param wallpaperTag
 	 */
 	public static void applyWallpaperInThread(final Context ctx, final String wallpaperTag) {
 		ThreadUtil.executeMore(new Runnable() {
@@ -190,8 +189,7 @@ public final class WallpaperUtil {
 	/**
 	 * 应用主题壁纸
 	 * @param ctx
-	 * @param wallpaperInputStream1 用于获取宽高
-	 * @param wallpaperInputStream2 用于应用壁纸
+	 * @param wallpaperTag
 	 */
 	public static void applyWallpaperFromTheme(final Context ctx, final String wallpaperTag) {
 		if (null == wallpaperTag)
@@ -205,7 +203,7 @@ public final class WallpaperUtil {
 							"cn.com.nd.s.single.lock.livewallpaper")) {
 				BaseBitmapUtils.saveStream2file(wallpaperInputStream1,
 						Environment.getExternalStorageDirectory()
-								+ "/PandaHome2/curWallpaper.b");
+								+ "/mirrorhome/curWallpaper.b");
 				return;
 			}
 			if (ScreenUtil.isLargeScreen()) {// 大分辨率使用壁纸流加快速度

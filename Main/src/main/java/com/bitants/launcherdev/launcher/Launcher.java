@@ -99,9 +99,9 @@ public class Launcher extends BaseLauncher {
 
     @DebugLog
 	@Override
-	public void setupReadMeForNewUser(){
+	public void setupReadMeForNewUser() {
 		try {
-			WallpaperManager.getInstance(this).setResource(R.drawable.wallpaper);
+//			WallpaperManager.getInstance(this).setResource(R.drawable.wallpaper);
 			/**
 			 * 拷贝默认壁纸至sd卡
 			 */
@@ -109,8 +109,8 @@ public class Launcher extends BaseLauncher {
 			if (f == null || !f.exists()) {
 				f.mkdirs();
 			}
-			BaseBitmapUtils.saveStream2file(getResources().openRawResource(R.drawable.wallpaper), 
-					f.getAbsolutePath() + "/default_wallpaper.jpg");
+//			BaseBitmapUtils.saveStream2file(getResources().openRawResource(R.drawable.wallpaper),
+//					f.getAbsolutePath() + "/default_wallpaper.jpg");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -213,6 +213,7 @@ public class Launcher extends BaseLauncher {
 		return newFolder;
 	}
 	
+	@SuppressWarnings("ResourceType")
 	public void onClick(View v) {
 		//点击后删除消息
 		LauncherBubbleManager.getInstance().dismissBubbleAndRecord(v);
@@ -229,7 +230,7 @@ public class Launcher extends BaseLauncher {
 				mCustomIntentSwitcherController.onAction(this, appInfo, IntentCommand.ACTION_FROM_SHORTCUT);
 			}
 
-			// yuf@2012.12.20 防止托盘默认4应用的intent 字串值被添加 bnds=[] 导致一些判断无法识别
+			//  防止托盘默认4应用的intent 字串值被添加 bnds=[] 导致一些判断无法识别
 			if (!ThemeIconIntentAdaptation.isDefaultDockAppByUri(intent.toUri(0)))
 				intent.setSourceBounds(new Rect(pos[0], pos[1], pos[0] + v.getWidth(), pos[1] + v.getHeight()));
 			ActivityActionUtil.startActivitySafelyForRecored(v, this, intent);

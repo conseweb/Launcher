@@ -255,7 +255,7 @@ public class ThemeLoader {
     }
 
     /**
-     * 解压ZIP文件到sdcard/PandaHome2/Themes并生成主题对象。
+     * 解压ZIP文件到sdcard/mirrorhome/Themes并生成主题对象。
      * 
      * @param zipPath
      *            zip文件路径。
@@ -600,7 +600,7 @@ public class ThemeLoader {
     }
     
     /**
-     * 解压ZIP文件到sdcard/PandaHome2/Themes并生成主题对象。(适用主题安装与升级)
+     * 解压ZIP文件到sdcard/mirrorhome/Themes并生成主题对象。(适用主题安装与升级)
      * 
      * @param zipPath
      *            zip文件路径。

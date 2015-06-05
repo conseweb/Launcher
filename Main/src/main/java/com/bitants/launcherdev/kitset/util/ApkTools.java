@@ -246,7 +246,7 @@ public class ApkTools {
 	/**
 	 * 获取未安装APK的版本信息
 	 * @param context
-	 * @param archiveFilePath APK文件的路径。如：/sdcard/PandaHome2/Downloads/XX.apk
+	 * @param archiveFilePath APK文件的路径。如：/sdcard/mirrorhome/Downloads/XX.apk
 	 * @return 成功返回版本号，失败返回-1
 	 */
 	public static int getUninatllApkInfo(Context context, String archiveFilePath) {

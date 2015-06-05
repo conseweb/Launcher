@@ -21,7 +21,7 @@ public class GIFWallpaperService extends WallpaperService {
                     getResources().getAssets().open("girl.gif"));
 
             return new GIFWallpaperEngine(movie);
-        }catch(IOException e){
+        }catch(IOException e) {
             Log.d("GIF", "Could not load asset");
             return null;
         }
