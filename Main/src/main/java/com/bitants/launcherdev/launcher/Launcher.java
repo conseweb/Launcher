@@ -437,7 +437,7 @@ public class Launcher extends BaseLauncher {
 		return mFolderOpenController != null && mFolderOpenController.isFolderOpened();
 	}
 	
-	public void renameFolder(long id, String name) {
+	public void renameFolder(long id, CharSequence name) {
 		if (!TextUtils.isEmpty(name) || id != FolderInfo.INVALIDATE_FOLDER_ID) {
 			if (mClickView != null && mClickView instanceof FolderIconTextView) { // 先查找之前记录的view
 				FolderIconTextView folderIcon = (FolderIconTextView) mClickView;

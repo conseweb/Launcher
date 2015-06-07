@@ -1,0 +1,12 @@
+category=setting
+com.android.settings/com.oppo.settings.SettingsActivity
+com.android.settings/com.android.settings.Settings
+com.android.settings/com.android.settings.HWSettings
+com.android.settings/com.android.settings.MiuiSettings
+com.android.settings/com.android.settings.GridSettings
+com.android.settings/com.android.settings.SettingsTabActivity
+com.lge.settings
+com.sonyericsson.settings
+com.qualcomm.qualcommsettings
+com.android.settings
+com.android.settings2

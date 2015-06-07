@@ -20,7 +20,7 @@ public class IntegrateFolderPage extends ViewGroup {
 	protected static final String TAG = "IntegrateFolderPage";
 	private FolderInfo info;
 	private IntegrateFolderGridView gridview;
-	private PromotionLayout promotionLayout;
+	private View promotionLayout;
 	private IntegrateFolder integrateFolder;
 	private Launcher mLauncher;
 	private Context context;
@@ -113,7 +113,7 @@ public class IntegrateFolderPage extends ViewGroup {
 			int detaY = (int) (mLastionMotionY - y); // 每次滑动屏幕，屏幕应该移动的距离
 			if (getScrollY() < 0) {
 				float s = Math.abs(y - mBeginY) / (getHeight());
-				Log.e("zhenghonglin", "---s==" + s);
+//				Log.e("zhenghonglin", "---s==" + s);
 				if (s > 1) {
 					s = 1.0f;
 				}
@@ -122,7 +122,7 @@ public class IntegrateFolderPage extends ViewGroup {
 				scrollTo(0, -scrollToY);
 			} else if (getScrollY() > (totalHeight - getHeight())) {
 				float s = Math.abs(y - mBeginY) / (getHeight());
-				Log.e("zhenghonglin", "---s==" + s);
+//				Log.e("zhenghonglin", "---s==" + s);
 				if (s > 1) {
 					s = 1.0f;
 				}
@@ -130,7 +130,7 @@ public class IntegrateFolderPage extends ViewGroup {
 						* getHeight() * 0.25f);
 				scrollTo(0, totalHeight - getHeight() + scrollToY);
 			} else {
-				Log.e("zhenghonglin", "---detaY==" + detaY + "," + getScrollY());
+//				Log.e("zhenghonglin", "---detaY==" + detaY + "," + getScrollY());
 				scrollBy(0, detaY);
 			}
 			mLastionMotionY = y;
@@ -170,7 +170,7 @@ public class IntegrateFolderPage extends ViewGroup {
 
 	private void scrollToDestination(int velocity) {
 		// 要有反弹效果
-		Log.e(TAG, "snapToDestination===:" + velocity + "," + getScrollY());
+//		Log.e(TAG, "snapToDestination===:" + velocity + "," + getScrollY());
 //		if (getScrollY() < 0) {
 //			int dy = 0 - getScrollY();
 //			mScroller.startScroll(0, getScrollY(), 0, dy);
@@ -194,13 +194,13 @@ public class IntegrateFolderPage extends ViewGroup {
 	private void scrollDown(int velocity) {
 		float dy = Math.abs((totalHeight - getHeight()) * velocity * 2.0f
 				/ mMaximumVelocity);
-		Log.e("clarkzheng", dy + ",===" + velocity);
+		Log.e("scrollDown", dy + ",===" + velocity);
 		if (getScrollY() + dy > (totalHeight - getHeight())) {
 			dy = totalHeight - getHeight() - getScrollY();
-			Log.e("clarkzheng", dy + ",111===");
+			Log.e("scrollDown", dy + ",111===");
 		}
 		int duration = (int) ((float) Math.abs(dy) / getHeight() * 1500);
-		Log.e("clarkzheng", duration + ",111===");
+		Log.e("scrollDown", duration + ",111===");
 		// mScroller.startScroll(0, getScrollY(), 0, (int)dy, duration);
 		mScroller.startScroll(0, getScrollY(), 0, (int) dy);
 		invalidate();
@@ -214,13 +214,13 @@ public class IntegrateFolderPage extends ViewGroup {
 	private void scrollUp(int velocity) {
 		float dy = Math.abs((totalHeight - getHeight()) * velocity * 2.0f
 				/ mMaximumVelocity);
-		Log.e("clarkzheng", dy + ",snapDown===" + velocity);
+		Log.e("scrollUp", dy + ",snapDown===" + velocity);
 		if (getScrollY() - dy < 0) {
 			dy = getScrollY();
-			Log.e("clarkzheng", dy + ",111=snapDown==");
+			Log.e("scrollUp", dy + ",111=snapDown==");
 		}
 		int duration = (int) ((float) Math.abs(dy) / getHeight() * 1500);
-		Log.e("clarkzheng", duration + ",111=snapDown==");
+		Log.e("scrollUp", duration + ",111=snapDown==");
 		// mScroller.startScroll(0, getScrollY(), 0, -(int)dy, duration);
 		mScroller.startScroll(0, getScrollY(), 0, -(int) dy);
 		// 由于触摸事件不会重新绘制View，所以此时需要手动刷新View 否则没效果
@@ -248,25 +248,42 @@ public class IntegrateFolderPage extends ViewGroup {
 	@Override
 	protected void onFinishInflate() {
 		super.onFinishInflate();
-		gridview = (IntegrateFolderGridView) findViewById(R.id.folder_content_grid);
-		promotionLayout = PromotionLayout.fromXml(context, this, null);
+
+        gridview = (IntegrateFolderGridView) findViewById(R.id.folder_content_grid);
+
+        // add promotion layout
+		promotionLayout = new View(context);
+		LayoutParams lp=new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+		promotionLayout.setLayoutParams(lp);
+		promotionLayout.setClickable(true);
 		addView(promotionLayout);
+		promotionLayout.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO: click on promotion layout will close the folder
+				mLauncher.closeIntegrateFolder();
+			}
+		});
 	}
 
 	private int totalHeight;
 
 	@Override
 	protected void onLayout(boolean changed, int l, int t, int r, int b) {
+		int folderpageViewhight = getMeasuredHeight();
+		int gridviewHight = gridview.getMeasuredHeight();
+
+		int promotionLayoutHight = Math.max(0, folderpageViewhight-gridviewHight);
+
 		gridview.layout(0, 0, gridview.getMeasuredWidth(),
 				gridview.getMeasuredHeight());
 		int top = gridview.getMeasuredHeight() + 100;
-		promotionLayout.layout(0, top, promotionLayout.getMeasuredWidth(), top
-				+ promotionLayout.getMeasuredHeight());
-		totalHeight = top + promotionLayout.getMeasuredHeight();
+		promotionLayout.layout(0, top, promotionLayoutHight, top
+				+ promotionLayoutHight);
+		totalHeight = top + promotionLayoutHight;
 		
-		promotionLayout.setVisibility(View.INVISIBLE);
-		
-
+//		promotionLayout.setVisibility(View.INVISIBLE);
 	}
 
 	@Override

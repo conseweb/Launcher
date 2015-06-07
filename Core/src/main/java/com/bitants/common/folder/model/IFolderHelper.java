@@ -32,16 +32,12 @@ public interface IFolderHelper {
 
 	/**
 	 * 打开文件夹前调用 <br>
-	 * create at 2012-6-4 下午04:40:32 <br>
-	 * modify at 2012-6-4 下午04:40:32
 	 */
 	public void onPreFolderOpen();
 
 	/**
 	 * 打开文件夹调用 <br>
-	 * create at 2012-6-4 下午04:41:11 <br>
-	 * modify at 2012-6-4 下午04:41:11
-	 * 
+	 *
 	 * @param folderStyle 文件夹风格
 	 */
 
@@ -49,9 +45,7 @@ public interface IFolderHelper {
 
 	/**
 	 * 关闭文件夹回调 <br>
-	 * create at 2012-6-4 下午06:08:41 <br>
-	 * modify at 2012-6-4 下午06:08:41
-	 * 
+	 *
 	 * @param folder 关闭的文件夹信息
 	 * @param isAddMore 是否是由添加app到文件夹引起的文件夹关闭
 	 */
@@ -62,8 +56,6 @@ public interface IFolderHelper {
 	/**
 	 * 批量添加app到文件夹中
 	 * 
-	 * <br>create at 2012-7-9 下午05:08:10
-	 * <br>modify at 2012-7-9 下午05:08:10
 	 * @param list
 	 */
 	public void addApps2Folder(FolderInfo folderInfo,ArrayList<SerializableAppInfo> list);
@@ -71,9 +63,7 @@ public interface IFolderHelper {
 	/**
 	 * 重命名文件夹
 	 * 
-	 * <br>create at 2012-7-10 下午03:53:07
-	 * <br>modify at 2012-7-10 下午03:53:07
-	 * @param id
+	 * @param folderInfo
 	 * @param name
 	 */
 	public void renameFolder(FolderInfo folderInfo, String name);
@@ -81,7 +71,6 @@ public interface IFolderHelper {
 	/**
 	 * <p>打开文件夹回调</p>
 	 * 
-	 * <p>date: 2012-8-14 下午03:02:42
 	 * @param delayMilli
 	 */
 	public void openFolderCallback(int delayMilli) ;
@@ -89,21 +78,18 @@ public interface IFolderHelper {
 	/**
 	 * <p>删除文件夹回调</p>
 	 * 
-	 * <p>date: 2012-8-14 下午03:02:17
 	 */
 	public void deleteFolderCallback() ;
 	
 	/**
 	 * <p>加密文件夹成功后回调</p>
 	 * 
-	 * <p>date: 2012-8-14 下午03:02:10
 	 */
 	public void encriptFolderCallback() ;
 	
 	/**
 	 * <p>切割上半部分动画</p>
 	 * 
-	 * <p>date: 2012-8-22 下午02:46:21
 	 * @param canvas 画布
 	 * @param clip 切割矩形
 	 * @param animDistance 动画移动位移
@@ -115,7 +101,6 @@ public interface IFolderHelper {
 	/**
 	 * <p>切割下半部分动画</p>
 	 * 
-	 * <p>date: 2012-8-22 下午02:46:21
 	 * @param canvas 画布
 	 * @param clip 切割矩形
 	 * @param animDistance 动画移动位移
@@ -127,7 +112,6 @@ public interface IFolderHelper {
 	/**
 	 * <p>获取最终的渐变透明值</p>
 	 * 
-	 * <p>date: 2012-8-22 下午02:45:57
 	 * @return
 	 */
 	public int getAlpha();

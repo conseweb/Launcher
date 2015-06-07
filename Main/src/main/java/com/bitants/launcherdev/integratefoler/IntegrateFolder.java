@@ -3,9 +3,11 @@ package com.bitants.launcherdev.integratefoler;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -18,6 +20,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.bitants.launcher.R;
 import com.bitants.common.framework.OnKeyDownListenner;
+import com.bitants.launcherdev.folder.FolderReNameSuccessListem;
+import com.bitants.launcherdev.folder.IntegrateRenamePop;
 import com.bitants.launcherdev.launcher.DragController;
 import com.bitants.launcherdev.launcher.Launcher;
 import com.bitants.common.launcher.info.ApplicationInfo;
@@ -40,6 +44,7 @@ public class IntegrateFolder extends RelativeLayout implements DropTarget, DragS
 	private Launcher mLauncher;
 	// 状态值 显示文件夹是否处于打开状态
 	public boolean isOpened = false;
+	private IntegrateRenamePop integrateRenamePop;
 
 	/**
 	 * 从桌面上点击的文件夹视图
@@ -69,6 +74,40 @@ public class IntegrateFolder extends RelativeLayout implements DropTarget, DragS
 		integrateFolder.mDragController = (DragController) context.getDragController();
 		return integrateFolder;
 	}
+
+    private void showRenameDiaolog() {
+
+        if (integrateRenamePop == null) {
+            integrateRenamePop = new IntegrateRenamePop(getContext());
+            integrateRenamePop
+                    .setFolderReNameSuccessListem(new FolderReNameSuccessListem() {
+                        @Override
+                        public void onReNameSuccess(CharSequence folderName) {
+                            // TODO Auto-generated method stub
+                            if (!TextUtils.isEmpty(folderName)) {
+                                FolderInfo folderInfo=folderInfoList.get(viewPager.getCurrentItem());
+                                if(folderInfo!=null){
+                                    folderInfoList.get(viewPager.getCurrentItem()).title=folderName;
+                                    pagerTabStrip.setViewPager(viewPager);
+                                    mLauncher.renameFolder(folderInfo.id, folderInfo.title);
+                                    if(mMenu!=null && mMenu.getMenu()!=null && mMenu.getMenu()
+                                            .isShowing() ){
+                                        mMenu.dismiss();
+                                    }
+                                }
+                            }
+
+                        }
+                    });
+
+
+        }
+
+        integrateRenamePop.toggleMenu(pagerTabStrip, folderInfoList.get(viewPager.getCurrentItem()).title);
+        if(mMenu!=null && mMenu.getMenu()!=null && mMenu.getMenu().isShowing() ){
+            mMenu.dismiss();
+        }
+    }
 
 	@Override
 	protected void onFinishInflate() {
@@ -171,6 +210,11 @@ public class IntegrateFolder extends RelativeLayout implements DropTarget, DragS
 	 * 关闭文件夹
 	 */
 	public boolean closeFolder() {
+        if( mMenu!=null && mMenu.getMenu()!=null && mMenu.getMenu().isShowing() ) {
+            mMenu.dismiss();
+            return true;
+        }
+
 		DragLayer parent = (DragLayer) getParent();
 		if (parent != null) {
 			parent.removeView(this);
@@ -200,7 +244,7 @@ public class IntegrateFolder extends RelativeLayout implements DropTarget, DragS
 			int loc[] = new int[2];
 			getHitRect(rect);
 			getLocationOnScreen(loc);
-			Log.e("zhenghonglin", "" + rect + "," + loc[0] + "," + loc[1] + "," + getLeft() + "," + getTop());
+//			Log.e("zhenghonglin", "" + rect + "," + loc[0] + "," + loc[1] + "," + getLeft() + "," + getTop());
 			requestFocus();
 		} else {
 
@@ -272,7 +316,7 @@ public class IntegrateFolder extends RelativeLayout implements DropTarget, DragS
 
 	@Override
 	public boolean onLongClick(View v) {
-		Log.e("zhenghonglin", "长按======");
+		Log.e("IntegrateFolder", "长按======");
 		// Return if global dragging is not enabled
 		Object tag = v.getTag();
 		if (tag instanceof ApplicationInfo) {
@@ -305,7 +349,11 @@ public class IntegrateFolder extends RelativeLayout implements DropTarget, DragS
 		// TODO Auto-generated method stub
 		if (v == folderMenuImg) {
 			mMenu.toggleMenu();
-		}
+		} else {
+            if (v == null) {
+                this.closeFolder();
+            }
+        }
 	}
 
 	class Menu {
@@ -321,6 +369,10 @@ public class IntegrateFolder extends RelativeLayout implements DropTarget, DragS
 				menuPopupWindow.dismiss();
 			}
 		}
+
+        public PopupWindow getMenu(){
+            return menuPopupWindow;
+        }
 
 		public void toggleMenu() {
 			if (menuPopupWindow == null) {
@@ -346,6 +398,7 @@ public class IntegrateFolder extends RelativeLayout implements DropTarget, DragS
 			menuPopupWindow.setAnimationStyle(R.style.menu_popup_animation);
 			menuPopupWindow.setWidth(context.getResources().getDimensionPixelSize(R.dimen.folder_view_overflow_menu_width));
 			menuPopupWindow.setHeight(LayoutParams.WRAP_CONTENT);
+            menuPopupWindow.setBackgroundDrawable(new BitmapDrawable());
 
 			rename = (TextView) view.findViewById(R.id.folder_view_overflow_menu_rename);
 			sortAlphaBeta = (TextView) view.findViewById(R.id.folder_view_overflow_menu_sort_alpha_beta);
@@ -363,7 +416,7 @@ public class IntegrateFolder extends RelativeLayout implements DropTarget, DragS
 
 			@Override
 			public void onClick(View v) {
-
+                showRenameDiaolog();
 			}
 		};
 

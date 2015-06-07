@@ -56,7 +56,8 @@ public class FullScreenFolderStyleHelper extends AbstractFolderStyleHelper {
 		mController = controller;
 		mLauncher = launcher;
 		mDragLayer = mLauncher.getDragLayer();
-		mBackground.setAlpha(165);
+		// TODO: get background bitmap here and blur it
+		mBackground.setAlpha(185);
 		initFolderView();
 	}
 
@@ -69,6 +70,7 @@ public class FullScreenFolderStyleHelper extends AbstractFolderStyleHelper {
 			mFolderContentLayout = (FolderView) mFolderView
 					.findViewById(R.id.folder_layout);
 			mTitleLayout = mFolderContentLayout.findViewById(R.id.title_layout);
+            // TODO: show bottom layout
 //			mBottomLayout = mFolderView.findViewById(R.id.bottom_layout);
 		}
 	}
@@ -113,6 +115,7 @@ public class FullScreenFolderStyleHelper extends AbstractFolderStyleHelper {
 			return;
 		}
 
+        // TODO: change right margin
 		final int height = mController.initFolderContents() + ScreenUtil.dip2px(mLauncher, 20);
 		mFolderContentLayout.findViewById(R.id.title_layout).setVisibility(View.VISIBLE);
 		mFolderContentLayout.findViewById(R.id.line_layout).setVisibility(View.VISIBLE);

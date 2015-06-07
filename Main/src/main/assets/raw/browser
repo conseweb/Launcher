@@ -1,0 +1,14 @@
+category=browser
+com.android.chrome/com.google.android.apps.chrome.Main
+com.chrome.beta/com.google.android.apps.chrome.Main
+com.android.browser/com.android.browser.BrowserActivity
+com.google.android.browser/com.android.browser.BrowserActivity
+com.sec.android.app.sbrowser/com.sec.android.app.sbrowser.SBrowserMainActivity
+com.htc.sense.browser/com.htc.sense.browser.BrowserActivity
+com.android.browser/com.android.browser.BrowserActivityWithLauncher
+com.android.browser/com.tencent.mtt.SplashActivity
+com.sec.android.app.sbrowser
+com.lenovo.browser
+com.asus.browser
+com.android.chrome
+com.android.browser

@@ -27,4 +27,26 @@
 	<!-- 快捷 -->
 	<string name="dockbar_dock_drawer">全部应用</string>
     <string name="dockbar_dock_search">Search</string>
+
+    <!-- Categories -->
+    <string name="cat_other">Other</string>
+    <string name="cat_game">Game</string>
+    <string name="cat_book">Book</string>
+    <string name="cat_bussiness">Bussiness</string>
+    <string name="cat_communication"><![CDATA[Social & Communication]]></string>
+    <string name="cat_education">Education</string>
+    <string name="cat_entertainment">Entertainment</string>
+    <string name="cat_finance">Finance</string>
+    <string name="cat_health"><![CDATA[Health & Fitness]]></string>
+    <string name="cat_lifestyle">Lifestyle</string>
+    <string name="cat_audiovideo"><![CDATA[Media & Video]]></string>
+    <string name="cat_music">Music</string>
+    <string name="cat_news"><![CDATA[News & Magazines]]></string>
+    <string name="cat_personalization">Personalization</string>
+    <string name="cat_photography">Photography</string>
+    <string name="cat_tools">Tools</string>
+    <string name="cat_shopping">Shopping</string>
+    <string name="cat_sports">Sports</string>
+    <string name="cat_transportation">Transportation</string>
+    <string name="cat_travelnlocal"><![CDATA[Travel & Local]]></string>
 </resources>

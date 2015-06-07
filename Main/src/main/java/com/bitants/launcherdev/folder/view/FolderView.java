@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.text.Editable;
 import android.text.Selection;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
@@ -638,7 +639,9 @@ public class FolderView extends RelativeLayout implements
 		/**
 		 * 拦截掉文件夹内没有view响应的触屏事件，防止误操作关闭文件夹
 		 */
-		return true ;
+		// TODO: return to workspace view here
+        Log.d("FolderView", "Return to main screen!!!");
+        return true ;
 	}
 
 	/**

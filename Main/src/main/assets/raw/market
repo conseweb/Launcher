@@ -1,0 +1,15 @@
+category=market
+com.xiaomi.market/com.xiaomi.market.ui.MarketTabActivity
+com.xiaomi.market/com.xiaomi.market.ui.MainTabActivity
+com.android.vending/com.android.vending.AssetBrowserActivity
+com.sec.android.app.samsungapps/com.sec.android.app.samsungapps.Main
+com.sec.android.app.samsungapps/com.sec.android.app.samsungapps.SamsungAppsMainActivity
+com.dragon.android.pandaspace/com.dragon.android.pandaspace.main.MainActivity
+com.tencent.android.qqdownloader/com.tencent.assistant.activity.SplashActivity
+com.wandoujia.phoenix2/com.wandoujia.p4.activity.ExploreActivity
+com.qihoo.appstore/com.qihoo.appstore.activities.LauncherActivity
+com.baidu.appsearch/com.baidu.appsearch.LauncherActivity
+com.ijinshan.ShouJiKongService/com.ijinshan.ShouJiKongService.ui.MainActivity
+com.android.vending
+com.sec.android.app.samsungapps
+com.sec.android.app.samsung.apps
