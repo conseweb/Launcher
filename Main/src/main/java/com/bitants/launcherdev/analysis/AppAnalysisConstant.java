@@ -66,7 +66,6 @@ public class AppAnalysisConstant {
      * 渠道 服务端根据上传的sp来生成对应的placeId 代表不同的位置
      * 统一请求下载包的sp
      */
-    public static final int SP_ASSIST_91 = 0;                   //从91下载的包
     public static final int SP_LAUNCHER_ICON_APP = 110;         //桌面icon推荐
     public static final int SP_LAUNCHER_WIDGET_APP = 111;       //桌面预置插件推荐
     public static final int SP_LAUNCHER_FOLDER_APP = 103;       //桌面文件夹
@@ -76,7 +75,7 @@ public class AppAnalysisConstant {
     public static final int SP_DRAWER_GAME_FOLDER = 102;        //匣子游戏文件夹
     public static final int SP_T9_HOTWORD = 114;                //t9搜索热词
     public static final int SP_LAUNCHER_FUNC_APP = 115;         //桌面功能推荐，应用升级推荐百度手机卫士、root推荐等
-    public static final int SP_THEME_APP = 116;                 //同步换肤,91锁屏、91通讯录
+    public static final int SP_THEME_APP = 116;                 //同步换肤,锁屏、通讯录
     public static final int SP_WIFI_DOWNLOAD_APP =117;          //WIFI预下载
     public static final int SP_INTELLIJ_UPGRADE_RECOMMEND_APP =118;  //智能升级
     public static final int SP_DRAWER_UPGRADE_FODLER = 119;     //匣子应用升级文件夹

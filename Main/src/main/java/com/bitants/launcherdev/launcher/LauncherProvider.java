@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import com.bitants.common.launcher.config.BaseConfig;
 import com.bitants.common.launcher.model.BaseLauncherProvider;
+import com.bitants.launcherdev.AppController;
 
 public class LauncherProvider extends BaseLauncherProvider {
 	/**
@@ -31,7 +32,7 @@ public class LauncherProvider extends BaseLauncherProvider {
 		}
 		
 		//初始化数据库辅助类
-		((LauncherApplication)BaseConfig.getApplicationContext()).initDBHelper();
+		((AppController)BaseConfig.getApplicationContext()).initDBHelper();
 		
 	}
 

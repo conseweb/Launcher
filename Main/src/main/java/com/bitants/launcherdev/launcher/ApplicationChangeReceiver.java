@@ -4,6 +4,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import com.bitants.common.launcher.broadcast.HiBroadcastStaticReceiver;
+import com.bitants.launcherdev.AppController;
 
 public class ApplicationChangeReceiver extends HiBroadcastStaticReceiver {
 	
@@ -40,7 +41,7 @@ public class ApplicationChangeReceiver extends HiBroadcastStaticReceiver {
 				} 
 			}
 
-			LauncherApplication app = ((LauncherApplication) ctx.getApplicationContext());
+			AppController app = ((AppController) ctx.getApplicationContext());
 			if (app.mModel != null) {
 				app.mModel.onReceive(ctx, intent);
 			}

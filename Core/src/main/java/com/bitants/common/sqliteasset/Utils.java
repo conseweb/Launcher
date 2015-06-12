@@ -8,6 +8,7 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.zip.GZIPInputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
@@ -59,6 +60,17 @@ class Utils {
         }
         return null;
     }
+
+//    public static GZIPInputStream getFileFromGz(InputStream gzFileStream) throws IOException {
+//        byte[] buffer = new byte[2048];
+//        GZIPInputStream gzis = new GZIPInputStream(gzFileStream);
+//        int len;
+//        while ((len = gzis.read(buffer)) > 0) {
+//            out.write(buffer, 0, len);
+//        }
+//
+//        return null;
+//    }
 
     public static String convertStreamToString(InputStream is) {
         return new Scanner(is).useDelimiter("\\A").next();

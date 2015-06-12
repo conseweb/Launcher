@@ -7,6 +7,8 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.RemoteException;
 import android.util.Log;
+
+import com.bitants.launcherdev.AppController;
 import com.bitants.launcherdev.datamodel.Global;
 import com.bitants.launcherdev.launcher.LauncherSettings.Favorites;
 import com.bitants.common.launcher.info.ApplicationInfo;
@@ -25,7 +27,7 @@ import java.util.Map;
 public class LauncherModel extends BaseLauncherModel {
 	static final String TAG = "LauncherModel";
 
-	public LauncherModel(LauncherApplication app, BaseIconCache iconCache) {
+	public LauncherModel(AppController app, BaseIconCache iconCache) {
 		super(app, iconCache);
 	}
 

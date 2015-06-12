@@ -25,6 +25,7 @@ import com.bitants.common.kitset.util.ScreenUtil;
 import com.bitants.common.kitset.util.StringUtil;
 import com.bitants.common.kitset.util.SystemUtil;
 import com.bitants.launcher.R;
+import com.bitants.launcherdev.datamodel.db.AppCatDb;
 import com.bitants.launcherdev.kitset.config.ConfigPreferences;
 import com.bitants.launcherdev.launcher.LauncherSettings.Favorites;
 import com.bitants.common.launcher.config.BaseConfig;
@@ -42,7 +43,11 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import hugo.weaving.DebugLog;
 
 public class LauncherProviderHelper {
 	private static final String TAG = "LauncherProviderHelper";
@@ -140,19 +145,56 @@ public class LauncherProviderHelper {
 	}
 	
 	
+	/*
+	 * create app folder
+	 */
+    public static long createAppFolder(String title, SQLiteDatabase db, int cellX, int cellY, int
+            screen) {
+        ContentValues values = new ContentValues();
+        values.put(Favorites.CELLX, cellX);
+        values.put(Favorites.CELLY, cellY);
+        values.put(Favorites.SPANX, 1);
+        values.put(Favorites.SPANY, 1);
+        values.put(Favorites.SCREEN, screen);
+        values.put(Favorites.CONTAINER, Favorites.CONTAINER_DESKTOP);
+        values.put(Favorites.ITEM_TYPE, Favorites.ITEM_TYPE_USER_FOLDER);
+        values.put(Favorites.TITLE, title);
+        return db.insert(LauncherProvider.TABLE_FAVORITES, null, values);
+    }
 
-	public static long createSysAppFolder(SQLiteDatabase db, int cellX, int cellY, int screen){
-		ContentValues values = new ContentValues();
-		values.put(Favorites.CELLX, cellX);
-		values.put(Favorites.CELLY, cellY);
-		values.put(Favorites.SPANX, 1);
-		values.put(Favorites.SPANY, 1);
-		values.put(Favorites.SCREEN, screen);
-		values.put(Favorites.CONTAINER, Favorites.CONTAINER_DESKTOP);
-		values.put(Favorites.ITEM_TYPE, Favorites.ITEM_TYPE_USER_FOLDER);
-		values.put(Favorites.TITLE, "系统应用");
-		return db.insert(LauncherProvider.TABLE_FAVORITES, null, values);
-	}
+    public static Map<String, Integer>
+    createAllFolders(SQLiteDatabase db, final Context ctx, int screen)
+    {
+        Map<String, Integer> catMap = new HashMap<String, Integer>();
+
+        // first line
+        int iFolderId = (int) createAppFolder(ctx.getString(R.string.cat_tools), db, 0, 0, screen);
+        catMap.put(ctx.getString(R.string.cat_tools), iFolderId);
+
+        iFolderId = (int) createAppFolder(ctx.getString(R.string.cat_social), db, 1, 0, screen);
+        catMap.put(ctx.getString(R.string.cat_social), iFolderId);
+
+        iFolderId = (int) createAppFolder(ctx.getString(R.string.cat_game), db, 2, 0, screen);
+        catMap.put(ctx.getString(R.string.cat_game), iFolderId);
+
+        iFolderId = (int) createAppFolder(ctx.getString(R.string.cat_newsreading), db, 3, 0, screen);
+        catMap.put(ctx.getString(R.string.cat_newsreading), iFolderId);
+
+        // second line
+        iFolderId = (int) createAppFolder(ctx.getString(R.string.cat_life), db, 0, 1, screen);
+        catMap.put(ctx.getString(R.string.cat_life), iFolderId);
+
+        iFolderId = (int) createAppFolder(ctx.getString(R.string.cat_shopping), db, 1, 1, screen);
+        catMap.put(ctx.getString(R.string.cat_shopping), iFolderId);
+
+        iFolderId = (int) createAppFolder(ctx.getString(R.string.cat_av), db, 2, 1, screen);
+        catMap.put(ctx.getString(R.string.cat_av), iFolderId);
+
+        iFolderId = (int) createAppFolder(ctx.getString(R.string.cat_other), db, 3, 1, screen);
+        catMap.put(ctx.getString(R.string.cat_other), iFolderId);
+
+        return catMap;
+    }
 	
 	public static void createAppslist(Context mContext , SQLiteDatabase db, int cellX, int cellY, int screen) {
 		final Resources r = mContext.getResources();
@@ -172,22 +214,32 @@ public class LauncherProviderHelper {
 		}
 		db.insert(LauncherProvider.TABLE_FAVORITES, null, values);
 	}
-	
+
+	@DebugLog
 	public static void initLauncherApp(SQLiteDatabase db, final Context mContext){
 		PackageManager pm = mContext.getPackageManager();
 		final List<ResolveInfo> allApps = AndroidPackageUtils.queryMainIntentActivity(pm);
 		ContentValues values;
 		int countX = BaseSettingsPreference.getInstance().getScreenCountX();
 		int countY = BaseSettingsPreference.getInstance().getScreenCountY();
-		int startScreen = 2;
+		int startScreen = 1;
 		int startCount = countX * (countY - 2);
 		
-		int folderID = (int) createSysAppFolder(db, startCount % countX, (startCount / countX) % countY,
-				startCount / (countX*countY) + startScreen);
+		int folderID = (int) createAppFolder(mContext.getString(R.string.folder_system), db,
+                startCount % countX, (startCount / countX) % countY,
+                startCount / (countX * countY) + startScreen);
 		int folderAppCount = 0;
 		startCount++;
+
+
+        // **** create all category folders ******
+        // zero point start from top left corner (0,0)
+        Map<String, Integer> catMap = createAllFolders(db, mContext, 2);
+        // ***********
+
+        AppCatDb catDb = new AppCatDb(mContext);
 		
-		for(ResolveInfo resInfo : allApps){
+		for(ResolveInfo resInfo : allApps) {
 			String pck = resInfo.activityInfo.packageName ;
 			String clazz = resInfo.activityInfo.name ;
 			if(isDefalutDockbarApp(pck, clazz))//默认Dock栏4个图标
@@ -195,17 +247,24 @@ public class LauncherProviderHelper {
 			
 			values = new ContentValues();
 			
-			if(resInfo.activityInfo.applicationInfo != null 
-					&& SystemUtil.isSystemApplication(resInfo.activityInfo.applicationInfo.flags)){
+			if (resInfo.activityInfo.applicationInfo != null
+					&& SystemUtil.isSystemApplication(resInfo.activityInfo.applicationInfo.flags)) {
+
 				values.put(Favorites.CELLX, 1);
 				values.put(Favorites.CELLY, 1);
 				values.put(Favorites.SCREEN, folderAppCount ++);
 				values.put(Favorites.CONTAINER, folderID);
-			}else{
+
+			} else {
+
+                // find category by package name
+                String catName = catDb.queryCatNameByPkg(pck, mContext);
+                int iFolder = catMap.get(catName);
+
 				values.put(Favorites.CELLX, startCount % countX);
 				values.put(Favorites.CELLY, (startCount / countX) % countY);
-				values.put(Favorites.SCREEN, startCount / (countX*countY) + startScreen);
-				values.put(Favorites.CONTAINER, Favorites.CONTAINER_DESKTOP);
+				values.put(Favorites.SCREEN, startCount / (countX * countY) + startScreen);
+				values.put(Favorites.CONTAINER, iFolder);
 				startCount ++;
 			}
 			
@@ -232,11 +291,12 @@ public class LauncherProviderHelper {
 			db.insert(LauncherProvider.TABLE_FAVORITES, null, values);
 			
 		}
-		
+
+        startCount ++ ;
 		createAppslist(mContext , db, startCount % countX, (startCount / countX) % countY,startCount / (countX*countY) + startScreen);
 		
 		int screenCount = (startCount - 1) / (countX*countY) + startScreen + 1;
-		if(ScreenViewGroup.DEFAULT_SCREEN  != screenCount){			
+		if(ScreenViewGroup.DEFAULT_SCREEN  != screenCount) {
 			ScreenViewGroup.DEFAULT_SCREEN = screenCount;
 			ConfigFactory.saveScreenCount(mContext, ScreenViewGroup.DEFAULT_SCREEN);
 			if(BaseConfig.getBaseLauncher() != null && ((Launcher)BaseConfig.getBaseLauncher()).getScreenViewGroup() != null){
@@ -259,6 +319,7 @@ public class LauncherProviderHelper {
 				
 			}
 		}
+        // TODO: remove all empty folders
 	}
 	
 	public static boolean isDefalutDockbarApp(String pck, String cls) {

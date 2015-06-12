@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;
+import android.util.Log;
 
 import com.bitants.common.sqliteasset.SQLiteAssetHelper;
 import com.bitants.launcher.R;
@@ -12,6 +13,8 @@ import com.bitants.launcher.R;
  * Created by michael on 15/6/5.
  */
 public class AppCatDb extends SQLiteAssetHelper {
+
+    private String TAG = AppCatDb.class.getSimpleName();
 
     private static final String DATABASE_NAME = "appcat.db";
     private static final int DATABASE_VERSION = 1;
@@ -42,23 +45,30 @@ public class AppCatDb extends SQLiteAssetHelper {
                 pkg
         };
 
-        Cursor cursor = db.query(
-                AppCatEntry.TABLE_NAME,  // The table to query
-                projection,                               // The columns to return
-                AppCatEntry.COLUMN_NAME_PKG,              // The columns for the WHERE clause
-                selectionArgs,                            // The values for the WHERE clause
-                null,                                     // don't group the rows
-                null,                                     // don't filter by row groups
-                null                                      // The sort order
-        );
+        try {
+            Cursor cursor = db.query(
+                    AppCatEntry.TABLE_NAME,  // The table to query
+                    projection,                               // The columns to return
+                    AppCatEntry.COLUMN_NAME_PKG,              // The columns for the WHERE clause
+                    selectionArgs,                            // The values for the WHERE clause
+                    null,                                     // don't group the rows
+                    null,                                     // don't filter by row groups
+                    null                                      // The sort order
+            );
 
-        cursor.moveToFirst();
-        ret = cursor.getInt(
-                cursor.getColumnIndex(AppCatEntry.COLUMN_NAME_CAT)
-        );
+            cursor.moveToFirst();
+            ret = cursor.getInt(
+                    cursor.getColumnIndex(AppCatEntry.COLUMN_NAME_CAT)
+            );
 
-        // maybe -1 : means does not exists in db ; 1-24
-        return ret;
+            // maybe -1 : means does not exists in db ; 1-24
+            return ret;
+
+        } catch (Exception e) {
+            Log.e(TAG, e.toString());
+            return -1;
+        }
+
     }
 
     public final String queryCatNameByPkg(String pkg, Context ctx) {
@@ -76,14 +86,15 @@ public class AppCatDb extends SQLiteAssetHelper {
                 break;
             case 2: // Books & Reference
             case 4: // Comics
-                result = ctx.getString(R.string.cat_book);
+            case 14: // News & Magazines
+                result = ctx.getString(R.string.cat_newsreading);
                 break;
             case 3: // Business
                 result = ctx.getString(R.string.cat_bussiness);
                 break;
             case 5:  // Communication
             case 19: // Social
-                result = ctx.getString(R.string.cat_communication);
+                result = ctx.getString(R.string.cat_social);
                 break;
             case 6: // Education
                 result = ctx.getString(R.string.cat_education);
@@ -96,16 +107,11 @@ public class AppCatDb extends SQLiteAssetHelper {
                 result = ctx.getString(R.string.cat_health);
                 break;
             case 10: // Lifestyle
-                result = ctx.getString(R.string.cat_lifestyle);
+                result = ctx.getString(R.string.cat_life);
                 break;
             case 11: // Media & Video
-                result = ctx.getString(R.string.cat_audiovideo);
-                break;
             case 13: // Music & Audio
-                result = ctx.getString(R.string.cat_music);
-                break;
-            case 14: // News & Magazines
-                result = ctx.getString(R.string.cat_news);
+                result = ctx.getString(R.string.cat_av);
                 break;
             case 15: // Personalization
                 result = ctx.getString(R.string.cat_personalization);

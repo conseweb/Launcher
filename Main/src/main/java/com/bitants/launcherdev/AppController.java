@@ -1,28 +1,43 @@
-package com.bitants.launcherdev.launcher;
+package com.bitants.launcherdev;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.ImageLoader;
+import com.avos.avoscloud.AVAnalytics;
+import com.avos.avoscloud.AVOSCloud;
 import com.bitants.common.launcher.BaseLauncherApplication;
 import com.bitants.launcherdev.kitset.config.ConfigDataBaseHelper;
 import com.bitants.common.launcher.config.BaseConfig;
 import com.bitants.common.launcher.model.load.LauncherLoaderHelper;
 import com.bitants.common.launcher.support.DBHelperFactory;
+import com.bitants.launcherdev.launcher.LauncherLoaderHelperImpl;
 
 import java.io.File;
 
-public class LauncherApplication extends BaseLauncherApplication {
-	
-	
+import hugo.weaving.DebugLog;
+
+public class AppController extends BaseLauncherApplication {
+
+	public static final String TAG = AppController.class.getSimpleName();
+
+	private static AppController mInstance;
+
+	@DebugLog
 	@Override
 	public void onCreate() {
-		// TODO Auto-generated method stub
 		super.onCreate();
-		// CrashHandler crashHandler = CrashHandler.getInstance();
-		// crashHandler.init(this);
+		mInstance = this;
+
 	}
+
+	public static synchronized AppController getInstance() {
+		return mInstance;
+	}
+
 	/**
 	 * 初始化数据库辅助类
 	 */
 	@Override
-	public void initDBHelper(){
+	public void initDBHelper() {
 		DBHelperFactory.getInstance().setConfigDataBaseHelper(new ConfigDataBaseHelper());
 //		DBHelperFactory.getInstance().setAppDataBaseHelper(new AppDataBaseHelper());
 //		DBHelperFactory.getInstance().setThemeDataBaseHelper(new LauncherThemeDataBaseHelper());
@@ -60,8 +75,11 @@ public class LauncherApplication extends BaseLauncherApplication {
 	 * 初始化异常捕获
 	 */
 	@Override
-	public void initCrashHandler(){
-//		mCrashReporter = new CrashReportingLibrary(this);
+	public void initCrashHandler() {
+        //如果使用美国节点，请加上这行代码
+//		AVOSCloud.useAVCloudUS();
+        AVOSCloud.initialize(this, "5rm9p8r1l2nkmm1x6gl7ktv8hx1ravk1l8p7z162umd6ej68", "h7s6qj00c4ib3msko5wvkgzf6n4k65q5u8eg1v39sssq8qtq");
+        AVAnalytics.enableCrashReport(this, true);
 	}
 	
 	/**

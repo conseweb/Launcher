@@ -366,8 +366,8 @@ public class FolderIconTextView extends EditableIconView implements AnyCallbacks
 	
 	/**
 	 * 通过宽度和长度来设置值
-	 *  @param widthSize
-	 *  @param heightSize
+	 *  @param width
+	 *  @param height
 	 */
 	public void initValaueByWH(int width, int height){
 		if(!BaseConfig.isOnScene()){			

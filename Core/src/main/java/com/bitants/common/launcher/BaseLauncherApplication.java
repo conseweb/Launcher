@@ -51,13 +51,8 @@ public class BaseLauncherApplication extends Application {
 		//初始化基础目录
 		createDefaultDir();
 		//初始化打点统计
-		//如果使用美国节点，请加上这行代码
-//		AVOSCloud.useAVCloudUS();
-		AVOSCloud.initialize(this, "5rm9p8r1l2nkmm1x6gl7ktv8hx1ravk1l8p7z162umd6ej68", "h7s6qj00c4ib3msko5wvkgzf6n4k65q5u8eg1v39sssq8qtq");
-		AVAnalytics.enableCrashReport(this, true);
-//		LauncherConfig.initHiAnalytics(this);
-		//初始化异常捕获
-//		initCrashHandler();
+
+		initCrashHandler();
 
 		/**
 		 * 新增
@@ -183,8 +178,6 @@ public class BaseLauncherApplication extends Application {
 	public void setPluginApplication(String dexPath, Application pluginApplication) {
 		this.mPluginApplicationCache.put(dexPath, pluginApplication);
 	}
-	
-	
 	
 	
 	/**

@@ -209,9 +209,7 @@ public class FolderSwitchController extends AbstractFolderSwitchController imple
 
 	/**
 	 * 打开文件夹层 <br>
-	 * create at 2012-5-24 下午06:05:04 <br>
-	 * modify at 2012-5-24 下午06:05:04
-	 * 
+	 *
 	 * @param openScr
 	 *            从哪打开 {@link OPEN_FOLDER_FROM_LAUNCHER},
 	 *            {@link OPEN_FOLDER_FROM_DRAWER}
@@ -237,7 +235,6 @@ public class FolderSwitchController extends AbstractFolderSwitchController imple
 	/**
 	 * <p>打开匣子文件夹</p>
 	 * 
-	 * <p>date: 2012-8-14 下午02:48:49
 	 * @param isEditMode 是否编辑模式
 	 */
 	public void openDrawerFolder(boolean isEditMode) {
@@ -246,9 +243,7 @@ public class FolderSwitchController extends AbstractFolderSwitchController imple
 	
 	/**
 	 * 打开文件夹层 <br>
-	 * create at 2012-5-24 下午06:05:04 <br>
-	 * modify at 2012-5-24 下午06:05:04
-	 * 
+	 *
 	 * @param openScr
 	 *            从哪打开 {@link OPEN_FOLDER_FROM_LAUNCHER},
 	 *            {@link OPEN_FOLDER_FROM_DRAWER}
@@ -263,7 +258,6 @@ public class FolderSwitchController extends AbstractFolderSwitchController imple
 	/**
 	 * <p>初始化具体的文件夹逻辑帮助类</p>
 	 * 
-	 * <p>date: 2012-8-14 下午02:46:06
 	 * @param openSrc
 	 */
 	private void initFolderOpen(int openSrc) {
@@ -286,8 +280,6 @@ public class FolderSwitchController extends AbstractFolderSwitchController imple
 	/**
 	 * 正常关闭文件夹 <br>
 	 * 
-	 * create at 2012-5-25 上午11:00:27 <br>
-	 * modify at 2012-5-25 上午11:00:27
 	 */
 	public boolean closeFolder() {
 		mIsAddApp2Folder = false ;
@@ -297,7 +289,6 @@ public class FolderSwitchController extends AbstractFolderSwitchController imple
 	/**
 	 * <p>关闭文件夹，没有动画效果</p>
 	 * 
-	 * <p>date: 2012-8-8 下午04:50:28
 	 * @param isAddApp2Folder 是否使用文件夹中的批量添加
 	 * @return
 	 */
@@ -327,8 +318,8 @@ public class FolderSwitchController extends AbstractFolderSwitchController imple
 	/**
 	 * 关闭文件夹
 	 * <br>
-	 * @see {@link #closeFolder()} 
-	 * <br>创建于 2012-7-11 上午10:48:12
+	 * @see {@link #closeFolder()}
+     *
 	 * @param isAddApp2Folder 是否是由添加app到文件夹中引起的文件夹关闭
 	 */
 	public void closeFolder(boolean isAddApp2Folder) {
@@ -379,8 +370,7 @@ public class FolderSwitchController extends AbstractFolderSwitchController imple
 	}
 	/**
 	 * 设置通用滑屏组件的编辑模式
-	 * <br>create at 2012-6-15 下午07:59:31
-	 * <br>modify at 2012-6-15 下午07:59:31
+	 *
 	 * @param isEditMode
 	 */
 	public void setEditMode(boolean isEditMode) {
@@ -417,9 +407,6 @@ public class FolderSwitchController extends AbstractFolderSwitchController imple
 	/**
 	 * 重命名文件名
 	 *  
-	 * <br>create at 2012-7-10 下午03:49:40
-	 * <br>modify at 2012-7-10 下午03:49:40
-	 * @param id
 	 * @param name
 	 */
 	public void renameFolder(String name) {
