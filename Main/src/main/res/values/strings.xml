@@ -61,4 +61,5 @@
     <string name="folder_av"><![CDATA[Audio & Video]]></string>
     <string name="folder_other">Other</string>
     <string name="cat_system">System</string>
+    <string name="cat_cloud">Cloud</string>
 </resources>

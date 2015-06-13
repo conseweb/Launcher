@@ -45,4 +45,5 @@
 	<string name="folder_av">影音娱乐</string>
 	<string name="folder_other">其他</string>
 	<string name="cat_system">System</string>
+	<string name="cat_cloud">Cloud</string>
 </resources>
