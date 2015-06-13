@@ -452,6 +452,7 @@ public class SQLiteAssetHelper extends SQLiteOpenHelper {
                 }
                 Utils.writeExtractedFileToDisk(zis, new FileOutputStream(dest));
             } else {
+
                 Utils.writeExtractedFileToDisk(is, new FileOutputStream(dest));
             }
 

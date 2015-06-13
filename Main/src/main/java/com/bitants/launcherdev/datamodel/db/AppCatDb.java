@@ -131,8 +131,6 @@ public class AppCatDb extends SQLiteAssetHelper {
                 result = ctx.getString(R.string.cat_sports);
                 break;
             case 22: // Transportation
-                result = ctx.getString(R.string.cat_transportation);
-                break;
             case 23: // Travel & Local
                 result = ctx.getString(R.string.cat_travelnlocal);
                 break;

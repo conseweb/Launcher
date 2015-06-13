@@ -44,4 +44,5 @@
 	<string name="folder_shopping">购物</string>
 	<string name="folder_av">影音娱乐</string>
 	<string name="folder_other">其他</string>
+	<string name="cat_system">System</string>
 </resources>

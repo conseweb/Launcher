@@ -26,6 +26,7 @@ import com.bitants.common.kitset.util.StringUtil;
 import com.bitants.common.kitset.util.SystemUtil;
 import com.bitants.launcher.R;
 import com.bitants.launcherdev.datamodel.db.AppCatDb;
+import com.bitants.launcherdev.folder.model.FolderModel;
 import com.bitants.launcherdev.kitset.config.ConfigPreferences;
 import com.bitants.launcherdev.launcher.LauncherSettings.Favorites;
 import com.bitants.common.launcher.config.BaseConfig;
@@ -43,9 +44,11 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import hugo.weaving.DebugLog;
 
@@ -162,10 +165,10 @@ public class LauncherProviderHelper {
         return db.insert(LauncherProvider.TABLE_FAVORITES, null, values);
     }
 
-    public static Map<String, Integer>
+    public static HashMap<String, Integer>
     createAllFolders(SQLiteDatabase db, final Context ctx, int screen)
     {
-        Map<String, Integer> catMap = new HashMap<String, Integer>();
+        HashMap<String, Integer> catMap = new HashMap<String, Integer>();
 
         // first line
         int iFolderId = (int) createAppFolder(ctx.getString(R.string.cat_tools), db, 0, 0, screen);
@@ -225,20 +228,109 @@ public class LauncherProviderHelper {
 		int startScreen = 1;
 		int startCount = countX * (countY - 2);
 		
-		int folderID = (int) createAppFolder(mContext.getString(R.string.folder_system), db,
-                startCount % countX, (startCount / countX) % countY,
-                startCount / (countX * countY) + startScreen);
+//		int folderID = (int) createAppFolder(mContext.getString(R.string.folder_system), db,
+//                startCount % countX, (startCount / countX) % countY,
+//                startCount / (countX * countY) + startScreen);
 		int folderAppCount = 0;
 		startCount++;
 
-
         // **** create all category folders ******
         // zero point start from top left corner (0,0)
-        Map<String, Integer> catMap = createAllFolders(db, mContext, 2);
+        // HashMap<String, Integer> catMap = createAllFolders(db, mContext, 2);
         // ***********
 
         AppCatDb catDb = new AppCatDb(mContext);
-		
+
+        // first add all folders into catmap
+        HashMap<String, FolderModel> catMap = new HashMap<String, FolderModel>();
+        ArrayList<String> allFolders = new ArrayList<String>();
+
+        // system folder
+        String sSys = mContext.getString(R.string.cat_system);
+        catMap.put(sSys, new FolderModel(sSys));
+        allFolders.add(sSys);
+        // game folder
+        String sGame = mContext.getString(R.string.cat_game);
+        catMap.put(sGame, new FolderModel(sGame));
+        allFolders.add(sGame);
+        // social folder
+        String sSocail = mContext.getString(R.string.cat_social);
+        catMap.put(sSocail, new FolderModel(sSocail));
+        allFolders.add(sSocail);
+        // news folder
+        String sNews = mContext.getString(R.string.cat_newsreading);
+        catMap.put(sNews, new FolderModel(sNews));
+        allFolders.add(sNews);
+        // shopping folder
+        String sShopping = mContext.getString(R.string.cat_shopping);
+        catMap.put(sShopping, new FolderModel(sShopping));
+        allFolders.add(sShopping);
+        // audio & video folder
+        String sAV = mContext.getString(R.string.cat_av);
+        catMap.put(sAV, new FolderModel(sAV));
+        allFolders.add(sAV);
+        // life folder
+        String sLife = mContext.getString(R.string.cat_life);
+        catMap.put(sLife, new FolderModel(sLife));
+        allFolders.add(sLife);
+        // tools foler
+        String sTools = mContext.getString(R.string.cat_tools);
+        catMap.put(sTools, new FolderModel(sTools));
+        allFolders.add(sTools);
+        // travel & local & transportation
+        String sO2O = mContext.getString(R.string.cat_travelnlocal);
+        catMap.put(sO2O, new FolderModel(sO2O));
+        allFolders.add(sO2O);
+        // photo folder
+        String sPhoto = mContext.getString(R.string.cat_photography);
+        catMap.put(sPhoto, new FolderModel(sPhoto));
+        allFolders.add(sPhoto);
+        // Personalize folder
+        String sPersonal = mContext.getString(R.string.cat_personalization);
+        catMap.put(sPersonal, new FolderModel(sPersonal));
+        allFolders.add(sPersonal);
+        // Health folder
+        String sHealth = mContext.getString(R.string.cat_health);
+        catMap.put(sHealth, new FolderModel(sHealth));
+        allFolders.add(sHealth);
+        // sports folder
+        String sSports = mContext.getString(R.string.cat_sports);
+        catMap.put(sSports, new FolderModel(sSports));
+        allFolders.add(sSports);
+        // other folder
+        String sOther = mContext.getString(R.string.cat_other);
+        catMap.put(sOther, new FolderModel(sOther));
+        allFolders.add(sOther);
+
+        for(ResolveInfo app: allApps) {
+            String pkg = app.activityInfo.packageName ;
+
+            if (app.activityInfo.applicationInfo != null
+                    && SystemUtil.isSystemApplication(app.activityInfo.applicationInfo.flags))
+            {
+                // add into system folder
+                catMap.get(sSys).addApp(pkg);
+            } else {
+                // find category by package name
+                String catName = catDb.queryCatNameByPkg(pkg, mContext);
+                // add into specific folder
+                catMap.get(catName).addApp(pkg);
+            }
+        }
+
+		// create all folders, empty folder will not created
+        int iCount = 0;
+        for (String fName: allFolders) {
+            FolderModel folder = catMap.get(fName);
+            if (catMap.get(fName).getTotal() > 0) {
+                int iFolderId = (int) createAppFolder(fName, db,
+                        iCount % countX, (iCount / countX) % countY, 2);
+
+                folder.setID(iFolderId);
+                iCount ++;
+            }
+        }
+
 		for(ResolveInfo resInfo : allApps) {
 			String pck = resInfo.activityInfo.packageName ;
 			String clazz = resInfo.activityInfo.name ;
@@ -253,18 +345,15 @@ public class LauncherProviderHelper {
 				values.put(Favorites.CELLX, 1);
 				values.put(Favorites.CELLY, 1);
 				values.put(Favorites.SCREEN, folderAppCount ++);
-				values.put(Favorites.CONTAINER, folderID);
+				values.put(Favorites.CONTAINER, catMap.get(sSys).getID());
 
 			} else {
 
-                // find category by package name
                 String catName = catDb.queryCatNameByPkg(pck, mContext);
-                int iFolder = catMap.get(catName);
-
 				values.put(Favorites.CELLX, startCount % countX);
 				values.put(Favorites.CELLY, (startCount / countX) % countY);
 				values.put(Favorites.SCREEN, startCount / (countX * countY) + startScreen);
-				values.put(Favorites.CONTAINER, iFolder);
+				values.put(Favorites.CONTAINER, catMap.get(catName).getID());
 				startCount ++;
 			}
 			
@@ -292,10 +381,10 @@ public class LauncherProviderHelper {
 			
 		}
 
-        startCount ++ ;
-		createAppslist(mContext , db, startCount % countX, (startCount / countX) % countY,startCount / (countX*countY) + startScreen);
+//        iCount  ;
+		createAppslist(mContext , db, iCount % countX, (iCount / countX) % countY, 2);
 		
-		int screenCount = (startCount - 1) / (countX*countY) + startScreen + 1;
+		int screenCount = (iCount - 1) / (countX*countY) + startScreen + 1;
 		if(ScreenViewGroup.DEFAULT_SCREEN  != screenCount) {
 			ScreenViewGroup.DEFAULT_SCREEN = screenCount;
 			ConfigFactory.saveScreenCount(mContext, ScreenViewGroup.DEFAULT_SCREEN);

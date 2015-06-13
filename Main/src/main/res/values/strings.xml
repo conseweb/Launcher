@@ -60,4 +60,5 @@
     <string name="folder_shopping">Shopping</string>
     <string name="folder_av"><![CDATA[Audio & Video]]></string>
     <string name="folder_other">Other</string>
+    <string name="cat_system">System</string>
 </resources>
