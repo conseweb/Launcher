@@ -408,7 +408,6 @@ public class LauncherProviderHelper {
 				
 			}
 		}
-        // TODO: remove all empty folders
 	}
 	
 	public static boolean isDefalutDockbarApp(String pck, String cls) {
@@ -461,8 +460,7 @@ public class LauncherProviderHelper {
 			} catch (URISyntaxException e) {
 				e.printStackTrace();
 			}
-		
-			
+
 			values.put(Favorites.INTENT, intent.toUri(0));
 			values.put(Favorites.CONTAINER, LauncherSettings.Favorites.CONTAINER_DESKTOP);
 			values.put(Favorites.ITEM_TYPE, LauncherSettings.Favorites.ITEM_TYPE_WIDGET_SEARCH_SHORTCUT); 

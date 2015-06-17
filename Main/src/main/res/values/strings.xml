@@ -27,8 +27,7 @@
 	<!-- 快捷 -->
 	<string name="dockbar_dock_drawer">全部应用</string>
     <string name="dockbar_dock_search">Search</string>
-
-
+    <string name="title_activity_search">SearchActivity</string>
 
     <!-- Categories -->
     <string name="cat_other">Other</string>

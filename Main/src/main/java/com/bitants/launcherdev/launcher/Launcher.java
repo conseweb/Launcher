@@ -53,6 +53,7 @@ import com.bitants.common.launcher.touch.BaseDragController;
 import com.bitants.common.launcher.view.BaseDeleteZoneTextView;
 import com.bitants.common.launcher.view.icon.ui.folder.FolderIconTextView;
 import com.bitants.common.launcher.view.icon.ui.util.BeansContainer;
+import com.bitants.launcherdev.launcher.search.SearchActivity;
 import com.bitants.launcherdev.menu.LauncherMenu;
 //import PushManager;
 //import com.bitants.launcherdev.push.PushSDKAdapter;
@@ -729,6 +730,14 @@ public class Launcher extends BaseLauncher {
 		switch (launcherWidgetInfo.type) {
 		case LauncherWidgetInfo.TYPE_WIDGET_SEARCH:// 桌面时钟
 			customView =  LayoutInflater.from(this).inflate(R.layout.search, parent, false);
+			customView.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View arg0) {
+					// TODO Auto-generated method stub
+					Intent startSearch=new Intent(Launcher.this, SearchActivity.class);
+					startActivity(startSearch);
+				}
+			});
 			customView.setTag(itemInfo);
 			break;
 

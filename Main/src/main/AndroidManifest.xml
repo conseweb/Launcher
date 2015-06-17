@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bitants.launcher"
-    android:versionCode="56"
-    android:versionName="1.0.0.55"
+    android:versionCode="65"
+    android:versionName="1.0.0.64"
 	android:installLocation="internalOnly"
 	android:sharedUserId="com.bitants.launcher.uid"
 	 >
@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <!-- <uses-permission android:name="android.permission.BIND_APPWIDGET" /> -->
+    <uses-permission android:name="android.permission.BIND_APPWIDGET" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -28,14 +28,12 @@
 	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
-    <use-permission android:name="android.permission.BIND_WALLPAPER" />
+    <uses-permission android:name="android.permission.BIND_WALLPAPER" />
 
     <uses-feature
         android:name="android.software.live_wallpaper"
         android:required="true" >
     </uses-feature>
-
-    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="10"/>
 
     <application android:name="com.bitants.launcherdev.AppController"
         android:icon="@drawable/ic_launcher"
@@ -141,7 +139,10 @@
             android:name="com.bitants.launcherdev.settings.SettingsItemSelectActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SettingCustomStyle" />
-
+        <activity
+            android:name="com.bitants.launcherdev.launcher.search.SearchActivity"
+            android:label="@string/title_activity_search" >
+        </activity>
 
         <!-- boost -->
         <activity

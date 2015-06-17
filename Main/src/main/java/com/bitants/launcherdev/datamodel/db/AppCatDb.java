@@ -35,16 +35,6 @@ public class AppCatDb extends SQLiteAssetHelper {
 
         SQLiteDatabase db = this.getReadableDatabase();
 
-        // Define a projection that specifies which columns from the database
-        // you will actually use after this query.
-        String[] projection = {
-                AppCatEntry.COLUMN_NAME_CAT
-        };
-
-        String[] selectionArgs = {
-                pkg
-        };
-
         try {
             Cursor cursor = db.rawQuery("select cat from appcats where pkg = '" + pkg.trim() + "'",
                     null);
@@ -57,6 +47,8 @@ public class AppCatDb extends SQLiteAssetHelper {
         } catch (Exception e) {
             Log.e(TAG, e.toString());
             ret = -1;
+        } finally {
+            db.close();
         }
 
         // maybe -1 : means does not exists in db ; 1-24

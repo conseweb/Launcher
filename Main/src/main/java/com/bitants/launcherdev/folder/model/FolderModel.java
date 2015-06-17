@@ -3,7 +3,6 @@ package com.bitants.launcherdev.folder.model;
 import com.bitants.launcherdev.integratefoler.IntegrateFolder;
 
 import java.util.ArrayList;
-import java.util.Map;
 
 /**
  * Created by michael on 15/6/11.
