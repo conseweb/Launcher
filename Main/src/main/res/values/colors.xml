@@ -33,4 +33,5 @@
 	<color name="pink">#ff3399</color>
 	<color name="yellow">#ffff00</color>
 	<color name="none">#00000000</color>
+    <color name="transgray">#33555555</color>
 </resources>

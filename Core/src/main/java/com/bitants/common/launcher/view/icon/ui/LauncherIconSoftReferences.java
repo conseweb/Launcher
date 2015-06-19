@@ -166,12 +166,12 @@ public class LauncherIconSoftReferences {
 	
 	public Bitmap getDefIconFolderBackground(Resources res) {
 		if (defIconFolderBackground == null)
-			defIconFolderBackground = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.PANDA_FOLDER_BACKGROUND)));
+			defIconFolderBackground = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.FOLDER_BACKGROUND)));
 
 		if (defIconFolderBackground.get() == null) {
 			defIconFolderBackground.clear();
 			defIconFolderBackground = null;
-			defIconFolderBackground = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.PANDA_FOLDER_BACKGROUND)));
+			defIconFolderBackground = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.FOLDER_BACKGROUND)));
 		}
 
 		return defIconFolderBackground.get();
@@ -179,12 +179,12 @@ public class LauncherIconSoftReferences {
 	
 	public Bitmap getDefIconAndroidFolderBackground(Resources res) {
 		if (defIconAndroidFolderBackground == null)
-			defIconAndroidFolderBackground = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.PANDA_ANDROID_FOLDER_BACKGROUND)));
+			defIconAndroidFolderBackground = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.ANDROID_FOLDER_BACKGROUND)));
 
 		if (defIconAndroidFolderBackground.get() == null) {
 			defIconAndroidFolderBackground.clear();
 			defIconAndroidFolderBackground = null;
-			defIconAndroidFolderBackground = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.PANDA_ANDROID_FOLDER_BACKGROUND)));
+			defIconAndroidFolderBackground = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.ANDROID_FOLDER_BACKGROUND)));
 		}
 
 		return defIconAndroidFolderBackground.get();
@@ -211,12 +211,12 @@ public class LauncherIconSoftReferences {
 	
 	public Bitmap getDefIconFolderOpen(Resources res) {
 		if (defIconFolderOpen == null)
-			defIconFolderOpen = new WeakReference<Bitmap>(BitmapFactory.decodeResource(res, R.drawable.panda_folder_foreground_open));
+			defIconFolderOpen = new WeakReference<Bitmap>(BitmapFactory.decodeResource(res, R.drawable.folder_foreground_open));
 
 		if (defIconFolderOpen.get() == null) {
 			defIconFolderOpen.clear();
 			defIconFolderOpen = null;
-			defIconFolderOpen = new WeakReference<Bitmap>(BitmapFactory.decodeResource(res, R.drawable.panda_folder_foreground_open));
+			defIconFolderOpen = new WeakReference<Bitmap>(BitmapFactory.decodeResource(res, R.drawable.folder_foreground_open));
 		}
 
 		return defIconFolderOpen.get();
@@ -224,12 +224,12 @@ public class LauncherIconSoftReferences {
 
 	public Bitmap getDefIconFolderClose(Resources res) {
 		if (defIconFolderClose == null)
-			defIconFolderClose = new WeakReference<Bitmap>(BitmapFactory.decodeResource(res, R.drawable.panda_folder_foreground_closed));
+			defIconFolderClose = new WeakReference<Bitmap>(BitmapFactory.decodeResource(res, R.drawable.folder_foreground_closed));
 
 		if (defIconFolderClose.get() == null) {
 			defIconFolderClose.clear();
 			defIconFolderClose = null;
-			defIconFolderClose = new WeakReference<Bitmap>(BitmapFactory.decodeResource(res, R.drawable.panda_folder_foreground_closed));
+			defIconFolderClose = new WeakReference<Bitmap>(BitmapFactory.decodeResource(res, R.drawable.folder_foreground_closed));
 		}
 
 		return defIconFolderClose.get();
@@ -240,12 +240,12 @@ public class LauncherIconSoftReferences {
 	 */
 	public Bitmap getDefIconFolderEncriptMask(Resources res) {
 		if (defIconFolderEncriptMask == null)
-			defIconFolderEncriptMask = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.PANDA_FOLDER_ENCRIPT_MASK)));
+			defIconFolderEncriptMask = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.FOLDER_ENCRIPT_MASK)));
 
 		if (defIconFolderEncriptMask.get() == null) { 
 			defIconFolderEncriptMask.clear();
 			defIconFolderEncriptMask = null;
-			defIconFolderEncriptMask = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.PANDA_FOLDER_ENCRIPT_MASK)));
+			defIconFolderEncriptMask = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.FOLDER_ENCRIPT_MASK)));
 		}
 
 		return defIconFolderEncriptMask.get();
@@ -253,12 +253,12 @@ public class LauncherIconSoftReferences {
 	
 	public Bitmap getDefIconAndroidFolderEncriptMask(Resources res) {
 		if (defIconAndroidFolderEncriptMask == null)
-			defIconAndroidFolderEncriptMask = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.PANDA_ANDROID_FOLDER_ENCRIPT_MASK)));
+			defIconAndroidFolderEncriptMask = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.ANDROID_FOLDER_ENCRIPT_MASK)));
 
 		if (defIconAndroidFolderEncriptMask.get() == null) { 
 			defIconAndroidFolderEncriptMask.clear();
 			defIconAndroidFolderEncriptMask = null;
-			defIconAndroidFolderEncriptMask = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.PANDA_ANDROID_FOLDER_ENCRIPT_MASK)));
+			defIconAndroidFolderEncriptMask = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.ANDROID_FOLDER_ENCRIPT_MASK)));
 		}
 
 		return defIconAndroidFolderEncriptMask.get();
@@ -286,12 +286,12 @@ public class LauncherIconSoftReferences {
 	
 	public Bitmap getDefIconFullScreenFolderBackground(Resources res) {
 		if (defIconFullScreenFolderBackground == null)
-			defIconFullScreenFolderBackground = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.PANDA_FOLDER_BACKGROUND)));
+			defIconFullScreenFolderBackground = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.FOLDER_BACKGROUND)));
 
 		if (defIconFullScreenFolderBackground.get() == null) {
 			defIconFullScreenFolderBackground.clear();
 			defIconFullScreenFolderBackground = null;
-			defIconFullScreenFolderBackground = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.PANDA_FOLDER_BACKGROUND)));
+			defIconFullScreenFolderBackground = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.FOLDER_BACKGROUND)));
 		}
 
 		return defIconFullScreenFolderBackground.get();
@@ -299,12 +299,12 @@ public class LauncherIconSoftReferences {
 	
 	public Bitmap getDefIconFullScreenFolderEncriptMask(Resources res) {
 		if (defIconFullScreenFolderEncriptMask == null)
-			defIconFullScreenFolderEncriptMask = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.PANDA_FOLDER_ENCRIPT_MASK)));
+			defIconFullScreenFolderEncriptMask = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.FOLDER_ENCRIPT_MASK)));
 
 		if (defIconFullScreenFolderEncriptMask.get() == null) { 
 			defIconFullScreenFolderEncriptMask.clear();
 			defIconFullScreenFolderEncriptMask = null;
-			defIconFullScreenFolderEncriptMask = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.PANDA_FOLDER_ENCRIPT_MASK)));
+			defIconFullScreenFolderEncriptMask = new WeakReference<Bitmap>(BaseBitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(BaseThemeData.FOLDER_ENCRIPT_MASK)));
 		}
 
 		return defIconFullScreenFolderEncriptMask.get();

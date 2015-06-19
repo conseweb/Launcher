@@ -375,8 +375,8 @@ public class BaseSettingsPreference {
 		context.sendBroadcast(intent);
 	}
 
-	public boolean isPandaLockEnabled() {
-		return baseSP.getBoolean(SettingsConstants.SETTING_PERSONAL_PANDALOCK_SWITCH, true);
+	public boolean isLockEnabled() {
+		return baseSP.getBoolean(SettingsConstants.SETTING_PERSONAL_MIRRORLOCK_SWITCH, true);
 	}
 
 	public boolean isDockVisible() {

@@ -33,7 +33,7 @@ public class MirrorWidgetInfo extends WidgetInfo {
 		this.cellY = info.cellY;
 		this.spanX = info.spanX;
 		this.spanY = info.spanY;
-		this.pandaWidgetPackage = info.pandaWidgetPackage;
+		this.mWidgetPackage = info.mWidgetPackage;
 		this.itemType = BaseLauncherSettings.Favorites.ITEM_TYPE_MIRROR_WIDGET;
 		this.container = BaseLauncherSettings.Favorites.CONTAINER_DESKTOP;
 	}

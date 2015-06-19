@@ -73,7 +73,7 @@ public class OpenRootUtil {
 	 */
 	public static void openSuperShellInThread(final Context context) {
 
-		if (!IsPandaShellSuper(context) && hasRootPermission()) {
+		if (!IsSupperShell(context) && hasRootPermission()) {
 			ThreadUtil.executeMore(new Runnable() {
 				@Override
 				public void run() {
@@ -263,7 +263,7 @@ public class OpenRootUtil {
 	 * @param context
 	 * @return boolean
 	 */
-	public static boolean IsPandaShellSuper(Context context) {
+	public static boolean IsSupperShell(Context context) {
 		boolean isSuper = false;
 		try {
 			File pdShellFile = new File("/system/bin/" + BaseConfig.SUPER_SHELL_FILE_NAME);

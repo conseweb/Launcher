@@ -13,8 +13,8 @@ import com.bitants.common.theme.data.BaseThemeData;
 public final class ThemeIntentMetaData {
 	
 	//TODO linqiang
-	public static final String PANDASPACE_CLS = "com.dragon.android.pandaspace.main.MainActivity";
-	public static final String PANDASPACE_PCK = "com.dragon.android.pandaspace";
+	public static final String MIRRORSPACE_CLS = "com.bitants.launcherdev.launcher.main.MainActivity";
+	public static final String MIRRORSPACE_PCK = "com.bitants.launcherdev.launcher";
 	
 	public static final Object[][] METADATA =  {
 		/**
@@ -180,8 +180,8 @@ public final class ThemeIntentMetaData {
 		 * 91手机助手
 		 */
 		{BaseThemeData.ICON_PANDASPACE, 
-				new String[]{PANDASPACE_PCK, "com.dragon.android.pandaspace"}, 
-				new String[]{PANDASPACE_CLS, "com.dragon.android.pandaspace.main.LoadingActivity"},
+				new String[]{MIRRORSPACE_PCK, "com.dragon.android.pandaspace"},
+				new String[]{MIRRORSPACE_CLS, "com.dragon.android.pandaspace.main.LoadingActivity"},
 				Intent.ACTION_VIEW, Uri.EMPTY, "", false },
 		/**
 		 * Facebook

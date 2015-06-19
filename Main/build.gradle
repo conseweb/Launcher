@@ -16,7 +16,7 @@ android {
 //    enforceUniquePackageName = true
     defaultConfig {
         applicationId "com.bitants.launcher"
-        minSdkVersion 7
+        minSdkVersion 8
         targetSdkVersion 10
     }
 

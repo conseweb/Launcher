@@ -831,7 +831,7 @@ public class BaseLauncherModel extends BroadcastReceiver{
 			result.appWidgetId = appWidgetId;
 			result.layoutResString = c.getString(iconResourceIndex);
 			result.title = c.getString(titleIndex);
-			result.pandaWidgetPackage = c.getString(iconPackageIndex);
+			result.mWidgetPackage = c.getString(iconPackageIndex);
 			return result;
 		} else if (itemType == BaseLauncherSettings.Favorites.ITEM_TYPE_MIRROR_PREVIEW_WIDGET) {
 			MirrorWidgetPreviewInfo result = new MirrorWidgetPreviewInfo();
@@ -839,7 +839,7 @@ public class BaseLauncherModel extends BroadcastReceiver{
 			result.iconRes = c.getInt(iconTypeIndex);
 			result.title = c.getString(titleIndex);
 			result.layoutXml = c.getString(iconResourceIndex);
-			result.pandaWidgetPackage = c.getString(iconPackageIndex);
+			result.mWidgetPackage = c.getString(iconPackageIndex);
 			return result;
 		}
 

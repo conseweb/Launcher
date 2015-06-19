@@ -20,11 +20,11 @@ public class ThemeData extends BaseThemeData {
 	/**
 	 * 初次安装dockbar中的【程序列表】正常态
 	 */
-	public static final String PANDAHOME_STYLE_ICON_TRAY_EXPAND = "pandahome_style_icon_tray_expand";
+	public static final String HOME_STYLE_ICON_TRAY_EXPAND = "home_style_icon_tray_expand";
 	/**
 	 * 初次安装dockbar中的【程序列表】点击态
 	 */
-	public static final String PANDAHOME_STYLE_ICON_TRAY_EXPAND_PRESSED = "pandahome_style_icon_tray_expand_pressed";
+	public static final String HOME_STYLE_ICON_TRAY_EXPAND_PRESSED = "home_style_icon_tray_expand_pressed";
 	/**
 	 * 图片key集合(0.图片key 1.所属组件ID)
 	 */

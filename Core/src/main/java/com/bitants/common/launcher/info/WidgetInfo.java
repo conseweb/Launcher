@@ -38,7 +38,7 @@ public class WidgetInfo extends ItemInfo {
      */
     public AppWidgetHostView hostView = null;
     
-    public String pandaWidgetPackage;
+    public String mWidgetPackage;
 	public String title;
 	
     public WidgetInfo() {
@@ -49,7 +49,7 @@ public class WidgetInfo extends ItemInfo {
     	super(info);
     	appWidgetId = info.appWidgetId;
     	title = info.title;
-    	pandaWidgetPackage = info.pandaWidgetPackage;    	
+    	mWidgetPackage = info.mWidgetPackage;
     	hostView = info.hostView;
     }
 
@@ -62,7 +62,7 @@ public class WidgetInfo extends ItemInfo {
     public void onAddToDatabase(ContentValues values) {
         super.onAddToDatabase(values);
         values.put(BaseLauncherSettings.Favorites.APPWIDGET_ID, appWidgetId);
-        values.put(BaseLauncherSettings.BaseLauncherColumns.ICON_PACKAGE, pandaWidgetPackage);
+        values.put(BaseLauncherSettings.BaseLauncherColumns.ICON_PACKAGE, mWidgetPackage);
 		values.put(BaseLauncherSettings.BaseLauncherColumns.TITLE, title);
     }
 

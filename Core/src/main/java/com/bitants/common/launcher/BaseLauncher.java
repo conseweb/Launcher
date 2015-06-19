@@ -137,7 +137,7 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 	private String uninstallPackageName = null;// 在桌面上或匣子里被卸载的应用的包名
 	protected WallpaperHelper mWallpaperHelper;
 	
-	public List<MirrorWidgetViewContainer> pandaWidgets = new ArrayList<MirrorWidgetViewContainer>();
+	public List<MirrorWidgetViewContainer> mWidgets = new ArrayList<MirrorWidgetViewContainer>();
 	
 	/**
 	 * 屏幕预览/管理控制器
@@ -909,7 +909,7 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 		if (getPackageName().equals(result.getWidgetPackage()))
 			return;
 		
-		this.pandaWidgets.add(result);
+		this.mWidgets.add(result);
 		result.setHiViewGroup(mWorkspace);
 	}
 	
@@ -923,7 +923,7 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 		if (!(view instanceof MirrorWidgetViewContainer))
 			return;
 		
-		this.pandaWidgets.remove(view);
+		this.mWidgets.remove(view);
 	}
 	
 	public void invisiableWorkspace() {
@@ -1273,11 +1273,11 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
 	}
 	
 	//=========================以下接口用于当app安装/卸载/桌面加载时，重新绑定小部件、匣子内app=========================//
-	public void updatePandaWidget(String packageName){
+	public void updateWidget(String packageName){
 		
 	}
 	
-	public void removePandaWidget(String packageName){
+	public void removeWidget(String packageName){
 		
 	}
 	

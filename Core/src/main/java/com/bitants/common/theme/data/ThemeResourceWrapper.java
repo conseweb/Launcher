@@ -35,7 +35,7 @@ public class ThemeResourceWrapper{
     /**
      * theme
      */
-    private BasePandaTheme theme;
+    private BaseTheme theme;
 
     /**
      * 主题类型
@@ -50,7 +50,7 @@ public class ThemeResourceWrapper{
      * @param ctx
      * @param theme
      */
-    public ThemeResourceWrapper(Context ctx, BasePandaTheme theme) {
+    public ThemeResourceWrapper(Context ctx, BaseTheme theme) {
         this.ctx = ctx;
         this.theme = theme;
         init();
@@ -63,7 +63,7 @@ public class ThemeResourceWrapper{
     	type = theme.getType();
     	density = theme.getBaseDensity();
         extTheme = null;
-        if(type >= ThemeType.PANDAHOME){
+        if(type >= ThemeType.HOME){
             try {
                 extTheme = new ExternalTheme(theme.getThemeId(), type);
             } catch (NameNotFoundException e) {

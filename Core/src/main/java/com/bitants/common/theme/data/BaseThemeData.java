@@ -104,23 +104,23 @@ public class BaseThemeData {
 	public static final String ICON_APP_STORE = "com.bitants.launcher|com.bitants.launcherdev.appstore.AppStoreSwitchActivity";
 	
 	/** 图标蒙板前景 */
-	public static final String PANDA_ICON_FOREGROUND_MASK = "panda_icon_foreground_mask";
+	public static final String ICON_FOREGROUND_MASK = "icon_foreground_mask";
 	/** 图标切割蒙板 */
-	public static final String PANDA_ICON_CUT_MASK = "panda_icon_cut_mask";
+	public static final String ICON_CUT_MASK = "icon_cut_mask";
 	/** 图标蒙板背景 */
-	public static final String PANDA_ICON_BACKGROUND_MASK = "panda_icon_background_mask";
+	public static final String ICON_BACKGROUND_MASK = "icon_background_mask";
 	/** 文件夹图标背景 */
-	public static final String PANDA_FOLDER_BACKGROUND = "panda_folder_background";
+	public static final String FOLDER_BACKGROUND = "folder_background";
 	/** 文件夹图标关闭前景 */
-	public static final String PANDA_FOLDER_FOREGROUND_CLOSED = "panda_folder_foreground_closed";
+	public static final String FOLDER_FOREGROUND_CLOSED = "folder_foreground_closed";
 	/** 文件夹图标打开前景 */
-	public static final String PANDA_FOLDER_FOREGROUND_OPEN = "panda_folder_foreground_open";
+	public static final String FOLDER_FOREGROUND_OPEN = "folder_foreground_open";
 	/** 文件夹加锁图标 */
-	public static final String PANDA_FOLDER_ENCRIPT_MASK = "panda_folder_encript_mask";
+	public static final String FOLDER_ENCRIPT_MASK = "folder_encript_mask";
 	/** android 4.0风格文件夹图标背景 */
-	public static final String PANDA_ANDROID_FOLDER_BACKGROUND = "panda_android_folder_background";
+	public static final String ANDROID_FOLDER_BACKGROUND = "android_folder_background";
 	/** android 4.0风格文件夹加锁图标 */
-	public static final String PANDA_ANDROID_FOLDER_ENCRIPT_MASK = "panda_android_folder_encript_mask";
+	public static final String ANDROID_FOLDER_ENCRIPT_MASK = "android_folder_encript_mask";
 	
 	/**
 	 * 壁纸(wallpaper.jpg)
@@ -171,11 +171,11 @@ public class BaseThemeData {
 	
 	//-------锁屏壁纸兼容---------begin//
 	
-	/** 91智能锁主题壁纸(jpg) */
+	/** 智能锁主题壁纸(jpg) */
 	public static final String ZNS_LOCK_BG = "lock_bg";
 	
 	/** 安卓锁屏主题壁纸(png) */
-	public static final String PANDA_LOCK_MAIN_BACKGROUND = "panda_lock_main_background";
+	public static final String SCREEN_LOCK_MAIN_BACKGROUND = "panda_lock_main_background";
 	
 	//-------锁屏壁纸兼容---------end//
 	
@@ -233,15 +233,15 @@ public class BaseThemeData {
     	for(int i=0; i<iconKeys.length; i++){
     		largeIconMap.put(iconKeys[i], ModuleConstant.MODULE_ICONS);
     	}
-    	largeIconMap.put(PANDA_ICON_FOREGROUND_MASK, ModuleConstant.MODULE_ICONS);
-		largeIconMap.put(PANDA_ICON_CUT_MASK, ModuleConstant.MODULE_ICONS);
-		largeIconMap.put(PANDA_ICON_BACKGROUND_MASK, ModuleConstant.MODULE_ICONS);
-		largeIconMap.put(PANDA_FOLDER_BACKGROUND, ModuleConstant.MODULE_ICONS);
-		largeIconMap.put(PANDA_FOLDER_FOREGROUND_CLOSED, ModuleConstant.MODULE_ICONS);
-		largeIconMap.put(PANDA_FOLDER_FOREGROUND_OPEN, ModuleConstant.MODULE_ICONS);
-		largeIconMap.put(PANDA_FOLDER_ENCRIPT_MASK, ModuleConstant.MODULE_ICONS);
-		largeIconMap.put(PANDA_ANDROID_FOLDER_BACKGROUND, ModuleConstant.MODULE_ICONS);
-		largeIconMap.put(PANDA_ANDROID_FOLDER_ENCRIPT_MASK, ModuleConstant.MODULE_ICONS);
+    	largeIconMap.put(ICON_FOREGROUND_MASK, ModuleConstant.MODULE_ICONS);
+		largeIconMap.put(ICON_CUT_MASK, ModuleConstant.MODULE_ICONS);
+		largeIconMap.put(ICON_BACKGROUND_MASK, ModuleConstant.MODULE_ICONS);
+		largeIconMap.put(FOLDER_BACKGROUND, ModuleConstant.MODULE_ICONS);
+		largeIconMap.put(FOLDER_FOREGROUND_CLOSED, ModuleConstant.MODULE_ICONS);
+		largeIconMap.put(FOLDER_FOREGROUND_OPEN, ModuleConstant.MODULE_ICONS);
+		largeIconMap.put(FOLDER_ENCRIPT_MASK, ModuleConstant.MODULE_ICONS);
+		largeIconMap.put(ANDROID_FOLDER_BACKGROUND, ModuleConstant.MODULE_ICONS);
+		largeIconMap.put(ANDROID_FOLDER_ENCRIPT_MASK, ModuleConstant.MODULE_ICONS);
     	// 主题图片
     	drawableMap.put(THUMBNAIL, "");
 		drawableMap.put(PREVIEW0, "");

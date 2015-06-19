@@ -30,7 +30,7 @@
     <!-- 询问当前主题广播 -->
     <string name="ACTION_ASK_THEME">com.bitants.launcher.ASK_THEME</string>
     <!-- 百宝箱请求安装应用主题广播 -->
-    <string name="INTENT_PANDASPACE_INSTALL_THEME">com.bitants.launcher.install_theme</string>
+    <string name="INTENT_SPACE_INSTALL_THEME">com.bitants.launcher.install_theme</string>
     
     <!-- 通用广播配置 -->
     <!-- 当前主题信息广播 -->

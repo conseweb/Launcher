@@ -52,11 +52,12 @@ public class SettingsConstants {
     /**
      * 智能锁屏设置key
      */
-    public final static String SETTING_PERSONAL_91LOCK = "settings_personal_91lock";
+    public final static String SETTING_PERSONAL_LOCK = "settings_personal_lock";
     /**
      * 安卓锁屏开关key
      */
-    public final static String SETTING_PERSONAL_PANDALOCK_SWITCH = "settings_personal_panda_lock_switch";
+    public final static String SETTING_PERSONAL_MIRRORLOCK_SWITCH =
+            "settings_personal_mirror_lock_switch";
     
     /**
      * 锁屏选择

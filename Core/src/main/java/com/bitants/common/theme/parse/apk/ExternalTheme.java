@@ -11,8 +11,8 @@ import com.bitants.common.launcher.config.BaseConfig;
  */
 public class ExternalTheme {
 
-    /**PANDAHOME_FLAG*/
-    public final static String PANDAHOME_FLAG = "pandahome";
+    /**HOME_FLAG*/
+    public final static String HOME_FLAG = "home";
     
     public final static String THEME_DESC = "theme_desc";
     
@@ -28,7 +28,7 @@ public class ExternalTheme {
 
     private String packageName;
 
-    private String pandahomeFlag = null;
+    private String homeFlag = null;
 
     public ExternalTheme(String packageName, int type) throws NameNotFoundException {
         remoteCtx = BaseConfig.getApplicationContext().createPackageContext(packageName, Context.CONTEXT_INCLUDE_CODE | Context.CONTEXT_IGNORE_SECURITY);
@@ -38,11 +38,11 @@ public class ExternalTheme {
     }
 
     private void init() {
-        int resId = getResourceId(PANDAHOME_FLAG, "string");
+        int resId = getResourceId(HOME_FLAG, "string");
         if (resId != 0) {
-        	pandahomeFlag = remoteCtx.getString(resId);
+        	homeFlag = remoteCtx.getString(resId);
         } else {
-        	pandahomeFlag = null;
+        	homeFlag = null;
         }
     }
 
@@ -126,7 +126,7 @@ public class ExternalTheme {
      * @return
      */
     public boolean hasIHomeConfig() {
-        if (pandahomeFlag != null) {
+        if (homeFlag != null) {
             return true;
         }
         return false;

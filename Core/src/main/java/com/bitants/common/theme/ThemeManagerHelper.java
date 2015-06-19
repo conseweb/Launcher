@@ -10,7 +10,7 @@ import com.bitants.common.kitset.util.WallpaperUtil;
 import com.bitants.common.launcher.broadcast.HiBroadcastReceiver;
 import com.bitants.common.launcher.config.BaseConfig;
 import com.bitants.common.launcher.view.icon.ui.LauncherIconSoftReferences;
-import com.bitants.common.theme.data.BasePandaTheme;
+import com.bitants.common.theme.data.BaseTheme;
 import com.bitants.common.theme.data.ThemeGlobal;
 import com.bitants.common.theme.module.ModuleConstant;
 import com.bitants.common.theme.db.LauncherThemeDataBase;
@@ -28,24 +28,24 @@ public class ThemeManagerHelper {
      * <br>Description: 分配主题对象供解析主题时装载(获取未填充内容的主题对象)
      * @return
      */
-    public BasePandaTheme allocatPandaThemeObj() {
-    	return new BasePandaTheme(BaseConfig.getApplicationContext());
+    public BaseTheme allocatThemeObj() {
+    	return new BaseTheme(BaseConfig.getApplicationContext());
     }
 	
 	/**
 	 * <br>Description: 通过主题Id获取主题对象(获取完整主题对象)
-	 * @param key
+	 * @param themeId
 	 * @return
 	 */
-	public BasePandaTheme createTheme(String themeId, boolean isCurrentTheme) {
+	public BaseTheme createTheme(String themeId, boolean isCurrentTheme) {
 		if (themeId != null) {
 			try {
-				return new BasePandaTheme(BaseConfig.getApplicationContext(), themeId, isCurrentTheme);
+				return new BaseTheme(BaseConfig.getApplicationContext(), themeId, isCurrentTheme);
 			} catch (Exception e) {
-				return new BasePandaTheme(BaseConfig.getApplicationContext(), ThemeGlobal.DEFAULT_THEME_ID, isCurrentTheme);
+				return new BaseTheme(BaseConfig.getApplicationContext(), ThemeGlobal.DEFAULT_THEME_ID, isCurrentTheme);
 			}
 		} else {
-			return new BasePandaTheme(BaseConfig.getApplicationContext(), ThemeGlobal.DEFAULT_THEME_ID, isCurrentTheme);
+			return new BaseTheme(BaseConfig.getApplicationContext(), ThemeGlobal.DEFAULT_THEME_ID, isCurrentTheme);
 		}
 	}
 	

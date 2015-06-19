@@ -88,7 +88,7 @@ public class LauncherConfig {
 			
 			ThemeGlobal.INTENT_CURRENT_THEME_INFO = mContext.getResources().getString(R.string.INTENT_CURRENT_THEME_INFO);
 			ThemeGlobal.ACTION_ASK_THEME = mContext.getResources().getString(R.string.ACTION_ASK_THEME);
-			ThemeGlobal.INTENT_PANDASPACE_INSTALL_THEME = mContext.getResources().getString(R.string.INTENT_PANDASPACE_INSTALL_THEME);
+			ThemeGlobal.INTENT_SPACE_INSTALL_THEME = mContext.getResources().getString(R.string.INTENT_SPACE_INSTALL_THEME);
 			ThemeGlobal.LAUNCHER_UI_REFRESH_ACTION = mContext.getResources().getString(R.string.LAUNCHER_UI_REFRESH_ACTION);
 			ThemeGlobal.INTENT_THEME_LIST_REFRESH = mContext.getResources().getString(R.string.INTENT_THEME_LIST_REFRESH);
 			

@@ -42,7 +42,7 @@ public class DockAllAppIconType extends IconType {
 		if (o != null && o instanceof ApplicationInfo) {
 			ApplicationInfo info = (ApplicationInfo) o;
 			if (info.itemType == Favorites.ITEM_TYPE_INDEPENDENCE) {
-				info.iconBitmap = BitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(ThemeData.PANDAHOME_STYLE_ICON_TRAY_EXPAND));
+				info.iconBitmap = BitmapUtils.drawable2Bitmap(ThemeManagerFactory.getInstance().getThemeDrawable(ThemeData.HOME_STYLE_ICON_TRAY_EXPAND));
 		
 				return info.iconBitmap;
 			}
