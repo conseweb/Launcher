@@ -1,2 +1,3 @@
 include ':core'
 include ':main'
+include ':libraries:ActionBarCompat:appcompat'
