@@ -26,7 +26,7 @@ import com.bitants.common.theme.pref.ThemeSharePref;
 /**
  * <br>Description: 基础主题
  */
-public class BasePandaTheme {
+public class BaseTheme {
 	
     /**
      * 数据库操作对象
@@ -89,7 +89,7 @@ public class BasePandaTheme {
     /**
      * 保存在库中是参数标识位,默认为-1
      */
-    private int savedPandaFlag = -1; //保存在库中是参数标识位,默认为-1
+    private int savedFlag = -1; //保存在库中是参数标识位,默认为-1
 
     private float baseDensity = 1.5f;
     
@@ -132,7 +132,7 @@ public class BasePandaTheme {
 	/** 新增主题的时候使用该构造函数
      * @param ctx Context
      */
-    public BasePandaTheme(Context ctx) {
+    public BaseTheme(Context ctx) {
         this.context = ctx;
         db = new LauncherThemeDataBase(ctx);
         initData();
@@ -144,7 +144,7 @@ public class BasePandaTheme {
      * @param ctx Context
      * @param themeId String
      */
-    public BasePandaTheme(Context ctx, String themeId) {
+    public BaseTheme(Context ctx, String themeId) {
         this.context = ctx;
         setThemeId(themeId);
         db = new LauncherThemeDataBase(ctx);
@@ -157,7 +157,7 @@ public class BasePandaTheme {
      * @param themeId
      * @param isCurrentTheme 是否当前主题 
      */
-    public BasePandaTheme(Context ctx, String themeId, boolean isCurrentTheme) {
+    public BaseTheme(Context ctx, String themeId, boolean isCurrentTheme) {
     	this.context = ctx;
     	setThemeId(themeId);
         db = new LauncherThemeDataBase(ctx);
@@ -171,7 +171,7 @@ public class BasePandaTheme {
         themeDesc = "";
         version = "";
         textMap.clear();
-        savedPandaFlag = -1;
+        savedFlag = -1;
         versionCode = -1;
         type = ThemeType.DEFAULT;
         baseDensity = 1.5f;
@@ -191,7 +191,7 @@ public class BasePandaTheme {
 	                setVersion(StringUtil.getString(cursor, "Version"));
 	                setIDFlag(StringUtil.getString(cursor, "ID_FLAG"));
 	                setType(cursor.getInt(cursor.getColumnIndex("type")));
-	                setSavedPandaFlag(cursor.getInt(cursor.getColumnIndex("pandaflag")));
+	                setSavedFlag(cursor.getInt(cursor.getColumnIndex("flag")));
 	                setVersionCode(cursor.getInt(cursor.getColumnIndex("versioncode")));
 	                setBaseDensity(cursor.getFloat(cursor.getColumnIndex("base_density")));
 	                setAptPath(StringUtil.getString(cursor, "PATH"));
@@ -233,11 +233,11 @@ public class BasePandaTheme {
     		}
 	        // 设置当前主题图标蒙板
     		BaseConfig.iconBackground = BaseBitmapUtils.drawable2Bitmap(
-    				getIconMask(BaseThemeData.PANDA_ICON_BACKGROUND_MASK));
+    				getIconMask(BaseThemeData.ICON_BACKGROUND_MASK));
     		BaseConfig.iconFrontground = BaseBitmapUtils.drawable2Bitmap(
-    				getIconMask(BaseThemeData.PANDA_ICON_FOREGROUND_MASK));
+    				getIconMask(BaseThemeData.ICON_FOREGROUND_MASK));
     		BaseConfig.iconMask = BaseBitmapUtils.drawable2Bitmap(
-    				getIconMask(BaseThemeData.PANDA_ICON_CUT_MASK));
+    				getIconMask(BaseThemeData.ICON_CUT_MASK));
         } else {
         	// 设置主题模块信息 caizp 2014-6-13
         	for(int i=0; i< ModuleConstant.MODULE_KEY_ARRAY.length; i++) {
@@ -324,12 +324,12 @@ public class BasePandaTheme {
 		this.type = type;
 	}
 
-	public int getSavedPandaFlag() {
-		return savedPandaFlag;
+	public int getSavedFlag() {
+		return savedFlag;
 	}
 
-	public void setSavedPandaFlag(int savedPandaFlag) {
-		this.savedPandaFlag = savedPandaFlag;
+	public void setSavedFlag(int savedFlag) {
+		this.savedFlag = savedFlag;
 	}
 
 	public int getVersionCode() {
@@ -636,7 +636,7 @@ public class BasePandaTheme {
             sqls[0] = String.format(themeSQL, StringUtil.getNotNullString(getThemeId()), 
             		StringUtil.getNotNullString(getThemeName()), StringUtil.getNotNullString(getThemeEnName()), 
             		StringUtil.getNotNullString(getThemeDesc()), StringUtil.getNotNullString(getThemeEnDesc()),
-            		StringUtil.getNotNullString(getVersion()), getType(), getSavedPandaFlag(), 
+            		StringUtil.getNotNullString(getVersion()), getType(), getSavedFlag(),
             		getVersionCode(), getBaseDensity(),StringUtil.getNotNullString(getIDFlag()), getAptPath(), 
             		System.currentTimeMillis(), System.currentTimeMillis(), 0, isSupportV6()?1:0, 
             		isGuarded()?1:0, getGuardedVersion(), getResType(), getLauncherMinVersion());
@@ -680,7 +680,7 @@ public class BasePandaTheme {
             sqls[2] = String.format(themeSQL, StringUtil.getNotNullString(getThemeId()), 
             		StringUtil.getNotNullString(getThemeName()), StringUtil.getNotNullString(getThemeEnName()), 
             		StringUtil.getNotNullString(getThemeDesc()), StringUtil.getNotNullString(getThemeEnDesc()),
-            		StringUtil.getNotNullString(getVersion()), getType(), getSavedPandaFlag(), 
+            		StringUtil.getNotNullString(getVersion()), getType(), getSavedFlag(),
             		getVersionCode(), getBaseDensity(),StringUtil.getNotNullString(getIDFlag()), getAptPath(), 
             		System.currentTimeMillis(), System.currentTimeMillis(), 0, isSupportV6()?1:0, 
             		isGuarded()?1:0, getGuardedVersion(), getResType(), getLauncherMinVersion());

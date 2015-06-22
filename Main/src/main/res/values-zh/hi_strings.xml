@@ -1,6 +1,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="panda_widget_confirm_install">是否安装%1$s?</string>
+    <string name="widget_confirm_install">是否安装%1$s?</string>
     <string name="settings_advanced_silent_install">静默安装</string>
     <string name="settings_advanced_silent_install_open_now">立即开启</string>
     <string name="settings_advanced_silent_install_request">软件下载完成后，可以省去手动安装步骤，为您自动安装。是否立即开启？开启后若想关闭此功能，可以在桌面设置-高级设置中找到</string>

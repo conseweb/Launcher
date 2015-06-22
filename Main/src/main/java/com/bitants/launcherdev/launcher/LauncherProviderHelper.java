@@ -408,7 +408,6 @@ public class LauncherProviderHelper {
 				
 			}
 		}
-        // TODO: remove all empty folders
 	}
 	
 	public static boolean isDefalutDockbarApp(String pck, String cls) {
@@ -457,12 +456,12 @@ public class LauncherProviderHelper {
 		Intent intent = null;
 			try {
 				intent = Intent.parseUri(uri, 0);
-				values.put(Favorites.TITLE, mContext.getResources().getString(a.getResourceId(R.styleable.Favorite_title, 0)));
+				values.put(Favorites.TITLE, mContext.getResources().getString(a.getResourceId(R
+						.styleable.Favorite_titleRef, 0)));
 			} catch (URISyntaxException e) {
 				e.printStackTrace();
 			}
-		
-			
+
 			values.put(Favorites.INTENT, intent.toUri(0));
 			values.put(Favorites.CONTAINER, LauncherSettings.Favorites.CONTAINER_DESKTOP);
 			values.put(Favorites.ITEM_TYPE, LauncherSettings.Favorites.ITEM_TYPE_WIDGET_SEARCH_SHORTCUT); 
@@ -490,7 +489,8 @@ public class LauncherProviderHelper {
 		if (componentName == null && ThemeIconIntentAdaptation.isDefaultDockAppByUri(uri)) {
 			try {
 				intent = Intent.parseUri(uri, 0);
-				values.put(Favorites.TITLE, mContext.getResources().getString(a.getResourceId(R.styleable.Favorite_title, 0)));
+				values.put(Favorites.TITLE, mContext.getResources().getString(a.getResourceId(R
+                        .styleable.Favorite_titleRef, 0)));
 			} catch (URISyntaxException e) {
 				e.printStackTrace();
 			}
@@ -518,10 +518,10 @@ public class LauncherProviderHelper {
 	private static boolean createHiDockShortcut(Context mContext, SQLiteDatabase db, ContentValues values, TypedArray a) {
 		Resources r = mContext.getResources();
 		Bitmap bitmap = null;
-		final int iconResId = a.getResourceId(R.styleable.Favorite_icon, 0);
+		final int iconResId = a.getResourceId(R.styleable.Favorite_iconRef, 0);
 		String iconPackage = a.getString(R.styleable.Favorite_iconPackage);
 		String iconResource = a.getString(R.styleable.Favorite_iconResource);
-		final int titleResId = a.getResourceId(R.styleable.Favorite_title, 0);
+		final int titleResId = a.getResourceId(R.styleable.Favorite_titleRef, 0);
 
 		Intent intent;
 		String uri = null;

@@ -237,13 +237,13 @@ public class ThemeFormart {
 	 */
 	public static boolean createThemeThumbnail( Context ctx, String themeId ) {
 		try{
-			BasePandaTheme theme = new BasePandaTheme(BaseConfig.getApplicationContext(), themeId, false);
+			BaseTheme theme = new BaseTheme(BaseConfig.getApplicationContext(), themeId, false);
 			ThemeResourceWrapper wrapper = theme.getWrapper();
 			
 			String previewPath = "";
 			if(theme.getType() == ThemeType.DEFAULT){
 				previewPath = BaseConfig.THEME_DIR + theme.getAptPath() + ThemeGlobal.THEME_APT_DRAWABLE_DIR + BaseThemeData.THUMBNAIL + ThemeGlobal.CONVERTED_SUFFIX_JPG;
-			}else if(theme.getType() == ThemeType.PANDAHOME){
+			}else if(theme.getType() == ThemeType.HOME){
 				previewPath = BaseConfig.THEME_THUMB_DIR + themeId + ThemeGlobal.CONVERTED_SUFFIX_JPG;
 			}
 			if(new File(previewPath).exists()){
@@ -253,7 +253,7 @@ public class ThemeFormart {
 			//主题中已存在缩略图
 			Drawable thumb = wrapper.getKeyDrawable(BaseThemeData.THUMBNAIL, false);
 			if(null != thumb){
-				if(theme.getType() == ThemeType.PANDAHOME){//APK主题的预览图保存至指定目录下
+				if(theme.getType() == ThemeType.HOME){//APK主题的预览图保存至指定目录下
 					BaseBitmapUtils.saveBitmap2file( BaseBitmapUtils.drawable2Bitmap(thumb), previewPath );
 					return true;
 				}

@@ -27,7 +27,7 @@ import com.bitants.common.theme.module.ThemeModuleHelper;
 import com.bitants.common.theme.parse.apt.ThemeLoader;
 import com.bitants.common.kitset.util.FileUtil;
 import com.bitants.common.kitset.util.WallpaperUtil;
-import com.bitants.common.theme.data.BasePandaTheme;
+import com.bitants.common.theme.data.BaseTheme;
 import com.bitants.common.theme.module.ThemeModuleItem;
 import com.bitants.common.theme.pref.ThemeSharePref;
 
@@ -48,7 +48,7 @@ public class ThemeManagerFactory {
 	
 	private static ThemeManagerFactory factory;
 	
-	private static BasePandaTheme mCurrentTheme;
+	private static BaseTheme mCurrentTheme;
 	
 	private ThemeManagerHelper themeManagerHelper;
 	
@@ -77,7 +77,7 @@ public class ThemeManagerFactory {
 	 *
 	 * @return
 	 */
-	public BasePandaTheme getCurrentTheme() {
+	public BaseTheme getCurrentTheme() {
 		if (null != themeManagerHelper) {
 			if (null == mCurrentTheme) {
 				mCurrentTheme = themeManagerHelper.createTheme(ThemeSharePref.getInstance(BaseConfig.getApplicationContext()).getCurrentThemeId(),
@@ -85,7 +85,7 @@ public class ThemeManagerFactory {
 			}
 			return mCurrentTheme;
 		}
-		return new BasePandaTheme(BaseConfig.getApplicationContext(), ThemeSharePref.getInstance(BaseConfig.getApplicationContext()).getCurrentThemeId(), true);
+		return new BaseTheme(BaseConfig.getApplicationContext(), ThemeSharePref.getInstance(BaseConfig.getApplicationContext()).getCurrentThemeId(), true);
 	}
 
 	/**
@@ -328,7 +328,7 @@ public class ThemeManagerFactory {
 	 */
 	public synchronized String installAptTheme(String aptPath) {
 		try {
-			BasePandaTheme theme = ThemeLoader.getInstance().loaderThemeZip(aptPath);
+			BaseTheme theme = ThemeLoader.getInstance().loaderThemeZip(aptPath);
 			return theme.getThemeId();
 		} catch (DesktopException pe) {
 			pe.printStackTrace();
@@ -349,12 +349,12 @@ public class ThemeManagerFactory {
 	 */
 	public void reInstallAptTheme(Context ctx, File file) {
 		try {
-			BasePandaTheme pandaTheme = ThemeLoader.getInstance().loaderThemeFolder(
+			BaseTheme theme = ThemeLoader.getInstance().loaderThemeFolder(
 					file.getName());
 			String[] themeInfo = ThemeManagerFactory.getInstance().getThemeInfoByIdFlag(ctx,
-					pandaTheme.getIDFlag());
-			if (!themeInfo[1].equals(pandaTheme.getVersion())) {
-				pandaTheme.save();
+					theme.getIDFlag());
+			if (!themeInfo[1].equals(theme.getVersion())) {
+				theme.save();
 			} else {
 				
 			}
@@ -560,7 +560,7 @@ public class ThemeManagerFactory {
 	 * @param themeId
 	 * @return
 	 */
-	public BasePandaTheme getThemeById(String themeId) {
+	public BaseTheme getThemeById(String themeId) {
 		if(null != themeManagerHelper) {
 			if (!StringUtil.isEmpty(themeId)) {
 				return themeManagerHelper.createTheme(themeId, false);

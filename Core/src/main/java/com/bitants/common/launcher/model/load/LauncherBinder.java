@@ -164,7 +164,7 @@ public class LauncherBinder implements Callbacks{
 				mLauncher.mDockbar.updateItemInDockbar(apps);
 		}
 		
-		mLauncher.updatePandaWidget(packageName);
+		mLauncher.updateWidget(packageName);
 	}
 	
 	@Override
@@ -180,7 +180,7 @@ public class LauncherBinder implements Callbacks{
 			mLauncher.closeFolder();
 		}
 		
-		mLauncher.removePandaWidget(packageName);
+		mLauncher.removeWidget(packageName);
 		
 		removeAppsInWorkspace(packageName);
 		mLauncher.removeAppForDrawer(packageName);

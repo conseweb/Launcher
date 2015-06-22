@@ -59,7 +59,7 @@ public final class LauncherWidgetInfoManager {
 	/**
 	 * 已经安装标准小部件包名列表
 	 */
-	private Map<String, String> installedPandaWidgetPkgMap = new HashMap<String, String>();
+	private Map<String, String> installedWidgetPkgMap = new HashMap<String, String>();
 	
 	/**
 	 * 小部件列表XML以及相关图标保存路径
@@ -168,11 +168,11 @@ public final class LauncherWidgetInfoManager {
 	}
 
 	/**
-	 * 更新91小部件数据
+	 * 更新小部件数据
 	 * 
 	 * @param packageName
 	 */
-	public void updatePandaWidgetData(String packageName) {
+	public void updateWidgetData(String packageName) {
 		ArrayList<LauncherWidgetInfo> removes = new ArrayList<LauncherWidgetInfo>();
 		for (LauncherWidgetInfo widgetInfo : mAllLauncherWidgetInfo) {
 			if (widgetInfo.getPackageName().equals(packageName)) {
@@ -347,7 +347,7 @@ public final class LauncherWidgetInfoManager {
 		PackageManager pm = Global.getApplicationContext().getPackageManager();
 		Intent it = new Intent(MIRROR_WIDGET_CATEGORY_QUERY_INTENT);
 
-		installedPandaWidgetPkgMap.clear();
+		installedWidgetPkgMap.clear();
 		List<ResolveInfo> resolveInfoList = pm.queryIntentActivities(it, 0);
 		for (int i = 0; i < resolveInfoList.size(); i++) {
 			try {
@@ -362,13 +362,13 @@ public final class LauncherWidgetInfoManager {
 				if (!mSupportWidgetPackage.contains(packageName)) {
 					continue;
 				}
-				installedPandaWidgetPkgMap.put(packageName, "");
+				installedWidgetPkgMap.put(packageName, "");
 				ArrayList<LauncherWidgetInfo> listWidgetInfo = parseInstalledWidgetXml(packageName);
 				if (listWidgetInfo == null)
 					continue;
 				
 				for (LauncherWidgetInfo info : listWidgetInfo) {
-					// 英文版屏蔽内置黄历天气 caizp 2013-5-6
+					// 英文版屏蔽内置黄历天气
 					if (!Global.isZh() || execepHuangli) {
 						if(Global.getApplicationContext().getPackageName().equals(info.getPackageName()) 
 								&& ("weather_widget_panda_4x1".equals(info.getLayoutResName()) || "weather_widget_panda_4x2".equals(info.getLayoutResName())) ) {
@@ -439,7 +439,7 @@ public final class LauncherWidgetInfoManager {
 			if (xmlResId != 0xffffffff && xmlResId != 0) {
 				// 在XML文件里若包含了widget.xml信息文件，则取小部件里的相关信息
 				XmlResourceParser fpXrp = fp.getXML(xmlResId);
-				return parserPandaWidgetXML(fp, fpXrp);
+				return parserWidgetXML(fp, fpXrp);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -448,13 +448,13 @@ public final class LauncherWidgetInfoManager {
 	}
 
 	/**
-	 * 解析外部包里面的panda_widget.xml信息
+	 * 解析外部包里面的widget.xml信息
 	 * 
 	 * @param fp
 	 * @param xrp
 	 * @return
 	 */
-	private ArrayList<LauncherWidgetInfo> parserPandaWidgetXML(ForeignPackage fp, XmlResourceParser xrp) {
+	private ArrayList<LauncherWidgetInfo> parserWidgetXML(ForeignPackage fp, XmlResourceParser xrp) {
 		ArrayList<LauncherWidgetInfo> infos = new ArrayList<LauncherWidgetInfo>();
 		int type;
 		try {

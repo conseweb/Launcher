@@ -16,6 +16,7 @@ import com.bitants.launcherdev.launcher.Workspace;
 import com.bitants.launcherdev.launcher.edit.LauncherEditView;
 import com.bitants.common.launcher.screens.BaseLauncherMenu;
 import com.bitants.launcherdev.settings.HomeSettingsActivity;
+import com.bitants.launcherdev.settings.SettingsActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,7 +85,7 @@ public class LauncherMenu extends BaseLauncherMenu{
 				} 
 				else if (MENU_CUSTOM_SETTING.equals(view.getTag().toString())) {
 					Intent intent = new Intent();
-					intent.setClass(context,HomeSettingsActivity.class);
+					intent.setClass(context, SettingsActivity.class);
 					context.startActivity(intent);
 				} 
 				else if (MENU_SHARE.equals(view.getTag().toString())) {

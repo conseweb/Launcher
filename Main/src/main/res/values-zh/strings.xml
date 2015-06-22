@@ -46,4 +46,7 @@
 	<string name="folder_other">其他</string>
 	<string name="cat_system">System</string>
 	<string name="cat_cloud">Cloud</string>
+
+	<string name="notify_priority">notify_priority</string>
+	<string name="title_activity_setting">设置</string>
 </resources>

@@ -13,6 +13,6 @@ public class ThemeType {
     /**
      * apk格式
      */
-    public final static int PANDAHOME = 2;
+    public final static int HOME = 2;
 
 }

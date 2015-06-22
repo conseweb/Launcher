@@ -25,7 +25,7 @@ public class MirrorWidgetViewContainer extends LinearLayout implements OnWorkspa
 	/** 非标widget的IntentFilter的Category值，供桌面查询非标widget */
 	private static final String MIRROR_WIDGET_CATEGORY_QUERY_INTENT = "com.bitants.launcherdev.widget.category";
 	/** 非标widget的IntentFilter的Category值，供桌面查询非标widget是否要捕获上下划动手势 */
-	private static final String PANDA_WIDGET_CATCH_VERTICAL_GESTRUE_CATEGORY_QUERY_INTENT = "com.bitants.launcherdev.widget.CATCH_VERTICAL_GESTURE";
+	private static final String MIRROR_WIDGET_CATCH_VERTICAL_GESTRUE_CATEGORY_QUERY_INTENT = "com.bitants.launcherdev.widget.CATCH_VERTICAL_GESTURE";
 
 	public View widgetView;
 	
@@ -70,7 +70,7 @@ public class MirrorWidgetViewContainer extends LinearLayout implements OnWorkspa
 		PackageManager pm = getContext().getPackageManager();
 		try {
 			Intent intent = new Intent(MIRROR_WIDGET_CATEGORY_QUERY_INTENT);
-			intent.addCategory(PANDA_WIDGET_CATCH_VERTICAL_GESTRUE_CATEGORY_QUERY_INTENT);
+			intent.addCategory(MIRROR_WIDGET_CATCH_VERTICAL_GESTRUE_CATEGORY_QUERY_INTENT);
 			intent.setPackage(widgetPackage);
 			List<ResolveInfo> list = pm.queryIntentActivities(intent, 0);
 			if (list != null && list.size() > 0)

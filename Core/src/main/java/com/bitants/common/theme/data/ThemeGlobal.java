@@ -45,7 +45,7 @@ public class ThemeGlobal {
     /**
      * 主题包91智能锁皮肤资源目录
      */
-    public final static String THEME_91ZNS_PATH = "/screenlock/";
+    public final static String THEME_LOCK_PATH = "/screenlock/";
     
     /**
      * 主题包中第三方小插件皮肤包名称
@@ -177,7 +177,7 @@ public class ThemeGlobal {
     /**
      * apk主题包(检测标识)
      */
-    public final static String INTENT_PANDAHOME_THEME = "com.nd.android.pandahome.theme";
+    public final static String INTENT_HOME_THEME = "com.nd.android.pandahome.theme";
     
     /**
      * 主题列表刷新广播
@@ -195,7 +195,7 @@ public class ThemeGlobal {
 	public static String ACTION_ASK_THEME = "com.nd.android.pandahome.ASK_THEME";
     
     /** 百宝箱请求安装应用主题广播 */
-    public static String INTENT_PANDASPACE_INSTALL_THEME = "com.nd.android.pandadesktop2.install_theme";
+    public static String INTENT_SPACE_INSTALL_THEME = "com.nd.android.pandadesktop2.install_theme";
     
     /**
      * 黄历天气皮肤随主题安装成功广播
@@ -241,7 +241,7 @@ public class ThemeGlobal {
 			if(new File(path).exists()){
     			return path;
     		}
-		} else if (ThemeType.PANDAHOME == themeType) {
+		} else if (ThemeType.HOME == themeType) {
 			return BaseConfig.THEME_THUMB_DIR + themeId + ThemeGlobal.CONVERTED_SUFFIX_JPG;
 		}
     	return BaseConfig.THEME_DIR + themeId.replace(" ", "_") + "/" + BaseThemeData.THUMBNAIL
@@ -283,7 +283,7 @@ public class ThemeGlobal {
     	if(DEFAULT_THEME_ID.equals(themeId)) return false;
     	if(!TelephoneUtil.isSdcardExist()) return false;
     	return (ThemeType.DEFAULT == themeType && !FileUtil.isFileExits(BaseConfig.THEME_DIR + aptPath + ThemeGlobal.THEME_CONFIG_NAME))
-		|| (ThemeType.PANDAHOME == themeType && !AndroidPackageUtils.isPkgInstalled(BaseConfig.getApplicationContext(), themeId));
+		|| (ThemeType.HOME == themeType && !AndroidPackageUtils.isPkgInstalled(BaseConfig.getApplicationContext(), themeId));
     }
     
     /**

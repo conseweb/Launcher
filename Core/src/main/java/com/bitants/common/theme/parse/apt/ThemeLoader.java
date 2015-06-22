@@ -30,7 +30,7 @@ import com.bitants.common.kitset.xmlparser.XmlParser;
 import com.bitants.common.kitset.xmlparser.exception.XmlFormatErrorException;
 import com.bitants.common.launcher.config.BaseConfig;
 import com.bitants.common.theme.ThemeManagerFactory;
-import com.bitants.common.theme.data.BasePandaTheme;
+import com.bitants.common.theme.data.BaseTheme;
 import com.bitants.common.theme.data.ThemeGlobal;
 import com.bitants.common.theme.module.ModuleConstant;
 import com.bitants.common.theme.module.ModuleInfo;
@@ -64,47 +64,47 @@ public class ThemeLoader {
     /**
      * 主题xml内部配置头部节点
      */
-    private static final String PANDA_THEME = "theme-config";
+    private static final String THEME = "theme-config";
 
     /**
      * 主题xml内部配置workspace节点
      */
-    private static final String PANDA_WORKSPACE_THEME = "workspace";
+    private static final String WORKSPACE_THEME = "workspace";
     
     /**
      * 图标文字颜色节点
      */
-    private static final String PANDA_TEXTCOLOR = "textcolor";
+    private static final String TEXTCOLOR = "textcolor";
 
     /**
      * 图标文字大小节点
      */
-    private static final String PANDA_TEXTSIZE = "textsize";
+    private static final String TEXTSIZE = "textsize";
     
     /**
      * 主题xml内部配置keyconfig节点
      */
-    private static final String PANDA_ICON_CONFIG = "keyconfig";
+    private static final String ICON_CONFIG = "keyconfig";
 
     /**
      * 主题中文名称节点
      */
-    private static final String PANDA_THEME_NAME = "name";
+    private static final String THEME_NAME = "name";
 
     /**
      * 主题英文名称节点
      */
-    private static final String PANDA_THEME_NAME_EN = "en_name";
+    private static final String THEME_NAME_EN = "en_name";
 
     /**
      * 主题intent节点
      */
-    private static final String PANDA_ICON_INTENT = "intent";
+    private static final String ICON_INTENT = "intent";
 
     /**
      * 主题text节点
      */
-    private static final String PANDA_ICON_TEXT = "text";
+    private static final String ICON_TEXT = "text";
 
     /**
      * elementTag
@@ -137,10 +137,10 @@ public class ThemeLoader {
      *            主题配置文件路径。
      * @return 主题对象。
      */
-    private void loaderThemeXML(String themePath, BasePandaTheme basePandaThemeObj) throws DesktopException {
+    private void loaderThemeXML(String themePath, BaseTheme baseThemeObj) throws DesktopException {
         try {
             root = XmlParser.buildXmlRootByString(StringUtil.renameRes(readXml(themePath)));
-            createThemeObj(root, basePandaThemeObj);
+            createThemeObj(root, baseThemeObj);
         } catch (XmlFormatErrorException e) {
             Log.w(LOG_TAG, "Xml format error. " + e);
             throw new DesktopException(ErrorCode.XML_FORMAT_ERROR_CODE);
@@ -175,10 +175,10 @@ public class ThemeLoader {
                         parentTag = cutPrefix(parentTag);
                     }
                 }
-                if (PANDA_THEME.equalsIgnoreCase(elementTag)) {
+                if (THEME.equalsIgnoreCase(elementTag)) {
                     //读取主题名称
-                    String name = attrMap.get(PANDA_THEME_NAME);
-                    String en_name = attrMap.get(PANDA_THEME_NAME_EN);
+                    String name = attrMap.get(THEME_NAME);
+                    String en_name = attrMap.get(THEME_NAME_EN);
                     if ((null == name) && (null == en_name)) {
                     	Log.w(LOG_TAG, "name attr is not found!");
                         throw new DesktopException(ErrorCode.XML_FORMAT_NAME_UNFOUND_ERROR);
@@ -263,8 +263,8 @@ public class ThemeLoader {
      * @throws Exception
      *             SDcard是否存在异常。
      */
-    public synchronized BasePandaTheme loaderThemeZipFromAssets(Context ctx, String zipPath) throws DesktopException {
-    	BasePandaTheme basePandaTheme = ThemeManagerFactory.getInstance().getThemeManagerHelper().allocatPandaThemeObj();
+    public synchronized BaseTheme loaderThemeZipFromAssets(Context ctx, String zipPath) throws DesktopException {
+    	BaseTheme baseTheme = ThemeManagerFactory.getInstance().getThemeManagerHelper().allocatThemeObj();
         namePrefix = createTimeZone();
         String unZipPath = BaseConfig.THEME_DIR + namePrefix + "/";
         if (!TelephoneUtil.isSdcardExist()) {
@@ -278,13 +278,13 @@ public class ThemeLoader {
 				Log.w(LOG_TAG, "zip validate error!");
 				throw new DesktopException(ErrorCode.ZIP_VALIDATE_ERROR_CODE);
 			}
-            loaderThemeXML(unZipPath + themeXmlName, basePandaTheme);
+            loaderThemeXML(unZipPath + themeXmlName, baseTheme);
             //根据主题Id修改解压后的主题包路径
-            namePrefix = basePandaTheme.getIDFlag().replace(" ", "_");
-            basePandaTheme.setThemeId(basePandaTheme.getIDFlag());
-            basePandaTheme.setIDFlag(basePandaTheme.getIDFlag());
+            namePrefix = baseTheme.getIDFlag().replace(" ", "_");
+            baseTheme.setThemeId(baseTheme.getIDFlag());
+            baseTheme.setIDFlag(baseTheme.getIDFlag());
             String newUnZipPath = BaseConfig.THEME_DIR + namePrefix + "/";
-            basePandaTheme.setAptPath(namePrefix + "/");
+            baseTheme.setAptPath(namePrefix + "/");
             
             // 把原来的文件夹重命名，便于删除
             final String delFilePath = BaseConfig.THEME_DIR + namePrefix + "_" + System.currentTimeMillis() + "/";
@@ -309,9 +309,9 @@ public class ThemeLoader {
 			}
             unZipPath = newUnZipPath;
             //解压天气皮肤包
-            loadThemeWeather(unZipPath, basePandaTheme.getThemeId());
+            loadThemeWeather(unZipPath, baseTheme.getThemeId());
             // 解压第三方小插件皮肤包
-         	loadThemeWidget(unZipPath, basePandaTheme.getThemeId());
+         	loadThemeWidget(unZipPath, baseTheme.getThemeId());
          	// 重命名旧主题目录文件
          	renameRes(unZipPath + ThemeGlobal.THEME_APT_DRAWABLE_DIR);
 			renameRes(unZipPath + ThemeGlobal.THEME_APT_DRAWABLE_XHDPI_DIR);
@@ -322,7 +322,7 @@ public class ThemeLoader {
             Log.w(LOG_TAG, e);
             throw new DesktopException(ErrorCode.OTHER_ERROR_CODE);
         }
-        return basePandaTheme;
+        return baseTheme;
     }
 
     /**
@@ -333,9 +333,9 @@ public class ThemeLoader {
      * @return 组装后的BasePandaTheme对象。
      * @throws DesktopException
      */
-    private void createThemeObj(Element element, BasePandaTheme basePandaThemeObj) throws DesktopException {
+    private void createThemeObj(Element element, BaseTheme baseThemeObj) throws DesktopException {
         if (null != element) {
-            assemblyAttr(element, basePandaThemeObj);
+            assemblyAttr(element, baseThemeObj);
         }
     }
 
@@ -346,7 +346,7 @@ public class ThemeLoader {
      *            xml元素。
      * @return 组装后的BasePandaTheme对象。
      */
-    private void assemblyAttr(Element element, BasePandaTheme basePandaThemeObj) throws DesktopException {
+    private void assemblyAttr(Element element, BaseTheme baseThemeObj) throws DesktopException {
         if (null != element) {
             Map<String, String> attrMap = element.getAttributes();
             elementTag = element.getName();
@@ -362,65 +362,65 @@ public class ThemeLoader {
                     parentTag = cutPrefix(parentTag);
                 }
             }
-            if (PANDA_THEME.equalsIgnoreCase(elementTag)) {
+            if (THEME.equalsIgnoreCase(elementTag)) {
                 //读取主题名称
-                String name = attrMap.get(PANDA_THEME_NAME);
-                String en_name = attrMap.get(PANDA_THEME_NAME_EN);
+                String name = attrMap.get(THEME_NAME);
+                String en_name = attrMap.get(THEME_NAME_EN);
                 if ((null == name) && (null == en_name)) {
                 	Log.w(LOG_TAG, "name attr is not found!");
                     throw new DesktopException(ErrorCode.XML_FORMAT_NAME_UNFOUND_ERROR);
                 }
                 if (null != name) {
-                	basePandaThemeObj.setThemeName(name);
+                	baseThemeObj.setThemeName(name);
                 }
                 if (null != en_name) {
-                	basePandaThemeObj.setThemeEnName(en_name);
+                	baseThemeObj.setThemeEnName(en_name);
                 }
                 //读取主题描述
                 String desc = attrMap.get("desc");
                 if (!TextUtils.isEmpty(desc)) {
-                    basePandaThemeObj.setThemeDesc(desc);
+                    baseThemeObj.setThemeDesc(desc);
                 }
                 //读取主题versionName
                 String version = attrMap.get("ver");
                 if (!TextUtils.isEmpty(version)) {
-                    basePandaThemeObj.setVersion(version);
+                    baseThemeObj.setVersion(version);
                 }else{
-                	basePandaThemeObj.setVersion("1");
+                	baseThemeObj.setVersion("1");
                 }
                 //读取主题versionCode
                 String versionCode = attrMap.get("version");
                 if (!TextUtils.isEmpty(versionCode)) {
                 	try {
-                		basePandaThemeObj.setVersionCode(Integer.valueOf(versionCode));
+                		baseThemeObj.setVersionCode(Integer.valueOf(versionCode));
                 	} catch (Exception e) {
                 		e.printStackTrace();
-                		basePandaThemeObj.setVersionCode(1);
+                		baseThemeObj.setVersionCode(1);
                 	}
                 }else{
-                	basePandaThemeObj.setVersionCode(1);
+                	baseThemeObj.setVersionCode(1);
                 }
                 //读取主题ID
                 String idFlag = attrMap.get("id_flag");
                 if (!TextUtils.isEmpty(idFlag)){
-                	basePandaThemeObj.setIDFlag(idFlag);
-                	basePandaThemeObj.setThemeId(idFlag);
+                	baseThemeObj.setIDFlag(idFlag);
+                	baseThemeObj.setThemeId(idFlag);
                 }else{
-                	basePandaThemeObj.setIDFlag(en_name);
-                	basePandaThemeObj.setThemeId(en_name);
+                	baseThemeObj.setIDFlag(en_name);
+                	baseThemeObj.setThemeId(en_name);
                 }
                 String supportV6 = attrMap.get("support_v6");
                 if(!TextUtils.isEmpty(supportV6)){
-                	basePandaThemeObj.setSupportV6("true".equals(supportV6));
+                	baseThemeObj.setSupportV6("true".equals(supportV6));
                 }
                 String guarded = attrMap.get("guarded");
                 if(!TextUtils.isEmpty(guarded)){
-                	basePandaThemeObj.setGuarded("true".equals(guarded));
+                	baseThemeObj.setGuarded("true".equals(guarded));
                 }
                 String guardedVersion = attrMap.get("guarded_version");
                 if(!TextUtils.isEmpty(guardedVersion)){
                 	try {
-                		basePandaThemeObj.setGuardedVersion(Integer.valueOf(guardedVersion));
+                		baseThemeObj.setGuardedVersion(Integer.valueOf(guardedVersion));
                 	} catch(Exception e) {
                 		e.printStackTrace();
                 	}
@@ -429,10 +429,10 @@ public class ThemeLoader {
                 if(!TextUtils.isEmpty(resType)){
                 	try {
                 		// 转换部分resType有问题的V6主题
-                		if(basePandaThemeObj.isSupportV6() && "2".equals(resType)) {
+                		if(baseThemeObj.isSupportV6() && "2".equals(resType)) {
                 			resType = "82301";
                 		}
-                		basePandaThemeObj.setResType(Integer.valueOf(resType));
+                		baseThemeObj.setResType(Integer.valueOf(resType));
                 	} catch(Exception e) {
                 		e.printStackTrace();
                 	}
@@ -440,31 +440,31 @@ public class ThemeLoader {
                 String launcherMinVersion = attrMap.get("launcher_min_version");
                 if(!TextUtils.isEmpty(launcherMinVersion)){
                 	try {
-                		basePandaThemeObj.setLauncherMinVersion(Integer.valueOf(launcherMinVersion));
+                		baseThemeObj.setLauncherMinVersion(Integer.valueOf(launcherMinVersion));
                 	} catch(Exception e) {
                 		e.printStackTrace();
                 	}
                 }
                 //读取theme-config节点其他属性
-                basePandaThemeObj.loadOtherDataFromXml(attrMap);
+                baseThemeObj.loadOtherDataFromXml(attrMap);
             }
             //读取workspace节点
             if (!TextUtils.isEmpty(elementValue)) {
-                if (PANDA_WORKSPACE_THEME.equalsIgnoreCase(parentTag)) {
-                	if (elementTag.equalsIgnoreCase(PANDA_TEXTCOLOR)) {
-                		basePandaThemeObj.getTextMap().put(BaseThemeData.TEXT_COLOR, elementValue);
-                    } else if (elementTag.equalsIgnoreCase(PANDA_TEXTSIZE)) {
-                        basePandaThemeObj.getTextMap().put(BaseThemeData.TEXT_SIZE, elementValue);
+                if (WORKSPACE_THEME.equalsIgnoreCase(parentTag)) {
+                	if (elementTag.equalsIgnoreCase(TEXTCOLOR)) {
+                		baseThemeObj.getTextMap().put(BaseThemeData.TEXT_COLOR, elementValue);
+                    } else if (elementTag.equalsIgnoreCase(TEXTSIZE)) {
+                        baseThemeObj.getTextMap().put(BaseThemeData.TEXT_SIZE, elementValue);
                     } 
                 }
-            } else if (PANDA_ICON_CONFIG.equalsIgnoreCase(parentTag)) {//读取keyconfig节点
-                putIcon(element, basePandaThemeObj);
+            } else if (ICON_CONFIG.equalsIgnoreCase(parentTag)) {//读取keyconfig节点
+                putIcon(element, baseThemeObj);
                 return;
             }
             if (element.haveChildren()) {
                 List<Element> children = element.getChildren();
                 for (Element child : children) {
-                    assemblyAttr(child, basePandaThemeObj);
+                    assemblyAttr(child, baseThemeObj);
                 }
             }
         }
@@ -477,7 +477,7 @@ public class ThemeLoader {
      *            元素对象。
      * @return 组装图标和文字后的BasePandaTheme对象。
      */
-    private void putIcon(Element appElement, BasePandaTheme basePandaThemeObj) {
+    private void putIcon(Element appElement, BaseTheme baseThemeObj) {
         if ((null != appElement) && appElement.haveChildren()) {
             List<Element> children = appElement.getChildren();
             String attr = "";
@@ -487,16 +487,16 @@ public class ThemeLoader {
                 if (null != element.getName()) {
                     elementName = cutPrefix(element.getName());
 
-                    if (PANDA_ICON_INTENT.equalsIgnoreCase(elementName)) {
+                    if (ICON_INTENT.equalsIgnoreCase(elementName)) {
                         attr = element.getValue();
-                    } else if (PANDA_ICON_TEXT.equalsIgnoreCase(elementName)) {
+                    } else if (ICON_TEXT.equalsIgnoreCase(elementName)) {
                         text = element.getValue();
                     } 
                 }
             }
             if ((null != attr) && (!"".equalsIgnoreCase(attr))) {
                 if ((null != text) && !"".equalsIgnoreCase(text)) {
-                    basePandaThemeObj.getTextMap().put(attr, text);
+                    baseThemeObj.getTextMap().put(attr, text);
                 }
             }
         }
@@ -608,8 +608,8 @@ public class ThemeLoader {
      * @throws DesktopException
      *            安装主题发生异常，异常代码见ErrorCode.java
      */
-	public synchronized BasePandaTheme loaderThemeZip(String zipPath) throws DesktopException {
-		BasePandaTheme basePandaTheme = ThemeManagerFactory.getInstance().getThemeManagerHelper().allocatPandaThemeObj();
+	public synchronized BaseTheme loaderThemeZip(String zipPath) throws DesktopException {
+		BaseTheme baseTheme = ThemeManagerFactory.getInstance().getThemeManagerHelper().allocatThemeObj();
 		namePrefix = createTimeZone();
 		String unZipPath = BaseConfig.THEME_DIR + namePrefix + "/";
 		if (!TelephoneUtil.isSdcardExist()) {
@@ -624,23 +624,23 @@ public class ThemeLoader {
 				throw new DesktopException(ErrorCode.ZIP_VALIDATE_ERROR_CODE);
 			}
 			//解析主题配置文件
-			loaderThemeXML(unZipPath + themeXmlName, basePandaTheme);
-			basePandaTheme.setAptPath(namePrefix + "/");
+			loaderThemeXML(unZipPath + themeXmlName, baseTheme);
+			baseTheme.setAptPath(namePrefix + "/");
 			
-			if (!StringUtil.isEmpty(basePandaTheme.getIDFlag())) {
+			if (!StringUtil.isEmpty(baseTheme.getIDFlag())) {
 				// 根据主题Id修改解压后的主题包路径
-				String idFlag = basePandaTheme.getIDFlag();
+				String idFlag = baseTheme.getIDFlag();
 				namePrefix = idFlag.replace(" ", "_");
 				String newUnZipPath = BaseConfig.THEME_DIR + namePrefix + "/";
-				basePandaTheme.setAptPath(namePrefix + "/");
+				baseTheme.setAptPath(namePrefix + "/");
 				
-				// 验证加密主题包合法性 caizp 2014-7-17
-	            if(basePandaTheme.isGuarded()) {
-	            	if(basePandaTheme.getGuardedVersion() > ThemeGlobal.SUPPORT_MAX_GUARDED_VERSION) {
+				// 验证加密主题包合法性
+	            if(baseTheme.isGuarded()) {
+	            	if(baseTheme.getGuardedVersion() > ThemeGlobal.SUPPORT_MAX_GUARDED_VERSION) {
 	            		throw new DesktopException(ErrorCode.NOT_SUPPORT_GUARD_VERSION_ERROR);
 	            	}
 	            	if(!validateThemeGuardedRes(unZipPath)) {
-	            		// 写入IMEI，暂时让主题成功安装，后期继续优化验证机制 caizp 2014-8-8
+	            		// 写入IMEI，暂时让主题成功安装，后期继续优化验证机制
 //	            		throw new PandaDesktopException(ErrorCode.GUARD_VALIDATE_ERROR);
 	            	}
 	            }
@@ -670,17 +670,17 @@ public class ThemeLoader {
 			}
 			
 			// 兼容安卓锁屏主题壁纸
-			loadThemeLockBg(basePandaTheme.getThemeId());
+			loadThemeLockBg(baseTheme.getThemeId());
 			// 解压天气皮肤包
-			loadThemeWeather(unZipPath, basePandaTheme.getThemeId());
+			loadThemeWeather(unZipPath, baseTheme.getThemeId());
 			// 解压第三方小插件皮肤包
-			loadThemeWidget(unZipPath, basePandaTheme.getThemeId());
+			loadThemeWidget(unZipPath, baseTheme.getThemeId());
 			// 重命名旧主题目录文件
 			renameRes(unZipPath + ThemeGlobal.THEME_APT_DRAWABLE_DIR);
 			renameRes(unZipPath + ThemeGlobal.THEME_APT_DRAWABLE_XHDPI_DIR);
 			
 			//更新主题数据记录
-			int ret = basePandaTheme.update();
+			int ret = baseTheme.update();
 			if (ret == ThemeGlobal.EXEC_FAIL) {
 				throw new DesktopException(ErrorCode.THEME_DATA_SAVE_ERROR);
 			}
@@ -691,7 +691,7 @@ public class ThemeLoader {
 			e.printStackTrace();
 			throw new DesktopException(ErrorCode.OTHER_ERROR_CODE);
 		}
-		return basePandaTheme;
+		return baseTheme;
 	}
     
     /**
@@ -701,8 +701,8 @@ public class ThemeLoader {
      * @return
      * @throws DesktopException
      */
-    public synchronized BasePandaTheme loaderThemeFolder(String namePrefixTemp) throws DesktopException {
-    	BasePandaTheme basePandaTheme = ThemeManagerFactory.getInstance().getThemeManagerHelper().allocatPandaThemeObj();
+    public synchronized BaseTheme loaderThemeFolder(String namePrefixTemp) throws DesktopException {
+    	BaseTheme baseTheme = ThemeManagerFactory.getInstance().getThemeManagerHelper().allocatThemeObj();
     	namePrefix = namePrefixTemp;
         String unZipPath = BaseConfig.THEME_DIR + namePrefix + "/";
         if (!TelephoneUtil.isSdcardExist()) {
@@ -710,17 +710,17 @@ public class ThemeLoader {
             throw new DesktopException(ErrorCode.SDCARD_UNFOUND_CODE);
         }
         try {
-        	loaderThemeXML(unZipPath + themeXmlName, basePandaTheme);
+        	loaderThemeXML(unZipPath + themeXmlName, baseTheme);
         	//主题重新导入的时候，保存在数据库中的themeid和idflag，也是将下划线改为空格.
-            basePandaTheme.setThemeId(basePandaTheme.getIDFlag());
-            basePandaTheme.setIDFlag(basePandaTheme.getIDFlag());
-            basePandaTheme.setAptPath(namePrefix + "/");
+            baseTheme.setThemeId(baseTheme.getIDFlag());
+            baseTheme.setIDFlag(baseTheme.getIDFlag());
+            baseTheme.setAptPath(namePrefix + "/");
             //兼容安卓锁屏主题壁纸
-            loadThemeLockBg(basePandaTheme.getThemeId());
+            loadThemeLockBg(baseTheme.getThemeId());
             //解压天气皮肤包
-            loadThemeWeather(unZipPath, basePandaTheme.getThemeId());
+            loadThemeWeather(unZipPath, baseTheme.getThemeId());
             //解压第三方小插件皮肤包
-            loadThemeWidget(unZipPath, basePandaTheme.getThemeId());
+            loadThemeWidget(unZipPath, baseTheme.getThemeId());
         } catch (DesktopException pe) {
 //        	FileUtil.delFolder(unZipPath);
             throw pe;
@@ -728,7 +728,7 @@ public class ThemeLoader {
 			e.printStackTrace();
 			throw new DesktopException(ErrorCode.OTHER_ERROR_CODE);
 		}
-        return basePandaTheme;
+        return baseTheme;
     }
     
     /**
@@ -899,8 +899,8 @@ public class ThemeLoader {
     public static void loadThemeLockBg(String themeId){
     	try {
     		String aptThemePath = BaseConfig.THEME_DIR + themeId.replace(" ", "_");
-        	String lockSkinPath = aptThemePath + ThemeGlobal.THEME_91ZNS_PATH;
-    		String lockBgFilePath = aptThemePath + "/" + ThemeGlobal.THEME_APT_DRAWABLE_DIR + BaseThemeData.PANDA_LOCK_MAIN_BACKGROUND + ThemeGlobal.CONVERTED_SUFFIX_JPG;
+        	String lockSkinPath = aptThemePath + ThemeGlobal.THEME_LOCK_PATH;
+    		String lockBgFilePath = aptThemePath + "/" + ThemeGlobal.THEME_APT_DRAWABLE_DIR + BaseThemeData.SCREEN_LOCK_MAIN_BACKGROUND + ThemeGlobal.CONVERTED_SUFFIX_JPG;
     		String desFilePath = lockSkinPath + BaseThemeData.ZNS_LOCK_BG + ".jpg";
     		if(new File(lockBgFilePath).exists() && !new File(desFilePath).exists()){
     			File dir = new File(lockSkinPath);

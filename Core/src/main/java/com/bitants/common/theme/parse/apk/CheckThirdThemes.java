@@ -19,7 +19,7 @@ import android.util.Log;
 import com.bitants.common.launcher.config.BaseConfig;
 import com.bitants.common.theme.data.ThemeType;
 import com.bitants.common.theme.ThemeManagerFactory;
-import com.bitants.common.theme.data.BasePandaTheme;
+import com.bitants.common.theme.data.BaseTheme;
 import com.bitants.common.theme.data.BaseThemeData;
 import com.bitants.common.theme.db.LauncherThemeDataBase;
 import com.bitants.common.theme.parse.apt.ThemeLoader;
@@ -84,15 +84,15 @@ public class CheckThirdThemes extends Thread{
 	 * <br>Description: 检测所有已安装的PandaHome主题包并写入数据库
 	 */
 	private void installExternalThemes(){
-        final List<String> pandaList = checkExternalThemes(ThemeGlobal.INTENT_PANDAHOME_THEME);
+        final List<String> themes = checkExternalThemes(ThemeGlobal.INTENT_HOME_THEME);
         
         Thread t0 = null;
-        if(pandaList != null && pandaList.size() > 0){
-            totalTask += pandaList.size();
+        if(themes != null && themes.size() > 0){
+            totalTask += themes.size();
             t0 = new Thread(){
                 @Override
 				public void run(){
-                    saveExternalThemes(pandaList, ThemeType.PANDAHOME);
+                    saveExternalThemes(themes, ThemeType.HOME);
                 }
             };
             t0.start();
@@ -125,7 +125,7 @@ public class CheckThirdThemes extends Thread{
                 	continue;
                 }
                 
-                final BasePandaTheme theme = ThemeManagerFactory.getInstance().getThemeManagerHelper().allocatPandaThemeObj();
+                final BaseTheme theme = ThemeManagerFactory.getInstance().getThemeManagerHelper().allocatThemeObj();
                 theme.setThemeId(packName);
                 theme.setIDFlag(packName);
                 if(et.hasIHomeConfig()){
@@ -137,13 +137,13 @@ public class CheckThirdThemes extends Thread{
                     theme.setThemeName(name);
                     theme.setThemeEnName(name);
                     theme.loadOtherDataFromExContext(et);
-                    theme.setSavedPandaFlag(1);
+                    theme.setSavedFlag(1);
                 } else{
                     ApplicationInfo info = context.getPackageManager().getApplicationInfo(packName, 0);
                     String name = "" + context.getPackageManager().getApplicationLabel(info);
                     theme.setThemeName(name);
                     theme.setThemeEnName(name);
-                    theme.setSavedPandaFlag(0);
+                    theme.setSavedFlag(0);
                 }
                 PackageInfo packInfo = context.getPackageManager().getPackageInfo(packName, PackageManager.GET_INSTRUMENTATION);
                 theme.setVersionCode(packInfo.versionCode);
@@ -163,11 +163,11 @@ public class CheckThirdThemes extends Thread{
                 Context etCtx = et.getContext();
                 if(null != etCtx){
                 	// 兼容安卓锁屏主题壁纸
-                    int lockBgResId = etCtx.getResources().getIdentifier(BaseThemeData.PANDA_LOCK_MAIN_BACKGROUND, "drawable", et.getPackageName());
+                    int lockBgResId = etCtx.getResources().getIdentifier(BaseThemeData.SCREEN_LOCK_MAIN_BACKGROUND, "drawable", et.getPackageName());
                     if(0 != lockBgResId){
                     	InputStream lockBgInputStream = null;
                     	lockBgInputStream = etCtx.getResources().openRawResource(lockBgResId);
-                    	String lockSkinPath = BaseConfig.THEME_DIR + theme.getThemeId() + ThemeGlobal.THEME_91ZNS_PATH;
+                    	String lockSkinPath = BaseConfig.THEME_DIR + theme.getThemeId() + ThemeGlobal.THEME_LOCK_PATH;
                     	File dir = new File(lockSkinPath);
                 		if (!dir.isDirectory()) {
                 			dir.mkdirs();
@@ -264,7 +264,7 @@ public class CheckThirdThemes extends Thread{
      * <br>Description: 检测已被卸载的APK主题，删除数据库中遗留的数据
      */
 	private void checkUninstallThemes(){
-		String sql = "select id from Theme where type='" + ThemeType.PANDAHOME + "'";
+		String sql = "select id from Theme where type='" + ThemeType.HOME + "'";
 		LauncherThemeDataBase db = new LauncherThemeDataBase(ctx);
 		Cursor c = db.query(sql);
 		if(c != null){ 

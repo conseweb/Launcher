@@ -47,7 +47,7 @@ public class BaseSimpleTheme {
     /**
      * 魔镜桌面标识
      */
-    public int savedPandaFlag = -1;
+    public int savedFlag = -1;
 
     /**
      * 主题包版本号

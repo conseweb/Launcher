@@ -38,7 +38,7 @@ public class ApkTools {
 	 * @return boolean
 	 */
 	public static boolean installAssestApk(final Context ctx, final String pckApk, final String title) {
-		return installAssestApk(ctx, pckApk, -1, ctx.getText(R.string.common_tip), ctx.getString(R.string.panda_widget_confirm_install, title), ctx.getText(R.string.common_button_confirm),
+		return installAssestApk(ctx, pckApk, -1, ctx.getText(R.string.common_tip), ctx.getString(R.string.widget_confirm_install, title), ctx.getText(R.string.common_button_confirm),
 				ctx.getText(R.string.common_button_cancel));
 	}
 
