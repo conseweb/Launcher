@@ -1,19 +1,20 @@
 package com.bitants.launcherdev.settings;
 
-import android.annotation.TargetApi;
-import android.app.Activity;
+//import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.preference.PreferenceFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
+//import android.support.v7.app.ActionBarActivity;
+//import android.support.v7.app.AppCompatActivity;
 
 import com.bitants.launcher.R;
-import com.github.machinarius.preferencefragment.PreferenceFragment;
+//import com.github.machinarius.preferencefragment.PreferenceFragment;
 
 
-public class SettingsActivity extends ActionBarActivity {
+public class SettingsActivity extends FragmentActivity {
 
     private SettingsFragment mSettingsFragment;
 
@@ -28,7 +29,7 @@ public class SettingsActivity extends ActionBarActivity {
 
     }
 
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+//    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void replaceFragment(int viewId, Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(viewId, fragment).commit();

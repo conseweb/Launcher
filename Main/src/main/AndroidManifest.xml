@@ -3,8 +3,8 @@
     package="com.bitants.launcher"
     android:installLocation="internalOnly"
     android:sharedUserId="com.bitants.launcher.uid"
-    android:versionCode="150"
-    android:versionName="1.0.0.149" >
+    android:versionCode="163"
+    android:versionName="1.0.0.162" >
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
@@ -124,7 +124,7 @@
             android:name="com.bitants.launcherdev.settings.SettingsActivity"
             android:screenOrientation="portrait"
             android:label="@string/title_activity_setting"
-            android:theme="@style/Theme.AppCompat.Light" />
+            />
         <activity
             android:name="com.bitants.launcherdev.settings.HomeSettingsActivity"
             android:screenOrientation="portrait"
