@@ -5,6 +5,7 @@ import com.android.volley.toolbox.ImageLoader;
 import com.avos.avoscloud.AVAnalytics;
 import com.avos.avoscloud.AVOSCloud;
 import com.bitants.common.launcher.BaseLauncherApplication;
+import com.bitants.common.utils.ALog;
 import com.bitants.launcherdev.kitset.config.ConfigDataBaseHelper;
 import com.bitants.common.launcher.config.BaseConfig;
 import com.bitants.common.launcher.model.load.LauncherLoaderHelper;
@@ -27,6 +28,8 @@ public class AppController extends BaseLauncherApplication {
 		super.onCreate();
 		mInstance = this;
 
+		ALog.setTag("Launcher");
+		ALog.setLevel(ALog.Level.D);
 	}
 
 	public static synchronized AppController getInstance() {

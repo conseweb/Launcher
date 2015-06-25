@@ -24,6 +24,7 @@ import com.bitants.common.kitset.util.BaseBitmapUtils;
 import com.bitants.common.kitset.util.ScreenUtil;
 import com.bitants.common.kitset.util.StringUtil;
 import com.bitants.common.kitset.util.SystemUtil;
+import com.bitants.common.utils.ALog;
 import com.bitants.launcher.R;
 import com.bitants.launcherdev.datamodel.db.AppCatDb;
 import com.bitants.launcherdev.folder.model.FolderModel;
@@ -139,9 +140,9 @@ public class LauncherProviderHelper {
 
 			initLauncherApp(db, mContext);
 		} catch (XmlPullParserException e) {
-			Log.w(TAG, "Got exception parsing favorites.", e);
+			ALog.w("Got exception parsing favorites.", e);
 		} catch (IOException e) {
-			Log.w(TAG, "Got exception parsing favorites.", e);
+			ALog.w("Got exception parsing favorites.", e);
 		}
 
 		return;
@@ -459,7 +460,7 @@ public class LauncherProviderHelper {
 				values.put(Favorites.TITLE, mContext.getResources().getString(a.getResourceId(R
 						.styleable.Favorite_titleRef, 0)));
 			} catch (URISyntaxException e) {
-				e.printStackTrace();
+				ALog.e("Exception: ", e, e.getMessage());
 			}
 
 			values.put(Favorites.INTENT, intent.toUri(0));
@@ -492,7 +493,7 @@ public class LauncherProviderHelper {
 				values.put(Favorites.TITLE, mContext.getResources().getString(a.getResourceId(R
                         .styleable.Favorite_titleRef, 0)));
 			} catch (URISyntaxException e) {
-				e.printStackTrace();
+				ALog.e("Exception: ", e, e.getMessage());
 			}
 		} else {
 			intent = AndroidPackageUtils.getNewTaskIntent(componentName);
@@ -529,7 +530,7 @@ public class LauncherProviderHelper {
 			uri = a.getString(R.styleable.Favorite_uri);
 			intent = Intent.parseUri(uri, 0);
 		} catch (URISyntaxException e) {
-			Log.w(TAG, "Shortcut has malformed uri: " + uri);
+			ALog.w("Shortcut has malformed uri: %s.", uri);
 			return false; // Oh well
 		}
 
@@ -583,8 +584,8 @@ public class LauncherProviderHelper {
 			if (startScreen == -1)
 				return null;
 			return getFirstVacantCell(db, 1, 1, startScreen); 
-		} catch (Exception ex) {
-			ex.printStackTrace();
+		} catch (Exception e) {
+			ALog.e("Exception: ", e, e.getMessage());
 		} finally {
 			if (db != null && db.isOpen()) {
 				db.close();
@@ -609,7 +610,7 @@ public class LauncherProviderHelper {
 			if (cursor != null && cursor.moveToFirst())
 				return cursor.getInt(0);
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			ALog.e("Exception: ", ex, ex.getMessage());
 		} finally {
 			if (cursor != null && !cursor.isClosed())
 				cursor.close();
@@ -678,7 +679,7 @@ public class LauncherProviderHelper {
 
 			return CellLayoutHelper.findFirstVacantCell(occupied, mSpanX, mSpanY);
 		} catch (Exception e) {
-			Log.e("LauncherProvider", e.toString());
+			ALog.e("Exception: ", e, e.getMessage());
 			return null;
 		} finally {
 			if(null != c){
@@ -773,7 +774,7 @@ public class LauncherProviderHelper {
 
 			return fromBotoom ? CellLayoutHelper.findVacantCellFromBottom(occupied, mSpanX, mSpanY) : CellLayoutHelper.findFirstVacantCell(occupied, mSpanX, mSpanY);
 		} catch (Exception e) {
-			Log.e("getVacantCellOnScreen30", e.toString());
+			ALog.e("Exception: ", e, e.getMessage());
 			return null;
 		} finally {
 			if (null != c) {
