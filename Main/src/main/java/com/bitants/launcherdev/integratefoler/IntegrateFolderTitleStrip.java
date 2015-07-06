@@ -12,11 +12,13 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.bitants.common.utils.ALog;
+
 import java.util.ArrayList;
 
 public class IntegrateFolderTitleStrip extends View implements ViewPager.OnPageChangeListener {
 
-	private final String TAG = "IntegrateFolderTitleStrip";
+//	private final String TAG = "IntegrateFolderTitleStrip";
 	/**
 	 * 字符最大个数
 	 */
@@ -69,7 +71,8 @@ public class IntegrateFolderTitleStrip extends View implements ViewPager.OnPageC
 	// position为0 position按照前面显示的那页去确定的
 	@Override
 	public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-		Log.e(TAG, "onPageScrolled:" + position + "," + positionOffset + "," + positionOffsetPixels);
+//		ALog.e("positon: " + position + "," + positionOffset + "," +
+//				positionOffsetPixels);
 		// positionOffset 相对于一个页面的百分比 静止状态相当于0
 		update(position, positionOffset);
 	}
@@ -77,7 +80,7 @@ public class IntegrateFolderTitleStrip extends View implements ViewPager.OnPageC
 	// ViewPager.OnPageChangeListener 接口 滑动超过一半 滑动完毕后（state =2）调用该方法
 	@Override
 	public void onPageSelected(int position) {
-		Log.e(TAG, "onPageSelected:" + position + "," + mScrollState);
+//		ALog.d("position: " + position + "," + mScrollState);
 		if (mScrollState != ViewPager.SCROLL_STATE_IDLE) {
 			return;
 		}
@@ -89,7 +92,7 @@ public class IntegrateFolderTitleStrip extends View implements ViewPager.OnPageC
 	@Override
 	public void onPageScrollStateChanged(int state) {
 		this.mScrollState = state;
-		Log.e("IntegrateFolderTitleStrip", "onPageScrollStateChanged:" + state);
+//		ALog.d("state: " + state);
 
 	}
 
@@ -168,7 +171,7 @@ public class IntegrateFolderTitleStrip extends View implements ViewPager.OnPageC
 		int left = 0;
 		while (index < count) {
 			CharSequence text = mPageAdapter.getPageTitle(index);
-			Log.e(TAG, "text:" + text);
+//			ALog.d("text: " + text);
 			if (text.length() > MAX_LENGTH) {
 				text = text.subSequence(0, MAX_LENGTH - 1) + "...";
 			}
@@ -271,7 +274,8 @@ public class IntegrateFolderTitleStrip extends View implements ViewPager.OnPageC
 						mPaint.setAlpha(alpha);
 						scale = 1.0F;
 					}
-					Log.e(TAG, curItem + "," + mScrollPosition + "," + pageIndex + "," + scale);
+//					ALog.d("position: " + curItem + "," + mScrollPosition + "," + pageIndex + "," +
+//                                    " + "+scale);
 				}
 			}
 			float x = curRect.exactCenterX() + mCenterX + halfWidth;

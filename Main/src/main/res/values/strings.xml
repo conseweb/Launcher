@@ -2,8 +2,8 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="application_name" msgid="8424725141379931883">Mirror Launcher</string>
-    <string name="app_name">Mirror Launcher</string>
+    <string name="application_name" msgid="8424725141379931883">Ant Launcher</string>
+    <string name="app_name">AntLauncher</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
 

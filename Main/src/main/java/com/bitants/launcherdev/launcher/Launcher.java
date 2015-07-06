@@ -24,6 +24,7 @@ import com.bitants.common.launcher.BaseLauncher;
 import com.bitants.common.launcher.info.ItemInfo;
 import com.bitants.common.launcher.screens.ScreenViewGroup;
 import com.bitants.common.launcher.support.BaseCellLayoutHelper;
+import com.bitants.common.utils.ALog;
 import com.bitants.launcher.R;
 import com.bitants.launcherdev.app.AppInfoIntentCommandAdapter;
 import com.bitants.launcherdev.app.CustomIntentSwitcherController;
@@ -525,7 +526,6 @@ public class Launcher extends BaseLauncher {
 		addOnKeyDownListener(previewEditController);
 		// 添加推送SDK适配器
         // TODO: init or setup push sdk
-//		PushManager.getInstance().setPushSDKAdapter(new PushSDKAdapter());
 	}
 
 	@Override
@@ -595,11 +595,15 @@ public class Launcher extends BaseLauncher {
 	}
 	
 	@Override
-	public void addNewInstallApps(List<ApplicationInfo> apps, String packageName){
+	public void addNewInstallApps(List<ApplicationInfo> apps, String packageName) {
+		// TODO: add new installed apps to specific folder
+        ALog.d("Enter");
+
+
 		for(ApplicationInfo info : apps){
 			int[] pageInfo = LauncherProviderHelper.findVacantCell4AppAdd(getBaseContext());
 			if (pageInfo == null) {
-				Log.e(Global.TAG, "can't find cell for new app");
+				ALog.d("can't find cell for new app");
 				continue;
 			} 
 			int page = pageInfo[0];
@@ -619,6 +623,7 @@ public class Launcher extends BaseLauncher {
 			
 			//FIXME 在编辑模式下可能会有刷新的问题
 		}
+        ALog.d("Exit");
 	}
 	
 	

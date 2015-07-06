@@ -22,6 +22,7 @@ import com.bitants.common.launcher.screens.preview.PreviewCellView;
 import com.bitants.common.launcher.screens.preview.PreviewWorkspace;
 import com.bitants.common.launcher.support.BaseCellLayoutHelper;
 import com.bitants.common.launcher.view.BaseDeleteZoneTextView;
+import com.bitants.common.utils.ALog;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -386,7 +387,7 @@ public class BaseDragController implements DragLayerEventHandler, OnKeyDownListe
 			endDrag();
 			break;
 		}
-		Log.e(TAG,"onInterceptTouchEvent return "+mDragging +","+action);
+//		ALog.d("return "+mDragging +","+action);
 		return mDragging;
 	}
 	
@@ -451,7 +452,7 @@ public class BaseDragController implements DragLayerEventHandler, OnKeyDownListe
 	public boolean onTouchEvent(MotionEvent ev) {
 		if (!mDragging) {
 			mWorkspace.getLauncher().closeFolder();
-			Log.e(TAG,"onTouchEvent not mDragging return false");
+//			ALog.d("not mDragging return false");
 			return false;
 		}
 
@@ -518,7 +519,8 @@ public class BaseDragController implements DragLayerEventHandler, OnKeyDownListe
 						int velocityY = (int) vTracker.getYVelocity();
 						ScreenViewGroup w = (ScreenViewGroup)dropTarget;
 						if(velocityY < 0 && velocityY < mActionDragOverMaxVelocity){//拖动速度快时，不响应合并文件夹动画
-							Log.i(TAG, "Drag too fast, so ignore onDragOver. velocityY:" + velocityY);
+							ALog.i("Drag too fast, so ignore onDragOver. velocityY:" +
+									velocityY);
 							w.setAllowAnimateMerFolder(false);
 						}else{
 							w.setAllowAnimateMerFolder(true);
@@ -616,7 +618,7 @@ public class BaseDragController implements DragLayerEventHandler, OnKeyDownListe
 			break;
 
 		}
-		Log.e(TAG,"onTouchEvent  return true action:"+ action);
+//		ALog.d("return true action:" + action);
 		return true;
 	}
 	
@@ -1362,9 +1364,6 @@ public class BaseDragController implements DragLayerEventHandler, OnKeyDownListe
 	
 	/**
 	 * 创建菜单
-	 * @param cellInfo
-	 * @param view
-	 * @param dt
 	 */
 	public BaseShortcutMenu createShortcutMenu() {
 		return null;

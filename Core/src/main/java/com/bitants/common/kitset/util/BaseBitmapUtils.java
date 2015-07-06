@@ -36,6 +36,7 @@ import com.bitants.common.theme.data.ThemeGlobal;
 import com.bitants.common.launcher.support.BaseIconCache;
 import com.bitants.common.theme.parse.EncodeTools;
 import com.bitants.common.R;
+import com.bitants.common.utils.ALog;
 
 /**
  * 图片处理相关内容
@@ -1146,9 +1147,9 @@ public class BaseBitmapUtils {
                     bitmap.isMutable() &&
                     !bitmap.isRecycled();
             if(isReuse) {
-                Log.e(TAG, "reuse apk bitmap");
+                ALog.d("reuse apk bitmap");
             } else {
-                Log.e(TAG, "create new apk bitmap");
+                ALog.d("create new apk bitmap");
             }
 
 			final Canvas canvas = sCanvas;

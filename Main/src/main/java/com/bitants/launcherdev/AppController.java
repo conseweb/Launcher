@@ -28,8 +28,8 @@ public class AppController extends BaseLauncherApplication {
 		super.onCreate();
 		mInstance = this;
 
-		ALog.setTag("Launcher");
-		ALog.setLevel(ALog.Level.D);
+		ALog.setTag("BitAntLauncher");
+		ALog.setLevel(ALog.Level.I);
 	}
 
 	public static synchronized AppController getInstance() {

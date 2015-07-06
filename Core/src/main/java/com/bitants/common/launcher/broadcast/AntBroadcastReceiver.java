@@ -3,6 +3,8 @@ package com.bitants.common.launcher.broadcast;
 import android.content.BroadcastReceiver;
 /**
  * 集中管理广播，请将IntentFilter的Action类型定义与此
+ *
+ * TODO: need to change intent name
  */
 public abstract class AntBroadcastReceiver extends BroadcastReceiver {
 	/**

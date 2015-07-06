@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 
 import com.avos.avoscloud.AVAnalytics;
 import com.bitants.launcher.R;
@@ -13,7 +14,7 @@ import com.bitants.launcher.R;
  */
 public class SplashActivity extends Activity {
 
-    private static final int SPLASH_DISPLAY_TIME = 3000; /* 3 seconds */
+    private static final long SPLASH_DISPLAY_TIME = 3000L; /* 3 seconds */
     private Handler mHandler;
     private Runnable mRunnable;
 
@@ -28,8 +29,10 @@ public class SplashActivity extends Activity {
         rootView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
-                finish();
+                startActivity(new Intent(SplashActivity.this, Launcher.class));
+                SplashActivity.this.finish();
+                overridePendingTransition(R.anim.mainfadein,
+                        R.anim.splashfadeout);
             }
         });
 

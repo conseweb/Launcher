@@ -5,6 +5,8 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.*;
 import android.widget.Scroller;
+
+import com.bitants.common.utils.ALog;
 import com.bitants.launcher.R;
 import com.bitants.launcherdev.launcher.DragController;
 import com.bitants.launcherdev.launcher.Launcher;
@@ -17,7 +19,7 @@ import com.bitants.common.launcher.view.DragView;
 import java.util.List;
 
 public class IntegrateFolderPage extends ViewGroup {
-	protected static final String TAG = "IntegrateFolderPage";
+//	protected static final String TAG = "IntegrateFolderPage";
 	private FolderInfo info;
 	private IntegrateFolderGridView gridview;
 	private View promotionLayout;
@@ -75,7 +77,7 @@ public class IntegrateFolderPage extends ViewGroup {
 		case MotionEvent.ACTION_DOWN:
 			mLastionMotionY = y;
 			mBeginY = y;
-			Log.e(TAG, mScroller.isFinished() + "");
+			ALog.d("state: " + mScroller.isFinished() + "");
 			mTouchState = mScroller.isFinished() ? TOUCH_STATE_REST
 					: TOUCH_STATE_SCROLLING;
 			break;
@@ -84,7 +86,7 @@ public class IntegrateFolderPage extends ViewGroup {
 			mTouchState = TOUCH_STATE_REST;
 			break;
 		}
-		Log.e(TAG, mTouchState + "====" + TOUCH_STATE_REST);
+		ALog.d("state: " + mTouchState + "====" + TOUCH_STATE_REST);
 		return mTouchState != TOUCH_STATE_REST;
 	}
 
@@ -194,13 +196,13 @@ public class IntegrateFolderPage extends ViewGroup {
 	private void scrollDown(int velocity) {
 		float dy = Math.abs((totalHeight - getHeight()) * velocity * 2.0f
 				/ mMaximumVelocity);
-		Log.e("scrollDown", dy + ",===" + velocity);
+//		ALog.d("state: " + dy + ",===" + velocity);
 		if (getScrollY() + dy > (totalHeight - getHeight())) {
 			dy = totalHeight - getHeight() - getScrollY();
-			Log.e("scrollDown", dy + ",111===");
+//			ALog.d("state: " + dy + ",111===");
 		}
 		int duration = (int) ((float) Math.abs(dy) / getHeight() * 1500);
-		Log.e("scrollDown", duration + ",111===");
+//		ALog.d("state: " + duration + ",111===");
 		// mScroller.startScroll(0, getScrollY(), 0, (int)dy, duration);
 		mScroller.startScroll(0, getScrollY(), 0, (int) dy);
 		invalidate();
@@ -214,13 +216,13 @@ public class IntegrateFolderPage extends ViewGroup {
 	private void scrollUp(int velocity) {
 		float dy = Math.abs((totalHeight - getHeight()) * velocity * 2.0f
 				/ mMaximumVelocity);
-		Log.e("scrollUp", dy + ",snapDown===" + velocity);
+//		ALog.d(dy + ",snapDown===" + velocity);
 		if (getScrollY() - dy < 0) {
 			dy = getScrollY();
-			Log.e("scrollUp", dy + ",111=snapDown==");
+//			ALog.d(dy + ",111=snapDown==");
 		}
 		int duration = (int) ((float) Math.abs(dy) / getHeight() * 1500);
-		Log.e("scrollUp", duration + ",111=snapDown==");
+//		ALog.d(duration + ",111=snapDown==");
 		// mScroller.startScroll(0, getScrollY(), 0, -(int)dy, duration);
 		mScroller.startScroll(0, getScrollY(), 0, -(int) dy);
 		// 由于触摸事件不会重新绘制View，所以此时需要手动刷新View 否则没效果
@@ -229,9 +231,9 @@ public class IntegrateFolderPage extends ViewGroup {
 
 	@Override
 	public void computeScroll() {
-		Log.e(TAG, "computeScroll");
+//		ALog.i("computeScroll");
 		if (mScroller.computeScrollOffset()) {
-			Log.e(TAG, mScroller.getCurrX() + "======" + mScroller.getCurrY());
+//			ALog.d(mScroller.getCurrX() + "======" + mScroller.getCurrY());
 			scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
 			postInvalidate();
 		} else if (mTouchState == TOUCH_STATE_REST) {
@@ -240,7 +242,7 @@ public class IntegrateFolderPage extends ViewGroup {
 //				postInvalidate();
 //			}
 		} else {
-			Log.e(TAG, "have done the scoller -----");
+//			ALog.d("have done the scoller -----");
 		}
 
 	}
@@ -398,7 +400,7 @@ public class IntegrateFolderPage extends ViewGroup {
 					(ApplicationInfo) getItem(position));
 			view.setTag(R.string.app_name,
 					((ApplicationInfo) getItem(position)).title);
-			Log.e("NewTest1", "getView :position:" + position + ","
+			ALog.d("position:" + position + ","
 					+ ((ApplicationInfo) getItem(position)).title);
 			return view;
 		}
