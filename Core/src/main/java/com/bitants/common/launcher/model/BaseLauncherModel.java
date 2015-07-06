@@ -54,9 +54,10 @@ import com.bitants.common.theme.pref.ThemeSharePref;
 import com.bitants.common.launcher.info.FolderInfo;
 import com.bitants.common.launcher.info.ItemInfo;
 import com.bitants.common.launcher.info.WidgetInfo;
+import com.bitants.common.utils.ALog;
 
 public class BaseLauncherModel extends BroadcastReceiver{
-	static final String TAG = "BaseLauncherModel";
+//	static final String TAG = "BaseLauncherModel";
 	
 	static final boolean DEBUG_LOADERS = false;
 	static final boolean PROFILE_LOADERS = false;
@@ -127,7 +128,7 @@ public class BaseLauncherModel extends BroadcastReceiver{
 				}
 
 				if (Intent.ACTION_PACKAGE_CHANGED.equals(action)) {
-					//不处理天天动听插件的ACTION_PACKAGE_CHANGED caizp 2014-03-14
+					//不处理天天动听插件的ACTION_PACKAGE_CHANGED
 					if(isActionOnPkgChanged(packageName)){
 						modified = true;
 					}
@@ -144,7 +145,7 @@ public class BaseLauncherModel extends BroadcastReceiver{
 				}
 				final Callbacks callbacks = mCallbacks;
 				if (callbacks == null) {
-					Log.w(TAG, "Nobody to tell about the new app.  Launcher is probably loading.");
+					ALog.w("Nobody to tell about the new app.  Launcher is probably loading.");
 					return;
 				}
 
@@ -321,9 +322,9 @@ public class BaseLauncherModel extends BroadcastReceiver{
 					}
 				}
 			} catch (RemoteException e) {
-				Log.e(TAG, "add to database failed");
+				ALog.e("add to database failed", e, e.getMessage());
 			} catch (OperationApplicationException e) {
-				Log.e(TAG, "add to database failed");
+				ALog.e("add to database failed", e, e.getMessage());
 			}
 		}
 	}
@@ -353,11 +354,10 @@ public class BaseLauncherModel extends BroadcastReceiver{
 			try {
 				context.getContentResolver().applyBatch(Favorites.AUTHORITY, batchOps);
 			} catch (RemoteException e) {
-				e.printStackTrace();
-				Log.e(TAG, "update database failed");
+				ALog.e("update database failed", e, e.getMessage());
 			} catch (OperationApplicationException e) {
 				e.printStackTrace();
-				Log.e(TAG, "update database failed");
+				ALog.e("update database failed", e, e.getMessage());
 			}
 		}
 	}
@@ -378,11 +378,9 @@ public class BaseLauncherModel extends BroadcastReceiver{
 			try {
 				context.getContentResolver().applyBatch(Favorites.AUTHORITY, batchOps);
 			} catch (RemoteException e) {
-				e.printStackTrace();
-				Log.e(TAG, "update database failed");
+				ALog.e("update database failed", e, e.getMessage());
 			} catch (OperationApplicationException e) {
-				e.printStackTrace();
-				Log.e(TAG, "update database failed");
+				ALog.e("update database failed", e, e.getMessage());
 			}
 		}
 	}
@@ -436,7 +434,7 @@ public class BaseLauncherModel extends BroadcastReceiver{
 					final int id = resources.getIdentifier(iconResource.resourceName, null, null);
 					icon = BaseBitmapUtils.createIconBitmapThumbnail(resources.getDrawable(id), context);
 				} catch (Exception e) {
-					Log.w(TAG, "Could not load shortcut icon: " + extra);
+					ALog.e("Could not load shortcut icon: " + extra, e, e.getMessage());
 				}
 			}
 		}
@@ -506,7 +504,7 @@ public class BaseLauncherModel extends BroadcastReceiver{
 			}
 
 		} catch (Exception e) {
-			Log.e(TAG, "err in getItemsByScreen():" + e.toString());
+			ALog.e("err in getItemsByScreen():", e, e.getMessage());
 			return null;
 		} finally {
 			c.close();
@@ -576,7 +574,7 @@ public class BaseLauncherModel extends BroadcastReceiver{
 		public void startLoader(Context context, boolean isLaunching, boolean worspaceOnly, boolean isAsync) {
 			synchronized (mLock) {
 				if (DEBUG_LOADERS) {
-					Log.d(TAG, "startLoader isLaunching=" + isLaunching);
+					ALog.d("startLoader isLaunching=" + isLaunching);
 				}
 
 				// Don't bother to start the thread if we know it's not going to
@@ -658,11 +656,11 @@ public class BaseLauncherModel extends BroadcastReceiver{
 
 			private void loadAndBindWorkspace() {
 				if (!isAsync) {
-					Log.e(TAG, "start loadWorkspace and bindWorkspace");
+					ALog.d("start loadWorkspace and bindWorkspace");
 					mLauncherLoader.loadWorkspace(mLauncher);
 					mLauncherLoader.bindWorkspace();
 				} else if (mLauncher.allowToBindWorkspace()) {
-					Log.e(TAG, "start bindWorkspace");
+					ALog.d("start bindWorkspace");
 					mLauncherLoader.bindWorkspace();
 				}
 			}
@@ -691,11 +689,11 @@ public class BaseLauncherModel extends BroadcastReceiver{
 
 				if (loadWorkspaceFirst) {
 					if (DEBUG_LOADERS)
-						Log.d(TAG, "step 1: loading workspace");
+						ALog.d("step 1: loading workspace");
 					loadAndBindWorkspace();
 				} else {
 					if (DEBUG_LOADERS)
-						Log.d(TAG, "step 1: special: loading all apps");
+						ALog.d("step 1: special: loading all apps");
 					loadAndBindAllApps();
 				}
 
@@ -709,11 +707,11 @@ public class BaseLauncherModel extends BroadcastReceiver{
 				// second step
 				if (loadWorkspaceFirst) {
 					if (DEBUG_LOADERS)
-						Log.d(TAG, "step 2: loading all apps");
+						ALog.d("step 2: loading all apps");
 					loadAndBindAllApps();
 				} else {
 					if (DEBUG_LOADERS)
-						Log.d(TAG, "step 2: special: loading workspace");
+						ALog.d("step 2: special: loading workspace");
 					loadAndBindWorkspace();
 				}
 
@@ -759,20 +757,21 @@ public class BaseLauncherModel extends BroadcastReceiver{
 			}
 			
 			public void dumpState() {
-				Log.d(TAG, "mLoader.mLoaderThread.mContext=" + mContext);
-				Log.d(TAG, "mLoader.mLoaderThread.mWaitThread=" + mWaitThread);
-				Log.d(TAG, "mLoader.mLoaderThread.mIsLaunching=" + mIsLaunching);
-				Log.d(TAG, "mLoader.mLoaderThread.mStopped=" + mLauncherLoader.isStopped());
-				Log.d(TAG, "mLoader.mLoaderThread.mLoadAndBindStepFinished=" + mLoadAndBindStepFinished);
+				ALog.d("mLoader.mLoaderThread.mContext=" + mContext);
+				ALog.d("mLoader.mLoaderThread.mWaitThread=" + mWaitThread);
+				ALog.d("mLoader.mLoaderThread.mIsLaunching=" + mIsLaunching);
+				ALog.d("mLoader.mLoaderThread.mStopped=" + mLauncherLoader.isStopped());
+				ALog.d("mLoader.mLoaderThread.mLoadAndBindStepFinished=" +
+						mLoadAndBindStepFinished);
 			}
 		}
 
 		public void dumpState() {
-			Log.d(TAG, "mLoader.mItems size=" + mLoader.mItems.size());
+			ALog.d("mLoader.mItems size=" + mLoader.mItems.size());
 			if (mLoaderThread != null) {
 				mLoaderThread.dumpState();
 			} else {
-				Log.d(TAG, "mLoader.mLoaderThread=null");
+				ALog.d("mLoader.mLoaderThread=null");
 			}
 		}
 	}
@@ -813,7 +812,7 @@ public class BaseLauncherModel extends BroadcastReceiver{
 				needSave = true;
 			}
 			if (needSave) {
-				Log.d(TAG, "going to save icon bitmap for info=" + info);
+				ALog.d("going to save icon bitmap for info=" + info);
 				// This is slower than is ideal, but this only happens either
 				// after the froyo OTA or when the app is updated with a new
 				// icon.
@@ -1091,7 +1090,6 @@ public class BaseLauncherModel extends BroadcastReceiver{
 	/**
 	 * 接收移动app到SD卡广播后，处理app状态
 	 * @param context
-	 * @param mCallbacks
 	 */
 	public void updateOnActionExternalAppAvailable(Context context){
 	}

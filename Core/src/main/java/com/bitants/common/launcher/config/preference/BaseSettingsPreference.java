@@ -11,7 +11,7 @@ import com.bitants.common.launcher.config.BaseConfig;
 import com.bitants.common.framework.effect.EffectsType;
 import com.bitants.common.kitset.util.ScreenUtil;
 import com.bitants.common.kitset.util.TelephoneUtil;
-import com.bitants.common.launcher.broadcast.HiBroadcastReceiver;
+import com.bitants.common.launcher.broadcast.AntBroadcastReceiver;
 import com.bitants.common.launcher.view.icon.ui.IconSizeManager;
 import com.bitants.common.launcher.view.icon.ui.folder.FolderIconTextView;
 import com.bitants.common.R;
@@ -360,7 +360,7 @@ public class BaseSettingsPreference {
 	public void setIconMaskEnabled(Context context, boolean isEnabled) {
 		isIconMaskEnabled = isEnabled;
 		baseSP.edit().putBoolean(SettingsConstants.SETTING_PERSONAL_ICON_MASK_SWITCH, isEnabled).commit();
-		Intent intent = new Intent(HiBroadcastReceiver.REFRESH_ICON_ACTION);
+		Intent intent = new Intent(AntBroadcastReceiver.REFRESH_ICON_ACTION);
 		context.sendBroadcast(intent);
 	}
 
@@ -371,7 +371,7 @@ public class BaseSettingsPreference {
 	public void setLargeIconEnabled(Context context, boolean isEnabled) {
 		isLargeIconEnabled = isEnabled;
 		baseSP.edit().putBoolean(SettingsConstants.SETTING_PERSONAL_LARGE_ICON_SWITCH, isEnabled).commit();
-		Intent intent = new Intent(HiBroadcastReceiver.REFRESH_ICON_ACTION);
+		Intent intent = new Intent(AntBroadcastReceiver.REFRESH_ICON_ACTION);
 		context.sendBroadcast(intent);
 	}
 
@@ -423,7 +423,7 @@ public class BaseSettingsPreference {
 	public void setShowTitleBackground(Context context, boolean isShowed) {
 		isShowTitleBackaground = isShowed;
 		baseSP.edit().putBoolean(SettingsConstants.SETTING_SCREEN_ICON_TITLE_BACKGROUND, isShowed).commit();
-		Intent intent = new Intent(HiBroadcastReceiver.REFRESH_ICON_ACTION);
+		Intent intent = new Intent(AntBroadcastReceiver.REFRESH_ICON_ACTION);
 		context.sendBroadcast(intent);
 	}
 	
@@ -596,7 +596,7 @@ public class BaseSettingsPreference {
 	public void setFolderStyle(Context context, int style) {
 		folderStyle = style;
 		baseSP.edit().putString(SettingsConstants.SETTING_PERSONAL_FOLDER_STYLE, String.valueOf(style)).commit();
-		Intent intent = new Intent(HiBroadcastReceiver.ACTION_CHANGE_FOLDER_STYLE);
+		Intent intent = new Intent(AntBroadcastReceiver.ACTION_CHANGE_FOLDER_STYLE);
 		context.sendBroadcast(intent);
 	}
 	

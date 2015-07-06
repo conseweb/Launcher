@@ -14,7 +14,7 @@ import com.bitants.common.launcher.info.ApplicationInfo;
 import com.bitants.common.launcher.view.icon.ui.LauncherIconViewConfig;
 import com.bitants.common.framework.BaseThirdPackage;
 import com.bitants.common.kitset.util.StringUtil;
-import com.bitants.common.launcher.broadcast.HiBroadcastReceiver;
+import com.bitants.common.launcher.broadcast.AntBroadcastReceiver;
 import com.bitants.common.launcher.view.icon.icontype.IconType;
 import com.bitants.common.launcher.view.icon.ui.LauncherIconView;
 import com.bitants.common.theme.assit.BaseThemeAssit;
@@ -39,13 +39,13 @@ public class DockDefaultFourIconType extends IconType {
 		
 		if(noActionIntentFilters == filters){
 			IntentFilter filter = new IntentFilter();
-			filter.addAction(HiBroadcastReceiver.APP_HINT_FILTER);
+			filter.addAction(AntBroadcastReceiver.APP_HINT_FILTER);
 			IntentFilter[] rtnFilters = new IntentFilter[]{filter};
 			return rtnFilters;
 		}
 		//判断如果是我的手机或是信息 监听hint广播
 		if(IconTypeFactoryManager.isAppHintNeed(launcherIconView.getAppInfo())){
-			filters[0].addAction(HiBroadcastReceiver.APP_HINT_FILTER);
+			filters[0].addAction(AntBroadcastReceiver.APP_HINT_FILTER);
 		}
 		return filters;
 	}

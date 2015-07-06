@@ -4,7 +4,7 @@ import com.bitants.common.launcher.config.preference.BaseSettingsPreference;
 import com.bitants.common.theme.data.ThemeGlobal;
 import com.bitants.common.kitset.util.ScreenUtil;
 import com.bitants.common.launcher.BaseLauncher;
-import com.bitants.common.launcher.broadcast.HiBroadcastReceiver;
+import com.bitants.common.launcher.broadcast.AntBroadcastReceiver;
 import com.bitants.common.launcher.screens.dockbar.BaseMagicDockbar;
 import com.bitants.common.launcher.screens.dockbar.DockbarCellLayoutConfig;
 import com.bitants.common.theme.data.BaseThemeData;
@@ -92,18 +92,18 @@ public class LauncherConfig {
 			ThemeGlobal.LAUNCHER_UI_REFRESH_ACTION = mContext.getResources().getString(R.string.LAUNCHER_UI_REFRESH_ACTION);
 			ThemeGlobal.INTENT_THEME_LIST_REFRESH = mContext.getResources().getString(R.string.INTENT_THEME_LIST_REFRESH);
 			
-			HiBroadcastReceiver.ACTION_CHANGE_FOLDER_STYLE = mContext.getResources().getString(R.string.ACTION_CHANGE_FOLDER_STYLE);
-			HiBroadcastReceiver.MOVE_HOME_ACTION = mContext.getResources().getString(R.string.MOVE_HOME_ACTION);
-			HiBroadcastReceiver.APPLY_OLD_THEME_ACTION = mContext.getResources().getString(R.string.APPLY_OLD_THEME_ACTION);
-			HiBroadcastReceiver.SOFT_UPGRADE_ACTION = mContext.getResources().getString(R.string.SOFT_UPGRADE_ACTION);
-			HiBroadcastReceiver.ACTION_REFRESH_SEARCH_WIDGET_UI = mContext.getResources().getString(R.string.ACTION_REFRESH_SEARCH_WIDGET_UI);
-			HiBroadcastReceiver.ACTION_INTERNAL_INSTALL_SHORTCUT = mContext.getResources().getString(R.string.ACTION_INTERNAL_INSTALL_SHORTCUT);
-			HiBroadcastReceiver.ACTION_REFRESH_DYNAMIC_ICON = mContext.getResources().getString(R.string.ACTION_REFRESH_DYNAMIC_ICON);
-			HiBroadcastReceiver.ACTION_STOP_FLASH_SWAP_WALLPAPER = mContext.getResources().getString(R.string.ACTION_STOP_FLASH_SWAP_WALLPAPER);
-			HiBroadcastReceiver.ACTION_DAILY_HOT_NEWS_CHANGE = mContext.getResources().getString(R.string.ACTION_DAILY_HOT_NEWS_CHANGE);
-			HiBroadcastReceiver.REFRESH_ICON_ACTION = mContext.getResources().getString(R.string.REFRESH_ICON_ACTION);
-			HiBroadcastReceiver.APP_HINT_FILTER = mContext.getResources().getString(R.string.APP_HINT_FILTER);
-			HiBroadcastReceiver.APP_STORE_HINT_FILTER = mContext.getResources().getString(R.string.APP_STORE_HINT_FILTER);
+			AntBroadcastReceiver.ACTION_CHANGE_FOLDER_STYLE = mContext.getResources().getString(R.string.ACTION_CHANGE_FOLDER_STYLE);
+			AntBroadcastReceiver.MOVE_HOME_ACTION = mContext.getResources().getString(R.string.MOVE_HOME_ACTION);
+			AntBroadcastReceiver.APPLY_OLD_THEME_ACTION = mContext.getResources().getString(R.string.APPLY_OLD_THEME_ACTION);
+			AntBroadcastReceiver.SOFT_UPGRADE_ACTION = mContext.getResources().getString(R.string.SOFT_UPGRADE_ACTION);
+			AntBroadcastReceiver.ACTION_REFRESH_SEARCH_WIDGET_UI = mContext.getResources().getString(R.string.ACTION_REFRESH_SEARCH_WIDGET_UI);
+			AntBroadcastReceiver.ACTION_INTERNAL_INSTALL_SHORTCUT = mContext.getResources().getString(R.string.ACTION_INTERNAL_INSTALL_SHORTCUT);
+			AntBroadcastReceiver.ACTION_REFRESH_DYNAMIC_ICON = mContext.getResources().getString(R.string.ACTION_REFRESH_DYNAMIC_ICON);
+			AntBroadcastReceiver.ACTION_STOP_FLASH_SWAP_WALLPAPER = mContext.getResources().getString(R.string.ACTION_STOP_FLASH_SWAP_WALLPAPER);
+			AntBroadcastReceiver.ACTION_DAILY_HOT_NEWS_CHANGE = mContext.getResources().getString(R.string.ACTION_DAILY_HOT_NEWS_CHANGE);
+			AntBroadcastReceiver.REFRESH_ICON_ACTION = mContext.getResources().getString(R.string.REFRESH_ICON_ACTION);
+			AntBroadcastReceiver.APP_HINT_FILTER = mContext.getResources().getString(R.string.APP_HINT_FILTER);
+			AntBroadcastReceiver.APP_STORE_HINT_FILTER = mContext.getResources().getString(R.string.APP_STORE_HINT_FILTER);
 			
 		}catch(Exception e){
 			Log.e(TAG, e.toString());
