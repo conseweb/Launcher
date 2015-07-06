@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver;
 /**
  * 集中管理广播，请将IntentFilter的Action类型定义与此
  */
-public abstract class HiBroadcastReceiver extends BroadcastReceiver {
+public abstract class AntBroadcastReceiver extends BroadcastReceiver {
 	/**
 	 * 提示应用商店检测出的可升级软件数量
 	 */
