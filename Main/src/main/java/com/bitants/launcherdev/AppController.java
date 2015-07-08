@@ -28,7 +28,7 @@ public class AppController extends BaseLauncherApplication {
 		super.onCreate();
 		mInstance = this;
 
-		ALog.setTag("Launcher");
+		ALog.setTag("BitantLauncher");
 		ALog.setLevel(ALog.Level.D);
 	}
 
