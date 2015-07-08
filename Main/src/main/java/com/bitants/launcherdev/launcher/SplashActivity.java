@@ -14,7 +14,7 @@ import com.bitants.launcher.R;
  */
 public class SplashActivity extends Activity {
 
-    private static final long SPLASH_DISPLAY_TIME = 3000L; /* 3 seconds */
+    private static final long SPLASH_DISPLAY_TIME = 2500L; /* 3 seconds */
     private Handler mHandler;
     private Runnable mRunnable;
 
@@ -30,7 +30,7 @@ public class SplashActivity extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(SplashActivity.this, Launcher.class));
-                SplashActivity.this.finish();
+//                SplashActivity.this.finish();
                 overridePendingTransition(R.anim.mainfadein,
                         R.anim.splashfadeout);
             }
@@ -47,7 +47,7 @@ public class SplashActivity extends Activity {
                 Intent mainIntent = new Intent(SplashActivity.this, Launcher.class);
                 SplashActivity.this.startActivity(mainIntent);
 
-                SplashActivity.this.finish();
+//                SplashActivity.this.finish();
                 overridePendingTransition(R.anim.mainfadein,
                         R.anim.splashfadeout);
             }

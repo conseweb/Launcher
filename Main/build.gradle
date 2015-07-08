@@ -20,6 +20,16 @@ android {
         targetSdkVersion 11
     }
 
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java','libs']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+        }
+
+    }
+
     lintOptions {
         abortOnError false
     }
@@ -49,7 +59,7 @@ android {
     buildTypes {
         release {
             minifyEnabled true
-            shrinkResources true
+            shrinkResources false
             proguardFiles 'proguard.cfg'
             signingConfig signingConfigs.release
         }
@@ -119,3 +129,20 @@ tasks.whenTaskAdded { task ->
         task.dependsOn 'incrementVersionName'
     }
 }
+
+task myZip(type: Zip) {
+    from 'src/data'
+    archiveName = 'appcat.db.zip'
+    into('src/main/assets/databases')
+}
+
+tasks.whenTaskAdded { task ->
+    if (task.name == 'assemble') {
+        task.dependsOn myZip
+    }
+}
+
+println myZip.archiveName
+println myZip.destinationDir
+println myZip.archivePath
+println android.sourceSets.main.assets
