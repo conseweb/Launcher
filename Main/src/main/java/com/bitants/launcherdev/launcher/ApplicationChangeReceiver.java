@@ -3,17 +3,21 @@ package com.bitants.launcherdev.launcher;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
-import com.bitants.common.launcher.broadcast.HiBroadcastStaticReceiver;
+import com.bitants.common.launcher.broadcast.AntBroadcastStaticReceiver;
 import com.bitants.launcherdev.AppController;
 
-public class ApplicationChangeReceiver extends HiBroadcastStaticReceiver {
+public class ApplicationChangeReceiver extends AntBroadcastStaticReceiver {
 	
 	@Override
 	public void onReceiveHandler(Context ctx, Intent intent) {
 		if (null == intent)
 			return;
 		final String action = intent.getAction();
-		if (Intent.ACTION_PACKAGE_CHANGED.equals(action) || Intent.ACTION_PACKAGE_REMOVED.equals(action) || Intent.ACTION_PACKAGE_ADDED.equals(action)) {
+		if ( Intent.ACTION_PACKAGE_CHANGED.equals(action) ||
+             Intent.ACTION_PACKAGE_REMOVED.equals(action) ||
+             Intent.ACTION_PACKAGE_ADDED.equals(action) )
+        {
+			// TODO: need to update the all app list
 			final String packageName = intent.getData().getSchemeSpecificPart();
 			final boolean replacing = intent.getBooleanExtra(Intent.EXTRA_REPLACING, false);
 

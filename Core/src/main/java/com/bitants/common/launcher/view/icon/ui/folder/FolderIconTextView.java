@@ -39,7 +39,7 @@ import com.bitants.common.kitset.util.PaintUtils2;
 import com.bitants.common.kitset.util.ScreenUtil;
 import com.bitants.common.kitset.util.StringUtil;
 import com.bitants.common.launcher.BaseLauncher;
-import com.bitants.common.launcher.broadcast.HiBroadcastReceiver;
+import com.bitants.common.launcher.broadcast.AntBroadcastReceiver;
 import com.bitants.common.launcher.config.BaseConfig;
 import com.bitants.common.launcher.config.CellLayoutConfig;
 import com.bitants.common.launcher.config.LauncherConfig;
@@ -59,7 +59,6 @@ import com.bitants.common.launcher.view.icon.ui.LauncherIconSoftReferences;
 import com.bitants.common.launcher.view.icon.ui.util.BeansContainer;
 import com.bitants.common.theme.assit.ThemeUIRefreshAssit;
 import com.bitants.common.theme.assit.ThemeUIRefreshListener;
-import com.bitants.common.kitset.util.*;
 import com.bitants.common.R;
 
 /**
@@ -1308,21 +1307,21 @@ public class FolderIconTextView extends EditableIconView implements AnyCallbacks
 	 */
 	private void registerRefreshIconListenner() {
 		mRefreshIconReceiver = new RefreshIconReceiver();
-		IntentFilter filter = new IntentFilter(HiBroadcastReceiver.REFRESH_ICON_ACTION);
+		IntentFilter filter = new IntentFilter(AntBroadcastReceiver.REFRESH_ICON_ACTION);
 		filter.addAction(SettingsConstants.ACTION_REFRESH_APP_NAME);
-		filter.addAction(HiBroadcastReceiver.ACTION_CHANGE_FOLDER_STYLE);
+		filter.addAction(AntBroadcastReceiver.ACTION_CHANGE_FOLDER_STYLE);
 		getContext().registerReceiver(mRefreshIconReceiver, filter);
 	}
 	
 	/**
 	 * 图标刷新广播接收器 
 	 */
-	private class RefreshIconReceiver extends HiBroadcastReceiver {
+	private class RefreshIconReceiver extends AntBroadcastReceiver {
 		@Override
 		public void onReceive(Context ctx, Intent intent) {
 			if (null != intent.getAction() && SettingsConstants.ACTION_REFRESH_APP_NAME.equals(intent.getAction())) {
 				updateText();
-			}else if (null != intent.getAction() && HiBroadcastReceiver.REFRESH_ICON_ACTION.equals(intent.getAction())) {
+			}else if (null != intent.getAction() && AntBroadcastReceiver.REFRESH_ICON_ACTION.equals(intent.getAction())) {
                 refresh();
             }
 			isLargeIconMode = BaseConfig.isLargeIconMode();

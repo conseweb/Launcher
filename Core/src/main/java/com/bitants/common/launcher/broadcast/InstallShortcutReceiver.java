@@ -32,7 +32,7 @@ import com.bitants.common.launcher.BaseLauncherApplication;
 
 import java.util.ArrayList;
 
-public class InstallShortcutReceiver extends HiBroadcastStaticReceiver {
+public class InstallShortcutReceiver extends AntBroadcastStaticReceiver {
 	private static final String ACTION_INSTALL_SHORTCUT = "com.android.launcher.action.INSTALL_SHORTCUT";
     public static final String EXCLUDE_91_LAUNCHER = "exclude_91_launcher";
 

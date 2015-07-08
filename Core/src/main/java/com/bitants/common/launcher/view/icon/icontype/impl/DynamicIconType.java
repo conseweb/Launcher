@@ -13,7 +13,7 @@ import android.os.Handler;
 
 import com.bitants.common.kitset.util.AndroidPackageUtils;
 import com.bitants.common.kitset.util.ThreadUtil;
-import com.bitants.common.launcher.broadcast.HiBroadcastReceiver;
+import com.bitants.common.launcher.broadcast.AntBroadcastReceiver;
 import com.bitants.common.launcher.config.BaseConfig;
 import com.bitants.common.launcher.info.ApplicationInfo;
 import com.bitants.common.launcher.view.icon.ui.LauncherIconViewConfig;
@@ -32,7 +32,7 @@ public class DynamicIconType extends AppIconType{
 			return noActionIntentFilters;
 		}
 		
-		filters[0].addAction(HiBroadcastReceiver.ACTION_REFRESH_DYNAMIC_ICON);
+		filters[0].addAction(AntBroadcastReceiver.ACTION_REFRESH_DYNAMIC_ICON);
 		return filters;
 	}
 

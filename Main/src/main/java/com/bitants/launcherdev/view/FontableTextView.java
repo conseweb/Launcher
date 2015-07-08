@@ -8,7 +8,7 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
 import com.bitants.common.kitset.util.PaintUtils2;
-import com.bitants.common.launcher.broadcast.HiBroadcastReceiver;
+import com.bitants.common.launcher.broadcast.AntBroadcastReceiver;
 import com.bitants.common.launcher.config.preference.SettingsConstants;
 
 /**
@@ -91,7 +91,7 @@ public class FontableTextView extends TextView {
 	}
 	
 	
-	private class RefreshFontReceiver extends HiBroadcastReceiver {
+	private class RefreshFontReceiver extends AntBroadcastReceiver {
 		@Override
 		public void onReceive(Context ctx, Intent intent) {
 			if (null != intent.getAction() && SettingsConstants

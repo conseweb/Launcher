@@ -9,7 +9,7 @@ import android.content.IntentFilter;
 
 import com.bitants.common.framework.BaseThirdPackage;
 import com.bitants.common.kitset.util.StringUtil;
-import com.bitants.common.launcher.broadcast.HiBroadcastReceiver;
+import com.bitants.common.launcher.broadcast.AntBroadcastReceiver;
 import com.bitants.common.launcher.view.icon.ui.LauncherIconView;
 import com.bitants.common.launcher.config.preference.BaseSettingsPreference;
 
@@ -30,11 +30,11 @@ public class HintIconType extends AppIconType{
 		
 		if(noActionIntentFilters == filters){
 			IntentFilter filter = new IntentFilter();
-			filter.addAction(HiBroadcastReceiver.APP_HINT_FILTER);
+			filter.addAction(AntBroadcastReceiver.APP_HINT_FILTER);
 			IntentFilter[] rtnFilters = new IntentFilter[]{filter};
 			return rtnFilters;
 		}
-		filters[0].addAction(HiBroadcastReceiver.APP_HINT_FILTER);
+		filters[0].addAction(AntBroadcastReceiver.APP_HINT_FILTER);
 		return filters;
 	}
 

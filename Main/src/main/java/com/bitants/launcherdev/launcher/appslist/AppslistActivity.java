@@ -10,6 +10,8 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.avos.avoscloud.AVAnalytics;
 import com.bitants.launcher.R;
 import com.bitants.launcherdev.datamodel.Global;
 import com.bitants.common.kitset.util.ScreenUtil;
@@ -35,6 +37,10 @@ public class AppslistActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		// 跟踪统计应用的打开情况
+		AVAnalytics.trackAppOpened(getIntent());
+
 		launcher = Global.getLauncher();
 		launcher.invisiableWorkspace();
 		setContentView(R.layout.dx_appslist_content);

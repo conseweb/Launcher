@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.GridView;
 
+import com.bitants.common.utils.ALog;
+
 public class PromotionGridView extends GridView {
 
 	public PromotionGridView(Context context, AttributeSet attrs) {
@@ -20,9 +22,9 @@ public class PromotionGridView extends GridView {
 	public boolean onTouchEvent(MotionEvent ev) {
 //		return super.onTouchEvent(ev);
 		boolean result = super.onTouchEvent(ev);
-		Log.e("PromotionGridView","onTouchEvent===="+ev.getAction()+","+result);
+		ALog.d("====" + ev.getAction() + "," + result);
 		if(ev.getAction() == MotionEvent.ACTION_MOVE){
-			Log.e("PromotionGridView","onTouchEvent more return false====");
+//			ALog.d("more return false====");
 			return false;
 		}
 		return result;
@@ -47,7 +49,7 @@ public class PromotionGridView extends GridView {
 	@Override
 	public boolean onInterceptTouchEvent(MotionEvent ev) {
 		boolean result = super.onInterceptTouchEvent(ev);
-		Log.e("PromotionGridView","onInterceptTouchEvent===="+ev.getAction()+","+result);
+		ALog.d("===="+ev.getAction()+","+result);
 		return result;
 	}
 

@@ -9,6 +9,9 @@ import android.util.Log;
 import android.view.*;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.Scroller;
+
+import com.bitants.common.launcher.touch.Alarm;
+import com.bitants.common.utils.ALog;
 import com.bitants.launcher.R;
 import com.bitants.launcherdev.launcher.DragController;
 import com.bitants.common.launcher.info.ApplicationInfo;
@@ -27,7 +30,7 @@ import java.util.List;
 
 public class IntegrateFolderGridView extends ViewGroup implements DragSource, DropTarget {
 
-	private final String TAG = "IntegrateFolderGridView";
+//	private final String TAG = "IntegrateFolderGridView";
 
 	private final int INVALID_ID = -1;
 
@@ -130,6 +133,15 @@ public class IntegrateFolderGridView extends ViewGroup implements DragSource, Dr
 		scroller = new Scroller(context);
 	}
 
+    private Alarm mReorderAlarm = new Alarm();
+
+    // 排序定时器
+    Alarm.OnAlarmListener mReorderAlarmListener = new Alarm.OnAlarmListener() {
+        public void onAlarm(Alarm alarm) {
+            handleCellSwitch();
+        }
+    };
+
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 		int widthMode = MeasureSpec.getMode(widthMeasureSpec);
@@ -201,7 +213,7 @@ public class IntegrateFolderGridView extends ViewGroup implements DragSource, Dr
 	}
 
 	private void addChildViews() {
-		Log.e(TAG, "添加视图View===========");
+//		ALog.d("添加视图View===========");
 		if (adapter == null) {
 			return;
 		}
@@ -220,7 +232,7 @@ public class IntegrateFolderGridView extends ViewGroup implements DragSource, Dr
 	 * 数据改变的回掉
 	 */
 	public void onDataSetChanged() {
-		Log.e(TAG, "数据改变的回掉=====");
+//		ALog.d("数据改变的回掉=====");
 		if (adapter == null) {
 			return;
 		}
@@ -421,10 +433,10 @@ public class IntegrateFolderGridView extends ViewGroup implements DragSource, Dr
 	}
 
 	public void startEditMode(int position) {
-		Log.e(TAG, "startEditMode===" + position);
+//		ALog.d("===" + position);
 		if (!mIsEditModeEnabled)
 			return;
-		Log.e(TAG, "startEditMode===");
+//		ALog.d("===");
 		/**
 		 * AbsListView方法 阻拦父层的View截获touch事务 之后的事件直接传递给DynamicGrid的onTouchEvent
 		 */
@@ -557,7 +569,7 @@ public class IntegrateFolderGridView extends ViewGroup implements DragSource, Dr
 
 	public static final int INVALID_POSITION = -1;
 
-	private static final int MOVE_DURATION = 100;
+	private static final int MOVE_DURATION = 250;
 
 	private boolean mReorderAnimation;
 
@@ -566,10 +578,11 @@ public class IntegrateFolderGridView extends ViewGroup implements DragSource, Dr
 	/**
 	 * 交换动画 移动过程会一直调用
 	 */
-	private void handleCellSwitch() {
+	private synchronized void handleCellSwitch() {
 		final int deltaY = mLastEventY - mDownY;
 		final int deltaX = mLastEventX - mDownX;
-		Log.e("NewTest", "handleCellSwitch:" + mDownX + "," + mDownY + "," + mLastEventX + "," + mLastEventY);
+//		ALog.i("handleCellSwitch:" + mDownX + "," + mDownY + "," + mLastEventX + "," +
+//                mLastEventY);
 		final int deltaYTotal = mHoverCellOriginalBounds.centerY() + mTotalOffsetY + deltaY;
 		final int deltaXTotal = mHoverCellOriginalBounds.centerX() + mTotalOffsetX + deltaX;
 		mMobileView = getViewForId(mMobileItemId);
@@ -591,13 +604,16 @@ public class IntegrateFolderGridView extends ViewGroup implements DragSource, Dr
 					// 取宽度 高度相减 一般都为0
 					float xDiff = Math.abs(DynamicGridUtils.getViewX(view) - DynamicGridUtils.getViewX(mMobileView));
 					float yDiff = Math.abs(DynamicGridUtils.getViewY(view) - DynamicGridUtils.getViewY(mMobileView));
-					Log.e("zhenghonglin", view.getLeft() + "," + view.getTop() + "," + view.getRight() + "," + view.getBottom() + ",");
-					Log.e("zhenghonglin", targetColumnRowPair + "," + mobileColumnRowPair + "," + xDiff + "," + yDiff);
+//					ALog.d(view.getLeft() + "," + view.getTop() + "," + view
+//                            .getRight() + "," + view.getBottom() + ",");
+//					ALog.d(targetColumnRowPair + "," + mobileColumnRowPair + ","
+//                            + xDiff + "," + yDiff);
 					if (xDiff >= vX && yDiff >= vY) {
 						vX = xDiff;
 						vY = yDiff;
 						targetView = view;
-						Log.e("zhenghonglin", getPositionForView(targetView) + "," + getPositionForView(mMobileView));
+						ALog.d(getPositionForView(targetView) + "," +
+                                getPositionForView(mMobileView));
 
 					}
 				}
@@ -618,7 +634,7 @@ public class IntegrateFolderGridView extends ViewGroup implements DragSource, Dr
 				return;
 			}
 			// 交换list中的数据
-			Log.e(TAG, "reorderElements+============" + originalPosition + "," + targetPosition);
+//			ALog.d("reorderElements+============" + originalPosition + "," + targetPosition);
 			reorderElements(originalPosition, targetPosition);
 			/**
 			 * 移动后 如果有找到新的位置 mDownX mDownY更新
@@ -648,7 +664,7 @@ public class IntegrateFolderGridView extends ViewGroup implements DragSource, Dr
 	@Override
 	public void requestLayout() {
 		super.requestLayout();
-		Log.e(TAG, "requestLayout+============");
+//		ALog.d("+============");
 		// printInfo();
 	}
 
@@ -665,21 +681,22 @@ public class IntegrateFolderGridView extends ViewGroup implements DragSource, Dr
 				title = (String) view.getTag(R.string.app_name);
 			}
 			ApplicationInfo itemInfo = (ApplicationInfo) getAdapter().getItem(pos);
-			Log.e("supertest", "pos:" + pos + ",id:" + getId(pos) + ",title:" + title + ",title1:" + itemInfo.title);
+//			ALog.d("supertest", "pos:" + pos + ",id:" + getId(pos) + ",title:" + title + "," +
+//					"title1:" + itemInfo.title);
 		}
-		Log.e("supertest", "===============================");
+//		ALog.d("supertest", "===============================");
 		DynamicGridAdapterInterface adapter = getAdapter();
 		for (int i = 0; i < adapter.getCount(); i++) {
 			View v = getChildAt(i);
 			if (v == null) {
-				Log.e("supertest", "i:" + i + ",null");
+//				ALog.d("supertest", "i:" + i + ",null");
 			} else {
 				ApplicationInfo itemInfo = (ApplicationInfo) v.getTag();
-				Log.e("supertest", "i:" + i + ",id:" + getId(i) + ",title:" + itemInfo.title);
+//				ALog.d("supertest", "i:" + i + ",id:" + getId(i) + ",title:" + itemInfo.title);
 			}
 
 		}
-		Log.e("supertest", "===============================");
+//		ALog.d("supertest", "===============================");
 	}
 
 	private interface SwitchCellAnimator {
@@ -757,6 +774,8 @@ public class IntegrateFolderGridView extends ViewGroup implements DragSource, Dr
 		}
 	}
 
+    private AnimatorSet resultSet;
+
 	private void animateReorder(final int oldPosition, final int newPosition) {
 		boolean isForward = newPosition > oldPosition;
 		List<Animator> resultList = new LinkedList<Animator>();
@@ -781,7 +800,11 @@ public class IntegrateFolderGridView extends ViewGroup implements DragSource, Dr
 			}
 		}
 
-		AnimatorSet resultSet = new AnimatorSet();
+        if(resultSet==null){
+            resultSet = new AnimatorSet();
+        }
+        resultSet.cancel();
+
 		resultSet.playTogether(resultList);
 		resultSet.setDuration(MOVE_DURATION);
 		resultSet.setInterpolator(new AccelerateDecelerateInterpolator());
@@ -862,7 +885,7 @@ public class IntegrateFolderGridView extends ViewGroup implements DragSource, Dr
 		// if (mDragListener != null)
 		// mDragListener.onDragPositionsChanged(originalPosition,
 		// targetPosition);
-		Log.e("NewTest", "reorderElements:" + originalPosition + "," + targetPosition);
+		ALog.d("position: " + originalPosition + "," + targetPosition);
 		getAdapter().reorderItems(originalPosition, targetPosition);
 	}
 
@@ -912,7 +935,7 @@ public class IntegrateFolderGridView extends ViewGroup implements DragSource, Dr
 
 	@Override
 	public void onDropCompleted(View target, boolean success) {
-		Log.e(TAG, "onDropCompleted:" + success);
+//		ALog.d("onDropCompleted:" + success);
 		if (success) {
 			touchEventsEnded();
 		}

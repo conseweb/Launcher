@@ -67,6 +67,7 @@ import com.bitants.common.launcher.screens.dockbar.MagicDockbarRelativeLayout;
 import com.bitants.common.R;
 import com.bitants.common.launcher.view.BaseDeleteZoneTextView;
 import com.bitants.common.launcher.support.BaseIconCache;
+import com.bitants.common.utils.ALog;
 
 public class BaseLauncher extends Activity implements View.OnClickListener, OnLongClickListener{
 
@@ -219,7 +220,7 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
             @Override
             public boolean onAction() {
                 isNewInstall = true;
-                Log.w("Launcher", "isNewInstall");
+                ALog.w("isNewInstall");
                 // 记录用户第一次使用桌面的时间
                 BaseConfigPreferences.getInstance().setFirstLaunchTime(System.currentTimeMillis());
                 // 新安装用户不显示更新日志
@@ -245,7 +246,7 @@ public class BaseLauncher extends Activity implements View.OnClickListener, OnLo
                 int curVersionCode = TelephoneUtil.getVersionCode((BaseLauncher.this));
                 if (!BaseConfigPreferences.getInstance().isVersionCodeShowed(curVersionCode)) {
                     isUpdateInstall = true;
-                    Log.w("Launcher", "isUpdateInstall");
+                    ALog.w("isUpdateInstall");
                     String curVersionName = TelephoneUtil.getVersionName(BaseLauncher.this);
 
                     BaseConfigPreferences.getInstance().setVersionShowed(curVersionName, true);

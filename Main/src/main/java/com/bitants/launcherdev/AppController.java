@@ -29,7 +29,7 @@ public class AppController extends BaseLauncherApplication {
 		mInstance = this;
 
 		ALog.setTag("BitantLauncher");
-		ALog.setLevel(ALog.Level.D);
+		ALog.setLevel(ALog.Level.I);
 	}
 
 	public static synchronized AppController getInstance() {
