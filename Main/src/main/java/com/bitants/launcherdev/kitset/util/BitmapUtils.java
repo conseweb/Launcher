@@ -7,6 +7,7 @@ import android.util.Log;
 
 import com.bitants.common.kitset.util.BaseBitmapUtils;
 import com.bitants.common.kitset.util.FileUtil;
+import com.bitants.common.utils.ALog;
 //import com.bitants.launcherdev.framework.httplib.HttpCommon;
 //import com.google.android.mms.ContentType;
 import org.apache.http.Header;
@@ -75,7 +76,7 @@ public class BitmapUtils extends BaseBitmapUtils {
 	
 	public static byte[] compressToBytes(Bitmap bitmap, CompressFormat format, int quality) {
 		if (bitmap == null || bitmap.isRecycled()) {
-			Log.e("bitmap", "bad bitmap: " + bitmap, new Exception());
+			ALog.w("bad bitmap: " + bitmap);
 			return null;
 		}
 
