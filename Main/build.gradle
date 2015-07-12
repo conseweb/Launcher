@@ -91,7 +91,7 @@ dependencies {
     //    compile files('libs/android-support-v7-appcompat.jar')
     //    compile files('libs/supportv4jar.jar')
     //    compile project(':libraries:ActionBarCompat:appcompat')
-    compile files('libs/supportv4jar.jar')
+//    compile files('libs/supportv4jar.jar')
 }
 
 import java.util.regex.Pattern
