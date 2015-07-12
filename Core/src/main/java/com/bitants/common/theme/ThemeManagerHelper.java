@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.text.TextUtils;
 
 import com.bitants.common.kitset.util.WallpaperUtil;
-import com.bitants.common.launcher.broadcast.HiBroadcastReceiver;
+import com.bitants.common.launcher.broadcast.AntBroadcastReceiver;
 import com.bitants.common.launcher.config.BaseConfig;
 import com.bitants.common.launcher.view.icon.ui.LauncherIconSoftReferences;
 import com.bitants.common.theme.data.BaseTheme;
@@ -125,7 +125,7 @@ public class ThemeManagerHelper {
 		LauncherIconSoftReferences.getInstance().resetDefIconFullScreenFolderEncriptMask(ctx.getResources());
 		LauncherIconSoftReferences.getInstance().resetDefIconFullScreenFolderBackground(ctx.getResources());
 		// 刷新图标
-		ctx.sendBroadcast(new Intent(HiBroadcastReceiver.REFRESH_ICON_ACTION));
+		ctx.sendBroadcast(new Intent(AntBroadcastReceiver.REFRESH_ICON_ACTION));
 		// 通知桌面刷新UI
 		Intent launcherUIRefreshIntent = new Intent(ThemeGlobal.LAUNCHER_UI_REFRESH_ACTION);
 		launcherUIRefreshIntent.putExtra("applyScene", applyScene);
@@ -187,7 +187,7 @@ public class ThemeManagerHelper {
 					LauncherIconSoftReferences.getInstance().resetDefIconFullScreenFolderEncriptMask(ctx.getResources());
 					LauncherIconSoftReferences.getInstance().resetDefIconFullScreenFolderBackground(ctx.getResources());
 					// 刷新图标
-					ctx.sendBroadcast(new Intent(HiBroadcastReceiver.REFRESH_ICON_ACTION));
+					ctx.sendBroadcast(new Intent(AntBroadcastReceiver.REFRESH_ICON_ACTION));
 				} else if(ModuleConstant.MODULE_WALLPAPER.equals(module.getKey())) {//壁纸模块
 					changeRolling = true;// 更改壁纸时的设置为滚屏模式
 					WallpaperUtil.applyWallpaperInThread(BaseConfig.getApplicationContext(), ThemeManagerFactory.getInstance().getCurrentTheme().getWrapper().getWallpaperValue());

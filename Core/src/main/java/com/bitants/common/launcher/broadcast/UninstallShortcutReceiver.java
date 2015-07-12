@@ -30,7 +30,7 @@ import com.bitants.common.launcher.BaseLauncher;
 import com.bitants.common.launcher.model.BaseLauncherSettings;
 import com.bitants.common.R;
 
-public class UninstallShortcutReceiver extends HiBroadcastStaticReceiver {
+public class UninstallShortcutReceiver extends AntBroadcastStaticReceiver {
 	private static final String ACTION_UNINSTALL_SHORTCUT = "com.android.launcher.action.UNINSTALL_SHORTCUT";
 
 	@Override

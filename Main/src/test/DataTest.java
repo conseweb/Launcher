@@ -34,7 +34,8 @@ public class DataTest {
 		sort(folderInfoList);
 		//打印信息
 		for(FolderInfo folderInfo:folderInfoList){
-			Log.e("DataTest","============="+folderInfo.title+","+folderInfo.screen+","+folderInfo.cellY+","+folderInfo.cellX);
+			ALog.i("============="+folderInfo.title+","+folderInfo.screen+"," +
+					""+folderInfo.cellY+","+folderInfo.cellX);
 //			for(ApplicationInfo appInfo:folderInfo.contents){
 //				Log.e("zhenghonglin",""+appInfo.title);
 //			}

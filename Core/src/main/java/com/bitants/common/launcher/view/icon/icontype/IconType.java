@@ -7,7 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.os.Handler;
 
-import com.bitants.common.launcher.broadcast.HiBroadcastReceiver;
+import com.bitants.common.launcher.broadcast.AntBroadcastReceiver;
 import com.bitants.common.launcher.config.preference.SettingsConstants;
 import com.bitants.common.launcher.info.ApplicationInfo;
 import com.bitants.common.launcher.view.icon.ui.LauncherIconData;
@@ -34,11 +34,11 @@ public class IconType {
 			
 			IntentFilter intentFilter = new IntentFilter();
 			//接受刷新图标广播
-			intentFilter.addAction(HiBroadcastReceiver.REFRESH_ICON_ACTION);
+			intentFilter.addAction(AntBroadcastReceiver.REFRESH_ICON_ACTION);
 			//刷新文本广播
 			intentFilter.addAction(SettingsConstants.ACTION_REFRESH_APP_NAME);
 			//文件夹样式变化
-			intentFilter.addAction(HiBroadcastReceiver.ACTION_CHANGE_FOLDER_STYLE);
+			intentFilter.addAction(AntBroadcastReceiver.ACTION_CHANGE_FOLDER_STYLE);
 			return new IntentFilter[]{intentFilter};
 		}
 		return noActionIntentFilters;
@@ -55,7 +55,7 @@ public class IconType {
 		}
 		String action = intent.getAction();
 		//接受图标刷新广播
-		if(HiBroadcastReceiver.REFRESH_ICON_ACTION.equals(action)){
+		if(AntBroadcastReceiver.REFRESH_ICON_ACTION.equals(action)){
 			launcherIconView.udpateIconConfig();
 			launcherIconView.updateText();
 			launcherIconView.refreshUI();
@@ -67,7 +67,7 @@ public class IconType {
 			return true;
 		}
 		//文件夹样式变化
-		if(HiBroadcastReceiver.ACTION_CHANGE_FOLDER_STYLE.equals(action)){
+		if(AntBroadcastReceiver.ACTION_CHANGE_FOLDER_STYLE.equals(action)){
 			launcherIconView.udpateIconConfig();
 			return true;
 		}

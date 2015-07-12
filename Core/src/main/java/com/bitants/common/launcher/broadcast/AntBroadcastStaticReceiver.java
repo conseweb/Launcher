@@ -2,19 +2,20 @@ package com.bitants.common.launcher.broadcast;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
+
+import com.bitants.common.utils.ALog;
 
 /**
  * 桌面广播静态注册父类(增加异常捕获处理)
  */
-public abstract class HiBroadcastStaticReceiver extends HiBroadcastReceiver {
+public abstract class AntBroadcastStaticReceiver extends AntBroadcastReceiver {
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
 		try{
 			onReceiveHandler(context, intent);
 		}catch(Exception e){
-			Log.e("HiBroadcastStaticReceiver", e.toString());
+			ALog.e("Error", e, e.getMessage());
 		}
 
 	}

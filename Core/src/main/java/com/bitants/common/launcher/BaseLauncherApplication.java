@@ -25,6 +25,7 @@ import com.bitants.common.launcher.model.load.LauncherLoaderHelper;
 import com.bitants.common.launcher.support.BaseIconCache;
 import com.bitants.common.theme.adaption.ThemeIconIntentAdaptation;
 import com.bitants.common.theme.data.BaseThemeData;
+import com.bitants.common.utils.ALog;
 
 public class BaseLauncherApplication extends Application {
 	private static final String TAG = "LauncherApplication";
@@ -39,10 +40,10 @@ public class BaseLauncherApplication extends Application {
 	
 	@Override
 	public void onCreate() {
+        ALog.d("Enter");
 		//VMRuntime.getRuntime().setMinimumHeapSize(4 * 1024 * 1024);
 		super.onCreate();
-		
-		Log.e(TAG, "LauncherApplication.onCreate");
+
 		//初始化基础设置
 		initConfig();
 
@@ -70,12 +71,10 @@ public class BaseLauncherApplication extends Application {
 	 * 仅在主进程调用
 	 */
 	private void doItOnlyMainProcess() {
+		ALog.d("Enter");
 		String processName = SystemUtil.getCurProcessName(this);
 		if (!this.getPackageName().equals(processName))
 			return;
-		
-//		HiAnalytics.submitEvent(this, AnalyticsConstant.LAUNCHER_STARTUP);
-		Log.e(TAG, "LauncherApplication.doItOnlyMainProcess");
 		
 		mIconCache = createIconCache(this);
 		
@@ -131,8 +130,7 @@ public class BaseLauncherApplication extends Application {
 		if (mModel != null) {
 			unregisterReceiver(mModel);
 
-//			HiAnalytics.submitEvent(this, AnalyticsConstant.LAUNCHER_DESTORY);
-			Log.e(TAG, "LauncherApplication.onTerminate");
+			ALog.e("Exit");
 		}
 		
 		if (null != mPluginApplicationCache) {

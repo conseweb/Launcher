@@ -110,7 +110,7 @@ public class BaseThemeData {
 	/** 图标蒙板背景 */
 	public static final String ICON_BACKGROUND_MASK = "icon_background_mask";
 	/** 文件夹图标背景 */
-	public static final String FOLDER_BACKGROUND = "folder_background";
+	public static final String FOLDER_BACKGROUND = "panda_folder_background";
 	/** 文件夹图标关闭前景 */
 	public static final String FOLDER_FOREGROUND_CLOSED = "folder_foreground_closed";
 	/** 文件夹图标打开前景 */
@@ -118,7 +118,7 @@ public class BaseThemeData {
 	/** 文件夹加锁图标 */
 	public static final String FOLDER_ENCRIPT_MASK = "folder_encript_mask";
 	/** android 4.0风格文件夹图标背景 */
-	public static final String ANDROID_FOLDER_BACKGROUND = "android_folder_background";
+	public static final String ANDROID_FOLDER_BACKGROUND = "panda_folder_background";
 	/** android 4.0风格文件夹加锁图标 */
 	public static final String ANDROID_FOLDER_ENCRIPT_MASK = "android_folder_encript_mask";
 	

@@ -68,6 +68,7 @@ import com.bitants.common.launcher.touch.DragScroller;
 import com.bitants.common.launcher.touch.DropTarget;
 import com.bitants.common.launcher.touch.MultiGestureController;
 import com.bitants.common.launcher.touch.WorkspaceDragAndDrop;
+import com.bitants.common.utils.ALog;
 
 public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiGestureDispatcher, DropTarget, DragSource {
 	private static final String TAG = "ScreenViewGroup";
@@ -1084,13 +1085,13 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 	@Override
 	public boolean onInterceptTouchEvent(MotionEvent ev) {
 		if (isLocked() || isAllAppsVisible()) {
-			Log.e(TAG,"onInterceptTouchEvent isLocked return false");
+//			ALog.d("isLocked return false");
 			return false;
 		}
 
 		final int action = ev.getAction();
 		if ((action == MotionEvent.ACTION_MOVE) && (mTouchState != TOUCH_STATE_REST)) {
-			Log.e(TAG,"onInterceptTouchEvent isLocked action move return true");
+//			ALog.d("isLocked action move return true");
 			return true;
 		}
 
@@ -1225,7 +1226,7 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 			if (touchState != TOUCH_STATE_SCROLLING
 				&& action == MotionEvent.ACTION_UP) {
 				if (onClickCell(mCurrentScreen)) {
-					Log.e(TAG,"onInterceptTouchEvent onClickCell return true");
+					ALog.d("onClickCell return true");
 					return true;
 				}
 			}
@@ -1233,7 +1234,7 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 			//编辑模式做特殊处理
 			if(lastActionDownState == SPRING_MODE && action == MotionEvent.ACTION_UP){
 				mWorkspaceSpring.handleOnSpringActionUp(ev);
-				Log.e(TAG,"onInterceptTouchEvent SPRING_MODE return true");
+				ALog.d("SPRING_MODE return true");
 				return true;
 			}
 			break;
@@ -1250,14 +1251,14 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 		 * The only time we want to intercept motion events is if we are in the
 		 * drag mode.
 		 */
-		Log.e(TAG,"onInterceptTouchEvent return "+(mTouchState != TOUCH_STATE_REST)+mTouchState);
+		ALog.d("return "+(mTouchState != TOUCH_STATE_REST)+mTouchState);
 		return mTouchState != TOUCH_STATE_REST;
 	}
 	
 	@Override
 	public boolean onTouchEvent(MotionEvent ev) {
 		if (isLocked()) {
-			Log.e(TAG,"onTouchEvent isLocked return false");
+			ALog.d("isLocked return false");
 			return false; // We don't want the events. Let them fall through to
 			// the all apps view.
 		}
@@ -1267,7 +1268,7 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 				mScroller.abortAnimation();
 			}
 			snapToScreen(mCurrentScreen);
-			Log.e(TAG,"onTouchEvent isAllAppsVisible return false");
+//			ALog.d("isAllAppsVisible return false");
 			return false; // We don't want the events. Let them fall through to
 			// the all apps view.
 		}
@@ -1278,7 +1279,7 @@ public class ScreenViewGroup extends HiViewGroup implements DragScroller, MultiG
 		mVelocityTracker.addMovement(ev);
 
 		final int action = ev.getAction();
-		Log.e(TAG,"onTouchEvent  return true:action:"+action);
+//		ALog.d("return true:action:"+action);
 		switch (action & MotionEvent.ACTION_MASK) {
 		case MotionEvent.ACTION_DOWN:
 			/*
