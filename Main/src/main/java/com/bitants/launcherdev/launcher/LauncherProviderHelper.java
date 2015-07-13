@@ -140,10 +140,12 @@ public class LauncherProviderHelper {
 
 			initLauncherApp(db, mContext);
 		} catch (XmlPullParserException e) {
-			ALog.w("Got exception parsing favorites.", e);
+			ALog.e("Got exception parsing favorites.", e, e.getMessage());
 		} catch (IOException e) {
-			ALog.w("Got exception parsing favorites.", e);
-		}
+			ALog.e("Got exception parsing favorites.", e, e.getMessage());
+		} catch (Exception e) {
+            ALog.e("Error", e, e.getMessage());
+        }
 
 		return;
 	}
@@ -298,6 +300,18 @@ public class LauncherProviderHelper {
         String sSports = mContext.getString(R.string.cat_sports);
         catMap.put(sSports, new FolderModel(sSports));
         allFolders.add(sSports);
+        // finance folder
+        String sFinance = mContext.getString(R.string.cat_finance);
+        catMap.put(sFinance, new FolderModel(sFinance));
+        allFolders.add(sFinance);
+        // cloud folder
+        String sCloud = mContext.getString(R.string.cat_cloud);
+        catMap.put(sCloud, new FolderModel(sCloud));
+        allFolders.add(sCloud);
+        // Education folder
+        String sEducation = mContext.getString(R.string.cat_education);
+        catMap.put(sEducation, new FolderModel(sEducation));
+        allFolders.add(sEducation);
         // other folder
         String sOther = mContext.getString(R.string.cat_other);
         catMap.put(sOther, new FolderModel(sOther));
@@ -310,12 +324,20 @@ public class LauncherProviderHelper {
                     && SystemUtil.isSystemApplication(app.activityInfo.applicationInfo.flags))
             {
                 // add into system folder
-                catMap.get(sSys).addApp(pkg);
+                FolderModel f = catMap.get(sSys);
+                if (f != null) {
+                    f.addApp(pkg);
+                }
             } else {
                 // find category by package name
                 String catName = catDb.queryCatNameByPkg(pkg, mContext);
+				// TODO: bug here, maybe null pointer
+                ALog.d("pkg: %s, category: %s", pkg, catName);
                 // add into specific folder
-                catMap.get(catName).addApp(pkg);
+                FolderModel f = catMap.get(catName);
+                if (f != null) {
+                    f.addApp(pkg);
+                }
             }
         }
 
@@ -354,7 +376,10 @@ public class LauncherProviderHelper {
 				values.put(Favorites.CELLX, startCount % countX);
 				values.put(Favorites.CELLY, (startCount / countX) % countY);
 				values.put(Favorites.SCREEN, startCount / (countX * countY) + startScreen);
-				values.put(Favorites.CONTAINER, catMap.get(catName).getID());
+                FolderModel f = catMap.get(catName);
+                if (f != null) {
+                    values.put(Favorites.CONTAINER, f.getID());
+                }
 				startCount ++;
 			}
 			
