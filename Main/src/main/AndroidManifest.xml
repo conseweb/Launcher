@@ -3,8 +3,8 @@
     package="com.bitants.launcher"
     android:installLocation="internalOnly"
     android:sharedUserId="com.bitants.launcher.uid"
-    android:versionCode="204"
-    android:versionName="1.0.1.39" >
+    android:versionCode="212"
+    android:versionName="1.0.1.47" >
 
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -27,7 +27,27 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.BIND_WALLPAPER" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.DEVICE_POWER"/>
+    <uses-permission android:name="android.permission.UPDATE_DEVICE_STATS"/>
 
     <uses-feature
         android:name="android.software.live_wallpaper"
@@ -67,7 +87,6 @@
             android:windowSoftInputMode="stateUnspecified|adjustPan" >
             <intent-filter>
                 <action android:name="com.bitants.launcherdev.launcher.MAINACTIVITY" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -208,7 +227,60 @@
         </service>
         <!-- end of livewallpaper -->
 
+        <activity
+            android:name="com.bitants.settings.QuickSettings"
+            android:label="@string/ant_set_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.bitants.settings.LockActivity"></activity>
+
+        <service android:name="com.bitants.settings.QuickService">
+            <intent-filter>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"></action>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"></action>
+                <action android:name="android.intent.action.AIRPLANE_MODE"></action>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"></action>
+                <action android:name="android.net.wifi.WIFI_AP_STATE_CHANGED"></action>
+                <action android:name="android.media.RINGER_MODE_CHANGED"></action>
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.bitants.settings.LockReceiver"
+            android:description="@string/ant_set_name"
+            android:label="@string/ant_set_name"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/lock_screen"/>
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.bitants.settings.SettingReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                　　
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"></action>
+                <action android:name="android.intent.action.AIRPLANE_MODE"></action>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"></action>
+                <action android:name="android.net.wifi.WIFI_AP_STATE_CHANGED"></action>
+                <action android:name="android.media.RINGER_MODE_CHANGED"></action>
+                　　
+            </intent-filter>
+
+            　　
+        </receiver>
     </application>
 
 </manifest>

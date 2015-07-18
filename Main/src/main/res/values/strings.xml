@@ -72,4 +72,33 @@
     <string name="toast_open">当前为开启。\n开启后会在你使用其他 APP
         的时，定时弹出可爱的小『吐司』，不会妨碍你的触摸和点击事件，打扰性非常低，但却能很高效地无压力复习单词。
     </string>
+
+    <!-- for settings -->
+    <string name="ant_set_name">Buttons</string>
+    <string name="ant_set_wifi">WLAN</string>
+    <string name="ant_set_3g">Mobile data</string>
+    <string name="ant_set_hot">Hotspot</string>
+    <string name="ant_set_loc">Lock screen</string>
+    <string name="ant_set_fly">Airplane mode</string>
+    <string name="ant_set_clo">Clock</string>
+    <string name="ant_set_gps">GPS</string>
+    <string name="ant_set_vab">Vibration</string>
+    <string name="ant_set_vab1">Slient</string>
+    <string name="ant_set_vab2">Sound</string>
+    <string name="ant_set_blu">Bluetooth</string>
+    <string name="ant_set_xuan">A-rotate</string>
+    <string name="ant_set_l2">Light</string>
+    <string name="ant_set_l21">Half-L</string>
+    <string name="ant_set_l22">Max-L</string>
+    <string name="ant_set_la">A-mode</string>
+    <string name="ant_set_set">Settings</string>
+    <string name="ant_set_lig">Flashlight</string>
+    <string name="ant_set_cam">Camera</string>
+    <string name="ant_set_cal">Calculator</string>
+    <string name="ant_set_close">Click to Close</string>
+    <string name="ant_set_noblue">Bluetooth Not Available !</string>
+    <string name="ant_set_openhot">Opening Hot Name:HotWifi,Password:(null)</string>
+    <string name="ant_set_notif">QuickButtons is here</string>
+    <string name="ant_set_notiflock">Activate to support the function of LockScreen</string>
+    
 </resources>

@@ -1,0 +1,588 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#dd006699"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+   
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_gravity="center_vertical"
+     android:layout_marginLeft="10dp"
+     android:layout_marginRight="10dp"
+     android:orientation="vertical" >
+ 
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left" >
+
+      </LinearLayout>
+
+      
+    
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_gravity="center" >
+    
+  <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:gravity="center"
+     android:layout_gravity="center_vertical"
+     android:orientation="vertical" >        
+     <RelativeLayout
+        android:layout_width="50dp"
+         android:layout_height="58dp">
+          
+        <TextView
+        android:layout_width="50dp"
+        android:layout_height="52dp"  
+        android:layout_marginTop="3dp"
+         android:background="@drawable/ant_quan"
+        android:text=" " />   
+    <ToggleButton
+         android:id="@+id/wifi"
+         android:layout_width="50dp"
+         android:layout_height="58dp"
+         android:textColor="#ffffff"
+         android:background="@drawable/selector_wifi"
+         android:textOff=" "
+         android:textOn=" " />
+     
+     </RelativeLayout>
+      <TextView
+          android:id="@+id/wifit"
+        style="@style/btn_custom_style3"
+        android:textColor="#ffffff"
+        android:text="@string/ant_set_wifi" />   
+     </LinearLayout>
+  <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="19dp"
+     android:gravity="center"
+     android:layout_gravity="center_vertical"
+     android:orientation="vertical" >        
+      <RelativeLayout
+        android:layout_width="50dp"
+         android:layout_height="58dp"
+         >
+          
+        <TextView
+        android:layout_width="50dp"
+        android:layout_height="52dp"  android:layout_marginTop="3dp"
+         android:background="@drawable/ant_quan"
+        android:text=" " />   
+ <ToggleButton
+         android:id="@+id/edge"
+         android:layout_width="50dp"
+         android:layout_height="58dp"
+         android:textColor="#ffffff"
+         android:background="@drawable/selector_3g"
+         android:textOff=" "
+         android:textOn=" " />
+ </RelativeLayout>
+ <TextView
+       style="@style/btn_custom_style3"
+        android:textColor="#ffffff"
+        android:text="@string/ant_set_3g" />   
+     </LinearLayout>
+ <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="19dp"
+     android:gravity="center"
+     android:layout_gravity="center_vertical"
+     android:orientation="vertical" >     
+       <RelativeLayout
+        android:layout_width="50dp"
+         android:layout_height="58dp">
+          
+        <TextView
+        android:layout_width="50dp"
+        android:layout_height="52dp"  android:layout_marginTop="3dp"
+         android:background="@drawable/ant_quan"
+        android:text=" " />  
+        <ToggleButton
+         android:id="@+id/hot"
+         android:layout_width="50dp"
+         android:layout_height="58dp"
+         android:textColor="#ffffff"
+         android:background="@drawable/selector_hot"
+         android:textOff=" "
+         android:textOn=" " /> 
+ 
+  </RelativeLayout>
+ <TextView
+        style="@style/btn_custom_style3"
+        android:textColor="#ffffff"
+        android:text="@string/ant_set_hot" />   
+     </LinearLayout>
+     
+   <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="19dp"
+     android:gravity="center"
+     android:layout_gravity="center_vertical"
+     android:orientation="vertical" >         
+      <RelativeLayout
+        android:layout_width="50dp"
+         android:layout_height="58dp">
+          
+        <TextView
+        android:layout_width="50dp"
+        android:layout_height="52dp"  android:layout_marginTop="3dp"
+         android:background="@drawable/ant_quan"
+        android:text=" " />  
+     <ToggleButton
+         android:id="@+id/loc"
+         android:layout_width="50dp"
+         android:layout_height="58dp"
+         android:textColor="#ffffff"
+         android:background="@drawable/selector_loc"
+         android:textOff=" "
+         android:textOn=" " />   
+  </RelativeLayout>
+  <TextView
+        style="@style/btn_custom_style3"
+        android:textColor="#ffffff"
+        android:text="@string/ant_set_loc" />   
+     </LinearLayout>
+  
+  </LinearLayout>
+  
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:layout_gravity="center" >
+    
+   <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_gravity="center_vertical"
+     android:gravity="center"
+     android:orientation="vertical" >           
+     <RelativeLayout
+        android:layout_width="50dp"
+         android:layout_height="58dp">
+          
+        <TextView
+        android:layout_width="50dp"
+        android:layout_height="52dp"  android:layout_marginTop="3dp"
+         android:background="@drawable/ant_quan"
+        android:text=" " />   
+    <ToggleButton
+         android:id="@+id/fly"
+         android:layout_width="50dp"
+         android:layout_height="58dp"
+         android:textColor="#ffffff"
+        android:background="@drawable/selector_fly"
+         android:textOff=" "
+         android:textOn=" " /> 
+     
+     </RelativeLayout>
+      <TextView
+        style="@style/btn_custom_style3"
+        android:textColor="#ffffff"
+        android:text="@string/ant_set_fly" />   
+     </LinearLayout>
+  <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="19dp"
+     android:gravity="center"
+     android:layout_gravity="center_vertical"
+     android:orientation="vertical" >       
+      <RelativeLayout
+        android:layout_width="50dp"
+         android:layout_height="58dp">
+          
+        <TextView
+        android:layout_width="50dp"
+        android:layout_height="52dp"  android:layout_marginTop="3dp"
+         android:background="@drawable/ant_quan"
+        android:text=" " />  
+        <ToggleButton
+         android:id="@+id/clo"
+         android:layout_width="50dp"
+         android:layout_height="58dp"
+          android:layout_marginTop="3dp"
+         android:textColor="#ffffff"
+         android:background="@drawable/selector_clo"
+         android:textOff=" "
+         android:textOn=" " /> 
+
+ </RelativeLayout>
+  <TextView
+       style="@style/btn_custom_style3"
+        android:textColor="#ffffff"
+        android:text="@string/ant_set_clo" />   
+     </LinearLayout>
+ <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="19dp"
+     android:gravity="center"
+     android:layout_gravity="center_vertical"
+     android:orientation="vertical" >    
+       <RelativeLayout
+        android:layout_width="50dp"
+         android:layout_height="58dp">
+          
+        <TextView
+        android:layout_width="50dp"
+        android:layout_height="52dp"  android:layout_marginTop="3dp"
+         android:background="@drawable/ant_quan"
+        android:text=" " />   
+  <ToggleButton
+         android:id="@+id/gps"
+         android:layout_width="50dp"
+         android:layout_height="58dp"
+         android:textColor="#ffffff"
+        android:background="@drawable/selector_gps"
+         android:textOff=" "
+         android:textOn=" " />
+  </RelativeLayout>
+  <TextView
+        style="@style/btn_custom_style3"
+        android:textColor="#ffffff"
+        android:text="@string/ant_set_gps" />   
+     </LinearLayout>
+     
+    <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="19dp"
+     android:gravity="center"
+     android:layout_gravity="center_vertical"
+     android:orientation="vertical" >       
+      <RelativeLayout
+        android:layout_width="50dp"
+         android:layout_height="58dp">
+          
+        <TextView
+        android:layout_width="50dp"
+        android:layout_height="52dp"  android:layout_marginTop="3dp"
+         android:background="@drawable/ant_quan"
+        android:text=" " />     
+  <ToggleButton
+         android:id="@+id/vab"
+         android:layout_width="50dp"
+         android:layout_height="58dp"
+         android:textColor="#ffffff"
+         android:background="@drawable/selector_vab"
+         android:textOff=" "
+         android:textOn=" " />     
+        
+  </RelativeLayout>
+   <TextView
+       android:id="@+id/vabt"
+        style="@style/btn_custom_style3"
+        android:textColor="#ffffff"
+        android:text="@string/ant_set_vab" />   
+     </LinearLayout>
+     
+  </LinearLayout>
+  
+      
+  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:layout_gravity="center" >
+    
+   <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:gravity="center"
+     android:layout_gravity="center_vertical"
+     android:orientation="vertical" >       
+       <RelativeLayout
+        android:layout_width="50dp"
+         android:layout_height="58dp">
+          
+        <TextView
+        android:layout_width="50dp"
+        android:layout_height="52dp"  android:layout_marginTop="3dp"
+         android:background="@drawable/ant_quan"
+        android:text=" " />   
+ <ToggleButton
+     android:id="@+id/blue"
+     android:layout_width="50dp"
+     android:layout_height="58dp"
+     android:background="@drawable/selector_blu"
+         android:textOff=" "
+         android:textOn=" " 
+     android:textColor="#ffffff" />
+ </RelativeLayout>
+  <TextView
+       style="@style/btn_custom_style3"
+        android:textColor="#ffffff"
+        android:text="@string/ant_set_blu" />   
+     </LinearLayout>
+     
+ <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="19dp"
+     android:gravity="center"
+     android:layout_gravity="center_vertical"
+     android:orientation="vertical" >    
+        <RelativeLayout
+        android:layout_width="50dp"
+         android:layout_height="58dp">
+          
+        <TextView
+        android:layout_width="50dp"
+        android:layout_height="52dp"  android:layout_marginTop="3dp"
+         android:background="@drawable/ant_quan"
+        android:text=" " />   
+    <ToggleButton  
+        android:id="@+id/xuan" 
+        android:layout_width="50dp"
+        android:layout_height="58dp" 
+        android:background="@drawable/selector_rota" 
+        android:textColor="#ffffff" 
+        android:textOff=" " 
+        android:textOn=" "/>
+    </RelativeLayout>
+     <TextView
+        style="@style/btn_custom_style3"
+        android:textColor="#ffffff"
+        android:text="@string/ant_set_xuan" />   
+     </LinearLayout>
+     
+ <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="19dp"
+     android:gravity="center"
+     android:layout_gravity="center_vertical"
+     android:orientation="vertical" >    
+     <RelativeLayout
+        android:layout_width="50dp"
+         android:layout_height="58dp">
+          
+        <TextView
+        android:layout_width="50dp"
+        android:layout_height="52dp"  android:layout_marginTop="3dp"
+         android:background="@drawable/ant_quan"
+        android:text=" " />   
+     <ToggleButton
+         android:id="@+id/l2"
+         android:layout_width="50dp"
+         android:layout_height="58dp"
+         android:textOff=" "
+         android:textOn=" "
+         android:textColor="#ffffff"
+         android:background="@drawable/selector_l2"/>   
+    </RelativeLayout>     
+         <TextView
+              android:id="@+id/l2t"
+        style="@style/btn_custom_style3"
+        android:textColor="#ffffff"
+        android:text="@string/ant_set_l2" />   
+     </LinearLayout>
+  
+<LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="19dp"
+     android:gravity="center"
+     android:layout_gravity="center_vertical"
+     android:orientation="vertical" >            
+ <RelativeLayout
+        android:layout_width="50dp"
+         android:layout_height="58dp">
+          
+        <TextView
+        android:layout_width="50dp"
+        android:layout_height="52dp"  android:layout_marginTop="3dp"
+         android:background="@drawable/ant_quan"
+        android:text=" " />
+        <ToggleButton
+         android:id="@+id/la"
+         android:layout_width="50dp"
+         android:layout_height="58dp"
+         android:textColor="#ffffff"
+         android:background="@drawable/selector_la"
+         android:textOff=" "
+         android:textOn=" " />   
+    
+    </RelativeLayout>
+     <TextView
+       style="@style/btn_custom_style3"
+        android:textColor="#ffffff"
+        android:text="@string/ant_set_la" />   
+     </LinearLayout>
+     
+
+      </LinearLayout>
+               
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:layout_gravity="center" >
+ <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:gravity="center"
+     android:layout_gravity="center_vertical"
+     android:orientation="vertical" >        
+      <RelativeLayout
+        android:layout_width="50dp"
+         android:layout_height="58dp"
+         android:layout_marginLeft="0dp">
+          
+        <TextView
+        android:layout_width="50dp"
+        android:layout_height="52dp"  android:layout_marginTop="3dp"
+         android:background="@drawable/ant_quan"
+        android:text=" " />   
+ <ToggleButton
+         android:id="@+id/set"
+         android:layout_width="50dp"
+         android:layout_height="58dp"
+         android:textColor="#ffffff"
+         android:background="@drawable/selector_set"
+         android:textOff=" "
+         android:textOn=" " />
+ </RelativeLayout>
+  <TextView
+        style="@style/btn_custom_style3"
+        android:textColor="#ffffff"
+        android:text="@string/ant_set_set" />   
+     </LinearLayout>
+     
+ 
+ <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="19dp"
+     android:gravity="center"
+     android:layout_gravity="center_vertical"
+     android:orientation="vertical" >    
+       <RelativeLayout
+        android:layout_width="50dp"
+         android:layout_height="58dp">
+          
+        <TextView
+        android:layout_width="50dp"
+        android:layout_height="52dp"  android:layout_marginTop="3dp"
+         android:background="@drawable/ant_quan"
+        android:text=" " />   
+  <ToggleButton
+         android:id="@+id/lig"
+         android:layout_width="50dp"
+         android:layout_height="58dp"
+         android:textColor="#ffffff"
+        android:background="@drawable/selector_lig"
+         android:textOff=" "
+         android:textOn=" " />
+  </RelativeLayout>
+   <TextView
+        style="@style/btn_custom_style3"
+        android:textColor="#ffffff"
+        android:text="@string/ant_set_lig" />   
+     </LinearLayout>
+     
+ 
+ <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="19dp"
+     android:gravity="center"
+     android:layout_gravity="center_vertical"
+     android:orientation="vertical" >    
+          <RelativeLayout
+        android:layout_width="50dp"
+         android:layout_height="58dp">
+          
+        <TextView
+        android:layout_width="50dp"
+        android:layout_height="52dp"  android:layout_marginTop="3dp"
+         android:background="@drawable/ant_quan"
+        android:text=" " />   
+  <ToggleButton
+         android:id="@+id/cam"
+         android:layout_width="50dp"
+         android:layout_height="58dp"
+         android:textColor="#ffffff"
+        android:background="@drawable/selector_cam"
+         android:textOff=" "
+         android:textOn=" " />
+  </RelativeLayout>
+   <TextView
+       style="@style/btn_custom_style3"
+        android:textColor="#ffffff"
+        android:text="@string/ant_set_cam" />   
+     </LinearLayout>
+     
+ 
+   <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="19dp"
+     android:gravity="center"
+     android:layout_gravity="center_vertical"
+     android:orientation="vertical" >        
+      <RelativeLayout
+        android:layout_width="50dp"
+         android:layout_height="58dp">
+          
+        <TextView
+        android:layout_width="50dp"
+        android:layout_height="52dp"  android:layout_marginTop="3dp"
+         android:background="@drawable/ant_quan"
+        android:text=" " />     
+  <ToggleButton
+         android:id="@+id/cal"
+         android:layout_width="50dp"
+         android:layout_height="58dp"
+         android:textColor="#ffffff"
+        android:background="@drawable/selector_cal"
+         android:textOff=" "
+         android:textOn=" " />
+  </RelativeLayout>
+   <TextView
+        style="@style/btn_custom_style3"
+        android:textColor="#ffffff"
+        android:text="@string/ant_set_cal" />   
+     </LinearLayout>
+     
+   
+  </LinearLayout>
+
+ <Button
+     android:id="@+id/mclose"
+     android:layout_width="match_parent"
+     android:layout_height="45dp"
+     android:layout_marginTop="10dp"
+     android:textColor="#ffffff"
+     android:background="#00aaaaaa"
+     android:text="@string/ant_set_close" />
+     
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="1dp"
+        android:background="#aaaaaa"
+        android:orientation="vertical" >
+         
+    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

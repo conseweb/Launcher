@@ -23,6 +23,17 @@ import java.util.concurrent.LinkedBlockingQueue;
  *  1. one tag for all code;
  *  2. auto fill class name, method name, code line;
  *  3. log level settable
+ *
+ *  example:
+ *
+ *  public class MyApplication extends Application {
+ *   @Override
+ *   public void onCreate() {
+ *       ALog.setTag("MyApp");
+ *       ALog.setLevel(CLog.Level.D);
+ *     }
+ *   }
+ *
  */
 public class ALog {
     private static class LogContext {
