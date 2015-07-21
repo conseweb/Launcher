@@ -259,7 +259,7 @@ public class IntegrateFolderPage extends ViewGroup {
 		promotionLayout.setLayoutParams(lp);
 		promotionLayout.setClickable(true);
 		addView(promotionLayout);
-		promotionLayout.setOnClickListener(new OnClickListener() {
+		setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
