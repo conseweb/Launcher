@@ -61,6 +61,7 @@ import com.bitants.launcherdev.menu.LauncherMenu;
 import com.bitants.common.theme.adaption.ThemeIconIntentAdaptation;
 import com.bitants.launcherdev.util.ActivityActionUtil;
 import com.bitants.launcherdev.widget.LauncherWidgetInfo;
+import com.bitants.settings.QuickService;
 
 import java.io.File;
 import java.util.List;
@@ -97,6 +98,10 @@ public class Launcher extends BaseLauncher {
 		// 跟踪统计应用的打开情况
 		AVAnalytics.trackAppOpened(getIntent());
 		BeansContainer.getInstance().setFolderReceiverFactory(new LauncherFolderReceiverFactory());
+        // start the quick settings service
+		Intent intent1 = new Intent();
+		intent1.setClass(this, QuickService.class);
+		startService(intent1);
 	}
 
     @DebugLog

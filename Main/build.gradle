@@ -1,12 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'hugo'
 
-advancedVersioning {
-    codeOptions {
-        versionCodeType org.moallemi.gradle.internal.VersionCodeType.AUTO_INCREMENT_ONE_STEP
-        dependsOnTasks 'debug', 'release', 'assemble'
-    }
-}
 
 android {
     compileSdkVersion 22
@@ -62,10 +56,12 @@ android {
             shrinkResources false
             proguardFiles 'proguard.cfg'
             signingConfig signingConfigs.release
+            resValue "string", "my_string", "string value debug"
         }
         debug {
             minifyEnabled false
             shrinkResources false
+            resValue "string", "my_string", "string value debug"
         }
     }
 
@@ -117,7 +113,21 @@ task('incrementVersionName') << {
     def minorVersion = Integer.parseInt(matcherVersionNumber.group(2))
     def pointVersion = Integer.parseInt(matcherVersionNumber.group(3))
     def buildVersion = Integer.parseInt(matcherVersionNumber.group(4))
-    def mNextVersionName = majorVersion + "." + minorVersion + "." + pointVersion + "." + (buildVersion + 1)
+    if (buildVersion + 1 >= 1000) {
+        buildVersion = 0
+        pointVersion++
+    } else {
+        buildVersion++
+    }
+    if (pointVersion >= 100) {
+        pointVersion = 0
+        minorVersion++
+    }
+    if (minorVersion >= 100) {
+        minorVersion = 0
+        majorVersion++
+    }
+    def mNextVersionName = majorVersion + "." + minorVersion + "." + pointVersion + "." + buildVersion
     def manifestContent = matcherVersionNumber.replaceAll("versionName=\"" + mNextVersionName + "\"")
     manifestFile.write(manifestContent)
 }
@@ -145,3 +155,69 @@ tasks.whenTaskAdded { task ->
 //println myZip.destinationDir
 //println myZip.archivePath
 //println android.sourceSets.main.assets
+
+//================================================================
+// replace meta-data in AndroidManifest.xml
+// the regex like this:
+// <meta-data android:name="CHANNEL" android:value="*" />
+//================================================================
+android.applicationVariants.all { variant ->
+    // rename out apk file
+    renameApk(variant)
+
+    // modify AndroidManifest.xml
+    variant.processManifest.doLast {
+        copy {
+            from("${buildDir}/manifests") {
+                include "${variant.dirName}/AndroidManifest.xml"
+            }
+            into("${buildDir}/manifests/$variant.name")
+
+            def channelName = variant.productFlavors[0].name;
+            println "[Channel]: ${channelName}"
+
+            filter {
+                String line ->
+                    line.replaceAll("<meta-data android:name=\"CHANNEL\" android:value=\".*\"/>",
+                            "<meta-data android:name=\"CHANNEL\" android:value=\"${channelName}\"/>")
+            }
+
+            // set the path to the modified Manifest:
+            def manifestPath = "${buildDir}/manifests/${variant.name}/${variant.dirName}/AndroidManifest.xml"
+            variant.processResources.manifestFile = file(manifestPath)
+        }
+    }
+}
+
+def renameApk(variant) {
+    // get data for apk renaming
+    def appName
+    def versionName
+
+    // local.properties def by user
+    def propsFile = rootProject.file('local.properties')
+    if (propsFile.exists()) {
+        def props = new Properties()
+        props.load(new FileInputStream(propsFile))
+        appName = props['app_name']
+        android.defaultConfig.versionName = props['app_version']
+        versionName = android.defaultConfig.versionName
+    } else {
+        appName = "TestGradle"
+        versionName = "1.0"
+    }
+//    println "[App_Name]: ${appName}"
+//    println "[App_Version]: ${versionName}"
+
+    def channelName = variant.productFlavors[0].name;
+
+    if (variant.zipAlign) {
+        def oldFile = variant.outputFile;
+        def newFile = appName + "-v" + versionName + "-" + channelName + ".apk"
+        variant.outputFile = new File(oldFile.parent, newFile)
+    }
+
+//    def oldFile = variant.packageApplication.outputFile;
+//    def newFile = appName + "-v" + versionName +"-" + versionNameSuffix + "-unaligned.apk"
+//    variant.packageApplication.outputFile = new File(oldFile.parent, newFile)
+}

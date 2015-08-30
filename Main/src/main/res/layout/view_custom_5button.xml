@@ -1,147 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
 
     <LinearLayout
         android:id="@+id/ll_custom_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#990066aa"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:background="#990066aa"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/btn_custom_0"
-                style="@style/btn_custom_style"
-                android:background="@drawable/ant_settings_ic_launcher"/>
-
-            <TextView
-                android:id="@+id/btn_t_0"
-                style="@style/btn_custom_style2"
-                android:layout_marginTop="0dp"
-                android:text="Settings"
-                android:textColor="#ffffff"/>
+        android:orientation="horizontal" >
+        
+      <LinearLayout
+       android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >  
+        <TextView
+            android:id="@+id/btn_custom_0"
+            style="@style/btn_custom_style"
+            android:background="@drawable/ant_settings_ic_launcher" />
+        <TextView
+            android:id="@+id/btn_t_0"
+            style="@style/btn_custom_style2"
+            android:layout_marginTop="0dp"
+            android:text="Settings"
+            android:textColor="#ffffff" />
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        
+      <LinearLayout
+       android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical" >  
+        </LinearLayout>  
+        
+       <LinearLayout
+       android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/btn_custom_1"
-                style="@style/btn_custom_style"
-                android:scaleType="fitXY"
-                android:src="@drawable/ant_settings_airplane_off_nor"/>
-
-            <TextView
-                android:id="@+id/btn_t_1"
-                style="@style/btn_custom_style2"
-                android:layout_marginTop="0dp"
-                android:text="@string/ant_set_fly"
-                android:textColor="#ffffff"/>
+    android:orientation="vertical" >  
+        <ImageButton
+            android:id="@+id/btn_custom_1"
+            style="@style/btn_custom_style"
+            android:scaleType="fitXY"
+            android:src="@drawable/ant_settings_airplane_off_nor" />
+        <TextView
+            android:id="@+id/btn_t_1"
+            style="@style/btn_custom_style2"
+            android:layout_marginTop="0dp"
+            android:text="@string/ant_set_fly"
+            android:textColor="#ffffff" />
+        </LinearLayout>
+        
+       <LinearLayout
+       android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical" >  
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+         <LinearLayout
+       android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/btn_custom_2"
-                style="@style/btn_custom_style"
-                android:scaleType="fitXY"
-                android:src="@drawable/ant_settings_gprs_off_nor"/>
-
-            <TextView
-                android:id="@+id/btn_t_2"
-                style="@style/btn_custom_style2"
-                android:layout_marginTop="0dp"
-                android:text="@string/ant_set_3g"
-                android:textColor="#ffffff"/>
+    android:orientation="vertical" >  
+        <ImageButton
+            android:id="@+id/btn_custom_2"
+            style="@style/btn_custom_style"
+            android:scaleType="fitXY"
+            android:src="@drawable/ant_settings_gprs_off_nor" />
+        <TextView
+            android:id="@+id/btn_t_2"
+            style="@style/btn_custom_style2"
+            android:layout_marginTop="0dp"
+            android:text="@string/ant_set_3g"
+            android:textColor="#ffffff" />
+        </LinearLayout>
+        
+         <LinearLayout
+       android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical" >  
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+      <LinearLayout
+       android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/btn_custom_3"
-                style="@style/btn_custom_style"
-                android:scaleType="fitXY"
-                android:src="@drawable/ant_settings_wifi_off_nor"/>
-
-            <TextView
-                android:id="@+id/btn_t_3"
-                style="@style/btn_custom_style2"
-                android:layout_marginTop="0dp"
-                android:text="@string/ant_set_wifi"
-                android:textColor="#ffffff"/>
+    android:orientation="vertical" >  
+        <ImageButton
+            android:id="@+id/btn_custom_3"
+            style="@style/btn_custom_style"
+            android:scaleType="fitXY"
+            android:src="@drawable/ant_settings_wifi_off_nor" />
+        <TextView
+            android:id="@+id/btn_t_3"
+            style="@style/btn_custom_style2"
+            android:layout_marginTop="0dp"
+            android:text="@string/ant_set_wifi"
+            android:textColor="#ffffff" />
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        
+      <LinearLayout
+       android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical" >  
+        </LinearLayout>
+        
+         <LinearLayout
+       android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/btn_custom_4"
-                style="@style/btn_custom_style"
-                android:scaleType="fitXY"
-                android:src="@drawable/ant_settings_cilent_on_nor"/>
-
-            <TextView
-                android:id="@+id/btn_t_4"
-                style="@style/btn_custom_style2"
-                android:layout_marginTop="0dp"
-                android:text="@string/ant_set_vab"
-                android:textColor="#ffffff"/>
+    android:orientation="vertical" >  
+        <ImageButton
+            android:id="@+id/btn_custom_4"
+            style="@style/btn_custom_style"
+            android:scaleType="fitXY"
+            android:src="@drawable/ant_settings_cilent_on_nor" />
+        <TextView
+            android:id="@+id/btn_t_4"
+            style="@style/btn_custom_style2"
+            android:layout_marginTop="0dp"
+            android:text="@string/ant_set_vab"
+            android:textColor="#ffffff" />
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        
+         <LinearLayout
+       android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical" >  
+        </LinearLayout>
+         
+          <LinearLayout
+       android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
             android:layout_marginRight="2dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/btn_custom_5"
-                style="@style/btn_custom_style"
-                android:scaleType="fitXY"
-                android:src="@drawable/ant_settings_bluetooth_off_nor"/>
-
-            <TextView
-                android:id="@+id/btn_t_5"
-                style="@style/btn_custom_style2"
-                android:layout_marginTop="0dp"
-                android:text="@string/ant_set_blu"
-                android:textColor="#ffffff"/>
+    android:orientation="vertical" >  
+        <ImageButton
+            android:id="@+id/btn_custom_5"
+            style="@style/btn_custom_style"
+            android:scaleType="fitXY"
+            android:src="@drawable/ant_settings_bluetooth_off_nor" />
+        <TextView
+            android:id="@+id/btn_t_5"
+            style="@style/btn_custom_style2"
+            android:layout_marginTop="0dp"
+            android:text="@string/ant_set_blu"
+            android:textColor="#ffffff" />
         </LinearLayout>
-
+         
     </LinearLayout>
-
-
+    
+  
 </RelativeLayout>

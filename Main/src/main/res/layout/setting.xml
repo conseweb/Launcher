@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mclose2"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#dd006699"
@@ -9,8 +10,7 @@
    
  <LinearLayout
      android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:layout_gravity="center_vertical"
+     android:layout_height="fill_parent"
      android:layout_marginLeft="10dp"
      android:layout_marginRight="10dp"
      android:orientation="vertical" >
@@ -18,16 +18,16 @@
       <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="left" >
-
-      </LinearLayout>
+        android:orientation="horizontal"
+        android:id="@+id/mclose3"
+        android:layout_weight="1"/>
 
       
     
  <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
         android:gravity="center"
         android:layout_gravity="center" >
     
@@ -158,11 +158,17 @@
      </LinearLayout>
   
   </LinearLayout>
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/mclose4"
+        android:layout_weight="1"/>
   
  <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
         android:gravity="center"
         android:layout_gravity="center" >
     
@@ -213,20 +219,20 @@
          android:background="@drawable/ant_quan"
         android:text=" " />  
         <ToggleButton
-         android:id="@+id/clo"
+         android:id="@+id/vab"
          android:layout_width="50dp"
          android:layout_height="58dp"
-          android:layout_marginTop="3dp"
          android:textColor="#ffffff"
-         android:background="@drawable/selector_clo"
+         android:background="@drawable/selector_vab"
          android:textOff=" "
          android:textOn=" " /> 
 
  </RelativeLayout>
   <TextView
+       android:id="@+id/vabt"
        style="@style/btn_custom_style3"
         android:textColor="#ffffff"
-        android:text="@string/ant_set_clo" />   
+        android:text="@string/ant_set_vab" />   
      </LinearLayout>
  <LinearLayout
      android:layout_width="wrap_content"
@@ -276,29 +282,33 @@
          android:background="@drawable/ant_quan"
         android:text=" " />     
   <ToggleButton
-         android:id="@+id/vab"
+         android:id="@+id/cal"
          android:layout_width="50dp"
          android:layout_height="58dp"
          android:textColor="#ffffff"
-         android:background="@drawable/selector_vab"
+        android:background="@drawable/selector_cal"
          android:textOff=" "
-         android:textOn=" " />     
-        
+         android:textOn=" " />
   </RelativeLayout>
    <TextView
-       android:id="@+id/vabt"
         style="@style/btn_custom_style3"
         android:textColor="#ffffff"
-        android:text="@string/ant_set_vab" />   
-     </LinearLayout>
-     
+        android:text="@string/ant_set_cal" />   
+     </LinearLayout>    
   </LinearLayout>
   
       
   <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/mclose5"
+        android:layout_weight="1"/>
+
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
         android:gravity="center"
         android:layout_gravity="center" >
     
@@ -432,11 +442,32 @@
                
  <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/mclose6"
+        android:layout_weight="1"/>
+
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_height="1dp"
+        android:background="#bbbbbb"
+        android:orientation="vertical" >
+         
+    </LinearLayout>
+ 
+ 
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:layout_gravity="center" >
  <LinearLayout
+      android:id="@+id/set"
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:gravity="center"
@@ -450,16 +481,14 @@
         <TextView
         android:layout_width="50dp"
         android:layout_height="52dp"  android:layout_marginTop="3dp"
-         android:background="@drawable/ant_quan"
         android:text=" " />   
- <ToggleButton
-         android:id="@+id/set"
+ <TextView
+        
          android:layout_width="50dp"
-         android:layout_height="58dp"
+         android:layout_height="56dp"
          android:textColor="#ffffff"
-         android:background="@drawable/selector_set"
-         android:textOff=" "
-         android:textOn=" " />
+         android:text=" " 
+         android:background="@drawable/ant_settings_setting_off"/>
  </RelativeLayout>
   <TextView
         style="@style/btn_custom_style3"
@@ -468,39 +497,9 @@
      </LinearLayout>
      
  
+
  <LinearLayout
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:layout_marginLeft="19dp"
-     android:gravity="center"
-     android:layout_gravity="center_vertical"
-     android:orientation="vertical" >    
-       <RelativeLayout
-        android:layout_width="50dp"
-         android:layout_height="58dp">
-          
-        <TextView
-        android:layout_width="50dp"
-        android:layout_height="52dp"  android:layout_marginTop="3dp"
-         android:background="@drawable/ant_quan"
-        android:text=" " />   
-  <ToggleButton
-         android:id="@+id/lig"
-         android:layout_width="50dp"
-         android:layout_height="58dp"
-         android:textColor="#ffffff"
-        android:background="@drawable/selector_lig"
-         android:textOff=" "
-         android:textOn=" " />
-  </RelativeLayout>
-   <TextView
-        style="@style/btn_custom_style3"
-        android:textColor="#ffffff"
-        android:text="@string/ant_set_lig" />   
-     </LinearLayout>
-     
- 
- <LinearLayout
+     android:id="@+id/cam"
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:layout_marginLeft="19dp"
@@ -514,31 +513,61 @@
         <TextView
         android:layout_width="50dp"
         android:layout_height="52dp"  android:layout_marginTop="3dp"
-         android:background="@drawable/ant_quan"
         android:text=" " />   
-  <ToggleButton
-         android:id="@+id/cam"
+  <TextView
+         
          android:layout_width="50dp"
-         android:layout_height="58dp"
+         android:layout_height="56dp"
          android:textColor="#ffffff"
-        android:background="@drawable/selector_cam"
-         android:textOff=" "
-         android:textOn=" " />
+         android:text=" " 
+        android:background="@drawable/ant_settings_camera_off_nor"/>
   </RelativeLayout>
    <TextView
        style="@style/btn_custom_style3"
         android:textColor="#ffffff"
         android:text="@string/ant_set_cam" />   
      </LinearLayout>
-     
- 
-   <LinearLayout
+  
+  <LinearLayout
+      android:id="@+id/lig2"
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:layout_marginLeft="19dp"
      android:gravity="center"
      android:layout_gravity="center_vertical"
-     android:orientation="vertical" >        
+     android:orientation="vertical" >    
+       <RelativeLayout
+        android:layout_width="50dp"
+         android:layout_height="58dp">
+          
+        <TextView
+        android:layout_width="50dp"
+        android:layout_height="52dp"  android:layout_marginTop="3dp"
+        android:text=" " />   
+  <TextView
+         android:id="@+id/lig"
+         android:layout_width="50dp"
+         android:layout_height="56dp"
+         android:textColor="#ffffff"
+         android:text=" " 
+        android:background="@drawable/ant_settings_light_off"/>
+  </RelativeLayout>
+   <TextView
+        style="@style/btn_custom_style3"
+        android:textColor="#ffffff"
+        android:text="@string/ant_set_lig" />   
+     </LinearLayout>
+     
+ 
+ 
+  <LinearLayout
+       android:id="@+id/clo"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="19dp"
+     android:gravity="center"
+     android:layout_gravity="center_vertical"
+     android:orientation="vertical" >       
       <RelativeLayout
         android:layout_width="50dp"
          android:layout_height="58dp">
@@ -546,43 +575,45 @@
         <TextView
         android:layout_width="50dp"
         android:layout_height="52dp"  android:layout_marginTop="3dp"
-         android:background="@drawable/ant_quan"
-        android:text=" " />     
-  <ToggleButton
-         android:id="@+id/cal"
+        android:text=" " />  
+        <TextView
+        
          android:layout_width="50dp"
-         android:layout_height="58dp"
+         android:layout_height="56dp"
          android:textColor="#ffffff"
-        android:background="@drawable/selector_cal"
-         android:textOff=" "
-         android:textOn=" " />
-  </RelativeLayout>
-   <TextView
-        style="@style/btn_custom_style3"
+         android:text=" " 
+         android:background="@drawable/ant_settings_clock_off"/> 
+
+ </RelativeLayout>
+  <TextView
+       style="@style/btn_custom_style3"
         android:textColor="#ffffff"
-        android:text="@string/ant_set_cal" />   
+        android:text="@string/ant_set_clo" />   
      </LinearLayout>
+  
      
    
   </LinearLayout>
 
- <Button
-     android:id="@+id/mclose"
-     android:layout_width="match_parent"
-     android:layout_height="45dp"
-     android:layout_marginTop="10dp"
-     android:textColor="#ffffff"
-     android:background="#00aaaaaa"
-     android:text="@string/ant_set_close" />
      
    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
         android:layout_height="1dp"
-        android:background="#aaaaaa"
+        android:background="#bbbbbb"
         android:orientation="vertical" >
          
     </LinearLayout>
+    
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:id="@+id/mclose7"/>
     </LinearLayout>
 
 </LinearLayout>

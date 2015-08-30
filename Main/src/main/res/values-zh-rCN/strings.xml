@@ -1,0 +1,31 @@
+<resources>
+
+    <string name="ant_set_name">快捷开关</string>
+    
+    <string name="ant_set_wifi">WLAN</string>
+    <string name="ant_set_3g">移动数据</string>
+    <string name="ant_set_hot">Wlan热点</string>
+    <string name="ant_set_loc">锁  屏</string>
+    <string name="ant_set_fly">飞行模式</string>
+    <string name="ant_set_clo">时  钟</string>
+    <string name="ant_set_gps">GPS</string>
+    <string name="ant_set_vab">震  动</string>
+     <string name="ant_set_vab1">静  音</string>
+      <string name="ant_set_vab2">响  铃</string>
+    <string name="ant_set_blu">蓝  牙</string>
+    <string name="ant_set_xuan">自动旋转</string>
+    <string name="ant_set_l2">屏幕亮度</string>
+    <string name="ant_set_l21">一半亮度</string>
+    <string name="ant_set_l22">最大亮度</string>
+    <string name="ant_set_la">自动背光</string>
+    <string name="ant_set_set">系统设置</string>
+    <string name="ant_set_lig">手电筒</string>
+    <string name="ant_set_cam">相  机</string>
+    <string name="ant_set_cal">计算器</string>
+    <string name="ant_set_close">点击关闭</string>
+    <string name="ant_set_click">点击打开快捷开关</string>
+    <string name="ant_set_noblue">本机无蓝牙驱动 !</string>
+    <string name="ant_set_openhot">正在开启热点：HotWifi，默认无密码 !</string>
+    <string name="ant_set_notif">快捷开关在通知栏</string>
+  <string name="ant_set_notiflock">激活该锁屏功能</string>
+</resources>

@@ -1,17 +1,29 @@
 package com.bitants.settings;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.PendingIntent;
+import android.app.PendingIntent.CanceledException;
 import android.bluetooth.BluetoothAdapter;
+import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.database.ContentObserver;
 import android.hardware.Camera;
 import android.hardware.Camera.Parameters;
 import android.location.LocationManager;
@@ -28,30 +40,27 @@ import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.View.OnLongClickListener;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.View.OnClickListener;
+import android.view.View.OnLongClickListener;
 import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 
 import com.bitants.launcher.R;
-
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.List;
 
 
 public class QuickSettings extends Activity {
 
     static ActivityManager mActivityManager;
 
-    private static ToggleButton mwifi, mlig, m3g, mrota, mfly, mhot, mclo, mblu, mcal, mcam, mla, ml2, mvab, mset, mloc, mgps;
-    private static TextView vabt, wifit, mclose, l2t;
+    private static ToggleButton mwifi, m3g, mrota, mfly, mhot, mblu, mcal, mla, ml2, mvab, mloc, mgps;
+    private static TextView mlig, vabt, wifit, l2t;
+    private static LinearLayout mclose2, mclo, mcam, mset, mlig2, mclose3, mclose4, mclose5, mclose6, mclose7;
 
     PackageManager pm;
     private static PowerManager pmm;
@@ -63,7 +72,7 @@ public class QuickSettings extends Activity {
     SharedPreferences sp;
     SharedPreferences.Editor editor;
     private static String pac = "";
-    private int b, qf, qf2, bl;
+    private int b, qf, qf2, bl, ran = 1, ligg2 = 0;
     // private static String f20,f21,f22;
     private MyReceiver receiver;
     private ConnectivityManager mConnectivityManager;
@@ -72,7 +81,7 @@ public class QuickSettings extends Activity {
     private static AudioManager mAudioManager;
     private static int volume = 0, mode;
     private Camera mCamera;
-    private Parameters parameters;
+    private Camera.Parameters parameters;
 
     /**
      * 是否fly
@@ -83,7 +92,6 @@ public class QuickSettings extends Activity {
     public boolean iswifi = false;
     public int isvab = 0;
 
-    int ran = 1;
 
     public class MyReceiver extends BroadcastReceiver {
 
@@ -105,7 +113,7 @@ public class QuickSettings extends Activity {
             } else if (intent.getAction().equals("com.settings.gps")) {
 
                 if (hasGPSDevice(QuickSettings.this)) {
-                    if (alm.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+                    if (alm.isProviderEnabled(android.location.LocationManager.GPS_PROVIDER)) {
                         mgps.setChecked(true);
                     } else {
                         mgps.setChecked(false);
@@ -235,8 +243,8 @@ public class QuickSettings extends Activity {
     private int getRotationStatus(Context context) {
         int status = 0;
         try {
-            status = Settings.System.getInt(context.getContentResolver(),
-                    Settings.System.ACCELEROMETER_ROTATION);
+            status = android.provider.Settings.System.getInt(context.getContentResolver(),
+                    android.provider.Settings.System.ACCELEROMETER_ROTATION);
         } catch (SettingNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -246,9 +254,9 @@ public class QuickSettings extends Activity {
 
     private void setRotationStatus(ContentResolver resolver, int status) {
         //得到uri
-        Uri uri = Settings.System.getUriFor("accelerometer_rotation");
+        Uri uri = android.provider.Settings.System.getUriFor("accelerometer_rotation");
         //沟通设置status的值改变屏幕旋转设置
-        Settings.System.putInt(resolver, "accelerometer_rotation", status);
+        android.provider.Settings.System.putInt(resolver, "accelerometer_rotation", status);
         //通知改变
         resolver.notifyChange(uri, null);
     }
@@ -292,16 +300,61 @@ public class QuickSettings extends Activity {
         //  final int currentRing = mAudioManager.getStreamVolume(AudioManager.STREAM_RING);
         cr = getContentResolver();
 
-        mCamera = Camera.open();
-        parameters = mCamera.getParameters();
+        // mCamera = Camera.open();
+        //	    parameters = mCamera.getParameters();
         pm = this.getPackageManager();//获得包管理器
 
         overridePendingTransition(R.anim.slide_down, R.anim.slide_up);
         setContentView(R.layout.setting);
 
-        mclose = (TextView) findViewById(R.id.mclose);
+        mclose2 = (LinearLayout) findViewById(R.id.mclose2);
 
-        mclose.setOnClickListener(new OnClickListener() {
+        mclose3 = (LinearLayout) findViewById(R.id.mclose3);
+        mclose4 = (LinearLayout) findViewById(R.id.mclose4);
+        mclose5 = (LinearLayout) findViewById(R.id.mclose5);
+        mclose6 = (LinearLayout) findViewById(R.id.mclose6);
+        mclose7 = (LinearLayout) findViewById(R.id.mclose7);
+        mclose3.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+
+                finish();
+
+            }
+        });
+        mclose4.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+
+                finish();
+
+            }
+        });
+        mclose5.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+
+                finish();
+
+            }
+        });
+        mclose6.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+
+                finish();
+
+            }
+        });
+        mclose7.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
@@ -312,6 +365,16 @@ public class QuickSettings extends Activity {
             }
         });
 
+        mclose2.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+
+                finish();
+
+            }
+        });
         vabt = (TextView) findViewById(R.id.vabt);
         wifit = (TextView) findViewById(R.id.wifit);
         l2t = (TextView) findViewById(R.id.l2t);
@@ -330,8 +393,7 @@ public class QuickSettings extends Activity {
             }
         });
 
-        mclo = (ToggleButton) findViewById(R.id.clo);
-        mclo.setSelected(true);
+        mclo = (LinearLayout) findViewById(R.id.clo);
         mclo.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -354,13 +416,12 @@ public class QuickSettings extends Activity {
             }
         });
 
-        mset = (ToggleButton) findViewById(R.id.set);
-        mset.setSelected(true);
+        mset = (LinearLayout) findViewById(R.id.set);
         mset.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                final Intent settings = new Intent(Settings.ACTION_SETTINGS);
+                final Intent settings = new Intent(android.provider.Settings.ACTION_SETTINGS);
                 settings.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
                         Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
                 startActivity(settings);
@@ -368,13 +429,17 @@ public class QuickSettings extends Activity {
             }
         });
 
-        mcam = (ToggleButton) findViewById(R.id.cam);
-        mcam.setSelected(true);
+        mcam = (LinearLayout) findViewById(R.id.cam);
         mcam.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                mCamera.release();
+                if (ligg2 == 1) {
+                    mlig.setBackgroundResource(R.drawable.ant_settings_light_off);
+                    mCamera.release();
+                    parameters = null;
+                    ligg2 = 0;
+                }
                 Intent intentCamera = new Intent();
                 intentCamera.setAction("android.media.action.STILL_IMAGE_CAMERA");
                 intentCamera.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -382,6 +447,7 @@ public class QuickSettings extends Activity {
                 startActivity(intentCamera);
             }
         });
+
         mcal = (ToggleButton) findViewById(R.id.cal);
         mcal.setSelected(true);
         mcal.setOnClickListener(new OnClickListener() {
@@ -416,9 +482,9 @@ public class QuickSettings extends Activity {
                 // TODO Auto-generated method stub
                 if (android.os.Build.VERSION.SDK_INT > 10) {
                     // 3.0以上打开设置界面，也可以直接用ACTION_WIRELESS_SETTINGS打开到wifi界面
-                    startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+                    startActivity(new Intent(android.provider.Settings.ACTION_WIFI_SETTINGS));
                 } else {
-                    startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
+                    startActivity(new Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS));
                 }
                 return false;
             }
@@ -433,7 +499,8 @@ public class QuickSettings extends Activity {
         mhot.setOnLongClickListener(new OnLongClickListener() {
             public boolean onLongClick(View v) {
                 // TODO Auto-generated method stub
-                startActivity(new Intent(Settings.ACTION_AIRPLANE_MODE_SETTINGS));
+
+                startActivity(new Intent(android.provider.Settings.ACTION_AIRPLANE_MODE_SETTINGS));
 
                 return false;
             }
@@ -441,15 +508,20 @@ public class QuickSettings extends Activity {
 
         //fly
         mfly = (ToggleButton) findViewById(R.id.fly);
-        // mfly.setSelected(true);
-
         mfly.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                startActivity(new Intent(Settings.ACTION_AIRPLANE_MODE_SETTINGS));
+                try {
+
+                    startActivity(new Intent(android.provider.Settings.ACTION_AIRPLANE_MODE_SETTINGS));
+
+                } catch (Exception e) {
+
+                }
 
             }
         });
+
         mvab = (ToggleButton) findViewById(R.id.vab);
         mvab.setSelected(true);
         mvab.setOnClickListener(new OnClickListener() {
@@ -523,7 +595,7 @@ public class QuickSettings extends Activity {
             public boolean onLongClick(View v) {
                 // TODO Auto-generated method stub
 
-                startActivity(new Intent(Settings.ACTION_DATA_ROAMING_SETTINGS));
+                startActivity(new Intent(android.provider.Settings.ACTION_DATA_ROAMING_SETTINGS));
 
                 return false;
             }
@@ -534,7 +606,7 @@ public class QuickSettings extends Activity {
         mgps.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
 
             }
         });
@@ -548,7 +620,7 @@ public class QuickSettings extends Activity {
             public boolean onLongClick(View v) {
                 // TODO Auto-generated method stub
 
-                startActivity(new Intent(Settings.ACTION_BLUETOOTH_SETTINGS));
+                startActivity(new Intent(android.provider.Settings.ACTION_BLUETOOTH_SETTINGS));
 
                 return false;
             }
@@ -589,11 +661,29 @@ public class QuickSettings extends Activity {
 
 
         //手电筒
-        mlig = (ToggleButton) findViewById(R.id.lig);
-        mlig.setSelected(true);
-        mlig.setOnCheckedChangeListener(mChangeListener7);
+        mlig = (TextView) findViewById(R.id.lig);
+        mlig2 = (LinearLayout) findViewById(R.id.lig2);
 
-        mlig.setChecked(false);
+
+        //   mlig.setSelected(true);
+        // mlig.setOnCheckedChangeListener(mChangeListener7); 
+
+
+        mlig2.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                if (ligg2 == 0) {
+                    openLight();
+                    mlig.setBackgroundResource(R.drawable.ant_settings_light_on);
+                    ligg2 = 1;
+                } else {
+                    closeLight();
+                    mlig.setBackgroundResource(R.drawable.ant_settings_light_off);
+                    ligg2 = 0;
+                }
+            }
+        });
 
 
         if (getWifiApState(QuickSettings.this) == 13) {
@@ -630,7 +720,7 @@ public class QuickSettings extends Activity {
         ;
 
         if (hasGPSDevice(QuickSettings.this)) {
-            if (alm.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            if (alm.isProviderEnabled(android.location.LocationManager.GPS_PROVIDER)) {
                 mgps.setBackgroundResource(R.drawable.ant_settings_gps_on_nor);
             } else {
                 mgps.setBackgroundResource(R.drawable.ant_settings_gps_off_nor);
@@ -678,6 +768,7 @@ public class QuickSettings extends Activity {
         filter.addAction("com.settings.l2");
         filter.addAction("com.settings.fly");
         registerReceiver(receiver, filter);
+
 
     }
 
@@ -783,6 +874,7 @@ public class QuickSettings extends Activity {
             if (isChecked) {
                 if (getMobileDataStatus()) {
                 } else {
+                    setMobileDataStatus(false);
                     setMobileDataStatus(true);
                 }
             } else {
@@ -855,12 +947,16 @@ public class QuickSettings extends Activity {
     };
 
 
+
+
     /**
      * 鎵撳紑鎵嬬數
      *
      * @author
      */
     private void openLight() {
+        mCamera = Camera.open();
+        parameters = mCamera.getParameters();
         parameters.setFlashMode(Parameters.FLASH_MODE_TORCH);
         mCamera.setParameters(parameters);
         mCamera.startPreview();
@@ -874,6 +970,8 @@ public class QuickSettings extends Activity {
     private void closeLight() {
         parameters.setFlashMode(Parameters.FLASH_MODE_OFF);
         mCamera.setParameters(parameters);
+        mCamera.release();
+        parameters = null;
     }
 
     //获取移动数据开关状态
@@ -1145,8 +1243,13 @@ public class QuickSettings extends Activity {
 
         editor.putInt("ff", 0);
         editor.commit();
-        mCamera.release();
-
+        if (ligg2 == 1) {
+            mlig.setBackgroundResource(R.drawable.ant_settings_light_off);
+            mCamera.release();
+            parameters = null;
+            ligg2 = 0;
+        }
+        ;
 
     }
 
@@ -1155,17 +1258,18 @@ public class QuickSettings extends Activity {
         // TODO Auto-generated method stub
         //infos.clear();
         unregisterReceiver(receiver);
-        mCamera.release();
+
         super.onPause();
     }
 
     @Override
     protected void onResume() {
-        // TODO Auto-generated method stub
+        // TODO Auto-generated method stub  
         super.onResume();
 
+
         if (hasGPSDevice(QuickSettings.this)) {
-            if (alm.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            if (alm.isProviderEnabled(android.location.LocationManager.GPS_PROVIDER)) {
                 mgps.setBackgroundResource(R.drawable.ant_settings_gps_on_nor);
             } else {
                 mgps.setBackgroundResource(R.drawable.ant_settings_gps_off_nor);

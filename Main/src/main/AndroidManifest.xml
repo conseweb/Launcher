@@ -3,8 +3,8 @@
     package="com.bitants.launcher"
     android:installLocation="internalOnly"
     android:sharedUserId="com.bitants.launcher.uid"
-    android:versionCode="212"
-    android:versionName="1.0.1.47" >
+    android:versionCode="219"
+    android:versionName="1.0.1.54" >
 
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -16,6 +16,7 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <!-- 往sdcard中写入数据的权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -276,11 +277,15 @@
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"></action>
                 <action android:name="android.net.wifi.WIFI_AP_STATE_CHANGED"></action>
                 <action android:name="android.media.RINGER_MODE_CHANGED"></action>
-                　　
+                <category android:name="android.intent.category.HOME"/>
             </intent-filter>
 
             　　
         </receiver>
+
+
+        <meta-data android:value="YOUR_APP_KEY" android:name="UMENG_APPKEY"></meta-data>
+        <meta-data android:value="Channel_ID" android:name="UMENG_CHANNEL"/>
     </application>
 
 </manifest>

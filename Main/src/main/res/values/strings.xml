@@ -96,7 +96,8 @@
     <string name="ant_set_cam">Camera</string>
     <string name="ant_set_cal">Calculator</string>
     <string name="ant_set_close">Click to Close</string>
-    <string name="ant_set_noblue">Bluetooth Not Available !</string>
+    <string name="ant_set_click">Click to open QuickButtons</string>
+   <string name="ant_set_noblue">Bluetooth Not Available !</string>
     <string name="ant_set_openhot">Opening Hot Name:HotWifi,Password:(null)</string>
     <string name="ant_set_notif">QuickButtons is here</string>
     <string name="ant_set_notiflock">Activate to support the function of LockScreen</string>
